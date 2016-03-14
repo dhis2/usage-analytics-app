@@ -4,6 +4,11 @@ import log from 'loglevel';
 import HeaderBar from 'd2-ui/lib/header-bar/HeaderBar.component';
 import Sidebar from 'd2-ui/lib/sidebar/Sidebar.component';
 
+import ReactHighcharts from 'react-highcharts';
+import Client from './Client.js';
+import Chart from './Chart.js';
+
+
 export default React.createClass({
     propTypes: {
         name: React.PropTypes.string,
@@ -14,26 +19,21 @@ export default React.createClass({
         d2: React.PropTypes.object,
     },
 
-    getDefaultProps() {
-        return {
-            name: 'John',
-        };
-    },
-
     getChildContext() {
         return {
             d2: this.props.d2,
         };
     },
 
-    _sidebarItemClicked(sideBarItemKey) {
-        log.info('Clicked on ', sideBarItemKey);
+    _sidebarItemClicked(sideBarItemKey,sections) {
+        console.log(sections);
+        console.log('Clicked on ', sideBarItemKey);
     },
 
     render() {
         const sideBarSections = [
-            { key: 'item1', label: 'Item 1' },
-            { key: 'item2', label: 'Item 2' },
+            {key: 'Chart', label: 'Chart', pressed:false},
+            {key: 'Table', label: 'Table', pressed:false},
         ];
 
         return (
@@ -43,8 +43,14 @@ export default React.createClass({
                     sections={sideBarSections}
                     onChangeSection={this._sidebarItemClicked}
                 />
-                <div className="main-content">{`Hello, ${this.props.name}! Your app skeleton set up correctly!`}</div>
+                <div className="main-content">
+                   <Chart/>
+                    <Client source="http://localhost:8080/api/dataStatistics.json?startDate=2014-03-10&endDate=2017-03-20&interval=YEAR"/>
+                </div>
             </div>
         );
     },
 });
+
+
+
