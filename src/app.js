@@ -50,8 +50,8 @@ getManifest('./manifest.webapp')
 
         // Set the baseUrl to localhost if we are in dev mode
         if (process.env.NODE_ENV !== 'production') {
-            config.baseUrl = 'http://localhost:8080/dhis/api';
-            dhis2.settings.baseUrl = 'http://localhost:8080/dhis';
+            config.baseUrl = 'http://localhost:8080/api';
+            dhis2.settings.baseUrl = 'http://localhost:8080';
         }
     })
     .then(init)
