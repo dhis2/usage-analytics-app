@@ -25,15 +25,16 @@ export default React.createClass({
         };
     },
 
-    _sidebarItemClicked(sideBarItemKey,sections) {
-        console.log(sections);
+    _sidebarItemClicked(sideBarItemKey) {
         console.log('Clicked on ', sideBarItemKey);
+
     },
 
-    render() {
+    render()
+    {
         const sideBarSections = [
-            {key: 'Chart', label: 'Chart', pressed:false},
-            {key: 'Table', label: 'Table', pressed:false},
+            {key: 'Chart', label: 'Chart', pressed: false},
+            {key: 'Table', label: 'Table', pressed: false},
         ];
 
         return (
@@ -44,12 +45,12 @@ export default React.createClass({
                     onChangeSection={this._sidebarItemClicked}
                 />
                 <div className="main-content">
-                   <Chart/>
+                    <Chart/>
                     <Client source="http://localhost:8080/api/dataStatistics.json?startDate=2014-03-10&endDate=2017-03-20&interval=YEAR"/>
                 </div>
             </div>
         );
-    },
+    }
 });
 
 

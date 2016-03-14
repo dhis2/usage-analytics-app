@@ -6,6 +6,22 @@ import ReactHighcharts from 'react-highcharts';
 
 export default React.createClass({
 
+    getInitialState: function() {
+        return {data: []};
+    },
+    componentDidMount: function() {
+        $.ajax({
+            url: this.props.source,
+            dataType: 'json',
+            cache: false,
+            success: function(data) {
+                this.setState({data: data});
+            }.bind(this),
+            error: function(xhr, status, err) {
+                console.error(this.props.url, status, err.toString());
+            }.bind(this)
+        });
+    },
 
     config: {
         xAxis: {
@@ -16,7 +32,10 @@ export default React.createClass({
         }]
     },
 
+
+
     render(){
+        console.log(this.props.data);
         return <ReactHighcharts config={this.config}></ReactHighcharts>
     }
 

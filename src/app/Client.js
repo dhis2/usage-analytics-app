@@ -5,26 +5,21 @@
 import React from 'react';
 
 export default React.createClass({
-    getInitialState: function () {
-        return {
-            lastStatistic: []
-
-        };
+    getInitialState: function() {
+        return {data: []};
     },
-
-    componentWillMount: function () {
-
-        this.serverRequest = $.get(this.props.source, function (result) {
-            var statisticList = result;
-            console.log(result);
-            this.setState({
-                lastStatistic: statisticList
-            });
-        }.bind(this));
-    },
-
-    componentWillUnmount: function () {
-        this.serverRequest.abort();
+    componentDidMount: function() {
+        $.ajax({
+            url: this.props.source,
+            dataType: 'json',
+            cache: false,
+            success: function(data) {
+                this.setState({data: data});
+            }.bind(this),
+            error: function(xhr, status, err) {
+                console.error(this.props.url, status, err.toString());
+            }.bind(this)
+        });
     },
 
     render: function () {
@@ -53,7 +48,7 @@ export default React.createClass({
                 </tr>
 
 
-                {this.state.lastStatistic.map((result)=> {
+                {this.state.data.map((result)=> {
                     return <tr>
                         <td key={"year"}>{result.year}</td>
                         <td key={"activeUsers"}>{result.activeUsers}</td>
