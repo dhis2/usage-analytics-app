@@ -6,8 +6,6 @@ import ReactHighcharts from 'react-highcharts';
 import LoadingMask from 'd2-ui/lib/loading-mask/LoadingMask.component';
 import { render } from 'react-dom';
 
-var GlobalVar = {};
-
 export default React.createClass({
 
     getInitialState: function() {
@@ -42,10 +40,35 @@ export default React.createClass({
                 tmpDate += result.day + "/";
             }
             if(result.week != null){
-                tmpDate += result.week + "/";
+                tmpDate += "Week: "+ result.week + "/";
             }
             if(result.month != null){
-                tmpDate += result.month + "/";
+                switch (result.month){
+                    case 1: tmpDate += "Jan ";
+                        break;
+                    case 2: tmpDate += "Feb ";
+                        break;
+                    case 3: tmpDate += "Mar ";
+                        break;
+                    case 4: tmpDate += "Apr ";
+                        break;
+                    case 5: tmpDate += "May ";
+                        break;
+                    case 6: tmpDate += "Jun ";
+                        break;
+                    case 7: tmpDate += "Jul ";
+                        break;
+                    case 8: tmpDate += "Aug ";
+                        break;
+                    case 9: tmpDate += "Sep ";
+                        break;
+                    case 10: tmpDate += "Oct ";
+                        break;
+                    case 11: tmpDate += "Nov ";
+                        break;
+                    case 12: tmpDate += "Dec ";
+                        break;
+                }
             }
             tmpDate += result.year;
             date.push(tmpDate);
@@ -162,15 +185,26 @@ export default React.createClass({
          });
 
          chart.xAxis[0].update({categories:date}, true);
+         chart.setTitle(
+             //Title
+             null,
+             {
+                 //Subtitle
+                 text: "By month"
+             }
+         );
 
-        GlobalVar.chartData = chartData;
-         console.log("ChartData:");
-         console.log(chartData);
+         //Hides the series. show() shows the series. remove() removes the series
+         chart.series[8].hide();
+
     },
 
     config: {
         xAxis: {
-            categories: []
+            categories: [],
+        },
+        title: {
+            text: "Usage Analytics"
         }
     },
 
