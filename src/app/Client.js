@@ -23,6 +23,8 @@ export default React.createClass({
     },
 
     render: function () {
+        console.log("I Client:");
+        console.log(this.state.data);
         return (
             <table border="1">
                 <tr>

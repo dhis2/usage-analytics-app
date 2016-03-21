@@ -36,7 +36,7 @@ export default React.createClass({
             {key: 'Chart', label: 'Chart', pressed: false},
             {key: 'Table', label: 'Table', pressed: false},
         ];
-
+        
         return (
             <div className="app-wrapper">
                 <HeaderBar />
@@ -45,8 +45,8 @@ export default React.createClass({
                     onChangeSection={this._sidebarItemClicked}
                 />
                 <div className="main-content">
-                    <Chart/>
-                    <Client source="http://localhost:8080/api/dataStatistics.json?startDate=2014-03-10&endDate=2017-03-20&interval=YEAR"/>
+                    <Chart source="http://localhost:8080/api/dataStatistics.json?startDate=2015-01-01&endDate=2016-12-31&interval=MONTH" />
+                    <Client source="http://localhost:8080/api/dataStatistics.json?startDate=2014-01-01&endDate=2017-12-31&interval=YEAR"/>
                 </div>
             </div>
         );
