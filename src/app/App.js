@@ -4,9 +4,9 @@ import log from 'loglevel';
 import HeaderBar from 'd2-ui/lib/header-bar/HeaderBar.component';
 import Sidebar from 'd2-ui/lib/sidebar/Sidebar.component';
 
+
 import ReactHighcharts from 'react-highcharts';
 import Client from './Client.js';
-//import Chart from './Chart.js';
 
 
 export default React.createClass({

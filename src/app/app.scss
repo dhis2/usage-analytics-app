@@ -18,3 +18,14 @@ $left-bar-width: 256px;
 .main-content {
   margin-left: $left-bar-width + 30;
 }
+
+.scroller{
+  width: 100px;
+  overflow: auto;
+  height: 100px;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.container-outer { overflow: scroll; width: 500px; height: 210px; }
+.container-inner { width: 10000px; }
