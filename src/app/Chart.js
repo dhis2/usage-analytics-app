@@ -3,38 +3,26 @@
  */
 import React from 'react';
 import ReactHighcharts from 'react-highcharts';
-import LoadingMask from 'd2-ui/lib/loading-mask/LoadingMask.component';
 import { render } from 'react-dom';
 
 export default React.createClass({
 
-    getInitialState: function() {
-        return {data: []};
-    },
+    /*getInitialState: function() {
+        console.log("Hei! Inni CHART, getInitialState!");
+        return {data: this.props.data};
+    },*/
     componentDidMount: function() {
-        $.ajax({
-            url: this.props.source,
-            dataType: 'json',
-            cache: false,
-            success: function(data) {
-                this.setState({data: data});
-                this.drawChart();
-            }.bind(this),
-            error: function(xhr, status, err) {
-                console.error(this.props.url, status, err.toString());
-            }.bind(this)
-        });
+        this.drawChart();
     },
 
      drawChart: function(){
 
         let chart = this.refs.chart.getChart();
-        console.log(chart.series[0]);
         let activeUser = [], mapView = [], chartView = [], reportTablesView = [], eventReportView = [], eventChartView = [],
             dashboardView = [], indicatorsView = [], totalView = [], averageView = [], savedMap = [], savedChart = [],
             savedReportTable = [], savedEventReport = [],savedEventChart = [], savedDashboard = [], savedIndicator = [],
             users = [], date = [];
-        this.state.data.map((result)=>{
+        this.props.data.map((result)=>{
             let tmpDate = "";
             if(result.day != null){
                 tmpDate += result.day + "/";
