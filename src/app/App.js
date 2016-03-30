@@ -37,11 +37,10 @@ export default React.createClass({
             value: 'YEAR',
             startDate: '',
             endDate: '',
-            url: ''
+            url: '',
         };
 
     },
-
     updateButton: function () {
         var style = {
             margin: 12
@@ -156,7 +155,7 @@ export default React.createClass({
     },
 
 
-    ///////////////////////////////////////// ENDSIDEBAR //////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////// END SIDEBAR //////////////////////////////////////////////////////////////////
 
 
     render()
@@ -181,7 +180,6 @@ export default React.createClass({
 
                 )}
                 <div className="main-content">
-                    {console.log("kjører render og kaller client med: " + this.state.url)}
                     <Client source={this.state.url}/>
                 </div>
             </div>

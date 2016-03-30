@@ -7,21 +7,21 @@ import { render } from 'react-dom';
 
 export default React.createClass({
 
-    /*getInitialState: function() {
-        console.log("Hei! Inni CHART, getInitialState!");
-        return {data: this.props.data};
-    },*/
-    componentDidMount: function() {
+    shouldComponentUpdate: function(){
+        return false;
+    },
+
+    componentDidMount: function () {
         this.drawChart();
     },
 
      drawChart: function(){
-
         let chart = this.refs.chart.getChart();
         let activeUser = [], mapView = [], chartView = [], reportTablesView = [], eventReportView = [], eventChartView = [],
             dashboardView = [], indicatorsView = [], totalView = [], averageView = [], savedMap = [], savedChart = [],
             savedReportTable = [], savedEventReport = [],savedEventChart = [], savedDashboard = [], savedIndicator = [],
             users = [], date = [];
+
         this.props.data.map((result)=>{
             let tmpDate = "";
             if(result.day != null){
