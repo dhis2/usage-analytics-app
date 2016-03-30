@@ -29,7 +29,6 @@ export default React.createClass({
         };
     },
 
-
     ///////////////////////////////////////// SIDEBAR //////////////////////////////////////////////////////////////////
 
     getInitialState: function () {
@@ -45,20 +44,23 @@ export default React.createClass({
         var style = {
             margin: 12
         };
-        return <div><RaisedButton label="Update" secondary={true} style={style} onClick={() => this.updateURL()}/></div>;
+        return <div><RaisedButton label="Update" secondary={true} style={style} onClick={() => this.updateURL()}/>
+        </div>;
     },
 
-    updateURL: function(){
-        let tempUrl = "http://localhost:8080/api/dataStatistics?startDate="+this.state.startDate+"&endDate="+this.state.endDate+"&interval=" + this.state.value;
-        this.setState({url:tempUrl});
+    updateURL: function () {
+        let tempUrl = "http://localhost:8080/api/dataStatistics?startDate=" + this.state.startDate + "&endDate=" + this.state.endDate + "&interval=" + this.state.value;
+        this.setState({url: tempUrl});
         console.log(tempUrl);
 
     },
 
     DatePicker: function () {
         return ( <div>
-            <DatePicker hintText="Start date" mode="landscape" onChange={(event, value) => this.setState({startDate: this.formatDate(value)})} />
-            <DatePicker hintText="End date" mode="landscape" onChange={(event, value) => this.setState({endDate: this.formatDate(value)})}/>
+            <DatePicker hintText="Start date" mode="landscape"
+                        onChange={(event, value) => this.setState({startDate: this.formatDate(value)})}/>
+            <DatePicker hintText="End date" mode="landscape"
+                        onChange={(event, value) => this.setState({endDate: this.formatDate(value)})}/>
         </div>);
     },
 
@@ -78,7 +80,7 @@ export default React.createClass({
 
     },
 
-    checkBoxes: function(){
+    checkBoxes: function () {
         var styles = {
             block: {
                 maxWidth: 250,
@@ -151,13 +153,7 @@ export default React.createClass({
 
 
         );
-
     },
-
-
-    ///////////////////////////////////////// END SIDEBAR //////////////////////////////////////////////////////////////////
-
-
     render()
     {
         var style = {
@@ -171,13 +167,12 @@ export default React.createClass({
             <div className="app-wrapper">
                 <HeaderBar />
                 {React.createElement(
-                'div',
-                {style: style.sidebar, className: 'left-bar'},
-                this.updateButton(),
-                this.DatePicker(),
-                this.dropdownMenu(),
-                this.checkBoxes()
-
+                    'div',
+                    {style: style.sidebar, className: 'left-bar'},
+                    this.updateButton(),
+                    this.DatePicker(),
+                    this.dropdownMenu(),
+                    this.checkBoxes()
                 )}
                 <div className="main-content">
                     <Client source={this.state.url}/>

@@ -14,6 +14,7 @@ export default React.createClass({
         return {data: undefined};
     },
 
+
     componentWillMount: function(){
         if(this.props.source !== "") {
             this.retrieveData(this.props.source);
@@ -59,6 +60,7 @@ export default React.createClass({
             return (
                 <div>
                     <Chart data={this.state.data}/>
+                    <Table data={this.state.data}/>
                 </div>
             );
         }
