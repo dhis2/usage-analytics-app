@@ -34,14 +34,14 @@ export default React.createClass({
                 dataType: 'json',
                 cache: false,
                 success: function (data) {
-                      /* let roundData = data.map((result) => {
+                      let roundData = data.map((result) => {
                     for (let x in result) {
                      result[x] = Math.round(result[x] * 100) / 100;
                      }
                      return result;
                      });
-                     this.setState({data: roundData});*/
-                    this.setState({data: data});
+                     this.setState({data: roundData});
+                    //this.setState({data: data});
                 }.bind(this),
                 error: function (xhr, status, err) {
                     console.error(this.props.url, status, err.toString());
