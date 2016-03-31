@@ -250,7 +250,7 @@ export default React.createClass({
                         <td></td>
                     </tr>
                     <tr>
-                        <td><h4>other</h4></td>
+                        <td><h4>Other</h4></td>
                         <td></td>
                     </tr>
                     <tr>
@@ -301,7 +301,7 @@ export default React.createClass({
             sidebar: {
                 backgroundColor: '#f3f3f3',
                 overflowY: 'auto',
-                width: 256,
+                width: 260,
             },
             inner:{padding: 5}
         };
