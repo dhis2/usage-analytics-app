@@ -301,7 +301,7 @@ export default React.createClass({
             sidebar: {
                 backgroundColor: '#f3f3f3',
                 overflowY: 'auto',
-                width: 260,
+                width: 280,
             },
             inner:{padding: 5}
         };

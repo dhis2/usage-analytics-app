@@ -88,7 +88,7 @@ export default React.createClass({
                             You can also choose witch variables you want to compare by checking/unchecking the boxes in the menu.
                         </span>
                     </div>);
-            }else {return <CircularProgress style={style.circular}/>}
+            }else {return <CircularProgress size={2} style={style.circular}/>}
         }
         else if(this.state.error){
             return<div style={style.divstyle}> <span style={style.spanstyle}><b>Something went wrong!</b> {this.state.error}</span></div>;
