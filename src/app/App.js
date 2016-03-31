@@ -102,14 +102,8 @@ export default React.createClass({
 
     checkBoxes: function(){
         var styles = {
-            block: {
-                maxWidth: 256,
-            },
-            underline:{
-                borderBottom:'solid'
-            },
             checkbox: {
-                marginBottom: 16,
+                marginBottom: 6,
             },
             font:{
                 fontFamily: 'Roboto, sans-serif',
@@ -118,7 +112,7 @@ export default React.createClass({
         };
         return (
             <div style={styles.block}>
-                <table style={styles.underline}>
+                <table>
                     <tbody>
                     <tr>
                         <td><h4 style={styles.font}>Favorite views</h4>
@@ -311,7 +305,7 @@ export default React.createClass({
             sidebar: {
                 backgroundColor: '#f3f3f3',
                 overflowY: 'auto',
-                width: 280,
+                width: 256,
             },
             inner:{padding: 5}
         };

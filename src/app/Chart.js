@@ -27,7 +27,7 @@ export default React.createClass({
         }
     },
 
-    componentWillMount: function () {
+    componentDidMount: function () {
         this.drawChart();
     },
 

@@ -224,26 +224,36 @@ export default React.createClass({
         console.log(this.state.columnWidths);
     },
 
-    render: function() {
+    render() {
         console.log("Inni Table render!");
         console.log(this.props.data);
         this.setColumnWidths(this.props);
 
+        var style={
+            header:{
+                fontFamily: 'Roboto, sans-serif',
+                fontWeight: 'normal',
+                fontSize:25
+            }
+        };
+
         return (
             <div>
-                <h1>Favorite views</h1>
+                <h1 style={style.header}>Favorite views</h1>
                 <Table
                     rowHeight={50}
                     rowsCount={this.props.data.length}
                     width={($(document).width()) - 400}
                     height={400}
                     headerHeight={50}
+                    style={style.colloumheader}
                     {...this.props}
                 >
 
 
                     <Column
                         columnKey="Date"
+
                         header={<Cell>Date</Cell>}
                         width={this.state.columnWidths.date}
                         height={20}
@@ -355,7 +365,7 @@ export default React.createClass({
                         )}
                     />
                 </Table>
-                <h1>Saved</h1>
+                <h1 style={style.header}>Saved</h1>
                 <Table
                     rowHeight={50}
                     rowsCount={this.props.data.length}
