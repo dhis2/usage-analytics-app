@@ -5,13 +5,13 @@
 import React from 'react';
 import CircularProgress from 'material-ui/lib/circular-progress';
 
-import Table from './Table';
+//import Table from './Table';
 import Chart from './Chart';
 
 
 export default React.createClass({
     getInitialState: function () {
-        return {data: undefined,variables: undefined};
+        return {data: undefined,variables: undefined, error: undefined, load: false};
     },
 
     componentWillMount: function () {
@@ -28,7 +28,9 @@ export default React.createClass({
         }
     },
     retrieveData: function (url) {
+        this.setState({load:true});
         this.setState({data: undefined});
+        this.setState({error:undefined});
         $.ajax({
             url: url,
             dataType: 'json',
@@ -43,22 +45,62 @@ export default React.createClass({
                 this.setState({data: roundData});
             }.bind(this),
             error: function (xhr, status, err) {
-                console.error(this.props.url, status, err.toString());
+                console.log(xhr);
+                console.log(status);
+                console.log(err);
+                let code;
+                if(xhr.status == 409){
+                    code = 'Start date or end date is invalid';
+                }else code = xhr.status + ", " + xhr.statusText;
+                this.setState({error: code})
             }.bind(this)
         });
 
     },
 
     render() {
-        if (!this.state.data) {
-            return <div>
-                <CircularProgress /></div>;
+        var style = {
+            divstyle: {
+                background: '#f2dede',
+                minHeight: 50,
+                paddingTop:15
+            },
+            spanstyle:{
+                color:'#a94442',
+                fontSize:20,
+                fontWeight:'italic',
+                textAlign:'center',
+                display:'block',
+                marginLeft:'auto',
+                marginRight:'auto',
+
+            },
+            circular:{
+                display:'block',
+                marginLeft:'auto',
+                marginRight:'auto',
+            }
+        };
+
+        if (!this.state.data && (!this.state.error)) {
+            if(!this.state.load) {
+                return (
+                    <div>
+                        <span>This is an app to create statistical reports of usage within the DHIS2 system. This app will generate a chart and a table of chosen data.
+                            Start by selecting start date and end date and choose your preferred interval. Click the update button to generate the report.
+                            You can also choose witch variables you want to compare by checking/unchecking the boxes in the menu.
+                        </span>
+                    </div>);
+            }else {return <CircularProgress style={style.circular}/>}
+        }
+        else if(this.state.error){
+            return<div style={style.divstyle}> <span style={style.spanstyle}><b>Something went wrong!</b> {this.state.error}</span></div>;
         }
         else {
             return (
                 <div>
                     <Chart data={this.state.data} variables={this.state.variables}/>
-                    <Table data={this.state.data}/>
+
                 </div>
             );
         }

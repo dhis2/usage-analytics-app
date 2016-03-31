@@ -33,8 +33,6 @@ export default React.createClass({
         };
     },
 
-    ///////////////////////////////////////// SIDEBAR //////////////////////////////////////////////////////////////////
-
     getInitialState: function () {
         //all variables that can be retrieved from server. Extend if server is changed
         var allVarables = ["Active users","Map views","Chart views",
@@ -110,7 +108,8 @@ export default React.createClass({
         };
         return (
             <div style={styles.block}>
-                <table border="1" >
+                <table>
+                    <tbody>
                     <tr>
                         <td><h4>Favorite views</h4>
                         </td>
@@ -290,6 +289,7 @@ export default React.createClass({
                             />
                         </td>
                     </tr>
+                    </tbody>
                 </table>
             </div>
 
