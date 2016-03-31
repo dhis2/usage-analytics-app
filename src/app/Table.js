@@ -18,33 +18,45 @@ import Toggle from 'material-ui/lib/toggle';
 import {Table, Column, Cell} from 'fixed-data-table';
 import Style from 'fixed-data-table/dist/fixed-data-table.min.css';
 
-const styles = {
-    spacing: Spacing,
-    fontFamily: 'Roboto, sans-serif',
-    palette: {
-        primary1Color: Colors.blue500,
-        primary2Color: Colors.blue700,
-        primary3Color: Colors.lightBlack,
-        accent1Color: '#276696',
-        accent2Color: '#E9E9E9',
-        accent3Color: Colors.grey500,
-        textColor: Colors.darkBlack,
-        alternateTextColor: Colors.white,
-        canvasColor: Colors.white,
-        borderColor: Colors.grey300,
-        disabledColor: ColorManipulator.fade(Colors.darkBlack, 0.3)
-    }
-};
-
-const count = 0;
 
 export default React.createClass({
+
+    componentWillReceiveProps: function(nextprops){
+        this.setColumnWidths(nextprops);
+    },
 
     getInitialState: function(){
         let activeUser = [], mapView = [], chartView = [], reportTablesView = [], eventReportView = [], eventChartView = [],
             dashboardView = [], indicatorsView = [], totalView = [], averageView = [], savedMap = [], savedChart = [],
             savedReportTable = [], savedEventReport = [],savedEventChart = [], savedDashboard = [], savedIndicator = [],
             users = [], date = [];
+        let columnWidths = [
+            {
+                date: 100,
+                activeUser: 0,
+                mapView: 0,
+                chartView: 0,
+                reportTablesView: 0,
+                eventReportView: 0,
+                eventChartView: 0,
+                dashboardView: 0,
+                indicatorsView: 0,
+                totalView: 0,
+                averageView: 0,
+                savedMap: 0,
+                savedChart: 0,
+                savedReportTable: 0,
+                savedEventReport: 0,
+                savedEventChart: 0,
+                savedDashboard: 0,
+                savedIndicator: 0,
+                users: 0
+            }
+
+        ];
+
+        console.log(this.props.variables);
+        //this.componentWillReceiveProps(this.props);
 
         this.props.data.map((result)=>{
             let tmpDate = "";
@@ -103,31 +115,97 @@ export default React.createClass({
             savedIndicator.push(result.savedIndicators);
             users.push(result.users);
         });
+        
+
         return {activeUser, mapView, chartView, reportTablesView, eventReportView, eventChartView,
             dashboardView, indicatorsView, totalView, averageView, savedMap, savedChart,
             savedReportTable, savedEventReport, savedEventChart, savedDashboard, savedIndicator,
-            users, date};
+            users, date, columnWidths};
+    },
+
+    setColumnWidths: function(nextprops){
+        if(nextprops.variables.indexOf("Active users") != -1) {
+            this.state.columnWidths[0].activeUser = 100;
+        }
+        if(nextprops.variables.indexOf("Map views") != -1){
+            this.state.columnWidths[0].mapView = 100;
+        }
+        if(nextprops.variables.indexOf("Chart views") != -1){
+            this.state.columnWidths[0].chartView = 100;
+        }
+        if(nextprops.variables.indexOf("Report table views") != -1){
+            this.state.columnWidths[0].reportTablesView = 100;
+        }
+        if(nextprops.variables.indexOf("Event report views") != -1){
+            this.state.columnWidths[0].eventReportView = 100;
+        }
+        if(nextprops.variables.indexOf("Event chart views") != -1){
+            this.state.columnWidths[0].eventChartView = 100;
+        }
+        if(nextprops.variables.indexOf("Dashboard views") != -1){
+            this.state.columnWidths[0].dashboardView = 100;
+        }
+        if(nextprops.variables.indexOf("Indicators views") != -1){
+            this.state.columnWidths[0].indicatorsView = 100;
+        }
+        if(nextprops.variables.indexOf("Total views") != -1){
+            this.state.columnWidths[0].totalView = 100;
+        }
+        if(nextprops.variables.indexOf("Average views") != -1){
+            this.state.columnWidths[0].averageView = 100;
+        }
+        if(nextprops.variables.indexOf("Saved maps") != -1){
+            this.state.columnWidths[0].savedMap = 100;
+        }
+        if(nextprops.variables.indexOf("Saved charts") != -1){
+            this.state.columnWidths[0].savedChart = 100;
+        }
+        if(nextprops.variables.indexOf("Saved report tables") != -1){
+            this.state.columnWidths[0].savedReportTable = 100;
+        }
+        if(nextprops.variables.indexOf("Saved event report") != -1){
+            this.state.columnWidths[0].savedEventReport = 100;
+        }
+        if(nextprops.variables.indexOf("Saved event charts") != -1){
+            this.state.columnWidths[0].savedEventChart = 100;
+        }
+        if(nextprops.variables.indexOf("Saved dashboards") != -1){
+            this.state.columnWidths[0].savedDashboard = 100;
+        }
+        if(nextprops.variables.indexOf("Saved indicators") != -1){
+            this.state.columnWidths[0].savedIndicator = 100;
+        }
+        if(nextprops.variables.indexOf("Total users") != -1){
+            this.state.columnWidths[0].user = 100;
+        }
+
+        console.log(this.state.columnWidths);
     },
 
     render: function() {
         console.log("Inni Table render!");
         console.log(this.props.data);
+        this.setColumnWidths(this.props);
 
         return (
             <div>
-                <h1>Views</h1>
+                <h1>Favorite views</h1>
                 <Table
                     rowHeight={50}
                     rowsCount={this.props.data.length}
-                    width={1000}
-                    height={this.props.data.length * 50}
+                    width={($(document).width()) - 400}
+                    height={(this.props.data.length > 30 ) ? 1000 : this.props.data.length * 50}
                     headerHeight={50}
+                    onColumnResizeEndCallback={this._onColumnResizeEndCallback}
+                    isColumnResizing={false}
                 >
+
+
                     <Column
-                        hide={true}
                         header={<Cell>Date</Cell>}
-                        width={100}
+                        width={this.state.columnWidths[0].date}
                         height={50}
+                        isResizable={true}
                         cell={({rowIndex, ...props}) => (
                             <Cell {...props}>
                                 {this.state.date[rowIndex]}
@@ -136,8 +214,9 @@ export default React.createClass({
                     />
 
                     <Column
+                        columnKey={2}
                         header={<Cell>Map</Cell>}
-                        width={100}
+                        width={this.state.columnWidths[0].mapView}
                         height={50}
                         cell={({rowIndex, ...props}) => (
                             <Cell {...props}>
@@ -146,8 +225,9 @@ export default React.createClass({
                         )}
                     />
                     <Column
+                        columnKey={3}
                         header={<Cell>Chart</Cell>}
-                        width={100}
+                        width={this.state.columnWidths[0].chartView}
                         height={50}
                         cell={({rowIndex, ...props}) => (
                             <Cell {...props}>
@@ -156,8 +236,9 @@ export default React.createClass({
                         )}
                     />
                     <Column
+                        columnKey={4}
                         header={<Cell>Report table</Cell>}
-                        width={100}
+                        width={this.state.columnWidths[0].reportTablesView}
                         height={50}
                         cell={({rowIndex, ...props}) => (
                             <Cell {...props}>
@@ -166,8 +247,9 @@ export default React.createClass({
                         )}
                     />
                     <Column
+                        columnKey={5}
                         header={<Cell>Event report</Cell>}
-                        width={100}
+                        width={this.state.columnWidths[0].eventReportView}
                         height={50}
                         cell={({rowIndex, ...props}) => (
                             <Cell {...props}>
@@ -176,8 +258,9 @@ export default React.createClass({
                         )}
                     />
                     <Column
+                        columnKey={6}
                         header={<Cell>Event chart</Cell>}
-                        width={100}
+                        width={this.state.columnWidths[0].eventChartView}
                         height={50}
                         cell={({rowIndex, ...props}) => (
                             <Cell {...props}>
@@ -186,8 +269,9 @@ export default React.createClass({
                         )}
                     />
                     <Column
+                        columnKey={7}
                         header={<Cell>Dashboard</Cell>}
-                        width={100}
+                        width={this.state.columnWidths[0].dashboardView}
                         height={50}
                         cell={({rowIndex, ...props}) => (
                             <Cell {...props}>
@@ -196,8 +280,9 @@ export default React.createClass({
                         )}
                     />
                     <Column
+                        columnKey={8}
                         header={<Cell>Indicators</Cell>}
-                        width={100}
+                        width={this.state.columnWidths[0].indicatorsView}
                         height={50}
                         cell={({rowIndex, ...props}) => (
                             <Cell {...props}>
@@ -206,8 +291,9 @@ export default React.createClass({
                         )}
                     />
                     <Column
+                        columnKey={9}
                         header={<Cell>Total views</Cell>}
-                        width={100}
+                        width={this.state.columnWidths[0].totalView}
                         height={50}
                         cell={({rowIndex, ...props}) => (
                             <Cell {...props}>
@@ -216,8 +302,9 @@ export default React.createClass({
                         )}
                     />
                     <Column
+                        columnKey={10}
                         header={<Cell>Average views</Cell>}
-                        width={100}
+                        width={this.state.columnWidths[0].averageView}
                         height={50}
                         cell={({rowIndex, ...props}) => (
                             <Cell {...props}>
@@ -225,20 +312,19 @@ export default React.createClass({
                             </Cell>
                         )}
                     />
-
-
                 </Table>
-                <h1>Saves</h1>
+                <h1>Saved</h1>
                 <Table
                     rowHeight={50}
                     rowsCount={this.props.data.length}
-                    width={900}
+                    width={($(document).width()) - 400}
                     height={300}
                     headerHeight={50}
                 >
                     <Column
+                        columnKey={11}
                         header={<Cell>Date</Cell>}
-                        width={100}
+                        width={this.state.columnWidths[0].date}
                         height={50}
                         cell={({rowIndex, ...props}) => (
                             <Cell {...props}>
@@ -247,8 +333,9 @@ export default React.createClass({
                         )}
                     />
                     <Column
+                        columnKey={12}
                         header={<Cell>Maps</Cell>}
-                        width={100}
+                        width={this.state.columnWidths[0].savedMap}
                         height={50}
                         cell={({rowIndex, ...props}) => (
                             <Cell {...props}>
@@ -257,8 +344,9 @@ export default React.createClass({
                         )}
                     />
                     <Column
+                        columnKey={13}
                         header={<Cell>Charts</Cell>}
-                        width={100}
+                        width={this.state.columnWidths[0].savedChart}
                         height={50}
                         cell={({rowIndex, ...props}) => (
                             <Cell {...props}>
@@ -267,8 +355,9 @@ export default React.createClass({
                         )}
                     />
                     <Column
+                        columnKey={14}
                         header={<Cell>Report tables</Cell>}
-                        width={100}
+                        width={this.state.columnWidths[0].savedReportTable}
                         height={50}
                         cell={({rowIndex, ...props}) => (
                             <Cell {...props}>
@@ -277,8 +366,9 @@ export default React.createClass({
                         )}
                     />
                     <Column
+                        columnKey={15}
                         header={<Cell>Event charts</Cell>}
-                        width={100}
+                        width={this.state.columnWidths[0].savedEventChart}
                         height={50}
                         cell={({rowIndex, ...props}) => (
                             <Cell {...props}>
@@ -287,8 +377,9 @@ export default React.createClass({
                         )}
                     />
                     <Column
+                        columnKey={16}
                         header={<Cell>Dashboards</Cell>}
-                        width={100}
+                        width={this.state.columnWidths[0].savedDashboard}
                         height={50}
                         cell={({rowIndex, ...props}) => (
                             <Cell {...props}>
@@ -297,8 +388,9 @@ export default React.createClass({
                         )}
                     />
                     <Column
+                        columnKey={17}
                         header={<Cell>Indicators</Cell>}
-                        width={100}
+                        width={this.state.columnWidths[0].savedIndicator}
                         height={50}
                         cell={({rowIndex, ...props}) => (
                             <Cell {...props}>
@@ -307,8 +399,9 @@ export default React.createClass({
                         )}
                     />
                     <Column
+                        columnKey={18}
                         header={<Cell>Total users</Cell>}
-                        width={100}
+                        width={this.state.columnWidths[0].users}
                         height={50}
                         cell={({rowIndex, ...props}) => (
                             <Cell {...props}>
@@ -317,8 +410,9 @@ export default React.createClass({
                         )}
                     />
                     <Column
+                        columnKey={19}
                         header={<Cell>Active users</Cell>}
-                        width={100}
+                        width={this.state.columnWidths[0].activeUser}
                         height={50}
                         cell={({rowIndex, ...props}) => (
                             <Cell {...props}>

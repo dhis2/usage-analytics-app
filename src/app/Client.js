@@ -5,7 +5,7 @@
 import React from 'react';
 import CircularProgress from 'material-ui/lib/circular-progress';
 
-//import Table from './Table';
+import Table from './Table';
 import Chart from './Chart';
 
 
@@ -58,6 +58,7 @@ export default React.createClass({
             return (
                 <div>
                     <Chart data={this.state.data} variables={this.state.variables}/>
+                    <Table data={this.state.data} variables={this.state.variables}/>
                 </div>
             );
         }
