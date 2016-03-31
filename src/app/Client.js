@@ -45,9 +45,6 @@ export default React.createClass({
                 this.setState({data: roundData});
             }.bind(this),
             error: function (xhr, status, err) {
-                console.log(xhr);
-                console.log(status);
-                console.log(err);
                 let code;
                 if(xhr.status == 409){
                     code = 'Start date or end date is invalid';
