@@ -15,6 +15,8 @@ import Colors from 'material-ui/lib/styles/colors';
 import ColorManipulator from 'material-ui/lib/utils/color-manipulator';
 import TextField from 'material-ui/lib/text-field';
 import Toggle from 'material-ui/lib/toggle';
+import {Table, Column, Cell} from 'fixed-data-table';
+import Style from 'fixed-data-table/dist/fixed-data-table.min.css';
 
 const styles = {
     spacing: Spacing,
@@ -34,124 +36,300 @@ const styles = {
     }
 };
 
-export default class Table extends React.Component{
+const count = 0;
 
-    constructor(props) {
-        super(props);
+export default React.createClass({
 
-        this.state = {
-            fixedHeader: false,
-            fixedFooter: true,
-            stripedRows: true,
-            showRowHover: false,
-            selectable: false,
-            multiSelectable: false,
-            enableSelectAll: false,
-            deselectOnClickaway: true,
-            height: '300px',
-            displaySelectAll: false,
-            adjustForCheckbox: false,
-            displayRowCheckbox: false,
-            bodyStyle: { overflowX: undefined, overflowY: undefined }
-        };
-    }
+    getInitialState: function(){
+        let activeUser = [], mapView = [], chartView = [], reportTablesView = [], eventReportView = [], eventChartView = [],
+            dashboardView = [], indicatorsView = [], totalView = [], averageView = [], savedMap = [], savedChart = [],
+            savedReportTable = [], savedEventReport = [],savedEventChart = [], savedDashboard = [], savedIndicator = [],
+            users = [], date = [];
 
-    handleToggle = (event, toggled) => {
-        this.setState({
-            [event.target.name]: toggled,
+        this.props.data.map((result)=>{
+            let tmpDate = "";
+            if(result.day != null){
+                tmpDate += result.day + "/";
+            }
+            if(result.week != null){
+                tmpDate += result.week + "/";
+            }
+            if(result.month != null){
+                switch (result.month){
+                    case 1: tmpDate += "Jan ";
+                        break;
+                    case 2: tmpDate += "Feb ";
+                        break;
+                    case 3: tmpDate += "Mar ";
+                        break;
+                    case 4: tmpDate += "Apr ";
+                        break;
+                    case 5: tmpDate += "May ";
+                        break;
+                    case 6: tmpDate += "Jun ";
+                        break;
+                    case 7: tmpDate += "Jul ";
+                        break;
+                    case 8: tmpDate += "Aug ";
+                        break;
+                    case 9: tmpDate += "Sep ";
+                        break;
+                    case 10: tmpDate += "Oct ";
+                        break;
+                    case 11: tmpDate += "Nov ";
+                        break;
+                    case 12: tmpDate += "Dec ";
+                        break;
+                }
+            }
+            tmpDate += result.year;
+            date.push(tmpDate);
+            activeUser.push(result.activeUsers);
+            mapView.push(result.mapViews);
+            chartView.push(result.chartViews);
+            reportTablesView.push(result.reportTablesViews);
+            eventReportView.push(result.eventReportViews);
+            eventChartView.push(result.eventChartViews);
+            dashboardView.push(result.dashboardViews);
+            indicatorsView.push(result.indicatorsViews);
+            totalView.push(result.totalViews);
+            averageView.push(result.averageViews);
+            savedMap.push(result.savedMaps);
+            savedChart.push(result.savedCharts);
+            savedReportTable.push(result.savedReportTables);
+            savedEventReport.push(result.savedEventReports);
+            savedEventChart.push(result.savedEventCharts);
+            savedDashboard.push(result.savedDashboards);
+            savedIndicator.push(result.savedIndicators);
+            users.push(result.users);
         });
-    };
+        return {activeUser, mapView, chartView, reportTablesView, eventReportView, eventChartView,
+            dashboardView, indicatorsView, totalView, averageView, savedMap, savedChart,
+            savedReportTable, savedEventReport, savedEventChart, savedDashboard, savedIndicator,
+            users, date};
+    },
 
-    handleChange = (event) => {
-        this.setState({height: event.target.value});
-    };
-
-
-    render() {
+    render: function() {
+        console.log("Inni Table render!");
+        console.log(this.props.data);
 
         return (
-            <div id="scroller">
-            <MaterialTable
-                //bodyStyle={this.state.bodyStyle}
-                //style={{display: 'inline'}}
-                height={this.state.height}
-                fixedHeader={this.state.fixedHeader}
-                fixedFooter={this.state.fixedFooter}
-                selectable={this.state.selectable}
-                multiSelectable={this.state.multiSelectable}
-                onRowSelection={this._onRowSelection}
-            >
-                <TableHeader
-                    enableSelectAll={this.state.enableSelectAll}
-                    displaySelectAll={this.state.displaySelectAll}
-                    adjustForCheckbox={this.state.adjustForCheckbox}>
-                    <TableRow>
-                        <TableHeaderColumn colSpan="3" tooltip="Super Header" style={{textAlign: 'center'}}>
-                            Super Header
-                        </TableHeaderColumn>
-                    </TableRow>
-                    <TableRow>
-                        <TableHeaderColumn tooltip="The Year">Year</TableHeaderColumn>
-                        <TableHeaderColumn tooltip="Active Users">Active Users</TableHeaderColumn>
-                        <TableHeaderColumn tooltip="Map Views">Map Views</TableHeaderColumn>
-                        <TableHeaderColumn tooltip="Chart Views">Chart Views</TableHeaderColumn>
-                        <TableHeaderColumn tooltip="Report Tables Views">Report Tables Views</TableHeaderColumn>
-                        <TableHeaderColumn tooltip="Event Report Views">Event Report Views</TableHeaderColumn>
-                        <TableHeaderColumn tooltip="Event Chart Views">Event Chart Views</TableHeaderColumn>
-                        <TableHeaderColumn tooltip="Dashboard Views">Dashboard Views</TableHeaderColumn>
-                        <TableHeaderColumn tooltip="Indicators Views">Indicators Views</TableHeaderColumn>
-                        <TableHeaderColumn tooltip="Total Views">Total Views</TableHeaderColumn>
-                        <TableHeaderColumn tooltip="Average Views">Average Views</TableHeaderColumn>
-                        <TableHeaderColumn tooltip="Saved Maps">Saved Maps</TableHeaderColumn>
-                        <TableHeaderColumn tooltip="Saved Charts">Saved Charts</TableHeaderColumn>
-                        <TableHeaderColumn tooltip="Saved Report Tables">Saved Report Tables</TableHeaderColumn>
-                        <TableHeaderColumn tooltip="Saved Event Reports">Saved Event Reports</TableHeaderColumn>
-                        <TableHeaderColumn tooltip="Saved Event Charts">Saved Event Charts</TableHeaderColumn>
-                        <TableHeaderColumn tooltip="Saved Dashboards">Saved Dashboards</TableHeaderColumn>
-                        <TableHeaderColumn tooltip="Saved Indicators">Saved Indicators</TableHeaderColumn>
-                        <TableHeaderColumn tooltip="Users">Users</TableHeaderColumn>
-                    </TableRow>
-                </TableHeader>
-
-                <TableBody
-                    deselectOnClickaway={this.state.deselectOnClickaway}
-                    showRowHover={this.state.showRowHover}
-                    stripedRows={this.state.stripedRows}
-                    displayRowCheckbox={this.state.displayRowCheckbox}
+            <div>
+                <h1>Views</h1>
+                <Table
+                    rowHeight={50}
+                    rowsCount={this.props.data.length}
+                    width={1000}
+                    height={this.props.data.length * 50}
+                    headerHeight={50}
                 >
-                    {this.props.data.map( (result) => (
-                        <TableRow key={result.year}>
-                            <TableRowColumn>{result.year}</TableRowColumn>
-                            <TableRowColumn>{result.activeUsers}</TableRowColumn>
-                            <TableRowColumn>{result.mapViews}</TableRowColumn>
-                            <TableRowColumn>{result.chartViews}</TableRowColumn>
-                            <TableRowColumn>{result.reportTablesViews}</TableRowColumn>
-                            <TableRowColumn>{result.eventReportViews}</TableRowColumn>
-                            <TableRowColumn>{result.eventChartViews}</TableRowColumn>
-                            <TableRowColumn>{result.dashboardViews}</TableRowColumn>
-                            <TableRowColumn>{result.indicatorsViews}</TableRowColumn>
-                            <TableRowColumn>{result.totalViews}</TableRowColumn>
-                            <TableRowColumn>{result.averageViews}</TableRowColumn>
-                            <TableRowColumn>{result.savedMaps}</TableRowColumn>
-                            <TableRowColumn>{result.savedCharts}</TableRowColumn>
-                            <TableRowColumn>{result.savedReportTables}</TableRowColumn>
-                            <TableRowColumn>{result.savedEventReports}</TableRowColumn>
-                            <TableRowColumn>{result.savedEventCharts}</TableRowColumn>
-                            <TableRowColumn>{result.savedDashboards}</TableRowColumn>
-                            <TableRowColumn>{result.savedIndicators}</TableRowColumn>
-                            <TableRowColumn>{result.users}</TableRowColumn>
-                        </TableRow>
-                    ))}
-                </TableBody>
-                <TableFooter>
-                    <TableRow>
-                        <TableRowColumn colSpan="3" style={{textAlign: 'center'}}>
-                            Super Footer
-                        </TableRowColumn>
-                    </TableRow>
-                </TableFooter>
-            </MaterialTable>
-                    </div>
+                    <Column
+                        hide={true}
+                        header={<Cell>Date</Cell>}
+                        width={100}
+                        height={50}
+                        cell={({rowIndex, ...props}) => (
+                            <Cell {...props}>
+                                {this.state.date[rowIndex]}
+                            </Cell>
+                        )}
+                    />
+
+                    <Column
+                        header={<Cell>Map</Cell>}
+                        width={100}
+                        height={50}
+                        cell={({rowIndex, ...props}) => (
+                            <Cell {...props}>
+                                {this.state.mapView[rowIndex]}
+                            </Cell>
+                        )}
+                    />
+                    <Column
+                        header={<Cell>Chart</Cell>}
+                        width={100}
+                        height={50}
+                        cell={({rowIndex, ...props}) => (
+                            <Cell {...props}>
+                                {this.state.chartView[rowIndex]}
+                            </Cell>
+                        )}
+                    />
+                    <Column
+                        header={<Cell>Report table</Cell>}
+                        width={100}
+                        height={50}
+                        cell={({rowIndex, ...props}) => (
+                            <Cell {...props}>
+                                {this.state.reportTablesView[rowIndex]}
+                            </Cell>
+                        )}
+                    />
+                    <Column
+                        header={<Cell>Event report</Cell>}
+                        width={100}
+                        height={50}
+                        cell={({rowIndex, ...props}) => (
+                            <Cell {...props}>
+                                {this.state.eventReportView[rowIndex]}
+                            </Cell>
+                        )}
+                    />
+                    <Column
+                        header={<Cell>Event chart</Cell>}
+                        width={100}
+                        height={50}
+                        cell={({rowIndex, ...props}) => (
+                            <Cell {...props}>
+                                {this.state.eventChartView[rowIndex]}
+                            </Cell>
+                        )}
+                    />
+                    <Column
+                        header={<Cell>Dashboard</Cell>}
+                        width={100}
+                        height={50}
+                        cell={({rowIndex, ...props}) => (
+                            <Cell {...props}>
+                                {this.state.dashboardView[rowIndex]}
+                            </Cell>
+                        )}
+                    />
+                    <Column
+                        header={<Cell>Indicators</Cell>}
+                        width={100}
+                        height={50}
+                        cell={({rowIndex, ...props}) => (
+                            <Cell {...props}>
+                                {this.state.indicatorsView[rowIndex]}
+                            </Cell>
+                        )}
+                    />
+                    <Column
+                        header={<Cell>Total views</Cell>}
+                        width={100}
+                        height={50}
+                        cell={({rowIndex, ...props}) => (
+                            <Cell {...props}>
+                                {this.state.totalView[rowIndex]}
+                            </Cell>
+                        )}
+                    />
+                    <Column
+                        header={<Cell>Average views</Cell>}
+                        width={100}
+                        height={50}
+                        cell={({rowIndex, ...props}) => (
+                            <Cell {...props}>
+                                {this.state.averageView[rowIndex]}
+                            </Cell>
+                        )}
+                    />
+
+
+                </Table>
+                <h1>Saves</h1>
+                <Table
+                    rowHeight={50}
+                    rowsCount={this.props.data.length}
+                    width={900}
+                    height={300}
+                    headerHeight={50}
+                >
+                    <Column
+                        header={<Cell>Date</Cell>}
+                        width={100}
+                        height={50}
+                        cell={({rowIndex, ...props}) => (
+                            <Cell {...props}>
+                                {this.state.date[rowIndex]}
+                            </Cell>
+                        )}
+                    />
+                    <Column
+                        header={<Cell>Maps</Cell>}
+                        width={100}
+                        height={50}
+                        cell={({rowIndex, ...props}) => (
+                            <Cell {...props}>
+                                {this.state.savedMap[rowIndex]}
+                            </Cell>
+                        )}
+                    />
+                    <Column
+                        header={<Cell>Charts</Cell>}
+                        width={100}
+                        height={50}
+                        cell={({rowIndex, ...props}) => (
+                            <Cell {...props}>
+                                {this.state.savedChart[rowIndex]}
+                            </Cell>
+                        )}
+                    />
+                    <Column
+                        header={<Cell>Report tables</Cell>}
+                        width={100}
+                        height={50}
+                        cell={({rowIndex, ...props}) => (
+                            <Cell {...props}>
+                                {this.state.savedReportTable[rowIndex]}
+                            </Cell>
+                        )}
+                    />
+                    <Column
+                        header={<Cell>Event charts</Cell>}
+                        width={100}
+                        height={50}
+                        cell={({rowIndex, ...props}) => (
+                            <Cell {...props}>
+                                {this.state.savedEventChart[rowIndex]}
+                            </Cell>
+                        )}
+                    />
+                    <Column
+                        header={<Cell>Dashboards</Cell>}
+                        width={100}
+                        height={50}
+                        cell={({rowIndex, ...props}) => (
+                            <Cell {...props}>
+                                {this.state.savedDashboard[rowIndex]}
+                            </Cell>
+                        )}
+                    />
+                    <Column
+                        header={<Cell>Indicators</Cell>}
+                        width={100}
+                        height={50}
+                        cell={({rowIndex, ...props}) => (
+                            <Cell {...props}>
+                                {this.state.savedIndicator[rowIndex]}
+                            </Cell>
+                        )}
+                    />
+                    <Column
+                        header={<Cell>Total users</Cell>}
+                        width={100}
+                        height={50}
+                        cell={({rowIndex, ...props}) => (
+                            <Cell {...props}>
+                                {this.state.users[rowIndex]}
+                            </Cell>
+                        )}
+                    />
+                    <Column
+                        header={<Cell>Active users</Cell>}
+                        width={100}
+                        height={50}
+                        cell={({rowIndex, ...props}) => (
+                            <Cell {...props}>
+                                {this.state.activeUser[rowIndex]}
+                            </Cell>
+                        )}
+                    />
+                </Table>
+                <br/>
+            </div>
         );
     }
-};
+
+});

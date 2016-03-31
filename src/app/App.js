@@ -11,7 +11,6 @@ injectTapEventPlugin();
 
 import HeaderBar from 'd2-ui/lib/header-bar/HeaderBar.component';
 import Client from './Client.js';
-import Chart from './Chart';
 
 
 export default React.createClass({
@@ -29,7 +28,6 @@ export default React.createClass({
             d2: this.props.d2,
         };
     },
-
 
     ///////////////////////////////////////// SIDEBAR //////////////////////////////////////////////////////////////////
 
@@ -193,13 +191,7 @@ export default React.createClass({
             </div>
 
         );
-
     },
-
-
-    ///////////////////////////////////////// END SIDEBAR //////////////////////////////////////////////////////////////////
-
-
     render()
     {
         var style = {

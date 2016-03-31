@@ -72,7 +72,7 @@ export default React.createClass({
             activeUser.push(result.activeUsers);
             mapView.push(result.mapViews);
             chartView.push(result.chartViews);
-            reportTablesView.push(result.reportTableViews);
+            reportTablesView.push(result.reportTablesViews);
             eventReportView.push(result.eventReportViews);
             eventChartView.push(result.eventChartViews);
             dashboardView.push(result.dashboardViews);
