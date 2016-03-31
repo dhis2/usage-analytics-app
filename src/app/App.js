@@ -65,7 +65,10 @@ export default React.createClass({
     },
 
     DatePicker: function () {
-        return ( <div>
+        var style = {
+            marginLeft: 5
+        };
+        return ( <div style={style}>
             <DatePicker hintText="Start date" mode="landscape" onChange={(event, value) => this.setState({startDate: this.formatDate(value)})} />
             <DatePicker hintText="End date" mode="landscape" onChange={(event, value) => this.setState({endDate: this.formatDate(value)})}/>
         </div>);
@@ -102,16 +105,23 @@ export default React.createClass({
             block: {
                 maxWidth: 256,
             },
+            underline:{
+                borderBottom:'solid'
+            },
             checkbox: {
                 marginBottom: 16,
+            },
+            font:{
+                fontFamily: 'Roboto, sans-serif',
+                fontWeight: 'normal'
             }
         };
         return (
             <div style={styles.block}>
-                <table>
+                <table style={styles.underline}>
                     <tbody>
                     <tr>
-                        <td><h4>Favorite views</h4>
+                        <td><h4 style={styles.font}>Favorite views</h4>
                         </td>
                         <td></td>
                     </tr>
@@ -182,7 +192,7 @@ export default React.createClass({
                         <td></td>
                     </tr>
                     <tr>
-                        <td><h4>Saved</h4></td>
+                        <td><h4 style={styles.font}>Saved</h4></td>
                         <td></td>
                     </tr>
                     <tr>
@@ -250,7 +260,7 @@ export default React.createClass({
                         <td></td>
                     </tr>
                     <tr>
-                        <td><h4>Other</h4></td>
+                        <td><h4 style={styles.font}>Other</h4></td>
                         <td></td>
                     </tr>
                     <tr>

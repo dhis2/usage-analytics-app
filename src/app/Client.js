@@ -64,6 +64,8 @@ export default React.createClass({
                 paddingLeft:15,
                 paddingRight:15,
                 maxWidth: 600,
+                fontFamily: 'Roboto, sans-serif',
+                fontWeight: 'normal',
 
                 color:'#000000',
                 fontSize:18,
@@ -80,17 +82,18 @@ export default React.createClass({
             errspanstyle:{
                 color:'#a94442',
                 fontSize:20,
-                fontWeight:'italic',
                 textAlign:'center',
                 display:'block',
                 marginLeft:'auto',
                 marginRight:'auto',
+                fontFamily: 'Roboto, sans-serif',
+                fontWeight: 'normal'
 
             },
             circular:{
                 display:'block',
                 marginLeft:'auto',
-                marginRight:'auto',
+                marginRight:'auto'
             }
         };
 
