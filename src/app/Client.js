@@ -57,12 +57,27 @@ export default React.createClass({
 
     render() {
         var style = {
-            divstyle: {
+            spanstyle:{
+                backgroundColor: '#f3f3f3',
+                paddingTop:15,
+                paddingBottom:15,
+                paddingLeft:15,
+                paddingRight:15,
+                maxWidth: 600,
+
+                color:'#000000',
+                fontSize:18,
+                display:'block',
+                marginLeft:'auto',
+                marginRight:'auto',
+
+            },
+            errdivstyle: {
                 background: '#f2dede',
                 minHeight: 50,
                 paddingTop:15
             },
-            spanstyle:{
+            errspanstyle:{
                 color:'#a94442',
                 fontSize:20,
                 fontWeight:'italic',
@@ -83,7 +98,7 @@ export default React.createClass({
             if(!this.state.load) {
                 return (
                     <div>
-                        <span>This is an app to create statistical reports of usage within the DHIS2 system. This app will generate a chart and a table of chosen data.
+                        <span style={style.spanstyle}>This app creates statistical reports of usage within the DHIS2 system. This app will generate a chart and a table of chosen data.
                             Start by selecting start date and end date and choose your preferred interval. Click the update button to generate the report.
                             You can also choose witch variables you want to compare by checking/unchecking the boxes in the menu.
                         </span>
@@ -91,7 +106,7 @@ export default React.createClass({
             }else {return <CircularProgress size={2} style={style.circular}/>}
         }
         else if(this.state.error){
-            return<div style={style.divstyle}> <span style={style.spanstyle}><b>Something went wrong!</b> {this.state.error}</span></div>;
+            return<div style={style.errdivstyle}> <span style={style.errspanstyle}><b>Something went wrong!</b> {this.state.error}</span></div>;
         }
         else {
             return (
