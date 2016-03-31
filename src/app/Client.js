@@ -10,55 +10,54 @@ import Chart from './Chart';
 
 
 export default React.createClass({
-    getInitialState: function() {
-        return {data: undefined};
+    getInitialState: function () {
+        return {data: undefined,variables: undefined};
     },
 
-    componentWillMount: function(){
-        if(this.props.source !== "") {
+    componentWillMount: function () {
+        if (this.props.source !== "") {
             this.retrieveData(this.props.source);
         }
     },
 
-    componentWillReceiveProps: function(props) {
-        var dataHasChanged = this.props.source !== props.source;
-        if(dataHasChanged) {
-            this.setState({dontUpdate: false});
-            this.retrieveData(props.source);
+    componentWillReceiveProps: function (nextprops) {
+        this.setState({variables: nextprops.variables});
+        var dataHasChanged = this.props.source !== nextprops.source;
+        if (dataHasChanged) {
+            this.retrieveData(nextprops.source);
         }
     },
-    retrieveData: function(url){
-            this.setState({data: undefined});
-             $.ajax({
-                url: url,
-                dataType: 'json',
-                cache: false,
-                success: function (data) {
-                      /* let roundData = data.map((result) => {
+    retrieveData: function (url) {
+        this.setState({data: undefined});
+        $.ajax({
+            url: url,
+            dataType: 'json',
+            cache: false,
+            success: function (data) {
+                let roundData = data.map((result) => {
                     for (let x in result) {
-                     result[x] = Math.round(result[x] * 100) / 100;
-                     }
-                     return result;
-                     });
-                     this.setState({data: roundData});*/
-                    this.setState({data: data});
-                }.bind(this),
-                error: function (xhr, status, err) {
-                    console.error(this.props.url, status, err.toString());
-                }.bind(this)
-            });
+                        result[x] = Math.round(result[x] * 100) / 100;
+                    }
+                    return result;
+                });
+                this.setState({data: roundData});
+            }.bind(this),
+            error: function (xhr, status, err) {
+                console.error(this.props.url, status, err.toString());
+            }.bind(this)
+        });
 
     },
 
     render() {
-        if( !this.state.data){
+        if (!this.state.data) {
             return <div>
-                <CircularProgress /> </div>;
+                <CircularProgress /></div>;
         }
         else {
             return (
                 <div>
-                    <Chart data={this.state.data}/>
+                    <Chart data={this.state.data} variables={this.state.variables}/>
                 </div>
             );
         }

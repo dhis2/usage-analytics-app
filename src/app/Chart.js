@@ -10,13 +10,22 @@ export default React.createClass({
     shouldComponentUpdate: function(){
         return false;
     },
+    componentWillReceiveProps: function(nextprops){
+        let chart = this.refs.chart.getChart();
+        for(let i in chart.series){
+            if(nextprops.variables.indexOf(chart.series[i].name) < 0 ){
+                chart.series[i].hide();
+            }else{ chart.series[i].show();}
+        }
+
+    },
 
     componentDidMount: function () {
         this.drawChart();
     },
 
      drawChart: function(){
-        let chart = this.refs.chart.getChart();
+         let chart = this.refs.chart.getChart();
         let activeUser = [], mapView = [], chartView = [], reportTablesView = [], eventReportView = [], eventChartView = [],
             dashboardView = [], indicatorsView = [], totalView = [], averageView = [], savedMap = [], savedChart = [],
             savedReportTable = [], savedEventReport = [],savedEventChart = [], savedDashboard = [], savedIndicator = [],
@@ -157,7 +166,7 @@ export default React.createClass({
              color: "#00CC66"
          });
          chart.addSeries({
-             name: "Saved dashoards",
+             name: "Saved dashboards",
              data: savedDashboard,
              color: "#00CCCC"
          });
@@ -181,9 +190,6 @@ export default React.createClass({
                  text: "By month"
              }
          );
-
-         //Hides the series. show() shows the series. remove() removes the series
-         chart.series[8].hide();
 
     },
 
