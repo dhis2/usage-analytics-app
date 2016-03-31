@@ -27,7 +27,7 @@ export default React.createClass({
         }
     },
 
-    componentDidMount: function () {
+    componentWillMount: function () {
         this.drawChart();
     },
 
@@ -201,14 +201,7 @@ export default React.createClass({
         });
 
         chart.xAxis[0].update({categories: date}, true);
-        chart.setTitle(
-            //Title
-            null,
-            {
-                //Subtitle
-                text: "By month"
-            }
-        );
+
         for (let i in chart.series) {
             if (this.props.variables.indexOf(chart.series[i].name) < 0) {
                 chart.series[i].hide();
@@ -216,7 +209,6 @@ export default React.createClass({
                 chart.series[i].show();
             }
         }
-
     },
 
     config: {
@@ -229,7 +221,6 @@ export default React.createClass({
     },
 
     render(){
-
         var style = {
             minHeight:600
         };

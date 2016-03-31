@@ -105,21 +105,10 @@ export default React.createClass({
             users.push(result.users);
         });
 
-        this._onColumnResizeEndCallback = this._onColumnResizeEndCallback.bind(this);
-
         return {activeUser, mapView, chartView, reportTablesView, eventReportView, eventChartView,
             dashboardView, indicatorsView, totalView, averageView, savedMap, savedChart,
             savedReportTable, savedEventReport, savedEventChart, savedDashboard, savedIndicator,
             users, date, columnWidths};
-    },
-
-    _onColumnResizeEndCallback(newColumnWidth, columnKey) {
-        this.setState(({columnWidths}) => ({
-            columnWidths: {
-                ...columnWidths,
-                [columnKey]: newColumnWidth,
-            }
-        }));
     },
 
     setColumnWidths: function(nextprops){
@@ -247,10 +236,8 @@ export default React.createClass({
                     rowHeight={50}
                     rowsCount={this.props.data.length}
                     width={($(document).width()) - 400}
-                    height={(this.props.data.length > 30 ) ? 1 : this.props.data.length * 50}
+                    height={400}
                     headerHeight={50}
-                    onColumnResizeEndCallback={this._onColumnResizeEndCallback}
-                    isColumnResizing={false}
                     {...this.props}
                 >
 
@@ -373,7 +360,7 @@ export default React.createClass({
                     rowHeight={50}
                     rowsCount={this.props.data.length}
                     width={($(document).width()) - 400}
-                    height={300}
+                    height={400}
                     headerHeight={50}
                 >
                     <Column
