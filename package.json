@@ -1,7 +1,7 @@
 {
-  "name": "app-skeleton",
-  "version": "0.1.1",
-  "description": "Skeleton app for a DHIS2 web app",
+  "name": "app-usagestatistics",
+  "version": "1.0",
+  "description": "DHIS2 web app for usage statistics",
   "main": "src/index.html",
   "scripts": {
     "coverage": "babel-node node_modules/.bin/isparta cover --root ./src --report text --report html --report lcov node_modules/mocha/bin/_mocha -- --reporter dot --require config/setup.js --recursive test",
@@ -14,9 +14,10 @@
   },
   "keywords": [
     "DHIS2",
-    "App"
+    "App",
+    "Usage statistics"
   ],
-  "author": "Mark Polak",
+  "author": "Julie Hill Roa & Yrjan Fraschetti",
   "license": "BSD-3-Clause",
   "dependencies": {
     "d2": "0.0.24",
