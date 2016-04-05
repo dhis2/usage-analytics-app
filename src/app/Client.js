@@ -11,17 +11,19 @@ import Chart from './Chart';
 
 export default React.createClass({
     getInitialState: function () {
-        return {data: undefined,variables: undefined, error: undefined, load: false};
+        return {data: undefined, variables: undefined, error: undefined, load: false};
     },
 
     componentWillMount: function () {
-        if (this.props.source !== "") {
+        if (this.props.source !== "" ) {
             this.retrieveData(this.props.source);
         }
     },
 
     componentWillReceiveProps: function (nextprops) {
         this.setState({variables: nextprops.variables});
+        console.log(nextprops);
+        this.setState({firstRender: nextprops.firstRender});
         var dataHasChanged = this.props.source !== nextprops.source;
         if (dataHasChanged) {
             this.retrieveData(nextprops.source);
@@ -36,13 +38,7 @@ export default React.createClass({
             dataType: 'json',
             cache: false,
             success: function (data) {
-                let roundData = data.map((result) => {
-                    for (let x in result) {
-                        result[x] = Math.round(result[x] * 100) / 100;
-                    }
-                    return result;
-                });
-                this.setState({data: roundData});
+                this.setState({data: data});
             }.bind(this),
             error: function (xhr, status, err) {
                 let code;

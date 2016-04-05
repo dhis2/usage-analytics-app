@@ -11,7 +11,7 @@ export default React.createClass({
         return false;
     },
     componentWillReceiveProps: function (nextprops) {
-        this.hideOrShowSeries(nextprops);
+        
 
     },
 
@@ -202,13 +202,6 @@ export default React.createClass({
 
         chart.xAxis[0].update({categories: date}, true);
 
-        for (let i in chart.series) {
-            if (this.props.variables.indexOf(chart.series[i].name) < 0) {
-                chart.series[i].hide();
-            } else {
-                chart.series[i].show();
-            }
-        }
     },
 
     config: {

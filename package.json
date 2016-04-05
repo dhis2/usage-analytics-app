@@ -1,6 +1,6 @@
 {
   "name": "app-usagestatistics",
-  "version": "1.0",
+  "version": "0.1.1",
   "description": "DHIS2 web app for usage statistics",
   "main": "src/index.html",
   "scripts": {

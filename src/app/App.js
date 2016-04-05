@@ -15,10 +15,21 @@ import Client from './Client.js';
 import MyRawTheme from '../colortheme';
 
 
+
+const buttonstyle = {
+    marginLeft: 10,
+    borderBottom: 1,
+    borderBottomStyle:'solid',
+    borderRight: 1,
+    borderRightStyle:'solid',
+    borderColor: '#dadada',
+    backgroundColor:'#FFFFFF'
+};
+
 export default React.createClass({
     propTypes: {
         name: React.PropTypes.string,
-        d2: React.PropTypes.object,
+        d2: React.PropTypes.object
     },
 
     childContextTypes: {
@@ -29,16 +40,15 @@ export default React.createClass({
     getChildContext() {
         return {
             d2: this.props.d2,
-            muiTheme: ThemeManager.getMuiTheme(MyRawTheme),
+            muiTheme: ThemeManager.getMuiTheme(MyRawTheme)
         };
     },
 
     getInitialState: function () {
         let minDate = new Date();
         let maxDate = new Date();
-        minDate = (minDate.getMonth() + 1)+"/"+ minDate.getDate()+"/"+(minDate.getFullYear() - 1);
-        maxDate = (maxDate.getMonth() + 1)+"/"+ maxDate.getDate()+"/"+maxDate.getFullYear();
-
+            minDate = (minDate.getFullYear()-1) + "-" + (minDate.getMonth() + 1) + "-" + minDate.getDate();
+            maxDate = this.formatDate(maxDate);
         //all variables that can be retrieved from server. Extend if server is changed
        /* var allVarables = ["Active users","Map views","Chart views",
             "Report table views","Event report views","Event chart views",
@@ -51,16 +61,17 @@ export default React.createClass({
             startDate: minDate,
             endDate: maxDate,
             url: '',
-            category:'FavoriteViews'
+            category:'Favorite Views',
+            //firstRender:true
             //showVariables: allVarables
         };
     },
     updateButton: function () {
         var style = {
-            margin: 12,
+            marginTop:15,
+            marginRight: 10,
             display:'block',
             float:'right'
-
         };
         return <div><RaisedButton label="Update" primary={true} style={style} onClick={() => this.updateURL()}/></div>;
     },
@@ -75,13 +86,20 @@ export default React.createClass({
             label:{
                 display:'block',
                 fontFamily: 'Roboto, sans-serif',
+                fontSize: 19
 
             },
-            marginLeft: 10
+            marginTop:10,
+            marginLeft: 10,
+            marginBottom:20,
+            datepicker:{
+                textFieldStyle:'yyyy-mm-dd'
+            }
+
         };
         return ( <div style={style}>
             <label style={style.label} htmlFor="start"><b>Start date:</b></label>
-            <DatePicker id="start" defaultValue={this.state.startDate} mode="landscape" onChange={(event, value) => this.setState({startDate: this.formatDate(value)})} />
+            <DatePicker id="start" defaultValue={this.state.startDate}  mode="landscape" onChange={(event, value) => this.setState({startDate: this.formatDate(value)})} />
             <label style={style.label} htmlFor="end"><b>End date:</b></label>
             <DatePicker id="end" defaultValue={this.state.endDate} mode="landscape" onChange={(event, value) => this.setState({endDate: this.formatDate(value)})}/>
         </div>);
@@ -91,19 +109,20 @@ export default React.createClass({
         return date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate();
     },
 
-
     dropdownIntervalMenu: function () {
         var style = {
             label:{
                 display:'block',
                 fontFamily: 'Roboto, sans-serif',
-                marginLeft: 10
+                marginTop:10,
+                marginLeft: 10,
+                fontSize: 19
             }
 
         };
         return (<div>
             <label style={style.label} htmlFor="intervaldrop"><b>Interval:</b></label>
-            <DropDownMenu id="intervaldrop" value={this.state.interval} onChange={(event, index, value) => this.setState({interval: value})}>
+            <DropDownMenu id="intervaldrop" value={this.state.interval} style={buttonstyle} onChange={(event, index, value) => this.setState({interval: value})}>
                 <MenuItem value={'DAY'} primaryText="DAY"/>
                 <MenuItem value={'WEEK'} primaryText="WEEK"/>
                 <MenuItem value={'MONTH'} primaryText="MONTH"/>
@@ -117,16 +136,17 @@ export default React.createClass({
             label:{
                 display:'block',
                 fontFamily: 'Roboto, sans-serif',
-                marginLeft: 10
+                marginTop:10,
+                marginLeft: 10,
+                fontSize: 19,
             }
-
         };
         return (<div>
             <label style={style.label} htmlFor="Categorydrop"><b>Category:</b></label>
-            <DropDownMenu id="Categorydrop" value={this.state.category} onChange={(event, index, value) => this.setState({category: value})}>
-                <MenuItem value={'FavoriteViews'} primaryText="Favorite views"/>
-                <MenuItem value={'Favoritesaved'} primaryText="Favorite saved"/>
-                <MenuItem value={'Users'} primaryText="Users"/>
+            <DropDownMenu id="Categorydrop" style={buttonstyle} value={this.state.category} onChange={(event, index, value) => this.setState({category: value})}>
+                <MenuItem value={'Favorite Views'} primaryText="FAVORITE VIEWS"/>
+                <MenuItem value={'Favorite saved'} primaryText="FAVORITE SAVED"/>
+                <MenuItem value={'Users'} primaryText="USERS"/>
             </DropDownMenu></div>);
 
     },
@@ -137,7 +157,7 @@ export default React.createClass({
             sidebar: {
                 backgroundColor: '#f3f3f3',
                 overflowY: 'auto',
-                width: 256,
+                width: 256
             }
         };
         return (
@@ -151,9 +171,9 @@ export default React.createClass({
                         this.dropdownCategoryMenu(),
                         this.updateButton()
                     )}
-                <div className="main-content">
-                    <Client source={this.state.url} variables={this.state.category}/>
-                </div>
+                    <div className="main-content">
+                        <Client source={this.state.url} variables={this.state.category}/>
+                    </div>
             </div>
         );
     }
