@@ -5,13 +5,15 @@ import React from 'react';
 import ReactHighcharts from 'react-highcharts';
 import { render } from 'react-dom';
 
+let date = [];
+
 export default React.createClass({
 
     shouldComponentUpdate: function () {
         return false;
     },
     componentWillReceiveProps: function (nextprops) {
-
+        this.drawChart(nextprops.variables);
     },
 
     hideOrShowSeries: function (nextprops) {
@@ -26,13 +28,157 @@ export default React.createClass({
     },
 
     componentDidMount: function () {
-        this.drawChart();
+        this.setUpChart();
     },
 
-    drawChart: function () {
+    drawChart: function (category) {
         let chart = this.refs.chart.getChart();
-        let date = [];
+        if(chart.series.length > 0) {
+            console.log("Inni if");
+            console.log(chart.series.length);
+            for (let i = chart.series.length-1; i > -1; i--) {
+                chart.series[i].remove();
+            }
+        }
+        if(category == "Favorite Views"){
+            chart.addSeries({
+                name: "Map views",
+                data: (this.props.data.map((result) => {
+                    return result.mapViews;
+                })),
+                color: "#FF8000"
+            }, false);
+            chart.addSeries({
+                name: "Chart views",
+                data: (this.props.data.map((result) => {
+                    return result.chartViews;
+                })),
+                color: "#FFFF00"
+            }, false);
+            chart.addSeries({
+                name: "Report table views",
+                data: (this.props.data.map((result) => {
+                    return result.reportTablesViews;
+                })),
+                color: "#80FF00"
+            }, false);
+            chart.addSeries({
+                name: "Event report views",
+                data: (this.props.data.map((result) => {
+                    return result.eventReportViews;
+                })),
+                color: "#00FF00"
+            }, false);
+            chart.addSeries({
+                name: "Event chart views",
+                data: (this.props.data.map((result) => {
+                    return result.eventChartViews;
+                })),
+                color: "#00FF80"
+            }, false);
+            chart.addSeries({
+                name: "Dashboard views",
+                data: (this.props.data.map((result) => {
+                    return result.dashboardViews;
+                })),
+                color: "#00FFFF"
+            }, false);
+            chart.addSeries({
+                name: "Indicators views",
+                data: (this.props.data.map((result) => {
+                    return result.indicatorsViews;
+                })),
+                color: "#0080FF"
+            }, false);
+            chart.addSeries({
+                name: "Total views",
+                data: (this.props.data.map((result) => {
+                    return result.totalViews;
+                })),
+                color: "#0000FF"
+            }, false);
+            chart.addSeries({
+                name: "Average views",
+                data: (this.props.data.map((result) => {
+                    return result.averageViews;
+                })),
+                color: "#7F00FF"
+            }, false);
+        }
+        else if(category == "Favorite saved"){
+            chart.addSeries({
+                name: "Saved maps",
+                data: (this.props.data.map((result) => {
+                    return result.savedMaps;
+                })),
+                color: "#CC6600"
+            }, false);
+            chart.addSeries({
+                name: "Saved charts",
+                data: (this.props.data.map((result) => {
+                    return result.savedCharts;
+                })),
+                color: "#CCCC00"
+            }, false);
+            chart.addSeries({
+                name: "Saved report tables",
+                data: (this.props.data.map((result) => {
+                    return result.savedReportTables;
+                })),
+                color: "#66CC00"
+            }, false);
+            chart.addSeries({
+                name: "Saved event report",
+                data: (this.props.data.map((result) => {
+                    return result.savedEventReports;
+                })),
+                color: "#00CC00"
+            }, false);
+            chart.addSeries({
+                name: "Saved event charts",
+                data: (this.props.data.map((result) => {
+                    return result.savedEventCharts;
+                })),
+                color: "#00CC66"
+            }, false);
+            chart.addSeries({
+                name: "Saved dashboards",
+                data: (this.props.data.map((result) => {
+                    return result.savedDashboards;
+                })),
+                color: "#00CCCC"
+            }, false);
+            chart.addSeries({
+                name: "Saved indicators",
+                data: (this.props.data.map((result) => {
+                    return result.savedIndicators;
+                })),
+                color: "#0066CC"
+            }, false);
+        }
+        else if(category == "Users"){
+            chart.addSeries({
+                name: "Active users",
+                data: (this.props.data.map((result) => {
+                    return result.activeUsers;
+                })),
+                color: "#FF0000"
+            }, false);
 
+            chart.addSeries({
+                name: "Total users",
+                data: (this.props.data.map((result) => {
+                    return result.users;
+                })),
+                color: "#CC0000"
+            }, false);
+        }
+
+        chart.xAxis[0].update({categories: date}, true);
+        chart.redraw();
+    },
+
+    setUpChart: function () {
         this.props.data.map((result)=> {
             let tmpDate = "";
             if (result.day != null) {
@@ -85,140 +231,13 @@ export default React.createClass({
             date.push(tmpDate);
         });
 
-        chart.addSeries({
-            name: "Active users",
-            data: (this.props.data.map((result) => {
-                return result.activeUsers;
-            })),
-            color: "#FF0000"
-        }, false);
-        chart.addSeries({
-            name: "Map views",
-            data: (this.props.data.map((result) => {
-                return result.mapViews;
-            })),
-            color: "#FF8000"
-        }, false);
-        chart.addSeries({
-            name: "Chart views",
-            data: (this.props.data.map((result) => {
-                return result.chartViews;
-            })),
-            color: "#FFFF00"
-        }, false);
-        chart.addSeries({
-            name: "Report table views",
-            data: (this.props.data.map((result) => {
-                return result.reportTablesViews;
-            })),
-            color: "#80FF00"
-        }, false);
-        chart.addSeries({
-            name: "Event report views",
-            data: (this.props.data.map((result) => {
-                return result.eventReportViews;
-            })),
-            color: "#00FF00"
-        }, false);
-        chart.addSeries({
-            name: "Event chart views",
-            data: (this.props.data.map((result) => {
-                return result.eventChartViews;
-            })),
-            color: "#00FF80"
-        }, false);
-        chart.addSeries({
-            name: "Dashboard views",
-            data: (this.props.data.map((result) => {
-                return result.dashboardViews;
-            })),
-            color: "#00FFFF"
-        }, false);
-        chart.addSeries({
-            name: "Indicators views",
-            data: (this.props.data.map((result) => {
-                return result.indicatorsViews;
-            })),
-            color: "#0080FF"
-        }, false);
-        chart.addSeries({
-            name: "Total views",
-            data: (this.props.data.map((result) => {
-                return result.totalViews;
-            })),
-            color: "#0000FF"
-        }, false);
-        chart.addSeries({
-            name: "Average views",
-            data: (this.props.data.map((result) => {
-                return result.averageViews;
-            })),
-            color: "#7F00FF"
-        }, false);
-        //Her
-        chart.addSeries({
-            name: "Saved maps",
-            data: (this.props.data.map((result) => {
-                return result.savedMaps;
-            })),
-            color: "#CC6600"
-        }, false);
-        chart.addSeries({
-            name: "Saved charts",
-            data: (this.props.data.map((result) => {
-                return result.savedCharts;
-            })),
-            color: "#CCCC00"
-        }, false);
-        chart.addSeries({
-            name: "Saved report tables",
-            data: (this.props.data.map((result) => {
-                return result.savedReportTables;
-            })),
-            color: "#66CC00"
-        }, false);
-        chart.addSeries({
-            name: "Saved event report",
-            data: (this.props.data.map((result) => {
-                return result.savedEventReports;
-            })),
-            color: "#00CC00"
-        }, false);
-        chart.addSeries({
-            name: "Saved event charts",
-            data: (this.props.data.map((result) => {
-                return result.savedEventCharts;
-            })),
-            color: "#00CC66"
-        }, false);
-        chart.addSeries({
-            name: "Saved dashboards",
-            data: (this.props.data.map((result) => {
-                return result.savedDashboards;
-            })),
-            color: "#00CCCC"
-        }, false);
-        chart.addSeries({
-            name: "Saved indicators",
-            data: (this.props.data.map((result) => {
-                return result.savedIndicators;
-            })),
-            color: "#0066CC"
-        }, false);
-        chart.addSeries({
-            name: "Total users",
-            data: (this.props.data.map((result) => {
-                return result.users;
-            })),
-            color: "#CC0000"
-        }, false);
-
-        chart.xAxis[0].update({categories: date}, true);
-        chart.redraw();
-
+        this.drawChart(this.props.variables);
     },
 
     config: {
+        credits: {
+            enabled: false
+        },
         xAxis: {
             categories: [],
         },
