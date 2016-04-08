@@ -16,7 +16,7 @@ $left-bar-width: 380px;
 }
 
 .main-content {
-  margin-left: $left-bar-width + 30;
+  margin-left: $left-bar-width - 80;
 }
 
 .scroller{
@@ -28,4 +28,4 @@ $left-bar-width: 380px;
 }
 
 .container-outer { overflow: scroll; width: 500px; height: 210px; }
-.container-inner { width: 10000px; }
+.container-inner { width: 15000px; }
