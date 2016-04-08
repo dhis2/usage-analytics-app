@@ -11,10 +11,8 @@ export default React.createClass({
         return false;
     },
     componentWillReceiveProps: function (nextprops) {
-        
 
     },
-
 
     hideOrShowSeries: function (nextprops) {
         let chart = this.refs.chart.getChart();
@@ -33,10 +31,8 @@ export default React.createClass({
 
     drawChart: function () {
         let chart = this.refs.chart.getChart();
-        let activeUser = [], mapView = [], chartView = [], reportTablesView = [], eventReportView = [], eventChartView = [],
-            dashboardView = [], indicatorsView = [], totalView = [], averageView = [], savedMap = [], savedChart = [],
-            savedReportTable = [], savedEventReport = [], savedEventChart = [], savedDashboard = [], savedIndicator = [],
-            users = [], date = [];
+        let date = [];
+        let dataProp = this.props.data;
 
         this.props.data.map((result)=> {
             let tmpDate = "";
@@ -88,119 +84,138 @@ export default React.createClass({
             }
             tmpDate += result.year;
             date.push(tmpDate);
-            activeUser.push(result.activeUsers);
-            mapView.push(result.mapViews);
-            chartView.push(result.chartViews);
-            reportTablesView.push(result.reportTablesViews);
-            eventReportView.push(result.eventReportViews);
-            eventChartView.push(result.eventChartViews);
-            dashboardView.push(result.dashboardViews);
-            indicatorsView.push(result.indicatorsViews);
-            totalView.push(result.totalViews);
-            averageView.push(result.averageViews);
-            savedMap.push(result.savedMaps);
-            savedChart.push(result.savedCharts);
-            savedReportTable.push(result.savedReportTables);
-            savedEventReport.push(result.savedEventReports);
-            savedEventChart.push(result.savedEventCharts);
-            savedDashboard.push(result.savedDashboards);
-            savedIndicator.push(result.savedIndicators);
-            users.push(result.users);
         });
 
         chart.addSeries({
             name: "Active users",
-            data: activeUser,
+            data: (this.props.data.map((result) => {
+                return result.activeUsers;
+            })),
             color: "#FF0000"
-        });
+        }, false);
         chart.addSeries({
             name: "Map views",
-            data: mapView,
+            data: (this.props.data.map((result) => {
+                return result.mapViews;
+            })),
             color: "#FF8000"
-        });
+        }, false);
         chart.addSeries({
             name: "Chart views",
-            data: chartView,
+            data: (this.props.data.map((result) => {
+                return result.chartViews;
+            })),
             color: "#FFFF00"
-        });
+        }, false);
         chart.addSeries({
             name: "Report table views",
-            data: reportTablesView,
+            data: (this.props.data.map((result) => {
+                return result.reportTablesViews;
+            })),
             color: "#80FF00"
-        });
+        }, false);
         chart.addSeries({
             name: "Event report views",
-            data: eventReportView,
+            data: (this.props.data.map((result) => {
+                return result.eventReportViews;
+            })),
             color: "#00FF00"
-        });
+        }, false);
         chart.addSeries({
             name: "Event chart views",
-            data: eventChartView,
+            data: (this.props.data.map((result) => {
+                return result.eventChartViews;
+            })),
             color: "#00FF80"
-        });
+        }, false);
         chart.addSeries({
             name: "Dashboard views",
-            data: dashboardView,
+            data: (this.props.data.map((result) => {
+                return result.dashboardViews;
+            })),
             color: "#00FFFF"
-        });
+        }, false);
         chart.addSeries({
             name: "Indicators views",
-            data: indicatorsView,
+            data: (this.props.data.map((result) => {
+                return result.indicatorsViews;
+            })),
             color: "#0080FF"
-        });
+        }, false);
         chart.addSeries({
             name: "Total views",
-            data: totalView,
+            data: (this.props.data.map((result) => {
+                return result.totalViews;
+            })),
             color: "#0000FF"
-        });
+        }, false);
         chart.addSeries({
             name: "Average views",
-            data: averageView,
+            data: (this.props.data.map((result) => {
+                return result.averageViews;
+            })),
             color: "#7F00FF"
-        });
+        }, false);
         //Her
         chart.addSeries({
             name: "Saved maps",
-            data: savedMap,
+            data: (this.props.data.map((result) => {
+                return result.savedMaps;
+            })),
             color: "#CC6600"
-        });
+        }, false);
         chart.addSeries({
             name: "Saved charts",
-            data: savedChart,
+            data: (this.props.data.map((result) => {
+                return result.savedCharts;
+            })),
             color: "#CCCC00"
-        });
+        }, false);
         chart.addSeries({
             name: "Saved report tables",
-            data: savedReportTable,
+            data: (this.props.data.map((result) => {
+                return result.savedReportTables;
+            })),
             color: "#66CC00"
-        });
+        }, false);
         chart.addSeries({
             name: "Saved event report",
-            data: savedEventReport,
+            data: (this.props.data.map((result) => {
+                return result.savedEventReports;
+            })),
             color: "#00CC00"
-        });
+        }, false);
         chart.addSeries({
             name: "Saved event charts",
-            data: savedEventChart,
+            data: (this.props.data.map((result) => {
+                return result.savedEventCharts;
+            })),
             color: "#00CC66"
-        });
+        }, false);
         chart.addSeries({
             name: "Saved dashboards",
-            data: savedDashboard,
+            data: (this.props.data.map((result) => {
+                return result.savedDashboards;
+            })),
             color: "#00CCCC"
-        });
+        }, false);
         chart.addSeries({
             name: "Saved indicators",
-            data: savedIndicator,
+            data: (this.props.data.map((result) => {
+                return result.savedIndicators;
+            })),
             color: "#0066CC"
-        });
+        }, false);
         chart.addSeries({
             name: "Total users",
-            data: users,
+            data: (this.props.data.map((result) => {
+                return result.users;
+            })),
             color: "#CC0000"
-        });
+        }, false);
 
         chart.xAxis[0].update({categories: date}, true);
+        chart.redraw();
 
     },
 
