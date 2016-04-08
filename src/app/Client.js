@@ -9,35 +9,35 @@ import Table from './Table';
 import Chart from './Chart';
 
 
+let category = '';
+let load = false;
+let dataTemp = '';
+let error = '';
+
 export default React.createClass({
     getInitialState: function () {
         return {data: undefined, variables: undefined, error: undefined, load: false};
     },
 
-    componentWillMount: function () {
-        if (this.props.source !== "" ) {
-            this.retrieveData(this.props.source);
-        }
-    },
-
     componentWillReceiveProps: function (nextprops) {
-        this.setState({variables: nextprops.variables});
+        console.log("WILLRECIEVE: ");
         console.log(nextprops);
-        this.setState({firstRender: nextprops.firstRender});
+        category = nextprops.category;
         var dataHasChanged = this.props.source !== nextprops.source;
         if (dataHasChanged) {
             this.retrieveData(nextprops.source);
         }
     },
     retrieveData: function (url) {
-        this.setState({load:true});
-        this.setState({data: undefined});
-        this.setState({error:undefined});
+        load = true;
+        dataTemp = undefined;
+        error = undefined;
         $.ajax({
             url: url,
             dataType: 'json',
             cache: false,
             success: function (data) {
+                dataTemp = data;
                 this.setState({data: data});
             }.bind(this),
             error: function (xhr, status, err) {
@@ -45,6 +45,7 @@ export default React.createClass({
                 if(xhr.status == 409){
                     code = 'Start date or end date is invalid';
                 }else code = xhr.status + ", " + xhr.statusText;
+                error = code;
                 this.setState({error: code})
             }.bind(this)
         });
@@ -57,7 +58,7 @@ export default React.createClass({
                 backgroundColor: '#f3f3f3',
                 paddingTop:15,
                 paddingBottom:15,
-                paddingLeft:15,
+                paddingLeft:10,
                 paddingRight:15,
                 maxWidth: 600,
                 fontFamily: 'Roboto, sans-serif',
@@ -93,25 +94,26 @@ export default React.createClass({
             }
         };
 
-        if (!this.state.data && (!this.state.error)) {
-            if(!this.state.load) {
+        if (!dataTemp && (!error)) {
+            if(!load) {
                 return (
                     <div>
-                        <span style={style.spanstyle}>This app creates statistic reports of usage within the DHIS2 system. It gnerates a chart and a table of chosen data.
-                            Start by selecting start date and end date and choose your preferred interval. Click the update button to generate the report.
-                            You can also choose which variables you want to compare by checking/unchecking the boxes in the menu.
-                        </span>
+                            <span style={style.spanstyle}>This app creates statistic reports of usage within the DHIS2 system. It generates a chart and a table of chosen data.
+                                Start by selecting start date and end date and choose your preferred interval and category. Click the update button to generate the report.
+                                You can also choose which what you want to compare by toggeling all or total in chart.
+                            </span>
                     </div>);
-            }else {return <CircularProgress size={1.5} style={style.circular}/>}
+            }else return <CircularProgress size={1.5} style={style.circular}/>
+
         }
-        else if(this.state.error){
+        else if(error){
             return<div style={style.errdivstyle}> <span style={style.errspanstyle}><b>Something went wrong!</b> {this.state.error}</span></div>;
         }
         else {
             return (
                 <div>
-                    <Chart data={this.state.data} variables={this.state.variables}/>
-                    <Table data={this.state.data} variables={this.state.variables}/>
+                    <Chart data={this.state.data} variables={category}/>
+                    <Table data={this.state.data} variables={category}/>
                 </div>
             );
         }
