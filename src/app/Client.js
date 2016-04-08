@@ -20,8 +20,6 @@ export default React.createClass({
     },
 
     componentWillReceiveProps: function (nextprops) {
-        console.log("WILLRECIEVE: ");
-        console.log(nextprops);
         category = nextprops.category;
         var dataHasChanged = this.props.source !== nextprops.source;
         if (dataHasChanged) {
