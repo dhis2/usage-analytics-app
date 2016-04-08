@@ -16,7 +16,7 @@ let error = '';
 
 export default React.createClass({
     getInitialState: function () {
-        return {data: undefined, variables: undefined, error: undefined, load: false};
+        return {data: undefined, error: undefined};
     },
 
     componentWillReceiveProps: function (nextprops) {
@@ -110,8 +110,8 @@ export default React.createClass({
         else {
             return (
                 <div>
-                    <Chart data={this.state.data} variables={category}/>
-                    <Table data={this.state.data} variables={category}/>
+                    <Chart data={this.state.data} category={category}/>
+                    <Table data={this.state.data} category={category}/>
                 </div>
             );
         }

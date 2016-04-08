@@ -35,6 +35,8 @@ let interval = 'DAY';
 let category = 'Favorite Views';
 
 
+
+
 export default React.createClass({
     propTypes: {
         name: React.PropTypes.string,
@@ -139,7 +141,7 @@ export default React.createClass({
         };
         return (<div>
             <label style={style.label} htmlFor="Categorydrop"><b>Category:</b></label>
-            <DropDownMenu id="Categorydrop" style={buttonstyle} value={category} onChange={(event, index, value) => category= value}>
+            <DropDownMenu id="Categorydrop" style={buttonstyle} value={category} onChange={(event, index, value) => category = value}>
                 <MenuItem value={'Favorite Views'} primaryText="FAVORITE VIEWS"/>
                 <MenuItem value={'Favorite saved'} primaryText="FAVORITE SAVED"/>
                 <MenuItem value={'Users'} primaryText="USERS"/>

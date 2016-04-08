@@ -13,7 +13,7 @@ export default React.createClass({
         return false;
     },
     componentWillReceiveProps: function (nextprops) {
-        this.drawChart(nextprops.variables);
+        this.drawChart(nextprops.category);
     },
 
     hideOrShowSeries: function (nextprops) {
@@ -34,12 +34,11 @@ export default React.createClass({
     drawChart: function (category) {
         let chart = this.refs.chart.getChart();
         if(chart.series.length > 0) {
-            console.log("Inni if");
-            console.log(chart.series.length);
             for (let i = chart.series.length-1; i > -1; i--) {
                 chart.series[i].remove();
             }
         }
+
         if(category == "Favorite Views"){
             chart.addSeries({
                 name: "Map views",
@@ -231,7 +230,7 @@ export default React.createClass({
             date.push(tmpDate);
         });
 
-        this.drawChart(this.props.variables);
+        this.drawChart(this.props.category);
     },
 
     config: {
