@@ -3,9 +3,25 @@
  */
 import React from 'react';
 import ReactHighcharts from 'react-highcharts';
-import { render } from 'react-dom';
+import {render} from 'react-dom';
+import RadioButton from 'material-ui/lib/radio-button';
+import RadioButtonGroup from 'material-ui/lib/radio-button-group';
 
 let date = [];
+const styles = {
+    block: {
+        maxWidth: 250,
+        //display: 'inline-block'
+        display: 'flex',
+        flexDirection: 'row',
+        marginLeft: 'auto',
+        marginRight: 'auto'
+    },
+    visible: {
+        display: {}
+    }
+};
+let visibleView = false;
 
 export default React.createClass({
 
@@ -14,6 +30,7 @@ export default React.createClass({
     },
     componentWillReceiveProps: function (nextprops) {
         this.drawChart(nextprops.variables);
+        this.ViewPicker();
     },
 
     hideOrShowSeries: function (nextprops) {
@@ -26,6 +43,9 @@ export default React.createClass({
             }
         }
     },
+    getInitialState: function() {
+        return { showResults: true };
+    },
 
     componentDidMount: function () {
         this.setUpChart();
@@ -33,79 +53,89 @@ export default React.createClass({
 
     drawChart: function (category) {
         let chart = this.refs.chart.getChart();
-        if(chart.series.length > 0) {
-            console.log("Inni if");
-            console.log(chart.series.length);
-            for (let i = chart.series.length-1; i > -1; i--) {
+        if (chart.series.length > 0) {
+            for (let i = chart.series.length - 1; i > -1; i--) {
                 chart.series[i].remove();
             }
         }
-        if(category == "Favorite Views"){
+        if (category == "Favorite Views") {
+            this.setState({ showResults: true });
+
             chart.addSeries({
                 name: "Map views",
                 data: (this.props.data.map((result) => {
                     return result.mapViews;
                 })),
-                color: "#FF8000"
+                color: "#FF8000",
+                visible: false
             }, false);
             chart.addSeries({
                 name: "Chart views",
                 data: (this.props.data.map((result) => {
                     return result.chartViews;
                 })),
-                color: "#FFFF00"
+                color: "#FFFF00",
+                visible: false
             }, false);
             chart.addSeries({
                 name: "Report table views",
                 data: (this.props.data.map((result) => {
                     return result.reportTablesViews;
                 })),
-                color: "#80FF00"
+                color: "#80FF00",
+                visible: false
             }, false);
             chart.addSeries({
                 name: "Event report views",
                 data: (this.props.data.map((result) => {
                     return result.eventReportViews;
                 })),
-                color: "#00FF00"
+                color: "#00FF00",
+                visible: false
             }, false);
             chart.addSeries({
                 name: "Event chart views",
                 data: (this.props.data.map((result) => {
                     return result.eventChartViews;
                 })),
-                color: "#00FF80"
+                color: "#00FF80",
+                visible: false
             }, false);
             chart.addSeries({
                 name: "Dashboard views",
                 data: (this.props.data.map((result) => {
                     return result.dashboardViews;
                 })),
-                color: "#00FFFF"
+                color: "#00FFFF",
+                visible: false
             }, false);
             chart.addSeries({
                 name: "Indicators views",
                 data: (this.props.data.map((result) => {
                     return result.indicatorsViews;
                 })),
-                color: "#0080FF"
-            }, false);
-            chart.addSeries({
-                name: "Total views",
-                data: (this.props.data.map((result) => {
-                    return result.totalViews;
-                })),
-                color: "#0000FF"
+                color: "#0080FF",
+                visible: false
             }, false);
             chart.addSeries({
                 name: "Average views",
                 data: (this.props.data.map((result) => {
                     return result.averageViews;
                 })),
-                color: "#7F00FF"
+                color: "#7F00FF",
+                visible: false
+            }, false);
+            chart.addSeries({
+                name: "Total views",
+                data: (this.props.data.map((result) => {
+                    return result.totalViews;
+                })),
+                color: "#0000FF",
+                visible: true
             }, false);
         }
-        else if(category == "Favorite saved"){
+        else if (category == "Favorite saved") {
+            this.setState({ showResults: false });
             chart.addSeries({
                 name: "Saved maps",
                 data: (this.props.data.map((result) => {
@@ -156,7 +186,8 @@ export default React.createClass({
                 color: "#0066CC"
             }, false);
         }
-        else if(category == "Users"){
+        else if (category == "Users") {
+            this.setState({ showResults: false });
             chart.addSeries({
                 name: "Active users",
                 data: (this.props.data.map((result) => {
@@ -246,12 +277,61 @@ export default React.createClass({
         }
     },
 
+    _onChange: function (e, selected) {
+        let chart = this.refs.chart.getChart();
+        if (selected == "total") {
+            chart.series[(chart.series.length - 1)].show();
+        }
+        else {
+            chart.series[(chart.series.length - 1)].hide();
+        }
+        for (let i = chart.series.length - 2; i > -1; i--) {
+            if (selected == "total") {
+                chart.series[i].hide();
+            }
+            else {
+                chart.series[i].show();
+            }
+        }
+    },
+
+    ViewPicker: function () {
+        return (
+            <div style={styles.visible}>
+                <RadioButtonGroup
+                    name="shipSpeed"
+                    defaultSelected="total"
+                    style={styles.block}
+                    onChange={this._onChange}
+                >
+                    <RadioButton
+                        value="total"
+                        label="Only total views"
+                    />
+                    <RadioButton
+                        value="all"
+                        label="All favorite views"
+                    />
+                </RadioButtonGroup>
+            </div>
+        );
+    },
+
     render(){
         var style = {
-            minHeight:600
+            minHeight: 600
         };
 
-        return <div><ReactHighcharts config={this.config}  style={style} ref="chart"/></div>;
+        return (
+            <div>
+                <ReactHighcharts config={this.config} style={style} ref="chart"/>
+                {React.createElement(
+                    'div',
+                    {className: 'viewPicker'},
+                    this.state.showResults ? this.ViewPicker() : null
+                )}
+            </div>
+        );
     }
 
 });
