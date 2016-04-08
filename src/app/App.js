@@ -26,11 +26,13 @@ const buttonstyle = {
     backgroundColor:'#FFFFFF'
 };
 
-let minDate = new Date();
-minDate.setFullYear(minDate.getFullYear() -1);
-let maxDate = new Date();
-
-
+let startDate = new Date();
+startDate.setFullYear(startDate.getFullYear() -1);
+let endDate = new Date();
+let startString = '';
+let endString = '';
+let interval = 'DAY';
+let category = 'Favorite Views';
 
 
 export default React.createClass({
@@ -52,22 +54,8 @@ export default React.createClass({
     },
 
     getInitialState: function () {
-
-        //all variables that can be retrieved from server. Extend if server is changed
-       /* var allVarables = ["Active users","Map views","Chart views",
-            "Report table views","Event report views","Event chart views",
-            "Dashboard views","Indicators views","Total views","Average views","Saved maps",
-            "Saved charts","Saved report tables","Saved event report",
-            "Saved event charts","Saved dashboards","Saved indicators",
-            "Total users"];*/
         return this.state = {
-            interval: 'DAY',
-            startDate: minDate,
-            endDate: maxDate,
-            url: '',
-            category:'Favorite Views',
-            //firstRender:true
-            //showVariables: allVarables
+            url: ''
         };
     },
     updateButton: function () {
@@ -81,7 +69,10 @@ export default React.createClass({
     },
 
     updateURL: function(){
-        let tempUrl = "http://localhost:8080/api/dataStatistics?startDate="+this.state.startDate+"&endDate="+this.state.endDate+"&interval=" + this.state.interval;
+        startString = this.formatDate(startDate);
+        endString = this.formatDate(endDate);
+
+        let tempUrl = "http://localhost:8080/api/dataStatistics?startDate="+startString+"&endDate="+endString+"&interval=" + interval;
         this.setState({url:tempUrl});
     },
 
@@ -103,13 +94,14 @@ export default React.createClass({
         };
         return ( <div style={style}>
             <label style={style.label} htmlFor="start"><b>Start date:</b></label>
-            <DatePicker id="start" defaultDate={this.state.startDate}   formatDate={this.formatDate} mode="landscape" onChange={(event, value) => this.setState({startDate: this.formatDate(value)})} />
+            <DatePicker id="start" defaultDate={startDate}   formatDate={this.formatDate} mode="landscape" onChange={(event, value) => startDate = value} />
             <label style={style.label} htmlFor="end"><b>End date:</b></label>
-            <DatePicker id="end" defaultDate={this.state.endDate}  formatDate={this.formatDate} mode="landscape" onChange={(event, value) => this.setState({endDate: this.formatDate(value)})}/>
+            <DatePicker id="end" defaultDate={endDate}  formatDate={this.formatDate} mode="landscape" onChange={(event, value) =>  endDate = value}/>
         </div>);
     },
 
     formatDate(date){
+
         return date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate();
     },
 
@@ -126,7 +118,7 @@ export default React.createClass({
         };
         return (<div>
             <label style={style.label} htmlFor="intervaldrop"><b>Interval:</b></label>
-            <DropDownMenu id="intervaldrop" value={this.state.interval} style={buttonstyle} onChange={(event, index, value) => this.setState({interval: value})}>
+            <DropDownMenu id="intervaldrop" value={interval} style={buttonstyle} onChange={(event, index, value) => interval = value}>
                 <MenuItem value={'DAY'} primaryText="DAY"/>
                 <MenuItem value={'WEEK'} primaryText="WEEK"/>
                 <MenuItem value={'MONTH'} primaryText="MONTH"/>
@@ -147,7 +139,7 @@ export default React.createClass({
         };
         return (<div>
             <label style={style.label} htmlFor="Categorydrop"><b>Category:</b></label>
-            <DropDownMenu id="Categorydrop" style={buttonstyle} value={this.state.category} onChange={(event, index, value) => this.setState({category: value})}>
+            <DropDownMenu id="Categorydrop" style={buttonstyle} value={category} onChange={(event, index, value) => category= value}>
                 <MenuItem value={'Favorite Views'} primaryText="FAVORITE VIEWS"/>
                 <MenuItem value={'Favorite saved'} primaryText="FAVORITE SAVED"/>
                 <MenuItem value={'Users'} primaryText="USERS"/>
@@ -176,7 +168,7 @@ export default React.createClass({
                         this.updateButton()
                     )}
                     <div className="main-content">
-                        <Client source={this.state.url} variables={this.state.category}/>
+                        <Client source={this.state.url} variables={category}/>
                     </div>
             </div>
         );
