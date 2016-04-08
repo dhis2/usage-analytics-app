@@ -32,7 +32,6 @@ export default React.createClass({
     drawChart: function () {
         let chart = this.refs.chart.getChart();
         let date = [];
-        let dataProp = this.props.data;
 
         this.props.data.map((result)=> {
             let tmpDate = "";
