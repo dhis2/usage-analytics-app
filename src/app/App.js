@@ -26,6 +26,13 @@ const buttonstyle = {
     backgroundColor:'#FFFFFF'
 };
 
+let minDate = new Date();
+minDate.setFullYear(minDate.getFullYear() -1);
+let maxDate = new Date();
+
+
+
+
 export default React.createClass({
     propTypes: {
         name: React.PropTypes.string,
@@ -45,10 +52,7 @@ export default React.createClass({
     },
 
     getInitialState: function () {
-        let minDate = new Date();
-        let maxDate = new Date();
-            minDate = (minDate.getFullYear()-1) + "-" + (minDate.getMonth() + 1) + "-" + minDate.getDate();
-            maxDate = this.formatDate(maxDate);
+
         //all variables that can be retrieved from server. Extend if server is changed
        /* var allVarables = ["Active users","Map views","Chart views",
             "Report table views","Event report views","Event chart views",
@@ -99,9 +103,9 @@ export default React.createClass({
         };
         return ( <div style={style}>
             <label style={style.label} htmlFor="start"><b>Start date:</b></label>
-            <DatePicker id="start" defaultValue={this.state.startDate}  mode="landscape" onChange={(event, value) => this.setState({startDate: this.formatDate(value)})} />
+            <DatePicker id="start" defaultDate={this.state.startDate}   formatDate={this.formatDate} mode="landscape" onChange={(event, value) => this.setState({startDate: this.formatDate(value)})} />
             <label style={style.label} htmlFor="end"><b>End date:</b></label>
-            <DatePicker id="end" defaultValue={this.state.endDate} mode="landscape" onChange={(event, value) => this.setState({endDate: this.formatDate(value)})}/>
+            <DatePicker id="end" defaultDate={this.state.endDate}  formatDate={this.formatDate} mode="landscape" onChange={(event, value) => this.setState({endDate: this.formatDate(value)})}/>
         </div>);
     },
 

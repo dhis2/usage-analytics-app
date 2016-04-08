@@ -57,7 +57,7 @@ export default React.createClass({
                 backgroundColor: '#f3f3f3',
                 paddingTop:15,
                 paddingBottom:15,
-                paddingLeft:15,
+                paddingLeft:10,
                 paddingRight:15,
                 maxWidth: 600,
                 fontFamily: 'Roboto, sans-serif',
