@@ -21,7 +21,6 @@ const styles = {
         display: {}
     }
 };
-let visibleView = false;
 
 export default React.createClass({
 
@@ -29,8 +28,8 @@ export default React.createClass({
         return false;
     },
     componentWillReceiveProps: function (nextprops) {
-        this.drawChart(nextprops.variables);
-        this.ViewPicker();
+        this.drawChart(nextprops.category);
+        this.ViewPicker(nextprops.category);
     },
 
     hideOrShowSeries: function (nextprops) {
@@ -43,9 +42,6 @@ export default React.createClass({
             }
         }
     },
-    getInitialState: function() {
-        return { showResults: true };
-    },
 
     componentDidMount: function () {
         this.setUpChart();
@@ -53,14 +49,14 @@ export default React.createClass({
 
     drawChart: function (category) {
         let chart = this.refs.chart.getChart();
-        if (chart.series.length > 0) {
-            for (let i = chart.series.length - 1; i > -1; i--) {
+
+        if(chart.series.length > 0) {
+            for (let i = chart.series.length-1; i > -1; i--) {
                 chart.series[i].remove();
             }
         }
-        if (category == "Favorite Views") {
-            this.setState({ showResults: true });
 
+        if(category == "Favorite Views"){
             chart.addSeries({
                 name: "Map views",
                 data: (this.props.data.map((result) => {
@@ -135,7 +131,6 @@ export default React.createClass({
             }, false);
         }
         else if (category == "Favorite saved") {
-            this.setState({ showResults: false });
             chart.addSeries({
                 name: "Saved maps",
                 data: (this.props.data.map((result) => {
@@ -187,7 +182,6 @@ export default React.createClass({
             }, false);
         }
         else if (category == "Users") {
-            this.setState({ showResults: false });
             chart.addSeries({
                 name: "Active users",
                 data: (this.props.data.map((result) => {
@@ -262,7 +256,7 @@ export default React.createClass({
             date.push(tmpDate);
         });
 
-        this.drawChart(this.props.variables);
+        this.drawChart(this.props.category);
     },
 
     config: {
@@ -295,9 +289,20 @@ export default React.createClass({
         }
     },
 
-    ViewPicker: function () {
+    ViewPicker: function (category) {
+        let isVisible = this.props.category != "Favorite Views" ? 'block' : 'none';;
+        if(category != null){
+            isVisible = category != "Favorite Views" ? 'block' : 'none';
+        }
+
+        let visible =  {
+            visible: {
+                display: isVisible
+            }
+        };
+        console.log(visible.visible.display);
         return (
-            <div style={styles.visible}>
+            <div style={visible.visible}>
                 <RadioButtonGroup
                     name="shipSpeed"
                     defaultSelected="total"
@@ -328,7 +333,7 @@ export default React.createClass({
                 {React.createElement(
                     'div',
                     {className: 'viewPicker'},
-                    this.state.showResults ? this.ViewPicker() : null
+                    this.ViewPicker()
                 )}
             </div>
         );
