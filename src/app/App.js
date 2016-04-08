@@ -168,7 +168,7 @@ export default React.createClass({
                         this.updateButton()
                     )}
                     <div className="main-content">
-                        <Client source={this.state.url} variables={category}/>
+                        <Client source={this.state.url} category={category}/>
                     </div>
             </div>
         );
