@@ -16,15 +16,15 @@ export default React.createClass({
         let arr = [];
         data.filter((val) => {
             return (arr.push({
-                Mapviews: val.mapViews,
-                Chartviews: val.chartViews,
-                ReportTablesviews: val.reportTablesViews,
-                EventReportviews: val.eventReportViews,
-                EventChartviews: val.eventChartViews,
-                Dashboardviews: val.dashboardViews,
-                Indicatorsviews: val.indicatorsViews,
-                Totalviews: val.totalViews,
-                Averageviews: val.averageViews
+                Mapview: val.mapViews,
+                Chartview: val.chartViews,
+                ReportTableview: val.reportTablesViews,
+                EventReportview: val.eventReportViews,
+                EventChartview: val.eventChartViews,
+                Dashboardview: val.dashboardViews,
+                Indicatorsview: val.indicatorsViews,
+                Totalview: val.totalViews,
+                Averageview: val.averageViews
             }))
         });
         return arr;
@@ -33,13 +33,13 @@ export default React.createClass({
         let arr = [];
         data.filter((val) => {
             return (arr.push({
-                Savedmaps: val.savedMaps,
-                Savedcharts: val.savedCharts,
-                SavedReportTables: val.savedReportTables,
-                SavedEventReports: val.savedEventReports,
-                SavedEventCharts: val.savedEventCharts,
-                SavedDashboards: val.savedDashboards,
-                savedIndicators: val.savedIndicators,
+                Mapssaved: val.savedMaps,
+                Chartssaved: val.savedCharts,
+                ReportTablessaved: val.savedReportTables,
+                EventReportssaved: val.savedEventReports,
+                EventChartssaved: val.savedEventCharts,
+                Dashboardssaved: val.savedDashboards,
+                Indicatorssaved: val.savedIndicators,
             }))
         });
         return arr;
@@ -47,10 +47,12 @@ export default React.createClass({
     usersOnly: function (data) {
         let arr = [];
         data.filter((val) => {
-            return (arr.push({ActiveUsers: val.activeUsers, TotalUsers: val.users}))
+            return (arr.push({Activeusers: val.activeUsers, Totalusers: val.users}))
         });
         return arr;
     },
+
+    getDate: function(){},
 
     createRow: function (row) {
         let rows = [];
@@ -62,7 +64,7 @@ export default React.createClass({
         return (<TableRow>{rows}</TableRow>);
 
     },
-    createHeaderRow: function (headers) {
+    createHeaderRow: function (headers,category) {
 
         const style = {
             header: {
@@ -72,26 +74,36 @@ export default React.createClass({
             }
         };
         let rows = [];
-
+        console.log(category);
         for (var key in headers) {
-            rows.push(<TableHeaderColumn key={key} style={style.header}><b>{key}</b></TableHeaderColumn>);
+
+            let index = key.indexOf(category);
+            let subOne = key.slice(0,index).trim();
+            let subTwo = key.slice(index, key.length).trim();
+            rows.push(<TableHeaderColumn key={key} style={style.header}><b>{subOne} {subTwo}</b></TableHeaderColumn>);
         }
         return ( <TableRow>{rows}</TableRow>);
     },
 
     createTable: function () {
+        let category = '';
         let input = null;
+        console.log(this.props.category);
         if (this.props.category == "Favorite Views") {
             input = this.favoreiteViewsOnly(this.props.data);
+            category = 'view';
         } else if (this.props.category == "Favorite saved") {
             input = this.favoreiteSavedOnly(this.props.data);
+            category = 'saved';
         } else if (this.props.category == "Users") {
             input = this.usersOnly(this.props.data);
+            category =  'users';
         }
-
+        console.log(input);
+        console.log("category"+category);
         return ( <Table>
                 <TableHeader displaySelectAll={false} adjustForCheckbox={false}>
-                    {this.createHeaderRow(input[0])}
+                    {this.createHeaderRow(input[0],category)}
                 </TableHeader>
                 <TableBody displayRowCheckbox={false}>
                     {input.map((value, index, collection) => this.createRow(value))}
