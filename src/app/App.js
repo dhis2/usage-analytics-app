@@ -77,7 +77,6 @@ export default React.createClass({
 
         let tempUrl = "http://localhost:8080/api/dataStatistics?startDate="+startString+"&endDate="+endString+"&interval=" + this.state.interval;
         update = true;
-        console.log(update);
         this.setState({url:tempUrl});
     },
 
@@ -167,7 +166,6 @@ export default React.createClass({
             }
         };
         let showDiv = '';
-        console.log(update);
         let change = update;
         if(update){
             update = false;
