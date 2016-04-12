@@ -23,7 +23,8 @@ const buttonstyle = {
     borderRight: 1,
     borderRightStyle:'solid',
     borderColor: '#dadada',
-    backgroundColor:'#FFFFFF'
+    backgroundColor:'#FFFFFF',
+    width: 190
 };
 
 let startDate = new Date();
@@ -126,7 +127,7 @@ export default React.createClass({
         };
         return (<div>
             <label style={style.label} htmlFor="intervaldrop"><b>Interval:</b></label>
-            <DropDownMenu id="intervaldrop" value={this.state.interval} style={buttonstyle} onChange={(event, index, value) => this.setState({interval: value})}>
+            <DropDownMenu id="intervaldrop" autoWidth={false} value={this.state.interval} style={buttonstyle} onChange={(event, index, value) => this.setState({interval: value})}>
                 <MenuItem value={'DAY'} primaryText="DAY"/>
                 <MenuItem value={'WEEK'} primaryText="WEEK"/>
                 <MenuItem value={'MONTH'} primaryText="MONTH"/>
@@ -149,7 +150,7 @@ export default React.createClass({
         };
         return (<div>
             <label style={style.label} htmlFor="Categorydrop"><b>Category:</b></label>
-            <DropDownMenu id="Categorydrop" style={buttonstyle} iconStyle={style.icon} value={this.state.category} onChange={(event, index, value) => this.setState({category: value})}>
+            <DropDownMenu id="Categorydrop" autoWidth={false} style={buttonstyle} iconStyle={style.icon} value={this.state.category} onChange={(event, index, value) => this.setState({category: value})}>
                 <MenuItem value={'Favorite Views'} primaryText="FAVORITE VIEWS"/>
                 <MenuItem value={'Favorite saved'} primaryText="FAVORITE SAVED"/>
                 <MenuItem value={'Users'} primaryText="USERS"/>
