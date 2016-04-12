@@ -86,7 +86,7 @@ export default React.createClass({
         let rows = [];
 
         for (var key in row) {
-            rows.push(<TableRowColumn style={{paddingRight:0,paddingLeft:0}} key={row[key]}>{row[key]}</TableRowColumn>);
+            rows.push(<TableRowColumn key={row[key]}>{row[key]}</TableRowColumn>);
         }
 
         return (<TableRow>{rows}</TableRow>);
@@ -98,9 +98,7 @@ export default React.createClass({
             header: {
                 fontSize: 15,
                 color:'#000000',
-                backgroundColor: '#f3f3f3',
-                paddingRight:0,
-                paddingLeft:0
+                backgroundColor: '#f3f3f3'
             }
         };
         let rows = [];
@@ -110,7 +108,11 @@ export default React.createClass({
             if(key != 'Date'){
                 let index = key.indexOf(category);
                 subOne = key.slice(0,index).trim();
-                subTwo = key.slice(index, key.length).trim();
+                console.log(category);
+                if(category == 'users'){
+                    console.log("inne i if");
+                    subTwo = key.slice(index, key.length).trim();
+                }
             }else {subOne = key;}
             rows.push(<TableHeaderColumn style={style.header}><b>{subOne} {subTwo}</b></TableHeaderColumn>);
         }
