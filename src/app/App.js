@@ -7,6 +7,7 @@ import MenuItem from 'material-ui/lib/menus/menu-item';
 import Checkbox from 'material-ui/lib/checkbox';
 import ActionFavoriteBorder from 'material-ui/lib/svg-icons/action/favorite-border';
 import ThemeManager from 'material-ui/lib/styles/theme-manager';
+import Style from './app.scss';
 var injectTapEventPlugin = require("react-tap-event-plugin");
 injectTapEventPlugin();
 
@@ -66,10 +67,11 @@ export default React.createClass({
         var style = {
             marginTop:15,
             marginRight: 10,
+            marginLeft: 10,
             display:'block',
-            float:'right'
+            float:'left',
         };
-        return <div><RaisedButton label="Update" primary={true} style={style} onClick={() => this.updateURL()}/></div>;
+        return <div><RaisedButton label="Update" className="raised-button" primary={true} style={style} onClick={() => this.updateURL()}/></div>;
     },
 
     updateURL: function(){
