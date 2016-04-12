@@ -86,7 +86,7 @@ export default React.createClass({
         let rows = [];
 
         for (var key in row) {
-            rows.push(<TableRowColumn key={row[key]}>{row[key]}</TableRowColumn>);
+            rows.push(<TableRowColumn style={{paddingRight:0,paddingLeft:0}} key={row[key]}>{row[key]}</TableRowColumn>);
         }
 
         return (<TableRow>{rows}</TableRow>);
@@ -98,7 +98,9 @@ export default React.createClass({
             header: {
                 fontSize: 15,
                 color:'#000000',
-                backgroundColor: '#f3f3f3'
+                backgroundColor: '#f3f3f3',
+                paddingRight:0,
+                paddingLeft:0
             }
         };
         let rows = [];
