@@ -166,11 +166,6 @@ export default React.createClass({
                 width: 256
             }
         };
-        let showDiv = '';
-        let change = update;
-        if(update){
-            update = false;
-        }
 
         return (
                 <div className="app-wrapper">
@@ -184,7 +179,8 @@ export default React.createClass({
                         this.updateButton()
                     )}
                     <div className="main-content">
-                        <Client source={this.state.url} category={this.state.category} change={change}/>
+                        <Client source={this.state.url} category={this.state.category} updatepage={update}/>
+                        {update = false}
                     </div>;
             </div>
         );

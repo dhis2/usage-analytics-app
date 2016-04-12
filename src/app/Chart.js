@@ -42,7 +42,6 @@ export default React.createClass({
     },
 
     drawChart: function (category) {
-
         let chart = this.refs.chart.getChart();
 
         if(chart.series.length > 0) {
@@ -201,7 +200,6 @@ export default React.createClass({
     },
 
     setUpChart: function () {
-
         date = [];
         this.props.data.map((result)=> {
             date.push(this.getDate(result.year,result.month,result.week,result.day));

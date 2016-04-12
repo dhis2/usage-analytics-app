@@ -19,6 +19,11 @@ export default React.createClass({
         return {data: undefined, error: undefined};
     },
 
+    shouldComponentUpdate: function(nextProps){
+        return nextProps.updatepage;
+    },
+
+
     componentWillReceiveProps: function (nextprops) {
         category = nextprops.category;
         var dataHasChanged = this.props.source !== nextprops.source;
@@ -101,7 +106,7 @@ export default React.createClass({
                                 You can also choose which what you want to compare by toggeling all or total in chart.
                             </span>
                     </div>);
-            }else return <CircularProgress size={1.5} style={style.circular}/>
+            }else { return <CircularProgress size={1.5} style={style.circular}/>}
 
         }
         else if(error){
