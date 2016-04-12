@@ -159,6 +159,21 @@ export default React.createClass({
 
     },
 
+    title: function () {
+        var style = {
+            h1: {
+                fontFamily: 'Roboto, sans-serif',
+                textAlign: 'center',
+                marginBottom: 30,
+                fontSize: 21,
+                fontWeight: "normal"
+            }
+        };
+        return (
+            <h1 style={style.h1}>Usage Analytics</h1>
+        )
+    },
+
     render()
     {
         var style = {
@@ -175,6 +190,7 @@ export default React.createClass({
                 {React.createElement(
                     'div',
                     {style: style.sidebar, className: 'left-bar'},
+                        this.title(),
                         this.DatePicker(),
                         this.dropdownIntervalMenu(),
                         this.dropdownCategoryMenu(),

@@ -103,7 +103,7 @@ export default React.createClass({
                     <div>
                             <span style={style.spanstyle}>This app creates statistic reports of usage within the DHIS2 system. It generates a chart and a table of chosen data.
                                 Start by selecting start date and end date and choose your preferred interval and category. Click the update button to generate the report.
-                                You can also choose which what you want to compare by toggeling all or total in chart.
+                                When "Favorite Views" is selected, you can use the radio buttons to select either total or every value except total.
                             </span>
                     </div>);
             }else { return <CircularProgress size={1.5} style={style.circular}/>}
