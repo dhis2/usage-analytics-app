@@ -31,8 +31,7 @@ startDate.setFullYear(startDate.getFullYear() -1);
 let endDate = new Date();
 let startString = '';
 let endString = '';
-let interval = 'DAY';
-let category = 'Favorite Views';
+let update = true;
 
 
 
@@ -57,7 +56,9 @@ export default React.createClass({
 
     getInitialState: function () {
         return this.state = {
-            url: ''
+            url: '',
+            interval: 'DAY',
+            category: 'Favorite Views'
         };
     },
     updateButton: function () {
@@ -74,7 +75,9 @@ export default React.createClass({
         startString = this.formatDate(startDate);
         endString = this.formatDate(endDate);
 
-        let tempUrl = "http://localhost:8080/api/dataStatistics?startDate="+startString+"&endDate="+endString+"&interval=" + interval;
+        let tempUrl = "http://localhost:8080/api/dataStatistics?startDate="+startString+"&endDate="+endString+"&interval=" + this.state.interval;
+        update = true;
+        console.log(update);
         this.setState({url:tempUrl});
     },
 
@@ -115,12 +118,15 @@ export default React.createClass({
                 marginTop:10,
                 marginLeft: 10,
                 fontSize: 19
+            },
+            menu:{
+                width: 116
             }
 
         };
         return (<div>
             <label style={style.label} htmlFor="intervaldrop"><b>Interval:</b></label>
-            <DropDownMenu id="intervaldrop" value={interval} style={buttonstyle} onChange={(event, index, value) => interval = value}>
+            <DropDownMenu id="intervaldrop" value={this.state.interval} style={buttonstyle} onChange={(event, index, value) => this.setState({interval: value})}>
                 <MenuItem value={'DAY'} primaryText="DAY"/>
                 <MenuItem value={'WEEK'} primaryText="WEEK"/>
                 <MenuItem value={'MONTH'} primaryText="MONTH"/>
@@ -137,11 +143,13 @@ export default React.createClass({
                 marginTop:10,
                 marginLeft: 10,
                 fontSize: 19,
+            }, icon:{
+                color:'#000000'
             }
         };
         return (<div>
             <label style={style.label} htmlFor="Categorydrop"><b>Category:</b></label>
-            <DropDownMenu id="Categorydrop" style={buttonstyle} value={category} onChange={(event, index, value) => category = value}>
+            <DropDownMenu id="Categorydrop" style={buttonstyle} iconStyle={style.icon} value={this.state.category} onChange={(event, index, value) => this.setState({category: value})}>
                 <MenuItem value={'Favorite Views'} primaryText="FAVORITE VIEWS"/>
                 <MenuItem value={'Favorite saved'} primaryText="FAVORITE SAVED"/>
                 <MenuItem value={'Users'} primaryText="USERS"/>
@@ -158,8 +166,15 @@ export default React.createClass({
                 width: 256
             }
         };
+        let showDiv = '';
+        console.log(update);
+        let change = update;
+        if(update){
+            update = false;
+        }
+
         return (
-            <div className="app-wrapper">
+                <div className="app-wrapper">
                 <HeaderBar />
                 {React.createElement(
                     'div',
@@ -170,8 +185,8 @@ export default React.createClass({
                         this.updateButton()
                     )}
                     <div className="main-content">
-                        <Client source={this.state.url} category={category}/>
-                    </div>
+                        <Client source={this.state.url} category={this.state.category} change={change}/>
+                    </div>;
             </div>
         );
     }

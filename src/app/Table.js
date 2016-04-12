@@ -55,21 +55,21 @@ export default React.createClass({
     },
 
     getDate: function(year,month,week,day){
-        let date = year + ' ';
+        let date = year;
         if(month != null){
             let monthText = '';
-            if(month == 1) {monthText = 'jan';}
-            else if(month == 2) {monthText = 'feb';}
-            else if(month == 3) {monthText = 'mar';}
-            else if(month == 4) {monthText = 'apr';}
-            else if(month == 5) {monthText = 'may';}
-            else if(month == 6) {monthText = 'jun';}
-            else if(month == 7) {monthText = 'jul';}
-            else if(month == 8) {monthText = 'aug';}
-            else if(month == 9) {monthText = 'sep';}
-            else if(month == 10) {monthText = 'oct';}
-            else if(month == 11) {monthText = 'nov';}
-            else if(month == 12) {monthText = 'dec';}
+            if(month == 1) {monthText = ' jan';}
+            else if(month == 2) {monthText = ' feb';}
+            else if(month == 3) {monthText = ' mar';}
+            else if(month == 4) {monthText = ' apr';}
+            else if(month == 5) {monthText = ' may';}
+            else if(month == 6) {monthText = ' jun';}
+            else if(month == 7) {monthText = ' jul';}
+            else if(month == 8) {monthText = ' aug';}
+            else if(month == 9) {monthText = ' sep';}
+            else if(month == 10) {monthText = ' oct';}
+            else if(month == 11) {monthText = ' nov';}
+            else if(month == 12) {monthText = ' dec';}
 
             date = year + monthText;
             if(day != null){
