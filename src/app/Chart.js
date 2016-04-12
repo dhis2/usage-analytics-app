@@ -8,7 +8,7 @@ import RadioButton from 'material-ui/lib/radio-button';
 import RadioButtonGroup from 'material-ui/lib/radio-button-group';
 
 let date = [];
-let isVisible = true;
+let isVisible = 'block';
 
 const styles = {
     block: {
@@ -25,47 +25,19 @@ const styles = {
 
 export default React.createClass({
 
-    shouldComponentUpdate: function () {
-        return false;
-    },
-
-    getInitialState: function() {
-        let showResults = this.props.category == "Favorite Views";
-        return {showResults: this.props.category == "Favorite Views"};
-    },
-
-    componentWillUpdate: function() {
-        if(this.props.category != null){
-            isVisible = this.props.category != "Favorite Views" ? 'block' : 'none';
-        }
-
-        console.log(styles.visible.display);
-    },
-
-    componentWillReceiveProps: function (nextprops) {
-        this.setState({ showResults: false });
-        this.drawChart(nextprops.category);
-        //this.ViewPicker(nextprops.category);
-        console.log(nextprops.category);
-        console.log(this.state.showResults);
-    },
-
-    hideOrShowSeries: function (nextprops) {
-        let chart = this.refs.chart.getChart();
-        for (let i in chart.series) {
-            if (nextprops.variables.indexOf(chart.series[i].name) < 0) {
-                chart.series[i].hide();
-            } else {
-                chart.series[i].show();
-            }
-        }
+    componentDidUpdate:function() {
+        console.log("inne i componentWillReceiveProps");
+        this.setUpChart();
     },
 
     componentDidMount: function () {
+        console.log("inne i componentDidMount");
         this.setUpChart();
     },
 
     drawChart: function (category) {
+        console.log("inne i drawChart");
+
         let chart = this.refs.chart.getChart();
 
         if(chart.series.length > 0) {
@@ -219,12 +191,13 @@ export default React.createClass({
                 color: "#CC0000"
             }, false);
         }
-        console.log(isVisible);
         chart.xAxis[0].update({categories: date}, true);
         chart.redraw();
     },
 
     setUpChart: function () {
+        console.log("inne i setUpChart");
+
         this.props.data.map((result)=> {
             let tmpDate = "";
             if (result.day != null) {
@@ -311,6 +284,7 @@ export default React.createClass({
     },
 
     ViewPicker: function (category) {
+        console.log("inne i ViewPicker");
         return (
             <div>
                 <RadioButtonGroup
@@ -333,6 +307,10 @@ export default React.createClass({
     },
 
     render(){
+        if(this.props.category!= null){
+            this.props.category == "Favorite Views" ? isVisible = 'block' : isVisible = 'none';
+        }
+        console.log("inne i render");
         var style = {
             minHeight: 600
         };
@@ -343,14 +321,12 @@ export default React.createClass({
                 {React.createElement(
                     'div',
                     {style: styles.visible, className: 'viewPicker'},
-                    this.state.showResults ? this.ViewPicker() : null,
-                    console.log(this.state.showResults)
+                    isVisible == 'block' ? this.ViewPicker() : null
                 )}
             </div>
         );
     }
 
 });
-
 
 
