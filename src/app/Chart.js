@@ -9,6 +9,7 @@ import RadioButtonGroup from 'material-ui/lib/radio-button-group';
 
 let date = [];
 let isVisible = 'block';
+let title = 'Favorite views';
 
 const styles = {
     block: {
@@ -19,24 +20,28 @@ const styles = {
         marginRight: 'auto'
     },
     visible: {
-        display: isVisible
+        display: isVisible,
+        border: 'solid',
+        borderColor: '#000000',
+        padding: 5,
+        marginTop: 20,
+        borderWidth:0.5
     }
 };
 
 export default React.createClass({
 
     componentDidUpdate:function() {
-        console.log("inne i componentWillReceiveProps");
+
         this.setUpChart();
     },
 
     componentDidMount: function () {
-        console.log("inne i componentDidMount");
+
         this.setUpChart();
     },
 
     drawChart: function (category) {
-        console.log("inne i drawChart");
 
         let chart = this.refs.chart.getChart();
 
@@ -53,7 +58,7 @@ export default React.createClass({
                 data: (this.props.data.map((result) => {
                     return result.mapViews;
                 })),
-                color: "#FF8000",
+                color: "#CC6600",
                 visible: false
             }, false);
             chart.addSeries({
@@ -61,7 +66,7 @@ export default React.createClass({
                 data: (this.props.data.map((result) => {
                     return result.chartViews;
                 })),
-                color: "#FFFF00",
+                color: "#CCCC00",
                 visible: false
             }, false);
             chart.addSeries({
@@ -69,7 +74,7 @@ export default React.createClass({
                 data: (this.props.data.map((result) => {
                     return result.reportTablesViews;
                 })),
-                color: "#80FF00",
+                color: "#66CC00",
                 visible: false
             }, false);
             chart.addSeries({
@@ -77,7 +82,7 @@ export default React.createClass({
                 data: (this.props.data.map((result) => {
                     return result.eventReportViews;
                 })),
-                color: "#00FF00",
+                color: "#ff0066",
                 visible: false
             }, false);
             chart.addSeries({
@@ -85,7 +90,7 @@ export default React.createClass({
                 data: (this.props.data.map((result) => {
                     return result.eventChartViews;
                 })),
-                color: "#00FF80",
+                color:"#000000",
                 visible: false
             }, false);
             chart.addSeries({
@@ -93,7 +98,7 @@ export default React.createClass({
                 data: (this.props.data.map((result) => {
                     return result.dashboardViews;
                 })),
-                color: "#00FFFF",
+                color: "#00CCCC",
                 visible: false
             }, false);
             chart.addSeries({
@@ -101,7 +106,7 @@ export default React.createClass({
                 data: (this.props.data.map((result) => {
                     return result.indicatorsViews;
                 })),
-                color: "#0080FF",
+                color:"#0066CC",
                 visible: false
             }, false);
             chart.addSeries({
@@ -109,7 +114,7 @@ export default React.createClass({
                 data: (this.props.data.map((result) => {
                     return result.averageViews;
                 })),
-                color: "#7F00FF",
+                color: "#9900cc",
                 visible: false
             }, false);
             chart.addSeries({
@@ -149,14 +154,14 @@ export default React.createClass({
                 data: (this.props.data.map((result) => {
                     return result.savedEventReports;
                 })),
-                color: "#00CC00"
+                color: "#ff0066"
             }, false);
             chart.addSeries({
                 name: "Saved event charts",
                 data: (this.props.data.map((result) => {
                     return result.savedEventCharts;
                 })),
-                color: "#00CC66"
+                color: "#000000"
             }, false);
             chart.addSeries({
                 name: "Saved dashboards",
@@ -180,7 +185,7 @@ export default React.createClass({
                 data: (this.props.data.map((result) => {
                     return result.activeUsers;
                 })),
-                color: "#FF0000"
+                color: "#333300"
             }, false);
 
             chart.addSeries({
@@ -188,7 +193,7 @@ export default React.createClass({
                 data: (this.props.data.map((result) => {
                     return result.users;
                 })),
-                color: "#CC0000"
+                color: "#009900"
             }, false);
         }
         chart.xAxis[0].update({categories: date}, true);
@@ -196,61 +201,41 @@ export default React.createClass({
     },
 
     setUpChart: function () {
-        console.log("inne i setUpChart");
 
+        date = [];
         this.props.data.map((result)=> {
-            let tmpDate = "";
-            if (result.day != null) {
-                tmpDate += result.day + "/";
-            }
-            if (result.week != null) {
-                tmpDate += "Week: " + result.week + "/";
-            }
-            if (result.month != null) {
-                switch (result.month) {
-                    case 1:
-                        tmpDate += "Jan ";
-                        break;
-                    case 2:
-                        tmpDate += "Feb ";
-                        break;
-                    case 3:
-                        tmpDate += "Mar ";
-                        break;
-                    case 4:
-                        tmpDate += "Apr ";
-                        break;
-                    case 5:
-                        tmpDate += "May ";
-                        break;
-                    case 6:
-                        tmpDate += "Jun ";
-                        break;
-                    case 7:
-                        tmpDate += "Jul ";
-                        break;
-                    case 8:
-                        tmpDate += "Aug ";
-                        break;
-                    case 9:
-                        tmpDate += "Sep ";
-                        break;
-                    case 10:
-                        tmpDate += "Oct ";
-                        break;
-                    case 11:
-                        tmpDate += "Nov ";
-                        break;
-                    case 12:
-                        tmpDate += "Dec ";
-                        break;
-                }
-            }
-            tmpDate += result.year;
-            date.push(tmpDate);
+            date.push(this.getDate(result.year,result.month,result.week,result.day));
         });
 
         this.drawChart(this.props.category);
+    },
+
+    getDate: function(year,month,week,day){
+        let date = year;
+        if(month != null){
+            let monthText = '';
+            if(month == 1) {monthText = ' jan ';}
+            else if(month == 2) {monthText = ' feb ';}
+            else if(month == 3) {monthText = ' mar ';}
+            else if(month == 4) {monthText = ' apr ';}
+            else if(month == 5) {monthText = ' may ';}
+            else if(month == 6) {monthText = ' jun ';}
+            else if(month == 7) {monthText = ' jul ';}
+            else if(month == 8) {monthText = ' aug ';}
+            else if(month == 9) {monthText = ' sep ';}
+            else if(month == 10) {monthText = ' oct ';}
+            else if(month == 11) {monthText = ' nov ';}
+            else if(month == 12) {monthText = ' dec ';}
+
+            date = monthText + date;
+            if(day != null){
+                date = day + date;
+            }
+        }
+        if(week != null){
+            date = week + ' / ' +date;
+        }
+        return date;
     },
 
     config: {
@@ -261,7 +246,7 @@ export default React.createClass({
             categories: [],
         },
         title: {
-            text: "Usage Analytics"
+            text: title
         }
     },
 
@@ -284,9 +269,9 @@ export default React.createClass({
     },
 
     ViewPicker: function (category) {
-        console.log("inne i ViewPicker");
+
         return (
-            <div>
+            <div style={styles.visible}>
                 <RadioButtonGroup
                     name="shipSpeed"
                     defaultSelected="total"
@@ -308,9 +293,9 @@ export default React.createClass({
 
     render(){
         if(this.props.category!= null){
+            title = this.props.category;
             this.props.category == "Favorite Views" ? isVisible = 'block' : isVisible = 'none';
         }
-        console.log("inne i render");
         var style = {
             minHeight: 600
         };
@@ -318,11 +303,9 @@ export default React.createClass({
         return (
             <div>
                 <ReactHighcharts config={this.config} style={style} ref="chart"/>
-                {React.createElement(
-                    'div',
-                    {style: styles.visible, className: 'viewPicker'},
+                {
                     isVisible == 'block' ? this.ViewPicker() : null
-                )}
+                }
             </div>
         );
     }
