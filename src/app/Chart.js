@@ -8,17 +8,18 @@ import RadioButton from 'material-ui/lib/radio-button';
 import RadioButtonGroup from 'material-ui/lib/radio-button-group';
 
 let date = [];
+let isVisible = true;
+
 const styles = {
     block: {
         maxWidth: 250,
-        //display: 'inline-block'
         display: 'flex',
         flexDirection: 'row',
         marginLeft: 'auto',
         marginRight: 'auto'
     },
     visible: {
-        display: {}
+        display: isVisible
     }
 };
 
@@ -27,9 +28,26 @@ export default React.createClass({
     shouldComponentUpdate: function () {
         return false;
     },
+
+    getInitialState: function() {
+        let showResults = this.props.category == "Favorite Views";
+        return {showResults: this.props.category == "Favorite Views"};
+    },
+
+    componentWillUpdate: function() {
+        if(this.props.category != null){
+            isVisible = this.props.category != "Favorite Views" ? 'block' : 'none';
+        }
+
+        console.log(styles.visible.display);
+    },
+
     componentWillReceiveProps: function (nextprops) {
+        this.setState({ showResults: false });
         this.drawChart(nextprops.category);
-        this.ViewPicker(nextprops.category);
+        //this.ViewPicker(nextprops.category);
+        console.log(nextprops.category);
+        console.log(this.state.showResults);
     },
 
     hideOrShowSeries: function (nextprops) {
@@ -57,6 +75,7 @@ export default React.createClass({
         }
 
         if(category == "Favorite Views"){
+            isVisible = 'block';
             chart.addSeries({
                 name: "Map views",
                 data: (this.props.data.map((result) => {
@@ -131,6 +150,7 @@ export default React.createClass({
             }, false);
         }
         else if (category == "Favorite saved") {
+            isVisible = 'none';
             chart.addSeries({
                 name: "Saved maps",
                 data: (this.props.data.map((result) => {
@@ -182,6 +202,7 @@ export default React.createClass({
             }, false);
         }
         else if (category == "Users") {
+            isVisible = 'none';
             chart.addSeries({
                 name: "Active users",
                 data: (this.props.data.map((result) => {
@@ -198,7 +219,7 @@ export default React.createClass({
                 color: "#CC0000"
             }, false);
         }
-
+        console.log(isVisible);
         chart.xAxis[0].update({categories: date}, true);
         chart.redraw();
     },
@@ -290,19 +311,8 @@ export default React.createClass({
     },
 
     ViewPicker: function (category) {
-        let isVisible = this.props.category != "Favorite Views" ? 'block' : 'none';;
-        if(category != null){
-            isVisible = category != "Favorite Views" ? 'block' : 'none';
-        }
-
-        let visible =  {
-            visible: {
-                display: isVisible
-            }
-        };
-        console.log(visible.visible.display);
         return (
-            <div style={visible.visible}>
+            <div>
                 <RadioButtonGroup
                     name="shipSpeed"
                     defaultSelected="total"
@@ -332,8 +342,9 @@ export default React.createClass({
                 <ReactHighcharts config={this.config} style={style} ref="chart"/>
                 {React.createElement(
                     'div',
-                    {className: 'viewPicker'},
-                    this.ViewPicker()
+                    {style: styles.visible, className: 'viewPicker'},
+                    this.state.showResults ? this.ViewPicker() : null,
+                    console.log(this.state.showResults)
                 )}
             </div>
         );
