@@ -238,16 +238,18 @@ export default React.createClass({
         return date;
     },
 
-    config: {
-        credits: {
-            enabled: false
-        },
-        xAxis: {
-            categories: [],
-        },
-        title: {
-            text: title
-        }
+    getConfig: function(){
+        return {
+            credits: {
+                enabled: false
+            },
+            xAxis: {
+                categories: [],
+            },
+            title: {
+                text: title
+            }
+        };
     },
 
     _onChange: function (e, selected) {
@@ -302,7 +304,7 @@ export default React.createClass({
 
         return (
             <div>
-                <ReactHighcharts config={this.config} style={style} ref="chart"/>
+                <ReactHighcharts config={this.getConfig()} style={style} ref="chart"/>
                 {
                     isVisible == 'block' ? this.ViewPicker() : null
                 }
