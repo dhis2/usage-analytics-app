@@ -1,6 +1,3 @@
-/**
- * Created by JulieHillRoa on 14.03.2016.
- */
 import React from 'react';
 import ReactHighcharts from 'react-highcharts';
 import {render} from 'react-dom';
@@ -25,13 +22,13 @@ const styles = {
         borderColor: '#000000',
         padding: 5,
         marginTop: 20,
-        borderWidth:0.5
+        borderWidth: 0.5
     }
 };
 
 export default React.createClass({
 
-    componentDidUpdate:function() {
+    componentDidUpdate: function () {
 
         this.setUpChart();
     },
@@ -44,13 +41,13 @@ export default React.createClass({
     drawChart: function (category) {
         let chart = this.refs.chart.getChart();
 
-        if(chart.series.length > 0) {
-            for (let i = chart.series.length-1; i > -1; i--) {
+        if (chart.series.length > 0) {
+            for (let i = chart.series.length - 1; i > -1; i--) {
                 chart.series[i].remove();
             }
         }
 
-        if(category == "Favorite Views"){
+        if (category == "Favorite Views") {
             isVisible = 'block';
             chart.addSeries({
                 name: "Map views",
@@ -89,7 +86,7 @@ export default React.createClass({
                 data: (this.props.data.map((result) => {
                     return result.eventChartViews;
                 })),
-                color:"#000000",
+                color: "#000000",
                 visible: true
             }, false);
             chart.addSeries({
@@ -105,7 +102,7 @@ export default React.createClass({
                 data: (this.props.data.map((result) => {
                     return result.indicatorsViews;
                 })),
-                color:"#0066CC",
+                color: "#0066CC",
                 visible: true
             }, false);
             chart.addSeries({
@@ -202,41 +199,65 @@ export default React.createClass({
     setUpChart: function () {
         date = [];
         this.props.data.map((result)=> {
-            date.push(this.getDate(result.year,result.month,result.week,result.day));
+            date.push(this.getDate(result.year, result.month, result.week, result.day));
         });
 
         this.drawChart(this.props.category);
     },
 
-    getDate: function(year,month,week,day){
+    getDate: function (year, month, week, day) {
         let date = year;
-        if(month != null){
+        if (month != null) {
             let monthText = '';
-            if(month == 1) {monthText = ' jan ';}
-            else if(month == 2) {monthText = ' feb ';}
-            else if(month == 3) {monthText = ' mar ';}
-            else if(month == 4) {monthText = ' apr ';}
-            else if(month == 5) {monthText = ' may ';}
-            else if(month == 6) {monthText = ' jun ';}
-            else if(month == 7) {monthText = ' jul ';}
-            else if(month == 8) {monthText = ' aug ';}
-            else if(month == 9) {monthText = ' sep ';}
-            else if(month == 10) {monthText = ' oct ';}
-            else if(month == 11) {monthText = ' nov ';}
-            else if(month == 12) {monthText = ' dec ';}
+            if (month == 1) {
+                monthText = ' jan ';
+            }
+            else if (month == 2) {
+                monthText = ' feb ';
+            }
+            else if (month == 3) {
+                monthText = ' mar ';
+            }
+            else if (month == 4) {
+                monthText = ' apr ';
+            }
+            else if (month == 5) {
+                monthText = ' may ';
+            }
+            else if (month == 6) {
+                monthText = ' jun ';
+            }
+            else if (month == 7) {
+                monthText = ' jul ';
+            }
+            else if (month == 8) {
+                monthText = ' aug ';
+            }
+            else if (month == 9) {
+                monthText = ' sep ';
+            }
+            else if (month == 10) {
+                monthText = ' oct ';
+            }
+            else if (month == 11) {
+                monthText = ' nov ';
+            }
+            else if (month == 12) {
+                monthText = ' dec ';
+            }
 
             date = monthText + date;
-            if(day != null){
+            if (day != null) {
                 date = day + date;
             }
         }
-        if(week != null){
-            date = week + ' / ' +date;
+        if (week != null) {
+            date = week + ' / ' + date;
         }
         return date;
     },
 
-    getConfig: function(){
+    getConfig: function () {
         return {
             credits: {
                 enabled: false
@@ -293,7 +314,7 @@ export default React.createClass({
     },
 
     render(){
-        if(this.props.category!= null){
+        if (this.props.category != null) {
             title = this.props.category;
             this.props.category == "Favorite Views" ? isVisible = 'block' : isVisible = 'none';
         }

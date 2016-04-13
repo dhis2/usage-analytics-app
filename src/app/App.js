@@ -1,13 +1,9 @@
 import React from 'react';
-import log from 'loglevel';
 import DatePicker from 'material-ui/lib/date-picker/date-picker';
 import RaisedButton from 'material-ui/lib/raised-button';
 import DropDownMenu from 'material-ui/lib/DropDownMenu';
 import MenuItem from 'material-ui/lib/menus/menu-item';
-import Checkbox from 'material-ui/lib/checkbox';
-import ActionFavoriteBorder from 'material-ui/lib/svg-icons/action/favorite-border';
 import ThemeManager from 'material-ui/lib/styles/theme-manager';
-import Style from './app.scss';
 var injectTapEventPlugin = require("react-tap-event-plugin");
 injectTapEventPlugin();
 
@@ -16,26 +12,23 @@ import Client from './Client.js';
 import MyRawTheme from '../colortheme';
 
 
-
 const buttonstyle = {
     marginLeft: 10,
     borderBottom: 1,
-    borderBottomStyle:'solid',
+    borderBottomStyle: 'solid',
     borderRight: 1,
-    borderRightStyle:'solid',
+    borderRightStyle: 'solid',
     borderColor: '#dadada',
-    backgroundColor:'#FFFFFF',
+    backgroundColor: '#FFFFFF',
     width: 190
 };
 
 let startDate = new Date();
-startDate.setMonth(startDate.getMonth() -4);
+startDate.setMonth(startDate.getMonth() - 4);
 let endDate = new Date();
 let startString = '';
 let endString = '';
 let update = true;
-
-
 
 
 export default React.createClass({
@@ -65,45 +58,48 @@ export default React.createClass({
     },
     updateButton: function () {
         var style = {
-            marginTop:15,
+            marginTop: 15,
             marginRight: 10,
             marginLeft: 10,
-            display:'block',
-            float:'left',
+            display: 'block',
+            float: 'left',
         };
-        return <div><RaisedButton label="Update" className="raised-button" primary={true} style={style} onClick={() => this.updateURL()}/></div>;
+        return <div><RaisedButton label="Update" className="raised-button" primary={true} style={style}
+                                  onClick={() => this.updateURL()}/></div>;
     },
 
-    updateURL: function(){
+    updateURL: function () {
         startString = this.formatDate(startDate);
         endString = this.formatDate(endDate);
 
-        let tempUrl = "http://localhost:8080/api/dataStatistics?startDate="+startString+"&endDate="+endString+"&interval=" + this.state.interval;
+        let tempUrl = "http://localhost:8080/api/dataStatistics?startDate=" + startString + "&endDate=" + endString + "&interval=" + this.state.interval;
         update = true;
-        this.setState({url:tempUrl});
+        this.setState({url: tempUrl});
     },
 
     DatePicker: function () {
         var style = {
-            label:{
-                display:'block',
+            label: {
+                display: 'block',
                 fontFamily: 'Roboto, sans-serif',
                 fontSize: 19
 
             },
-            marginTop:10,
+            marginTop: 10,
             marginLeft: 10,
-            marginBottom:20,
-            datepicker:{
-                textFieldStyle:'yyyy-mm-dd'
+            marginBottom: 20,
+            datepicker: {
+                textFieldStyle: 'yyyy-mm-dd'
             }
 
         };
         return ( <div style={style}>
             <label style={style.label} htmlFor="start"><b>Start date:</b></label>
-            <DatePicker id="start" defaultDate={startDate}   formatDate={this.formatDate} mode="landscape" onChange={(event, value) => startDate = value} />
+            <DatePicker id="start" defaultDate={startDate} formatDate={this.formatDate} mode="landscape"
+                        onChange={(event, value) => startDate = value}/>
             <label style={style.label} htmlFor="end"><b>End date:</b></label>
-            <DatePicker id="end" defaultDate={endDate}  formatDate={this.formatDate} mode="landscape" onChange={(event, value) =>  endDate = value}/>
+            <DatePicker id="end" defaultDate={endDate} formatDate={this.formatDate} mode="landscape"
+                        onChange={(event, value) =>  endDate = value}/>
         </div>);
     },
 
@@ -114,21 +110,22 @@ export default React.createClass({
 
     dropdownIntervalMenu: function () {
         var style = {
-            label:{
-                display:'block',
+            label: {
+                display: 'block',
                 fontFamily: 'Roboto, sans-serif',
-                marginTop:10,
+                marginTop: 10,
                 marginLeft: 10,
                 fontSize: 19
             },
-            menu:{
+            menu: {
                 width: 116
             }
 
         };
         return (<div>
             <label style={style.label} htmlFor="intervaldrop"><b>Interval:</b></label>
-            <DropDownMenu id="intervaldrop" autoWidth={false} value={this.state.interval} style={buttonstyle} onChange={(event, index, value) => this.setState({interval: value})}>
+            <DropDownMenu id="intervaldrop" autoWidth={false} value={this.state.interval} style={buttonstyle}
+                          onChange={(event, index, value) => this.setState({interval: value})}>
                 <MenuItem value={'DAY'} primaryText="DAY"/>
                 <MenuItem value={'WEEK'} primaryText="WEEK"/>
                 <MenuItem value={'MONTH'} primaryText="MONTH"/>
@@ -139,19 +136,21 @@ export default React.createClass({
 
     dropdownCategoryMenu: function () {
         var style = {
-            label:{
-                display:'block',
+            label: {
+                display: 'block',
                 fontFamily: 'Roboto, sans-serif',
-                marginTop:10,
+                marginTop: 10,
                 marginLeft: 10,
                 fontSize: 19,
-            }, icon:{
-                color:'#000000'
+            }, icon: {
+                color: '#000000'
             }
         };
         return (<div>
             <label style={style.label} htmlFor="Categorydrop"><b>Category:</b></label>
-            <DropDownMenu id="Categorydrop" autoWidth={false} style={buttonstyle} iconStyle={style.icon} value={this.state.category} onChange={(event, index, value) => this.setState({category: value})}>
+            <DropDownMenu id="Categorydrop" autoWidth={false} style={buttonstyle} iconStyle={style.icon}
+                          value={this.state.category}
+                          onChange={(event, index, value) => this.setState({category: value})}>
                 <MenuItem value={'Favorite Views'} primaryText="FAVORITE VIEWS"/>
                 <MenuItem value={'Favorite saved'} primaryText="FAVORITES SAVED"/>
                 <MenuItem value={'Users'} primaryText="USERS"/>
@@ -185,21 +184,22 @@ export default React.createClass({
         };
 
         return (
-                <div className="app-wrapper">
+            <div className="app-wrapper">
                 <HeaderBar />
                 {React.createElement(
                     'div',
                     {style: style.sidebar, className: 'left-bar'},
-                        this.title(),
-                        this.DatePicker(),
-                        this.dropdownIntervalMenu(),
-                        this.dropdownCategoryMenu(),
-                        this.updateButton()
-                    )}
-                    <div className="main-content">
-                        <Client source={this.state.url} category={this.state.category} updatepage={update}/>
-                        {update = false}
-                    </div>;
+                    this.title(),
+                    this.DatePicker(),
+                    this.dropdownIntervalMenu(),
+                    this.dropdownCategoryMenu(),
+                    this.updateButton()
+                )}
+                <div className="main-content">
+                    <Client source={this.state.url} category={this.state.category} updatepage={update}/>
+                    {update = false}
+                </div>
+                ;
             </div>
         );
     }

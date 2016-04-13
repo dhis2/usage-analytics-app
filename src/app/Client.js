@@ -1,13 +1,8 @@
-/**
- * Created by JulieHillRoa on 14.03.2016.
- */
-
 import React from 'react';
 import CircularProgress from 'material-ui/lib/circular-progress';
 
 import Table from './Table';
 import Chart from './Chart';
-
 
 let category = '';
 let load = false;
