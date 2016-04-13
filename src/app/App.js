@@ -29,7 +29,7 @@ const buttonstyle = {
 };
 
 let startDate = new Date();
-startDate.setFullYear(startDate.getFullYear() -1);
+startDate.setMonth(startDate.getMonth() -4);
 let endDate = new Date();
 let startString = '';
 let endString = '';
@@ -59,7 +59,7 @@ export default React.createClass({
     getInitialState: function () {
         return this.state = {
             url: '',
-            interval: 'DAY',
+            interval: 'WEEK',
             category: 'Favorite Views'
         };
     },
@@ -153,7 +153,7 @@ export default React.createClass({
             <label style={style.label} htmlFor="Categorydrop"><b>Category:</b></label>
             <DropDownMenu id="Categorydrop" autoWidth={false} style={buttonstyle} iconStyle={style.icon} value={this.state.category} onChange={(event, index, value) => this.setState({category: value})}>
                 <MenuItem value={'Favorite Views'} primaryText="FAVORITE VIEWS"/>
-                <MenuItem value={'Favorite saved'} primaryText="FAVORITE SAVED"/>
+                <MenuItem value={'Favorite saved'} primaryText="FAVORITES SAVED"/>
                 <MenuItem value={'Users'} primaryText="USERS"/>
             </DropDownMenu></div>);
 

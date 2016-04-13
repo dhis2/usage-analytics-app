@@ -58,7 +58,7 @@ export default React.createClass({
                     return result.mapViews;
                 })),
                 color: "#CC6600",
-                visible: false
+                visible: true
             }, false);
             chart.addSeries({
                 name: "Chart views",
@@ -66,7 +66,7 @@ export default React.createClass({
                     return result.chartViews;
                 })),
                 color: "#CCCC00",
-                visible: false
+                visible: true
             }, false);
             chart.addSeries({
                 name: "Report table views",
@@ -74,7 +74,7 @@ export default React.createClass({
                     return result.reportTablesViews;
                 })),
                 color: "#66CC00",
-                visible: false
+                visible: true
             }, false);
             chart.addSeries({
                 name: "Event report views",
@@ -82,7 +82,7 @@ export default React.createClass({
                     return result.eventReportViews;
                 })),
                 color: "#ff0066",
-                visible: false
+                visible: true
             }, false);
             chart.addSeries({
                 name: "Event chart views",
@@ -90,7 +90,7 @@ export default React.createClass({
                     return result.eventChartViews;
                 })),
                 color:"#000000",
-                visible: false
+                visible: true
             }, false);
             chart.addSeries({
                 name: "Dashboard views",
@@ -98,7 +98,7 @@ export default React.createClass({
                     return result.dashboardViews;
                 })),
                 color: "#00CCCC",
-                visible: false
+                visible: true
             }, false);
             chart.addSeries({
                 name: "Indicators views",
@@ -106,7 +106,7 @@ export default React.createClass({
                     return result.indicatorsViews;
                 })),
                 color:"#0066CC",
-                visible: false
+                visible: true
             }, false);
             chart.addSeries({
                 name: "Average views",
@@ -114,7 +114,7 @@ export default React.createClass({
                     return result.averageViews;
                 })),
                 color: "#9900cc",
-                visible: false
+                visible: true
             }, false);
             chart.addSeries({
                 name: "Total views",
@@ -122,7 +122,7 @@ export default React.createClass({
                     return result.totalViews;
                 })),
                 color: "#0000FF",
-                visible: true
+                visible: false
             }, false);
         }
         else if (category == "Favorite saved") {
@@ -274,18 +274,19 @@ export default React.createClass({
             <div style={styles.visible}>
                 <RadioButtonGroup
                     name="shipSpeed"
-                    defaultSelected="total"
+                    defaultSelected="all"
                     style={styles.block}
                     onChange={this._onChange}
                 >
                     <RadioButton
-                        value="total"
-                        label="Only total views"
-                    />
-                    <RadioButton
                         value="all"
                         label="All favorite views"
                     />
+                    <RadioButton
+                        value="total"
+                        label="Only total views"
+                    />
+
                 </RadioButtonGroup>
             </div>
         );
