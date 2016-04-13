@@ -67,10 +67,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dhis2/app-skeleton.git"
+    "url": "git+https://github.com/dhis2/dhis2-usage-analytics"
   },
   "bugs": {
-    "url": "https://github.com/dhis2/app-skeleton/issues"
+    "url": "https://github.com/dhis2/dhis2-usage-analytics/issues"
   },
-  "homepage": "https://github.com/dhis2/app-skeleton#readme"
+  "homepage": "https://github.com/dhis2/dhis2-usage-analytics#readme"
 }
