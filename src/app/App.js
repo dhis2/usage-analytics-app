@@ -152,7 +152,7 @@ export default React.createClass({
                           value={this.state.category}
                           onChange={(event, index, value) => this.setState({category: value})}>
                 <MenuItem value={'Favorite Views'} primaryText="FAVORITE VIEWS"/>
-                <MenuItem value={'Favorite saved'} primaryText="FAVORITES SAVED"/>
+                <MenuItem value={'Favorite saved'} primaryText="FAVORITES"/>
                 <MenuItem value={'Users'} primaryText="USERS"/>
             </DropDownMenu></div>);
 
