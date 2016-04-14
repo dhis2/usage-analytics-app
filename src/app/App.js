@@ -8,6 +8,7 @@ var injectTapEventPlugin = require("react-tap-event-plugin");
 injectTapEventPlugin();
 
 import HeaderBar from 'd2-ui/lib/header-bar/HeaderBar.component';
+import { config } from 'd2/lib/d2';
 import Client from './Client.js';
 import MyRawTheme from '../colortheme';
 
@@ -62,7 +63,7 @@ export default React.createClass({
             marginRight: 10,
             marginLeft: 10,
             display: 'block',
-            float: 'left',
+            float: 'left'
         };
         return <div><RaisedButton label="Update" className="raised-button" primary={true} style={style}
                                   onClick={() => this.updateURL()}/></div>;
@@ -72,7 +73,7 @@ export default React.createClass({
         startString = this.formatDate(startDate);
         endString = this.formatDate(endDate);
 
-        let tempUrl = "http://localhost:8080/api/dataStatistics?startDate=" + startString + "&endDate=" + endString + "&interval=" + this.state.interval;
+        let tempUrl = config.baseUrl + "/dataStatistics?startDate=" + startString + "&endDate=" + endString + "&interval=" + this.state.interval;
         update = true;
         this.setState({url: tempUrl});
     },

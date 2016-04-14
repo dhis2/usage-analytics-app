@@ -36,7 +36,7 @@ export default React.createClass({
                 EventReportssaved: val.savedEventReports,
                 EventChartssaved: val.savedEventCharts,
                 Dashboardssaved: val.savedDashboards,
-                Indicatorssaved: val.savedIndicators,
+                Indicatorssaved: val.savedIndicators
             }))
         });
         return arr;

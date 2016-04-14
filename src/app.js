@@ -12,18 +12,6 @@ import 'react-tap-event-plugin';
 import App from './app/App';
 import './app/app.scss';
 
-// This code will only be included in non-production builds of the app
-// It sets up the Authorization header to be used during CORS requests
-// This way we can develop using webpack without having to install
-// the application into DHIS2.
-if (process.env.NODE_ENV !== 'production') {
-    jQuery.ajaxSetup({ // eslint-disable-line no-undef
-        headers: {
-            Authorization: `Basic ${btoa('admin:district')}`,
-        },
-    });
-}
-
 // Render the a LoadingMask to show the user the app is in loading
 // The consecutive render after we did our setup will replace this loading mask
 // with the rendered version of the application.
@@ -49,10 +37,10 @@ getManifest('./manifest.webapp')
         config.baseUrl = `${manifest.getBaseUrl()}/api`;
 
         // Set the baseUrl to localhost if we are in dev mode
-        if (process.env.NODE_ENV !== 'production') {
+        /*if (process.env.NODE_ENV !== 'production') {
             config.baseUrl = 'http://localhost:8080/api';
             dhis2.settings.baseUrl = 'http://localhost:8080';
-        }
+        }*/
     })
     .then(init)
     .then(startApp)
