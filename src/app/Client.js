@@ -1,13 +1,8 @@
-/**
- * Created by JulieHillRoa on 14.03.2016.
- */
-
 import React from 'react';
 import CircularProgress from 'material-ui/lib/circular-progress';
 
 import Table from './Table';
 import Chart from './Chart';
-
 
 let category = '';
 let load = false;
@@ -101,9 +96,9 @@ export default React.createClass({
             if(!load) {
                 return (
                     <div>
-                            <span style={style.spanstyle}>This app creates statistic reports of usage within the DHIS2 system. It generates a chart and a table of chosen data.
-                                Start by selecting start date and end date and choose your preferred interval and category. Click the update button to generate the report.
-                                When "Favorite Views" is selected, you can use the radio buttons to select either total or every value except total.
+                            <span style={style.spanstyle}>This app creates statistic reports of usage within the DHIS2 system. It generates a chart and a table containing chosen data.
+                                Start by selecting the dates and choose your preferred interval and category. Click the update button to generate the report.
+                                When 'Favorite Views' is selected, you can use the radio buttons to select either total or every value except total.
                             </span>
                     </div>);
             }else { return <CircularProgress size={1.5} style={style.circular}/>}

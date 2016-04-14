@@ -1,6 +1,3 @@
-/**
- * Created by JulieHillRoa on 14.03.2016.
- */
 import React from 'react';
 import ReactHighcharts from 'react-highcharts';
 import {render} from 'react-dom';
@@ -25,13 +22,13 @@ const styles = {
         borderColor: '#000000',
         padding: 5,
         marginTop: 20,
-        borderWidth:0.5
+        borderWidth: 0.5
     }
 };
 
 export default React.createClass({
 
-    componentDidUpdate:function() {
+    componentDidUpdate: function () {
 
         this.setUpChart();
     },
@@ -44,13 +41,13 @@ export default React.createClass({
     drawChart: function (category) {
         let chart = this.refs.chart.getChart();
 
-        if(chart.series.length > 0) {
-            for (let i = chart.series.length-1; i > -1; i--) {
+        if (chart.series.length > 0) {
+            for (let i = chart.series.length - 1; i > -1; i--) {
                 chart.series[i].remove();
             }
         }
 
-        if(category == "Favorite Views"){
+        if (category == "Favorite Views") {
             isVisible = 'block';
             chart.addSeries({
                 name: "Map views",
@@ -71,7 +68,7 @@ export default React.createClass({
             chart.addSeries({
                 name: "Report table views",
                 data: (this.props.data.map((result) => {
-                    return result.reportTablesViews;
+                    return result.reportTableViews;
                 })),
                 color: "#66CC00",
                 visible: true
@@ -89,7 +86,7 @@ export default React.createClass({
                 data: (this.props.data.map((result) => {
                     return result.eventChartViews;
                 })),
-                color:"#000000",
+                color: "#000000",
                 visible: true
             }, false);
             chart.addSeries({
@@ -194,7 +191,7 @@ export default React.createClass({
     setUpChart: function () {
         date = [];
         this.props.data.map((result)=> {
-            date.push(this.getDate(result.year,result.month,result.week,result.day));
+            date.push(this.getDate(result.year, result.month, result.week, result.day));
         });
 
         this.drawChart(this.props.category);
@@ -218,17 +215,17 @@ export default React.createClass({
             else if(month == 12) {monthText = ' dec ';}
 
             date = monthText + date;
-            if(day != null){
+            if (day != null) {
                 date = day + date;
             }
         }
-        if(week != null){
-            date = week + ' / ' +date;
+        if (week != null) {
+            date = week + ' / ' + date;
         }
         return date;
     },
 
-    getConfig: function(){
+    getConfig: function () {
         return {
             credits: {
                 enabled: false
@@ -285,7 +282,7 @@ export default React.createClass({
     },
 
     render(){
-        if(this.props.category!= null){
+        if (this.props.category != null) {
             title = this.props.category;
             this.props.category == "Favorite Views" ? isVisible = 'block' : isVisible = 'none';
         }

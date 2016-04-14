@@ -19,7 +19,7 @@ $left-bar-width: 380px;
   margin-left: $left-bar-width - 80;
 }
 
-.scroller{
+.scroller {
   width: 100px;
   overflow: auto;
   height: 100px;
@@ -27,5 +27,12 @@ $left-bar-width: 380px;
   display: inline-block;
 }
 
-.container-outer { overflow: scroll; width: 500px; height: 210px; }
-.container-inner { width: 15000px; }
+.container-outer {
+  overflow: scroll;
+  width: 500px;
+  height: 210px;
+}
+
+.container-inner {
+  width: 15000px;
+}

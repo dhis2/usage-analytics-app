@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.hisp.dhis</groupId>
+    <artifactId>dhis-app-usage-analytics</artifactId>
+    <version>2.23-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <name>Usage Analytics</name>
+    <description>DHIS 2 usage analytics app</description>
+    <url>https://github.com/dhis2/dhis2-usage-analytics</url>
+
+
+    <organization>
+        <name>DHIS 2</name>
+        <url>https://www.dhis2.org</url>
+    </organization>
+
+    <developers>
+        <developer>
+            <name>Julie Hill Roa</name>
+            <email>julie.hill.roa@gmail.com</email>
+            <organization>UiO</organization>
+            <organizationUrl>http://www.uio.no/</organizationUrl>
+        </developer>
+        <developer>
+            <name>Yrjan A. F. Fraschetti</name>
+            <email>yrjanaff@gmail.com</email>
+            <organization>UiO</organization>
+            <organizationUrl>http://www.uio.no/</organizationUrl>
+        </developer>
+    </developers>
+
+    <licenses>
+        <license>
+            <name>BSD</name>
+            <url>https://opensource.org/licenses/BSD-3-Clause</url>
+        </license>
+    </licenses>
+
+    <scm>
+        <connection>scm:git:git@github.com:dhis2/dhis2-usage-analytics.git</connection>
+        <developerConnection>scm:git:git@github.com:dhis2/dhis2-usage-analytics.git</developerConnection>
+        <url>git@github.com:dhis2/dhis2-usage-analytics.git</url>
+    </scm>
+
+    <issueManagement>
+        <system>GitHub</system>
+        <url>https://github.com/dhis2/dhis2-usage-analytics</url>
+    </issueManagement>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+        </repository>
+    </distributionManagement>
+
+    <build>
+        <resources>
+            <resource>
+                <directory>build</directory>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.6</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>ossrh</serverId>
+                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

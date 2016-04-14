@@ -1,7 +1,3 @@
-/**
- * Created by JulieHillRoa on 31.03.2016.
- */
-
 import Colors from 'material-ui/lib/styles/colors';
 import ColorManipulator from 'material-ui/lib/utils/color-manipulator';
 import Spacing from 'material-ui/lib/styles/spacing';
