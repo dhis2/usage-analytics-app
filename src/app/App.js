@@ -73,7 +73,7 @@ export default React.createClass({
         startString = this.formatDate(startDate);
         endString = this.formatDate(endDate);
 
-        let tempUrl = config.baseUrl + "/dataStatistics?startDate=" + startString + "&endDate=" + endString + "&interval=" + this.state.interval;
+        let tempUrl = "/api/dataStatistics?startDate=" + startString + "&endDate=" + endString + "&interval=" + this.state.interval;
         update = true;
         this.setState({url: tempUrl});
     },
