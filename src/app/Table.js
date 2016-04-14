@@ -19,11 +19,10 @@ export default React.createClass({
                 Date: this.getDate(val.year,val.month,val.week,val.day),
                 Mapview: val.mapViews,
                 Chartview: val.chartViews,
-                ReportTableview: val.reportTablesViews,
+                ReportTableview: val.reportTableViews,
                 EventReportview: val.eventReportViews,
                 EventChartview: val.eventChartViews,
                 Dashboardview: val.dashboardViews,
-                Indicatorsview: val.indicatorsViews,
                 Totalview: val.totalViews,
                 Averageview: val.averageViews
             }))

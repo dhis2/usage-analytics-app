@@ -101,14 +101,6 @@ export default React.createClass({
                 visible: true
             }, false);
             chart.addSeries({
-                name: "Indicators views",
-                data: (this.props.data.map((result) => {
-                    return result.indicatorsViews;
-                })),
-                color:"#0066CC",
-                visible: true
-            }, false);
-            chart.addSeries({
                 name: "Average views",
                 data: (this.props.data.map((result) => {
                     return result.averageViews;
