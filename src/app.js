@@ -34,7 +34,7 @@ function startApp(d2) {
 // can use it to access the api, translations etc.
 getManifest('./manifest.webapp')
     .then(manifest => {
-        config.baseUrl = `${manifest.getBaseUrl()}/api`;
+        config.baseUrl = `../api`;
 
         // Set the baseUrl to localhost if we are in dev mode
         /*if (process.env.NODE_ENV !== 'production') {
