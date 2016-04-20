@@ -1,7 +1,7 @@
 import React from 'react';
-import { render } from 'react-dom';
+import {render} from 'react-dom';
 import log from 'loglevel';
-import { init, config, getManifest } from 'd2/lib/d2';
+import {init, config, getManifest} from 'd2/lib/d2';
 
 import dhis2 from 'd2-ui/lib/header-bar/dhis2';
 import LoadingMask from 'd2-ui/lib/loading-mask/LoadingMask.component';
@@ -17,13 +17,20 @@ import './app/app.scss';
 // with the rendered version of the application.
 render(<LoadingMask />, document.getElementById('app'));
 
+if (process.env.NODE_ENV !== 'production') {
+    jQuery.ajaxSetup({ // eslint-disable-line no-undef
+        headers: {
+            Authorization: `Basic ${btoa('admin:district')}`,
+        },
+    });
+}
 /**
  * Renders the application into the page.
  *
  * @param d2 Instance of the d2 library that is returned by the `init` function.
  */
 function startApp(d2) {
-    render(<App d2={d2} />, document.querySelector('#app'));
+    render(<App d2={d2}/>, document.querySelector('#app'));
 }
 
 
@@ -34,13 +41,13 @@ function startApp(d2) {
 // can use it to access the api, translations etc.
 getManifest('./manifest.webapp')
     .then(manifest => {
-        config.baseUrl = `../api`;
+        config.baseUrl = `http://localhost:8080/api`;
 
         // Set the baseUrl to localhost if we are in dev mode
         /*if (process.env.NODE_ENV !== 'production') {
-            config.baseUrl = 'http://localhost:8080/api';
-            dhis2.settings.baseUrl = 'http://localhost:8080';
-        }*/
+         config.baseUrl = 'http://localhost:8080/api';
+         dhis2.settings.baseUrl = 'http://localhost:8080';
+         }*/
     })
     .then(init)
     .then(startApp)

@@ -12,12 +12,17 @@ const styles = {
     block: {
         maxWidth: 250,
         marginRight: 'auto',
-        marginLeft: 'auto'
+        marginLeft: '25%',
+        display: 'flex',
+        flexDirection: 'row'
     },
     visible: {
         display: isVisible,
         padding: 5,
-        marginTop: 20
+        marginTop: 20,
+        border: 'solid',
+        borderColor: '#000000',
+        borderWidth: 0.5
     }
 };
 
@@ -273,12 +278,12 @@ export default React.createClass({
                         label="All favorite views"
                     />
                     <RadioButton
-                        value="total"
-                        label="Total views"
-                    />
-                    <RadioButton
                         value="average"
                         label="Average views per user"
+                    />
+                    <RadioButton
+                        value="total"
+                        label="Total views"
                     />
                 </RadioButtonGroup>
             </div>
