@@ -273,7 +273,7 @@ export default React.createClass({
                     />
                     <RadioButton
                         value="total"
-                        label="Only total views"
+                        label="Total views"
                     />
 
                 </RadioButtonGroup>
