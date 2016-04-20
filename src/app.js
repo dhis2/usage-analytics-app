@@ -17,13 +17,6 @@ import './app/app.scss';
 // with the rendered version of the application.
 render(<LoadingMask />, document.getElementById('app'));
 
-if (process.env.NODE_ENV !== 'production') {
-    jQuery.ajaxSetup({ // eslint-disable-line no-undef
-        headers: {
-            Authorization: `Basic ${btoa('admin:district')}`,
-        },
-    });
-}
 /**
  * Renders the application into the page.
  *
@@ -41,7 +34,7 @@ function startApp(d2) {
 // can use it to access the api, translations etc.
 getManifest('./manifest.webapp')
     .then(manifest => {
-        config.baseUrl = `http://localhost:8080/api`;
+        config.baseUrl = `../api`;
 
         // Set the baseUrl to localhost if we are in dev mode
         /*if (process.env.NODE_ENV !== 'production') {
