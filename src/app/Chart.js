@@ -11,10 +11,8 @@ let title = 'Favorite views';
 const styles = {
     block: {
         maxWidth: 250,
-        display: 'flex',
-        flexDirection: 'row',
-        marginLeft: 'auto',
-        marginRight: 'auto'
+        marginRight: 'auto',
+        marginLeft: 'auto'
     },
     visible: {
         display: isVisible,
@@ -103,7 +101,7 @@ export default React.createClass({
                     return result.averageViews;
                 })),
                 color: "#9900cc",
-                visible: true
+                visible: false
             }, false);
             chart.addSeries({
                 name: "Total views",
@@ -243,12 +241,18 @@ export default React.createClass({
         let chart = this.refs.chart.getChart();
         if (selected == "total") {
             chart.series[(chart.series.length - 1)].show();
+            chart.series[(chart.series.length - 2)].hide();
+        }
+        else if(selected == "average"){
+            chart.series[(chart.series.length - 2)].show();
+            chart.series[(chart.series.length - 1)].hide();
         }
         else {
             chart.series[(chart.series.length - 1)].hide();
+            chart.series[(chart.series.length - 2)].hide();
         }
-        for (let i = chart.series.length - 2; i > -1; i--) {
-            if (selected == "total") {
+        for (let i = chart.series.length - 3; i > -1; i--) {
+            if (selected == "total"  || selected == "average"  ) {
                 chart.series[i].hide();
             }
             else {
@@ -275,7 +279,10 @@ export default React.createClass({
                         value="total"
                         label="Total views"
                     />
-
+                    <RadioButton
+                        value="average"
+                        label="Average views per user"
+                    />
                 </RadioButtonGroup>
             </div>
         );
