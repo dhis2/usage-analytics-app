@@ -16,11 +16,8 @@ const styles = {
     },
     visible: {
         display: isVisible,
-        border: 'solid',
-        borderColor: '#000000',
         padding: 5,
-        marginTop: 20,
-        borderWidth: 0.5
+        marginTop: 20
     }
 };
 
