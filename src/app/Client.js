@@ -1,8 +1,7 @@
 import React from 'react';
 import CircularProgress from 'material-ui/lib/circular-progress';
 
-import Table from './Table';
-import Chart from './Chart';
+import Handler from './Handler';
 
 let category = '';
 let load = false;
@@ -109,10 +108,7 @@ export default React.createClass({
         }
         else {
             return (
-                <div>
-                    <Chart data={this.state.data} category={category}/>
-                    <Table data={this.state.data} category={category}/>
-                </div>
+                    <Handler data={this.state.data} category={category}/>
             );
         }
 

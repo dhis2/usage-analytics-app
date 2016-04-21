@@ -1,30 +1,11 @@
 import React from 'react';
 import ReactHighcharts from 'react-highcharts';
 import {render} from 'react-dom';
-import RadioButton from 'material-ui/lib/radio-button';
-import RadioButtonGroup from 'material-ui/lib/radio-button-group';
 
 let date = [];
 let isVisible = 'block';
 let title = 'Favorite views';
-
-const styles = {
-    block: {
-        maxWidth: 250,
-        marginRight: 'auto',
-        marginLeft: '25%',
-        display: 'flex',
-        flexDirection: 'row'
-    },
-    visible: {
-        display: isVisible,
-        padding: 5,
-        marginTop: 20,
-        border: 'solid',
-        borderColor: '#000000',
-        borderWidth: 0.5
-    }
-};
+let subTitle = 'Number of times users looked at analysis favorites';
 
 export default React.createClass({
 
@@ -96,6 +77,54 @@ export default React.createClass({
                 })),
                 color: "#00CCCC",
                 visible: true
+            }, false);
+            chart.addSeries({
+                name: "Average Map views",
+                data: (this.props.data.map((result) => {
+                    return result.averageMapViews;
+                })),
+                color: "#CC6600",
+                visible: false
+            }, false);
+            chart.addSeries({
+                name: "Average Chart views",
+                data: (this.props.data.map((result) => {
+                    return result.averageChartViews;
+                })),
+                color: "#CCCC00",
+                visible: false
+            }, false);
+            chart.addSeries({
+                name: "Average Report table views",
+                data: (this.props.data.map((result) => {
+                    return result.averageReportTableViews;
+                })),
+                color: "#66CC00",
+                visible: false
+            }, false);
+            chart.addSeries({
+                name: "Average Event report views",
+                data: (this.props.data.map((result) => {
+                    return result.averageEventReportViews;
+                })),
+                color: "#ff0066",
+                visible: false
+            }, false);
+            chart.addSeries({
+                name: "Average Event chart views",
+                data: (this.props.data.map((result) => {
+                    return result.averageEventChartViews;
+                })),
+                color: "#000000",
+                visible: false
+            }, false);
+            chart.addSeries({
+                name: "Average Dashboard views",
+                data: (this.props.data.map((result) => {
+                    return result.averageDashboardViews;
+                })),
+                color: "#00CCCC",
+                visible: false
             }, false);
             chart.addSeries({
                 name: "Average views",
@@ -235,6 +264,10 @@ export default React.createClass({
             },
             title: {
                 text: title
+            },
+            subtitle: {
+                text: subTitle,
+                color:'#88888888'
             }
         };
     },
@@ -245,7 +278,7 @@ export default React.createClass({
             chart.series[(chart.series.length - 1)].show();
             chart.series[(chart.series.length - 2)].hide();
         }
-        else if(selected == "average"){
+        else if(selected == "averageTotal"){
             chart.series[(chart.series.length - 2)].show();
             chart.series[(chart.series.length - 1)].hide();
         }
@@ -254,7 +287,7 @@ export default React.createClass({
             chart.series[(chart.series.length - 2)].hide();
         }
         for (let i = chart.series.length - 3; i > -1; i--) {
-            if (selected == "total"  || selected == "average"  ) {
+            if (selected == "total"  || selected == "averageTotal"  ) {
                 chart.series[i].hide();
             }
             else {
@@ -263,48 +296,27 @@ export default React.createClass({
         }
     },
 
-    ViewPicker: function (category) {
-
-        return (
-            <div style={styles.visible}>
-                <RadioButtonGroup
-                    name="shipSpeed"
-                    defaultSelected="all"
-                    style={styles.block}
-                    onChange={this._onChange}
-                >
-                    <RadioButton
-                        value="all"
-                        label="All favorite views"
-                    />
-                    <RadioButton
-                        value="average"
-                        label="Average views per user"
-                    />
-                    <RadioButton
-                        value="total"
-                        label="Total views"
-                    />
-                </RadioButtonGroup>
-            </div>
-        );
-    },
-
     render(){
         if (this.props.category != null) {
             title = this.props.category;
+            if(title == 'Favorite Views'){
+                subTitle = 'Number of times users looked at analysis favorites';
+            }
+            else if(title == 'Favorite saved'){
+                subTitle = 'Number of analysis favorites created by users';
+            }
+            else if(title == 'Users'){
+                subTitle = 'Number of users in the system';
+            }
             this.props.category == "Favorite Views" ? isVisible = 'block' : isVisible = 'none';
         }
         var style = {
-            minHeight: 600
+            minHeight: 700
         };
 
         return (
             <div>
                 <ReactHighcharts config={this.getConfig()} style={style} ref="chart"/>
-                {
-                    isVisible == 'block' ? this.ViewPicker() : null
-                }
             </div>
         );
     }
