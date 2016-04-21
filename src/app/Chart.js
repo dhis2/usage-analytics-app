@@ -268,7 +268,7 @@ export default React.createClass({
             subtitle: {
                 text: subTitle,
                 color:'#88888888'
-            }
+            },
         };
     },
 
