@@ -2,7 +2,7 @@ import React from 'react';
 import ReactHighcharts from 'react-highcharts';
 import {render} from 'react-dom';
 
-let date = [];
+
 let title = 'Favorite views';
 let subTitle = 'Number of times users looked at analysis favorites';
 let colors = ["#CC6600","#CCCC00","#66CC00","#ff0066","#000000","#00CCCC","#9900cc", "#0000FF"];
@@ -22,6 +22,7 @@ export default React.createClass({
     drawChart: function () {
         let chart = this.refs.chart.getChart();
         let data = this.props.data;
+        let date = [];
 
         if (chart.series.length > 0) {
             for (let i = chart.series.length - 1; i > -1; i--) {
@@ -32,17 +33,22 @@ export default React.createClass({
         let count = 0;
         for(var key in data[1] ){
             if(key == 'date'){
-                chart.xAxis[0].update({date: data.map(result => {return result[key]})});
+                console.log("kom inn i if");
+                data.map(result => {return date.push(result[key])});
+                console.log(date);
+                chart.xAxis[0].update({categories: date});
             }
-            chart.addSeries({
-                name: key,
-                data: (data.map((result) => {
-                    return result[key];
-                })),
-                color: colors[count],
-                visible: true
-            }, false);
-            count++;
+            else{
+                chart.addSeries({
+                    name: key,
+                    data: (data.map((result) => {
+                        return result[key];
+                    })),
+                    color: colors[count],
+                    visible: true
+                }, false);
+                count++;
+            }
         }
 
         chart.redraw();

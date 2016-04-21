@@ -172,7 +172,7 @@ export default React.createClass({
         this.props.category == "Favorite Views" ? isVisible = 'block' : isVisible = 'none';
             return (
                 <div>
-                    <Chart data={this.props.data} category={category}/>
+                    <Chart data={this.state.renderData} category={category}/>
                     {
                         isVisible == 'block' ? this.ViewPicker() : null
                     }
