@@ -32,10 +32,8 @@ export default React.createClass({
 
         let count = 0;
         for(var key in data[1] ){
-            if(key == 'date'){
-                console.log("kom inn i if");
+            if(key == 'Date'){
                 data.map(result => {return date.push(result[key])});
-                console.log(date);
                 chart.xAxis[0].update({categories: date});
             }
             else{
