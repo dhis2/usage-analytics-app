@@ -12,13 +12,13 @@ import 'react-tap-event-plugin';
 import App from './app/App';
 import './app/app.scss';
 
-if (process.env.NODE_ENV !== 'production') {
+/*if (process.env.NODE_ENV !== 'production') {
     jQuery.ajaxSetup({ // eslint-disable-line no-undef
         headers: {
             Authorization: `Basic ${btoa('admin:district')}`,
         },
     });
-}
+}*/
 
 // Render the a LoadingMask to show the user the app is in loading
 // The consecutive render after we did our setup will replace this loading mask
@@ -42,7 +42,7 @@ function startApp(d2) {
 // can use it to access the api, translations etc.
 getManifest('./manifest.webapp')
     .then(manifest => {
-        config.baseUrl = `http://localhost:8080/api`;
+        config.baseUrl = `../api`;
 
         // Set the baseUrl to localhost if we are in dev mode
         /*if (process.env.NODE_ENV !== 'production') {
