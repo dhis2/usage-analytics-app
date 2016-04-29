@@ -121,6 +121,7 @@ export default React.createClass({
                         EventReportViews: val.eventReportViews,
                         EventChartViews: val.eventChartViews,
                         DashboardViews: val.dashboardViews,
+                        DataSetReportViews: val.dataSetReportViews,
                         TotalViews: val.totalViews
                     }))
                 })
@@ -149,7 +150,8 @@ export default React.createClass({
                         ReportTableViews: val.reportTableViews,
                         EventReportViews: val.eventReportViews,
                         EventChartViews: val.eventChartViews,
-                        DashboardViews: val.dashboardViews
+                        DashboardViews: val.dashboardViews,
+                        DataSetReportViews: val.dataSetReportViews,
                     }))
                 })
             }
