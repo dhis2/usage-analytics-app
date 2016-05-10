@@ -1,10 +1,22 @@
-import React from 'react';
-import {render} from 'react-dom';
-import log from 'loglevel';
-import {init, config, getManifest} from 'd2/lib/d2';
+// When the app is built for development, DHIS_CONFIG is replaced with the config read from $DHIS2_HOME/config.js[on]
+// When the app is built for production, process.env.NODE_ENV is replaced with the string 'production', and
+// DHIS_CONFIG is replaced with an empty object
+const dhisDevConfig = DHIS_CONFIG; // eslint-disable-line
 
-import dhis2 from 'd2-ui/lib/header-bar/dhis2';
+// This code will only be included in non-production builds of the app
+// It sets up the Authorization header to be used during CORS requests
+// This way we can develop using webpack without having to install the application into DHIS2.
+if (process.env.NODE_ENV !== 'production') {
+    jQuery.ajaxSetup({ headers: { Authorization: dhisDevConfig.authorization } }); // eslint-disable-line
+}
+
+import React from 'react';
+import { render } from 'react-dom';
+import log from 'loglevel';
+import { init, config, getManifest } from 'd2/lib/d2';
+
 import LoadingMask from 'd2-ui/lib/loading-mask/LoadingMask.component';
+import 'babel-polyfill';
 
 // The react-tap-event-plugin is required by material-ui to make touch screens work properly with onClick events
 import 'react-tap-event-plugin';
@@ -23,7 +35,7 @@ render(<LoadingMask />, document.getElementById('app'));
  * @param d2 Instance of the d2 library that is returned by the `init` function.
  */
 function startApp(d2) {
-    render(<App d2={d2}/>, document.querySelector('#app'));
+    render(<App d2={d2} />, document.querySelector('#app'));
 }
 
 
@@ -34,13 +46,8 @@ function startApp(d2) {
 // can use it to access the api, translations etc.
 getManifest('./manifest.webapp')
     .then(manifest => {
-        config.baseUrl = `../api`;
-
-        // Set the baseUrl to localhost if we are in dev mode
-        /*if (process.env.NODE_ENV !== 'production') {
-         config.baseUrl = 'http://localhost:8080/api';
-         dhis2.settings.baseUrl = 'http://localhost:8080';
-         }*/
+        const baseUrl = process.env.NODE_ENV === 'production' ? manifest.getBaseUrl() : dhisDevConfig.baseUrl;
+        config.baseUrl = `${baseUrl}/api`;
     })
     .then(init)
     .then(startApp)
