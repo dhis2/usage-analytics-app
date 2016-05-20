@@ -7,6 +7,7 @@ node_modules
 build
 coverage
 target
+manifest.webapp
 
 # Misc files
 npm-debug.log
