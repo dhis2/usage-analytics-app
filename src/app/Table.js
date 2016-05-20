@@ -33,7 +33,7 @@ export default React.createClass({
         let subTree = '';
         for (var key in headers) {
             if (key != 'Date') {
-                if (category == "Favorite Views") {
+                if (category == "Favorite views") {
                     let index = key.indexOf('Views');
                     if(key.indexOf('Average') > -1){
                         subOne = key.slice(0, 7).trim();

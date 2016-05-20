@@ -30,7 +30,7 @@ const styles = {
 };
 
 let isVisible = 'block';
-let category = "Favorite Views";
+let category = "Favorite views";
 let tableData = [];
 
 export default React.createClass({
@@ -110,7 +110,7 @@ export default React.createClass({
         let tmpDataChart = [];
         tableData = [];
 
-        if (category == "Favorite Views") {
+        if (category == "Favorite views") {
             if (selected == "allFav" || selected == "total"){
                 this.props.data.filter((val) => {
                     return (tableData.push({
@@ -251,7 +251,7 @@ export default React.createClass({
     },
 
     render(){
-        this.props.category == "Favorite Views" ? isVisible = 'block' : isVisible = 'none';
+        this.props.category == "Favorite views" ? isVisible = 'block' : isVisible = 'none';
         return (
             <div>
                 <Chart data={this.state.renderData} category={category}/>

@@ -10,6 +10,7 @@ injectTapEventPlugin();
 import HeaderBar from 'd2-ui/lib/header-bar/HeaderBar.component';
 import { config } from 'd2/lib/d2';
 import Client from './Client.js';
+import TopMenu from './Topmenu.js';
 import MyRawTheme from '../colortheme';
 
 
@@ -54,7 +55,7 @@ export default React.createClass({
         return this.state = {
             url: '',
             interval: 'WEEK',
-            category: 'Favorite Views'
+            category: 'Favorite views'
         };
     },
     updateButton: function () {
@@ -152,9 +153,11 @@ export default React.createClass({
             <DropDownMenu id="Categorydrop" autoWidth={false} style={buttonstyle} iconStyle={style.icon}
                           value={this.state.category}
                           onChange={(event, index, value) => this.setState({category: value})}>
-                <MenuItem value={'Favorite Views'} primaryText="FAVORITE VIEWS"/>
+                <MenuItem value={'Favorite views'} primaryText="FAVORITE VIEWS"/>
                 <MenuItem value={'Favorite saved'} primaryText="FAVORITES"/>
                 <MenuItem value={'Users'} primaryText="USERS"/>
+                <MenuItem value={'Top favorites'} primaryText="TOP FAVORITES"/>
+                <MenuItem value={'Data values'} primaryText="DATA VALUES"/>
             </DropDownMenu></div>);
 
     },
@@ -184,6 +187,8 @@ export default React.createClass({
             }
         };
 
+        console.log("APPrender:" + this.state.category);
+
         return (
             <div className="app-wrapper">
                 <HeaderBar />
@@ -197,10 +202,11 @@ export default React.createClass({
                     this.updateButton()
                 )}
                 <div className="main-content">
-                    <Client source={this.state.url} category={this.state.category} updatepage={update}/>
+                    {this.state.category == 'Top favorites' ? <TopMenu /> : <Client source={this.state.url} category={this.state.category} updatepage={update}/>}
                     {update = false}
+                    {console.log("inne i return:" +this.state.category)}
+
                 </div>
-                ;
             </div>
         );
     }

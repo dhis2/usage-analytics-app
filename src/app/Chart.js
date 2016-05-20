@@ -6,6 +6,9 @@ import {render} from 'react-dom';
 let title = 'Favorite views';
 let subTitle = 'Number of times users looked at analysis favorites';
 let colors = ["#CC6600","#CCCC00","#66CC00","#ff0066","#000000","#00CCCC","#9900cc", "#0000FF"];
+let count = 0;
+let plotOptions = {};
+
 
 export default React.createClass({
 
@@ -30,7 +33,7 @@ export default React.createClass({
             }
         }
 
-        let count = 0;
+        count = 0;
         for(var key in data[1] ){
             if(key == 'Date'){
                 data.map(result => {return date.push(result[key])});
@@ -49,10 +52,40 @@ export default React.createClass({
             }
         }
 
+        if(count == 1){
+            plotOptions = {
+                area: {
+                    fillColor: {
+                        linearGradient: {
+                            x1: 0,
+                            y1: 0,
+                            x2: 0,
+                            y2: 1
+                        },
+                        stops: [
+                            [0, colors[5]],
+                            [1, colors[0]]
+                        ]
+                    },
+                    marker: {
+                        radius: 2
+                    },
+                    lineWidth: 1,
+                    states: {
+                        hover: {
+                            lineWidth: 1
+                        }
+                    },
+                    threshold: null
+                }
+            };
+        }
+
         chart.redraw();
     },
 
     getConfig: function () {
+
         return {
             credits: {
                 enabled: false
@@ -67,13 +100,19 @@ export default React.createClass({
                 text: subTitle,
                 color:'#88888888'
             },
+            yAxis: {min: 0
+            },
+            plotOptions: plotOptions
+
         };
     },
+
+
 
     render(){
         if (this.props.category != null) {
             title = this.props.category;
-            if(title == 'Favorite Views'){
+            if(title == 'Favorite views'){
                 subTitle = 'Number of times users looked at analysis favorites';
             }
             else if(title == 'Favorite saved'){
@@ -81,6 +120,9 @@ export default React.createClass({
             }
             else if(title == 'Users'){
                 subTitle = 'Number of users in the system';
+            }
+            else if(title == 'Data values'){
+                subTitle = 'Number of Data values saved in the system';
             }
         }
         var style = {
