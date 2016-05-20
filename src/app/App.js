@@ -187,8 +187,6 @@ export default React.createClass({
             }
         };
 
-        console.log("APPrender:" + this.state.category);
-
         return (
             <div className="app-wrapper">
                 <HeaderBar />
@@ -204,8 +202,6 @@ export default React.createClass({
                 <div className="main-content">
                     {this.state.category == 'Top favorites' ? <TopMenu /> : <Client source={this.state.url} category={this.state.category} updatepage={update}/>}
                     {update = false}
-                    {console.log("inne i return:" +this.state.category)}
-
                 </div>
             </div>
         );

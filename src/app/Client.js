@@ -61,19 +61,17 @@ export default React.createClass({
 
 
     componentWillReceiveProps: function (nextprops) {
-        console.log("CLIENT: kom inn her i willrecieve" + nextprops.category);
         category = nextprops.category;
-        var dataHasChanged = this.props.source !== nextprops.source;
-        if (dataHasChanged) {
-            this.retrieveData(nextprops.source);
-        }
+        this.retrieveData(nextprops.source);
     },
 
     componentWillMount: function(){
         category = this.props.category;
+        if(category == 'Top favorites'){
+            this.retrieveData(this.props.source);
+        }
     },
     retrieveData: function (url) {
-        console.log("skal hente ut: " + url);
         load = true;
         dataTemp = undefined;
         error = undefined;
@@ -110,8 +108,6 @@ export default React.createClass({
     },
 
     render() {
-        console.log("Client:render "+ category);
-
         if (!dataTemp && (!error)) {
             if(!load) {
                 return this.getStartText();
@@ -121,8 +117,9 @@ export default React.createClass({
             return this.getErrorText();
         }
         else if(category == 'Top favorites'){
-            console.log("inne i if i client");
             return  <Table data={this.state.data} category={category}/>
+
+           // return  <Table data={[{position:0,name: 'helloo', views: 4, created: '31-02-1493',id:'4657890+8765'},{position:1,name: 'hadee', views: 11, created: '31-09-1493',id:'4eqwde0+8765'}]} category={category}/>
         }
         else {
             return (

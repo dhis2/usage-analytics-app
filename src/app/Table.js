@@ -43,13 +43,15 @@ export default React.createClass({
                         subOne = key.slice(0, index).trim();
                     }
 
-                } else if (this.props.category == "Favorite saved") {
+                } else if (category == "Favorite saved") {
                     subOne = key.slice(5, key.length).trim();
-                } else if (this.props.category == "Users") {
+                } else if (category == "Users") {
                     let index = key.indexOf('Users');
                     subOne = key.slice(0, index).trim();
                     subTwo = key.slice(index, key.length).trim();
 
+                }else if(category == "Top favorites"){
+                    subOne = key;
                 }
             }else {
                 subOne = key;

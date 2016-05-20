@@ -92,7 +92,6 @@ export default React.createClass({
 
             },
             block: {
-                //maxWidth: 305,
                 marginRight: 'auto',
                 display: 'flex',
                 flexDirection: 'row'
@@ -101,8 +100,6 @@ export default React.createClass({
         };
 
         let url = config.baseUrl + "/dataStatistics/favorites?eventType=" + this.state.currentCategory + "&pageSize=" + this.state.currentPages + "&sortOrder="+this.state.currentOrder;
-
-        console.log(this.state.currentCategory + " " + this.state.currentPages + " " + this.state.currentOrder);
 
         return (<div>
                     <div style={style.div}>{(React.createElement(
