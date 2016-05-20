@@ -117,9 +117,9 @@ export default React.createClass({
             return this.getErrorText();
         }
         else if(category == 'Top favorites'){
-            return  <Table data={this.state.data} category={category}/>
+           // return  <Table data={this.state.data} category={category}/>
 
-           // return  <Table data={[{position:0,name: 'helloo', views: 4, created: '31-02-1493',id:'4657890+8765'},{position:1,name: 'hadee', views: 11, created: '31-09-1493',id:'4eqwde0+8765'}]} category={category}/>
+            return  <Table data={[{position:0,name: 'helloo', views: 4, created: '31-02-1493',id:'4657890+8765'},{position:1,name: 'hadee', views: 11, created: '31-09-1493',id:'4eqwde0+8765'}]} category={category}/>
         }
         else {
             return (

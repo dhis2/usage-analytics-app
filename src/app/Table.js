@@ -29,34 +29,23 @@ export default React.createClass({
     createHeaderRow: function (headers, category) {
         let rows = [];
         let subOne = '';
-        let subTwo = '';
-        let subTree = '';
         for (var key in headers) {
-            if (key != 'Date') {
-                if (category == "Favorite views") {
-                    let index = key.indexOf('Views');
-                    if(key.indexOf('Average') > -1){
-                        subOne = key.slice(0, 7).trim();
-                        subTwo = key.slice(7, index).trim();
-                    }
-                    else{
-                        subOne = key.slice(0, index).trim();
-                    }
+            subOne = '';
+            let index = key.indexOf('_');
+            let startSlice = 0;
+            if(index > -1) {
+                while (index > -1) {
 
-                } else if (category == "Favorite saved") {
-                    subOne = key.slice(5, key.length).trim();
-                } else if (category == "Users") {
-                    let index = key.indexOf('Users');
-                    subOne = key.slice(0, index).trim();
-                    subTwo = key.slice(index, key.length).trim();
+                    subOne = subOne + " "+ key.slice(startSlice, index).trim();
+                    startSlice = index+1;
+                    index = key.indexOf('_', index + 1);
 
-                }else if(category == "Top favorites"){
-                    subOne = key;
                 }
+                subOne = subOne + " "+ key.slice(startSlice, key.length).trim();
             }else {
                 subOne = key;
             }
-            rows.push(<TableHeaderColumn style={style.header}><b>{subOne} {subTwo} {subTree}</b></TableHeaderColumn>);
+            rows.push(<TableHeaderColumn style={style.header}><b>{subOne}</b></TableHeaderColumn>);
         }
         return ( <TableRow>{rows}</TableRow>);
     },

@@ -15,7 +15,6 @@ const styles = {
     block: {
         maxWidth: 305,
         marginRight: 'auto',
-        // marginLeft: '25%',
         display: 'flex',
         flexDirection: 'row'
     },
@@ -43,7 +42,6 @@ export default React.createClass({
         this.setState({renderData: this.splitData("allFav")});
 
     },
-
     componentWillMount: function () {
         category = this.props.category;
         this.setState({renderData: this.splitData("allFav")});
@@ -115,14 +113,14 @@ export default React.createClass({
                 this.props.data.filter((val) => {
                     return (tableData.push({
                         Date: this.getDate(val.year, val.month, val.week, val.day),
-                        MapViews: val.mapViews,
-                        ChartViews: val.chartViews,
-                        ReportTableViews: val.reportTableViews,
-                        EventReportViews: val.eventReportViews,
-                        EventChartViews: val.eventChartViews,
-                        DashboardViews: val.dashboardViews,
-                        DataSetReportViews: val.dataSetReportViews,
-                        TotalViews: val.totalViews
+                        Map: val.mapViews,
+                        Chart: val.chartViews,
+                        Pivot_Table: val.pivotTableViews,
+                        Event_Report: val.eventReportViews,
+                        Event_Chart: val.eventChartViews,
+                        Dashboard: val.dashboardViews,
+                        Data_Set_Report: val.dataSetReportViews,
+                        Total: val.totalViews
                     }))
                 })
             }
@@ -131,13 +129,13 @@ export default React.createClass({
                 this.props.data.filter((val) => {
                     return (tableData.push({
                         Date: this.getDate(val.year, val.month, val.week, val.day),
-                        AverageMapViews: val.averageMapViews,
-                        AverageChartViews: val.averageChartViews,
-                        AverageReportTableViews: val.averageReportTableViews,
-                        AverageEventReportViews: val.averageEventReportViews,
-                        AverageEventChartViews: val.averageEventChartViews,
-                        AverageDashboardViews: val.averageDashboardViews,
-                        AverageViews: val.averageViews
+                        Average_Map: val.averageMapViews,
+                        Average_Chart: val.averageChartViews,
+                        Average_Report_Table: val.averageReportTableViews,
+                        Average_Event_Report: val.averageEventReportViews,
+                        Average_Event_Chart: val.averageEventChartViews,
+                        Average_Dashboard: val.averageDashboardViews,
+                        Average: val.averageViews
                     }))
                 })
             }
@@ -145,13 +143,13 @@ export default React.createClass({
                 this.props.data.filter((val) => {
                     return (tmpDataChart.push({
                         Date: this.getDate(val.year, val.month, val.week, val.day),
-                        MapViews: val.mapViews,
-                        ChartViews: val.chartViews,
-                        ReportTableViews: val.reportTableViews,
-                        EventReportViews: val.eventReportViews,
-                        EventChartViews: val.eventChartViews,
-                        DashboardViews: val.dashboardViews,
-                        DataSetReportViews: val.dataSetReportViews,
+                        Map: val.mapViews,
+                        Chart: val.chartViews,
+                        Pivot_Table: val.pivotTableViews,
+                        Event_Report: val.eventReportViews,
+                        Event_Chart: val.eventChartViews,
+                        Dashboard: val.dashboardViews,
+                        Data_Set_Report: val.dataSetReportViews,
                     }))
                 })
             }
@@ -160,7 +158,7 @@ export default React.createClass({
                 this.props.data.filter((val) => {
                     return (tmpDataChart.push({
                         Date: this.getDate(val.year, val.month, val.week, val.day),
-                        TotalViews: val.totalViews
+                        Total: val.totalViews
                     }))
                 })
             }
@@ -169,12 +167,12 @@ export default React.createClass({
                 this.props.data.filter((val) => {
                     return (tmpDataChart.push({
                         Date: this.getDate(val.year, val.month, val.week, val.day),
-                        AverageMapViews: val.averageMapViews,
-                        AverageChartViews: val.averageChartViews,
-                        AverageReportTableViews: val.averageReportTableViews,
-                        AverageEventReportViews: val.averageEventReportViews,
-                        AverageEventChartViews: val.averageEventChartViews,
-                        AverageDashboardViews: val.averageDashboardViews
+                        Average_Map: val.averageMapViews,
+                        Average_Chart: val.averageChartViews,
+                        Average_Pivot_Table: val.averageReportTableViews,
+                        Average_Event_Report: val.averageEventReportViews,
+                        Average_Event_Chart: val.averageEventChartViews,
+                        Average_Dashboard: val.averageDashboardViews
                     }))
                 })
             }
@@ -183,7 +181,7 @@ export default React.createClass({
                 this.props.data.filter((val) => {
                     return (tmpDataChart.push({
                         Date: this.getDate(val.year, val.month, val.week, val.day),
-                        AverageViews: val.averageViews
+                        Average: val.averageViews
                     }))
                 })
             }
@@ -193,13 +191,13 @@ export default React.createClass({
             this.props.data.filter((val) => {
                 tmpDataChart.push({
                     Date: this.getDate(val.year, val.month, val.week, val.day),
-                    SavedMaps: val.savedMaps,
-                    SavedCharts: val.savedCharts,
-                    SavedReportTables: val.savedReportTables,
-                    SavedEventReports: val.savedEventReports,
-                    SavedEventCharts: val.savedEventCharts,
-                    SavedDashboards: val.savedDashboards,
-                    SavedIndicators: val.savedIndicators
+                    Maps: val.savedMaps,
+                    Charts: val.savedCharts,
+                    Pivot_Tables: val.savedPivotTables,
+                    Event_Reports: val.savedEventReports,
+                    Event_Charts: val.savedEventCharts,
+                    Dashboards: val.savedDashboards,
+                    Indicators: val.savedIndicators
                 })
             });
             tableData = tmpDataChart;
@@ -209,8 +207,8 @@ export default React.createClass({
             this.props.data.filter((val) => {
                 tmpDataChart.push({
                     Date: this.getDate(val.year, val.month, val.week, val.day),
-                    ActiveUsers: val.activeUsers,
-                    TotalUsers: val.users
+                    Active_users: val.activeUsers,
+                    Total_users: val.users
                 })
             });
             tableData = tmpDataChart;

@@ -41,7 +41,7 @@ export default React.createClass({
             }
             else{
                 chart.addSeries({
-                    name: key,
+                    name: this.formatName(key),
                     data: (data.map((result) => {
                         return result[key];
                     })),
@@ -82,6 +82,25 @@ export default React.createClass({
         }
 
         chart.redraw();
+    },
+
+    formatName: function(key) {
+            let keyString = key;
+            let subOne = '';
+            let index = keyString.indexOf('_');
+            let startSlice = 0;
+            if(index > -1) {
+                while (index > -1) {
+
+                    subOne = subOne + " "+ key.slice(startSlice, index).trim();
+                    startSlice = index+1;
+                    index = keyString.indexOf('_', index + 1);
+                }
+                subOne = subOne + " "+ key.slice(startSlice, key.length).trim();
+            }else {
+                subOne = key;
+            }
+        return subOne;
     },
 
     getConfig: function () {
