@@ -5,9 +5,10 @@ import {render} from 'react-dom';
 
 let title = 'Favorite views';
 let subTitle = 'Number of times users looked at analysis favorites';
-let colors = ["#CC6600","#CCCC00","#66CC00","#ff0066","#000000","#00CCCC","#9900cc", "#0000FF"];
+let colors = ["#7cb5ec","#CC6600","#CCCC00","#66CC00","#ff0066","#000000","#00CCCC","#9900cc", "#0000FF"];
 let count = 0;
 let plotOptions = {};
+let chartType = 'line';
 
 
 export default React.createClass({
@@ -26,7 +27,7 @@ export default React.createClass({
         let chart = this.refs.chart.getChart();
         let data = this.props.data;
         let date = [];
-
+        chartType = 'line';
         if (chart.series.length > 0) {
             for (let i = chart.series.length - 1; i > -1; i--) {
                 chart.series[i].remove();
@@ -52,33 +53,8 @@ export default React.createClass({
             }
         }
 
-        if(count == 1){
-            plotOptions = {
-                area: {
-                    fillColor: {
-                        linearGradient: {
-                            x1: 0,
-                            y1: 0,
-                            x2: 0,
-                            y2: 1
-                        },
-                        stops: [
-                            [0, colors[5]],
-                            [1, colors[0]]
-                        ]
-                    },
-                    marker: {
-                        radius: 2
-                    },
-                    lineWidth: 1,
-                    states: {
-                        hover: {
-                            lineWidth: 1
-                        }
-                    },
-                    threshold: null
-                }
-            };
+        if(count ==1){
+            chartType = 'area';
         }
 
         chart.redraw();
@@ -106,6 +82,9 @@ export default React.createClass({
     getConfig: function () {
 
         return {
+            chart: {
+                type: chartType
+            },
             credits: {
                 enabled: false
             },
@@ -143,6 +122,30 @@ export default React.createClass({
             else if(title == 'Data values'){
                 subTitle = 'Number of Data values saved in the system';
             }
+        }
+        console.log(ReactHighcharts);
+        if(Object.keys(this.props.data[1]).length == 2){
+            chartType = 'area';
+            plotOptions =  {
+                area: {
+                    fillColor: {
+                        linearGradient: {
+                            x1: 0,
+                                y1: 0,
+                                x2: 0,
+                                y2: 1
+                        },
+                        stops: [
+                             [0, '#7cb5ec'],
+                             [1, 'rgba(124,181,236,0)']
+                        ]
+                    }
+
+                }
+            };
+        }else {
+            chartType = 'line';
+            plotOptions = {};
         }
         var style = {
             minHeight: 700
