@@ -123,7 +123,6 @@ export default React.createClass({
                 subTitle = 'Number of Data values saved in the system';
             }
         }
-        console.log(ReactHighcharts);
         if(Object.keys(this.props.data[1]).length == 2){
             chartType = 'area';
             plotOptions =  {
