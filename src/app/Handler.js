@@ -225,6 +225,17 @@ export default React.createClass({
             });
             tableData = tmpDataChart;
         }
+
+        else if(category == "Data values")
+        {
+            data.filter((val) => {
+                tmpDataChart.push({
+                    Date: this.getDate(val.year, val.month, val.week, val.day),
+                    Data_values: val.savedDataValues
+                })
+            });
+            tableData = tmpDataChart;
+        }
         return tmpDataChart;
     },
 
