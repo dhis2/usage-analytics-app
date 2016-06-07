@@ -32,7 +32,6 @@ let startString = '';
 let endString = '';
 let update = true;
 
-
 export default React.createClass({
     propTypes: {
         name: React.PropTypes.string,

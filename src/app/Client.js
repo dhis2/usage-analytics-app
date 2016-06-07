@@ -66,11 +66,14 @@ export default React.createClass({
     },
 
     componentWillMount: function(){
+        dataTemp = '';
+        load = false;
         category = this.props.category;
-        if(category == 'Top favorites'){
+        if(category == 'Top favorites' && this.props.updatepage){
             this.retrieveData(this.props.source);
         }
     },
+
     retrieveData: function (url) {
         load = true;
         dataTemp = undefined;
@@ -115,11 +118,6 @@ export default React.createClass({
         }
         else if(error){
             return this.getErrorText();
-        }
-        else if(category == 'Top favorites'){
-           // return  <Table data={this.state.data} category={category}/>
-
-            return  <Table data={[{position:0,name: 'helloo', views: 4, created: '31-02-1493',id:'4657890+8765'},{position:1,name: 'hadee', views: 11, created: '31-09-1493',id:'4eqwde0+8765'}]} category={category}/>
         }
         else {
             return (

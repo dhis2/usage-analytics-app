@@ -31,6 +31,7 @@ const styles = {
 let isVisible = 'block';
 let category = "Favorite views";
 let tableData = [];
+let data;
 
 export default React.createClass({
     getInitialState: function () {
@@ -39,12 +40,25 @@ export default React.createClass({
 
     componentWillReceiveProps: function (nextprops) {
         category = nextprops.category;
-        this.setState({renderData: this.splitData("allFav")});
+        data = nextprops.data;;
+        if(category == "Top favorites"){
+            this.setState({renderData: data});
+        }
+        else {
+            this.setState({renderData: this.splitData("allFav")});
+        }
+
 
     },
     componentWillMount: function () {
         category = this.props.category;
-        this.setState({renderData: this.splitData("allFav")});
+        data = this.props.data;
+        if(category == "Top favorites"){
+            this.setState({renderData: data});
+        }
+        else {
+            this.setState({renderData: this.splitData("allFav")});
+        }
     },
 
 
@@ -110,7 +124,7 @@ export default React.createClass({
 
         if (category == "Favorite views") {
             if (selected == "allFav" || selected == "total"){
-                this.props.data.filter((val) => {
+                data.filter((val) => {
                     return (tableData.push({
                         Date: this.getDate(val.year, val.month, val.week, val.day),
                         Map: val.mapViews,
@@ -124,9 +138,8 @@ export default React.createClass({
                     }))
                 })
             }
-
             if (selected == "average" || selected == "averageTotal"){
-                this.props.data.filter((val) => {
+                data.filter((val) => {
                     return (tableData.push({
                         Date: this.getDate(val.year, val.month, val.week, val.day),
                         Average_Map: val.averageMapViews,
@@ -140,7 +153,7 @@ export default React.createClass({
                 })
             }
             if (selected == "allFav") {
-                this.props.data.filter((val) => {
+                data.filter((val) => {
                     return (tmpDataChart.push({
                         Date: this.getDate(val.year, val.month, val.week, val.day),
                         Map: val.mapViews,
@@ -153,9 +166,8 @@ export default React.createClass({
                     }))
                 })
             }
-
             else if (selected == "total") {
-                this.props.data.filter((val) => {
+                data.filter((val) => {
                     return (tmpDataChart.push({
                         Date: this.getDate(val.year, val.month, val.week, val.day),
                         Total: val.totalViews
@@ -164,7 +176,7 @@ export default React.createClass({
             }
 
             else if (selected == "average") {
-                this.props.data.filter((val) => {
+                data.filter((val) => {
                     return (tmpDataChart.push({
                         Date: this.getDate(val.year, val.month, val.week, val.day),
                         Average_Map: val.averageMapViews,
@@ -178,7 +190,7 @@ export default React.createClass({
             }
 
             else if (selected == "averageTotal") {
-                this.props.data.filter((val) => {
+                data.filter((val) => {
                     return (tmpDataChart.push({
                         Date: this.getDate(val.year, val.month, val.week, val.day),
                         Average: val.averageViews
@@ -188,7 +200,7 @@ export default React.createClass({
         }
 
         else if(category == "Favorite saved"){
-            this.props.data.filter((val) => {
+            data.filter((val) => {
                 tmpDataChart.push({
                     Date: this.getDate(val.year, val.month, val.week, val.day),
                     Maps: val.savedMaps,
@@ -204,7 +216,7 @@ export default React.createClass({
         }
 
         else if(category == "Users"){
-            this.props.data.filter((val) => {
+            data.filter((val) => {
                 tmpDataChart.push({
                     Date: this.getDate(val.year, val.month, val.week, val.day),
                     Active_users: val.activeUsers,
@@ -213,7 +225,6 @@ export default React.createClass({
             });
             tableData = tmpDataChart;
         }
-
         return tmpDataChart;
     },
 
@@ -249,15 +260,20 @@ export default React.createClass({
     },
 
     render(){
-        this.props.category == "Favorite views" ? isVisible = 'block' : isVisible = 'none';
-        return (
-            <div>
-                <Chart data={this.state.renderData} category={category}/>
-                {
-                    isVisible == 'block' ? this.ViewPicker() : null
-                }
-                <Table data={tableData} category={category}/>
-            </div>
-        );
+        if(category == 'Top favorites'){
+            return  <Table data={data} category={category}/>
+        }
+        else {
+            category == "Favorite views" ? isVisible = 'block' : isVisible = 'none';
+            return (
+                <div>
+                    <Chart data={this.state.renderData} category={category}/>
+                    {
+                        isVisible == 'block' ? this.ViewPicker() : null
+                    }
+                    <Table data={tableData} category={category}/>
+                </div>
+            );
+        }
     }
 });
