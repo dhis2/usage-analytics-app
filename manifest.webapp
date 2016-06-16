@@ -1,0 +1,20 @@
+{
+  "launch_path": "index.html",
+  "default_locale": "en",
+  "activities": {
+    "dhis": {
+      "href": ".."
+    }
+  },
+  "appType": "APP",
+  "name": "app-usagestatistics",
+  "version": "24.0.0",
+  "description": "DHIS2 web app for usage statistics",
+  "developer": {
+    "name": "Julie Hill Roa & Yrjan Fraschetti"
+  },
+  "icons": {
+    "48": "icon.png"
+  },
+  "manifest_generated_at": "Thu Jun 16 2016 11:02:30 GMT+0200 (CEST)"
+}
