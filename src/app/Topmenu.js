@@ -14,7 +14,7 @@ const buttonstyle = {
     borderRightStyle: 'solid',
     borderColor: '#dadada',
     backgroundColor: '#FFFFFF',
-    width: 190
+    width: 200
 };
 export default React.createClass({
 
@@ -37,10 +37,11 @@ export default React.createClass({
                           onChange={(event, index, value) => this.setState({currentCategory:value})}>
                 <MenuItem value={'CHART_VIEW'} primaryText="CHART"/>
                 <MenuItem value={'MAP_VIEW'} primaryText="MAP"/>
-                <MenuItem value={'REPORT_TABLE_VIEW'} primaryText="REPORT TABLE"/>
+                <MenuItem value={'REPORT_TABLE_VIEW'} primaryText="PIVOT TABLE"/>
                 <MenuItem value={'EVENT_REPORT_VIEW'} primaryText="EVENT REPORT"/>
                 <MenuItem value={'EVENT_CHART_VIEW'} primaryText="EVENT CHART"/>
                 <MenuItem value={'DASHBOARD_VIEW'} primaryText="DASHBOARDS"/>
+                <MenuItem value={'DATA_SET_REPORT_VIEW'} primaryText="DATA SET REPORT"/>
             </DropDownMenu></div>);
 
     },

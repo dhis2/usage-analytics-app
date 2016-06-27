@@ -147,7 +147,7 @@ export default React.createClass({
             plotOptions = {};
         }
         var style = {
-            minHeight: 700
+            minHeight: 580
         };
 
         return (

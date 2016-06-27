@@ -42,7 +42,7 @@ export default React.createClass({
         category = nextprops.category;
         data = nextprops.data;;
         if(category == "Top favorites"){
-            this.setState({renderData: data});
+            this.setState({renderData: this.splitData()});
         }
         else {
             this.setState({renderData: this.splitData("allFav")});
@@ -54,7 +54,7 @@ export default React.createClass({
         category = this.props.category;
         data = this.props.data;
         if(category == "Top favorites"){
-            this.setState({renderData: data});
+            this.setState({renderData: this.splitData()});
         }
         else {
             this.setState({renderData: this.splitData("allFav")});
@@ -121,7 +121,7 @@ export default React.createClass({
     splitData: function (selected) {
         let tmpDataChart = [];
         tableData = [];
-
+        
         if (category == "Favorite views") {
             if (selected == "allFav" || selected == "total"){
                 data.filter((val) => {
@@ -144,7 +144,7 @@ export default React.createClass({
                         Date: this.getDate(val.year, val.month, val.week, val.day),
                         Average_Map: val.averageMapViews,
                         Average_Chart: val.averageChartViews,
-                        Average_Report_Table: val.averageReportTableViews,
+                        Average_Pivot_Table: val.averagePivotTableViews,
                         Average_Event_Report: val.averageEventReportViews,
                         Average_Event_Chart: val.averageEventChartViews,
                         Average_Dashboard: val.averageDashboardViews,
@@ -181,7 +181,7 @@ export default React.createClass({
                         Date: this.getDate(val.year, val.month, val.week, val.day),
                         Average_Map: val.averageMapViews,
                         Average_Chart: val.averageChartViews,
-                        Average_Pivot_Table: val.averageReportTableViews,
+                        Average_Pivot_Table: val.averagePivotTableViews,
                         Average_Event_Report: val.averageEventReportViews,
                         Average_Event_Chart: val.averageEventChartViews,
                         Average_Dashboard: val.averageDashboardViews
@@ -199,7 +199,7 @@ export default React.createClass({
             }
         }
 
-        else if(category == "Favorite saved"){
+        else if(category == "Favorite saved") {
             data.filter((val) => {
                 tmpDataChart.push({
                     Date: this.getDate(val.year, val.month, val.week, val.day),
@@ -226,8 +226,7 @@ export default React.createClass({
             tableData = tmpDataChart;
         }
 
-        else if(category == "Data values")
-        {
+        else if(category == "Data values") {
             data.filter((val) => {
                 tmpDataChart.push({
                     Date: this.getDate(val.year, val.month, val.week, val.day),
@@ -235,6 +234,18 @@ export default React.createClass({
                 })
             });
             tableData = tmpDataChart;
+        }
+
+        else if(category == "Top favorites") {
+            data.filter((val) => {
+                tmpDataChart.push({
+                    Position: val.position,
+                    Name: val.name,
+                    Views: val.views,
+                    Id: val.id,
+                    Created: val.created
+                })
+            });
         }
         return tmpDataChart;
     },
@@ -272,7 +283,7 @@ export default React.createClass({
 
     render(){
         if(category == 'Top favorites'){
-            return  <Table data={data} category={category}/>
+            return  <Table data={this.state.renderData} category={category}/>
         }
         else {
             category == "Favorite views" ? isVisible = 'block' : isVisible = 'none';
