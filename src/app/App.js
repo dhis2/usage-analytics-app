@@ -182,6 +182,7 @@ export default React.createClass({
             sidebar: {
                 backgroundColor: '#f3f3f3',
                 overflowY: 'auto',
+                overflowX: 'hidden',
                 width: 256
             }
         };
