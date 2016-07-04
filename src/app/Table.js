@@ -11,25 +11,32 @@ const style = {
         fontSize: 15,
         color: '#000000',
         backgroundColor: '#f3f3f3'
-    }
+    },
 };
 
 export default React.createClass({
 
     createRow: function (row) {
         let rows = [];
-
+        let pos = 0;
         for (var key in row) {
-            rows.push(<TableRowColumn key={row[key]}>{row[key]}</TableRowColumn>);
+            pos++;
+            if(pos == 2 && key == "Name"){
+                rows.push(<TableRowColumn width={ 450 } key={row[key]}>{row[key]}</TableRowColumn>);
+            }
+            else {
+                rows.push(<TableRowColumn key={row[key]}>{row[key]}</TableRowColumn>);
+            }
         }
-
         return (<TableRow>{rows}</TableRow>);
 
     },
     createHeaderRow: function (headers, category) {
         let rows = [];
+        let pos = 0;
         let subOne = '';
         for (var key in headers) {
+            pos++;
             subOne = '';
             let index = key.indexOf('_');
             let startSlice = 0;
@@ -45,7 +52,12 @@ export default React.createClass({
             }else {
                 subOne = key;
             }
-            rows.push(<TableHeaderColumn style={style.header}><b>{subOne}</b></TableHeaderColumn>);
+            if(pos == 2 && key == "Name") {
+                rows.push(<TableHeaderColumn width={ 450 } style={style.header}><b>{subOne}</b></TableHeaderColumn>);
+            }
+            else{
+                rows.push(<TableHeaderColumn style={style.header}><b>{subOne}</b></TableHeaderColumn>);
+            }
         }
         return ( <TableRow>{rows}</TableRow>);
 
