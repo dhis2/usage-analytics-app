@@ -8,7 +8,7 @@
   },
   "appType": "APP",
   "name": "app-usagestatistics",
-  "version": "24.0.0",
+  "version": "25.0.0",
   "description": "DHIS2 web app for usage statistics",
   "developer": {
     "name": "Julie Hill Roa & Yrjan Fraschetti"
@@ -16,5 +16,5 @@
   "icons": {
     "48": "icon.png"
   },
-  "manifest_generated_at": "Mon Jun 27 2016 21:57:28 GMT+0200 (CEST)"
+  "manifest_generated_at": "Thu Aug 18 2016 16:55:25 GMT+0200 (CEST)"
 }
