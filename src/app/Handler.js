@@ -121,7 +121,11 @@ export default React.createClass({
     splitData: function (selected) {
         let tmpDataChart = [];
         tableData = [];
-        
+
+        if(!data){
+            data = [];
+            category = "";
+        }
         if (category == "Favorite views") {
             if (selected == "allFav" || selected == "total"){
                 data.filter((val) => {

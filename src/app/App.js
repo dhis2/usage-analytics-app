@@ -31,6 +31,7 @@ let endDate = new Date();
 let startString = '';
 let endString = '';
 let update = true;
+let interval = "WEEK";
 
 export default React.createClass({
     propTypes: {
@@ -52,7 +53,7 @@ export default React.createClass({
 
     getInitialState: function () {
         return this.state = {
-            url: '',
+            url: config.baseUrl + "/dataStatistics?startDate=" + this.formatDate(startDate) + "&endDate=" + this.formatDate(endDate) + "&interval=WEEK",
             interval: 'WEEK',
             category: 'Favorite views'
         };
@@ -72,8 +73,7 @@ export default React.createClass({
     updateURL: function () {
         startString = this.formatDate(startDate);
         endString = this.formatDate(endDate);
-
-        let tempUrl = config.baseUrl + "/dataStatistics?startDate=" + startString + "&endDate=" + endString + "&interval=" + this.state.interval;
+        let tempUrl = config.baseUrl + "/dataStatistics?startDate=" + startString + "&endDate=" + endString + "&interval=" + interval/*this.state.interval*/;
         update = true;
         this.setState({url: tempUrl});
     },
@@ -125,8 +125,8 @@ export default React.createClass({
         };
         return (<div>
             <label style={style.label} htmlFor="intervaldrop"><b>Interval:</b></label>
-            <DropDownMenu id="intervaldrop" autoWidth={false} value={this.state.interval} style={buttonstyle}
-                          onChange={(event, index, value) => this.setState({interval: value})}>
+            <DropDownMenu id="intervaldrop" autoWidth={false} value={interval/*this.state.interval*/} style={buttonstyle}
+                          onChange={(event, index, value) => interval = value/*this.setState({interval: value})*/}>
                 <MenuItem value={'DAY'} primaryText="DAY"/>
                 <MenuItem value={'WEEK'} primaryText="WEEK"/>
                 <MenuItem value={'MONTH'} primaryText="MONTH"/>
@@ -207,6 +207,3 @@ export default React.createClass({
         );
     }
 });
-
-
-

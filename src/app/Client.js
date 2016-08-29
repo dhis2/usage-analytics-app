@@ -52,26 +52,41 @@ const style = {
 
 export default React.createClass({
     getInitialState: function () {
+        console.log("Hei1");
         return {data: undefined, error: undefined};
     },
 
     shouldComponentUpdate: function(nextProps){
-        return nextProps.updatepage;
+        console.log("Hei2");
+        return true;
+        /*if(nextProps.category == 'Favorite views') {
+            return true;
+        }
+        else {
+            return nextProps.updatepage;
+        }      */
     },
 
 
     componentWillReceiveProps: function (nextprops) {
+        console.log("Hei3");
         category = nextprops.category;
         this.retrieveData(nextprops.source);
     },
 
     componentWillMount: function(){
+        console.log("Hei4");
+        console.log(this.props);
         dataTemp = '';
         load = false;
         category = this.props.category;
         if(category == 'Top favorites' && this.props.updatepage){
             this.retrieveData(this.props.source);
         }
+        //else if(category == 'Favorite views'){
+            this.retrieveData(this.props.source);
+        //}
+
     },
 
     retrieveData: function (url) {
@@ -112,9 +127,14 @@ export default React.createClass({
 
     render() {
         if (!dataTemp && (!error)) {
-            if(!load) {
-                return this.getStartText();
-            }else { return <CircularProgress size={1.5} style={style.circular}/>}
+            if(!load /*&& category == 'Favorite views'*/) {
+                console.log("Her er jeg");
+                console.log(this.state.data);
+                return (
+                    <Handler data={this.state.data} category={category}/>
+                );
+            }
+            else { return <CircularProgress size={1.5} style={style.circular}/>}
         }
         else if(error){
             return this.getErrorText();
