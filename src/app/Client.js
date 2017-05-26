@@ -52,12 +52,10 @@ const style = {
 
 export default React.createClass({
     getInitialState: function () {
-        console.log("Hei1");
         return {data: undefined, error: undefined};
     },
 
     shouldComponentUpdate: function(nextProps){
-        console.log("Hei2");
         return true;
         /*if(nextProps.category == 'Favorite views') {
             return true;
@@ -69,14 +67,11 @@ export default React.createClass({
 
 
     componentWillReceiveProps: function (nextprops) {
-        console.log("Hei3");
         category = nextprops.category;
         this.retrieveData(nextprops.source);
     },
 
     componentWillMount: function(){
-        console.log("Hei4");
-        console.log(this.props);
         dataTemp = '';
         load = false;
         category = this.props.category;
@@ -128,8 +123,6 @@ export default React.createClass({
     render() {
         if (!dataTemp && (!error)) {
             if(!load /*&& category == 'Favorite views'*/) {
-                console.log("Her er jeg");
-                console.log(this.state.data);
                 return (
                     <Handler data={this.state.data} category={category}/>
                 );

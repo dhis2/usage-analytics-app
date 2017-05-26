@@ -123,7 +123,11 @@ export default React.createClass({
                 subTitle = 'Number of Data values saved in the system';
             }
         }
-        if(Object.keys(this.props.data[1]).length == 2){
+        if(typeof(this.props.data) !== 'undefined'){
+            console.log('ingen data!');
+        }
+
+        else if(Object.keys(this.props.data[1]).length == 2){
             chartType = 'area';
             plotOptions =  {
                 area: {
@@ -150,11 +154,20 @@ export default React.createClass({
             minHeight: 580
         };
 
-        return (
-            <div>
-                <ReactHighcharts config={this.getConfig()} style={style} ref="chart"/>
-            </div>
-        );
+        /*if(typeof(this.props.data) == 'undefined'){
+            return(
+                <div>
+                    <p>Ingen data!!!</p>
+                </div>
+            );
+        }
+        else {*/
+            return (
+                <div>
+                    <ReactHighcharts config={this.getConfig()} style={style} ref="chart"/>
+                </div>
+            );
+        //}
     }
 
 });
