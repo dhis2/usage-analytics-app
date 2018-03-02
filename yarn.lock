@@ -1537,11 +1537,11 @@ d2-utilizr@^0.2.4:
     lodash.isset "^4.3.0"
     lodash.isstring "^4.0.1"
 
-d2@0.0.x:
-  version "0.0.36"
-  resolved "https://registry.yarnpkg.com/d2/-/d2-0.0.36.tgz#aa718da07b21d1affaf3657926074d777b53cee1"
+d2@^26.0.0:
+  version "26.2.4"
+  resolved "https://registry.yarnpkg.com/d2/-/d2-26.2.4.tgz#2ddb3a9ab9796392d891219cf3f9265fc80af4c9"
   dependencies:
-    jquery "2.2.0"
+    whatwg-fetch "^2.0.1"
 
 d3-array@~0.7.0:
   version "0.7.1"
@@ -2572,7 +2572,7 @@ hawk@~3.1.3:
     sntp "1.x.x"
 
 highcharts@^4.2.3:
-  version v4.2.7
+  version "4.2.7"
   resolved "https://registry.yarnpkg.com/highcharts/-/highcharts-4.2.7.tgz#45cbed8e99c9c042e95f9c51076726496f686862"
 
 hoek@2.x.x:
@@ -2990,10 +2990,6 @@ jodid25519@^1.0.0:
   resolved "https://registry.yarnpkg.com/jodid25519/-/jodid25519-1.0.2.tgz#06d4912255093419477d425633606e0e90782967"
   dependencies:
     jsbn "~0.1.0"
-
-jquery@2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/jquery/-/jquery-2.2.0.tgz#d0e84ebbf199da51bf7ec39307f19b35754e9cba"
 
 jquery@^2.2.3:
   version "2.2.4"
@@ -5370,6 +5366,10 @@ whatwg-fetch@>=0.10.0:
 whatwg-fetch@^0.9.0:
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-0.9.0.tgz#0e3684c6cb9995b43efc9df03e4c365d95fd9cc0"
+
+whatwg-fetch@^2.0.1:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-2.0.3.tgz#9c84ec2dcf68187ff00bc64e1274b442176e1c84"
 
 whatwg-url@^2.0.1:
   version "2.0.1"
