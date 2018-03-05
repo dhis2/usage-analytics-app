@@ -9,7 +9,9 @@ script:
 - npm run build
 after_success:
 - if ( [ "$TRAVIS_BRANCH" == "master" ] || [ ! -z "$TRAVIS_TAG" ] ) && [ "$TRAVIS_REPO_SLUG"  == "dhis2/dhis2-usage-analytics" ]  &&  [ "$TRAVIS_PULL_REQUEST" == "false" ] ;then 
-    mvn clean deploy --settings deploy/settings.xml && exit 0; 
+    mvn clean deploy --settings deploy/settings.xml && echo "Deploy complete" && exit 0; 
+  else
+    echo "Skipped deploy: $TRAVIS_BRANCH, $TRAVIS_TAG, $TRAVIS_REPO_SLUG, $TRAVIS_PULL_REQUEST";
   fi
 env:
   global:
