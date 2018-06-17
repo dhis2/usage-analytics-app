@@ -1,4 +1,6 @@
 # Usage Analytics
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fdhis2%2Fdhis2-usage-analytics.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fdhis2%2Fdhis2-usage-analytics?ref=badge_shield)
+
 
 App for usage analytics (data statistics)
 
@@ -41,3 +43,6 @@ For more information:
 ```sh
 https://github.com/dhis2/app-skeleton
 ```
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fdhis2%2Fdhis2-usage-analytics.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fdhis2%2Fdhis2-usage-analytics?ref=badge_large)
