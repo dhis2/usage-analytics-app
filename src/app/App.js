@@ -7,7 +7,7 @@ import ThemeManager from 'material-ui/lib/styles/theme-manager';
 var injectTapEventPlugin = require("react-tap-event-plugin");
 injectTapEventPlugin();
 
-import HeaderBar from 'd2-ui/lib/header-bar/HeaderBar.component';
+import HeaderBar from '../header-bar/HeaderBar.component';
 import { config } from 'd2/lib/d2';
 import Client from './Client.js';
 import TopMenu from './Topmenu.js';
