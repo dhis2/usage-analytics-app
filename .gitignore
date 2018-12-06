@@ -24,3 +24,4 @@ yarn-error.log*
 
 # Auto generates translations files
 src/locales
+.vscode
