@@ -1,90 +1,25 @@
 {
   "name": "usage-analytics-app",
-  "version": "31.0.0",
-  "description": "DHIS2 web app for usage statistics",
-  "main": "src/index.html",
-  "scripts": {
-    "coverage": "babel-node node_modules/.bin/isparta cover --root ./src --report text --report html --report lcov node_modules/mocha/bin/_mocha -- --reporter dot --require config/setup.js --recursive test",
-    "prebuild": "rm -rf build && mkdir build && d2-manifest package.json --href=.. build/manifest.webapp",
-    "build": "webpack",
-    "postbuild": "cp package.json index.html build/ && cp node_modules/jquery/dist/jquery.min.js build/ && cp icon.png build/",
-    "test": "mocha --reporter spec --compilers js:babel-core/register --require config/setup.js --recursive test",
-    "test-watch": "mocha --reporter spec --compilers js:babel-core/register --require config/setup.js --recursive test --watch",
-    "lint": "eslint --fix src && ./node_modules/eslint/bin/eslint.js --env node,mocha --global expect,sinon,spy,stub --rule 'no-unused-expressions: 0' test && scss-lint",
-    "validate": "npm ls",
-    "prestart": "d2-manifest package.json manifest.webapp",
-    "start": "webpack-dev-server"
-  },
-  "keywords": [
-    "DHIS2",
-    "App",
-    "Usage statistics"
-  ],
-  "author": "Julie Hill Roa & Yrjan Fraschetti",
-  "license": "BSD-3-Clause",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "jquery": "^2.2.3"
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-scripts": "2.1.1"
   },
-  "devDependencies": {
-    "babel-core": "^6.7.2",
-    "babel-eslint": "^6.0.4",
-    "babel-loader": "^6.2.4",
-    "babel-polyfill": "^6.7.2",
-    "babel-preset-es2015": "^6.6.0",
-    "babel-preset-react": "^6.5.0",
-    "babel-preset-stage-0": "^6.5.0",
-    "chai": "^3.5.0",
-    "css-loader": "^0.23.1",
-    "d2": "^26.0.0",
-    "d2-manifest": "^1.0.0",
-    "d2-ui": "0.0.39",
-    "d2-utilizr": "^0.2.4",
-    "enzyme": "^2.1.0",
-    "eslint": "^2.4.0",
-    "eslint-config-dhis2": "^2.0.2",
-    "eslint-plugin-react": "^4.3.0",
-    "http-proxy": "git+https://github.com/nicolayr/node-http-proxy.git",
-    "isparta": "^4.0.0",
-    "jsdom": "^8.1.0",
-    "material-ui": "^0.14.4",
-    "mocha": "^2.4.5",
-    "node-sass": "4.9.0",
-    "react": "^0.14.7",
-    "react-addons-test-utils": "^0.14.7",
-    "react-dom": "^0.14.7",
-    "react-highcharts": "^8.0.2",
-    "react-tap-event-plugin": "^0.2.2",
-    "sass-loader": "^3.2.0",
-    "sinon": "^1.17.3",
-    "sinon-chai": "^2.8.0",
-    "style-loader": "^0.13.0",
-    "webpack": "^1.12.14",
-    "webpack-dev-server": "^1.14.1"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "pre-commit": [
-    "test",
-    "lint",
-    "validate"
-  ],
-  "directories": {
-    "test": "test"
+  "eslintConfig": {
+    "extends": "react-app"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dhis2/usage-analytics-app"
-  },
-  "bugs": {
-    "url": "https://github.com/dhis2/usage-analytics-app/issues"
-  },
-  "homepage": "https://github.com/dhis2/usage-analytics-app#readme",
-  "manifest.webapp": {
-    "icons": {
-      "48": "icon.png"
-    },
-    "activities": {
-      "dhis": {
-        "href": ".."
-      }
-    }
-  }
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
