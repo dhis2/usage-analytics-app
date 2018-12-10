@@ -12,6 +12,7 @@ const WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeM
 const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin')
 const getCSSModuleLocalIdent = require('react-dev-utils/getCSSModuleLocalIdent')
 const getClientEnvironment = require('./env')
+const dhisConfig = require('./dhisConfig')
 const paths = require('./paths')
 const ManifestPlugin = require('webpack-manifest-plugin')
 const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin')
@@ -360,6 +361,10 @@ module.exports = {
         // <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
         // In development, this will be an empty string.
         new InterpolateHtmlPlugin(HtmlWebpackPlugin, env.raw),
+        // Globals
+        new webpack.DefinePlugin({
+            DHIS_CONFIG: JSON.stringify(dhisConfig),
+        }),
         // This gives some necessary context to module not found errors, such as
         // the requesting resource.
         new ModuleNotFoundPlugin(paths.appPath),

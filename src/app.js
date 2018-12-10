@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import i18n from '@dhis2/d2-i18n'
+import Headerbar from 'ui/widgets/HeaderBar'
 import logo from './logo.svg'
 import './App.css'
 
@@ -7,6 +8,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
+                <Headerbar appName={i18n.t('Usage Analytics')} />
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo" />
                     <p>

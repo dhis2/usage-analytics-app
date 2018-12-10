@@ -70,7 +70,8 @@
   "dependencies": {
     "react": "^16.6.3",
     "react-app-polyfill": "^0.1.3",
-    "react-dom": "^16.6.3"
+    "react-dom": "^16.6.3",
+    "ui": "github:d2-ci/ui"
   },
   "devDependencies": {
     "@babel/core": "7.1.0",
