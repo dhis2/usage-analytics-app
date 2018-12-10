@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import i18n from '@dhis2/d2-i18n'
 import logo from './logo.svg'
 import './App.css'
 
@@ -11,6 +12,7 @@ class App extends Component {
                     <p>
                         Edit <code>src/App.js</code> and save to reload.
                     </p>
+                    <p>{i18n.t('I am translated text')}</p>
                     <a
                         className="App-link"
                         href="https://reactjs.org"
