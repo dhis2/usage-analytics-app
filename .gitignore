@@ -22,6 +22,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Auto generates translations files
+# Auto generated files
 src/locales
+public/manifest.webapp
+
+# Editor settings
 .vscode
