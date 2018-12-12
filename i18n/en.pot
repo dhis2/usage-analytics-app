@@ -5,8 +5,8 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"POT-Creation-Date: 2018-12-12T10:27:31.626Z\n"
-"PO-Revision-Date: 2018-12-12T10:27:31.626Z\n"
+"POT-Creation-Date: 2018-12-12T13:48:37.207Z\n"
+"PO-Revision-Date: 2018-12-12T13:48:37.207Z\n"
 
 msgid "Usage Analytics"
 msgstr ""
@@ -14,7 +14,7 @@ msgstr ""
 msgid "Favorite views"
 msgstr ""
 
-msgid "Favorites"
+msgid "Favorites saved"
 msgstr ""
 
 msgid "Users"
@@ -24,6 +24,39 @@ msgid "Top favorites"
 msgstr ""
 
 msgid "Data values"
+msgstr ""
+
+msgid "Chart"
+msgstr ""
+
+msgid "Map"
+msgstr ""
+
+msgid "Report table"
+msgstr ""
+
+msgid "Event report"
+msgstr ""
+
+msgid "Event chart"
+msgstr ""
+
+msgid "Dashboard"
+msgstr ""
+
+msgid "Data set report"
+msgstr ""
+
+msgid "All favorite views"
+msgstr ""
+
+msgid "Total views"
+msgstr ""
+
+msgid "All favorite average views per user"
+msgstr ""
+
+msgid "Total views per user"
 msgstr ""
 
 msgid "Day"
@@ -36,4 +69,94 @@ msgid "Month"
 msgstr ""
 
 msgid "Year"
+msgstr ""
+
+msgid "Date"
+msgstr ""
+
+msgid "Pivot Table"
+msgstr ""
+
+msgid "Event Report"
+msgstr ""
+
+msgid "Event Chart"
+msgstr ""
+
+msgid "Data Set Report"
+msgstr ""
+
+msgid "Total"
+msgstr ""
+
+msgid "Average Map"
+msgstr ""
+
+msgid "Average Chart"
+msgstr ""
+
+msgid "Average Pivot Table"
+msgstr ""
+
+msgid "Average Event Report"
+msgstr ""
+
+msgid "Average Event Chart"
+msgstr ""
+
+msgid "Average Dashboard"
+msgstr ""
+
+msgid "Average"
+msgstr ""
+
+msgid "Maps"
+msgstr ""
+
+msgid "Charts"
+msgstr ""
+
+msgid "Pivot Tables"
+msgstr ""
+
+msgid "Event Reports"
+msgstr ""
+
+msgid "Event Charts"
+msgstr ""
+
+msgid "Dashboards"
+msgstr ""
+
+msgid "Indicator"
+msgstr ""
+
+msgid "Active Users"
+msgstr ""
+
+msgid "Total Users"
+msgstr ""
+
+msgid "Position"
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "Views"
+msgstr ""
+
+msgid "ID"
+msgstr ""
+
+msgid "Created"
+msgstr ""
+
+msgid "Data Values"
+msgstr ""
+
+msgid "Ascending"
+msgstr ""
+
+msgid "Descending"
 msgstr ""
