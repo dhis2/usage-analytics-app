@@ -1,15 +1,31 @@
 import { get as rawGet } from 'ui/utils/api'
-import store from '../store'
+import { setLocale } from '../utils/locale'
+import { TOP_FAVORITES } from '../constants/categories'
 
-export async function initApp() {
-    console.log('running?', get, store.getState())
-    const locale = await getUserLocale()
-    const statistics = await getStatistics()
-    console.log('I go your locale', locale, statistics)
+export function initApp({ filter }) {
+    console.log(filter)
+    return Promise.all([getUserLocale(), getUsageData(filter)]).then(
+        ([locale, usageData]) => {
+            setLocale(locale)
+            return usageData
+        }
+    )
 }
 
-export function getStatistics() {
-    return get(`dataStatistics?${parseFilterQueryParams()}`)
+export function getUsageData(filter) {
+    return filter.category === TOP_FAVORITES
+        ? getFavorites(filter)
+        : getDataStatistics(filter)
+}
+
+function getFavorites({ eventType, pageSize, sortOrder }) {
+    const queryParams = `eventType=${eventType}&pageSize=${pageSize}&sortOrder=${sortOrder}&_=${Date.now()}`
+    return get(`dataStatistics/favorites?${queryParams}`)
+}
+
+function getDataStatistics({ startDate, endDate, interval }) {
+    const queryParams = `startDate=${startDate}&endDate=${endDate}&interval=${interval}&_=${Date.now()}`
+    return get(`dataStatistics?${queryParams}`)
 }
 
 function getUserLocale() {
@@ -20,9 +36,4 @@ function get(path) {
     return rawGet(path)
         .then(response => response.json())
         .then(json => json)
-}
-
-function parseFilterQueryParams() {
-    // const state = store.getState();
-    return `startDate=2018-8-11&endDate=2018-12-11&interval=WEEK&_=${Date.now()}`
 }

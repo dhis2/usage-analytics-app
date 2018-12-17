@@ -1,36 +1,30 @@
 import * as CATS from './categories'
-import * as FAV_VIEW_CATS from './favoriteViewsCategories'
+import * as AGGREG from './aggregations'
 import * as PROPS from './properties'
-
-const FAVORITE_VIEWS_TOTAL_FIELDS = [
-    PROPS.date,
-    PROPS.mapViews,
-    PROPS.chartViews,
-    PROPS.pivotTableViews,
-    PROPS.eventReportViews,
-    PROPS.eventChartViews,
-    PROPS.dashboardViews,
-    PROPS.dataSetReportViews,
-    PROPS.totalViews,
-]
-
-const FAVORITE_VIEWS_AVERAGE_FIELDS = [
-    PROPS.date,
-    PROPS.averageMapViews,
-    PROPS.averageChartViews,
-    PROPS.averagePivotTableViews,
-    PROPS.averageEventReportViews,
-    PROPS.averageEventChartViews,
-    PROPS.averageDashboardViews,
-    PROPS.averageViews,
-]
 
 export const FIELDS = {
     [CATS.FAVORITE_VIEWS]: {
-        [FAV_VIEW_CATS.SUM_ALL]: FAVORITE_VIEWS_TOTAL_FIELDS,
-        [FAV_VIEW_CATS.SUM_TOTAL]: FAVORITE_VIEWS_TOTAL_FIELDS,
-        [FAV_VIEW_CATS.AVERAGE_ALL]: FAVORITE_VIEWS_AVERAGE_FIELDS,
-        [FAV_VIEW_CATS.AVERAGE_TOTAL]: FAVORITE_VIEWS_AVERAGE_FIELDS,
+        [AGGREG.SUM]: [
+            PROPS.date,
+            PROPS.mapViews,
+            PROPS.chartViews,
+            PROPS.pivotTableViews,
+            PROPS.eventReportViews,
+            PROPS.eventChartViews,
+            PROPS.dashboardViews,
+            PROPS.dataSetReportViews,
+            PROPS.totalViews,
+        ],
+        [AGGREG.AVERAGE]: [
+            PROPS.date,
+            PROPS.averageMapViews,
+            PROPS.averageChartViews,
+            PROPS.averagePivotTableViews,
+            PROPS.averageEventReportViews,
+            PROPS.averageEventChartViews,
+            PROPS.averageDashboardViews,
+            PROPS.averageViews,
+        ],
     },
     [CATS.FAVORITES_SAVED]: [
         PROPS.date,

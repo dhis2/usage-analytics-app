@@ -7,10 +7,10 @@ export const TOP_FAVORITES = 'TOP_FAVORITES'
 export const DATA_VALUES = 'DATA_VALUES'
 
 const CATEGORIES = [
-    { id: FAVORITE_VIEWS, displayName: i18n.t('Favorite views') },
-    { id: FAVORITES_SAVED, displayName: i18n.t('Favorites saved') },
-    { id: USERS, displayName: i18n.t('Users') },
-    { id: TOP_FAVORITES, displayName: i18n.t('Top favorites') },
-    { id: DATA_VALUES, displayName: i18n.t('Data values') },
+    { value: FAVORITE_VIEWS, label: i18n.t('Favorite views') },
+    { value: FAVORITES_SAVED, label: i18n.t('Favorites saved') },
+    { value: USERS, label: i18n.t('Users') },
+    { value: TOP_FAVORITES, label: i18n.t('Top favorites') },
+    { value: DATA_VALUES, label: i18n.t('Data values') },
 ]
 export default CATEGORIES

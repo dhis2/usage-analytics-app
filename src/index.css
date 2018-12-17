@@ -2,3 +2,25 @@ body {
     margin: 0;
     padding: 0;
 }
+
+.uaa-container {
+    display: flex;
+    min-height: calc(100vh - 48px);
+    background-color: rgba(0, 0, 10, 0.05);
+}
+
+.uaa-sidebar {
+    flex: 0 0 280px;
+    background-color: #ffffff;
+    padding: 1rem;
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.uaa-content {
+    flex: 1;
+}
+
+.uaa-app-header {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}

@@ -9,12 +9,12 @@ export const DASHBOARD_VIEW = 'DASHBOARD_VIEW'
 export const DATA_SET_REPORT_VIEW = 'DATA_SET_REPORT_VIEW'
 
 const EVENT_TYPES = [
-    { id: CHART_VIEW, displayName: i18n.t('Chart') },
-    { id: MAP_VIEW, displayName: i18n.t('Map') },
-    { id: REPORT_TABLE_VIEW, displayName: i18n.t('Report table') },
-    { id: EVENT_REPORT_VIEW, displayName: i18n.t('Event report') },
-    { id: EVENT_CHART_VIEW, displayName: i18n.t('Event chart') },
-    { id: DASHBOARD_VIEW, displayName: i18n.t('Dashboard') },
-    { id: DATA_SET_REPORT_VIEW, displayName: i18n.t('Data set report') },
+    { value: CHART_VIEW, label: i18n.t('Chart') },
+    { value: MAP_VIEW, label: i18n.t('Map') },
+    { value: REPORT_TABLE_VIEW, label: i18n.t('Report table') },
+    { value: EVENT_REPORT_VIEW, label: i18n.t('Event report') },
+    { value: EVENT_CHART_VIEW, label: i18n.t('Event chart') },
+    { value: DASHBOARD_VIEW, label: i18n.t('Dashboard') },
+    { value: DATA_SET_REPORT_VIEW, label: i18n.t('Data set report') },
 ]
 export default EVENT_TYPES

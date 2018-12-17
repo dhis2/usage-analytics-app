@@ -6,9 +6,9 @@ export const MONTH = 'MONTH'
 export const YEAR = 'YEAR'
 
 const INTERVALS = [
-    { id: DAY, displayName: i18n.t('Day') },
-    { id: WEEK, displayName: i18n.t('Week') },
-    { id: MONTH, displayName: i18n.t('Month') },
-    { id: YEAR, displayName: i18n.t('Year') },
+    { value: DAY, label: i18n.t('Day') },
+    { value: WEEK, label: i18n.t('Week') },
+    { value: MONTH, label: i18n.t('Month') },
+    { value: YEAR, label: i18n.t('Year') },
 ]
 export default INTERVALS

@@ -5,10 +5,46 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"POT-Creation-Date: 2018-12-12T13:48:37.207Z\n"
-"PO-Revision-Date: 2018-12-12T13:48:37.207Z\n"
+"POT-Creation-Date: 2018-12-13T16:18:13.256Z\n"
+"PO-Revision-Date: 2018-12-13T16:18:13.256Z\n"
 
 msgid "Usage Analytics"
+msgstr ""
+
+msgid "Please use the format yyyy-mm-dd"
+msgstr ""
+
+msgid "Category"
+msgstr ""
+
+msgid "Start date"
+msgstr ""
+
+msgid "End date"
+msgstr ""
+
+msgid "Interval"
+msgstr ""
+
+msgid "Aggregation Level"
+msgstr ""
+
+msgid "Chart Type"
+msgstr ""
+
+msgid "Event Type"
+msgstr ""
+
+msgid "Page Size"
+msgstr ""
+
+msgid "Sort Order"
+msgstr ""
+
+msgid "Sum"
+msgstr ""
+
+msgid "Average"
 msgstr ""
 
 msgid "Favorite views"
@@ -24,6 +60,12 @@ msgid "Top favorites"
 msgstr ""
 
 msgid "Data values"
+msgstr ""
+
+msgid "All"
+msgstr ""
+
+msgid "Total"
 msgstr ""
 
 msgid "Chart"
@@ -45,18 +87,6 @@ msgid "Dashboard"
 msgstr ""
 
 msgid "Data set report"
-msgstr ""
-
-msgid "All favorite views"
-msgstr ""
-
-msgid "Total views"
-msgstr ""
-
-msgid "All favorite average views per user"
-msgstr ""
-
-msgid "Total views per user"
 msgstr ""
 
 msgid "Day"
@@ -86,9 +116,6 @@ msgstr ""
 msgid "Data Set Report"
 msgstr ""
 
-msgid "Total"
-msgstr ""
-
 msgid "Average Map"
 msgstr ""
 
@@ -105,9 +132,6 @@ msgid "Average Event Chart"
 msgstr ""
 
 msgid "Average Dashboard"
-msgstr ""
-
-msgid "Average"
 msgstr ""
 
 msgid "Maps"

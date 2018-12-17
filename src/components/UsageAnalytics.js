@@ -1,8 +1,14 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { initApp } from '../actions'
+import i18n from '@dhis2/d2-i18n'
 import CircularProgress from 'ui/core/CircularProgress'
+import { LOADING, ERROR } from '../constants/statuses'
+import { initApp } from '../actions'
+import Error from './Error'
+import FilterSideBar from './FilterSideBar'
+import Chart from './Chart'
+import Table from './Table'
 
 class UsageAnalytics extends Component {
     componentDidMount() {
@@ -10,17 +16,35 @@ class UsageAnalytics extends Component {
     }
 
     render() {
-        return <CircularProgress />
+        const appStatus = this.props
+
+        if (appStatus === LOADING) {
+            return <CircularProgress />
+        }
+
+        if (appStatus === ERROR) {
+            return <Error message={i18n.t('ERROR: Could not load app')} />
+        }
+
+        return (
+            <main className="uaa-container">
+                <FilterSideBar />
+                <section className="uaa-content">
+                    <Chart />
+                    <Table />
+                </section>
+            </main>
+        )
     }
 }
 
 UsageAnalytics.propTypes = {
     initApp: PropTypes.func,
-    appState: PropTypes.string,
+    appStatus: PropTypes.string,
 }
 
-const mapStateToProps = ({ appState }) => ({
-    appState,
+const mapStateToProps = ({ appStatus }) => ({
+    appStatus,
 })
 
 export default connect(
