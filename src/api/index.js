@@ -37,5 +37,11 @@ function getUserLocale() {
 function get(path) {
     return rawGet(path)
         .then(response => response.json())
-        .then(json => json)
+        .then(json => {
+            if (json.status === 'ERROR') {
+                throw new Error(json.message)
+            } else {
+                return json
+            }
+        })
 }
