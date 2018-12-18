@@ -5,10 +5,13 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"POT-Creation-Date: 2018-12-13T16:18:13.256Z\n"
-"PO-Revision-Date: 2018-12-13T16:18:13.256Z\n"
+"POT-Creation-Date: 2018-12-18T12:28:50.843Z\n"
+"PO-Revision-Date: 2018-12-18T12:28:50.843Z\n"
 
 msgid "Usage Analytics"
+msgstr ""
+
+msgid "Values"
 msgstr ""
 
 msgid "Please use the format yyyy-mm-dd"
@@ -41,6 +44,9 @@ msgstr ""
 msgid "Sort Order"
 msgstr ""
 
+msgid "There was an error retrieving the usage analytics data"
+msgstr ""
+
 msgid "Sum"
 msgstr ""
 
@@ -50,16 +56,28 @@ msgstr ""
 msgid "Favorite views"
 msgstr ""
 
+msgid "Number of times users looked at analysis favorites"
+msgstr ""
+
 msgid "Favorites saved"
 msgstr ""
 
+msgid "Number of analysis favorites created by users"
+msgstr ""
+
 msgid "Users"
+msgstr ""
+
+msgid "Number of users in the system"
 msgstr ""
 
 msgid "Top favorites"
 msgstr ""
 
 msgid "Data values"
+msgstr ""
+
+msgid "Number of data values saved in the system"
 msgstr ""
 
 msgid "All"

@@ -9,18 +9,21 @@ body {
     background-color: rgba(0, 0, 10, 0.05);
 }
 
-.uaa-sidebar {
-    flex: 0 0 280px;
-    background-color: #ffffff;
-    padding: 1rem;
-    border-right: 1px solid rgba(0, 0, 0, 0.12);
-}
-
 .uaa-content {
     flex: 1;
 }
 
-.uaa-app-header {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+.uua-data-container {
+    margin: 16px;
+    border-radius: 2px;
+    background-color: #fff;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.12),
+        0 1px 3px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+    /* Extra px helps Chart.js scale itself correctly */
+    max-width: calc(100% - 33px);
+}
+
+.uua-data-container--loading {
+    min-height: calc(50vh - 48px);
 }

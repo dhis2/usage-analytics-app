@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import i18n from '@dhis2/d2-i18n'
 import * as Fields from './FilterFields'
 import { FAVORITE_VIEWS, TOP_FAVORITES } from '../constants/categories'
+import './FilterSideBar.css'
 
 function FilterSideBar({
     showDateFields,
@@ -11,7 +12,7 @@ function FilterSideBar({
     showTopFavoritesFields,
 }) {
     return (
-        <aside className="uaa-sidebar">
+        <aside className="uaa-filter-sidebar">
             <h1 className="uaa-app-header">{i18n.t('Usage Analytics')}</h1>
             <Fields.CategoryDropDown />
             {showDateFields && (

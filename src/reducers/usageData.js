@@ -11,6 +11,7 @@ export default function usageData(state = LOADING, { type, payload }) {
         case USAGE_DATA_REQUESTED:
             return LOADING
         case APP_LOAD_SUCCESS:
+            return payload.usageData
         case USAGE_DATA_RECEIVED:
             return payload
         case USAGE_DATA_ERRORED:

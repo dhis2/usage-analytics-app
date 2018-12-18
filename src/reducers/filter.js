@@ -44,7 +44,7 @@ export default function filter(state = initialState, { type, payload }) {
         case TYPES.AGGREGATION_LEVEL_UPDATED:
             return {
                 ...state,
-                aggregateLevel: payload,
+                aggregationLevel: payload,
             }
         case TYPES.CHART_TYPE_UPDATED:
             return {

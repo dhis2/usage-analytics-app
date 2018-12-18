@@ -4,8 +4,8 @@ import { TOP_FAVORITES } from '../constants/categories'
 
 export const initApp = () => async (dispatch, getState) => {
     try {
-        const statistics = await api.initApp(getState())
-        dispatch(createAction(ACTIONS.APP_LOAD_SUCCESS, statistics))
+        const payload = await api.initApp(getState())
+        dispatch(createAction(ACTIONS.APP_LOAD_SUCCESS, payload))
     } catch (error) {
         console.error(error)
         dispatch(createAction(ACTIONS.APP_LOAD_ERROR, error))

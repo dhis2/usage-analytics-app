@@ -16,10 +16,10 @@ class UsageAnalytics extends Component {
     }
 
     render() {
-        const appStatus = this.props
+        const { appStatus } = this.props
 
         if (appStatus === LOADING) {
-            return <CircularProgress />
+            return <CircularProgress overlay size="large" />
         }
 
         if (appStatus === ERROR) {

@@ -3,11 +3,13 @@ import { setLocale } from '../utils/locale'
 import { TOP_FAVORITES } from '../constants/categories'
 
 export function initApp({ filter }) {
-    console.log(filter)
     return Promise.all([getUserLocale(), getUsageData(filter)]).then(
         ([locale, usageData]) => {
             setLocale(locale)
-            return usageData
+            return {
+                usageData,
+                locale,
+            }
         }
     )
 }
