@@ -15,6 +15,7 @@ export default function parseChartData(
     const title = CATEGORY_LOOKUP[category].label
     const subtitle = CATEGORY_LOOKUP[category].subtitle
     let max = MIN_SUGGESTED_MAX_VALUE
+    let min = null
     const fields =
         category === FAVORITE_VIEWS
             ? FIELDS[category][aggregationLevel][chartType]
@@ -48,11 +49,16 @@ export default function parseChartData(
                 max = pointValue
             }
 
+            if (min === null || pointValue < min) {
+                min = pointValue
+            }
+
             datasets[fieldIndex].data.push(pointValue)
         }
     }
 
     config.options.scales.yAxes[0].ticks.suggestedMax = max
+    config.options.scales.yAxes[0].ticks.suggestedMin = min
 
     return {
         data: {
