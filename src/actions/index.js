@@ -29,35 +29,27 @@ export const updateCategory = (_, newCategory) => (dispatch, getState) => {
     }
 }
 
-// Fetch data if input is valid
-export const updateStartDate = ({ target }) => (dispatch, getState) =>
-    updateDateField(target, ACTIONS.START_DATE_UPDATED, dispatch, getState)
+export const updateStartDate = value => (dispatch, getState) =>
+    update(ACTIONS.START_DATE_UPDATED, value, dispatch, getState)
 
-// Fetch data if input is valid
-export const updateEndDate = ({ target }) => (dispatch, getState) =>
-    updateDateField(target, ACTIONS.END_DATE_UPDATED, dispatch, getState)
+export const updateEndDate = value => (dispatch, getState) =>
+    update(ACTIONS.END_DATE_UPDATED, value, dispatch, getState)
 
-// Always fetch data
 export const updateInterval = (_, value) => (dispatch, getState) =>
     update(ACTIONS.INTERVAL_UPDATED, value, dispatch, getState)
 
-// Don't fetch data
 export const updateAggregationLevel = (_, value) =>
     createAction(ACTIONS.AGGREGATION_LEVEL_UPDATED, value)
 
-// Don't fetch data
 export const updateChartType = (_, value) =>
     createAction(ACTIONS.CHART_TYPE_UPDATED, value)
 
-// Always fetch data
 export const updateEventType = (_, value) => (dispatch, getState) =>
     update(ACTIONS.EVENT_TYPE_UPDATED, value, dispatch, getState)
 
-// Always fetch data
 export const updatePageSize = (_, value) => (dispatch, getState) =>
     update(ACTIONS.PAGE_SIZE_UPDATED, value, dispatch, getState)
 
-// Always fetch data
 export const updateSortOrder = (_, value) => (dispatch, getState) =>
     update(ACTIONS.SORT_ORDER_UPDATED, value, dispatch, getState)
 
@@ -66,15 +58,6 @@ function update(actionName, value, dispatch, getState) {
 
     const { filter } = getState()
     getUsageData(filter, dispatch)
-}
-
-function updateDateField(input, actionName, dispatch, getState) {
-    dispatch(createAction(actionName, input.value))
-
-    if (input.validity.valid) {
-        const { filter } = getState()
-        getUsageData(filter, dispatch)
-    }
 }
 
 async function getUsageData(filter, dispatch) {

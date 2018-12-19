@@ -5,8 +5,8 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"POT-Creation-Date: 2018-12-18T12:28:50.843Z\n"
-"PO-Revision-Date: 2018-12-18T12:28:50.843Z\n"
+"POT-Creation-Date: 2018-12-19T10:09:31.407Z\n"
+"PO-Revision-Date: 2018-12-19T10:09:31.407Z\n"
 
 msgid "Usage Analytics"
 msgstr ""
@@ -15,6 +15,12 @@ msgid "Values"
 msgstr ""
 
 msgid "Please use the format yyyy-mm-dd"
+msgstr ""
+
+msgid "End date is before start date"
+msgstr ""
+
+msgid "Start date is before end date"
 msgstr ""
 
 msgid "Category"

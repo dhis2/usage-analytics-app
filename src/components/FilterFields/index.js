@@ -42,14 +42,16 @@ export const CategoryDropDown = connect(
 
 export const StartDateInput = connect(
     state => ({
-        value: state.filter.startDate,
+        initialValue: state.filter.startDate,
+        endDate: state.filter.endDate,
     }),
     { onChange: updateStartDate }
 )(props => <DateField {...props} label={i18n.t('Start date')} />)
 
 export const EndDateInput = connect(
     state => ({
-        value: state.filter.endDate,
+        initialValue: state.filter.endDate,
+        startDate: state.filter.startDate,
     }),
     { onChange: updateEndDate }
 )(props => <DateField {...props} label={i18n.t('End date')} />)
