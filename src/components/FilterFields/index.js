@@ -13,14 +13,8 @@ import PAGE_SIZES from '../../constants/pageSizes'
 import SORT_ORDERS from '../../constants/sortOrders'
 import {
     updateCategory,
-    updateStartDate,
-    updateEndDate,
-    updateInterval,
-    updateAggregationLevel,
-    updateChartType,
-    updateEventType,
-    updatePageSize,
-    updateSortOrder,
+    updateFilterAndGetData,
+    updateFilter,
 } from '../../actions'
 
 const FIELD_KIND = 'filled'
@@ -45,20 +39,22 @@ export const StartDateInput = connect(
         initialValue: state.filter.startDate,
         endDate: state.filter.endDate,
     }),
-    { onChange: updateStartDate }
-)(props => <DateField {...props} label={i18n.t('Start date')} />)
+    { onChange: updateFilterAndGetData }
+)(props => (
+    <DateField {...props} name="startDate" label={i18n.t('Start date')} />
+))
 
 export const EndDateInput = connect(
     state => ({
         initialValue: state.filter.endDate,
         startDate: state.filter.startDate,
     }),
-    { onChange: updateEndDate }
-)(props => <DateField {...props} label={i18n.t('End date')} />)
+    { onChange: updateFilterAndGetData }
+)(props => <DateField {...props} name="endDate" label={i18n.t('End date')} />)
 
 export const IntervalDropDown = connect(
     state => ({ value: state.filter.interval }),
-    { onChange: updateInterval }
+    { onChange: updateFilterAndGetData }
 )(props => (
     <SelectField
         {...props}
@@ -71,7 +67,7 @@ export const IntervalDropDown = connect(
 
 export const AggregationLevelDropDown = connect(
     state => ({ value: state.filter.aggregationLevel }),
-    { onChange: updateAggregationLevel }
+    { onChange: updateFilter }
 )(props => (
     <SelectField
         {...props}
@@ -84,7 +80,7 @@ export const AggregationLevelDropDown = connect(
 
 export const ChartTypeDropDown = connect(
     state => ({ value: state.filter.chartType }),
-    { onChange: updateChartType }
+    { onChange: updateFilter }
 )(props => (
     <SelectField
         {...props}
@@ -97,7 +93,7 @@ export const ChartTypeDropDown = connect(
 
 export const EventTypeDropDown = connect(
     state => ({ value: state.filter.eventType }),
-    { onChange: updateEventType }
+    { onChange: updateFilterAndGetData }
 )(props => (
     <SelectField
         {...props}
@@ -110,7 +106,7 @@ export const EventTypeDropDown = connect(
 
 export const PageSizeDropDown = connect(
     state => ({ value: state.filter.pageSize }),
-    { onChange: updatePageSize }
+    { onChange: updateFilterAndGetData }
 )(props => (
     <SelectField
         {...props}
@@ -123,7 +119,7 @@ export const PageSizeDropDown = connect(
 
 export const SortOrderDropDown = connect(
     state => ({ value: state.filter.sortOrder }),
-    { onChange: updateSortOrder }
+    { onChange: updateFilterAndGetData }
 )(props => (
     <SelectField
         {...props}

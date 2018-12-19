@@ -14,11 +14,11 @@ export const initApp = () => async (dispatch, getState) => {
 
 // Fetch data if category has changed from TOP_FAVORITES to anything else
 // or vice versa
-export const updateCategory = (_, newCategory) => (dispatch, getState) => {
+export const updateCategory = (key, newCategory) => (dispatch, getState) => {
     const { filter } = getState()
     const oldCategory = filter.category
 
-    dispatch(createAction(ACTIONS.CATEGORY_UPDATED, newCategory))
+    dispatch(updateFilter(key, newCategory))
 
     if (
         oldCategory !== newCategory &&
@@ -29,36 +29,15 @@ export const updateCategory = (_, newCategory) => (dispatch, getState) => {
     }
 }
 
-export const updateStartDate = value => (dispatch, getState) =>
-    update(ACTIONS.START_DATE_UPDATED, value, dispatch, getState)
-
-export const updateEndDate = value => (dispatch, getState) =>
-    update(ACTIONS.END_DATE_UPDATED, value, dispatch, getState)
-
-export const updateInterval = (_, value) => (dispatch, getState) =>
-    update(ACTIONS.INTERVAL_UPDATED, value, dispatch, getState)
-
-export const updateAggregationLevel = (_, value) =>
-    createAction(ACTIONS.AGGREGATION_LEVEL_UPDATED, value)
-
-export const updateChartType = (_, value) =>
-    createAction(ACTIONS.CHART_TYPE_UPDATED, value)
-
-export const updateEventType = (_, value) => (dispatch, getState) =>
-    update(ACTIONS.EVENT_TYPE_UPDATED, value, dispatch, getState)
-
-export const updatePageSize = (_, value) => (dispatch, getState) =>
-    update(ACTIONS.PAGE_SIZE_UPDATED, value, dispatch, getState)
-
-export const updateSortOrder = (_, value) => (dispatch, getState) =>
-    update(ACTIONS.SORT_ORDER_UPDATED, value, dispatch, getState)
-
-function update(actionName, value, dispatch, getState) {
-    dispatch(createAction(actionName, value))
+export const updateFilterAndGetData = (key, value) => (dispatch, getState) => {
+    dispatch(updateFilter(key, value))
 
     const { filter } = getState()
     getUsageData(filter, dispatch)
 }
+
+export const updateFilter = (key, value) =>
+    createAction(ACTIONS.FILTER_UPDATED, { key, value })
 
 async function getUsageData(filter, dispatch) {
     dispatch(createAction(ACTIONS.USAGE_DATA_REQUESTED))

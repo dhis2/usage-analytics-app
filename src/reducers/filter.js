@@ -1,5 +1,5 @@
 import { getYearMonthDayString } from '../utils/date'
-import * as TYPES from '../actions/types'
+import { FILTER_UPDATED } from '../actions/types'
 import { FAVORITE_VIEWS } from '../constants/categories'
 import { WEEK } from '../constants/intervals'
 import { SUM } from '../constants/aggregations'
@@ -21,50 +21,10 @@ const initialState = {
 
 export default function filter(state = initialState, { type, payload }) {
     switch (type) {
-        case TYPES.CATEGORY_UPDATED:
+        case FILTER_UPDATED:
             return {
                 ...state,
-                category: payload,
-            }
-        case TYPES.START_DATE_UPDATED:
-            return {
-                ...state,
-                startDate: payload,
-            }
-        case TYPES.END_DATE_UPDATED:
-            return {
-                ...state,
-                endDate: payload,
-            }
-        case TYPES.INTERVAL_UPDATED:
-            return {
-                ...state,
-                interval: payload,
-            }
-        case TYPES.AGGREGATION_LEVEL_UPDATED:
-            return {
-                ...state,
-                aggregationLevel: payload,
-            }
-        case TYPES.CHART_TYPE_UPDATED:
-            return {
-                ...state,
-                chartType: payload,
-            }
-        case TYPES.EVENT_TYPE_UPDATED:
-            return {
-                ...state,
-                eventType: payload,
-            }
-        case TYPES.PAGE_SIZE_UPDATED:
-            return {
-                ...state,
-                pageSize: payload,
-            }
-        case TYPES.SORT_ORDER_UPDATED:
-            return {
-                ...state,
-                sortOrder: payload,
+                [payload.key]: payload.value,
             }
         default:
             return state

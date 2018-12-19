@@ -33,7 +33,7 @@ class DateField extends Component {
         this.setState({ value, error })
 
         if (!error) {
-            this.props.onChange(value)
+            this.props.onChange(this.props.name, value)
         }
     }
 
@@ -71,6 +71,7 @@ class DateField extends Component {
 DateField.propTypes = {
     label: PropTypes.string.isRequired,
     initialValue: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
     startDate: PropTypes.string,
     endDate: PropTypes.string,
     onChange: PropTypes.func.isRequired,
