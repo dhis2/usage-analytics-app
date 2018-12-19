@@ -1,6 +1,6 @@
 {
   "name": "usage-analytics-app",
-  "version": "0.1.0",
+  "version": "32.0.1",
   "private": true,
   "scripts": {
     "extract-pot": "d2-i18n-extract -p src/ -o i18n/",
