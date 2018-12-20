@@ -2,11 +2,10 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import { FilterSideBar, mapStateToProps } from './FilterSideBar'
 import { FAVORITE_VIEWS, TOP_FAVORITES, USERS } from '../constants/categories'
-import { LOADING, ERROR } from '../constants/statuses'
 
 const defaultState = { filter: { category: FAVORITE_VIEWS } }
 
-describe('<UsageAnalytics/>', () => {
+describe('<FilterSideBar/>', () => {
     it('Matches the snapshot for default category: FAVORITE_VIEWS', () => {
         const props = mapStateToProps(defaultState)
         const tree = shallow(<FilterSideBar {...props} />)
