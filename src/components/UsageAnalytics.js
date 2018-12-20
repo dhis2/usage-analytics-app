@@ -10,7 +10,7 @@ import FilterSideBar from './FilterSideBar'
 import Chart from './Chart'
 import Table from './Table'
 
-class UsageAnalytics extends Component {
+export class UsageAnalytics extends Component {
     componentDidMount() {
         this.props.initApp()
     }
