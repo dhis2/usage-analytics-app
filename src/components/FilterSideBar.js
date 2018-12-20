@@ -6,7 +6,7 @@ import * as Fields from './FilterFields'
 import { FAVORITE_VIEWS, TOP_FAVORITES } from '../constants/categories'
 import './FilterSideBar.css'
 
-function FilterSideBar({
+export function FilterSideBar({
     showDateFields,
     showFavoriteViewsFields,
     showTopFavoritesFields,
@@ -45,7 +45,7 @@ FilterSideBar.propTypes = {
     showTopFavoritesFields: PropTypes.bool,
 }
 
-function mapStateToProps({ filter: { category } }) {
+export function mapStateToProps({ filter: { category } }) {
     return {
         showDateFields: category !== TOP_FAVORITES,
         showTopFavoritesFields: category === TOP_FAVORITES,

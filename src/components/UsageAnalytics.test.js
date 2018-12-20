@@ -1,29 +1,27 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import { shallow } from 'enzyme'
 import { UsageAnalytics } from './UsageAnalytics'
-import CircularProgress from 'ui/core/CircularProgress'
-import Error from './Error'
-import { LOADING, ERROR } from '../constants/statuses'
+import { LOADING, READY, ERROR } from '../constants/statuses'
 
-const baseProps = {
-    initApp: () => {},
+const defaultProps = {
+    initApp: jest.fn(),
+    appStatus: READY,
 }
 
 describe('<UsageAnalytics/>', () => {
     it('Matches the snapshot', () => {
-        const tree = shallow(<UsageAnalytics {...baseProps} />)
+        const tree = shallow(<UsageAnalytics {...defaultProps} />)
         expect(tree).toMatchSnapshot()
     })
     it('Renders a <CircularProgress/> when appStatus equals LOADING', () => {
-        const props = { ...baseProps, appStatus: LOADING }
+        const props = { ...defaultProps, appStatus: LOADING }
         const wrapper = shallow(<UsageAnalytics {...props} />)
-        expect(wrapper.find(CircularProgress).length).toEqual(1)
+        expect(wrapper.find('CircularProgress').length).toEqual(1)
     })
 
-    it('Renders a Error when appStatus equals ERR', () => {
-        const props = { ...baseProps, appStatus: ERROR }
+    it('Renders a Error when appStatus equals ERROR', () => {
+        const props = { ...defaultProps, appStatus: ERROR }
         const wrapper = shallow(<UsageAnalytics {...props} />)
-        expect(wrapper.find(Error).length).toEqual(1)
+        expect(wrapper.find('Error').length).toEqual(1)
     })
 })

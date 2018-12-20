@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<UsageAnalytics/> Matches the snapshot for any other category, i.e. USERS 1`] = `
+<aside
+  className="uaa-filter-sidebar"
+>
+  <h1
+    className="uaa-app-header"
+  >
+    Usage Analytics
+  </h1>
+  <Connect(CategoryDropDown) />
+  <Connect(StartDateInput) />
+  <Connect(StartDateInput) />
+  <Connect(IntervalDropDown) />
+</aside>
+`;
+
+exports[`<UsageAnalytics/> Matches the snapshot for category: TOP_FAVORITES 1`] = `
+<aside
+  className="uaa-filter-sidebar"
+>
+  <h1
+    className="uaa-app-header"
+  >
+    Usage Analytics
+  </h1>
+  <Connect(CategoryDropDown) />
+  <Connect(EventTypeDropDown) />
+  <Connect(PageSizeDropDown) />
+  <Connect(SortOrderDropDown) />
+</aside>
+`;
+
+exports[`<UsageAnalytics/> Matches the snapshot for default category: FAVORITE_VIEWS 1`] = `
+<aside
+  className="uaa-filter-sidebar"
+>
+  <h1
+    className="uaa-app-header"
+  >
+    Usage Analytics
+  </h1>
+  <Connect(CategoryDropDown) />
+  <Connect(StartDateInput) />
+  <Connect(StartDateInput) />
+  <Connect(IntervalDropDown) />
+  <Connect(AggregationLevelDropDown) />
+  <Connect(ChartTypeDropDown) />
+</aside>
+`;
