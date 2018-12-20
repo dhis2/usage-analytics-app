@@ -11,7 +11,7 @@ exports[`<FilterSideBar/> Matches the snapshot for any other category, i.e. USER
   </h1>
   <Connect(CategoryDropDown) />
   <Connect(StartDateInput) />
-  <Connect(StartDateInput) />
+  <Connect(EndDateInput) />
   <Connect(IntervalDropDown) />
 </aside>
 `;
@@ -43,7 +43,7 @@ exports[`<FilterSideBar/> Matches the snapshot for default category: FAVORITE_VI
   </h1>
   <Connect(CategoryDropDown) />
   <Connect(StartDateInput) />
-  <Connect(StartDateInput) />
+  <Connect(EndDateInput) />
   <Connect(IntervalDropDown) />
   <Connect(AggregationLevelDropDown) />
   <Connect(ChartTypeDropDown) />

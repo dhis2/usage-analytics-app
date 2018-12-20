@@ -27,7 +27,7 @@ export const EndDateInput = connect(
         startDate: state.filter.startDate,
     }),
     { onChange: updateFilterAndGetData }
-)(components.StartDateInput)
+)(components.EndDateInput)
 
 export const IntervalDropDown = connect(
     state => ({ value: state.filter.interval }),
