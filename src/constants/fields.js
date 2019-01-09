@@ -29,7 +29,7 @@ const FAVORITES_SAVED_FIELDS = [
     PROPS.savedEventReports,
     PROPS.savedEventCharts,
     PROPS.savedDashboards,
-    PROPS.savedIndicator,
+    PROPS.savedIndicators,
 ]
 
 const USERS_FIELDS = [PROPS.activeUsers, PROPS.users]

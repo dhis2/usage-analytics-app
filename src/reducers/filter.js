@@ -7,10 +7,13 @@ import { TOTAL } from '../constants/chartTypes'
 import { CHART_VIEW } from '../constants/eventTypes'
 import { ASC } from '../constants/sortOrders'
 
+const getEndDate = () => new Date('2016-10-30')
+
 const initialState = {
     category: FAVORITE_VIEWS,
-    startDate: getYearMonthDayString(new Date(), -4),
-    endDate: getYearMonthDayString(new Date()),
+    // startDate: getYearMonthDayString(getEndDate(), -4),
+    startDate: getYearMonthDayString(getEndDate(), -5),
+    endDate: getYearMonthDayString(getEndDate()),
     interval: WEEK,
     aggregationLevel: SUM,
     chartType: TOTAL,

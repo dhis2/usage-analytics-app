@@ -1,7 +1,13 @@
 const dhisConfig = require('./config/dhisConfig')
 
 module.exports = {
-    collectCoverageFrom: ['src/**/*.{js,jsx,ts,tsx}', '!src/**/*.d.ts'],
+    collectCoverageFrom: [
+        'src/**/*.{js,jsx,ts,tsx}',
+        '!src/**/*.d.ts',
+        '!src/serviceWorker.js',
+        '!src/index.js',
+        '!src/__mockData__/**/*.js',
+    ],
     resolver: 'jest-pnp-resolver',
     setupFiles: ['react-app-polyfill/jsdom'],
     setupTestFrameworkScriptFile: '<rootDir>/config/testSetup.js',

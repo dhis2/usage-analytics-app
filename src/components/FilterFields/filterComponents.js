@@ -1,6 +1,7 @@
 import React from 'react'
 import i18n from '@dhis2/d2-i18n'
-import SelectField from 'ui/core/SelectField'
+import SelectField from '@dhis2/ui/core/SelectField'
+import FieldWrap from './FieldWrap'
 import DateField from './DateField'
 
 import CATEGORIES from '../../constants/categories'
@@ -14,7 +15,8 @@ import SORT_ORDERS from '../../constants/sortOrders'
 const FIELD_KIND = 'filled'
 
 export const CategoryDropDown = props => (
-    <SelectField
+    <FieldWrap
+        component={SelectField}
         {...props}
         name="category"
         list={CATEGORIES}
@@ -32,7 +34,8 @@ export const EndDateInput = props => (
 )
 
 export const IntervalDropDown = props => (
-    <SelectField
+    <FieldWrap
+        component={SelectField}
         {...props}
         name="interval"
         list={INTERVALS}
@@ -42,7 +45,8 @@ export const IntervalDropDown = props => (
 )
 
 export const AggregationLevelDropDown = props => (
-    <SelectField
+    <FieldWrap
+        component={SelectField}
         {...props}
         name="aggregationLevel"
         list={AGGREGATIONS}
@@ -52,7 +56,8 @@ export const AggregationLevelDropDown = props => (
 )
 
 export const ChartTypeDropDown = props => (
-    <SelectField
+    <FieldWrap
+        component={SelectField}
         {...props}
         name="chartType"
         list={CHART_TYPES}
@@ -62,7 +67,8 @@ export const ChartTypeDropDown = props => (
 )
 
 export const EventTypeDropDown = props => (
-    <SelectField
+    <FieldWrap
+        component={SelectField}
         {...props}
         name="eventType"
         list={EVENT_TYPES}
@@ -72,7 +78,8 @@ export const EventTypeDropDown = props => (
 )
 
 export const PageSizeDropDown = props => (
-    <SelectField
+    <FieldWrap
+        component={SelectField}
         {...props}
         name="pageSize"
         list={PAGE_SIZES}
@@ -82,7 +89,8 @@ export const PageSizeDropDown = props => (
 )
 
 export const SortOrderDropDown = props => (
-    <SelectField
+    <FieldWrap
+        component={SelectField}
         {...props}
         name="sortOrder"
         list={SORT_ORDERS}

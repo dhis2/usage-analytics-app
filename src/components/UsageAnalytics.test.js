@@ -19,7 +19,7 @@ describe('<UsageAnalytics/>', () => {
         expect(wrapper.find('CircularProgress').length).toEqual(1)
     })
 
-    it('Renders a Error when appStatus equals ERROR', () => {
+    it('Renders an <Error/> when appStatus equals ERROR', () => {
         const props = { ...defaultProps, appStatus: ERROR }
         const wrapper = shallow(<UsageAnalytics {...props} />)
         expect(wrapper.find('Error').length).toEqual(1)

@@ -1,4 +1,4 @@
-import { get as rawGet } from 'ui/utils/api'
+import { get as rawGet } from '@dhis2/ui/utils/api'
 import { setLocale } from '../utils/locale'
 import { TOP_FAVORITES } from '../constants/categories'
 

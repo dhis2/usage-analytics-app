@@ -15,15 +15,28 @@ class DateField extends Component {
         this.onChange = this.onChange.bind(this)
     }
 
-    shouldComponentUpdate(nextProps) {
-        if (
-            nextProps.initialValue !== this.props.initialValue &&
-            this.state.value === nextProps.initialValue
-        ) {
-            return false
-        }
+    // shouldComponentUpdate(nextProps) {
+    //     if (
+    //         nextProps.initialValue !== this.props.initialValue &&
+    //         this.state.value === nextProps.initialValue
+    //     ) {
+    //         return false
+    //     }
 
-        return true
+    //     return true
+    // }
+
+    componentDidUpdate(prevProps) {
+        console.log(prevProps, this.props.name)
+        if (
+            prevProps.startDate !== this.props.startDate ||
+            prevProps.endDate !== this.props.endDate
+        ) {
+            const error = this.getError(this.state.value)
+            if (!error && this.state.error) {
+                this.setState({ error })
+            }
+        }
     }
 
     onChange(event) {
@@ -40,8 +53,6 @@ class DateField extends Component {
     getError(value) {
         const { startDate, endDate } = this.props
 
-        console.log('value, start, end\n', value, startDate, endDate)
-
         if (!/[0-9]{4}-[0-9]{2}-[0-9]{2}/.test(value)) {
             return i18n.t('Please use the format yyyy-mm-dd')
         }
@@ -53,6 +64,8 @@ class DateField extends Component {
         if (endDate && value > endDate) {
             return i18n.t('Start date is before end date')
         }
+
+        return null
     }
 
     render() {

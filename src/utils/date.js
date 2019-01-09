@@ -55,8 +55,8 @@ export function getDisplayDateFromIsoString(
     isoString,
     dateFormatOptions = dateFormats.yyyymmdd
 ) {
-    const { locale } = store.getState()
+    const state = store.getState()
+    const locale = state.locale || 'en'
     const date = new Date(isoString)
-
     return new Intl.DateTimeFormat(locale, dateFormatOptions).format(date)
 }
