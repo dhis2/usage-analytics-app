@@ -12,13 +12,9 @@ exports[`<App/> Matches the snapshot 1`] = `
     }
   }
 >
-  <UI
-    theme="blue"
-  >
-    <HeaderBarContainer
-      appName="Usage Analytics"
-    />
-    <Connect(UsageAnalytics) />
-  </UI>
+  <HeaderBarContainer
+    appName="Usage Analytics"
+  />
+  <Connect(UsageAnalytics) />
 </Provider>
 `;

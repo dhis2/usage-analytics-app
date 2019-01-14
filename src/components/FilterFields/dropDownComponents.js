@@ -1,8 +1,7 @@
 import React from 'react'
 import i18n from '@dhis2/d2-i18n'
 import SelectField from '@dhis2/ui/core/SelectField'
-import FieldWrap from './FieldWrap'
-import DateField from './DateField'
+import withMargin from './withMargin'
 
 import CATEGORIES from '../../constants/categories'
 import INTERVALS from '../../constants/intervals'
@@ -14,9 +13,10 @@ import SORT_ORDERS from '../../constants/sortOrders'
 
 const FIELD_KIND = 'filled'
 
-export const CategoryDropDown = props => (
-    <FieldWrap
-        component={SelectField}
+const SelectFieldWithMargin = withMargin(SelectField)
+
+export const Category = props => (
+    <SelectFieldWithMargin
         {...props}
         name="category"
         list={CATEGORIES}
@@ -25,17 +25,8 @@ export const CategoryDropDown = props => (
     />
 )
 
-export const StartDateInput = props => (
-    <DateField {...props} name="startDate" label={i18n.t('Start date')} />
-)
-
-export const EndDateInput = props => (
-    <DateField {...props} name="endDate" label={i18n.t('End date')} />
-)
-
-export const IntervalDropDown = props => (
-    <FieldWrap
-        component={SelectField}
+export const Interval = props => (
+    <SelectFieldWithMargin
         {...props}
         name="interval"
         list={INTERVALS}
@@ -44,9 +35,8 @@ export const IntervalDropDown = props => (
     />
 )
 
-export const AggregationLevelDropDown = props => (
-    <FieldWrap
-        component={SelectField}
+export const AggregationLevel = props => (
+    <SelectFieldWithMargin
         {...props}
         name="aggregationLevel"
         list={AGGREGATIONS}
@@ -55,9 +45,8 @@ export const AggregationLevelDropDown = props => (
     />
 )
 
-export const ChartTypeDropDown = props => (
-    <FieldWrap
-        component={SelectField}
+export const ChartType = props => (
+    <SelectFieldWithMargin
         {...props}
         name="chartType"
         list={CHART_TYPES}
@@ -66,9 +55,8 @@ export const ChartTypeDropDown = props => (
     />
 )
 
-export const EventTypeDropDown = props => (
-    <FieldWrap
-        component={SelectField}
+export const EventType = props => (
+    <SelectFieldWithMargin
         {...props}
         name="eventType"
         list={EVENT_TYPES}
@@ -77,9 +65,8 @@ export const EventTypeDropDown = props => (
     />
 )
 
-export const PageSizeDropDown = props => (
-    <FieldWrap
-        component={SelectField}
+export const PageSize = props => (
+    <SelectFieldWithMargin
         {...props}
         name="pageSize"
         list={PAGE_SIZES}
@@ -88,9 +75,8 @@ export const PageSizeDropDown = props => (
     />
 )
 
-export const SortOrderDropDown = props => (
-    <FieldWrap
-        component={SelectField}
+export const SortOrder = props => (
+    <SelectFieldWithMargin
         {...props}
         name="sortOrder"
         list={SORT_ORDERS}

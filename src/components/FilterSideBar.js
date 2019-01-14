@@ -17,8 +17,7 @@ export function FilterSideBar({
             <Fields.CategoryDropDown />
             {showDateFields && (
                 <Fragment>
-                    <Fields.StartDateInput />
-                    <Fields.EndDateInput />
+                    <Fields.DateRange />
                     <Fields.IntervalDropDown />
                 </Fragment>
             )}

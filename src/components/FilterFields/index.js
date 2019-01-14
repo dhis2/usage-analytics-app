@@ -1,5 +1,6 @@
 import { connect } from 'react-redux'
-import * as components from './filterComponents'
+import * as DropDowns from './dropDownComponents'
+import DateRangeComponent from './DateRange'
 import {
     updateCategory,
     updateFilterAndGetData,
@@ -9,47 +10,42 @@ import {
 export const CategoryDropDown = connect(
     createValueGetterForFilterKey('category'),
     { onChange: updateCategory }
-)(components.CategoryDropDown)
+)(DropDowns.Category)
 
-export const StartDateInput = connect(
-    mapStartDateProps,
-    { onChange: updateFilterAndGetData }
-)(components.StartDateInput)
-
-export const EndDateInput = connect(
-    mapEndDateProps,
-    { onChange: updateFilterAndGetData }
-)(components.EndDateInput)
+export const DateRange = connect(
+    mapDateRangeProps,
+    { updateFilter, updateFilterAndGetData }
+)(DateRangeComponent)
 
 export const IntervalDropDown = connect(
     createValueGetterForFilterKey('interval'),
     { onChange: updateFilterAndGetData }
-)(components.IntervalDropDown)
+)(DropDowns.Interval)
 
 export const AggregationLevelDropDown = connect(
     createValueGetterForFilterKey('aggregationLevel'),
     { onChange: updateFilter }
-)(components.AggregationLevelDropDown)
+)(DropDowns.AggregationLevel)
 
 export const ChartTypeDropDown = connect(
     createValueGetterForFilterKey('chartType'),
     { onChange: updateFilter }
-)(components.ChartTypeDropDown)
+)(DropDowns.ChartType)
 
 export const EventTypeDropDown = connect(
     createValueGetterForFilterKey('eventType'),
     { onChange: updateFilterAndGetData }
-)(components.EventTypeDropDown)
+)(DropDowns.EventType)
 
 export const PageSizeDropDown = connect(
     createValueGetterForFilterKey('pageSize'),
     { onChange: updateFilterAndGetData }
-)(components.PageSizeDropDown)
+)(DropDowns.PageSize)
 
 export const SortOrderDropDown = connect(
     createValueGetterForFilterKey('sortOrder'),
     { onChange: updateFilterAndGetData }
-)(components.SortOrderDropDown)
+)(DropDowns.SortOrder)
 
 export function createValueGetterForFilterKey(key) {
     return function(state) {
@@ -59,16 +55,9 @@ export function createValueGetterForFilterKey(key) {
     }
 }
 
-export function mapStartDateProps(state) {
+export function mapDateRangeProps(state) {
     return {
-        initialValue: state.filter.startDate,
-        endDate: state.filter.endDate,
-    }
-}
-
-export function mapEndDateProps(state) {
-    return {
-        initialValue: state.filter.endDate,
         startDate: state.filter.startDate,
+        endDate: state.filter.endDate,
     }
 }

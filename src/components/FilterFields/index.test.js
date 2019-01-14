@@ -1,8 +1,4 @@
-import {
-    createValueGetterForFilterKey,
-    mapStartDateProps,
-    mapEndDateProps,
-} from './index'
+import { createValueGetterForFilterKey, mapDateRangeProps } from './index'
 
 const state = {
     filter: {
@@ -23,17 +19,10 @@ describe('FilterFields', () => {
         expect(createdFilterValueGetter(state)).toEqual({ value: 10 })
     })
 
-    it('mapStartDateProps returns the correct initialValue and endDate', () => {
-        expect(mapStartDateProps(state)).toEqual({
-            initialValue: state.filter.startDate,
-            endDate: state.filter.endDate,
-        })
-    })
-
-    it('mapEndDateProps returns the correct initialValue and startDate', () => {
-        expect(mapEndDateProps(state)).toEqual({
-            initialValue: state.filter.endDate,
+    it('mapDateRangeProps returns the correct startDate and endDate', () => {
+        expect(mapDateRangeProps(state)).toEqual({
             startDate: state.filter.startDate,
+            endDate: state.filter.endDate,
         })
     })
 })
