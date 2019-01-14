@@ -6,6 +6,7 @@ module.exports = {
         '!src/**/*.d.ts',
         '!src/serviceWorker.js',
         '!src/index.js',
+        '!src/store.js',
         '!src/__mockData__/**/*.js',
     ],
     resolver: 'jest-pnp-resolver',

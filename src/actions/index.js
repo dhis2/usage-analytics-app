@@ -20,12 +20,8 @@ export const updateCategory = (key, newCategory) => (dispatch, getState) => {
 
     dispatch(updateFilter(key, newCategory))
 
-    if (
-        oldCategory !== newCategory &&
-        ((newCategory === TOP_FAVORITES && oldCategory !== TOP_FAVORITES) ||
-            (oldCategory === TOP_FAVORITES && newCategory !== TOP_FAVORITES))
-    ) {
-        getUsageData({ ...filter, category: newCategory }, dispatch)
+    if (isNewDataRequiredAfterCategoryChange(oldCategory, newCategory)) {
+        return getUsageData({ ...filter, category: newCategory }, dispatch)
     }
 }
 
@@ -33,13 +29,13 @@ export const updateFilterAndGetData = (key, value) => (dispatch, getState) => {
     dispatch(updateFilter(key, value))
 
     const { filter } = getState()
-    getUsageData(filter, dispatch)
+    return getUsageData(filter, dispatch)
 }
 
 export const updateFilter = (key, value) =>
     createAction(ACTIONS.FILTER_UPDATED, { key, value })
 
-async function getUsageData(filter, dispatch) {
+export async function getUsageData(filter, dispatch) {
     dispatch(createAction(ACTIONS.USAGE_DATA_REQUESTED))
 
     try {
@@ -47,8 +43,16 @@ async function getUsageData(filter, dispatch) {
         dispatch(createAction(ACTIONS.USAGE_DATA_RECEIVED, usageData))
     } catch (error) {
         console.error(error)
-        dispatch(createAction(ACTIONS.USAGE_DATA_ERRORED))
+        dispatch(createAction(ACTIONS.USAGE_DATA_ERRORED, error))
     }
+}
+
+export function isNewDataRequiredAfterCategoryChange(oldCategory, newCategory) {
+    return (
+        oldCategory !== newCategory &&
+        ((newCategory === TOP_FAVORITES && oldCategory !== TOP_FAVORITES) ||
+            (oldCategory === TOP_FAVORITES && newCategory !== TOP_FAVORITES))
+    )
 }
 
 function createAction(type, payload) {
