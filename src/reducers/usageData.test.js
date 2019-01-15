@@ -6,11 +6,9 @@ import {
     USAGE_DATA_ERRORED,
 } from '../actions/types'
 import reducer from './usageData'
+import { dataStatistics } from '../__mockData__/usageData'
 
-const usageData = [
-    { key: 'dummy1', value: 'Dummy 1' },
-    { key: 'dummy2', value: 'Dummy 2' },
-]
+const usageData = dataStatistics
 
 describe('usageData reducer', () => {
     it('should return the initial state', () => {

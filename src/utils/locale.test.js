@@ -15,10 +15,10 @@ describe('setLocale', () => {
     it('calls i18n.changeLanguage once', () => {
         expect(mockChangeLanguage).toBeCalledTimes(1)
     })
-    it('calls i18n.changeLanguage with the correct locale parameter', () => {
+    it('calls i18n.changeLanguage with the correct locale argument', () => {
         expect(mockChangeLanguage).toBeCalledWith(locale)
     })
-    it('calls rtl.setDocDir with the correct locale parameter', () => {
+    it('calls rtl.setDocDir with the correct locale argument', () => {
         expect(mockSetDocDir).toBeCalledWith(locale)
     })
 })
