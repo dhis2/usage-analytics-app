@@ -18,14 +18,8 @@
   "husky": {
     "hooks": {
       "commit-msg": "packages commit-style",
-      "pre-commit": "packages code-style && yarn extract-pot && CI=true yarn test && git add ./i18n/"
+      "pre-commit": "packages code-style && yarn extract-pot && git add ./i18n/"
     }
-  },
-  "babel": {
-    "presets": [
-      "react-app",
-      "@babel/preset-env"
-    ]
   },
   "dependencies": {
     "@dhis2/ui": "^1.0.0-beta.7",

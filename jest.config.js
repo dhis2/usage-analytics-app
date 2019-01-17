@@ -24,10 +24,7 @@ module.exports = {
         '^(?!.*\\.(js|jsx|ts|tsx|css|json)$)':
             '<rootDir>/config/jest/fileTransform.js',
     },
-    transformIgnorePatterns: [
-        '[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$',
-        '^.+\\.module\\.(css|sass|scss)$',
-    ],
+    transformIgnorePatterns: ['node_modules/(?!(@dhis2/ui)/)'],
     moduleFileExtensions: [
         'web.js',
         'js',
