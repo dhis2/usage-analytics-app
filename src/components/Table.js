@@ -2,7 +2,7 @@ import i18n from '@dhis2/d2-i18n'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { connect } from 'react-redux'
-import { CircularProgress } from 'ui/core/CircularProgress'
+import { CircularProgress } from '@dhis2/ui/core/CircularProgress'
 import { FAVORITE_VIEWS } from '../constants/categories'
 import { TABLE_FIELDS as FIELDS } from '../constants/fields'
 import {
@@ -20,7 +20,7 @@ import './Table.css'
 const baseClassName = 'uua-data-container'
 const loadingClassName = ' uua-data-container--loading'
 
-const TableHead = ({ headers }) => (
+export const TableHead = ({ headers }) => (
     <thead>
         <tr>
             {headers.map((header, i) => (
@@ -30,7 +30,7 @@ const TableHead = ({ headers }) => (
     </thead>
 )
 
-const TableBody = ({ rows }) => (
+export const TableBody = ({ rows }) => (
     <tbody>
         {rows.map((row, i) => (
             <TableRow key={`row-${i}`} cells={row} />
@@ -38,7 +38,7 @@ const TableBody = ({ rows }) => (
     </tbody>
 )
 
-const TableRow = ({ cells }) => (
+export const TableRow = ({ cells }) => (
     <tr>
         {cells.map((text, i) => (
             <td key={`cell-${i}`}>{text}</td>
@@ -46,7 +46,7 @@ const TableRow = ({ cells }) => (
     </tr>
 )
 
-function Table({ error, loading, tableData }) {
+export function Table({ error, loading, tableData }) {
     let content
 
     if (error) {
@@ -94,7 +94,7 @@ TableRow.propTypes = {
     ).isRequired,
 }
 
-function mapStateToProps({ usageData, filter }) {
+export function mapStateToProps({ usageData, filter }) {
     const error = usageData === ERROR
     const loading = usageData === LOADING
     return {

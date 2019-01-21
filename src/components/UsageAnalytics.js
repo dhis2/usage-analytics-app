@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import i18n from '@dhis2/d2-i18n'
-import CircularProgress from 'ui/core/CircularProgress'
+import CircularProgress from '@dhis2/ui/core/CircularProgress'
 import { LOADING, ERROR } from '../constants/statuses'
 import { initApp } from '../actions'
 import Error from './Error'
@@ -10,7 +10,7 @@ import FilterSideBar from './FilterSideBar'
 import Chart from './Chart'
 import Table from './Table'
 
-class UsageAnalytics extends Component {
+export class UsageAnalytics extends Component {
     componentDidMount() {
         this.props.initApp()
     }

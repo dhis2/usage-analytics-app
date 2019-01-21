@@ -1,9 +1,19 @@
-import { get as rawGet } from 'ui/utils/api'
+import { get } from '@dhis2/ui/utils/api'
 import { setLocale } from '../utils/locale'
 import { TOP_FAVORITES } from '../constants/categories'
 
+const api = {
+    initApp,
+    getUsageData,
+    getFavorites,
+    getDataStatistics,
+    getUserLocale,
+    getJSON,
+    handleJSON,
+}
+
 export function initApp({ filter }) {
-    return Promise.all([getUserLocale(), getUsageData(filter)]).then(
+    return Promise.all([api.getUserLocale(), api.getUsageData(filter)]).then(
         ([locale, usageData]) => {
             setLocale(locale)
             return {
@@ -16,32 +26,38 @@ export function initApp({ filter }) {
 
 export function getUsageData(filter) {
     return filter.category === TOP_FAVORITES
-        ? getFavorites(filter)
-        : getDataStatistics(filter)
+        ? api.getFavorites(filter)
+        : api.getDataStatistics(filter)
 }
 
-function getFavorites({ eventType, pageSize, sortOrder }) {
+export function getFavorites({ eventType, pageSize, sortOrder }) {
     const queryParams = `eventType=${eventType}&pageSize=${pageSize}&sortOrder=${sortOrder}&_=${Date.now()}`
-    return get(`dataStatistics/favorites?${queryParams}`)
+    return api.getJSON(`dataStatistics/favorites?${queryParams}`)
 }
 
-function getDataStatistics({ startDate, endDate, interval }) {
+export function getDataStatistics({ startDate, endDate, interval }) {
     const queryParams = `startDate=${startDate}&endDate=${endDate}&interval=${interval}&_=${Date.now()}`
-    return get(`dataStatistics?${queryParams}`)
+    return api.getJSON(`dataStatistics?${queryParams}`)
 }
 
-function getUserLocale() {
-    return get('userSettings').then(userSettings => userSettings.keyUiLocale)
+export function getUserLocale() {
+    return api
+        .getJSON('userSettings')
+        .then(userSettings => userSettings.keyUiLocale)
 }
 
-function get(path) {
-    return rawGet(path)
+export function getJSON(path) {
+    return get(path)
         .then(response => response.json())
-        .then(json => {
-            if (json.status === 'ERROR') {
-                throw new Error(json.message)
-            } else {
-                return json
-            }
-        })
+        .then(handleJSON)
 }
+
+export function handleJSON(json) {
+    if (json.status === 'ERROR') {
+        throw new Error(json.message)
+    } else {
+        return json
+    }
+}
+
+export default api

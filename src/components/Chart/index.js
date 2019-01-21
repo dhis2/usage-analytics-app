@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { CircularProgress } from 'ui/core/CircularProgress'
+import { CircularProgress } from '@dhis2/ui/core/CircularProgress'
 import { Line } from 'react-chartjs-2'
 import parseChartData from './parseChartData'
 import { LOADING, ERROR } from '../../constants/statuses'
@@ -11,7 +11,7 @@ import './Chart.css'
 const baseClassName = 'uua-data-container uua-chart-container'
 const loadingClassName = ' uua-data-container--loading'
 
-function Chart({ shouldHide, loading, chartConfig }) {
+export function Chart({ shouldHide, loading, chartConfig }) {
     let content
 
     if (shouldHide) {
@@ -43,7 +43,7 @@ Chart.propTypes = {
 // The Chart is not displayed for category TOP_FAVORITES, but it should also
 // be hidden when usageData === ERROR, because one Error message is enough,
 // and this Error will be displayed in the Table component
-function mapStateToProps({ usageData, filter }) {
+export function mapStateToProps({ usageData, filter }) {
     const shouldHide = filter.category === TOP_FAVORITES || usageData === ERROR
     const loading = usageData === LOADING
     return {

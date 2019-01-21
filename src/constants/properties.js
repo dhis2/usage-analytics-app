@@ -70,9 +70,9 @@ export const savedDashboards = {
     key: 'savedDashboards',
     label: i18n.t('Dashboards'),
 }
-export const savedIndicator = {
-    key: 'savedIndicator',
-    label: i18n.t('Indicator'),
+export const savedIndicators = {
+    key: 'savedIndicators',
+    label: i18n.t('Indicators'),
 }
 export const activeUsers = {
     key: 'activeUsers',
