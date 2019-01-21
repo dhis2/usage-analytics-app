@@ -9,6 +9,7 @@ const api = {
     getDataStatistics,
     getUserLocale,
     getJSON,
+    handleJSON,
 }
 
 export function initApp({ filter }) {
@@ -48,13 +49,15 @@ export function getUserLocale() {
 export function getJSON(path) {
     return get(path)
         .then(response => response.json())
-        .then(json => {
-            if (json.status === 'ERROR') {
-                throw new Error(json.message)
-            } else {
-                return json
-            }
-        })
+        .then(handleJSON)
+}
+
+export function handleJSON(json) {
+    if (json.status === 'ERROR') {
+        throw new Error(json.message)
+    } else {
+        return json
+    }
 }
 
 export default api

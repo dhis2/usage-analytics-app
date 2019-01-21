@@ -1,3 +1,4 @@
+import fetchMock from 'fetch-mock'
 import * as uiApi from '@dhis2/ui/utils/api'
 import * as loc from '../utils/locale'
 // Named imports used for the actual tests
@@ -9,10 +10,19 @@ import api, {
     getDataStatistics,
     getUserLocale,
     getJSON,
+    handleJSON,
 } from './index'
 import { getInitialState as getDefaultFilter } from '../reducers/filter'
 import { dataStatistics } from '../__mockData__/usageData'
 import { TOP_FAVORITES } from '../constants/categories'
+
+beforeAll(() => {
+    Date.now = jest.fn(() => 'dummytimestamp')
+})
+
+afterAll(() => {
+    jest.resetAllMocks()
+})
 
 // Default filter category is FAVORTE_VIEWS
 const filter = getDefaultFilter(new Date())
@@ -25,23 +35,14 @@ describe('initApp', () => {
     loc.setLocale = jest.fn()
 
     const promise = initApp({ filter })
-
-    it('to return a payload object with the correct usageData and locale properties', () => {
+    it('to return a payload object with the correct usageData property', () => {
         promise.then(data => {
-            expect(data).toEqual({
-                usageData,
-                locale,
-            })
+            expect(data).toHaveProperty('usageData', usageData)
         })
     })
-    it('calls getUserLocale once', () => {
-        promise.then(() => {
-            expect(api.getUserLocale).toHaveBeenCalledTimes(1)
-        })
-    })
-    it('calls getUsageData with filter as argument', () => {
-        promise.then(() => {
-            expect(api.getUsageData).toHaveBeenCalledWith(filter)
+    it('to return a payload object with the correct locale property', () => {
+        promise.then(data => {
+            expect(data).toHaveProperty('locale', locale)
         })
     })
     it('calls setLocale with the correct locale value', () => {
@@ -72,10 +73,7 @@ describe('getUsageData', () => {
 
 describe('getFavorites', () => {
     it('calls getJSON with the correct URL and queryString', () => {
-        // api.getJSON.mockClear()
         api.getJSON = jest.fn()
-        // Make sure test doesn't fail because timestamp is off by 1
-        Date.now = () => 1547546967176
         const filter = {
             eventType: 'CHART_VIEW',
             pageSize: 10,
@@ -96,8 +94,6 @@ describe('getFavorites', () => {
 describe('getDataStatistics', () => {
     it('calls getJSON with the correct URL and queryString', () => {
         api.getJSON = jest.fn()
-        // Make sure test doesn't fail because timestamp is off by 1
-        Date.now = () => 1547546967176
         const filter = {
             startDate: '2018-08-12',
             endDate: '2018-12-12',
@@ -136,54 +132,42 @@ describe('getUserLocale', () => {
 })
 
 describe('getJSON', () => {
-    const url = 'test'
-    const errorResponse = {
-        status: 'ERROR',
-        message: 'Oops',
-    }
+    const goodURL = 'i/will/return/a/good/response'
+    const badURL = 'i/will/return/a/200/response/with/error/status'
+    const okResponse = { data: 'I am OK' }
+    const errorResponse = { status: 'ERROR', message: 'Oops' }
+
+    beforeAll(() => {
+        fetchMock.mock(`end:${goodURL}`, okResponse)
+        fetchMock.mock(`end:${badURL}`, errorResponse)
+    })
 
     it('calls the ui/get function with the correct argument / url', () => {
-        uiApi.get = jest.fn(() =>
-            Promise.resolve(createMockResponse(dataStatistics))
-        )
-        getJSON(url).then(() => {
-            expect(uiApi.get).toHaveBeenCalledWith(url)
+        const spyOnGet = jest.spyOn(uiApi, 'get')
+        getJSON(goodURL).then(() => {
+            expect(spyOnGet).toHaveBeenCalledWith(goodURL)
         })
     })
-
-    it('calls the json() method on the response object', () => {
-        const mockResponse = createMockResponse(dataStatistics)
-        uiApi.get = jest.fn(() => Promise.resolve(mockResponse))
-        getJSON(url).then(() => {
-            expect(mockResponse.json).toHaveBeenCalledTimes(1)
-        })
-    })
-
     it('returns the correct response object if the response is OK', () => {
-        uiApi.get = jest.fn(() =>
-            Promise.resolve(createMockResponse(dataStatistics))
-        )
-        getJSON(url).then(data => {
-            expect(data).toEqual(dataStatistics)
+        getJSON(goodURL).then(data => {
+            expect(data).toEqual(okResponse)
         })
     })
-
-    it('returns the correct response object if the response is OK', () => {
-        uiApi.get = jest.fn(() =>
-            Promise.resolve(createMockResponse(errorResponse))
-        )
-        getJSON(url).catch(error => {
+    it('throws an error if the response has a status property with value "ERROR"', () => {
+        getJSON(goodURL).catch(error => {
             expect(error.toString()).toEqual(`Error: ${errorResponse.message}`)
         })
     })
 
+    it('throws an error if JSON has a status property with value "ERROR"', () => {
+        try {
+            handleJSON(errorResponse)
+        } catch (error) {
+            expect(error.toString()).toEqual(`Error: ${errorResponse.message}`)
+        }
+    })
     afterAll(() => {
+        fetchMock.restore()
         jest.resetAllMocks()
     })
 })
-
-function createMockResponse(json) {
-    return {
-        json: jest.fn(() => json),
-    }
-}
