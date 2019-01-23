@@ -6,6 +6,7 @@ import {
     updateCategory,
     updateFilterAndGetData,
     updateFilter,
+    updateUsageData,
     isNewDataRequiredAfterCategoryChange,
 } from './index'
 import * as TYPES from './types'
@@ -16,53 +17,77 @@ import {
 } from '../constants/categories'
 
 const mockStore = configureMockStore([thunk])
-const defaultStoreState = {
+const DEFAULT_STORE_STATE = {
     filter: {
         category: FAVORITE_VIEWS,
     },
     usageData: [],
 }
 
-const filterKey = 'pageSize'
-const filterValue = 10
-const filterUpdatedAction = {
-    type: TYPES.FILTER_UPDATED,
-    payload: { key: filterKey, value: filterValue },
-}
 const mockResponse = { data: 'test' }
 const mockError = { message: 'Oops' }
-const mockApiMethodThatWillResolve = () => Promise.resolve(mockResponse)
-const mockApiMethodThatWillReject = () => Promise.reject(mockError)
+const mockResolvingPromise = jest.fn(() => Promise.resolve(mockResponse))
+const mockRejectingPromise = jest.fn(() => Promise.reject(mockError))
+
+const CATEGORY = 'category'
+
+const MOCK_ACTIONS = {
+    [TYPES.FILTER_UPDATED]: {
+        type: TYPES.FILTER_UPDATED,
+        payload: {
+            key: CATEGORY,
+            value: TOP_FAVORITES,
+        },
+    },
+    [TYPES.APP_LOAD_SUCCESS]: {
+        type: TYPES.APP_LOAD_SUCCESS,
+        payload: mockResponse,
+    },
+    [TYPES.APP_LOAD_ERROR]: {
+        type: TYPES.APP_LOAD_ERROR,
+        payload: mockError,
+    },
+    [TYPES.USAGE_DATA_REQUESTED]: {
+        type: TYPES.USAGE_DATA_REQUESTED,
+        payload: undefined,
+    },
+    [TYPES.USAGE_DATA_RECEIVED]: {
+        type: TYPES.USAGE_DATA_RECEIVED,
+        payload: mockResponse,
+    },
+    [TYPES.USAGE_DATA_ERRORED]: {
+        type: TYPES.USAGE_DATA_ERRORED,
+        payload: mockError,
+    },
+}
+
+afterAll(() => {
+    jest.resetAllMocks()
+})
 
 describe('updateFilter', () => {
     it('should create an action to update the filter', () => {
-        const expectedAction = filterUpdatedAction
-        expect(updateFilter(filterKey, filterValue)).toEqual(expectedAction)
+        expect(updateFilter(CATEGORY, TOP_FAVORITES)).toEqual(
+            MOCK_ACTIONS[TYPES.FILTER_UPDATED]
+        )
     })
 })
 
 describe('initApp', () => {
     it('creates APP_LOAD_SUCCESS when initApp resolves successfully', () => {
         // mock api method
-        api.initApp = mockApiMethodThatWillResolve
-        const expectedActions = [
-            {
-                type: TYPES.APP_LOAD_SUCCESS,
-                payload: mockResponse,
-            },
-        ]
-        const store = mockStore(defaultStoreState)
+        api.initApp = mockResolvingPromise
+        const expectedActions = [MOCK_ACTIONS[TYPES.APP_LOAD_SUCCESS]]
+        const store = mockStore(DEFAULT_STORE_STATE)
         return store.dispatch(initApp()).then(() => {
             expect(store.getActions()).toEqual(expectedActions)
         })
     })
     it('creates APP_LOAD_ERROR when initApp is rejected', () => {
         // mock api method
-        api.initApp = mockApiMethodThatWillReject
-        const expectedActions = [
-            { type: TYPES.APP_LOAD_ERROR, payload: mockError },
-        ]
-        const store = mockStore(defaultStoreState)
+        api.initApp = mockRejectingPromise
+        const expectedActions = [MOCK_ACTIONS[TYPES.APP_LOAD_ERROR]]
+        const store = mockStore(DEFAULT_STORE_STATE)
         return store.dispatch(initApp()).then(() => {
             expect(store.getActions()).toEqual(expectedActions)
         })
@@ -70,27 +95,14 @@ describe('initApp', () => {
 })
 
 describe('updateCategory', () => {
-    const CATEGORY = 'category'
     it('creates USAGE_DATA_RECEIVED when new data is required and getUsageData resolves successfully', () => {
-        api.getUsageData = mockApiMethodThatWillResolve
+        api.getUsageData = mockResolvingPromise
         const expectedActions = [
-            {
-                type: TYPES.FILTER_UPDATED,
-                payload: {
-                    key: CATEGORY,
-                    value: TOP_FAVORITES,
-                },
-            },
-            {
-                type: TYPES.USAGE_DATA_REQUESTED,
-                payload: undefined,
-            },
-            {
-                type: TYPES.USAGE_DATA_RECEIVED,
-                payload: mockResponse,
-            },
+            MOCK_ACTIONS[TYPES.FILTER_UPDATED],
+            MOCK_ACTIONS[TYPES.USAGE_DATA_REQUESTED],
+            MOCK_ACTIONS[TYPES.USAGE_DATA_RECEIVED],
         ]
-        const store = mockStore(defaultStoreState)
+        const store = mockStore(DEFAULT_STORE_STATE)
         return store
             .dispatch(updateCategory(CATEGORY, TOP_FAVORITES))
             .then(() => {
@@ -98,25 +110,13 @@ describe('updateCategory', () => {
             })
     })
     it('creates USAGE_DATA_ERRORED when new data is required and getUsageData is rejected', () => {
-        api.getUsageData = mockApiMethodThatWillReject
+        api.getUsageData = mockRejectingPromise
         const expectedActions = [
-            {
-                type: TYPES.FILTER_UPDATED,
-                payload: {
-                    key: CATEGORY,
-                    value: TOP_FAVORITES,
-                },
-            },
-            {
-                type: TYPES.USAGE_DATA_REQUESTED,
-                payload: undefined,
-            },
-            {
-                type: TYPES.USAGE_DATA_ERRORED,
-                payload: mockError,
-            },
+            MOCK_ACTIONS[TYPES.FILTER_UPDATED],
+            MOCK_ACTIONS[TYPES.USAGE_DATA_REQUESTED],
+            MOCK_ACTIONS[TYPES.USAGE_DATA_ERRORED],
         ]
-        const store = mockStore(defaultStoreState)
+        const store = mockStore(DEFAULT_STORE_STATE)
         return store
             .dispatch(updateCategory(CATEGORY, TOP_FAVORITES))
             .then(() => {
@@ -124,64 +124,78 @@ describe('updateCategory', () => {
             })
     })
     it('creates FILTER_UPDATED when new data is NOT required', () => {
-        const expectedActions = [
-            {
-                type: TYPES.FILTER_UPDATED,
-                payload: {
-                    key: CATEGORY,
-                    value: FAVORITES_SAVED,
-                },
+        const updateAction = {
+            ...MOCK_ACTIONS[TYPES.FILTER_UPDATED],
+            payload: {
+                ...MOCK_ACTIONS[TYPES.FILTER_UPDATED].payload,
+                value: FAVORITES_SAVED,
             },
-        ]
-
-        const store = mockStore(defaultStoreState)
+        }
+        const expectedActions = [updateAction]
+        const store = mockStore(DEFAULT_STORE_STATE)
         store.dispatch(updateCategory(CATEGORY, FAVORITES_SAVED))
         expect(store.getActions()).toEqual(expectedActions)
     })
 })
 
 describe('updateFilterAndGetData', () => {
-    const baseActions = [
-        filterUpdatedAction,
-        {
-            type: TYPES.USAGE_DATA_REQUESTED,
-            payload: undefined,
-        },
+    const BASE_ACTIONS = [
+        MOCK_ACTIONS[TYPES.FILTER_UPDATED],
+        MOCK_ACTIONS[TYPES.USAGE_DATA_REQUESTED],
     ]
 
     it('creates USAGE_DATA_RECEIVED when updateFilterAndGetData resolves successfully', () => {
         // mock api method
-        api.getUsageData = mockApiMethodThatWillResolve
+        api.getUsageData = mockResolvingPromise
         const expectedActions = [
-            ...baseActions,
-            {
-                type: TYPES.USAGE_DATA_RECEIVED,
-                payload: mockResponse,
-            },
+            ...BASE_ACTIONS,
+            MOCK_ACTIONS[TYPES.USAGE_DATA_RECEIVED],
         ]
-        const store = mockStore(defaultStoreState)
+        const store = mockStore(DEFAULT_STORE_STATE)
         return store
-            .dispatch(updateFilterAndGetData(filterKey, filterValue))
+            .dispatch(updateFilterAndGetData(CATEGORY, TOP_FAVORITES))
             .then(() => {
                 expect(store.getActions()).toEqual(expectedActions)
             })
     })
     it('creates USAGE_DATA_ERRORED when updateFilterAndGetData is rejected', () => {
         // mock api method
-        api.getUsageData = mockApiMethodThatWillReject
+        api.getUsageData = mockRejectingPromise
         const expectedActions = [
-            ...baseActions,
-            {
-                type: TYPES.USAGE_DATA_ERRORED,
-                payload: mockError,
-            },
+            ...BASE_ACTIONS,
+            MOCK_ACTIONS[TYPES.USAGE_DATA_ERRORED],
         ]
-        const store = mockStore(defaultStoreState)
+        const store = mockStore(DEFAULT_STORE_STATE)
         return store
-            .dispatch(updateFilterAndGetData(filterKey, filterValue))
+            .dispatch(updateFilterAndGetData(CATEGORY, TOP_FAVORITES))
             .then(() => {
                 expect(store.getActions()).toEqual(expectedActions)
             })
+    })
+})
+
+describe('updateUsageData', () => {
+    it('creates USAGE_DATA_RECEIVED when getUsageData resolves successfully', () => {
+        api.getUsageData = mockResolvingPromise
+        const expectedActions = [
+            MOCK_ACTIONS[TYPES.USAGE_DATA_REQUESTED],
+            MOCK_ACTIONS[TYPES.USAGE_DATA_RECEIVED],
+        ]
+        const store = mockStore(DEFAULT_STORE_STATE)
+        return store.dispatch(updateUsageData()).then(() => {
+            expect(store.getActions()).toEqual(expectedActions)
+        })
+    })
+    it('creates USAGE_DATA_ERRORED when getUsageData is rejected', () => {
+        api.getUsageData = mockRejectingPromise
+        const expectedActions = [
+            MOCK_ACTIONS[TYPES.USAGE_DATA_REQUESTED],
+            MOCK_ACTIONS[TYPES.USAGE_DATA_ERRORED],
+        ]
+        const store = mockStore(DEFAULT_STORE_STATE)
+        return store.dispatch(updateUsageData()).then(() => {
+            expect(store.getActions()).toEqual(expectedActions)
+        })
     })
 })
 
