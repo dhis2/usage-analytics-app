@@ -10,8 +10,9 @@
     "release": "packages release",
     "prestart": "yarn localize && yarn manifest",
     "start": "node scripts/start.js",
-    "prebuild": "rm -rf build && yarn format && mkdir build && yarn manifest",
-    "build": "yarn localize && node scripts/build.js",
+    "prebuild": "rm -rf build && mkdir build && yarn format && yarn manifest && yarn localize",
+    "build": "node scripts/build.js",
+    "build-local": "yarn prebuild && yarn build",
     "test": "node scripts/test.js",
     "coverage": "npm test -- --coverage"
   },
