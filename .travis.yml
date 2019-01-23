@@ -12,7 +12,7 @@ before_script:
     - './cc-test-reporter before-build'
     - npm install --global @dhis2/deploy-build
 script:
-    - npm run format
+    - npm run prebuild
     - npm run coverage
     - npm run build
 deploy:
