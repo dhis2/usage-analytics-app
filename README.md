@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/dhis2/usage-analytics-app.svg)](https://travis-ci.org/dhis2/usage-analytics-app)
 [![Test Coverage](https://codeclimate.com/github/dhis2/usage-analytics-app/badges/coverage.svg)](https://codeclimate.com/github/dhis2/usage-analytics-app/coverage)
 [![Code Climate](https://codeclimate.com/github/dhis2/usage-analytics-app/badges/gpa.svg)](https://codeclimate.com/github/dhis2/usage-analytics-app)
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fdhis2%2Fusage-analytics-app.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fdhis2%2Fusage-analytics-app?ref=badge_shield)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fdhis2%2Fdhis2-usage-analytics.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fdhis2%2Fdhis2-usage-analytics?ref=badge_shield)
 
 This repo contains the usage analytics app. Which was rewritten from scratch and introduced in DHIS2 version 2.32.
 
@@ -75,4 +75,4 @@ Every commit to master, and version branches (i.e. v30, v31, etc.) is automatica
 
 The software is open source and released under the [BSD 2-Clause License](https://github.com/dhis2/usage-analytics-app/blob/master/LICENSE).
 
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fdhis2%2Fusage-analytics-app.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fdhis2%2Fusage-analytics-app?ref=badge_large)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fdhis2%2Fdhis2-usage-analytics.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fdhis2%2Fdhis2-usage-analytics?ref=badge_large)
