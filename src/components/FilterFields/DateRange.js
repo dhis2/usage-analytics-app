@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import i18n from '@dhis2/d2-i18n'
+import debounce from 'lodash.debounce'
 import './DateRange.css'
 
 export const START_DATE = 'startDate'
@@ -20,6 +21,7 @@ class DateRange extends Component {
         }
         this.onStartDateChange = this.onStartDateChange.bind(this)
         this.onEndDateChange = this.onEndDateChange.bind(this)
+        this.updateUsageData = debounce(props.updateUsageData, 250)
     }
 
     onStartDateChange(event) {
@@ -30,11 +32,7 @@ class DateRange extends Component {
     }
 
     onChange(key, value) {
-        const {
-            updateFilter,
-            updateFilterAndGetData,
-            ...dateRange
-        } = this.props
+        const { updateFilter, updateUsageData, ...dateRange } = this.props
         const errorKey = `${key}Error`
         const otherErrorKey =
             key === START_DATE ? `${END_DATE}Error` : `${START_DATE}Error`
@@ -49,10 +47,10 @@ class DateRange extends Component {
             })
         }
 
-        if (error) {
-            updateFilter(key, value)
-        } else {
-            updateFilterAndGetData(key, value)
+        updateFilter(key, value)
+
+        if (!error) {
+            this.updateUsageData()
         }
     }
 
@@ -113,7 +111,7 @@ DateRange.propTypes = {
     startDate: PropTypes.string,
     endDate: PropTypes.string,
     updateFilter: PropTypes.func.isRequired,
-    updateFilterAndGetData: PropTypes.func.isRequired,
+    updateUsageData: PropTypes.func.isRequired,
 }
 
 export default DateRange

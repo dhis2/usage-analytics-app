@@ -8,24 +8,27 @@ import DateRange, {
     ERROR_END_BEFORE_START,
 } from './DateRange'
 
-const updateFilter = jest.fn()
-const updateFilterAndGetData = jest.fn()
-
-const defaultProps = {
-    startDate: '2018-09-30',
-    endDate: '2018-12-30',
-    updateFilter,
-    updateFilterAndGetData,
-}
-
-const NOT_A_DATE = 'This is not a date'
-
-// Test onChange behavior: valid / invalid / when is props.onChange called
-
 describe('<DateRange/>', () => {
+    jest.useFakeTimers()
+
+    const updateFilter = jest.fn()
+    const updateUsageData = jest.fn()
+
+    const defaultProps = {
+        startDate: '2018-09-30',
+        endDate: '2018-12-30',
+        updateFilter,
+        updateUsageData,
+    }
+    const NOT_A_DATE = 'This is not a date'
+
     const wrapper = shallow(<DateRange {...defaultProps} />)
     const startDateInput = wrapper.find(`.${START_DATE}`)
     const endDateInput = wrapper.find(`.${END_DATE}`)
+
+    afterEach(() => {
+        jest.clearAllMocks()
+    })
 
     it('matches the snapshot with default props', () => {
         expect(wrapper).toMatchSnapshot()
@@ -39,19 +42,21 @@ describe('<DateRange/>', () => {
     it('calls updateFilterAndGetData when startDate changes into a valid value', () => {
         const value = '2018-09-20'
         startDateInput.simulate('change', { target: { value } })
-        expect(updateFilterAndGetData).toBeCalledWith(START_DATE, value)
+        jest.runAllTimers()
+        expect(updateUsageData).toHaveBeenCalledTimes(1)
     })
     it('calls updateFilterAndGetData when endDate changes into a valid value', () => {
         const value = '2019-01-20'
         endDateInput.simulate('change', { target: { value } })
-        expect(updateFilterAndGetData).toBeCalledWith(END_DATE, value)
+        jest.runAllTimers()
+        expect(updateUsageData).toHaveBeenCalledTimes(1)
     })
-    it('calls updateFilter when startDate changes into an invalid value', () => {
+    it('calls updateFilter when startDate changes', () => {
         const value = '2019-12-31'
         startDateInput.simulate('change', { target: { value } })
         expect(updateFilter).toBeCalledWith(START_DATE, value)
     })
-    it('calls updateFilter when startDate changes into an invalid value', () => {
+    it('calls updateFilter when endDate changes', () => {
         const value = '2016-01-20'
         endDateInput.simulate('change', { target: { value } })
         expect(updateFilter).toBeCalledWith(END_DATE, value)

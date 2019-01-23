@@ -5,6 +5,7 @@ import {
     updateCategory,
     updateFilterAndGetData,
     updateFilter,
+    updateUsageData,
 } from '../../actions'
 
 export const CategoryDropDown = connect(
@@ -14,7 +15,7 @@ export const CategoryDropDown = connect(
 
 export const DateRange = connect(
     mapDateRangeProps,
-    { updateFilter, updateFilterAndGetData }
+    { updateFilter, updateUsageData }
 )(DateRangeComponent)
 
 export const IntervalDropDown = connect(

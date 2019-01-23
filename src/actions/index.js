@@ -32,10 +32,23 @@ export const updateFilterAndGetData = (key, value) => (dispatch, getState) => {
     return getUsageData(filter, dispatch)
 }
 
+export const updateUsageData = () => (dispatch, getState) => {
+    const { filter } = getState()
+    return getUsageData(filter, dispatch)
+}
+
 export const updateFilter = (key, value) =>
     createAction(ACTIONS.FILTER_UPDATED, { key, value })
 
-export async function getUsageData(filter, dispatch) {
+export function isNewDataRequiredAfterCategoryChange(oldCategory, newCategory) {
+    return (
+        oldCategory !== newCategory &&
+        ((newCategory === TOP_FAVORITES && oldCategory !== TOP_FAVORITES) ||
+            (oldCategory === TOP_FAVORITES && newCategory !== TOP_FAVORITES))
+    )
+}
+
+async function getUsageData(filter, dispatch) {
     dispatch(createAction(ACTIONS.USAGE_DATA_REQUESTED))
 
     try {
@@ -45,14 +58,6 @@ export async function getUsageData(filter, dispatch) {
         console.error(error)
         dispatch(createAction(ACTIONS.USAGE_DATA_ERRORED, error))
     }
-}
-
-export function isNewDataRequiredAfterCategoryChange(oldCategory, newCategory) {
-    return (
-        oldCategory !== newCategory &&
-        ((newCategory === TOP_FAVORITES && oldCategory !== TOP_FAVORITES) ||
-            (oldCategory === TOP_FAVORITES && newCategory !== TOP_FAVORITES))
-    )
 }
 
 function createAction(type, payload) {
