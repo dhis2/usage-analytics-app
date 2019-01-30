@@ -3,7 +3,7 @@ import reducer, { getInitialState, parseDate } from './filter'
 import { FAVORITE_VIEWS } from '../constants/categories'
 import { WEEK } from '../constants/intervals'
 import { SUM } from '../constants/aggregations'
-import { TOTAL } from '../constants/chartTypes'
+import { ALL } from '../constants/chartTypes'
 import { CHART_VIEW } from '../constants/eventTypes'
 import { ASC } from '../constants/sortOrders'
 
@@ -33,7 +33,7 @@ describe('filter reducer', () => {
             endDate: endDateStr,
             interval: WEEK,
             aggregationLevel: SUM,
-            chartType: TOTAL,
+            chartType: ALL,
             eventType: CHART_VIEW,
             pageSize: 25,
             sortOrder: ASC,
