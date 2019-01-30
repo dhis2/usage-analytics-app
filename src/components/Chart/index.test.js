@@ -1,6 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import { Chart, mapStateToProps } from '.'
+import { onChartResize } from './parseChartData'
 import { LOADING } from '../../constants/statuses'
 import * as CATS from '../../constants/categories'
 import * as AGGRS from '../../constants/aggregations'
@@ -75,5 +76,16 @@ describe('<Chart/>', () => {
             filter: { category: CATS.DATA_VALUES },
         })
         expect(wrapper).toMatchSnapshot()
+    })
+})
+
+describe('onChartResize', () => {
+    it('calls the resize method on the chart object', () => {
+        const mockResize = jest.fn()
+        const mockChart = {
+            resize: mockResize,
+        }
+        onChartResize(mockChart)
+        expect(mockResize).toHaveBeenCalledTimes(1)
     })
 })

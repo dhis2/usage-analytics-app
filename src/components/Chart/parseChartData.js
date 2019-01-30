@@ -60,6 +60,8 @@ export default function parseChartData(
     config.options.scales.yAxes[0].ticks.suggestedMax = max
     config.options.scales.yAxes[0].ticks.suggestedMin = min
 
+    config.options.onResize = onChartResize
+
     return {
         data: {
             labels,
@@ -69,4 +71,8 @@ export default function parseChartData(
         title,
         subtitle,
     }
+}
+
+export function onChartResize(chart) {
+    chart.resize()
 }
