@@ -24,7 +24,13 @@ export function Chart({ shouldHide, loading, chartConfig }) {
             <Fragment>
                 <h4 className="uaa-chart-title">{title}</h4>
                 <h6 className="uaa-chart-subtitle">{subtitle}</h6>
-                <Line data={data} options={options} />
+                {/* 
+                    chart.js canvas needs a dedicated wrapper to have a responsive size
+                    https://www.chartjs.org/docs/latest/general/responsive.html#important-note
+                */}
+                <div className="uaa-chart-wrap">
+                    <Line data={data} options={options} />
+                </div>
             </Fragment>
         )
     }

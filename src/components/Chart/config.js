@@ -18,6 +18,7 @@ export const options = {
         position: 'bottom',
     },
     responsive: true,
+    maintainAspectRatio: false,
     tooltips: {
         mode: 'nearest',
     },
