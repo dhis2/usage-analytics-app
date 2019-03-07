@@ -73,4 +73,4 @@ Every commit to master, and version branches (i.e. v30, v31, etc.) is automatica
 
 The software is open source and released under the [BSD 2-Clause License](https://github.com/dhis2/usage-analytics-app/blob/master/LICENSE).
 
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fdhis2%2Fdhis2-usage-analytics.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fdhis2%2Fdhis2-usage-analytics?ref=badge_large)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fdhis2%2Fdhis2-usage-analytics.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fdhis2%2Fdhis2-usage-analytics?ref=badge_large) [![Greenkeeper badge](https://badges.greenkeeper.io/dhis2/usage-analytics-app.svg)](https://greenkeeper.io/)
