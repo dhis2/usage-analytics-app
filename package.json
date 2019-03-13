@@ -61,7 +61,7 @@
     "chalk": "2.4.2",
     "css-loader": "2.1.0",
     "d2-manifest": "^1.0.0",
-    "dotenv": "6.2.0",
+    "dotenv": "7.0.0",
     "dotenv-expand": "5.0.0",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
