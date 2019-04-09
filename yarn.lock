@@ -3083,6 +3083,11 @@ core-js@^2.4.0, core-js@^2.5.0:
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.3.tgz#4b70938bdffdaf64931e66e2db158f0892289c49"
   integrity sha512-l00tmFFZOBHtYhN4Cz7k32VM7vTn3rE2ANjQDxdEN6zmXZ/xq1jQuutnmHvMG1ZJ7xd72+TA5YpUK8wz3rWsfQ==
 
+core-js@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.0.1.tgz#1343182634298f7f38622f95e73f54e48ddf4738"
+  integrity sha512-sco40rF+2KlE0ROMvydjkrVMMG1vYilP2ALoRXcYR4obqbYIuV3Bg+51GEDW+HF8n7NRA+iaA4qD0nD9lo9mew==
+
 core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
@@ -9281,10 +9286,10 @@ rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-app-polyfill@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/react-app-polyfill/-/react-app-polyfill-0.2.1.tgz#96c701a40b9671c8547f70bdbb4a47f4d5767790"
-  integrity sha512-rcpR+WKmLOoYGDAxXaLlxl5Sw6jqbcD1qg2Okn1Ta2RHCxLuQv75B9Em2L2GvuOTx3lAxDpNl/TYGWbKnO/Aag==
+react-app-polyfill@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/react-app-polyfill/-/react-app-polyfill-0.2.2.tgz#a903b61a8bfd9c5e5f16fc63bebe44d6922a44fb"
+  integrity sha512-mAYn96B/nB6kWG87Ry70F4D4rsycU43VYTj3ZCbKP+SLJXwC0x6YCbwcICh3uW8/C9s1VgP197yx+w7SCWeDdQ==
   dependencies:
     core-js "2.6.4"
     object-assign "4.1.1"

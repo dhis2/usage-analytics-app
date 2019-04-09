@@ -24,24 +24,30 @@ export function getDisplayDateForInterval(
         case YEAR:
             return year
         case MONTH:
-            return getDisplayDateFromIsoString(
-                `${year}-${month}`,
-                dateFormats.yyyymm
-            )
+            return getDisplayDateFromYearMonthDay(year, month)
         case WEEK:
             return `${weekStr} ${week} / ${year}`
         case DAY:
         default:
-            return getDisplayDateFromIsoString(`${year}-${month}-${day}`)
+            return getDisplayDateFromYearMonthDay(year, month, day)
     }
 }
 
-export function getDisplayDateFromIsoString(
-    isoString,
-    dateFormatOptions = dateFormats.yyyymmdd
-) {
+export function getDisplayDateFromIsoString(isoString) {
+    const date = new Date(isoString)
+    return getDisplayDate(date, dateFormats.yyyymmdd)
+}
+
+export function getDisplayDateFromYearMonthDay(year, month, day) {
+    const date = day
+        ? new Date(year, month - 1, day)
+        : new Date(year, month - 1)
+    const format = day ? dateFormats.yyyymmdd : dateFormats.yyyymm
+    return getDisplayDate(date, format)
+}
+
+function getDisplayDate(date, dateFormatOptions) {
     const state = store.getState()
     const locale = state.locale || 'en'
-    const date = new Date(isoString)
     return new Intl.DateTimeFormat(locale, dateFormatOptions).format(date)
 }

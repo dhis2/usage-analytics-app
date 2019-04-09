@@ -31,10 +31,11 @@
   "dependencies": {
     "@dhis2/ui": "^1.0.0-beta.8",
     "chart.js": "^2.7.3",
+    "core-js": "^3.0.1",
     "lodash.debounce": "^4.0.8",
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
-    "react-app-polyfill": "^0.2.1",
+    "react-app-polyfill": "^0.2.2",
     "react-chartjs-2": "^2.7.4",
     "react-dom": "^16.6.3",
     "react-redux": "^6.0.0",

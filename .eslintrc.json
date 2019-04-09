@@ -1,5 +1,10 @@
 {
     "extends": "react-app",
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
     "rules": {
         "react/prop-types": [1],
         "no-unused-vars": [

@@ -1,3 +1,5 @@
+import 'react-app-polyfill/ie11'
+import 'core-js/es/string'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
