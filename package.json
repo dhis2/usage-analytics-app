@@ -35,7 +35,7 @@
     "lodash.debounce": "^4.0.8",
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
-    "react-app-polyfill": "^0.2.2",
+    "react-app-polyfill": "^1.0.0",
     "react-chartjs-2": "^2.7.4",
     "react-dom": "^16.6.3",
     "react-redux": "^6.0.0",
