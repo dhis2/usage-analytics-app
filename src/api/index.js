@@ -13,8 +13,9 @@ export function getDataStatistics({ startDate, endDate, interval }) {
 }
 
 export function getUserLocale() {
-    return getJSON('userSettings')
-        .then(userSettings => userSettings.keyUiLocale)
+    return getJSON('userSettings').then(
+        userSettings => userSettings.keyUiLocale
+    )
 }
 
 export function getUsageData(filter) {

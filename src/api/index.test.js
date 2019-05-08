@@ -3,7 +3,7 @@ import {
     getUsageData,
     getFavorites,
     getDataStatistics,
-    getUserLocale
+    getUserLocale,
 } from './index'
 import { TOP_FAVORITES } from '../constants/categories'
 
@@ -21,15 +21,17 @@ describe('getFavorites', () => {
         const params = {
             eventType: 'eventType',
             pageSize: 'pageSize',
-            sortOrder: 'sortOrder'
+            sortOrder: 'sortOrder',
         }
-        get.getJSON = jest.fn((url) => Promise.resolve(url));
-        window.fetch.mockImplementationOnce(() => Promise.resolve({
-            ok: true,
-            json: () => 'data'
-          }))
+        get.getJSON = jest.fn(url => Promise.resolve(url))
+        window.fetch.mockImplementationOnce(() =>
+            Promise.resolve({
+                ok: true,
+                json: () => 'data',
+            })
+        )
 
-        return expect(getFavorites(params)).resolves.toMatchSnapshot();
+        return expect(getFavorites(params)).resolves.toMatchSnapshot()
     })
 })
 
@@ -38,27 +40,31 @@ describe('getDataStatistics', () => {
         const params = {
             startDate: 'startDate',
             endDate: 'endDate',
-            interval: 'interval'
+            interval: 'interval',
         }
-        get.getJSON = jest.fn((url) => Promise.resolve(url));
-        window.fetch.mockImplementationOnce(() => Promise.resolve({
-            ok: true,
-            json: () => 'data'
-          }))
+        get.getJSON = jest.fn(url => Promise.resolve(url))
+        window.fetch.mockImplementationOnce(() =>
+            Promise.resolve({
+                ok: true,
+                json: () => 'data',
+            })
+        )
 
-        return expect(getDataStatistics(params)).resolves.toMatchSnapshot();
+        return expect(getDataStatistics(params)).resolves.toMatchSnapshot()
     })
 })
 
 describe('getUserLocale', () => {
     it('calls getJSON with the correct URL and queryString', () => {
-        get.getJSON = jest.fn((url) => Promise.resolve({ keyUiLocale: url }));
-        window.fetch.mockImplementationOnce(() => Promise.resolve({
-            ok: true,
-            json: () => 'data'
-          }))
+        get.getJSON = jest.fn(url => Promise.resolve({ keyUiLocale: url }))
+        window.fetch.mockImplementationOnce(() =>
+            Promise.resolve({
+                ok: true,
+                json: () => 'data',
+            })
+        )
 
-        return expect(getUserLocale()).resolves.toMatchSnapshot();
+        return expect(getUserLocale()).resolves.toMatchSnapshot()
     })
 })
 
@@ -68,29 +74,33 @@ describe('getUsageData', () => {
             category: TOP_FAVORITES,
             eventType: 'eventType',
             pageSize: 'pageSize',
-            sortOrder: 'sortOrder'
+            sortOrder: 'sortOrder',
         }
-        get.getJSON = jest.fn((url) => Promise.resolve(url));
-        window.fetch.mockImplementationOnce(() => Promise.resolve({
-            ok: true,
-            json: () => 'data'
-          }))
+        get.getJSON = jest.fn(url => Promise.resolve(url))
+        window.fetch.mockImplementationOnce(() =>
+            Promise.resolve({
+                ok: true,
+                json: () => 'data',
+            })
+        )
 
-        return expect(getUsageData(params)).resolves.toMatchSnapshot();
+        return expect(getUsageData(params)).resolves.toMatchSnapshot()
     })
 
     it('calls getJSON with the correct URL and queryString in other cases', () => {
         const params = {
             startDate: 'startDate',
             endDate: 'endDate',
-            interval: 'interval'
+            interval: 'interval',
         }
-        get.getJSON = jest.fn((url) => Promise.resolve(url));
-        window.fetch.mockImplementationOnce(() => Promise.resolve({
-            ok: true,
-            json: () => 'data'
-          }))
+        get.getJSON = jest.fn(url => Promise.resolve(url))
+        window.fetch.mockImplementationOnce(() =>
+            Promise.resolve({
+                ok: true,
+                json: () => 'data',
+            })
+        )
 
-        return expect(getUsageData(params)).resolves.toMatchSnapshot();
+        return expect(getUsageData(params)).resolves.toMatchSnapshot()
     })
 })
