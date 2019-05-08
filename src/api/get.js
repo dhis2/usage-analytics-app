@@ -1,22 +1,37 @@
-const isProd = process.env.NODE_ENV === 'production'
-
-if (!isProd && !process.env.REACT_APP_DHIS2_BASE_URL) {
-  throw new Error(
-    "The environment variable REACT_APP_DHIS2_BASE_URL must be set when the application is built in development mode."
-  );
+if (!process.env.REACT_APP_DHIS2_BASE_URL) {
+  throw new Error('The environment variable REACT_APP_DHIS2_BASE_URL must be set');
 }
 
-const url = isProd ? '..' : process.env.REACT_APP_DHIS2_BASE_URL;
+const url = process.env.REACT_APP_DHIS2_BASE_URL;
 const endpoint = `${url}/api`;
 const defaultConfig = {
   method: 'GET',
   credentials: 'include',
 }
 
-function getPath(path = '') {
-    return !path ? endpoint : `${endpoint}/${path}`
+export function get(path, config = defaultConfig) {
+  if (!path) {
+    return Promise.reject(new Error('A path must be passed'));
+  }
+
+  return fetch(`${endpoint}/${path}`, config)
+    .then(response => {
+      if (response.ok) {
+        return response;
+      }
+    
+      throw new Error(response.statusText)
+    })
 }
 
-export function get(path, config = defaultConfig) {
-    return fetch(getPath(path), config)
+export function getJSON(path) {
+  return get(path)
+    .then(response => response.json())
+    .then(data => {
+      if (data.status === 'ERROR') {
+        throw new Error(data.message)
+      } else {
+        return data
+      }
+    })
 }
