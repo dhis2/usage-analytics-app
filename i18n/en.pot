@@ -5,8 +5,8 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"POT-Creation-Date: 2019-01-14T15:39:53.085Z\n"
-"PO-Revision-Date: 2019-01-14T15:39:53.085Z\n"
+"POT-Creation-Date: 2019-05-09T20:17:51.370Z\n"
+"PO-Revision-Date: 2019-05-09T20:17:51.370Z\n"
 
 msgid "Usage Analytics"
 msgstr ""
@@ -51,6 +51,9 @@ msgid "Sort Order"
 msgstr ""
 
 msgid "There was an error retrieving the usage analytics data"
+msgstr ""
+
+msgid "Error loading application."
 msgstr ""
 
 msgid "Sum"
