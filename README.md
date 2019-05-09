@@ -2,42 +2,15 @@
 
 [![Build Status](https://travis-ci.com/dhis2/usage-analytics-app.svg)](https://travis-ci.com/dhis2/usage-analytics-app)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fdhis2%2Fdhis2-usage-analytics.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fdhis2%2Fdhis2-usage-analytics?ref=badge_shield)
+[![Greenkeeper badge](https://badges.greenkeeper.io/dhis2/usage-analytics-app.svg)](https://greenkeeper.io/)
 
-This repo contains the usage analytics app. Which was rewritten from scratch and introduced in DHIS2 version 2.32.
-
-It was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app), and later ejected.
+This repo contains the usage analytics app. Which was rewritten from scratch and introduced in DHIS2 version 2.32. It was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 ## Developer guide
 
 ### Prerequisites
 
-To use the usage-analytics-app in development mode, it is necessary to have a running DHIS2 instance, and be logged in to it. Most developers use their local DHIS2 instance. If you haven't configured your DHIS2_HOME env variable and set up a config.json, then the app will default to using localhost:8080 with the admin user (see
-[config/webpack.config.dev.js](config/webpack.config.dev.js#L35)).
-
-### Installation
-
-First clone the repo, then:
-
-```
-yarn install
-yarn start
-```
-
-The webpack-dev-server will start up on http://localhost:3000, by default.
-
-### Running tests
-
-`yarn test or yarn coverage`
-
-### Other useful things to know
-
-#### linting/formatting
-
-The usage-analytics-app uses **@dhis2/packages** linting and formatting, and the build will fail if errors are found that cannot be auto-corrected. To make life easier, we suggest that you add the eslint and prettier plugins to your editor. But if you prefer, you can run the following before pushing your code:
-
-```
-yarn format
-```
+To use the usage-analytics-app in development mode, it is necessary to have a running DHIS2 instance, and be logged in to it. Most developers use their local DHIS2 instance. 
 
 ### Deploy
 
@@ -48,7 +21,7 @@ In order to test the build of the usage-analytics-app (rather than just the dev 
 From the root of the usage-analytics-app, build the usage-analytics-app locally
 
 ```
-yarn build-local
+yarn build
 ```
 
 Then run the command below to install the built project to the `/repository/org/hisp/dhis/dhis-app-usage-analytics` folder of your .m2 directory:
@@ -63,14 +36,14 @@ Navigate to your local dhis2 repo, `/dhis-2/dhis-web` directory. Then run the co
 mvn clean install -o
 ```
 
-Finally, paste the built `dhis.war` file into you Tomcat `/webapps` directory
+Finally, paste the built `dhis.war` file into your Tomcat `/webapps` directory
 
 #### Deploy to production
 
-Every commit to master, and version branches (i.e. v30, v31, etc.) is automatically deployed.
+Every commit to master and version branches (i.e. v30, v31, etc.) is automatically deployed.
 
 ## License
 
 The software is open source and released under the [BSD 2-Clause License](https://github.com/dhis2/usage-analytics-app/blob/master/LICENSE).
 
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fdhis2%2Fdhis2-usage-analytics.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fdhis2%2Fdhis2-usage-analytics?ref=badge_large) [![Greenkeeper badge](https://badges.greenkeeper.io/dhis2/usage-analytics-app.svg)](https://greenkeeper.io/)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fdhis2%2Fdhis2-usage-analytics.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fdhis2%2Fdhis2-usage-analytics?ref=badge_large)

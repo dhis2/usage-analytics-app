@@ -6,8 +6,7 @@ import store from '../store'
 import UsageAnalitics from './UsageAnalytics'
 
 import 'typeface-roboto/index.css'
-import '@dhis2/ui/defaults/reset.css'
-import '@dhis2/ui/defaults/common.css'
+import '@dhis2/ui/css/reset.css'
 
 function App() {
     return (

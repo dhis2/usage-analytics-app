@@ -23,7 +23,7 @@ export class UsageAnalytics extends Component {
         }
 
         if (appStatus === ERROR) {
-            return <Error message={i18n.t('ERROR: Could not load app')} />
+            return <Error message={i18n.t('Error loading application.')} />
         }
 
         return (
