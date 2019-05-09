@@ -92,4 +92,20 @@ describe('initApp', () => {
 
         return expect(initApp({ filter: '' })).resolves.toMatchSnapshot()
     })
+
+    it('calls setLocale correctly', () => {
+        get.getJSON.mockImplementation(url => {
+            if (url === 'userSettings') {
+                return Promise.resolve({ keyUiLocale: 'locale' })
+            }
+
+            return Promise.resolve('usageData')
+        })
+
+        expect.assertions(1)
+
+        return initApp({ filter: '' }).then(() => {
+            expect(locale.setLocale).toHaveBeenCalledWith('locale')
+        })
+    })
 })
