@@ -49,20 +49,6 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "browserslist": {
-    "production": [
-      ">0.5%",
-      "last 2 versions",
-      "Firefox ESR",
-      "ie 11",
-      "not dead"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
   "husky": {
     "hooks": {
       "commit-msg": "d2-style commit check",
