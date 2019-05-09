@@ -9,3 +9,10 @@ exports[`getUsageData calls getJSON with the correct URL and queryString for TOP
 exports[`getUsageData calls getJSON with the correct URL and queryString in other cases 1`] = `"dataStatistics?startDate=startDate&endDate=endDate&interval=interval&_=timestamp"`;
 
 exports[`getUserLocale calls getJSON with the correct URL and queryString 1`] = `"userSettings"`;
+
+exports[`initApp resolves to usageData and locale 1`] = `
+Object {
+  "locale": "locale",
+  "usageData": "usageData",
+}
+`;

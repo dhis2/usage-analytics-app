@@ -1,5 +1,7 @@
+import * as locale from '../utils/locale'
 import * as get from './get'
 import {
+    initApp,
     getUsageData,
     getFavorites,
     getDataStatistics,
@@ -8,7 +10,8 @@ import {
 import { TOP_FAVORITES } from '../constants/categories'
 
 beforeAll(() => {
-    window.fetch = jest.fn()
+    locale.setLocale = jest.fn()
+    get.getJSON = jest.fn()
     Date.now = jest.fn(() => 'timestamp')
 })
 
@@ -23,13 +26,7 @@ describe('getFavorites', () => {
             pageSize: 'pageSize',
             sortOrder: 'sortOrder',
         }
-        get.getJSON = jest.fn(url => Promise.resolve(url))
-        window.fetch.mockImplementationOnce(() =>
-            Promise.resolve({
-                ok: true,
-                json: () => 'data',
-            })
-        )
+        get.getJSON.mockImplementationOnce(url => Promise.resolve(url))
 
         return expect(getFavorites(params)).resolves.toMatchSnapshot()
     })
@@ -42,13 +39,7 @@ describe('getDataStatistics', () => {
             endDate: 'endDate',
             interval: 'interval',
         }
-        get.getJSON = jest.fn(url => Promise.resolve(url))
-        window.fetch.mockImplementationOnce(() =>
-            Promise.resolve({
-                ok: true,
-                json: () => 'data',
-            })
-        )
+        get.getJSON.mockImplementationOnce(url => Promise.resolve(url))
 
         return expect(getDataStatistics(params)).resolves.toMatchSnapshot()
     })
@@ -56,12 +47,8 @@ describe('getDataStatistics', () => {
 
 describe('getUserLocale', () => {
     it('calls getJSON with the correct URL and queryString', () => {
-        get.getJSON = jest.fn(url => Promise.resolve({ keyUiLocale: url }))
-        window.fetch.mockImplementationOnce(() =>
-            Promise.resolve({
-                ok: true,
-                json: () => 'data',
-            })
+        get.getJSON.mockImplementationOnce(url =>
+            Promise.resolve({ keyUiLocale: url })
         )
 
         return expect(getUserLocale()).resolves.toMatchSnapshot()
@@ -76,13 +63,7 @@ describe('getUsageData', () => {
             pageSize: 'pageSize',
             sortOrder: 'sortOrder',
         }
-        get.getJSON = jest.fn(url => Promise.resolve(url))
-        window.fetch.mockImplementationOnce(() =>
-            Promise.resolve({
-                ok: true,
-                json: () => 'data',
-            })
-        )
+        get.getJSON.mockImplementationOnce(url => Promise.resolve(url))
 
         return expect(getUsageData(params)).resolves.toMatchSnapshot()
     })
@@ -93,14 +74,22 @@ describe('getUsageData', () => {
             endDate: 'endDate',
             interval: 'interval',
         }
-        get.getJSON = jest.fn(url => Promise.resolve(url))
-        window.fetch.mockImplementationOnce(() =>
-            Promise.resolve({
-                ok: true,
-                json: () => 'data',
-            })
-        )
+        get.getJSON.mockImplementationOnce(url => Promise.resolve(url))
 
         return expect(getUsageData(params)).resolves.toMatchSnapshot()
+    })
+})
+
+describe('initApp', () => {
+    it('resolves to usageData and locale', () => {
+        get.getJSON.mockImplementation(url => {
+            if (url === 'userSettings') {
+                return Promise.resolve({ keyUiLocale: 'locale' })
+            }
+
+            return Promise.resolve('usageData')
+        })
+
+        return expect(initApp({ filter: '' })).resolves.toMatchSnapshot()
     })
 })
