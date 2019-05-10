@@ -9,9 +9,9 @@ exports[`<FilterSideBar/> Matches the snapshot for any other category, i.e. USER
   >
     Usage Analytics
   </h1>
-  <Connect(Category) />
-  <Connect(DateRange) />
-  <Connect(Interval) />
+  <ConnectFunction />
+  <ConnectFunction />
+  <ConnectFunction />
 </aside>
 `;
 
@@ -24,10 +24,10 @@ exports[`<FilterSideBar/> Matches the snapshot for category: TOP_FAVORITES 1`] =
   >
     Usage Analytics
   </h1>
-  <Connect(Category) />
-  <Connect(EventType) />
-  <Connect(PageSize) />
-  <Connect(SortOrder) />
+  <ConnectFunction />
+  <ConnectFunction />
+  <ConnectFunction />
+  <ConnectFunction />
 </aside>
 `;
 
@@ -40,10 +40,10 @@ exports[`<FilterSideBar/> Matches the snapshot for default category: FAVORITE_VI
   >
     Usage Analytics
   </h1>
-  <Connect(Category) />
-  <Connect(DateRange) />
-  <Connect(Interval) />
-  <Connect(AggregationLevel) />
-  <Connect(ChartType) />
+  <ConnectFunction />
+  <ConnectFunction />
+  <ConnectFunction />
+  <ConnectFunction />
+  <ConnectFunction />
 </aside>
 `;

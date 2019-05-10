@@ -15,6 +15,6 @@ exports[`<App/> Matches the snapshot 1`] = `
   <HeaderBarContainer
     appName="Usage Analytics"
   />
-  <Connect(UsageAnalytics) />
+  <ConnectFunction />
 </Provider>
 `;

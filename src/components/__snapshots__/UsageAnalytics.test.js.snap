@@ -4,12 +4,12 @@ exports[`<UsageAnalytics/> Matches the snapshot 1`] = `
 <main
   className="uaa-container"
 >
-  <Connect(FilterSideBar) />
+  <ConnectFunction />
   <section
     className="uaa-content"
   >
-    <Connect(Chart) />
-    <Connect(Table) />
+    <ConnectFunction />
+    <ConnectFunction />
   </section>
 </main>
 `;
