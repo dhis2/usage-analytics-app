@@ -1,7 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { shallow } from 'enzyme'
+import createSerializer from '../../test/serializer'
+import { mount } from 'enzyme'
 import App from './App'
+
+expect.addSnapshotSerializer(createSerializer(2))
 
 describe('<App/>', () => {
     it('renders without crashing', () => {
@@ -9,8 +12,9 @@ describe('<App/>', () => {
         ReactDOM.render(<App />, div)
         ReactDOM.unmountComponentAtNode(div)
     })
-    it('Matches the snapshot', () => {
-        const tree = shallow(<App />)
+
+    it('renders the expected tree', () => {
+        const tree = mount(<App />)
         expect(tree).toMatchSnapshot()
     })
 })

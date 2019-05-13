@@ -1,20 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<App/> Matches the snapshot 1`] = `
-<Provider
-  store={
-    Object {
-      "dispatch": [Function],
-      "getState": [Function],
-      "replaceReducer": [Function],
-      "subscribe": [Function],
-      Symbol(observable): [Function],
-    }
-  }
->
-  <HeaderBarContainer
-    appName="Usage Analytics"
-  />
-  <ConnectFunction />
+exports[`<App/> renders the expected tree 1`] = `
+<Provider>
+  <HeaderBarContainer>
+    <HeaderBar />
+  </HeaderBarContainer>
+  <ConnectFunction>
+    <UsageAnalytics />
+  </ConnectFunction>
 </Provider>
 `;
