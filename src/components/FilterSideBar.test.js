@@ -4,7 +4,7 @@ import { FilterSideBar, mapStateToProps } from './FilterSideBar'
 import { FAVORITE_VIEWS, TOP_FAVORITES, USERS } from '../constants/categories'
 
 jest.mock('react-redux', () => ({
-    connect: jest.fn(() => component => component.name),
+    connect: jest.fn(() => component => `Connected${component.name}`),
 }))
 
 const defaultState = { filter: { category: FAVORITE_VIEWS } }
