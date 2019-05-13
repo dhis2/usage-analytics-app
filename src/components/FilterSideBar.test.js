@@ -3,6 +3,10 @@ import { shallow } from 'enzyme'
 import { FilterSideBar, mapStateToProps } from './FilterSideBar'
 import { FAVORITE_VIEWS, TOP_FAVORITES, USERS } from '../constants/categories'
 
+jest.mock('react-redux', () => ({
+    connect: jest.fn(() => component => component.name),
+}))
+
 const defaultState = { filter: { category: FAVORITE_VIEWS } }
 
 describe('<FilterSideBar/>', () => {
