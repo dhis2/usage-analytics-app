@@ -1,12 +1,11 @@
 import React from 'react'
-import { mount } from 'enzyme'
-import createSerializer from '../../test/serializer'
-import store from '../store'
-import { Provider } from 'react-redux'
+import { shallow } from 'enzyme'
 import { UsageAnalytics } from './UsageAnalytics'
 import { LOADING, READY, ERROR } from '../constants/statuses'
 
-expect.addSnapshotSerializer(createSerializer(3))
+jest.mock('react-redux', () => ({
+    connect: jest.fn(() => component => `Connected${component.name}`),
+}))
 
 const defaultProps = {
     initApp: jest.fn(),
@@ -15,30 +14,21 @@ const defaultProps = {
 
 describe('<UsageAnalytics/>', () => {
     it('Matches the snapshot', () => {
-        const options = {
-            wrappingComponent: Provider,
-            wrappingComponentProps: { store },
-        }
-        const tree = mount(<UsageAnalytics {...defaultProps} />, options)
+        const tree = shallow(<UsageAnalytics {...defaultProps} />)
+
         expect(tree).toMatchSnapshot()
     })
     it('Renders a <CircularProgress/> when appStatus equals LOADING', () => {
-        const options = {
-            wrappingComponent: Provider,
-            wrappingComponentProps: { store },
-        }
         const props = { ...defaultProps, appStatus: LOADING }
-        const wrapper = mount(<UsageAnalytics {...props} />, options)
+        const wrapper = shallow(<UsageAnalytics {...props} />)
+
         expect(wrapper.find('CircularProgress').length).toEqual(1)
     })
 
     it('Renders an <Error/> when appStatus equals ERROR', () => {
-        const options = {
-            wrappingComponent: Provider,
-            wrappingComponentProps: { store },
-        }
         const props = { ...defaultProps, appStatus: ERROR }
-        const wrapper = mount(<UsageAnalytics {...props} />, options)
+        const wrapper = shallow(<UsageAnalytics {...props} />)
+
         expect(wrapper.find('Error').length).toEqual(1)
     })
 })

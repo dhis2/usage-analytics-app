@@ -1,20 +1,28 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import createSerializer from '../../test/serializer'
-import { mount } from 'enzyme'
+import { shallow } from 'enzyme'
 import App from './App'
 
-expect.addSnapshotSerializer(createSerializer(2))
+beforeEach(() => {
+    jest.resetModules()
+})
 
 describe('<App/>', () => {
     it('renders without crashing', () => {
         const div = document.createElement('div')
+
         ReactDOM.render(<App />, div)
         ReactDOM.unmountComponentAtNode(div)
     })
 
     it('renders the expected tree', () => {
-        const tree = mount(<App />)
+        jest.doMock('react-redux', () => ({
+            connect: jest.fn(() => component => `Connected${component.name}`),
+            Provider: () => <div />,
+        }))
+        const App = require('./App').default
+        const tree = shallow(<App />)
+
         expect(tree).toMatchSnapshot()
     })
 })

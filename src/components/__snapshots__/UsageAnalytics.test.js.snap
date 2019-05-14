@@ -1,19 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<UsageAnalytics/> Matches the snapshot 1`] = `
-<main>
-  <ConnectFunction>
-    <FilterSideBar>
-      <aside />
-    </FilterSideBar>
-  </ConnectFunction>
-  <section>
-    <ConnectFunction>
-      <Chart />
-    </ConnectFunction>
-    <ConnectFunction>
-      <Table />
-    </ConnectFunction>
+<main
+  className="uaa-container"
+>
+  <ConnectedFilterSideBar />
+  <section
+    className="uaa-content"
+  >
+    <ConnectedChart />
+    <ConnectedTable />
   </section>
 </main>
 `;
