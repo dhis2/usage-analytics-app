@@ -8,9 +8,9 @@ import DateRange, {
     ERROR_END_BEFORE_START,
 } from './DateRange'
 
-describe('<DateRange/>', () => {
-    jest.useFakeTimers()
+jest.mock('lodash.debounce', () => fn => fn)
 
+describe('<DateRange/>', () => {
     const updateFilter = jest.fn()
     const updateUsageData = jest.fn()
 
@@ -42,13 +42,11 @@ describe('<DateRange/>', () => {
     it('calls updateFilterAndGetData when startDate changes into a valid value', () => {
         const value = '2018-09-20'
         startDateInput.simulate('change', { target: { value } })
-        jest.runAllTimers()
         expect(updateUsageData).toHaveBeenCalledTimes(1)
     })
     it('calls updateFilterAndGetData when endDate changes into a valid value', () => {
         const value = '2019-01-20'
         endDateInput.simulate('change', { target: { value } })
-        jest.runAllTimers()
         expect(updateUsageData).toHaveBeenCalledTimes(1)
     })
     it('calls updateFilter when startDate changes', () => {

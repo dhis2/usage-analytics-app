@@ -52,5 +52,15 @@
       "commit-msg": "d2-style commit check",
       "pre-commit": "d2-style js apply"
     }
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",	
+      "!src/**/*.d.ts",	
+      "!src/serviceWorker.js",	
+      "!src/index.js",	
+      "!src/store.js",	
+      "!src/__mockData__/**/*.js"
+    ]
   }
 }
