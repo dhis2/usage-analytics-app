@@ -18,11 +18,11 @@ describe('<UsageAnalytics/>', () => {
 
         expect(tree).toMatchSnapshot()
     })
-    it('Renders a <CircularProgress/> when appStatus equals LOADING', () => {
+    it('Renders a <CircularLoader/> when appStatus equals LOADING', () => {
         const props = { ...defaultProps, appStatus: LOADING }
         const wrapper = shallow(<UsageAnalytics {...props} />)
 
-        expect(wrapper.find('CircularProgress').length).toEqual(1)
+        expect(wrapper.find('CircularLoader').length).toEqual(1)
     })
 
     it('Renders an <Error/> when appStatus equals ERROR', () => {

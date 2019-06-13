@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import i18n from '@dhis2/d2-i18n'
-import CircularProgress from '@dhis2/ui/core/CircularProgress'
+import { CircularLoader } from '@dhis2/ui-core'
 import { LOADING, ERROR } from '../constants/statuses'
 import { initApp } from '../actions'
 import Error from './Error'
@@ -19,7 +19,7 @@ export class UsageAnalytics extends Component {
         const { appStatus } = this.props
 
         if (appStatus === LOADING) {
-            return <CircularProgress overlay size="large" />
+            return <CircularLoader overlay size="large" />
         }
 
         if (appStatus === ERROR) {

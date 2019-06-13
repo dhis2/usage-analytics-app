@@ -104,7 +104,11 @@ describe('updateCategory', () => {
         ]
         const store = mockStore(DEFAULT_STORE_STATE)
         return store
-            .dispatch(updateCategory(CATEGORY, TOP_FAVORITES))
+            .dispatch(
+                updateCategory({
+                    target: { name: CATEGORY, value: TOP_FAVORITES },
+                })
+            )
             .then(() => {
                 expect(store.getActions()).toEqual(expectedActions)
             })
@@ -118,7 +122,11 @@ describe('updateCategory', () => {
         ]
         const store = mockStore(DEFAULT_STORE_STATE)
         return store
-            .dispatch(updateCategory(CATEGORY, TOP_FAVORITES))
+            .dispatch(
+                updateCategory({
+                    target: { name: CATEGORY, value: TOP_FAVORITES },
+                })
+            )
             .then(() => {
                 expect(store.getActions()).toEqual(expectedActions)
             })
@@ -133,7 +141,11 @@ describe('updateCategory', () => {
         }
         const expectedActions = [updateAction]
         const store = mockStore(DEFAULT_STORE_STATE)
-        store.dispatch(updateCategory(CATEGORY, FAVORITES_SAVED))
+        store.dispatch(
+            updateCategory({
+                target: { name: CATEGORY, value: FAVORITES_SAVED },
+            })
+        )
         expect(store.getActions()).toEqual(expectedActions)
     })
 })
@@ -153,7 +165,11 @@ describe('updateFilterAndGetData', () => {
         ]
         const store = mockStore(DEFAULT_STORE_STATE)
         return store
-            .dispatch(updateFilterAndGetData(CATEGORY, TOP_FAVORITES))
+            .dispatch(
+                updateFilterAndGetData({
+                    target: { name: CATEGORY, value: TOP_FAVORITES },
+                })
+            )
             .then(() => {
                 expect(store.getActions()).toEqual(expectedActions)
             })
@@ -167,7 +183,11 @@ describe('updateFilterAndGetData', () => {
         ]
         const store = mockStore(DEFAULT_STORE_STATE)
         return store
-            .dispatch(updateFilterAndGetData(CATEGORY, TOP_FAVORITES))
+            .dispatch(
+                updateFilterAndGetData({
+                    target: { name: CATEGORY, value: TOP_FAVORITES },
+                })
+            )
             .then(() => {
                 expect(store.getActions()).toEqual(expectedActions)
             })

@@ -2,7 +2,7 @@ import i18n from '@dhis2/d2-i18n'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { connect } from 'react-redux'
-import { CircularProgress } from '@dhis2/ui/core/CircularProgress'
+import { CircularLoader } from '@dhis2/ui-core'
 import { FAVORITE_VIEWS } from '../constants/categories'
 import { TABLE_FIELDS as FIELDS } from '../constants/fields'
 import {
@@ -58,7 +58,7 @@ export function Table({ error, loading, tableData }) {
             />
         )
     } else if (loading) {
-        content = <CircularProgress overlay />
+        content = <CircularLoader overlay />
     } else {
         const { headers, rows } = tableData
         content = (
