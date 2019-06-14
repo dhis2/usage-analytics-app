@@ -26,9 +26,9 @@ const getWrapperForState = ({ filter, usageData }) => {
 }
 
 describe('<Table/>', () => {
-    it('Renders a <CircularProgress/> when usageData equals LOADING', () => {
+    it('Renders a <CircularLoader/> when usageData equals LOADING', () => {
         const wrapper = getWrapperForState({ usageData: LOADING })
-        expect(wrapper.find('CircularProgress').length).toEqual(1)
+        expect(wrapper.find('CircularLoader').length).toEqual(1)
     })
     it('Renders an <Error/> when usageData equals ERROR', () => {
         const wrapper = getWrapperForState({ usageData: ERROR })

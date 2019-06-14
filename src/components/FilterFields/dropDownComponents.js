@@ -1,6 +1,6 @@
 import React from 'react'
 import i18n from '@dhis2/d2-i18n'
-import SelectField from '@dhis2/ui/core/SelectField'
+import { SelectField } from '@dhis2/ui-core'
 import withMargin from './withMargin'
 
 import CATEGORIES from '../../constants/categories'
@@ -19,68 +19,89 @@ export const Category = props => (
     <SelectFieldWithMargin
         {...props}
         name="category"
-        list={CATEGORIES}
         label={i18n.t('Category')}
         kind={FIELD_KIND}
-    />
+    >
+        {CATEGORIES.map(i => (
+            <option value={i.value}>{i.label}</option>
+        ))}
+    </SelectFieldWithMargin>
 )
 
 export const Interval = props => (
     <SelectFieldWithMargin
         {...props}
         name="interval"
-        list={INTERVALS}
         label={i18n.t('Interval')}
         kind={FIELD_KIND}
-    />
+    >
+        {INTERVALS.map(i => (
+            <option value={i.value}>{i.label}</option>
+        ))}
+    </SelectFieldWithMargin>
 )
 
 export const AggregationLevel = props => (
     <SelectFieldWithMargin
         {...props}
         name="aggregationLevel"
-        list={AGGREGATIONS}
         label={i18n.t('Aggregation Level')}
         kind={FIELD_KIND}
-    />
+    >
+        {AGGREGATIONS.map(i => (
+            <option value={i.value}>{i.label}</option>
+        ))}
+    </SelectFieldWithMargin>
 )
 
 export const ChartType = props => (
     <SelectFieldWithMargin
         {...props}
         name="chartType"
-        list={CHART_TYPES}
         label={i18n.t('Chart Type')}
         kind={FIELD_KIND}
-    />
+    >
+        {CHART_TYPES.map(i => (
+            <option value={i.value}>{i.label}</option>
+        ))}
+    </SelectFieldWithMargin>
 )
 
 export const EventType = props => (
     <SelectFieldWithMargin
         {...props}
         name="eventType"
-        list={EVENT_TYPES}
         label={i18n.t('Event Type')}
         kind={FIELD_KIND}
-    />
+    >
+        {EVENT_TYPES.map(i => (
+            <option value={i.value}>{i.label}</option>
+        ))}
+    </SelectFieldWithMargin>
 )
 
 export const PageSize = props => (
     <SelectFieldWithMargin
         {...props}
         name="pageSize"
-        list={PAGE_SIZES}
         label={i18n.t('Page Size')}
         kind={FIELD_KIND}
-    />
+    >
+        {PAGE_SIZES.map(i => (
+            <option value={i.value}>{i.label}</option>
+        ))}
+    </SelectFieldWithMargin>
 )
 
 export const SortOrder = props => (
     <SelectFieldWithMargin
         {...props}
         name="sortOrder"
-        list={SORT_ORDERS}
         label={i18n.t('Sort Order')}
         kind={FIELD_KIND}
-    />
+    >
+        {SORT_ORDERS.map(i => (
+            <option value={i.value}>{i.label}</option>
+        ))}
+    </SelectFieldWithMargin>
 )

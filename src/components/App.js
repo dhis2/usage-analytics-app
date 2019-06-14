@@ -1,19 +1,26 @@
 import React from 'react'
 import i18n from '@dhis2/d2-i18n'
 import { Provider } from 'react-redux'
-import Headerbar from '@dhis2/ui/widgets/HeaderBar'
 import store from '../store'
 import UsageAnalytics from './UsageAnalytics'
 
 import 'typeface-roboto/index.css'
-import '@dhis2/ui/css/reset.css'
+
+import { CssReset } from '@dhis2/ui-core'
+import { HeaderBar } from '@dhis2/ui-widgets'
+import { DataProvider } from '@dhis2/app-runtime'
+
+const url = process.env.REACT_APP_DHIS2_BASE_URL
 
 function App() {
     return (
-        <Provider store={store}>
-            <Headerbar appName={i18n.t('Usage Analytics')} />
-            <UsageAnalytics />
-        </Provider>
+        <DataProvider baseUrl={url} apiVersion="">
+            <Provider store={store}>
+                <CssReset />
+                <HeaderBar appName={i18n.t('Usage Analytics')} />
+                <UsageAnalytics />
+            </Provider>
+        </DataProvider>
     )
 }
 

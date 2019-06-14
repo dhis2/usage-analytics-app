@@ -16,7 +16,9 @@
     "pretest": "yarn localize"
   },
   "dependencies": {
-    "@dhis2/ui": "^1.0.0-beta.14",
+    "@dhis2/app-runtime": "^1.2.0",
+    "@dhis2/ui-core": "^3.1.0",
+    "@dhis2/ui-widgets": "^1.0.4",
     "chart.js": "^2.7.3",
     "core-js": "^3.0.1",
     "lodash.debounce": "^4.0.8",
@@ -55,11 +57,11 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "src/**/*.{js,jsx,ts,tsx}",	
-      "!src/**/*.d.ts",	
-      "!src/serviceWorker.js",	
-      "!src/index.js",	
-      "!src/store.js",	
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/**/*.d.ts",
+      "!src/serviceWorker.js",
+      "!src/index.js",
+      "!src/store.js",
       "!src/__mockData__/**/*.js"
     ]
   }

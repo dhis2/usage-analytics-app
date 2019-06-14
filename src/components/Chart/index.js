@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { CircularProgress } from '@dhis2/ui/core/CircularProgress'
+import { CircularLoader } from '@dhis2/ui-core'
 import { Line } from 'react-chartjs-2'
 import parseChartData from './parseChartData'
 import { LOADING, ERROR } from '../../constants/statuses'
@@ -17,14 +17,14 @@ export function Chart({ shouldHide, loading, chartConfig }) {
     if (shouldHide) {
         return null
     } else if (loading) {
-        content = <CircularProgress overlay />
+        content = <CircularLoader overlay />
     } else {
         const { options, data, title, subtitle } = chartConfig
         content = (
             <Fragment>
                 <h4 className="uaa-chart-title">{title}</h4>
                 <h6 className="uaa-chart-subtitle">{subtitle}</h6>
-                {/* 
+                {/*
                     chart.js canvas needs a dedicated wrapper to have a responsive size
                     https://www.chartjs.org/docs/latest/general/responsive.html#important-note
                 */}
