@@ -13,11 +13,12 @@ import SORT_ORDERS from '../../constants/sortOrders'
 
 const FIELD_KIND = 'filled'
 
+const withKind = props => ({ ...props, [FIELD_KIND]: true })
 const SelectFieldWithMargin = withMargin(SelectField)
 
 export const Category = props => (
     <SelectFieldWithMargin
-        {...props}
+        {...withKind(props)}
         name="category"
         label={i18n.t('Category')}
         kind={FIELD_KIND}
@@ -30,7 +31,7 @@ export const Category = props => (
 
 export const Interval = props => (
     <SelectFieldWithMargin
-        {...props}
+        {...withKind(props)}
         name="interval"
         label={i18n.t('Interval')}
         kind={FIELD_KIND}
@@ -43,7 +44,7 @@ export const Interval = props => (
 
 export const AggregationLevel = props => (
     <SelectFieldWithMargin
-        {...props}
+        {...withKind(props)}
         name="aggregationLevel"
         label={i18n.t('Aggregation Level')}
         kind={FIELD_KIND}
@@ -56,7 +57,7 @@ export const AggregationLevel = props => (
 
 export const ChartType = props => (
     <SelectFieldWithMargin
-        {...props}
+        {...withKind(props)}
         name="chartType"
         label={i18n.t('Chart Type')}
         kind={FIELD_KIND}
@@ -69,7 +70,7 @@ export const ChartType = props => (
 
 export const EventType = props => (
     <SelectFieldWithMargin
-        {...props}
+        {...withKind(props)}
         name="eventType"
         label={i18n.t('Event Type')}
         kind={FIELD_KIND}
@@ -82,7 +83,7 @@ export const EventType = props => (
 
 export const PageSize = props => (
     <SelectFieldWithMargin
-        {...props}
+        {...withKind(props)}
         name="pageSize"
         label={i18n.t('Page Size')}
         kind={FIELD_KIND}
@@ -95,7 +96,7 @@ export const PageSize = props => (
 
 export const SortOrder = props => (
     <SelectFieldWithMargin
-        {...props}
+        {...withKind(props)}
         name="sortOrder"
         label={i18n.t('Sort Order')}
         kind={FIELD_KIND}
