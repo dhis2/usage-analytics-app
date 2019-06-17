@@ -2,7 +2,7 @@
 
 exports[`dropDownComponents <AggregationLevel/> matches the snapshot 1`] = `
 <ComponentWithMargin
-  kind="filled"
+  filled={true}
   label="Aggregation Level"
   name="aggregationLevel"
   onChange={[MockFunction]}
@@ -23,7 +23,7 @@ exports[`dropDownComponents <AggregationLevel/> matches the snapshot 1`] = `
 
 exports[`dropDownComponents <Category/> matches the snapshot 1`] = `
 <ComponentWithMargin
-  kind="filled"
+  filled={true}
   label="Category"
   name="category"
   onChange={[MockFunction]}
@@ -59,7 +59,7 @@ exports[`dropDownComponents <Category/> matches the snapshot 1`] = `
 
 exports[`dropDownComponents <ChartType/> matches the snapshot 1`] = `
 <ComponentWithMargin
-  kind="filled"
+  filled={true}
   label="Chart Type"
   name="chartType"
   onChange={[MockFunction]}
@@ -80,7 +80,7 @@ exports[`dropDownComponents <ChartType/> matches the snapshot 1`] = `
 
 exports[`dropDownComponents <EventType/> matches the snapshot 1`] = `
 <ComponentWithMargin
-  kind="filled"
+  filled={true}
   label="Event Type"
   name="eventType"
   onChange={[MockFunction]}
@@ -126,7 +126,7 @@ exports[`dropDownComponents <EventType/> matches the snapshot 1`] = `
 
 exports[`dropDownComponents <Interval/> matches the snapshot 1`] = `
 <ComponentWithMargin
-  kind="filled"
+  filled={true}
   label="Interval"
   name="interval"
   onChange={[MockFunction]}
@@ -157,7 +157,7 @@ exports[`dropDownComponents <Interval/> matches the snapshot 1`] = `
 
 exports[`dropDownComponents <PageSize/> matches the snapshot 1`] = `
 <ComponentWithMargin
-  kind="filled"
+  filled={true}
   label="Page Size"
   name="pageSize"
   onChange={[MockFunction]}
@@ -193,7 +193,7 @@ exports[`dropDownComponents <PageSize/> matches the snapshot 1`] = `
 
 exports[`dropDownComponents <SortOrder/> matches the snapshot 1`] = `
 <ComponentWithMargin
-  kind="filled"
+  filled={true}
   label="Sort Order"
   name="sortOrder"
   onChange={[MockFunction]}
