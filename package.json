@@ -16,9 +16,9 @@
     "pretest": "yarn localize"
   },
   "dependencies": {
-    "@dhis2/app-runtime": "^1.2.0",
-    "@dhis2/ui-core": "^3.1.0",
-    "@dhis2/ui-widgets": "^1.0.4",
+    "@dhis2/app-runtime": "1.2.0",
+    "@dhis2/ui-core": "3.3.0",
+    "@dhis2/ui-widgets": "1.0.5",
     "chart.js": "^2.7.3",
     "core-js": "^3.0.1",
     "lodash.debounce": "^4.0.8",

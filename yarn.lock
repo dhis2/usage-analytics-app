@@ -998,7 +998,7 @@
   resolved "https://registry.yarnpkg.com/@csstools/normalize.css/-/normalize.css-9.0.1.tgz#c27b391d8457d1e893f1eddeaf5e5412d12ffbb5"
   integrity sha512-6It2EVfGskxZCQhuykrfnALg7oVeiI6KclWSmGDqB0AiInVrTGB9Jp9i4/Ad21u9Jde/voVQz6eFX/eSg/UsPA==
 
-"@dhis2/app-runtime@^1.2.0":
+"@dhis2/app-runtime@1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@dhis2/app-runtime/-/app-runtime-1.2.0.tgz#87e22d817a13d45a7d89d854e6152cfd959ec55d"
   integrity sha512-2JOKPYIdNVpb6vVwuqmO+1ERelUdOYqFgWJDD2xnMNWYhNOPxvqi8v5rPLaOfTsUWeQ0RgBukPfRRJbBSqkipw==
@@ -1087,15 +1087,7 @@
     tape "^4.9.1"
     yargs "^12.0.5"
 
-"@dhis2/ui-core@2.0.2":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@dhis2/ui-core/-/ui-core-2.0.2.tgz#ef71d18ebe7ca8b0070fef3ead4a05087fafea0c"
-  integrity sha512-Vacm6NQ3UF4Iss7X5n17ggXQ5l2gdRMFw/VrVriaGWSZ4At9Br6C7QNnZ/OK6t+6D9B0ETTXaahbDmCyUXMAhA==
-  dependencies:
-    classnames "^2.2.6"
-    styled-jsx "^3.2.1"
-
-"@dhis2/ui-core@^3.1.0":
+"@dhis2/ui-core@3.1.0":
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@dhis2/ui-core/-/ui-core-3.1.0.tgz#cd6b075b3df68e05148fbd635dc4721a67f5773c"
   integrity sha512-/GVnsqpBdbVExDUSdGbTCC7vj527HyFeyVNz69BVNAYg26epdI1MDJ/GssDRQQ/AuiYAp9GAflVR0n4U7BSj/A==
@@ -1103,21 +1095,21 @@
     classnames "^2.2.6"
     styled-jsx "^3.2.1"
 
-"@dhis2/ui-widgets@^1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@dhis2/ui-widgets/-/ui-widgets-1.0.4.tgz#17ea6d24fa0d62ca70706c3acca43f204703168d"
-  integrity sha512-dE2FYQlvrKy73Sa9KpCcWiRsVgLli//ClNHvq0zuMZB5Y94Lwq0jIwkieilnnQTyqpBakP7eFMBfRlDlfQS7cw==
+"@dhis2/ui-core@3.3.0":
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/@dhis2/ui-core/-/ui-core-3.3.0.tgz#cc83fdaea714851ee616643d260b14b84d25d738"
+  integrity sha512-zPq8PjRdsqPAfCLAo4PuuxONd9X5lXz614BQsFS1yIwNcYI+Rbju41Gym0lu4LMrvetetvxmTNbTcJTIsYTrKA==
   dependencies:
-    "@dhis2/d2-i18n" "1.0.4"
-    "@dhis2/ui-core" "2.0.2"
     classnames "^2.2.6"
     styled-jsx "^3.2.1"
 
-"@dhis2/ui@^1.0.0-beta.14":
-  version "1.0.0-beta.15"
-  resolved "https://registry.yarnpkg.com/@dhis2/ui/-/ui-1.0.0-beta.15.tgz#3dc7484174f1db686dd6f10cbad8271d84f3a0b9"
-  integrity sha512-VT+XbhFiVpVjLlX1/MkLsb0fWAdVOu0GcHCKa+s6olh5TnhZKdU8zwIZXiPaYng0oqFfufYIqBsJi9139l1zyQ==
+"@dhis2/ui-widgets@1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@dhis2/ui-widgets/-/ui-widgets-1.0.5.tgz#c05ecbbd86a9d1b4306e9b98689f98959eade7ee"
+  integrity sha512-gPujfuz4N+MNvLUYYgSF4I05XfwCC32CZK0JzxP7N+ZWWyooDzHVTjLykQA2xzyUCsnGf6OxgXQCjp/KATEE1g==
   dependencies:
+    "@dhis2/d2-i18n" "1.0.4"
+    "@dhis2/ui-core" "3.1.0"
     classnames "^2.2.6"
     styled-jsx "^3.2.1"
 
