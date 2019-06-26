@@ -79,7 +79,9 @@ export const EventType = props => (
         label={i18n.t('Event Type')}
     >
         {EVENT_TYPES.map(i => (
-            <option value={i.value}>{i.label}</option>
+            <option key={i.value} value={i.value}>
+                {i.label}
+            </option>
         ))}
     </SelectFieldWithMargin>
 )
@@ -91,7 +93,9 @@ export const PageSize = props => (
         label={i18n.t('Page Size')}
     >
         {PAGE_SIZES.map(i => (
-            <option value={i.value}>{i.label}</option>
+            <option key={i.value} value={i.value}>
+                {i.label}
+            </option>
         ))}
     </SelectFieldWithMargin>
 )
@@ -103,7 +107,9 @@ export const SortOrder = props => (
         label={i18n.t('Sort Order')}
     >
         {SORT_ORDERS.map(i => (
-            <option value={i.value}>{i.label}</option>
+            <option key={i.value} value={i.value}>
+                {i.label}
+            </option>
         ))}
     </SelectFieldWithMargin>
 )
