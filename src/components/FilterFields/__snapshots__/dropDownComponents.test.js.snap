@@ -9,11 +9,13 @@ exports[`dropDownComponents <AggregationLevel/> matches the snapshot 1`] = `
   value="test"
 >
   <option
+    key="SUM"
     value="SUM"
   >
     Sum
   </option>
   <option
+    key="AVERAGE"
     value="AVERAGE"
   >
     Average
@@ -30,26 +32,31 @@ exports[`dropDownComponents <Category/> matches the snapshot 1`] = `
   value="test"
 >
   <option
+    key="FAVORITE_VIEWS"
     value="FAVORITE_VIEWS"
   >
     Favorite views
   </option>
   <option
+    key="FAVORITES_SAVED"
     value="FAVORITES_SAVED"
   >
     Favorites saved
   </option>
   <option
+    key="USERS"
     value="USERS"
   >
     Users
   </option>
   <option
+    key="TOP_FAVORITES"
     value="TOP_FAVORITES"
   >
     Top favorites
   </option>
   <option
+    key="DATA_VALUES"
     value="DATA_VALUES"
   >
     Data values
@@ -66,11 +73,13 @@ exports[`dropDownComponents <ChartType/> matches the snapshot 1`] = `
   value="test"
 >
   <option
+    key="ALL"
     value="ALL"
   >
     All
   </option>
   <option
+    key="TOTAL"
     value="TOTAL"
   >
     Total
@@ -87,36 +96,43 @@ exports[`dropDownComponents <EventType/> matches the snapshot 1`] = `
   value="test"
 >
   <option
+    key="CHART_VIEW"
     value="CHART_VIEW"
   >
     Chart
   </option>
   <option
+    key="MAP_VIEW"
     value="MAP_VIEW"
   >
     Map
   </option>
   <option
+    key="REPORT_TABLE_VIEW"
     value="REPORT_TABLE_VIEW"
   >
     Report table
   </option>
   <option
+    key="EVENT_REPORT_VIEW"
     value="EVENT_REPORT_VIEW"
   >
     Event report
   </option>
   <option
+    key="EVENT_CHART_VIEW"
     value="EVENT_CHART_VIEW"
   >
     Event chart
   </option>
   <option
+    key="DASHBOARD_VIEW"
     value="DASHBOARD_VIEW"
   >
     Dashboard
   </option>
   <option
+    key="DATA_SET_REPORT_VIEW"
     value="DATA_SET_REPORT_VIEW"
   >
     Data set report
@@ -133,21 +149,25 @@ exports[`dropDownComponents <Interval/> matches the snapshot 1`] = `
   value="test"
 >
   <option
+    key="DAY"
     value="DAY"
   >
     Day
   </option>
   <option
+    key="WEEK"
     value="WEEK"
   >
     Week
   </option>
   <option
+    key="MONTH"
     value="MONTH"
   >
     Month
   </option>
   <option
+    key="YEAR"
     value="YEAR"
   >
     Year
@@ -164,26 +184,31 @@ exports[`dropDownComponents <PageSize/> matches the snapshot 1`] = `
   value="test"
 >
   <option
+    key="5"
     value={5}
   >
     5
   </option>
   <option
+    key="10"
     value={10}
   >
     10
   </option>
   <option
+    key="15"
     value={15}
   >
     15
   </option>
   <option
+    key="20"
     value={20}
   >
     20
   </option>
   <option
+    key="25"
     value={25}
   >
     25
@@ -200,11 +225,13 @@ exports[`dropDownComponents <SortOrder/> matches the snapshot 1`] = `
   value="test"
 >
   <option
+    key="ASC"
     value="ASC"
   >
     Ascending
   </option>
   <option
+    key="DESC"
     value="DESC"
   >
     Descending
