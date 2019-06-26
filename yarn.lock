@@ -1095,6 +1095,14 @@
     classnames "^2.2.6"
     styled-jsx "^3.2.1"
 
+"@dhis2/ui-core@3.4.0":
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/@dhis2/ui-core/-/ui-core-3.4.0.tgz#23ee88b507eb4968673e3b5789b9785c53c598d5"
+  integrity sha512-OjF+D5+4wrPui4Pvz38wmM0qBba1nH/EeV0ejYpj5zP4oxmz/FE5FegDNXsMz25ozBCXY6Dne9YBdPfBYk5RTA==
+  dependencies:
+    classnames "^2.2.6"
+    styled-jsx "^3.2.1"
+
 "@dhis2/ui-widgets@1.0.6":
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/@dhis2/ui-widgets/-/ui-widgets-1.0.6.tgz#6e1f3f974bea528b3e608221d40053d3270d7728"
