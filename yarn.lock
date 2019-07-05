@@ -1066,7 +1066,15 @@
     moment "^2.22.1"
     rimraf "^2.6.2"
 
-"@dhis2/d2-i18n@1.0.4", "@dhis2/d2-i18n@^1.0.4":
+"@dhis2/d2-i18n@1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@dhis2/d2-i18n/-/d2-i18n-1.0.5.tgz#9148af1bc95e9442bcae66136b8f80146406a43f"
+  integrity sha512-nz1JtDLNn6hOoSg84C1iYRBr11O/ljMdczEqq0/j/gQy9wRs80Z7lExwItclHgS7t6ESWCa6+OFkwgRCOKF2ew==
+  dependencies:
+    i18next "^10.3"
+    moment "^2.24.0"
+
+"@dhis2/d2-i18n@^1.0.4":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@dhis2/d2-i18n/-/d2-i18n-1.0.4.tgz#8fbd113f56699b9832a401e1cb8f54d75bc36b9a"
   integrity sha512-xI2j69q3bwlb374JOAs3wpo47V4BqDAz4h1PfGLVhdORPLAuz0CkKuwesfpW2eunDSHiKpMbOg7goTip/5ROew==
@@ -1103,12 +1111,12 @@
     classnames "^2.2.6"
     styled-jsx "^3.2.1"
 
-"@dhis2/ui-widgets@1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@dhis2/ui-widgets/-/ui-widgets-1.0.6.tgz#6e1f3f974bea528b3e608221d40053d3270d7728"
-  integrity sha512-hS2oQ4wS9qflhXPLeb9v5vZXzVeWJJPwN4ZOzr6XmJY1HOC5HSu5SDKkqdAwAhpbTCPzAuR6lKB3QluWnQD2/w==
+"@dhis2/ui-widgets@1.0.7":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@dhis2/ui-widgets/-/ui-widgets-1.0.7.tgz#3ed68daf7093577a71a0671e3a0ac26caa7342be"
+  integrity sha512-b1bLW0o+OOzpO45bLX64Wpiqz77WwsR+a4oIRSF9+j4B8G6DSX+5luF7dRfigepEfR0Mrz4bohjr0V8VR/0Kzw==
   dependencies:
-    "@dhis2/d2-i18n" "1.0.4"
+    "@dhis2/d2-i18n" "1.0.5"
     "@dhis2/ui-core" "3.3.0"
     classnames "^2.2.6"
     styled-jsx "^3.2.1"
@@ -7917,7 +7925,7 @@ modify-values@^1.0.0:
   resolved "https://registry.yarnpkg.com/modify-values/-/modify-values-1.0.1.tgz#b3939fa605546474e3e3e3c63d64bd43b4ee6022"
   integrity sha512-xV2bxeN6F7oYjZWTe/YPAy6MN2M+sL4u/Rlm2AHCIVGfo2p1yGmBHQ6vHehl4bRTZBdHu3TSkWdYgkwpYzAGSw==
 
-moment@^2.10.2, moment@^2.22.1:
+moment@^2.10.2, moment@^2.22.1, moment@^2.24.0:
   version "2.24.0"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
   integrity sha512-bV7f+6l2QigeBBZSM/6yTNq4P2fNpSWj/0e7jQcy87A8e7o2nAfP/34/2ky5Vw4B9S446EtIhodAzkFCcR4dQg==
