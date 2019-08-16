@@ -14,7 +14,7 @@
     "pretest": "yarn localize"
   },
   "dependencies": {
-    "@dhis2/app-runtime": "1.3.0",
+    "@dhis2/app-runtime": "1.5.0",
     "@dhis2/ui-core": "3.4.0",
     "@dhis2/ui-widgets": "1.0.8",
     "chart.js": "^2.7.3",
