@@ -930,17 +930,22 @@
   dependencies:
     i18next "^10.3"
 
-"@dhis2/ui-core@3.4.0":
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/@dhis2/ui-core/-/ui-core-3.4.0.tgz#23ee88b507eb4968673e3b5789b9785c53c598d5"
-  dependencies:
-    classnames "^2.2.6"
-    styled-jsx "^3.2.1"
+"@dhis2/prop-types@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@dhis2/prop-types/-/prop-types-1.0.3.tgz#6230616b355c80373a7bd05af395a7eba666322a"
 
 "@dhis2/ui-core@3.5.0":
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/@dhis2/ui-core/-/ui-core-3.5.0.tgz#439a2e18faf540c3b80156d19cf4c236abccecd5"
   dependencies:
+    classnames "^2.2.6"
+    styled-jsx "^3.2.1"
+
+"@dhis2/ui-core@3.9.0":
+  version "3.9.0"
+  resolved "https://registry.yarnpkg.com/@dhis2/ui-core/-/ui-core-3.9.0.tgz#67711e7446e7045a9b90b094a616b11bb7a91514"
+  dependencies:
+    "@dhis2/prop-types" "^1.0.3"
     classnames "^2.2.6"
     styled-jsx "^3.2.1"
 
