@@ -930,12 +930,17 @@
   dependencies:
     i18next "^10.3"
 
-"@dhis2/ui-core@3.4.0":
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/@dhis2/ui-core/-/ui-core-3.4.0.tgz#23ee88b507eb4968673e3b5789b9785c53c598d5"
+"@dhis2/prop-types@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@dhis2/prop-types/-/prop-types-1.1.0.tgz#6144470f336fbcf0fd9142c5ea402d03dfb92c2a"
+
+"@dhis2/ui-core@3.10.0":
+  version "3.10.0"
+  resolved "https://registry.yarnpkg.com/@dhis2/ui-core/-/ui-core-3.10.0.tgz#02f4e17ff1f08b25ba15a69526b06219085417ac"
   dependencies:
+    "@dhis2/prop-types" "^1.1.0"
     classnames "^2.2.6"
-    styled-jsx "^3.2.1"
+    styled-jsx "^3.2.2"
 
 "@dhis2/ui-core@3.5.0":
   version "3.5.0"
@@ -9747,9 +9752,9 @@ style-loader@0.23.1:
     loader-utils "^1.1.0"
     schema-utils "^1.0.0"
 
-styled-jsx@^3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/styled-jsx/-/styled-jsx-3.2.1.tgz#452051fe50df5e9c7c7f3dd20fa46c3060ac65b0"
+styled-jsx@^3.2.1, styled-jsx@^3.2.2:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/styled-jsx/-/styled-jsx-3.2.2.tgz#03d02d26725195d17b6a979eb8d7c34761a16bf8"
   dependencies:
     babel-plugin-syntax-jsx "6.18.0"
     babel-types "6.26.0"
