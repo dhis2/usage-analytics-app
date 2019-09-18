@@ -1,16 +1,8 @@
-import * as locale from '../utils/locale'
 import * as get from './get'
-import {
-    initApp,
-    getUsageData,
-    getFavorites,
-    getDataStatistics,
-    getUserLocale,
-} from './index'
+import { getUsageData, getFavorites, getDataStatistics } from './index'
 import { TOP_FAVORITES } from '../constants/categories'
 
 beforeAll(() => {
-    locale.setLocale = jest.fn()
     get.getJSON = jest.fn()
     Date.now = jest.fn(() => 'timestamp')
 })
@@ -77,35 +69,5 @@ describe('getUsageData', () => {
         get.getJSON.mockImplementationOnce(url => Promise.resolve(url))
 
         return expect(getUsageData(params)).resolves.toMatchSnapshot()
-    })
-})
-
-describe('initApp', () => {
-    it('resolves to usageData and locale', () => {
-        get.getJSON.mockImplementation(url => {
-            if (url === 'userSettings') {
-                return Promise.resolve({ keyUiLocale: 'locale' })
-            }
-
-            return Promise.resolve('usageData')
-        })
-
-        return expect(initApp({ filter: '' })).resolves.toMatchSnapshot()
-    })
-
-    it('calls setLocale correctly', () => {
-        get.getJSON.mockImplementation(url => {
-            if (url === 'userSettings') {
-                return Promise.resolve({ keyUiLocale: 'locale' })
-            }
-
-            return Promise.resolve('usageData')
-        })
-
-        expect.assertions(1)
-
-        return initApp({ filter: '' }).then(() => {
-            expect(locale.setLocale).toHaveBeenCalledWith('locale')
-        })
     })
 })
