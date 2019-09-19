@@ -37,16 +37,6 @@ describe('getDataStatistics', () => {
     })
 })
 
-describe('getUserLocale', () => {
-    it('calls getJSON with the correct URL and queryString', () => {
-        get.getJSON.mockImplementationOnce(url =>
-            Promise.resolve({ keyUiLocale: url })
-        )
-
-        return expect(getUserLocale()).resolves.toMatchSnapshot()
-    })
-})
-
 describe('getUsageData', () => {
     it('calls getJSON with the correct URL and queryString for TOP_FAVORITES category', () => {
         const params = {

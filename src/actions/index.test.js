@@ -76,7 +76,7 @@ describe('updateFilter', () => {
 describe('initApp', () => {
     it('creates APP_LOAD_SUCCESS when initApp resolves successfully', () => {
         // mock api method
-        api.initApp = mockResolvingPromise
+        api.getUsageData = mockResolvingPromise
         const expectedActions = [MOCK_ACTIONS[TYPES.APP_LOAD_SUCCESS]]
         const store = mockStore(DEFAULT_STORE_STATE)
         return store.dispatch(initApp()).then(() => {
@@ -85,7 +85,7 @@ describe('initApp', () => {
     })
     it('creates APP_LOAD_ERROR when initApp is rejected', () => {
         // mock api method
-        api.initApp = mockRejectingPromise
+        api.getUsageData = mockRejectingPromise
         const expectedActions = [MOCK_ACTIONS[TYPES.APP_LOAD_ERROR]]
         const store = mockStore(DEFAULT_STORE_STATE)
         return store.dispatch(initApp()).then(() => {
