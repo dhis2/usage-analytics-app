@@ -1,0 +1,217 @@
+# Translators:
+# phil_dhis2, 2019
+# Viktor Varland <viktor@dhis2.org>, 2019
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: i18next-conv\n"
+"POT-Creation-Date: 2019-01-14T15:39:53.085Z\n"
+"PO-Revision-Date: 2019-09-02 16:22+0000\n"
+"Last-Translator: Viktor Varland <viktor@dhis2.org>, 2019\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/hisp-uio/teams/100509/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Usage Analytics"
+msgstr ""
+
+msgid "Values"
+msgstr ""
+
+msgid "Please use the format yyyy-mm-dd"
+msgstr ""
+
+msgid "End date is before start date"
+msgstr ""
+
+msgid "Start date is after end date"
+msgstr ""
+
+msgid "Start Date"
+msgstr ""
+
+msgid "End date"
+msgstr "Data de término"
+
+msgid "Category"
+msgstr "Categoria"
+
+msgid "Interval"
+msgstr ""
+
+msgid "Aggregation Level"
+msgstr ""
+
+msgid "Chart Type"
+msgstr ""
+
+msgid "Event Type"
+msgstr ""
+
+msgid "Page Size"
+msgstr ""
+
+msgid "Sort Order"
+msgstr ""
+
+msgid "There was an error retrieving the usage analytics data"
+msgstr ""
+
+msgid "Sum"
+msgstr "Soma"
+
+msgid "Average"
+msgstr "Média"
+
+msgid "Favorite views"
+msgstr ""
+
+msgid "Number of times users looked at analysis favorites"
+msgstr ""
+
+msgid "Favorites saved"
+msgstr ""
+
+msgid "Number of analysis favorites created by users"
+msgstr ""
+
+msgid "Users"
+msgstr "Utilizadores"
+
+msgid "Number of users in the system"
+msgstr ""
+
+msgid "Top favorites"
+msgstr ""
+
+msgid "Data values"
+msgstr "Valor de Dados"
+
+msgid "Number of data values saved in the system"
+msgstr ""
+
+msgid "All"
+msgstr "Tudo"
+
+msgid "Total"
+msgstr ""
+
+msgid "Chart"
+msgstr "Gráfico"
+
+msgid "Map"
+msgstr "Mapa"
+
+msgid "Report table"
+msgstr ""
+
+msgid "Event report"
+msgstr ""
+
+msgid "Event chart"
+msgstr ""
+
+msgid "Dashboard"
+msgstr "Gráficos"
+
+msgid "Data set report"
+msgstr ""
+
+msgid "Day"
+msgstr ""
+
+msgid "Week"
+msgstr ""
+
+msgid "Month"
+msgstr "Mês"
+
+msgid "Year"
+msgstr "Ano"
+
+msgid "Date"
+msgstr "Data"
+
+msgid "Pivot Table"
+msgstr "Tabela Pivot"
+
+msgid "Event Report"
+msgstr ""
+
+msgid "Event Chart"
+msgstr ""
+
+msgid "Data Set Report"
+msgstr "Relatório de Conjunto de Dados"
+
+msgid "Average Map"
+msgstr ""
+
+msgid "Average Chart"
+msgstr ""
+
+msgid "Average Pivot Table"
+msgstr ""
+
+msgid "Average Event Report"
+msgstr ""
+
+msgid "Average Event Chart"
+msgstr ""
+
+msgid "Average Dashboard"
+msgstr ""
+
+msgid "Maps"
+msgstr ""
+
+msgid "Charts"
+msgstr ""
+
+msgid "Pivot Tables"
+msgstr ""
+
+msgid "Event Reports"
+msgstr ""
+
+msgid "Event Charts"
+msgstr ""
+
+msgid "Dashboards"
+msgstr ""
+
+msgid "Indicators"
+msgstr "Indicadores"
+
+msgid "Active Users"
+msgstr ""
+
+msgid "Total Users"
+msgstr ""
+
+msgid "Position"
+msgstr ""
+
+msgid "Name"
+msgstr "Nome"
+
+msgid "Views"
+msgstr ""
+
+msgid "ID"
+msgstr "Id"
+
+msgid "Created"
+msgstr ""
+
+msgid "Data Values"
+msgstr ""
+
+msgid "Ascending"
+msgstr ""
+
+msgid "Descending"
+msgstr ""
