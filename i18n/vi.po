@@ -1,0 +1,220 @@
+# Translators:
+# phil_dhis2, 2019
+# Viktor Varland <viktor@dhis2.org>, 2019
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: i18next-conv\n"
+"POT-Creation-Date: 2019-05-09T20:17:51.370Z\n"
+"PO-Revision-Date: 2019-09-02 16:22+0000\n"
+"Last-Translator: Viktor Varland <viktor@dhis2.org>, 2019\n"
+"Language-Team: Vietnamese (https://www.transifex.com/hisp-uio/teams/100509/vi/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: vi\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Usage Analytics"
+msgstr "Thống kê sử dụng"
+
+msgid "Values"
+msgstr ""
+
+msgid "Please use the format yyyy-mm-dd"
+msgstr ""
+
+msgid "End date is before start date"
+msgstr ""
+
+msgid "Start date is after end date"
+msgstr ""
+
+msgid "Start Date"
+msgstr ""
+
+msgid "End date"
+msgstr "Ngày kết thúc"
+
+msgid "Category"
+msgstr "Phân loại"
+
+msgid "Interval"
+msgstr ""
+
+msgid "Aggregation Level"
+msgstr ""
+
+msgid "Chart Type"
+msgstr ""
+
+msgid "Event Type"
+msgstr ""
+
+msgid "Page Size"
+msgstr ""
+
+msgid "Sort Order"
+msgstr ""
+
+msgid "There was an error retrieving the usage analytics data"
+msgstr ""
+
+msgid "Error loading application."
+msgstr ""
+
+msgid "Sum"
+msgstr "Tổng"
+
+msgid "Average"
+msgstr "Trung bình"
+
+msgid "Favorite views"
+msgstr ""
+
+msgid "Number of times users looked at analysis favorites"
+msgstr ""
+
+msgid "Favorites saved"
+msgstr ""
+
+msgid "Number of analysis favorites created by users"
+msgstr ""
+
+msgid "Users"
+msgstr "Người dùng"
+
+msgid "Number of users in the system"
+msgstr ""
+
+msgid "Top favorites"
+msgstr ""
+
+msgid "Data values"
+msgstr "Giá trị dữ liệu"
+
+msgid "Number of data values saved in the system"
+msgstr ""
+
+msgid "All"
+msgstr "Tất cả"
+
+msgid "Total"
+msgstr "Tổng số"
+
+msgid "Chart"
+msgstr "Biểu đồ"
+
+msgid "Map"
+msgstr "Bản Đồ"
+
+msgid "Report table"
+msgstr ""
+
+msgid "Event report"
+msgstr ""
+
+msgid "Event chart"
+msgstr ""
+
+msgid "Dashboard"
+msgstr "Bảng điều khiển"
+
+msgid "Data set report"
+msgstr ""
+
+msgid "Day"
+msgstr "Ngày"
+
+msgid "Week"
+msgstr "Tuần"
+
+msgid "Month"
+msgstr "Tháng"
+
+msgid "Year"
+msgstr "Năm"
+
+msgid "Date"
+msgstr "Ngày"
+
+msgid "Pivot Table"
+msgstr "Bảng xoay"
+
+msgid "Event Report"
+msgstr ""
+
+msgid "Event Chart"
+msgstr ""
+
+msgid "Data Set Report"
+msgstr "Báo cáo theo tập hợp dữ liệu có sẵn"
+
+msgid "Average Map"
+msgstr ""
+
+msgid "Average Chart"
+msgstr ""
+
+msgid "Average Pivot Table"
+msgstr ""
+
+msgid "Average Event Report"
+msgstr ""
+
+msgid "Average Event Chart"
+msgstr ""
+
+msgid "Average Dashboard"
+msgstr ""
+
+msgid "Maps"
+msgstr "Bản đồ"
+
+msgid "Charts"
+msgstr "Biểu đồ"
+
+msgid "Pivot Tables"
+msgstr "Bảng xoay"
+
+msgid "Event Reports"
+msgstr "Báo cáo sự kiện"
+
+msgid "Event Charts"
+msgstr ""
+
+msgid "Dashboards"
+msgstr "Bảng điều khiển"
+
+msgid "Indicators"
+msgstr "Các chỉ số"
+
+msgid "Active Users"
+msgstr ""
+
+msgid "Total Users"
+msgstr ""
+
+msgid "Position"
+msgstr ""
+
+msgid "Name"
+msgstr "Tên"
+
+msgid "Views"
+msgstr "Lượt xem"
+
+msgid "ID"
+msgstr "Định danh"
+
+msgid "Created"
+msgstr "Đã tạo"
+
+msgid "Data Values"
+msgstr ""
+
+msgid "Ascending"
+msgstr ""
+
+msgid "Descending"
+msgstr ""
