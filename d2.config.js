@@ -1,4 +1,5 @@
 const config = {
+    title: 'Usage Analytics',
     type: 'app',
 
     entryPoints: {
