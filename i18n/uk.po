@@ -1,0 +1,220 @@
+# Translators:
+# phil_dhis2, 2019
+# Viktor Varland <viktor@dhis2.org>, 2019
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: i18next-conv\n"
+"POT-Creation-Date: 2019-05-09T20:17:51.370Z\n"
+"PO-Revision-Date: 2019-09-02 16:22+0000\n"
+"Last-Translator: Viktor Varland <viktor@dhis2.org>, 2019\n"
+"Language-Team: Ukrainian (https://www.transifex.com/hisp-uio/teams/100509/uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+msgid "Usage Analytics"
+msgstr "Аналітика використання"
+
+msgid "Values"
+msgstr ""
+
+msgid "Please use the format yyyy-mm-dd"
+msgstr ""
+
+msgid "End date is before start date"
+msgstr ""
+
+msgid "Start date is after end date"
+msgstr ""
+
+msgid "Start Date"
+msgstr ""
+
+msgid "End date"
+msgstr "Кінцева дата"
+
+msgid "Category"
+msgstr "Категорія"
+
+msgid "Interval"
+msgstr ""
+
+msgid "Aggregation Level"
+msgstr ""
+
+msgid "Chart Type"
+msgstr ""
+
+msgid "Event Type"
+msgstr ""
+
+msgid "Page Size"
+msgstr ""
+
+msgid "Sort Order"
+msgstr ""
+
+msgid "There was an error retrieving the usage analytics data"
+msgstr ""
+
+msgid "Error loading application."
+msgstr ""
+
+msgid "Sum"
+msgstr "Сума"
+
+msgid "Average"
+msgstr "Середнє"
+
+msgid "Favorite views"
+msgstr ""
+
+msgid "Number of times users looked at analysis favorites"
+msgstr ""
+
+msgid "Favorites saved"
+msgstr ""
+
+msgid "Number of analysis favorites created by users"
+msgstr ""
+
+msgid "Users"
+msgstr "Користувачі"
+
+msgid "Number of users in the system"
+msgstr ""
+
+msgid "Top favorites"
+msgstr ""
+
+msgid "Data values"
+msgstr ""
+
+msgid "Number of data values saved in the system"
+msgstr ""
+
+msgid "All"
+msgstr "Всі"
+
+msgid "Total"
+msgstr "Підсумок"
+
+msgid "Chart"
+msgstr "Діаграма"
+
+msgid "Map"
+msgstr "Мапа"
+
+msgid "Report table"
+msgstr ""
+
+msgid "Event report"
+msgstr ""
+
+msgid "Event chart"
+msgstr ""
+
+msgid "Dashboard"
+msgstr "Інформаційна панель (дашборд)"
+
+msgid "Data set report"
+msgstr ""
+
+msgid "Day"
+msgstr ""
+
+msgid "Week"
+msgstr "Тиждень"
+
+msgid "Month"
+msgstr ""
+
+msgid "Year"
+msgstr "Рік"
+
+msgid "Date"
+msgstr "Дата"
+
+msgid "Pivot Table"
+msgstr "Зведена таблиця"
+
+msgid "Event Report"
+msgstr ""
+
+msgid "Event Chart"
+msgstr ""
+
+msgid "Data Set Report"
+msgstr ""
+
+msgid "Average Map"
+msgstr ""
+
+msgid "Average Chart"
+msgstr ""
+
+msgid "Average Pivot Table"
+msgstr ""
+
+msgid "Average Event Report"
+msgstr ""
+
+msgid "Average Event Chart"
+msgstr ""
+
+msgid "Average Dashboard"
+msgstr ""
+
+msgid "Maps"
+msgstr "Maps"
+
+msgid "Charts"
+msgstr "Діаграми"
+
+msgid "Pivot Tables"
+msgstr "Зведені таблиці"
+
+msgid "Event Reports"
+msgstr "Звіти про події"
+
+msgid "Event Charts"
+msgstr ""
+
+msgid "Dashboards"
+msgstr "Інформаційні панелі (дашборди)"
+
+msgid "Indicators"
+msgstr "Показники"
+
+msgid "Active Users"
+msgstr ""
+
+msgid "Total Users"
+msgstr ""
+
+msgid "Position"
+msgstr ""
+
+msgid "Name"
+msgstr "Ім'я"
+
+msgid "Views"
+msgstr "Перегляди"
+
+msgid "ID"
+msgstr "ID (ідентифікатор)"
+
+msgid "Created"
+msgstr "Створено"
+
+msgid "Data Values"
+msgstr ""
+
+msgid "Ascending"
+msgstr ""
+
+msgid "Descending"
+msgstr ""
