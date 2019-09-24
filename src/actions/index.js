@@ -7,7 +7,6 @@ export const initApp = () => async (dispatch, getState) => {
         const payload = await api.getUsageData(getState().filter)
         dispatch(createAction(ACTIONS.APP_LOAD_SUCCESS, payload))
     } catch (error) {
-        console.error(error)
         dispatch(createAction(ACTIONS.APP_LOAD_ERROR, error))
     }
 }
@@ -55,7 +54,6 @@ async function getUsageData(filter, dispatch) {
         const usageData = await api.getUsageData(filter)
         dispatch(createAction(ACTIONS.USAGE_DATA_RECEIVED, usageData))
     } catch (error) {
-        console.error(error)
         dispatch(createAction(ACTIONS.USAGE_DATA_ERRORED, error))
     }
 }
