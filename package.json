@@ -9,7 +9,6 @@
         "lint:style": "d2-style js apply --all"
     },
     "dependencies": {
-        "@dhis2/app-runtime": "^1.5.1",
         "@dhis2/ui-core": "3.4.0",
         "chart.js": "^2.7.3",
         "lodash.debounce": "^4.0.8",
