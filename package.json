@@ -6,7 +6,7 @@
         "start": "d2-app-scripts start",
         "build": "d2-app-scripts build",
         "test": "d2-app-scripts test",
-        "lint:style": "d2-style js apply --all"
+        "lint:style": "d2-style js check --all"
     },
     "dependencies": {
         "@dhis2/ui-core": "3.4.0",
