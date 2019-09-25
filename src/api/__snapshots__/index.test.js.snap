@@ -7,12 +7,3 @@ exports[`getFavorites calls getJSON with the correct URL and queryString 1`] = `
 exports[`getUsageData calls getJSON with the correct URL and queryString for TOP_FAVORITES category 1`] = `"dataStatistics/favorites?eventType=eventType&pageSize=pageSize&sortOrder=sortOrder&_=timestamp"`;
 
 exports[`getUsageData calls getJSON with the correct URL and queryString in other cases 1`] = `"dataStatistics?startDate=startDate&endDate=endDate&interval=interval&_=timestamp"`;
-
-exports[`getUserLocale calls getJSON with the correct URL and queryString 1`] = `"userSettings"`;
-
-exports[`initApp resolves to usageData and locale 1`] = `
-Object {
-  "locale": "locale",
-  "usageData": "usageData",
-}
-`;

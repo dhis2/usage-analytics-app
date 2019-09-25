@@ -20,7 +20,7 @@ describe('usageData reducer', () => {
         )
     })
     it('should handle APP_LOAD_SUCCESS', () => {
-        const payload = { usageData }
+        const payload = usageData
         expect(reducer(undefined, { type: APP_LOAD_SUCCESS, payload })).toEqual(
             usageData
         )

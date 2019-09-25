@@ -2,25 +2,16 @@
 
 exports[`<App/> renders the expected tree 1`] = `
 <Provider
-  apiVersion=""
-  baseUrl="http://localhost:8080"
->
-  <Provider
-    store={
-      Object {
-        "dispatch": [Function],
-        "getState": [Function],
-        "replaceReducer": [Function],
-        "subscribe": [Function],
-        Symbol(observable): [Function],
-      }
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
     }
-  >
-    <CssReset />
-    <HeaderBar
-      appName="Usage Analytics"
-    />
-    <ConnectedUsageAnalytics />
-  </Provider>
+  }
+>
+  <ConnectedUsageAnalytics />
 </Provider>
 `;

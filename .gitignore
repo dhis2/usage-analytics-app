@@ -28,3 +28,5 @@ public/manifest.webapp
 
 # Editor settings
 .vscode
+
+.d2

@@ -4,7 +4,7 @@ import { TOP_FAVORITES } from '../constants/categories'
 
 export const initApp = () => async (dispatch, getState) => {
     try {
-        const payload = await api.initApp(getState())
+        const payload = await api.getUsageData(getState().filter)
         dispatch(createAction(ACTIONS.APP_LOAD_SUCCESS, payload))
     } catch (error) {
         console.error(error)

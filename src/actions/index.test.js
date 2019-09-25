@@ -61,7 +61,12 @@ const MOCK_ACTIONS = {
     },
 }
 
+const consoleError = console.error
+beforeAll(() => {
+    console.error = jest.fn()
+})
 afterAll(() => {
+    console.error = consoleError
     jest.resetAllMocks()
 })
 
@@ -76,7 +81,7 @@ describe('updateFilter', () => {
 describe('initApp', () => {
     it('creates APP_LOAD_SUCCESS when initApp resolves successfully', () => {
         // mock api method
-        api.initApp = mockResolvingPromise
+        api.getUsageData = mockResolvingPromise
         const expectedActions = [MOCK_ACTIONS[TYPES.APP_LOAD_SUCCESS]]
         const store = mockStore(DEFAULT_STORE_STATE)
         return store.dispatch(initApp()).then(() => {
@@ -85,11 +90,12 @@ describe('initApp', () => {
     })
     it('creates APP_LOAD_ERROR when initApp is rejected', () => {
         // mock api method
-        api.initApp = mockRejectingPromise
+        api.getUsageData = mockRejectingPromise
         const expectedActions = [MOCK_ACTIONS[TYPES.APP_LOAD_ERROR]]
         const store = mockStore(DEFAULT_STORE_STATE)
         return store.dispatch(initApp()).then(() => {
             expect(store.getActions()).toEqual(expectedActions)
+            expect(console.error).toHaveBeenCalledWith(mockError)
         })
     })
 })
@@ -129,6 +135,7 @@ describe('updateCategory', () => {
             )
             .then(() => {
                 expect(store.getActions()).toEqual(expectedActions)
+                expect(console.error).toHaveBeenCalledWith(mockError)
             })
     })
     it('creates FILTER_UPDATED when new data is NOT required', () => {
@@ -190,6 +197,7 @@ describe('updateFilterAndGetData', () => {
             )
             .then(() => {
                 expect(store.getActions()).toEqual(expectedActions)
+                expect(console.error).toHaveBeenCalledWith(mockError)
             })
     })
 })
@@ -215,6 +223,7 @@ describe('updateUsageData', () => {
         const store = mockStore(DEFAULT_STORE_STATE)
         return store.dispatch(updateUsageData()).then(() => {
             expect(store.getActions()).toEqual(expectedActions)
+            expect(console.error).toHaveBeenCalledWith(mockError)
         })
     })
 })
