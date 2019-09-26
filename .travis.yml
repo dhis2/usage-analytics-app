@@ -7,7 +7,7 @@ env:
 script:
     - npm run lint:style
     - npm run test
-    - DHIS2_BASE_URL=".." npm run build
+    - PUBLIC_URL=. DHIS2_BASE_URL=".." npm run build
 deploy:
     - provider: script
       script: npx --package @dhis2/deploy-build deploy-build d2-ci build/app
