@@ -22,7 +22,7 @@
     },
     "devDependencies": {
         "@dhis2/cli-app-scripts": "^1.4.2",
-        "@dhis2/cli-style": "4.1.0",
+        "@dhis2/cli-style": "4.2.0",
         "@dhis2/d2-i18n": "^1.0.4",
         "enzyme": "^3.10.0",
         "enzyme-adapter-react-16": "^1.14.0",
