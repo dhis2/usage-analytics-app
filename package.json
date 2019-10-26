@@ -10,7 +10,7 @@
     },
     "dependencies": {
         "@dhis2/ui-core": "3.11.1",
-        "chart.js": "^2.7.3",
+        "chart.js": "^2.9.0",
         "lodash.debounce": "^4.0.8",
         "react": "^16.8.6",
         "react-app-polyfill": "^1.0.1",
