@@ -7,6 +7,7 @@ import './DateRange.css'
 export const START_DATE = 'startDate'
 export const END_DATE = 'endDate'
 export const ERROR_PATTERN = i18n.t('Please use the format yyyy-mm-dd')
+export const ERROR_MISSING_DATE = i18n.t('Please fill in both dates')
 export const ERROR_END_BEFORE_START = i18n.t('End date is before start date')
 export const ERROR_START_AFTER_END = i18n.t('Start date is after end date')
 
@@ -57,6 +58,10 @@ class DateRange extends Component {
     getError(dateRange, key) {
         if (!/[0-9]{4}-[0-9]{2}-[0-9]{2}/.test(dateRange[key])) {
             return ERROR_PATTERN
+        }
+
+        if (!dateRange.startDate || !dateRange.endDate) {
+            return ERROR_MISSING_DATE
         }
 
         if (dateRange.endDate < dateRange.startDate) {
