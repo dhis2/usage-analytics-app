@@ -25,12 +25,12 @@ export const IntervalDropDown = connect(
 
 export const AggregationLevelDropDown = connect(
     createValueGetterForFilterKey('aggregationLevel'),
-    { onChange: updateFilter }
+    { onChange: e => updateFilter(e.target.name, e.target.value) }
 )(DropDowns.AggregationLevel)
 
 export const ChartTypeDropDown = connect(
     createValueGetterForFilterKey('chartType'),
-    { onChange: updateFilter }
+    { onChange: e => updateFilter(e.target.name, e.target.value) }
 )(DropDowns.ChartType)
 
 export const EventTypeDropDown = connect(
