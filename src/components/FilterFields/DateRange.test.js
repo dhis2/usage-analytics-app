@@ -4,6 +4,7 @@ import DateRange, {
     START_DATE,
     END_DATE,
     ERROR_PATTERN,
+    ERROR_MISSING_DATE,
     ERROR_START_AFTER_END,
     ERROR_END_BEFORE_START,
 } from './DateRange'
@@ -65,6 +66,20 @@ describe('<DateRange/>', () => {
         expect(
             wrapper.find(`span.uaa-date-input-error.${START_DATE}`)
         ).toHaveText(ERROR_PATTERN)
+    })
+    it('renders a missing date error when startDate changes into a valid value but endDate is empty', () => {
+        const defaultProps = {
+            updateFilter,
+            updateUsageData,
+        }
+        const wrapper = shallow(<DateRange {...defaultProps} />)
+        const startDateInput = wrapper.find(`.${START_DATE}`)
+
+        startDateInput.simulate('change', { target: { value: '2019-12-30' } })
+
+        expect(
+            wrapper.find(`span.uaa-date-input-error.${START_DATE}`)
+        ).toHaveText(ERROR_MISSING_DATE)
     })
     it('renders a start-after-end error when start date become greater than end date', () => {
         const value = '2020-01-01'
