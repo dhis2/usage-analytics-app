@@ -124,10 +124,10 @@ msgid "Data set report"
 msgstr ""
 
 msgid "Day"
-msgstr "Day"
+msgstr ""
 
 msgid "Week"
-msgstr "Week"
+msgstr ""
 
 msgid "Month"
 msgstr "الشهر"
