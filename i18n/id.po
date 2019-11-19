@@ -100,7 +100,7 @@ msgid "All"
 msgstr "Semua"
 
 msgid "Total"
-msgstr "Total"
+msgstr ""
 
 msgid "Chart"
 msgstr "Grafik"
@@ -118,7 +118,7 @@ msgid "Event chart"
 msgstr ""
 
 msgid "Dashboard"
-msgstr "Dashboard"
+msgstr ""
 
 msgid "Data set report"
 msgstr ""
