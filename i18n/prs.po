@@ -15,7 +15,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 msgid "Usage Analytics"
-msgstr ""
+msgstr "استفاده انالتیکس"
 
 msgid "Values"
 msgstr ""
@@ -78,7 +78,7 @@ msgid "Number of analysis favorites created by users"
 msgstr ""
 
 msgid "Users"
-msgstr ""
+msgstr "استفاده کننده گان"
 
 msgid "Number of users in the system"
 msgstr ""
@@ -87,13 +87,13 @@ msgid "Top favorites"
 msgstr ""
 
 msgid "Data values"
-msgstr ""
+msgstr "مجموعه های اطلاعات"
 
 msgid "Number of data values saved in the system"
 msgstr ""
 
 msgid "All"
-msgstr ""
+msgstr "همه"
 
 msgid "Total"
 msgstr "مجموع"
@@ -120,22 +120,22 @@ msgid "Data set report"
 msgstr ""
 
 msgid "Day"
-msgstr ""
+msgstr "روز"
 
 msgid "Week"
 msgstr "هفته"
 
 msgid "Month"
-msgstr ""
+msgstr "ماه"
 
 msgid "Year"
-msgstr ""
+msgstr "سال"
 
 msgid "Date"
 msgstr "تاریخ"
 
 msgid "Pivot Table"
-msgstr ""
+msgstr "جدول محوری"
 
 msgid "Event Report"
 msgstr ""
@@ -144,7 +144,7 @@ msgid "Event Chart"
 msgstr ""
 
 msgid "Data Set Report"
-msgstr ""
+msgstr "گزارش مجموعه اطلاعات"
 
 msgid "Average Map"
 msgstr ""
@@ -165,22 +165,22 @@ msgid "Average Dashboard"
 msgstr ""
 
 msgid "Maps"
-msgstr ""
+msgstr "نقشه ها"
 
 msgid "Charts"
-msgstr ""
+msgstr "چارت ها"
 
 msgid "Pivot Tables"
-msgstr ""
+msgstr "محوري جدول"
 
 msgid "Event Reports"
-msgstr ""
+msgstr "گزارشات رویداد"
 
 msgid "Event Charts"
 msgstr ""
 
 msgid "Dashboards"
-msgstr ""
+msgstr "داشبورد ها"
 
 msgid "Indicators"
 msgstr "شاخص ها"
@@ -201,7 +201,7 @@ msgid "Views"
 msgstr "نمایش ها"
 
 msgid "ID"
-msgstr ""
+msgstr "آی دی"
 
 msgid "Created"
 msgstr "ایجاد شده"
