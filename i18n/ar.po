@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
-"POT-Creation-Date: 2019-05-09T20:17:51.370Z\n"
+"POT-Creation-Date: 2019-09-18T15:51:55.230Z\n"
 "PO-Revision-Date: 2019-09-02 16:22+0000\n"
 "Last-Translator: Viktor Varland <viktor@dhis2.org>, 2019\n"
 "Language-Team: Arabic (https://www.transifex.com/hisp-uio/teams/100509/ar/)\n"
@@ -14,9 +14,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ar\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-
-msgid "Usage Analytics"
-msgstr "تحليلات الاستخدام"
 
 msgid "Values"
 msgstr ""
@@ -56,6 +53,9 @@ msgstr ""
 
 msgid "Sort Order"
 msgstr ""
+
+msgid "Usage Analytics"
+msgstr "تحليلات الاستخدام"
 
 msgid "There was an error retrieving the usage analytics data"
 msgstr ""
