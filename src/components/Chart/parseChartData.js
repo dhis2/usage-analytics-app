@@ -12,14 +12,14 @@ export default function parseChartData(
 ) {
     const labels = []
     const datasets = []
-    const title = CATEGORY_LOOKUP[category].label
-    const subtitle = CATEGORY_LOOKUP[category].subtitle
+    const title = CATEGORY_LOOKUP[category.value].label
+    const subtitle = CATEGORY_LOOKUP[category.value].subtitle
     let max = MIN_SUGGESTED_MAX_VALUE
     let min = null
     const fields =
-        category === FAVORITE_VIEWS
-            ? FIELDS[category][aggregationLevel][chartType]
-            : FIELDS[category]
+        category.value === FAVORITE_VIEWS
+            ? FIELDS[category.value][aggregationLevel.value][chartType.value]
+            : FIELDS[category.value]
     const dataPointsLen = dataPoints.length
     const fieldsLen = fields.length
 
@@ -29,7 +29,7 @@ export default function parseChartData(
         dataPointIndex++
     ) {
         const dataPoint = dataPoints[dataPointIndex]
-        labels.push(getDisplayDateForInterval(dataPoint, interval))
+        labels.push(getDisplayDateForInterval(dataPoint, interval.value))
 
         for (let fieldIndex = 0; fieldIndex < fieldsLen; fieldIndex++) {
             const field = fields[fieldIndex]

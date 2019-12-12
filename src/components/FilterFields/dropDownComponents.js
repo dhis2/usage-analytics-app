@@ -1,7 +1,6 @@
 import React from 'react'
 import i18n from '@dhis2/d2-i18n'
-import { SelectField } from '@dhis2/ui-core'
-import withMargin from './withMargin'
+import { SingleSelectField, SingleSelectOption } from '@dhis2/ui-core'
 
 import CATEGORIES from '../../constants/categories'
 import INTERVALS from '../../constants/intervals'
@@ -11,105 +10,86 @@ import EVENT_TYPES from '../../constants/eventTypes'
 import PAGE_SIZES from '../../constants/pageSizes'
 import SORT_ORDERS from '../../constants/sortOrders'
 
-const FIELD_KIND = 'filled'
-
-const withKind = props => ({ ...props, [FIELD_KIND]: true })
-const SelectFieldWithMargin = withMargin(SelectField)
-
 export const Category = props => (
-    <SelectFieldWithMargin
-        {...withKind(props)}
-        name="category"
+    <SingleSelectField
+        {...props}
         label={i18n.t('Category')}
+        selected={props.value}
     >
         {CATEGORIES.map(i => (
-            <option key={i.value} value={i.value}>
-                {i.label}
-            </option>
+            <SingleSelectOption label={i.label} key={i.value} value={i.value} />
         ))}
-    </SelectFieldWithMargin>
+    </SingleSelectField>
 )
 
 export const Interval = props => (
-    <SelectFieldWithMargin
-        {...withKind(props)}
-        name="interval"
+    <SingleSelectField
+        {...props}
         label={i18n.t('Interval')}
+        selected={props.value}
     >
         {INTERVALS.map(i => (
-            <option key={i.value} value={i.value}>
-                {i.label}
-            </option>
+            <SingleSelectOption label={i.label} key={i.value} value={i.value} />
         ))}
-    </SelectFieldWithMargin>
+    </SingleSelectField>
 )
 
 export const AggregationLevel = props => (
-    <SelectFieldWithMargin
-        {...withKind(props)}
-        name="aggregationLevel"
+    <SingleSelectField
+        {...props}
         label={i18n.t('Aggregation Level')}
+        selected={props.value}
     >
         {AGGREGATIONS.map(i => (
-            <option key={i.value} value={i.value}>
-                {i.label}
-            </option>
+            <SingleSelectOption label={i.label} key={i.value} value={i.value} />
         ))}
-    </SelectFieldWithMargin>
+    </SingleSelectField>
 )
 
 export const ChartType = props => (
-    <SelectFieldWithMargin
-        {...withKind(props)}
-        name="chartType"
+    <SingleSelectField
+        {...props}
         label={i18n.t('Chart Type')}
+        selected={props.value}
     >
         {CHART_TYPES.map(i => (
-            <option key={i.value} value={i.value}>
-                {i.label}
-            </option>
+            <SingleSelectOption label={i.label} key={i.value} value={i.value} />
         ))}
-    </SelectFieldWithMargin>
+    </SingleSelectField>
 )
 
 export const EventType = props => (
-    <SelectFieldWithMargin
-        {...withKind(props)}
-        name="eventType"
+    <SingleSelectField
+        {...props}
         label={i18n.t('Event Type')}
+        selected={props.value}
     >
         {EVENT_TYPES.map(i => (
-            <option key={i.value} value={i.value}>
-                {i.label}
-            </option>
+            <SingleSelectOption label={i.label} key={i.value} value={i.value} />
         ))}
-    </SelectFieldWithMargin>
+    </SingleSelectField>
 )
 
 export const PageSize = props => (
-    <SelectFieldWithMargin
-        {...withKind(props)}
-        name="pageSize"
+    <SingleSelectField
+        {...props}
         label={i18n.t('Page Size')}
+        selected={props.value}
     >
         {PAGE_SIZES.map(i => (
-            <option key={i.value} value={i.value}>
-                {i.label}
-            </option>
+            <SingleSelectOption label={i.label} key={i.value} value={i.value} />
         ))}
-    </SelectFieldWithMargin>
+    </SingleSelectField>
 )
 
 export const SortOrder = props => (
-    <SelectFieldWithMargin
-        {...withKind(props)}
-        name="sortOrder"
+    <SingleSelectField
+        {...props}
         label={i18n.t('Sort Order')}
+        selected={props.value}
     >
         {SORT_ORDERS.map(i => (
-            <option key={i.value} value={i.value}>
-                {i.label}
-            </option>
+            <SingleSelectOption label={i.label} key={i.value} value={i.value} />
         ))}
-    </SelectFieldWithMargin>
+    </SingleSelectField>
 )

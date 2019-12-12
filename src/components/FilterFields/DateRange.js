@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import i18n from '@dhis2/d2-i18n'
+import { InputField } from '@dhis2/ui-core'
 import debounce from 'lodash.debounce'
 import './DateRange.css'
 
@@ -25,15 +26,16 @@ class DateRange extends Component {
         this.updateUsageData = debounce(props.updateUsageData, 250)
     }
 
-    onStartDateChange(event) {
-        this.onChange(START_DATE, event.target.value)
+    onStartDateChange({ value }) {
+        this.onChange(START_DATE, value)
     }
-    onEndDateChange(event) {
-        this.onChange(END_DATE, event.target.value)
+
+    onEndDateChange({ value }) {
+        this.onChange(END_DATE, value)
     }
 
     onChange(key, value) {
-        const { updateFilter, updateUsageData, ...dateRange } = this.props
+        const { updateFilter, ...dateRange } = this.props
         const errorKey = `${key}Error`
         const otherErrorKey =
             key === START_DATE ? `${END_DATE}Error` : `${START_DATE}Error`
@@ -79,44 +81,32 @@ class DateRange extends Component {
 
         return (
             <div className="uaa-date-range">
-                <div className="uaa-date-field uaa-fieldwrap">
-                    <label>{i18n.t('Start Date')}</label>
-                    <input
-                        className={START_DATE}
-                        type="date"
-                        value={startDate}
-                        onChange={this.onStartDateChange}
-                    />
-                    {startDateError && (
-                        <span className={`uaa-date-input-error ${START_DATE}`}>
-                            {startDateError}
-                        </span>
-                    )}
-                </div>
-                <div className="uaa-date-field uaa-fieldwrap">
-                    <label>{i18n.t('End date')}</label>
-                    <input
-                        className={END_DATE}
-                        type="date"
-                        value={endDate}
-                        onChange={this.onEndDateChange}
-                    />
-                    {endDateError && (
-                        <span className={`uaa-date-input-error ${END_DATE}`}>
-                            {endDateError}
-                        </span>
-                    )}
-                </div>
+                <InputField
+                    label={i18n.t('Start Date')}
+                    type="date"
+                    value={startDate}
+                    onChange={this.onStartDateChange}
+                    error={!!startDateError}
+                    validationText={startDateError}
+                />
+                <InputField
+                    label={i18n.t('End Date')}
+                    type="date"
+                    value={endDate}
+                    onChange={this.onEndDateChange}
+                    error={!!endDateError}
+                    validationText={endDateError}
+                />
             </div>
         )
     }
 }
 
 DateRange.propTypes = {
-    startDate: PropTypes.string,
-    endDate: PropTypes.string,
     updateFilter: PropTypes.func.isRequired,
     updateUsageData: PropTypes.func.isRequired,
+    endDate: PropTypes.string,
+    startDate: PropTypes.string,
 }
 
 export default DateRange

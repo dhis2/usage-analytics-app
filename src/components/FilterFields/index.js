@@ -10,7 +10,7 @@ import {
 
 export const CategoryDropDown = connect(
     createValueGetterForFilterKey('category'),
-    { onChange: updateCategory }
+    { onChange: ({ selected }) => updateCategory('category', selected) }
 )(DropDowns.Category)
 
 export const DateRange = connect(
@@ -20,37 +20,38 @@ export const DateRange = connect(
 
 export const IntervalDropDown = connect(
     createValueGetterForFilterKey('interval'),
-    { onChange: updateFilterAndGetData }
+    { onChange: ({ selected }) => updateFilterAndGetData('interval', selected) }
 )(DropDowns.Interval)
 
 export const AggregationLevelDropDown = connect(
     createValueGetterForFilterKey('aggregationLevel'),
-    { onChange: e => updateFilter(e.target.name, e.target.value) }
+    { onChange: ({ selected }) => updateFilter('aggregationLevel', selected) }
 )(DropDowns.AggregationLevel)
 
 export const ChartTypeDropDown = connect(
     createValueGetterForFilterKey('chartType'),
-    { onChange: e => updateFilter(e.target.name, e.target.value) }
+    { onChange: ({ selected }) => updateFilter('chartType', selected) }
 )(DropDowns.ChartType)
 
 export const EventTypeDropDown = connect(
     createValueGetterForFilterKey('eventType'),
-    { onChange: updateFilterAndGetData }
+    { onChange: ({ selected }) => updateFilterAndGetData('eventType', selected) }
 )(DropDowns.EventType)
 
 export const PageSizeDropDown = connect(
     createValueGetterForFilterKey('pageSize'),
-    { onChange: updateFilterAndGetData }
+    { onChange: ({ selected }) => updateFilterAndGetData('pageSize', selected) }
 )(DropDowns.PageSize)
 
 export const SortOrderDropDown = connect(
     createValueGetterForFilterKey('sortOrder'),
-    { onChange: updateFilterAndGetData }
+    { onChange: ({ selected }) => updateFilterAndGetData('sortOrder', selected) }
 )(DropDowns.SortOrder)
 
 export function createValueGetterForFilterKey(key) {
     return function(state) {
         return {
+            label: key,
             value: state.filter[key],
         }
     }

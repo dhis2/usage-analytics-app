@@ -41,16 +41,16 @@ export function Chart({ shouldHide, loading, chartConfig }) {
 }
 
 Chart.propTypes = {
-    chartConfig: PropTypes.object,
-    shouldHide: PropTypes.bool.isRequired,
     loading: PropTypes.bool.isRequired,
+    shouldHide: PropTypes.bool.isRequired,
+    chartConfig: PropTypes.object,
 }
 
 // The Chart is not displayed for category TOP_FAVORITES, but it should also
 // be hidden when usageData === ERROR, because one Error message is enough,
 // and this Error will be displayed in the Table component
 export function mapStateToProps({ usageData, filter }) {
-    const shouldHide = filter.category === TOP_FAVORITES || usageData === ERROR
+    const shouldHide = filter.category.value === TOP_FAVORITES || usageData === ERROR
     const loading = usageData === LOADING
     return {
         shouldHide,

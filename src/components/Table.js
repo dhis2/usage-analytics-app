@@ -106,16 +106,16 @@ export function mapStateToProps({ usageData, filter }) {
 
 function parseTableData({ aggregationLevel, category, interval }, dataPoints) {
     const fields =
-        category === FAVORITE_VIEWS
-            ? FIELDS[category][aggregationLevel]
-            : FIELDS[category]
+        category.value === FAVORITE_VIEWS
+            ? FIELDS[category.value][aggregationLevel.value]
+            : FIELDS[category.value]
 
     return {
         headers: fields.map(({ label }) => label),
         rows: dataPoints.map(dataPoint =>
             fields.map(field => {
                 if (field.key === dateField.key) {
-                    return getDisplayDateForInterval(dataPoint, interval)
+                    return getDisplayDateForInterval(dataPoint, interval.value)
                 }
                 if (field.key === createdField.key) {
                     return getDisplayDateFromIsoString(dataPoint[field.key])
