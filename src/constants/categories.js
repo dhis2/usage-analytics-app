@@ -6,7 +6,7 @@ export const USERS = 'USERS'
 export const TOP_FAVORITES = 'TOP_FAVORITES'
 export const DATA_VALUES = 'DATA_VALUES'
 
-export const CATEGORY_LOOKUP = {
+const CATEGORIES = {
     [FAVORITE_VIEWS]: {
         value: FAVORITE_VIEWS,
         label: i18n.t('Favorite views'),
@@ -33,11 +33,4 @@ export const CATEGORY_LOOKUP = {
     },
 }
 
-const CATEGORIES = [
-    CATEGORY_LOOKUP.FAVORITE_VIEWS,
-    CATEGORY_LOOKUP.FAVORITES_SAVED,
-    CATEGORY_LOOKUP.USERS,
-    CATEGORY_LOOKUP.TOP_FAVORITES,
-    CATEGORY_LOOKUP.DATA_VALUES,
-]
 export default CATEGORIES
