@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import PropTypes from 'prop-types'
+import PropTypes from '@dhis2/prop-types'
 import { connect } from 'react-redux'
 import { CircularLoader } from '@dhis2/ui-core'
 import { Line } from 'react-chartjs-2'
@@ -50,7 +50,8 @@ Chart.propTypes = {
 // be hidden when usageData === ERROR, because one Error message is enough,
 // and this Error will be displayed in the Table component
 export function mapStateToProps({ usageData, filter }) {
-    const shouldHide = filter.category.value === TOP_FAVORITES || usageData === ERROR
+    const shouldHide =
+        filter.category.value === TOP_FAVORITES || usageData === ERROR
     const loading = usageData === LOADING
     return {
         shouldHide,

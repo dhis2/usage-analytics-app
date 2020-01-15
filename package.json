@@ -15,9 +15,9 @@
         "react-dom": "^16.12.0"
     },
     "dependencies": {
+        "@dhis2/prop-types": "^1.5.0",
         "chart.js": "^2.9.1",
         "lodash.debounce": "^4.0.8",
-        "prop-types": "^15.7.2",
         "react-app-polyfill": "^1.0.4",
         "react-chartjs-2": "^2.8.0",
         "react-redux": "^7.1.3",
