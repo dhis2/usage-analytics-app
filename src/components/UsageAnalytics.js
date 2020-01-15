@@ -39,17 +39,14 @@ export class UsageAnalytics extends Component {
 }
 
 UsageAnalytics.propTypes = {
-    initApp: PropTypes.func,
     appStatus: PropTypes.string,
+    initApp: PropTypes.func,
 }
 
 const mapStateToProps = ({ appStatus }) => ({
     appStatus,
 })
 
-export default connect(
-    mapStateToProps,
-    {
-        initApp,
-    }
-)(UsageAnalytics)
+export default connect(mapStateToProps, {
+    initApp,
+})(UsageAnalytics)

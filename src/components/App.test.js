@@ -24,7 +24,7 @@ describe('<App/>', () => {
     it('renders the expected tree', () => {
         jest.doMock('react-redux', () => ({
             connect: jest.fn(() => component => `Connected${component.name}`),
-            Provider: () => <div />,
+            Provider: () => <div />, // eslint-disable-line react/display-name
         }))
         const App = require('./App').default
         const tree = shallow(<App />)
