@@ -1,5 +1,5 @@
 import { CHART_FIELDS as FIELDS } from '../../constants/fields'
-import { FAVORITE_VIEWS, CATEGORY_LOOKUP } from '../../constants/categories'
+import CATEGORIES, { FAVORITE_VIEWS } from '../../constants/categories'
 import { getDisplayDateForInterval } from '../../utils/date'
 import * as config from './config'
 
@@ -12,14 +12,14 @@ export default function parseChartData(
 ) {
     const labels = []
     const datasets = []
-    const title = CATEGORY_LOOKUP[category.value].label
-    const subtitle = CATEGORY_LOOKUP[category.value].subtitle
+    const title = CATEGORIES[category].label
+    const subtitle = CATEGORIES[category].subtitle
     let max = MIN_SUGGESTED_MAX_VALUE
     let min = null
     const fields =
-        category.value === FAVORITE_VIEWS
-            ? FIELDS[category.value][aggregationLevel.value][chartType.value]
-            : FIELDS[category.value]
+        category === FAVORITE_VIEWS
+            ? FIELDS[category][aggregationLevel][chartType]
+            : FIELDS[category]
     const dataPointsLen = dataPoints.length
     const fieldsLen = fields.length
 
@@ -29,7 +29,7 @@ export default function parseChartData(
         dataPointIndex++
     ) {
         const dataPoint = dataPoints[dataPointIndex]
-        labels.push(getDisplayDateForInterval(dataPoint, interval.value))
+        labels.push(getDisplayDateForInterval(dataPoint, interval))
 
         for (let fieldIndex = 0; fieldIndex < fieldsLen; fieldIndex++) {
             const field = fields[fieldIndex]

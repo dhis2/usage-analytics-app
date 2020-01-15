@@ -46,9 +46,9 @@ FilterSideBar.propTypes = {
 
 export function mapStateToProps({ filter: { category } }) {
     return {
-        showDateFields: category.value !== TOP_FAVORITES,
-        showTopFavoritesFields: category.value === TOP_FAVORITES,
-        showFavoriteViewsFields: category.value === FAVORITE_VIEWS,
+        showDateFields: category !== TOP_FAVORITES,
+        showTopFavoritesFields: category === TOP_FAVORITES,
+        showFavoriteViewsFields: category === FAVORITE_VIEWS,
     }
 }
 

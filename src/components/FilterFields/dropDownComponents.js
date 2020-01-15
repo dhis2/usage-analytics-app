@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from '@dhis2/prop-types'
 import i18n from '@dhis2/d2-i18n'
 import { SingleSelectField, SingleSelectOption } from '@dhis2/ui-core'
 
@@ -10,86 +11,51 @@ import EVENT_TYPES from '../../constants/eventTypes'
 import PAGE_SIZES from '../../constants/pageSizes'
 import SORT_ORDERS from '../../constants/sortOrders'
 
-export const Category = props => (
-    <SingleSelectField
-        {...props}
-        label={i18n.t('Category')}
-        selected={props.value}
-    >
-        {CATEGORIES.map(i => (
-            <SingleSelectOption label={i.label} key={i.value} value={i.value} />
+export const DropDown = ({ options, value, ...rest }) => (
+    <SingleSelectField {...rest} selected={options[value]}>
+        {Object.keys(options).map(key => (
+            <SingleSelectOption
+                label={options[key].label}
+                key={options[key].value}
+                value={options[key].value}
+            />
         ))}
     </SingleSelectField>
+)
+
+DropDown.propTypes = {
+    options: PropTypes.object.isRequired,
+    value: PropTypes.string.isRequired,
+}
+
+export const Category = props => (
+    <DropDown {...props} label={i18n.t('Category')} options={CATEGORIES} />
 )
 
 export const Interval = props => (
-    <SingleSelectField
-        {...props}
-        label={i18n.t('Interval')}
-        selected={props.value}
-    >
-        {INTERVALS.map(i => (
-            <SingleSelectOption label={i.label} key={i.value} value={i.value} />
-        ))}
-    </SingleSelectField>
+    <DropDown {...props} label={i18n.t('Interval')} options={INTERVALS} />
 )
 
 export const AggregationLevel = props => (
-    <SingleSelectField
+    <DropDown
         {...props}
         label={i18n.t('Aggregation Level')}
-        selected={props.value}
-    >
-        {AGGREGATIONS.map(i => (
-            <SingleSelectOption label={i.label} key={i.value} value={i.value} />
-        ))}
-    </SingleSelectField>
+        options={AGGREGATIONS}
+    />
 )
 
 export const ChartType = props => (
-    <SingleSelectField
-        {...props}
-        label={i18n.t('Chart Type')}
-        selected={props.value}
-    >
-        {CHART_TYPES.map(i => (
-            <SingleSelectOption label={i.label} key={i.value} value={i.value} />
-        ))}
-    </SingleSelectField>
+    <DropDown {...props} label={i18n.t('Chart Type')} options={CHART_TYPES} />
 )
 
 export const EventType = props => (
-    <SingleSelectField
-        {...props}
-        label={i18n.t('Event Type')}
-        selected={props.value}
-    >
-        {EVENT_TYPES.map(i => (
-            <SingleSelectOption label={i.label} key={i.value} value={i.value} />
-        ))}
-    </SingleSelectField>
+    <DropDown {...props} label={i18n.t('Event Type')} options={EVENT_TYPES} />
 )
 
 export const PageSize = props => (
-    <SingleSelectField
-        {...props}
-        label={i18n.t('Page Size')}
-        selected={props.value}
-    >
-        {PAGE_SIZES.map(i => (
-            <SingleSelectOption label={i.label} key={i.value} value={i.value} />
-        ))}
-    </SingleSelectField>
+    <DropDown {...props} label={i18n.t('Page Size')} options={PAGE_SIZES} />
 )
 
 export const SortOrder = props => (
-    <SingleSelectField
-        {...props}
-        label={i18n.t('Sort Order')}
-        selected={props.value}
-    >
-        {SORT_ORDERS.map(i => (
-            <SingleSelectOption label={i.label} key={i.value} value={i.value} />
-        ))}
-    </SingleSelectField>
+    <DropDown {...props} label={i18n.t('Sort Order')} options={SORT_ORDERS} />
 )

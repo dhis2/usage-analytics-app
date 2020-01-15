@@ -1,8 +1,8 @@
-export const PS_5 = 5
-export const PS_10 = 10
-export const PS_15 = 15
-export const PS_20 = 20
-export const PS_25 = 25
+export const PS_5 = '5'
+export const PS_10 = '10'
+export const PS_15 = '15'
+export const PS_20 = '20'
+export const PS_25 = '25'
 
 const PAGE_SIZES = {
     [PS_5]: { value: PS_5, label: '5' },

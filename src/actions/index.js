@@ -13,13 +13,13 @@ export const initApp = () => async (dispatch, getState) => {
 
 // Fetch data if category has changed from TOP_FAVORITES to anything else
 // or vice versa
-export const updateCategory = (name, value) => (dispatch, getState) => {
+export const updateCategory = value => (dispatch, getState) => {
     const { filter } = getState()
     const oldCategory = filter.category
 
-    dispatch(updateFilter(name, value))
+    dispatch(updateFilter('category', value))
 
-    if (isNewDataRequiredAfterCategoryChange(oldCategory.value, value.value)) {
+    if (isNewDataRequiredAfterCategoryChange(oldCategory, value)) {
         return getUsageData({ ...filter, category: value }, dispatch)
     }
 }

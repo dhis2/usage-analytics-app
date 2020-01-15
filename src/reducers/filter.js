@@ -33,7 +33,7 @@ export function getInitialState(endDate) {
         aggregationLevel: SUM,
         chartType: ALL,
         eventType: CHART_VIEW,
-        pageSize: 25,
+        pageSize: '25',
         sortOrder: ASC,
     }
 }
