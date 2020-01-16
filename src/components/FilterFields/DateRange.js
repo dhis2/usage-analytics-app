@@ -27,13 +27,6 @@ class DateRange extends Component {
     }
 
     onStartDateChange({ value }) {
-        // console.log(
-        //     'HENDRIK onStartDateChange:',
-        //     '\nvalue: ',
-        //     value,
-        //     '\nevent: ',
-        //     event
-        // )
         this.onChange(START_DATE, value)
     }
 
@@ -56,19 +49,10 @@ class DateRange extends Component {
                 [otherErrorKey]: otherError,
             })
         }
-        console.log(
-            'HENDRIK A:',
-            '\nkey: ',
-            key,
-            '\nvalue: ',
-            value,
-            '\nerror: ',
-            error
-        )
+
         updateFilter(key, value)
 
         if (!error) {
-            console.log('HENDRIK B', error)
             this.updateUsageData()
         }
     }
@@ -117,6 +101,7 @@ class DateRange extends Component {
                     validationText={endDateError}
                     name={END_DATE}
                     className={END_DATE}
+                    dataTest="uaa-enddate"
                 />
             </div>
         )
