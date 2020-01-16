@@ -12,15 +12,15 @@ export function getDataStatistics({ startDate, endDate, interval }) {
 }
 
 export function getUsageData(filter) {
-    return filter.category.value === TOP_FAVORITES
+    return filter.category === TOP_FAVORITES
         ? getFavorites({
-            eventType: filter.eventType.value,
-            pageSize: filter.pageSize.value,
-            sortOrder: filter.sortOrder.value,
-        })
+              eventType: filter.eventType,
+              pageSize: filter.pageSize,
+              sortOrder: filter.sortOrder,
+          })
         : getDataStatistics({
-            startDate: filter.startDate,
-            endDate: filter.endDate,
-            interval: filter.interval.value,
-        })
+              startDate: filter.startDate,
+              endDate: filter.endDate,
+              interval: filter.interval,
+          })
 }

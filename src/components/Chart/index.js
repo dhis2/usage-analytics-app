@@ -50,8 +50,7 @@ Chart.propTypes = {
 // be hidden when usageData === ERROR, because one Error message is enough,
 // and this Error will be displayed in the Table component
 export function mapStateToProps({ usageData, filter }) {
-    const shouldHide =
-        filter.category.value === TOP_FAVORITES || usageData === ERROR
+    const shouldHide = filter.category === TOP_FAVORITES || usageData === ERROR
     const loading = usageData === LOADING
     return {
         shouldHide,

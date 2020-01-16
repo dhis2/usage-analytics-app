@@ -8,13 +8,26 @@ export const EVENT_CHART_VIEW = 'EVENT_CHART_VIEW'
 export const DASHBOARD_VIEW = 'DASHBOARD_VIEW'
 export const DATA_SET_REPORT_VIEW = 'DATA_SET_REPORT_VIEW'
 
-const EVENT_TYPES = [
-    { value: CHART_VIEW, label: i18n.t('Chart') },
-    { value: MAP_VIEW, label: i18n.t('Map') },
-    { value: REPORT_TABLE_VIEW, label: i18n.t('Report table') },
-    { value: EVENT_REPORT_VIEW, label: i18n.t('Event report') },
-    { value: EVENT_CHART_VIEW, label: i18n.t('Event chart') },
-    { value: DASHBOARD_VIEW, label: i18n.t('Dashboard') },
-    { value: DATA_SET_REPORT_VIEW, label: i18n.t('Data set report') },
-]
+const EVENT_TYPES = {
+    [CHART_VIEW]: { value: CHART_VIEW, label: i18n.t('Chart') },
+    [MAP_VIEW]: { value: MAP_VIEW, label: i18n.t('Map') },
+    [REPORT_TABLE_VIEW]: {
+        value: REPORT_TABLE_VIEW,
+        label: i18n.t('Report table'),
+    },
+    [EVENT_REPORT_VIEW]: {
+        value: EVENT_REPORT_VIEW,
+        label: i18n.t('Event report'),
+    },
+    [EVENT_CHART_VIEW]: {
+        value: EVENT_CHART_VIEW,
+        label: i18n.t('Event chart'),
+    },
+    [DASHBOARD_VIEW]: { value: DASHBOARD_VIEW, label: i18n.t('Dashboard') },
+    [DATA_SET_REPORT_VIEW]: {
+        value: DATA_SET_REPORT_VIEW,
+        label: i18n.t('Data set report'),
+    },
+}
+
 export default EVENT_TYPES

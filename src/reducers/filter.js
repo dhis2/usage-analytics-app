@@ -1,11 +1,10 @@
 import { FILTER_UPDATED } from '../actions/types'
-import CATEGORIES from '../constants/categories'
-import INTERVALS from '../constants/intervals'
-import AGGREGATIONS from '../constants/aggregations'
-import CHART_TYPES from '../constants/chartTypes'
-import EVENT_TYPES from '../constants/eventTypes'
-import SORT_ORDERS from '../constants/sortOrders'
-import PAGE_SIZES from '../constants/pageSizes'
+import { FAVORITE_VIEWS } from '../constants/categories'
+import { WEEK } from '../constants/intervals'
+import { SUM } from '../constants/aggregations'
+import { ALL } from '../constants/chartTypes'
+import { CHART_VIEW } from '../constants/eventTypes'
+import { ASC } from '../constants/sortOrders'
 
 export default function filter(
     state = getInitialState(new Date()),
@@ -27,15 +26,15 @@ export function getInitialState(endDate) {
     startDate.setMonth(startDate.getMonth() - 4)
 
     return {
-        category: CATEGORIES[0],
+        category: FAVORITE_VIEWS,
         startDate: parseDate(startDate),
         endDate: parseDate(endDate),
-        interval: INTERVALS[1],
-        aggregationLevel: AGGREGATIONS[0],
-        chartType: CHART_TYPES[0],
-        eventType: EVENT_TYPES[0],
-        pageSize: PAGE_SIZES[4],
-        sortOrder: SORT_ORDERS[0],
+        interval: WEEK,
+        aggregationLevel: SUM,
+        chartType: ALL,
+        eventType: CHART_VIEW,
+        pageSize: '25',
+        sortOrder: ASC,
     }
 }
 
