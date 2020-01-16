@@ -1,240 +1,197 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`dropDownComponents <AggregationLevel/> matches the snapshot 1`] = `
-<ComponentWithMargin
-  filled={true}
+<DropDown
   label="Aggregation Level"
-  name="aggregationLevel"
   onChange={[MockFunction]}
+  options={
+    Object {
+      "AVERAGE": Object {
+        "label": "Average",
+        "value": "AVERAGE",
+      },
+      "SUM": Object {
+        "label": "Sum",
+        "value": "SUM",
+      },
+    }
+  }
   value="test"
->
-  <option
-    key="SUM"
-    value="SUM"
-  >
-    Sum
-  </option>
-  <option
-    key="AVERAGE"
-    value="AVERAGE"
-  >
-    Average
-  </option>
-</ComponentWithMargin>
+/>
 `;
 
 exports[`dropDownComponents <Category/> matches the snapshot 1`] = `
-<ComponentWithMargin
-  filled={true}
+<DropDown
   label="Category"
-  name="category"
   onChange={[MockFunction]}
+  options={
+    Object {
+      "DATA_VALUES": Object {
+        "label": "Data values",
+        "subtitle": "Number of data values saved in the system",
+        "value": "DATA_VALUES",
+      },
+      "FAVORITES_SAVED": Object {
+        "label": "Favorites saved",
+        "subtitle": "Number of analysis favorites created by users",
+        "value": "FAVORITES_SAVED",
+      },
+      "FAVORITE_VIEWS": Object {
+        "label": "Favorite views",
+        "subtitle": "Number of times users looked at analysis favorites",
+        "value": "FAVORITE_VIEWS",
+      },
+      "TOP_FAVORITES": Object {
+        "label": "Top favorites",
+        "value": "TOP_FAVORITES",
+      },
+      "USERS": Object {
+        "label": "Users",
+        "subtitle": "Number of users in the system",
+        "value": "USERS",
+      },
+    }
+  }
   value="test"
->
-  <option
-    key="FAVORITE_VIEWS"
-    value="FAVORITE_VIEWS"
-  >
-    Favorite views
-  </option>
-  <option
-    key="FAVORITES_SAVED"
-    value="FAVORITES_SAVED"
-  >
-    Favorites saved
-  </option>
-  <option
-    key="USERS"
-    value="USERS"
-  >
-    Users
-  </option>
-  <option
-    key="TOP_FAVORITES"
-    value="TOP_FAVORITES"
-  >
-    Top favorites
-  </option>
-  <option
-    key="DATA_VALUES"
-    value="DATA_VALUES"
-  >
-    Data values
-  </option>
-</ComponentWithMargin>
+/>
 `;
 
 exports[`dropDownComponents <ChartType/> matches the snapshot 1`] = `
-<ComponentWithMargin
-  filled={true}
+<DropDown
   label="Chart Type"
-  name="chartType"
   onChange={[MockFunction]}
+  options={
+    Object {
+      "ALL": Object {
+        "label": "All",
+        "value": "ALL",
+      },
+      "TOTAL": Object {
+        "label": "Total",
+        "value": "TOTAL",
+      },
+    }
+  }
   value="test"
->
-  <option
-    key="ALL"
-    value="ALL"
-  >
-    All
-  </option>
-  <option
-    key="TOTAL"
-    value="TOTAL"
-  >
-    Total
-  </option>
-</ComponentWithMargin>
+/>
 `;
 
 exports[`dropDownComponents <EventType/> matches the snapshot 1`] = `
-<ComponentWithMargin
-  filled={true}
+<DropDown
   label="Event Type"
-  name="eventType"
   onChange={[MockFunction]}
+  options={
+    Object {
+      "CHART_VIEW": Object {
+        "label": "Chart",
+        "value": "CHART_VIEW",
+      },
+      "DASHBOARD_VIEW": Object {
+        "label": "Dashboard",
+        "value": "DASHBOARD_VIEW",
+      },
+      "DATA_SET_REPORT_VIEW": Object {
+        "label": "Data set report",
+        "value": "DATA_SET_REPORT_VIEW",
+      },
+      "EVENT_CHART_VIEW": Object {
+        "label": "Event chart",
+        "value": "EVENT_CHART_VIEW",
+      },
+      "EVENT_REPORT_VIEW": Object {
+        "label": "Event report",
+        "value": "EVENT_REPORT_VIEW",
+      },
+      "MAP_VIEW": Object {
+        "label": "Map",
+        "value": "MAP_VIEW",
+      },
+      "REPORT_TABLE_VIEW": Object {
+        "label": "Report table",
+        "value": "REPORT_TABLE_VIEW",
+      },
+    }
+  }
   value="test"
->
-  <option
-    key="CHART_VIEW"
-    value="CHART_VIEW"
-  >
-    Chart
-  </option>
-  <option
-    key="MAP_VIEW"
-    value="MAP_VIEW"
-  >
-    Map
-  </option>
-  <option
-    key="REPORT_TABLE_VIEW"
-    value="REPORT_TABLE_VIEW"
-  >
-    Report table
-  </option>
-  <option
-    key="EVENT_REPORT_VIEW"
-    value="EVENT_REPORT_VIEW"
-  >
-    Event report
-  </option>
-  <option
-    key="EVENT_CHART_VIEW"
-    value="EVENT_CHART_VIEW"
-  >
-    Event chart
-  </option>
-  <option
-    key="DASHBOARD_VIEW"
-    value="DASHBOARD_VIEW"
-  >
-    Dashboard
-  </option>
-  <option
-    key="DATA_SET_REPORT_VIEW"
-    value="DATA_SET_REPORT_VIEW"
-  >
-    Data set report
-  </option>
-</ComponentWithMargin>
+/>
 `;
 
 exports[`dropDownComponents <Interval/> matches the snapshot 1`] = `
-<ComponentWithMargin
-  filled={true}
+<DropDown
   label="Interval"
-  name="interval"
   onChange={[MockFunction]}
+  options={
+    Object {
+      "DAY": Object {
+        "label": "Day",
+        "value": "DAY",
+      },
+      "MONTH": Object {
+        "label": "Month",
+        "value": "MONTH",
+      },
+      "WEEK": Object {
+        "label": "Week",
+        "value": "WEEK",
+      },
+      "YEAR": Object {
+        "label": "Year",
+        "value": "YEAR",
+      },
+    }
+  }
   value="test"
->
-  <option
-    key="DAY"
-    value="DAY"
-  >
-    Day
-  </option>
-  <option
-    key="WEEK"
-    value="WEEK"
-  >
-    Week
-  </option>
-  <option
-    key="MONTH"
-    value="MONTH"
-  >
-    Month
-  </option>
-  <option
-    key="YEAR"
-    value="YEAR"
-  >
-    Year
-  </option>
-</ComponentWithMargin>
+/>
 `;
 
 exports[`dropDownComponents <PageSize/> matches the snapshot 1`] = `
-<ComponentWithMargin
-  filled={true}
+<DropDown
   label="Page Size"
-  name="pageSize"
   onChange={[MockFunction]}
+  options={
+    Object {
+      "10": Object {
+        "label": "10",
+        "value": "10",
+      },
+      "15": Object {
+        "label": "15",
+        "value": "15",
+      },
+      "20": Object {
+        "label": "20",
+        "value": "20",
+      },
+      "25": Object {
+        "label": "25",
+        "value": "25",
+      },
+      "5": Object {
+        "label": "5",
+        "value": "5",
+      },
+    }
+  }
   value="test"
->
-  <option
-    key="5"
-    value={5}
-  >
-    5
-  </option>
-  <option
-    key="10"
-    value={10}
-  >
-    10
-  </option>
-  <option
-    key="15"
-    value={15}
-  >
-    15
-  </option>
-  <option
-    key="20"
-    value={20}
-  >
-    20
-  </option>
-  <option
-    key="25"
-    value={25}
-  >
-    25
-  </option>
-</ComponentWithMargin>
+/>
 `;
 
 exports[`dropDownComponents <SortOrder/> matches the snapshot 1`] = `
-<ComponentWithMargin
-  filled={true}
+<DropDown
   label="Sort Order"
-  name="sortOrder"
   onChange={[MockFunction]}
+  options={
+    Object {
+      "ASC": Object {
+        "label": "Ascending",
+        "value": "ASC",
+      },
+      "DESC": Object {
+        "label": "Descending",
+        "value": "DESC",
+      },
+    }
+  }
   value="test"
->
-  <option
-    key="ASC"
-    value="ASC"
-  >
-    Ascending
-  </option>
-  <option
-    key="DESC"
-    value="DESC"
-  >
-    Descending
-  </option>
-</ComponentWithMargin>
+/>
 `;

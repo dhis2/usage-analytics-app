@@ -6,7 +6,9 @@
         "start": "d2-app-scripts start",
         "build": "d2-app-scripts build",
         "test": "d2-app-scripts test",
-        "lint:style": "d2-style js check --all"
+        "lint": "d2-style js check",
+        "format": "d2-style js apply",
+        "format:staged": "d2-style js apply --staged"
     },
     "peerDependencies": {
         "@dhis2/d2-i18n": "^1.0.6",
