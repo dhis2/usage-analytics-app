@@ -2,7 +2,7 @@ import { createValueGetterForFilterKey, mapDateRangeProps } from './index'
 
 const state = {
     filter: {
-        pageSize: 10,
+        pageSize: '10',
         startDate: '2018-8-12',
         endDate: '2018-12-12',
     },
@@ -16,7 +16,10 @@ describe('FilterFields', () => {
     })
 
     it('the function created by createValueGetterForFilterKey returns the correct value when called', () => {
-        expect(createdFilterValueGetter(state)).toEqual({ value: 10 })
+        expect(createdFilterValueGetter(state)).toEqual({
+            label: 'pageSize',
+            value: '10',
+        })
     })
 
     it('mapDateRangeProps returns the correct startDate and endDate', () => {
