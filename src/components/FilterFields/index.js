@@ -20,47 +20,32 @@ export const DateRange = connect(mapDateRangeProps, {
 
 export const IntervalDropDown = connect(
     createValueGetterForFilterKey('interval'),
-    {
-        onChange: ({ selected: { value } }) =>
-            updateFilterAndGetData('interval', value),
-    }
+    { onChange: createFilterUpdater(updateFilterAndGetData, 'interval') }
 )(DropDowns.Interval)
 
 export const AggregationLevelDropDown = connect(
     createValueGetterForFilterKey('aggregationLevel'),
-    {
-        onChange: ({ selected: { value } }) =>
-            updateFilter('aggregationLevel', value),
-    }
+    { onChange: createFilterUpdater(updateFilter, 'aggregationLevel') }
 )(DropDowns.AggregationLevel)
 
 export const ChartTypeDropDown = connect(
     createValueGetterForFilterKey('chartType'),
-    { onChange: ({ selected: { value } }) => updateFilter('chartType', value) }
+    { onChange: createFilterUpdater(updateFilter, 'chartType') }
 )(DropDowns.ChartType)
 
 export const EventTypeDropDown = connect(
     createValueGetterForFilterKey('eventType'),
-    {
-        onChange: ({ selected: { value } }) =>
-            updateFilterAndGetData('eventType', value),
-    }
+    { onChange: createFilterUpdater(updateFilterAndGetData, 'eventType') }
 )(DropDowns.EventType)
 
 export const PageSizeDropDown = connect(
     createValueGetterForFilterKey('pageSize'),
-    {
-        onChange: ({ selected: { value } }) =>
-            updateFilterAndGetData('pageSize', value),
-    }
+    { onChange: createFilterUpdater(updateFilterAndGetData, 'pageSize') }
 )(DropDowns.PageSize)
 
 export const SortOrderDropDown = connect(
     createValueGetterForFilterKey('sortOrder'),
-    {
-        onChange: ({ selected: { value } }) =>
-            updateFilterAndGetData('sortOrder', value),
-    }
+    { onChange: createFilterUpdater(updateFilterAndGetData, 'sortOrder') }
 )(DropDowns.SortOrder)
 
 export function createValueGetterForFilterKey(key) {
@@ -69,6 +54,12 @@ export function createValueGetterForFilterKey(key) {
             label: key,
             value: state.filter[key],
         }
+    }
+}
+
+function createFilterUpdater(updaterFn, filterKey) {
+    return function({ selected: { value } }) {
+        return updaterFn(filterKey, value)
     }
 }
 
