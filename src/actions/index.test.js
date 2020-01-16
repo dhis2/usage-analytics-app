@@ -103,15 +103,9 @@ describe('updateCategory', () => {
             MOCK_ACTIONS[TYPES.USAGE_DATA_RECEIVED],
         ]
         const store = mockStore(DEFAULT_STORE_STATE)
-        return store
-            .dispatch(
-                updateCategory({
-                    target: { name: CATEGORY, value: TOP_FAVORITES },
-                })
-            )
-            .then(() => {
-                expect(store.getActions()).toEqual(expectedActions)
-            })
+        return store.dispatch(updateCategory(TOP_FAVORITES)).then(() => {
+            expect(store.getActions()).toEqual(expectedActions)
+        })
     })
     it('creates USAGE_DATA_ERRORED when new data is required and getUsageData is rejected', () => {
         api.getUsageData = mockRejectingPromise
@@ -121,15 +115,9 @@ describe('updateCategory', () => {
             MOCK_ACTIONS[TYPES.USAGE_DATA_ERRORED],
         ]
         const store = mockStore(DEFAULT_STORE_STATE)
-        return store
-            .dispatch(
-                updateCategory({
-                    target: { name: CATEGORY, value: TOP_FAVORITES },
-                })
-            )
-            .then(() => {
-                expect(store.getActions()).toEqual(expectedActions)
-            })
+        return store.dispatch(updateCategory(TOP_FAVORITES)).then(() => {
+            expect(store.getActions()).toEqual(expectedActions)
+        })
     })
     it('creates FILTER_UPDATED when new data is NOT required', () => {
         const updateAction = {
@@ -141,11 +129,7 @@ describe('updateCategory', () => {
         }
         const expectedActions = [updateAction]
         const store = mockStore(DEFAULT_STORE_STATE)
-        store.dispatch(
-            updateCategory({
-                target: { name: CATEGORY, value: FAVORITES_SAVED },
-            })
-        )
+        store.dispatch(updateCategory(FAVORITES_SAVED))
         expect(store.getActions()).toEqual(expectedActions)
     })
 })
@@ -165,11 +149,7 @@ describe('updateFilterAndGetData', () => {
         ]
         const store = mockStore(DEFAULT_STORE_STATE)
         return store
-            .dispatch(
-                updateFilterAndGetData({
-                    target: { name: CATEGORY, value: TOP_FAVORITES },
-                })
-            )
+            .dispatch(updateFilterAndGetData(CATEGORY, TOP_FAVORITES))
             .then(() => {
                 expect(store.getActions()).toEqual(expectedActions)
             })
@@ -183,11 +163,7 @@ describe('updateFilterAndGetData', () => {
         ]
         const store = mockStore(DEFAULT_STORE_STATE)
         return store
-            .dispatch(
-                updateFilterAndGetData({
-                    target: { name: CATEGORY, value: TOP_FAVORITES },
-                })
-            )
+            .dispatch(updateFilterAndGetData(CATEGORY, TOP_FAVORITES))
             .then(() => {
                 expect(store.getActions()).toEqual(expectedActions)
             })

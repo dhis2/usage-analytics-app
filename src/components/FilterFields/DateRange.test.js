@@ -1,5 +1,5 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { mount } from 'enzyme'
 import DateRange, {
     START_DATE,
     END_DATE,
@@ -23,9 +23,10 @@ describe('<DateRange/>', () => {
     }
     const NOT_A_DATE = 'This is not a date'
 
-    const wrapper = shallow(<DateRange {...defaultProps} />)
-    const startDateInput = wrapper.find(`.${START_DATE}`)
-    const endDateInput = wrapper.find(`.${END_DATE}`)
+    const wrapper = mount(<DateRange {...defaultProps} />)
+
+    const startDateInput = wrapper.find('#startDate')
+    const endDateInput = wrapper.find('#endDate')
 
     afterEach(() => {
         jest.clearAllMocks()
@@ -62,9 +63,11 @@ describe('<DateRange/>', () => {
     })
     it('renders a startDate pattern error when startDate changes into an invalid value', () => {
         const value = NOT_A_DATE
+
         startDateInput.simulate('change', { target: { value } })
+
         expect(
-            wrapper.find(`span.uaa-date-input-error.${START_DATE}`)
+            wrapper.find('[data-test="uaa-startdate-validation"]')
         ).toHaveText(ERROR_PATTERN)
     })
     it('renders a missing date error when startDate changes into a valid value but endDate is empty', () => {
@@ -72,46 +75,46 @@ describe('<DateRange/>', () => {
             updateFilter,
             updateUsageData,
         }
-        const wrapper = shallow(<DateRange {...defaultProps} />)
-        const startDateInput = wrapper.find(`.${START_DATE}`)
+        const wrapper = mount(<DateRange {...defaultProps} />)
+        const startDateInput = wrapper.find('#startDate')
 
         startDateInput.simulate('change', { target: { value: '2019-12-30' } })
 
         expect(
-            wrapper.find(`span.uaa-date-input-error.${START_DATE}`)
+            wrapper.find('[data-test="uaa-startdate-validation"]')
         ).toHaveText(ERROR_MISSING_DATE)
     })
     it('renders a start-after-end error when start date become greater than end date', () => {
         const value = '2020-01-01'
         startDateInput.simulate('change', { target: { value } })
         expect(
-            wrapper.find(`span.uaa-date-input-error.${START_DATE}`)
+            wrapper.find('[data-test="uaa-startdate-validation"]')
         ).toHaveText(ERROR_START_AFTER_END)
     })
     it('renders a end-before-start error when end date become smaller than start date', () => {
         const value = '2005-01-01'
         endDateInput.simulate('change', { target: { value } })
-        expect(
-            wrapper.find(`span.uaa-date-input-error.${END_DATE}`)
-        ).toHaveText(ERROR_END_BEFORE_START)
+        expect(wrapper.find('[data-test="uaa-enddate-validation"]')).toHaveText(
+            ERROR_END_BEFORE_START
+        )
     })
     it('when endDate changes into range-error startDate error is cleared', () => {
         startDateInput.simulate('change', { target: { value: '2019-12-30' } })
         endDateInput.simulate('change', { target: { value: '2018-09-29' } })
         expect(
-            wrapper.find(`span.uaa-date-input-error.${START_DATE}`).length
+            wrapper.find('[data-test="uaa-startdate-validation"]').length
         ).toEqual(0)
     })
     it('when startDate changes into range-error the endDate error is cleared', () => {
         endDateInput.simulate('change', { target: { value: '2018-09-29' } })
         startDateInput.simulate('change', { target: { value: '2019-12-30' } })
         expect(
-            wrapper.find(`span.uaa-date-input-error.${END_DATE}`).length
+            wrapper.find('[data-test="uaa-enddate-validation"]').length
         ).toEqual(0)
     })
     it('when both fields get pattern errors on change both error fields are displayed', () => {
         startDateInput.simulate('change', { target: { value: NOT_A_DATE } })
         endDateInput.simulate('change', { target: { value: NOT_A_DATE } })
-        expect(wrapper.find('span.uaa-date-input-error').length).toEqual(2)
+        expect(wrapper.find('p.error').length).toEqual(2)
     })
 })

@@ -71,7 +71,10 @@ describe('<Table/>', () => {
 
 const tableData = {
     headers: ['Header 1', 'Header 2'],
-    rows: [['value a1', 'value a2'], ['value b1', 'value b2']],
+    rows: [
+        ['value a1', 'value a2'],
+        ['value b1', 'value b2'],
+    ],
 }
 
 describe('<TableHead />', () => {

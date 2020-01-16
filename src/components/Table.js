@@ -1,5 +1,5 @@
 import i18n from '@dhis2/d2-i18n'
-import PropTypes from 'prop-types'
+import PropTypes from '@dhis2/prop-types'
 import React from 'react'
 import { connect } from 'react-redux'
 import { CircularLoader } from '@dhis2/ui-core'

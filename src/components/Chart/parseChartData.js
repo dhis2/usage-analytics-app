@@ -1,5 +1,5 @@
 import { CHART_FIELDS as FIELDS } from '../../constants/fields'
-import { FAVORITE_VIEWS, CATEGORY_LOOKUP } from '../../constants/categories'
+import CATEGORIES, { FAVORITE_VIEWS } from '../../constants/categories'
 import { getDisplayDateForInterval } from '../../utils/date'
 import * as config from './config'
 
@@ -12,8 +12,8 @@ export default function parseChartData(
 ) {
     const labels = []
     const datasets = []
-    const title = CATEGORY_LOOKUP[category].label
-    const subtitle = CATEGORY_LOOKUP[category].subtitle
+    const title = CATEGORIES[category].label
+    const subtitle = CATEGORIES[category].subtitle
     let max = MIN_SUGGESTED_MAX_VALUE
     let min = null
     const fields =

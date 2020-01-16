@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import PropTypes from 'prop-types'
+import PropTypes from '@dhis2/prop-types'
 import { connect } from 'react-redux'
 import i18n from '@dhis2/d2-i18n'
 import * as Fields from './FilterFields'

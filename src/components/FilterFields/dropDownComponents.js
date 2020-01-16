@@ -1,7 +1,7 @@
 import React from 'react'
+import PropTypes from '@dhis2/prop-types'
 import i18n from '@dhis2/d2-i18n'
-import { SelectField } from '@dhis2/ui-core'
-import withMargin from './withMargin'
+import { SingleSelectField, SingleSelectOption } from '@dhis2/ui-core'
 
 import CATEGORIES from '../../constants/categories'
 import INTERVALS from '../../constants/intervals'
@@ -11,105 +11,51 @@ import EVENT_TYPES from '../../constants/eventTypes'
 import PAGE_SIZES from '../../constants/pageSizes'
 import SORT_ORDERS from '../../constants/sortOrders'
 
-const FIELD_KIND = 'filled'
+export const DropDown = ({ options, value, ...rest }) => (
+    <SingleSelectField {...rest} selected={options[value]}>
+        {Object.keys(options).map(key => (
+            <SingleSelectOption
+                label={options[key].label}
+                key={options[key].value}
+                value={options[key].value}
+            />
+        ))}
+    </SingleSelectField>
+)
 
-const withKind = props => ({ ...props, [FIELD_KIND]: true })
-const SelectFieldWithMargin = withMargin(SelectField)
+DropDown.propTypes = {
+    options: PropTypes.object.isRequired,
+    value: PropTypes.string.isRequired,
+}
 
 export const Category = props => (
-    <SelectFieldWithMargin
-        {...withKind(props)}
-        name="category"
-        label={i18n.t('Category')}
-    >
-        {CATEGORIES.map(i => (
-            <option key={i.value} value={i.value}>
-                {i.label}
-            </option>
-        ))}
-    </SelectFieldWithMargin>
+    <DropDown {...props} label={i18n.t('Category')} options={CATEGORIES} />
 )
 
 export const Interval = props => (
-    <SelectFieldWithMargin
-        {...withKind(props)}
-        name="interval"
-        label={i18n.t('Interval')}
-    >
-        {INTERVALS.map(i => (
-            <option key={i.value} value={i.value}>
-                {i.label}
-            </option>
-        ))}
-    </SelectFieldWithMargin>
+    <DropDown {...props} label={i18n.t('Interval')} options={INTERVALS} />
 )
 
 export const AggregationLevel = props => (
-    <SelectFieldWithMargin
-        {...withKind(props)}
-        name="aggregationLevel"
+    <DropDown
+        {...props}
         label={i18n.t('Aggregation Level')}
-    >
-        {AGGREGATIONS.map(i => (
-            <option key={i.value} value={i.value}>
-                {i.label}
-            </option>
-        ))}
-    </SelectFieldWithMargin>
+        options={AGGREGATIONS}
+    />
 )
 
 export const ChartType = props => (
-    <SelectFieldWithMargin
-        {...withKind(props)}
-        name="chartType"
-        label={i18n.t('Chart Type')}
-    >
-        {CHART_TYPES.map(i => (
-            <option key={i.value} value={i.value}>
-                {i.label}
-            </option>
-        ))}
-    </SelectFieldWithMargin>
+    <DropDown {...props} label={i18n.t('Chart Type')} options={CHART_TYPES} />
 )
 
 export const EventType = props => (
-    <SelectFieldWithMargin
-        {...withKind(props)}
-        name="eventType"
-        label={i18n.t('Event Type')}
-    >
-        {EVENT_TYPES.map(i => (
-            <option key={i.value} value={i.value}>
-                {i.label}
-            </option>
-        ))}
-    </SelectFieldWithMargin>
+    <DropDown {...props} label={i18n.t('Event Type')} options={EVENT_TYPES} />
 )
 
 export const PageSize = props => (
-    <SelectFieldWithMargin
-        {...withKind(props)}
-        name="pageSize"
-        label={i18n.t('Page Size')}
-    >
-        {PAGE_SIZES.map(i => (
-            <option key={i.value} value={i.value}>
-                {i.label}
-            </option>
-        ))}
-    </SelectFieldWithMargin>
+    <DropDown {...props} label={i18n.t('Page Size')} options={PAGE_SIZES} />
 )
 
 export const SortOrder = props => (
-    <SelectFieldWithMargin
-        {...withKind(props)}
-        name="sortOrder"
-        label={i18n.t('Sort Order')}
-    >
-        {SORT_ORDERS.map(i => (
-            <option key={i.value} value={i.value}>
-                {i.label}
-            </option>
-        ))}
-    </SelectFieldWithMargin>
+    <DropDown {...props} label={i18n.t('Sort Order')} options={SORT_ORDERS} />
 )

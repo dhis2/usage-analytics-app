@@ -6,28 +6,32 @@
         "start": "d2-app-scripts start",
         "build": "d2-app-scripts build",
         "test": "d2-app-scripts test",
-        "lint:style": "d2-style js check --all"
+        "lint": "d2-style js check",
+        "format": "d2-style js apply",
+        "format:staged": "d2-style js apply --staged"
+    },
+    "peerDependencies": {
+        "@dhis2/d2-i18n": "^1.0.6",
+        "@dhis2/ui-core": "^4.6.1",
+        "react": "^16.12.0",
+        "react-dom": "^16.12.0"
     },
     "dependencies": {
-        "@dhis2/ui-core": "3.12.0",
-        "chart.js": "^2.9.3",
+        "@dhis2/prop-types": "^1.5.0",
+        "chart.js": "^2.9.1",
         "lodash.debounce": "^4.0.8",
-        "react": "^16.12.0",
-        "react-app-polyfill": "^1.0.5",
+        "react-app-polyfill": "^1.0.4",
         "react-chartjs-2": "^2.8.0",
-        "react-dom": "^16.12.0",
         "react-redux": "^7.1.3",
         "redux": "^4.0.5",
         "redux-thunk": "^2.3.0"
     },
     "devDependencies": {
-        "@dhis2/cli-app-scripts": "^1.5.7",
-        "@dhis2/cli-style": "4.2.0",
-        "@dhis2/d2-i18n": "^1.0.6",
-        "enzyme": "^3.11.0",
-        "enzyme-adapter-react-16": "^1.15.2",
+        "@dhis2/cli-app-scripts": "^3.1.4",
+        "@dhis2/cli-style": "^5.1.0",
+        "enzyme": "^3.10.0",
+        "enzyme-adapter-react-16": "^1.15.1",
         "jest-enzyme": "^7.1.2",
-        "prop-types": "^15.7.2",
         "redux-logger": "^3.0.6",
         "redux-mock-store": "^1.5.4"
     },

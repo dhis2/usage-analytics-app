@@ -15,11 +15,11 @@ describe('filter reducer', () => {
     it('should handle FILTER_UPDATED', () => {
         const payload = {
             key: 'pageSize',
-            value: 10,
+            value: '10',
         }
         const expectedState = {
             ...initialState,
-            pageSize: 10,
+            pageSize: '10',
         }
         expect(reducer(undefined, { type: FILTER_UPDATED, payload })).toEqual(
             expectedState
@@ -35,7 +35,7 @@ describe('filter reducer', () => {
             aggregationLevel: SUM,
             chartType: ALL,
             eventType: CHART_VIEW,
-            pageSize: 25,
+            pageSize: '25',
             sortOrder: ASC,
         }
         const actualInitialState = getInitialState(new Date(endDateStr))

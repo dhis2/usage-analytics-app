@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import PropTypes from 'prop-types'
+import PropTypes from '@dhis2/prop-types'
 import { connect } from 'react-redux'
 import { CircularLoader } from '@dhis2/ui-core'
 import { Line } from 'react-chartjs-2'
@@ -41,9 +41,9 @@ export function Chart({ shouldHide, loading, chartConfig }) {
 }
 
 Chart.propTypes = {
-    chartConfig: PropTypes.object,
-    shouldHide: PropTypes.bool.isRequired,
     loading: PropTypes.bool.isRequired,
+    shouldHide: PropTypes.bool.isRequired,
+    chartConfig: PropTypes.object,
 }
 
 // The Chart is not displayed for category TOP_FAVORITES, but it should also

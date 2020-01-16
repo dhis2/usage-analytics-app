@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import PropTypes from '@dhis2/prop-types'
 import { connect } from 'react-redux'
 import i18n from '@dhis2/d2-i18n'
-import { CircularLoader } from '@dhis2/ui-core'
+import { CircularLoader, ScreenCover } from '@dhis2/ui-core'
 import { LOADING, ERROR } from '../constants/statuses'
 import { initApp } from '../actions'
 import Error from './Error'
@@ -19,7 +19,11 @@ export class UsageAnalytics extends Component {
         const { appStatus } = this.props
 
         if (appStatus === LOADING) {
-            return <CircularLoader overlay size="large" />
+            return (
+                <ScreenCover>
+                    <CircularLoader large />
+                </ScreenCover>
+            )
         }
 
         if (appStatus === ERROR) {
@@ -39,17 +43,14 @@ export class UsageAnalytics extends Component {
 }
 
 UsageAnalytics.propTypes = {
-    initApp: PropTypes.func,
     appStatus: PropTypes.string,
+    initApp: PropTypes.func,
 }
 
 const mapStateToProps = ({ appStatus }) => ({
     appStatus,
 })
 
-export default connect(
-    mapStateToProps,
-    {
-        initApp,
-    }
-)(UsageAnalytics)
+export default connect(mapStateToProps, {
+    initApp,
+})(UsageAnalytics)
