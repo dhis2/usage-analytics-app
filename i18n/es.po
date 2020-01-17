@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
-"POT-Creation-Date: 2019-09-18T15:51:55.230Z\n"
+"POT-Creation-Date: 2019-12-12T14:59:51.606Z\n"
 "PO-Revision-Date: 2019-09-02 16:22+0000\n"
 "Last-Translator: Marta Vila <marta@dhis2.org>, 2019\n"
 "Language-Team: Spanish (https://www.transifex.com/hisp-uio/teams/100509/es/)\n"
@@ -20,6 +20,9 @@ msgid "Values"
 msgstr ""
 
 msgid "Please use the format yyyy-mm-dd"
+msgstr ""
+
+msgid "Please fill in both dates"
 msgstr ""
 
 msgid "End date is before start date"
