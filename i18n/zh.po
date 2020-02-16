@@ -140,10 +140,10 @@ msgid "Pivot Table"
 msgstr "透视表"
 
 msgid "Event Report"
-msgstr ""
+msgstr "事件报表"
 
 msgid "Event Chart"
-msgstr ""
+msgstr "事件图表"
 
 msgid "Data Set Report"
 msgstr "数据集报表"
