@@ -27,7 +27,7 @@
         "redux-thunk": "^2.3.0"
     },
     "devDependencies": {
-        "@dhis2/cli-app-scripts": "^3.2.4",
+        "@dhis2/cli-app-scripts": "^3.2.5",
         "@dhis2/cli-style": "^5.1.0",
         "enzyme": "^3.10.0",
         "enzyme-adapter-react-16": "^1.15.1",
