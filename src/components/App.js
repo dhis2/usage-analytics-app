@@ -1,14 +1,14 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { Provider } from 'react-redux'
 import { useConfig } from '@dhis2/app-runtime'
-import store from '../store'
-import api from '../api'
+import initStore from '../store'
 import UsageAnalytics from './UsageAnalytics'
 import '../index.css'
 
 function App() {
     const { baseUrl } = useConfig()
-    api.setBaseUrl(baseUrl)
+
+    const store = useMemo(() => initStore({ baseUrl }), [baseUrl])
 
     return (
         <Provider store={store}>

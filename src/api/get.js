@@ -3,16 +3,12 @@ const defaultConfig = {
     credentials: 'include',
 }
 
-export function get(baseUrl, path, config = defaultConfig) {
-    if (!baseUrl) {
-        return Promise.reject(new Error('A baseUrl must be passed'))
-    }
-
+export function get(path, context, config = defaultConfig) {
     if (!path) {
         return Promise.reject(new Error('A path must be passed'))
     }
 
-    return fetch(`${baseUrl}/api/${path}`, config).then(response => {
+    return fetch(`${context.baseUrl}/api/${path}`, config).then(response => {
         if (response.ok) {
             return response
         }
@@ -21,8 +17,8 @@ export function get(baseUrl, path, config = defaultConfig) {
     })
 }
 
-export function getJSON(baseUrl, path) {
-    return get(baseUrl, path)
+export function getJSON(path, context) {
+    return get(path, context)
         .then(response => response.json())
         .then(data => {
             if (data.status === 'ERROR') {
