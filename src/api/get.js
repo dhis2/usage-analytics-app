@@ -1,22 +1,14 @@
-if (!process.env.REACT_APP_DHIS2_BASE_URL) {
-    throw new Error(
-        'The environment variable REACT_APP_DHIS2_BASE_URL must be set'
-    )
-}
-
-const url = process.env.REACT_APP_DHIS2_BASE_URL
-const endpoint = `${url}/api`
 const defaultConfig = {
     method: 'GET',
     credentials: 'include',
 }
 
-export function get(path, config = defaultConfig) {
+export function get(path, context, config = defaultConfig) {
     if (!path) {
         return Promise.reject(new Error('A path must be passed'))
     }
 
-    return fetch(`${endpoint}/${path}`, config).then(response => {
+    return fetch(`${context.baseUrl}/api/${path}`, config).then(response => {
         if (response.ok) {
             return response
         }
@@ -25,8 +17,8 @@ export function get(path, config = defaultConfig) {
     })
 }
 
-export function getJSON(path) {
-    return get(path)
+export function getJSON(path, context) {
+    return get(path, context)
         .then(response => response.json())
         .then(data => {
             if (data.status === 'ERROR') {

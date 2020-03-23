@@ -2,9 +2,9 @@ import * as api from '../api'
 import * as ACTIONS from '../actions/types'
 import { TOP_FAVORITES } from '../constants/categories'
 
-export const initApp = () => async (dispatch, getState) => {
+export const initApp = () => async (dispatch, getState, context) => {
     try {
-        const payload = await api.getUsageData(getState().filter)
+        const payload = await api.getUsageData(getState().filter, context)
         dispatch(createAction(ACTIONS.APP_LOAD_SUCCESS, payload))
     } catch (error) {
         dispatch(createAction(ACTIONS.APP_LOAD_ERROR, error))
@@ -47,11 +47,11 @@ export function isNewDataRequiredAfterCategoryChange(oldCategory, newCategory) {
     )
 }
 
-async function getUsageData(filter, dispatch) {
+const getUsageData = filter => async (dispatch, getState, context) => {
     dispatch(createAction(ACTIONS.USAGE_DATA_REQUESTED))
 
     try {
-        const usageData = await api.getUsageData(filter)
+        const usageData = await api.getUsageData(filter, context)
         dispatch(createAction(ACTIONS.USAGE_DATA_RECEIVED, usageData))
     } catch (error) {
         dispatch(createAction(ACTIONS.USAGE_DATA_ERRORED, error))
