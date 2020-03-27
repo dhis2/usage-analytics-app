@@ -10,7 +10,7 @@ This repo contains the usage analytics app. Which was rewritten from scratch and
 
 ### Prerequisites
 
-To use the usage-analytics-app in development mode, it is necessary to have a running DHIS2 instance, and be logged in to it. Most developers use their local DHIS2 instance. 
+To use the usage-analytics-app in development mode, it is necessary to have a running DHIS2 instance, and be logged in to it. Most developers use their local DHIS2 instance.
 
 ### Deploy
 
