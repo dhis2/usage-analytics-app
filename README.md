@@ -2,7 +2,6 @@
 
 [![Build Status](https://travis-ci.com/dhis2/usage-analytics-app.svg)](https://travis-ci.com/dhis2/usage-analytics-app)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fdhis2%2Fdhis2-usage-analytics.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fdhis2%2Fdhis2-usage-analytics?ref=badge_shield)
-[![Greenkeeper badge](https://badges.greenkeeper.io/dhis2/usage-analytics-app.svg)](https://greenkeeper.io/)
 
 This repo contains the usage analytics app. Which was rewritten from scratch and introduced in DHIS2 version 2.32. It was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
