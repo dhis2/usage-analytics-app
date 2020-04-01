@@ -174,16 +174,16 @@ msgid "Average Dashboard"
 msgstr ""
 
 msgid "Maps"
-msgstr ""
+msgstr "地图"
 
 msgid "Charts"
-msgstr ""
+msgstr "图表"
 
 msgid "Pivot Tables"
 msgstr "透视表"
 
 msgid "Event Reports"
-msgstr ""
+msgstr "事件报表"
 
 msgid "Event Charts"
 msgstr ""
@@ -207,7 +207,7 @@ msgid "Name"
 msgstr "名称"
 
 msgid "Views"
-msgstr ""
+msgstr "查看"
 
 msgid "ID"
 msgstr "Id"
