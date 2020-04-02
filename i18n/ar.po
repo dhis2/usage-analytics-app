@@ -20,16 +20,16 @@ msgid "Usage Analytics"
 msgstr "تحليلات الاستخدام"
 
 msgid "Values"
-msgstr ""
+msgstr "القيم"
 
 msgid "Please use the format yyyy-mm-dd"
-msgstr ""
+msgstr "يرجى استخدام التنسيق yyyy-mm-dd"
 
 msgid "End date is before start date"
-msgstr ""
+msgstr "تاريخ الإنتهاء قبل تاريخ البدء"
 
 msgid "Start date is after end date"
-msgstr ""
+msgstr "تاريخ البدء بعد تاريخ الإنتهاء"
 
 msgid "Start Date"
 msgstr "تاريخ البداية"
@@ -92,7 +92,7 @@ msgid "Data values"
 msgstr "قيم البيانات"
 
 msgid "Number of data values saved in the system"
-msgstr ""
+msgstr "عدد القيم التي تم حفظها في النظام"
 
 msgid "All"
 msgstr "الجميع"
@@ -122,7 +122,7 @@ msgid "Data set report"
 msgstr ""
 
 msgid "Day"
-msgstr ""
+msgstr "يوم"
 
 msgid "Week"
 msgstr "اسبوع"
@@ -140,10 +140,10 @@ msgid "Pivot Table"
 msgstr "الجدول المحوري"
 
 msgid "Event Report"
-msgstr ""
+msgstr "تقارير الحدث"
 
 msgid "Event Chart"
-msgstr ""
+msgstr "المخطط البياني للأحداث"
 
 msgid "Data Set Report"
 msgstr "تقرير حزمة البيانات"
@@ -188,10 +188,10 @@ msgid "Indicators"
 msgstr "المؤشرات"
 
 msgid "Active Users"
-msgstr ""
+msgstr "المستخدمين النشطين"
 
 msgid "Total Users"
-msgstr ""
+msgstr "إجمالي المستخدمين"
 
 msgid "Position"
 msgstr ""
@@ -212,7 +212,7 @@ msgid "Data Values"
 msgstr ""
 
 msgid "Ascending"
-msgstr ""
+msgstr "تصاعدي"
 
 msgid "Descending"
-msgstr ""
+msgstr "تنازلي"
