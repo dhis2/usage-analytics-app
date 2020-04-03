@@ -41,31 +41,31 @@ msgid "Category"
 msgstr "الفئة"
 
 msgid "Interval"
-msgstr ""
+msgstr "الفترة"
 
 msgid "Aggregation Level"
-msgstr ""
+msgstr "مستوى التجميع"
 
 msgid "Chart Type"
-msgstr ""
+msgstr "نوح المخطط البياني"
 
 msgid "Event Type"
-msgstr ""
+msgstr "نوع الحدث"
 
 msgid "Page Size"
-msgstr ""
+msgstr "حجم الصفحة"
 
 msgid "Sort Order"
-msgstr ""
+msgstr "ترتيب الفرز"
 
 msgid "Usage Analytics"
 msgstr "تحليلات الاستخدام"
 
 msgid "There was an error retrieving the usage analytics data"
-msgstr ""
+msgstr "حدث خطأ في استرداد بيانات تحليلات الاستخدام"
 
 msgid "Error loading application."
-msgstr ""
+msgstr "خطأ في تحميل التطبيق"
 
 msgid "Sum"
 msgstr "المجموع"
@@ -74,7 +74,7 @@ msgid "Average"
 msgstr "المتوسط"
 
 msgid "Favorite views"
-msgstr ""
+msgstr "العروض المفضلة"
 
 msgid "Number of times users looked at analysis favorites"
 msgstr ""
@@ -89,10 +89,10 @@ msgid "Users"
 msgstr "المستخدمون"
 
 msgid "Number of users in the system"
-msgstr ""
+msgstr "عدد المستخدمين في النظام"
 
 msgid "Top favorites"
-msgstr ""
+msgstr "الأكثر تفضيلاً"
 
 msgid "Data values"
 msgstr "قيم البيانات"
