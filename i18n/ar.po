@@ -77,13 +77,13 @@ msgid "Favorite views"
 msgstr "العروض المفضلة"
 
 msgid "Number of times users looked at analysis favorites"
-msgstr ""
+msgstr "عدد المرات التي نظر فيها المستخدمون إلى مفضلات التحليل"
 
 msgid "Favorites saved"
 msgstr ""
 
 msgid "Number of analysis favorites created by users"
-msgstr ""
+msgstr "عدد مفضلات التحليل التي أنشأها المستخدمون"
 
 msgid "Users"
 msgstr "المستخدمون"
