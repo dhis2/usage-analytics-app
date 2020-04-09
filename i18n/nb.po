@@ -61,10 +61,10 @@ msgid "There was an error retrieving the usage analytics data"
 msgstr ""
 
 msgid "Sum"
-msgstr ""
+msgstr "Sum"
 
 msgid "Average"
-msgstr ""
+msgstr "Gjennomsnitt"
 
 msgid "Favorite views"
 msgstr ""
@@ -100,7 +100,7 @@ msgid "Total"
 msgstr "Totalt"
 
 msgid "Chart"
-msgstr ""
+msgstr "Diagram"
 
 msgid "Map"
 msgstr "Kart"
@@ -199,7 +199,7 @@ msgid "Name"
 msgstr "Navn"
 
 msgid "Views"
-msgstr ""
+msgstr "Visninger"
 
 msgid "ID"
 msgstr "ID"
