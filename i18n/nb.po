@@ -130,7 +130,7 @@ msgid "Month"
 msgstr ""
 
 msgid "Year"
-msgstr ""
+msgstr "År"
 
 msgid "Date"
 msgstr "Dato"
