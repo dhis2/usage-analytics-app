@@ -113,19 +113,19 @@ msgid "Map"
 msgstr "الخريطة"
 
 msgid "Report table"
-msgstr ""
+msgstr "جدول التقرير"
 
 msgid "Event report"
-msgstr ""
+msgstr "تقارير الحدث"
 
 msgid "Event chart"
-msgstr ""
+msgstr "المخطط البياني للأحداث"
 
 msgid "Dashboard"
 msgstr "لوحة المعلومات"
 
 msgid "Data set report"
-msgstr ""
+msgstr "تقرير حزمة البيانات"
 
 msgid "Day"
 msgstr "يوم"
@@ -185,7 +185,7 @@ msgid "Event Reports"
 msgstr "تقارير الحدث"
 
 msgid "Event Charts"
-msgstr ""
+msgstr "المخططات البيانية للحدث"
 
 msgid "Dashboards"
 msgstr "لوحات المعلومات"
