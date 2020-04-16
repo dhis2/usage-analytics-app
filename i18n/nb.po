@@ -16,7 +16,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Usage Analytics"
-msgstr ""
+msgstr "Bruksanalyse"
 
 msgid "Values"
 msgstr ""
@@ -136,7 +136,7 @@ msgid "Date"
 msgstr "Dato"
 
 msgid "Pivot Table"
-msgstr ""
+msgstr "Pivottabell"
 
 msgid "Event Report"
 msgstr "Hendelsesrapport"
