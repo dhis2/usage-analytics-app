@@ -18,22 +18,22 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 msgid "Values"
-msgstr ""
+msgstr "值"
 
 msgid "Please use the format yyyy-mm-dd"
-msgstr ""
+msgstr "请使用日期格式：yyyy-mm-dd"
 
 msgid "Please fill in both dates"
-msgstr ""
+msgstr "请两个都填日期"
 
 msgid "End date is before start date"
-msgstr ""
+msgstr "结束日期早于开始日期"
 
 msgid "Start date is after end date"
-msgstr ""
+msgstr "开始日期晚于结束日期"
 
 msgid "Start Date"
-msgstr ""
+msgstr "开始日期"
 
 msgid "End date"
 msgstr "结束日期"
@@ -42,31 +42,31 @@ msgid "Category"
 msgstr "分类"
 
 msgid "Interval"
-msgstr ""
+msgstr "间隔"
 
 msgid "Aggregation Level"
-msgstr ""
+msgstr "汇总等级"
 
 msgid "Chart Type"
-msgstr ""
+msgstr "图表类型"
 
 msgid "Event Type"
-msgstr ""
+msgstr "事件类型"
 
 msgid "Page Size"
-msgstr ""
+msgstr "页大小"
 
 msgid "Sort Order"
-msgstr ""
+msgstr "排序"
 
 msgid "Usage Analytics"
-msgstr ""
+msgstr "使用分析"
 
 msgid "There was an error retrieving the usage analytics data"
-msgstr ""
+msgstr "提取使用分析数据存在错误"
 
 msgid "Error loading application."
-msgstr ""
+msgstr "载入应用发生错误"
 
 msgid "Sum"
 msgstr "求和"
@@ -75,31 +75,31 @@ msgid "Average"
 msgstr "平均"
 
 msgid "Favorite views"
-msgstr ""
+msgstr "偏好视图"
 
 msgid "Number of times users looked at analysis favorites"
-msgstr ""
+msgstr "用户查看偏好分析的次数"
 
 msgid "Favorites saved"
-msgstr ""
+msgstr "保存的偏好"
 
 msgid "Number of analysis favorites created by users"
-msgstr ""
+msgstr "用户创建的分析偏好数量"
 
 msgid "Users"
 msgstr "用户"
 
 msgid "Number of users in the system"
-msgstr ""
+msgstr "系统用户数"
 
 msgid "Top favorites"
-msgstr ""
+msgstr "靠前的偏好"
 
 msgid "Data values"
 msgstr "数据值"
 
 msgid "Number of data values saved in the system"
-msgstr ""
+msgstr "系统保存的值的数量"
 
 msgid "All"
 msgstr "全部"
@@ -114,19 +114,19 @@ msgid "Map"
 msgstr "地图"
 
 msgid "Report table"
-msgstr ""
+msgstr "报表表"
 
 msgid "Event report"
-msgstr ""
+msgstr "事件报表"
 
 msgid "Event chart"
-msgstr ""
+msgstr "事件图表"
 
 msgid "Dashboard"
 msgstr "状态面板"
 
 msgid "Data set report"
-msgstr ""
+msgstr "数据集报表"
 
 msgid "Day"
 msgstr "天"
@@ -156,22 +156,22 @@ msgid "Data Set Report"
 msgstr "数据集报表"
 
 msgid "Average Map"
-msgstr ""
+msgstr "平均地图"
 
 msgid "Average Chart"
-msgstr ""
+msgstr "平均图表"
 
 msgid "Average Pivot Table"
-msgstr ""
+msgstr "平均透视表"
 
 msgid "Average Event Report"
-msgstr ""
+msgstr "平均事件报表"
 
 msgid "Average Event Chart"
-msgstr ""
+msgstr "平均事件图表"
 
 msgid "Average Dashboard"
-msgstr ""
+msgstr "平均仪表盘"
 
 msgid "Maps"
 msgstr "地图"
@@ -186,22 +186,22 @@ msgid "Event Reports"
 msgstr "事件报表"
 
 msgid "Event Charts"
-msgstr ""
+msgstr "事件图表"
 
 msgid "Dashboards"
-msgstr ""
+msgstr "仪表盘"
 
 msgid "Indicators"
 msgstr "指标"
 
 msgid "Active Users"
-msgstr ""
+msgstr "活跃用户"
 
 msgid "Total Users"
-msgstr ""
+msgstr "用户总数"
 
 msgid "Position"
-msgstr ""
+msgstr "位置"
 
 msgid "Name"
 msgstr "名称"
@@ -216,10 +216,10 @@ msgid "Created"
 msgstr "已创建"
 
 msgid "Data Values"
-msgstr ""
+msgstr "数据值"
 
 msgid "Ascending"
-msgstr ""
+msgstr "升序"
 
 msgid "Descending"
-msgstr ""
+msgstr "降序"

@@ -58,7 +58,7 @@ msgid "Sort Order"
 msgstr ""
 
 msgid "Usage Analytics"
-msgstr ""
+msgstr "Bruksanalyse"
 
 msgid "There was an error retrieving the usage analytics data"
 msgstr ""
@@ -142,7 +142,7 @@ msgid "Date"
 msgstr "Dato"
 
 msgid "Pivot Table"
-msgstr ""
+msgstr "Pivottabell"
 
 msgid "Event Report"
 msgstr "Hendelsesrapport"
