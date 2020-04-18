@@ -1,219 +1,217 @@
 # Translators:
-# phil_dhis2, 2019
-# Viktor Varland <viktor@dhis2.org>, 2019
-# easylin <lin_xd@126.com>, 2020
-# 晓东 林 <13981924470@126.com>, 2020
+# Caroline Hesthagen Holen <carolinehholen@gmail.com>, 2020
+# Karoline Tufte Lien <karoline@dhis2.org>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
 "POT-Creation-Date: 2019-01-14T15:39:53.085Z\n"
 "PO-Revision-Date: 2019-09-02 16:22+0000\n"
-"Last-Translator: 晓东 林 <13981924470@126.com>, 2020\n"
-"Language-Team: Chinese (https://www.transifex.com/hisp-uio/teams/100509/zh/)\n"
+"Last-Translator: Karoline Tufte Lien <karoline@dhis2.org>, 2020\n"
+"Language-Team: Norwegian Bokmål (https://www.transifex.com/hisp-uio/teams/100509/nb/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: nb\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Usage Analytics"
-msgstr "使用分析"
+msgstr "Bruksanalyse"
 
 msgid "Values"
-msgstr "值"
+msgstr ""
 
 msgid "Please use the format yyyy-mm-dd"
-msgstr "请使用日期格式：yyyy-mm-dd"
+msgstr ""
 
 msgid "End date is before start date"
-msgstr "结束日期早于开始日期"
+msgstr ""
 
 msgid "Start date is after end date"
-msgstr "开始日期晚于结束日期"
+msgstr ""
 
 msgid "Start Date"
-msgstr "开始日期"
+msgstr ""
 
 msgid "End date"
-msgstr "结束日期"
+msgstr "Sluttdato"
 
 msgid "Category"
-msgstr "分类"
+msgstr "Kategori"
 
 msgid "Interval"
-msgstr "间隔"
+msgstr ""
 
 msgid "Aggregation Level"
-msgstr "汇总等级"
+msgstr ""
 
 msgid "Chart Type"
-msgstr "图表类型"
+msgstr ""
 
 msgid "Event Type"
-msgstr "事件类型"
+msgstr ""
 
 msgid "Page Size"
-msgstr "页大小"
+msgstr ""
 
 msgid "Sort Order"
-msgstr "排序"
+msgstr ""
 
 msgid "There was an error retrieving the usage analytics data"
-msgstr "提取使用分析数据存在错误"
+msgstr ""
 
 msgid "Sum"
-msgstr "求和"
+msgstr "Sum"
 
 msgid "Average"
-msgstr "平均"
+msgstr "Gjennomsnitt"
 
 msgid "Favorite views"
-msgstr "偏好视图"
+msgstr ""
 
 msgid "Number of times users looked at analysis favorites"
-msgstr "用户查看偏好分析的次数"
+msgstr ""
 
 msgid "Favorites saved"
-msgstr "保存的偏好"
+msgstr ""
 
 msgid "Number of analysis favorites created by users"
-msgstr "用户创建的分析偏好数量"
+msgstr ""
 
 msgid "Users"
-msgstr "用户"
+msgstr "Brukere"
 
 msgid "Number of users in the system"
-msgstr "系统用户数"
+msgstr ""
 
 msgid "Top favorites"
-msgstr "靠前的偏好"
+msgstr ""
 
 msgid "Data values"
-msgstr "数据值"
+msgstr ""
 
 msgid "Number of data values saved in the system"
-msgstr "系统保存的值的数量"
+msgstr ""
 
 msgid "All"
-msgstr "全部"
+msgstr "Alt"
 
 msgid "Total"
-msgstr "总共"
+msgstr "Totalt"
 
 msgid "Chart"
-msgstr "图表"
+msgstr "Diagram"
 
 msgid "Map"
-msgstr "地图"
+msgstr "Kart"
 
 msgid "Report table"
-msgstr "报表表"
+msgstr ""
 
 msgid "Event report"
-msgstr "事件报表"
+msgstr ""
 
 msgid "Event chart"
-msgstr "事件图表"
+msgstr ""
 
 msgid "Dashboard"
-msgstr "状态面板"
+msgstr "Dashbord"
 
 msgid "Data set report"
-msgstr "数据集报表"
+msgstr ""
 
 msgid "Day"
-msgstr "天"
+msgstr ""
 
 msgid "Week"
-msgstr "周"
+msgstr "Uke"
 
 msgid "Month"
-msgstr "月份"
+msgstr ""
 
 msgid "Year"
-msgstr "年"
+msgstr "År"
 
 msgid "Date"
-msgstr "日期"
+msgstr "Dato"
 
 msgid "Pivot Table"
-msgstr "透视表"
+msgstr "Pivottabell"
 
 msgid "Event Report"
-msgstr "事件报表"
+msgstr "Hendelsesrapport"
 
 msgid "Event Chart"
-msgstr "事件图表"
+msgstr "Hendelseskart"
 
 msgid "Data Set Report"
-msgstr "数据集报表"
+msgstr ""
 
 msgid "Average Map"
-msgstr "平均地图"
+msgstr ""
 
 msgid "Average Chart"
-msgstr "平均图表"
+msgstr ""
 
 msgid "Average Pivot Table"
-msgstr "平均透视表"
+msgstr ""
 
 msgid "Average Event Report"
-msgstr "平均事件报表"
+msgstr ""
 
 msgid "Average Event Chart"
-msgstr "平均事件图表"
+msgstr ""
 
 msgid "Average Dashboard"
-msgstr "平均仪表盘"
+msgstr ""
 
 msgid "Maps"
-msgstr "地图"
+msgstr "Kart"
 
 msgid "Charts"
-msgstr "图表"
+msgstr "Diagrammer"
 
 msgid "Pivot Tables"
-msgstr "透视表"
+msgstr "Pivottabeller"
 
 msgid "Event Reports"
-msgstr "事件报表"
+msgstr "Hendelsesrapporter"
 
 msgid "Event Charts"
-msgstr "事件图表"
+msgstr ""
 
 msgid "Dashboards"
-msgstr "仪表盘"
+msgstr ""
 
 msgid "Indicators"
-msgstr "指标"
+msgstr "Indikatorer"
 
 msgid "Active Users"
-msgstr "活跃用户"
+msgstr ""
 
 msgid "Total Users"
-msgstr "用户总数"
+msgstr ""
 
 msgid "Position"
-msgstr "位置"
+msgstr ""
 
 msgid "Name"
-msgstr "名称"
+msgstr "Navn"
 
 msgid "Views"
-msgstr "查看"
+msgstr "Visninger"
 
 msgid "ID"
-msgstr "Id"
+msgstr "ID"
 
 msgid "Created"
-msgstr "已创建"
+msgstr "Opprettet"
 
 msgid "Data Values"
-msgstr "数据值"
+msgstr ""
 
 msgid "Ascending"
-msgstr "升序"
+msgstr ""
 
 msgid "Descending"
-msgstr "降序"
+msgstr ""

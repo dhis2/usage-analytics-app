@@ -71,13 +71,13 @@ msgid "Favorite views"
 msgstr "العروض المفضلة"
 
 msgid "Number of times users looked at analysis favorites"
-msgstr ""
+msgstr "عدد المرات التي نظر فيها المستخدمون إلى مفضلات التحليل"
 
 msgid "Favorites saved"
 msgstr ""
 
 msgid "Number of analysis favorites created by users"
-msgstr ""
+msgstr "عدد مفضلات التحليل التي أنشأها المستخدمون"
 
 msgid "Users"
 msgstr "المستخدمون"
@@ -107,19 +107,19 @@ msgid "Map"
 msgstr "الخريطة"
 
 msgid "Report table"
-msgstr ""
+msgstr "جدول التقرير"
 
 msgid "Event report"
-msgstr ""
+msgstr "تقارير الحدث"
 
 msgid "Event chart"
-msgstr ""
+msgstr "المخطط البياني للأحداث"
 
 msgid "Dashboard"
 msgstr "لوحة المعلومات"
 
 msgid "Data set report"
-msgstr ""
+msgstr "تقرير حزمة البيانات"
 
 msgid "Day"
 msgstr "يوم"
