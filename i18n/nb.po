@@ -127,13 +127,13 @@ msgid "Data set report"
 msgstr ""
 
 msgid "Day"
-msgstr ""
+msgstr "Dag"
 
 msgid "Week"
 msgstr "Uke"
 
 msgid "Month"
-msgstr ""
+msgstr "Uke"
 
 msgid "Year"
 msgstr "År"
@@ -187,7 +187,7 @@ msgid "Event Charts"
 msgstr ""
 
 msgid "Dashboards"
-msgstr ""
+msgstr "Dashbord"
 
 msgid "Indicators"
 msgstr "Indikatorer"
