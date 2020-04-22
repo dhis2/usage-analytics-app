@@ -80,7 +80,7 @@ msgid "Number of times users looked at analysis favorites"
 msgstr "عدد المرات التي نظر فيها المستخدمون إلى مفضلات التحليل"
 
 msgid "Favorites saved"
-msgstr ""
+msgstr "تم حفظ المفضلات"
 
 msgid "Number of analysis favorites created by users"
 msgstr "عدد مفضلات التحليل التي أنشأها المستخدمون"
@@ -215,7 +215,7 @@ msgid "Created"
 msgstr "تم الإنشاء"
 
 msgid "Data Values"
-msgstr ""
+msgstr "قيم البيانات"
 
 msgid "Ascending"
 msgstr "تصاعدي"
