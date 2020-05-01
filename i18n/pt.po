@@ -174,7 +174,7 @@ msgid "Average Dashboard"
 msgstr ""
 
 msgid "Maps"
-msgstr ""
+msgstr "Mapas"
 
 msgid "Charts"
 msgstr ""
@@ -183,7 +183,7 @@ msgid "Pivot Tables"
 msgstr "Tabelas dinâmicas"
 
 msgid "Event Reports"
-msgstr ""
+msgstr "Relatórios de Eventos"
 
 msgid "Event Charts"
 msgstr ""
