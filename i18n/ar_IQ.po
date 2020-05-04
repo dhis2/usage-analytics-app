@@ -1,20 +1,19 @@
 # 
 # Translators:
-# Viktor Varland <viktor@dhis2.org>, 2019
-# phil_dhis2, 2020
+# KRG HIS <antonia.bezenchek@informa.pro>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
 "POT-Creation-Date: 2019-01-14T15:39:53.085Z\n"
 "PO-Revision-Date: 2019-09-02 16:22+0000\n"
-"Last-Translator: phil_dhis2, 2020\n"
-"Language-Team: Burmese (https://www.transifex.com/hisp-uio/teams/100509/my/)\n"
+"Last-Translator: KRG HIS <antonia.bezenchek@informa.pro>, 2020\n"
+"Language-Team: Arabic (Iraq) (https://www.transifex.com/hisp-uio/teams/100509/ar_IQ/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: my\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: ar_IQ\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
 msgid "Usage Analytics"
 msgstr ""
@@ -35,10 +34,10 @@ msgid "Start Date"
 msgstr ""
 
 msgid "End date"
-msgstr "ပြီးဆုံးသည့်ရက်စွဲ"
+msgstr ""
 
 msgid "Category"
-msgstr "category"
+msgstr ""
 
 msgid "Interval"
 msgstr ""
@@ -62,10 +61,10 @@ msgid "There was an error retrieving the usage analytics data"
 msgstr ""
 
 msgid "Sum"
-msgstr "စုစုပေါင်း"
+msgstr "المجموع"
 
 msgid "Average"
-msgstr "ပျမ်းမျှ"
+msgstr "المتوسط"
 
 msgid "Favorite views"
 msgstr ""
@@ -80,7 +79,7 @@ msgid "Number of analysis favorites created by users"
 msgstr ""
 
 msgid "Users"
-msgstr "အသုံးပြုသူများ"
+msgstr "المستخدمون"
 
 msgid "Number of users in the system"
 msgstr ""
@@ -89,22 +88,22 @@ msgid "Top favorites"
 msgstr ""
 
 msgid "Data values"
-msgstr "data တန်ဖိုးများ"
+msgstr ""
 
 msgid "Number of data values saved in the system"
 msgstr ""
 
 msgid "All"
-msgstr "အားလုံး"
+msgstr "الجميع"
 
 msgid "Total"
 msgstr ""
 
 msgid "Chart"
-msgstr ""
+msgstr "المخطط البياني"
 
 msgid "Map"
-msgstr ""
+msgstr "الخريطة"
 
 msgid "Report table"
 msgstr ""
@@ -116,7 +115,7 @@ msgid "Event chart"
 msgstr ""
 
 msgid "Dashboard"
-msgstr "အချက်အလက်များလေ့လာဆန်းစစ်ခြင်း"
+msgstr "لوحة المعلومات"
 
 msgid "Data set report"
 msgstr ""
@@ -131,13 +130,13 @@ msgid "Month"
 msgstr ""
 
 msgid "Year"
-msgstr "ခုနှစ်"
+msgstr ""
 
 msgid "Date"
-msgstr "ရက်စွဲ"
+msgstr "التاريخ"
 
 msgid "Pivot Table"
-msgstr "ကိန်းဂဏန်းပြဇယားကွက်"
+msgstr ""
 
 msgid "Event Report"
 msgstr ""
@@ -146,7 +145,7 @@ msgid "Event Chart"
 msgstr ""
 
 msgid "Data Set Report"
-msgstr "Dataset Report"
+msgstr ""
 
 msgid "Average Map"
 msgstr ""
@@ -167,25 +166,25 @@ msgid "Average Dashboard"
 msgstr ""
 
 msgid "Maps"
-msgstr "Maps"
+msgstr "الخرائط"
 
 msgid "Charts"
-msgstr "ဂရပ် ပုံစံများ"
+msgstr "المخططات البيانية"
 
 msgid "Pivot Tables"
-msgstr ""
+msgstr "الجداول المحورية"
 
 msgid "Event Reports"
-msgstr ""
+msgstr "تقارير الحدث"
 
 msgid "Event Charts"
 msgstr ""
 
 msgid "Dashboards"
-msgstr "Dashboards"
+msgstr ""
 
 msgid "Indicators"
-msgstr "အညွှန်းများ"
+msgstr "المؤشرات"
 
 msgid "Active Users"
 msgstr ""
@@ -197,16 +196,16 @@ msgid "Position"
 msgstr ""
 
 msgid "Name"
-msgstr "အမည်"
+msgstr "الاسم"
 
 msgid "Views"
-msgstr ""
+msgstr "المشاهدات"
 
 msgid "ID"
-msgstr "အိုင်ဒီ"
+msgstr ""
 
 msgid "Created"
-msgstr ""
+msgstr "تم الإنشاء"
 
 msgid "Data Values"
 msgstr ""
