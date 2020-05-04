@@ -17,22 +17,22 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Values"
-msgstr ""
+msgstr "Verdier"
 
 msgid "Please use the format yyyy-mm-dd"
-msgstr ""
+msgstr "Vennligst bruk formatet åååå-mm-dd"
 
 msgid "Please fill in both dates"
-msgstr ""
+msgstr "Vennligst fyll inn begge datoer"
 
 msgid "End date is before start date"
-msgstr ""
+msgstr "Sluttdatoen er før startdatoen"
 
 msgid "Start date is after end date"
-msgstr ""
+msgstr "Startdatoen er etter sluttdatoen"
 
 msgid "Start Date"
-msgstr ""
+msgstr "Startdato"
 
 msgid "End date"
 msgstr "Sluttdato"
@@ -41,31 +41,31 @@ msgid "Category"
 msgstr "Kategori"
 
 msgid "Interval"
-msgstr ""
+msgstr "Intervall"
 
 msgid "Aggregation Level"
-msgstr ""
+msgstr "Aggregasjonsnivå"
 
 msgid "Chart Type"
-msgstr ""
+msgstr "Diagramtype"
 
 msgid "Event Type"
-msgstr ""
+msgstr "Hendelsestype"
 
 msgid "Page Size"
-msgstr ""
+msgstr "Sidestørrelse"
 
 msgid "Sort Order"
-msgstr ""
+msgstr "Sorteringsrekkefølge"
 
 msgid "Usage Analytics"
 msgstr "Bruksanalyse"
 
 msgid "There was an error retrieving the usage analytics data"
-msgstr ""
+msgstr "Det oppsto en feil under henting av bruksanalysedataene"
 
 msgid "Error loading application."
-msgstr ""
+msgstr "Feil ved lasting av applikasjon."
 
 msgid "Sum"
 msgstr "Sum"
@@ -74,31 +74,31 @@ msgid "Average"
 msgstr "Gjennomsnitt"
 
 msgid "Favorite views"
-msgstr ""
+msgstr "Favorittvisninger"
 
 msgid "Number of times users looked at analysis favorites"
-msgstr ""
+msgstr "Antall ganger brukere så på analysefavoritter"
 
 msgid "Favorites saved"
-msgstr ""
+msgstr "Favoritter ble lagret"
 
 msgid "Number of analysis favorites created by users"
-msgstr ""
+msgstr "Antall analysefavoritter som ble opprettet av brukere"
 
 msgid "Users"
 msgstr "Brukere"
 
 msgid "Number of users in the system"
-msgstr ""
+msgstr "Antall brukere i systemet"
 
 msgid "Top favorites"
-msgstr ""
+msgstr "Toppfavoritter"
 
 msgid "Data values"
 msgstr "Dataverdier"
 
 msgid "Number of data values saved in the system"
-msgstr ""
+msgstr "Antall dataverdier som ble lagret i systemet"
 
 msgid "All"
 msgstr "Alt"
@@ -113,19 +113,19 @@ msgid "Map"
 msgstr "Kart"
 
 msgid "Report table"
-msgstr ""
+msgstr "Rapporttabell"
 
 msgid "Event report"
-msgstr ""
+msgstr "Hendelsesrapport"
 
 msgid "Event chart"
-msgstr ""
+msgstr "Hendelsesdiagram"
 
 msgid "Dashboard"
 msgstr "Dashbord"
 
 msgid "Data set report"
-msgstr ""
+msgstr "Datasettrapport"
 
 msgid "Day"
 msgstr "Dag"
@@ -152,25 +152,25 @@ msgid "Event Chart"
 msgstr "Hendelseskart"
 
 msgid "Data Set Report"
-msgstr ""
+msgstr "Datasettrapport"
 
 msgid "Average Map"
-msgstr ""
+msgstr "Gjennomsnittlig kart"
 
 msgid "Average Chart"
-msgstr ""
+msgstr "Gjennomsnittlig diagram"
 
 msgid "Average Pivot Table"
-msgstr ""
+msgstr "Gjennomsnittlig pivottabell"
 
 msgid "Average Event Report"
-msgstr ""
+msgstr "Gjennomsnittlig hendelsesrapport"
 
 msgid "Average Event Chart"
-msgstr ""
+msgstr "Gjennomsnittlig hendelsesdiagram"
 
 msgid "Average Dashboard"
-msgstr ""
+msgstr "Gjennomsnittlig dashbord"
 
 msgid "Maps"
 msgstr "Kart"
@@ -185,7 +185,7 @@ msgid "Event Reports"
 msgstr "Hendelsesrapporter"
 
 msgid "Event Charts"
-msgstr ""
+msgstr "Hendelsesdiagrammer"
 
 msgid "Dashboards"
 msgstr "Dashbord"
@@ -194,13 +194,13 @@ msgid "Indicators"
 msgstr "Indikatorer"
 
 msgid "Active Users"
-msgstr ""
+msgstr "Aktive brukere"
 
 msgid "Total Users"
-msgstr ""
+msgstr "Totalt antall brukere"
 
 msgid "Position"
-msgstr ""
+msgstr "Posisjon"
 
 msgid "Name"
 msgstr "Navn"
@@ -215,10 +215,10 @@ msgid "Created"
 msgstr "Opprettet"
 
 msgid "Data Values"
-msgstr ""
+msgstr "Dataverdier"
 
 msgid "Ascending"
-msgstr ""
+msgstr "Stigende"
 
 msgid "Descending"
-msgstr ""
+msgstr "Synkende"
