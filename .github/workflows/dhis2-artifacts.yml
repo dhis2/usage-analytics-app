@@ -31,4 +31,5 @@ jobs:
               env:
                   INPUT_BUILD_DIR: build/app 
               with:
+                  build-dir: build/app
                   github-token: ${{ env.GH_TOKEN }}
