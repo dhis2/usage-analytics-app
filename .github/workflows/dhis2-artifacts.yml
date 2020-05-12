@@ -28,5 +28,7 @@ jobs:
               run: yarn lint
 
             - uses: dhis2/deploy-build@master
+              env:
+                  INPUT_BUILD_DIR: build/app 
               with:
                   github-token: ${{ env.GH_TOKEN }}
