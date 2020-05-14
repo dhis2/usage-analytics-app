@@ -3,13 +3,14 @@
 # Viktor Varland <viktor@dhis2.org>, 2019
 # phil_dhis2, 2019
 # Marta Vila <marta@dhis2.org>, 2019
+# Gabriela Rodriguez <grodriguezcoronado@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
 "POT-Creation-Date: 2019-12-12T14:59:51.606Z\n"
 "PO-Revision-Date: 2019-09-02 16:22+0000\n"
-"Last-Translator: Marta Vila <marta@dhis2.org>, 2019\n"
+"Last-Translator: Gabriela Rodriguez <grodriguezcoronado@gmail.com>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/hisp-uio/teams/100509/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,22 +19,22 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Values"
-msgstr ""
+msgstr "Valores"
 
 msgid "Please use the format yyyy-mm-dd"
-msgstr ""
+msgstr "Por favor use el formato aaaa-mm-dd"
 
 msgid "Please fill in both dates"
-msgstr ""
+msgstr "Por favor complete ambas fechas"
 
 msgid "End date is before start date"
-msgstr ""
+msgstr "La fecha de finalización es anterior a la fecha de inicio"
 
 msgid "Start date is after end date"
-msgstr ""
+msgstr "La fecha de inicio es posterior a la fecha de finalización"
 
 msgid "Start Date"
-msgstr ""
+msgstr "Fecha de inicio"
 
 msgid "End date"
 msgstr "Fecha final"
@@ -42,31 +43,31 @@ msgid "Category"
 msgstr "Categoría"
 
 msgid "Interval"
-msgstr ""
+msgstr "Intervalo"
 
 msgid "Aggregation Level"
-msgstr ""
+msgstr "Nivel de agregación"
 
 msgid "Chart Type"
-msgstr ""
+msgstr "Tipo de Gráfico"
 
 msgid "Event Type"
-msgstr ""
+msgstr "Tipo de Evento"
 
 msgid "Page Size"
-msgstr ""
+msgstr "Tamaño de Página"
 
 msgid "Sort Order"
-msgstr ""
+msgstr "Orden de Clasificación"
 
 msgid "Usage Analytics"
-msgstr ""
+msgstr "Analítica de Uso"
 
 msgid "There was an error retrieving the usage analytics data"
-msgstr ""
+msgstr "Se produjo un error al recuperar los datos de análisis de uso"
 
 msgid "Error loading application."
-msgstr ""
+msgstr "Error al cargar la aplicación."
 
 msgid "Sum"
 msgstr "Suma"
@@ -75,31 +76,31 @@ msgid "Average"
 msgstr "Promedio"
 
 msgid "Favorite views"
-msgstr ""
+msgstr "Vistas favoritas"
 
 msgid "Number of times users looked at analysis favorites"
-msgstr ""
+msgstr "Número de veces que los usuarios miraron los favoritos de análisis"
 
 msgid "Favorites saved"
-msgstr ""
+msgstr "Favoritos guardados"
 
 msgid "Number of analysis favorites created by users"
-msgstr ""
+msgstr "Número de análisis favoritos creados por los usuarios."
 
 msgid "Users"
 msgstr "Usuarios"
 
 msgid "Number of users in the system"
-msgstr ""
+msgstr "Número de usuarios en el sistema"
 
 msgid "Top favorites"
-msgstr ""
+msgstr "Top favoritos"
 
 msgid "Data values"
 msgstr "Valores de datos"
 
 msgid "Number of data values saved in the system"
-msgstr ""
+msgstr "Número de valores de datos guardados en el sistema"
 
 msgid "All"
 msgstr "Todos"
@@ -114,22 +115,22 @@ msgid "Map"
 msgstr "Mapa"
 
 msgid "Report table"
-msgstr ""
+msgstr "Tabla de informe"
 
 msgid "Event report"
-msgstr ""
+msgstr "Informe de evento"
 
 msgid "Event chart"
-msgstr ""
+msgstr "Tabla de eventos"
 
 msgid "Dashboard"
 msgstr "Tablero"
 
 msgid "Data set report"
-msgstr ""
+msgstr "Reporte de Set de Datos"
 
 msgid "Day"
-msgstr ""
+msgstr "Día"
 
 msgid "Week"
 msgstr "Semana"
@@ -147,31 +148,31 @@ msgid "Pivot Table"
 msgstr "Tabla pivote"
 
 msgid "Event Report"
-msgstr ""
+msgstr "Informe de evento"
 
 msgid "Event Chart"
-msgstr ""
+msgstr "Tabla de eventos"
 
 msgid "Data Set Report"
 msgstr "Reporte de Set de Datos"
 
 msgid "Average Map"
-msgstr ""
+msgstr "Mapa Promedio"
 
 msgid "Average Chart"
-msgstr ""
+msgstr "Gráfico Promedio"
 
 msgid "Average Pivot Table"
-msgstr ""
+msgstr "Tabla Dinámica Promedio"
 
 msgid "Average Event Report"
-msgstr ""
+msgstr "Informe de Evento Promedio"
 
 msgid "Average Event Chart"
-msgstr ""
+msgstr "Tabla de Eventos Promedio"
 
 msgid "Average Dashboard"
-msgstr ""
+msgstr "Tablero Promedio"
 
 msgid "Maps"
 msgstr "Mapas"
@@ -186,7 +187,7 @@ msgid "Event Reports"
 msgstr "Informes de eventos"
 
 msgid "Event Charts"
-msgstr ""
+msgstr "Tabla de Eventos"
 
 msgid "Dashboards"
 msgstr "Cuadros de mandos"
@@ -195,13 +196,13 @@ msgid "Indicators"
 msgstr "Indicadores"
 
 msgid "Active Users"
-msgstr ""
+msgstr "Usuarios Activos"
 
 msgid "Total Users"
-msgstr ""
+msgstr "Total de Usuarios"
 
 msgid "Position"
-msgstr ""
+msgstr "Posición"
 
 msgid "Name"
 msgstr "Nombre"
@@ -216,10 +217,10 @@ msgid "Created"
 msgstr "Creado"
 
 msgid "Data Values"
-msgstr ""
+msgstr "Valores de Datos"
 
 msgid "Ascending"
-msgstr ""
+msgstr "Ascendente"
 
 msgid "Descending"
-msgstr ""
+msgstr "Descendente"
