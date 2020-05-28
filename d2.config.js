@@ -5,6 +5,8 @@ const config = {
     entryPoints: {
         app: './src/components/App',
     },
+
+    coreApp: true,
 }
 
 module.exports = config
