@@ -1,4 +1,4 @@
-import * as api from '../api'
+import api from '../api'
 import * as ACTIONS from '../actions/types'
 import { TOP_FAVORITES } from '../constants/categories'
 

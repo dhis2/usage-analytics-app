@@ -1,26 +1,38 @@
 import { TOP_FAVORITES } from '../constants/categories'
 import { getJSON } from './get'
 
-export function getFavorites({ eventType, pageSize, sortOrder }) {
-    const queryParams = `eventType=${eventType}&pageSize=${pageSize}&sortOrder=${sortOrder}&_=${Date.now()}`
-    return getJSON(`dataStatistics/favorites?${queryParams}`)
+class Api {
+    baseUrl = null
+
+    setBaseUrl(baseUrl) {
+        this.baseUrl = baseUrl
+    }
+
+    getFavorites({ eventType, pageSize, sortOrder }) {
+        const queryParams = `eventType=${eventType}&pageSize=${pageSize}&sortOrder=${sortOrder}&_=${Date.now()}`
+        return getJSON(this.baseUrl, `dataStatistics/favorites?${queryParams}`)
+    }
+
+    getDataStatistics({ startDate, endDate, interval }) {
+        const queryParams = `startDate=${startDate}&endDate=${endDate}&interval=${interval}&_=${Date.now()}`
+        return getJSON(this.baseUrl, `dataStatistics?${queryParams}`)
+    }
+
+    getUsageData(filter) {
+        return filter.category === TOP_FAVORITES
+            ? this.getFavorites({
+                  eventType: filter.eventType,
+                  pageSize: filter.pageSize,
+                  sortOrder: filter.sortOrder,
+              })
+            : this.getDataStatistics({
+                  startDate: filter.startDate,
+                  endDate: filter.endDate,
+                  interval: filter.interval,
+              })
+    }
 }
 
-export function getDataStatistics({ startDate, endDate, interval }) {
-    const queryParams = `startDate=${startDate}&endDate=${endDate}&interval=${interval}&_=${Date.now()}`
-    return getJSON(`dataStatistics?${queryParams}`)
-}
+const api = new Api()
 
-export function getUsageData(filter) {
-    return filter.category === TOP_FAVORITES
-        ? getFavorites({
-              eventType: filter.eventType,
-              pageSize: filter.pageSize,
-              sortOrder: filter.sortOrder,
-          })
-        : getDataStatistics({
-              startDate: filter.startDate,
-              endDate: filter.endDate,
-              interval: filter.interval,
-          })
-}
+export default api
