@@ -1,6 +1,6 @@
 import configureMockStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
-import * as api from '../api'
+import api from '../api'
 import {
     initApp,
     updateCategory,
@@ -60,6 +60,10 @@ const MOCK_ACTIONS = {
         payload: mockError,
     },
 }
+
+beforeAll(() => {
+    api.setBaseUrl('baseUrl')
+})
 
 afterAll(() => {
     jest.resetAllMocks()

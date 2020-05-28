@@ -3,6 +3,11 @@ import ReactDOM from 'react-dom'
 import { shallow } from 'enzyme'
 import App from './App'
 
+jest.mock('react-redux', () => ({
+    connect: jest.fn(() => component => `Connected${component.name}`),
+    Provider: () => <div />, // eslint-disable-line react/display-name
+}))
+
 const mockFetch = jest.fn(async () => ({
     ok: true,
     json: async () => ({}),
@@ -22,11 +27,6 @@ describe('<App/>', () => {
     })
 
     it('renders the expected tree', () => {
-        jest.doMock('react-redux', () => ({
-            connect: jest.fn(() => component => `Connected${component.name}`),
-            Provider: () => <div />, // eslint-disable-line react/display-name
-        }))
-        const App = require('./App').default
         const tree = shallow(<App />)
 
         expect(tree).toMatchSnapshot()
