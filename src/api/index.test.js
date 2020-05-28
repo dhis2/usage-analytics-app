@@ -1,10 +1,11 @@
 import * as get from './get'
-import { getUsageData, getFavorites, getDataStatistics } from './index'
+import api from './index'
 import { TOP_FAVORITES } from '../constants/categories'
 
 beforeAll(() => {
     get.getJSON = jest.fn()
     Date.now = jest.fn(() => 'timestamp')
+    api.setBaseUrl('baseUrl')
 })
 
 afterAll(() => {
@@ -18,9 +19,11 @@ describe('getFavorites', () => {
             pageSize: 'pageSize',
             sortOrder: 'sortOrder',
         }
-        get.getJSON.mockImplementationOnce(url => Promise.resolve(url))
+        get.getJSON.mockImplementationOnce((_baseUrl, url) =>
+            Promise.resolve(url)
+        )
 
-        return expect(getFavorites(params)).resolves.toMatchSnapshot()
+        return expect(api.getFavorites(params)).resolves.toMatchSnapshot()
     })
 })
 
@@ -31,9 +34,11 @@ describe('getDataStatistics', () => {
             endDate: 'endDate',
             interval: 'interval',
         }
-        get.getJSON.mockImplementationOnce(url => Promise.resolve(url))
+        get.getJSON.mockImplementationOnce((_baseUrl, url) =>
+            Promise.resolve(url)
+        )
 
-        return expect(getDataStatistics(params)).resolves.toMatchSnapshot()
+        return expect(api.getDataStatistics(params)).resolves.toMatchSnapshot()
     })
 })
 
@@ -45,9 +50,11 @@ describe('getUsageData', () => {
             pageSize: 'pageSize',
             sortOrder: 'sortOrder',
         }
-        get.getJSON.mockImplementationOnce(url => Promise.resolve(url))
+        get.getJSON.mockImplementationOnce((_baseUrl, url) =>
+            Promise.resolve(url)
+        )
 
-        return expect(getUsageData(params)).resolves.toMatchSnapshot()
+        return expect(api.getUsageData(params)).resolves.toMatchSnapshot()
     })
 
     it('calls getJSON with the correct URL and queryString in other cases', () => {
@@ -56,8 +63,10 @@ describe('getUsageData', () => {
             endDate: 'endDate',
             interval: 'interval',
         }
-        get.getJSON.mockImplementationOnce(url => Promise.resolve(url))
+        get.getJSON.mockImplementationOnce((_baseUrl, url) =>
+            Promise.resolve(url)
+        )
 
-        return expect(getUsageData(params)).resolves.toMatchSnapshot()
+        return expect(api.getUsageData(params)).resolves.toMatchSnapshot()
     })
 })

@@ -3,21 +3,25 @@ import { get, getJSON } from './get'
 window.fetch = jest.fn()
 
 describe('get', () => {
+    it('rejects with the expected error message if baseUrl is not specified', () => {
+        return expect(get(undefined, 'path')).rejects.toMatchSnapshot()
+    })
+
     it('rejects with the expected error message if path is not specified', () => {
-        return expect(get()).rejects.toMatchSnapshot()
+        return expect(get('baseUrl', undefined)).rejects.toMatchSnapshot()
     })
 
     it('calls fetch with the expected path', () => {
         const actual = 'path'
         const expected = {
             ok: true,
-            path: `${process.env.REACT_APP_DHIS2_BASE_URL}/api/${actual}`,
+            path: `baseUrl/api/${actual}`,
         }
         window.fetch.mockImplementationOnce(path =>
             Promise.resolve({ ok: true, path })
         )
 
-        return expect(get('path')).resolves.toEqual(expected)
+        return expect(get('baseUrl', 'path')).resolves.toEqual(expected)
     })
 
     it('allows the config to be overridden', () => {
@@ -30,7 +34,7 @@ describe('get', () => {
             config: actual,
         }
 
-        return expect(get('path', actual)).resolves.toEqual(expected)
+        return expect(get('baseUrl', 'path', actual)).resolves.toEqual(expected)
     })
 
     it('rejects with the expected error message if fetch resolves but the response is not ok', () => {
@@ -38,7 +42,7 @@ describe('get', () => {
             Promise.resolve({ statusText: 'The response is not ok' })
         )
 
-        return expect(get('path')).rejects.toMatchSnapshot()
+        return expect(get('baseUrl', 'path')).rejects.toMatchSnapshot()
     })
 })
 
@@ -51,7 +55,7 @@ describe('getJSON', () => {
         }
         window.fetch.mockImplementationOnce(() => Promise.resolve(response))
 
-        return expect(getJSON('path')).resolves.toEqual(expected)
+        return expect(getJSON('baseUrl', 'path')).resolves.toEqual(expected)
     })
 
     it('rejects with the expected error message if the json is not ok', () => {
@@ -62,6 +66,6 @@ describe('getJSON', () => {
         }
         window.fetch.mockImplementationOnce(() => Promise.resolve(response))
 
-        return expect(getJSON('path')).rejects.toMatchSnapshot()
+        return expect(getJSON('baseUrl', 'path')).rejects.toMatchSnapshot()
     })
 })
