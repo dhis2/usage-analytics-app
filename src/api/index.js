@@ -1,38 +1,38 @@
 import { TOP_FAVORITES } from '../constants/categories'
 import { getJSON } from './get'
 
-class Api {
-    baseUrl = null
+const api = (() => {
+    let baseUrl = null
 
-    setBaseUrl(baseUrl) {
-        this.baseUrl = baseUrl
+    const setBaseUrl = url => {
+        baseUrl = url
     }
 
-    getFavorites({ eventType, pageSize, sortOrder }) {
+    const getFavorites = ({ eventType, pageSize, sortOrder }) => {
         const queryParams = `eventType=${eventType}&pageSize=${pageSize}&sortOrder=${sortOrder}&_=${Date.now()}`
-        return getJSON(this.baseUrl, `dataStatistics/favorites?${queryParams}`)
+        return getJSON(baseUrl, `dataStatistics/favorites?${queryParams}`)
     }
 
-    getDataStatistics({ startDate, endDate, interval }) {
+    const getDataStatistics = ({ startDate, endDate, interval }) => {
         const queryParams = `startDate=${startDate}&endDate=${endDate}&interval=${interval}&_=${Date.now()}`
-        return getJSON(this.baseUrl, `dataStatistics?${queryParams}`)
+        return getJSON(baseUrl, `dataStatistics?${queryParams}`)
     }
 
-    getUsageData(filter) {
+    const getUsageData = filter => {
         return filter.category === TOP_FAVORITES
-            ? this.getFavorites({
+            ? getFavorites({
                   eventType: filter.eventType,
                   pageSize: filter.pageSize,
                   sortOrder: filter.sortOrder,
               })
-            : this.getDataStatistics({
+            : getDataStatistics({
                   startDate: filter.startDate,
                   endDate: filter.endDate,
                   interval: filter.interval,
               })
     }
-}
 
-const api = new Api()
+    return { setBaseUrl, getFavorites, getDataStatistics, getUsageData }
+})()
 
 export default api
