@@ -36,7 +36,7 @@ msgid "Start Date"
 msgstr "Ngày bắt đầu"
 
 msgid "End Date"
-msgstr ""
+msgstr "Ngày kết thúc"
 
 msgid "Category"
 msgstr "Phân loại"

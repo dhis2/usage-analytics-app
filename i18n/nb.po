@@ -35,7 +35,7 @@ msgid "Start Date"
 msgstr "Startdato"
 
 msgid "End Date"
-msgstr ""
+msgstr "Sluttdato"
 
 msgid "Category"
 msgstr "Kategori"
