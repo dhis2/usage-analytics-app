@@ -8,9 +8,18 @@ import DateRange, {
     ERROR_END_BEFORE_START,
 } from './DateRange'
 
-describe('<DateRange/>', () => {
-    jest.useFakeTimers()
+/* 
+TODO: Tests on Travis broke due to an issue with Jest fake timers and lodash debounce.
+This was fixed by mocking lodash debounce instead of using the Jest fake timers.
+See: https://github.com/dhis2/usage-analytics-app/pull/358/commits/1d036bb992e5013e28c646602d9576dfd05b003a 
 
+However, the fake timers solution was a more realistic way to test this component, and a fix for 
+this issue should be released in Jest v27, so we should move back to using fake timers then.
+See: https://github.com/facebook/jest/issues/3465#issuecomment-623393230
+*/
+jest.mock('lodash.debounce', () => jest.fn(fn => fn))
+
+describe('<DateRange/>', () => {
     const updateFilter = jest.fn()
     const updateUsageData = jest.fn()
 
@@ -42,13 +51,11 @@ describe('<DateRange/>', () => {
     it('calls updateFilterAndGetData when startDate changes into a valid value', () => {
         const value = '2018-09-20'
         startDateInput.simulate('change', { target: { value } })
-        jest.runAllTimers()
         expect(updateUsageData).toHaveBeenCalledTimes(1)
     })
     it('calls updateFilterAndGetData when endDate changes into a valid value', () => {
         const value = '2019-01-20'
         endDateInput.simulate('change', { target: { value } })
-        jest.runAllTimers()
         expect(updateUsageData).toHaveBeenCalledTimes(1)
     })
     it('calls updateFilter when startDate changes', () => {
