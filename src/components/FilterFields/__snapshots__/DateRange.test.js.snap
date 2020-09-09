@@ -34,17 +34,17 @@ exports[`<DateRange/> matches the snapshot with default props 1`] = `
             htmlFor="startDate"
           >
             <label
-              className="jsx-3751407064 "
+              className="jsx-2718078600 "
               data-test="dhis2-uicore-label"
               htmlFor="startDate"
             >
               <span
-                className="jsx-3751407064"
+                className="jsx-2718078600"
               >
                 Start Date
               </span>
               <JSXStyle
-                id="3751407064"
+                id="2718078600"
               />
             </label>
           </Label>
@@ -141,17 +141,17 @@ exports[`<DateRange/> matches the snapshot with default props 1`] = `
             htmlFor="endDate"
           >
             <label
-              className="jsx-3751407064 "
+              className="jsx-2718078600 "
               data-test="dhis2-uicore-label"
               htmlFor="endDate"
             >
               <span
-                className="jsx-3751407064"
+                className="jsx-2718078600"
               >
                 End Date
               </span>
               <JSXStyle
-                id="3751407064"
+                id="2718078600"
               />
             </label>
           </Label>
