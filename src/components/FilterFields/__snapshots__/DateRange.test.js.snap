@@ -24,97 +24,143 @@ exports[`<DateRange/> matches the snapshot with default props 1`] = `
       <Field
         className="startDate"
         dataTest="uaa-startdate"
+        error={false}
+        label="Start Date"
+        name="startDate"
+        validationText={null}
       >
-        <div
-          className="jsx-1540540055 startDate"
-          data-test="uaa-startdate"
+        <Box
+          className="startDate"
+          dataTest="uaa-startdate"
         >
-          <Label
-            dataTest="dhis2-uicore-label"
-            htmlFor="startDate"
+          <div
+            className="jsx-1141087211 startDate"
+            data-test="uaa-startdate"
           >
-            <label
-              className="jsx-3751407064 "
-              data-test="dhis2-uicore-label"
+            <Label
+              dataTest="uaa-startdate-label"
               htmlFor="startDate"
             >
-              <span
-                className="jsx-3751407064"
+              <label
+                className="jsx-2718078600 "
+                data-test="uaa-startdate-label"
+                htmlFor="startDate"
               >
-                Start Date
-              </span>
-              <JSXStyle
-                id="3751407064"
-              />
-            </label>
-          </Label>
-          <Constrictor
-            dataTest="dhis2-uicore-constrictor"
-            minWidth="72px"
-          >
-            <div
-              className="jsx-1696505344"
-              data-test="dhis2-uicore-constrictor"
-            >
-              <Input
-                dataTest="dhis2-uicore-input"
-                error={false}
-                name="startDate"
-                onChange={[Function]}
-                type="date"
-                value="2018-09-30"
-              >
-                <div
-                  className="jsx-3353877153 jsx-1090541828 input"
-                  data-test="dhis2-uicore-input"
+                <span
+                  className="jsx-2718078600"
                 >
-                  <input
-                    className="jsx-3353877153 jsx-1090541828 "
-                    id="startDate"
-                    name="startDate"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    onFocus={[Function]}
-                    type="date"
-                    value="2018-09-30"
-                  />
+                  Start Date
+                </span>
+                <JSXStyle
+                  id="2718078600"
+                />
+              </label>
+            </Label>
+            <Box
+              dataTest="uaa-startdate-content"
+              marginTop="4px"
+            >
+              <div
+                className="jsx-3111771310 "
+                data-test="uaa-startdate-content"
+              >
+                <Box
+                  dataTest="dhis2-uicore-box"
+                  minWidth="72px"
+                >
                   <div
-                    className="jsx-3353877153 jsx-1090541828 status-icon"
+                    className="jsx-1220078726 "
+                    data-test="dhis2-uicore-box"
                   >
-                    <StatusIcon
-                      defaultTo={null}
+                    <Input
+                      dataTest="dhis2-uicore-input"
                       error={false}
+                      name="startDate"
+                      onChange={[Function]}
+                      type="date"
+                      value="2018-09-30"
+                    >
+                      <div
+                        className="jsx-3353877153 jsx-1090541828 input"
+                        data-test="dhis2-uicore-input"
+                      >
+                        <input
+                          className="jsx-3353877153 jsx-1090541828 "
+                          id="startDate"
+                          name="startDate"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          type="date"
+                          value="2018-09-30"
+                        />
+                        <div
+                          className="jsx-3353877153 jsx-1090541828 status-icon"
+                        >
+                          <StatusIcon
+                            defaultTo={null}
+                            error={false}
+                          />
+                        </div>
+                        <JSXStyle
+                          id="1090541828"
+                        />
+                        <JSXStyle
+                          id="3353877153"
+                        />
+                      </div>
+                    </Input>
+                    <JSXStyle
+                      dynamic={
+                        Array [
+                          "",
+                          "",
+                          "",
+                          "",
+                          "",
+                          "min-width: 72px;",
+                          "",
+                          "",
+                        ]
+                      }
+                      id="3369228338"
                     />
                   </div>
-                  <JSXStyle
-                    id="1090541828"
-                  />
-                  <JSXStyle
-                    id="3353877153"
-                  />
-                </div>
-              </Input>
-              <JSXStyle
-                dynamic={
-                  Array [
-                    "",
-                    "min-width: 72px;",
-                    "",
-                  ]
-                }
-                id="1474598979"
-              />
-            </div>
-          </Constrictor>
-          <JSXStyle
-            dynamic={
-              Array [
-                "16px",
-              ]
-            }
-            id="618636905"
-          />
-        </div>
+                </Box>
+                <JSXStyle
+                  dynamic={
+                    Array [
+                      "margin-top: 4px;",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                    ]
+                  }
+                  id="3369228338"
+                />
+              </div>
+            </Box>
+            <JSXStyle
+              dynamic={
+                Array [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                ]
+              }
+              id="3369228338"
+            />
+          </div>
+        </Box>
       </Field>
     </InputField>
     <InputField
@@ -131,97 +177,143 @@ exports[`<DateRange/> matches the snapshot with default props 1`] = `
       <Field
         className="endDate"
         dataTest="uaa-enddate"
+        error={false}
+        label="End Date"
+        name="endDate"
+        validationText={null}
       >
-        <div
-          className="jsx-1540540055 endDate"
-          data-test="uaa-enddate"
+        <Box
+          className="endDate"
+          dataTest="uaa-enddate"
         >
-          <Label
-            dataTest="dhis2-uicore-label"
-            htmlFor="endDate"
+          <div
+            className="jsx-1141087211 endDate"
+            data-test="uaa-enddate"
           >
-            <label
-              className="jsx-3751407064 "
-              data-test="dhis2-uicore-label"
+            <Label
+              dataTest="uaa-enddate-label"
               htmlFor="endDate"
             >
-              <span
-                className="jsx-3751407064"
+              <label
+                className="jsx-2718078600 "
+                data-test="uaa-enddate-label"
+                htmlFor="endDate"
               >
-                End Date
-              </span>
-              <JSXStyle
-                id="3751407064"
-              />
-            </label>
-          </Label>
-          <Constrictor
-            dataTest="dhis2-uicore-constrictor"
-            minWidth="72px"
-          >
-            <div
-              className="jsx-1696505344"
-              data-test="dhis2-uicore-constrictor"
-            >
-              <Input
-                dataTest="dhis2-uicore-input"
-                error={false}
-                name="endDate"
-                onChange={[Function]}
-                type="date"
-                value="2018-12-30"
-              >
-                <div
-                  className="jsx-3353877153 jsx-1090541828 input"
-                  data-test="dhis2-uicore-input"
+                <span
+                  className="jsx-2718078600"
                 >
-                  <input
-                    className="jsx-3353877153 jsx-1090541828 "
-                    id="endDate"
-                    name="endDate"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    onFocus={[Function]}
-                    type="date"
-                    value="2018-12-30"
-                  />
+                  End Date
+                </span>
+                <JSXStyle
+                  id="2718078600"
+                />
+              </label>
+            </Label>
+            <Box
+              dataTest="uaa-enddate-content"
+              marginTop="4px"
+            >
+              <div
+                className="jsx-3111771310 "
+                data-test="uaa-enddate-content"
+              >
+                <Box
+                  dataTest="dhis2-uicore-box"
+                  minWidth="72px"
+                >
                   <div
-                    className="jsx-3353877153 jsx-1090541828 status-icon"
+                    className="jsx-1220078726 "
+                    data-test="dhis2-uicore-box"
                   >
-                    <StatusIcon
-                      defaultTo={null}
+                    <Input
+                      dataTest="dhis2-uicore-input"
                       error={false}
+                      name="endDate"
+                      onChange={[Function]}
+                      type="date"
+                      value="2018-12-30"
+                    >
+                      <div
+                        className="jsx-3353877153 jsx-1090541828 input"
+                        data-test="dhis2-uicore-input"
+                      >
+                        <input
+                          className="jsx-3353877153 jsx-1090541828 "
+                          id="endDate"
+                          name="endDate"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          type="date"
+                          value="2018-12-30"
+                        />
+                        <div
+                          className="jsx-3353877153 jsx-1090541828 status-icon"
+                        >
+                          <StatusIcon
+                            defaultTo={null}
+                            error={false}
+                          />
+                        </div>
+                        <JSXStyle
+                          id="1090541828"
+                        />
+                        <JSXStyle
+                          id="3353877153"
+                        />
+                      </div>
+                    </Input>
+                    <JSXStyle
+                      dynamic={
+                        Array [
+                          "",
+                          "",
+                          "",
+                          "",
+                          "",
+                          "min-width: 72px;",
+                          "",
+                          "",
+                        ]
+                      }
+                      id="3369228338"
                     />
                   </div>
-                  <JSXStyle
-                    id="1090541828"
-                  />
-                  <JSXStyle
-                    id="3353877153"
-                  />
-                </div>
-              </Input>
-              <JSXStyle
-                dynamic={
-                  Array [
-                    "",
-                    "min-width: 72px;",
-                    "",
-                  ]
-                }
-                id="1474598979"
-              />
-            </div>
-          </Constrictor>
-          <JSXStyle
-            dynamic={
-              Array [
-                "16px",
-              ]
-            }
-            id="618636905"
-          />
-        </div>
+                </Box>
+                <JSXStyle
+                  dynamic={
+                    Array [
+                      "margin-top: 4px;",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                      "",
+                    ]
+                  }
+                  id="3369228338"
+                />
+              </div>
+            </Box>
+            <JSXStyle
+              dynamic={
+                Array [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                ]
+              }
+              id="3369228338"
+            />
+          </div>
+        </Box>
       </Field>
     </InputField>
   </div>

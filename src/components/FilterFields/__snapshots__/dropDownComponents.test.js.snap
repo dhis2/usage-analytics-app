@@ -5,16 +5,16 @@ exports[`dropDownComponents <AggregationLevel/> matches the snapshot 1`] = `
   label="Aggregation Level"
   onChange={[MockFunction]}
   options={
-    Object {
-      "AVERAGE": Object {
-        "label": "Average",
-        "value": "AVERAGE",
-      },
-      "SUM": Object {
+    Array [
+      Object {
         "label": "Sum",
         "value": "SUM",
       },
-    }
+      Object {
+        "label": "Average",
+        "value": "AVERAGE",
+      },
+    ]
   }
   value="test"
 />
@@ -25,32 +25,32 @@ exports[`dropDownComponents <Category/> matches the snapshot 1`] = `
   label="Category"
   onChange={[MockFunction]}
   options={
-    Object {
-      "DATA_VALUES": Object {
-        "label": "Data values",
-        "subtitle": "Number of data values saved in the system",
-        "value": "DATA_VALUES",
-      },
-      "FAVORITES_SAVED": Object {
-        "label": "Favorites saved",
-        "subtitle": "Number of analysis favorites created by users",
-        "value": "FAVORITES_SAVED",
-      },
-      "FAVORITE_VIEWS": Object {
+    Array [
+      Object {
         "label": "Favorite views",
         "subtitle": "Number of times users looked at analysis favorites",
         "value": "FAVORITE_VIEWS",
       },
-      "TOP_FAVORITES": Object {
-        "label": "Top favorites",
-        "value": "TOP_FAVORITES",
+      Object {
+        "label": "Favorites saved",
+        "subtitle": "Number of analysis favorites created by users",
+        "value": "FAVORITES_SAVED",
       },
-      "USERS": Object {
+      Object {
         "label": "Users",
         "subtitle": "Number of users in the system",
         "value": "USERS",
       },
-    }
+      Object {
+        "label": "Top favorites",
+        "value": "TOP_FAVORITES",
+      },
+      Object {
+        "label": "Data values",
+        "subtitle": "Number of data values saved in the system",
+        "value": "DATA_VALUES",
+      },
+    ]
   }
   value="test"
 />
@@ -61,16 +61,16 @@ exports[`dropDownComponents <ChartType/> matches the snapshot 1`] = `
   label="Chart Type"
   onChange={[MockFunction]}
   options={
-    Object {
-      "ALL": Object {
+    Array [
+      Object {
         "label": "All",
         "value": "ALL",
       },
-      "TOTAL": Object {
+      Object {
         "label": "Total",
         "value": "TOTAL",
       },
-    }
+    ]
   }
   value="test"
 />
@@ -81,36 +81,36 @@ exports[`dropDownComponents <EventType/> matches the snapshot 1`] = `
   label="Event Type"
   onChange={[MockFunction]}
   options={
-    Object {
-      "CHART_VIEW": Object {
+    Array [
+      Object {
         "label": "Chart",
         "value": "CHART_VIEW",
       },
-      "DASHBOARD_VIEW": Object {
-        "label": "Dashboard",
-        "value": "DASHBOARD_VIEW",
-      },
-      "DATA_SET_REPORT_VIEW": Object {
-        "label": "Data set report",
-        "value": "DATA_SET_REPORT_VIEW",
-      },
-      "EVENT_CHART_VIEW": Object {
-        "label": "Event chart",
-        "value": "EVENT_CHART_VIEW",
-      },
-      "EVENT_REPORT_VIEW": Object {
-        "label": "Event report",
-        "value": "EVENT_REPORT_VIEW",
-      },
-      "MAP_VIEW": Object {
+      Object {
         "label": "Map",
         "value": "MAP_VIEW",
       },
-      "REPORT_TABLE_VIEW": Object {
+      Object {
         "label": "Report table",
         "value": "REPORT_TABLE_VIEW",
       },
-    }
+      Object {
+        "label": "Event report",
+        "value": "EVENT_REPORT_VIEW",
+      },
+      Object {
+        "label": "Event chart",
+        "value": "EVENT_CHART_VIEW",
+      },
+      Object {
+        "label": "Dashboard",
+        "value": "DASHBOARD_VIEW",
+      },
+      Object {
+        "label": "Data set report",
+        "value": "DATA_SET_REPORT_VIEW",
+      },
+    ]
   }
   value="test"
 />
@@ -121,24 +121,24 @@ exports[`dropDownComponents <Interval/> matches the snapshot 1`] = `
   label="Interval"
   onChange={[MockFunction]}
   options={
-    Object {
-      "DAY": Object {
+    Array [
+      Object {
         "label": "Day",
         "value": "DAY",
       },
-      "MONTH": Object {
-        "label": "Month",
-        "value": "MONTH",
-      },
-      "WEEK": Object {
+      Object {
         "label": "Week",
         "value": "WEEK",
       },
-      "YEAR": Object {
+      Object {
+        "label": "Month",
+        "value": "MONTH",
+      },
+      Object {
         "label": "Year",
         "value": "YEAR",
       },
-    }
+    ]
   }
   value="test"
 />
@@ -149,28 +149,28 @@ exports[`dropDownComponents <PageSize/> matches the snapshot 1`] = `
   label="Page Size"
   onChange={[MockFunction]}
   options={
-    Object {
-      "10": Object {
-        "label": "10",
-        "value": "10",
-      },
-      "15": Object {
-        "label": "15",
-        "value": "15",
-      },
-      "20": Object {
-        "label": "20",
-        "value": "20",
-      },
-      "25": Object {
-        "label": "25",
-        "value": "25",
-      },
-      "5": Object {
+    Array [
+      Object {
         "label": "5",
         "value": "5",
       },
-    }
+      Object {
+        "label": "10",
+        "value": "10",
+      },
+      Object {
+        "label": "15",
+        "value": "15",
+      },
+      Object {
+        "label": "20",
+        "value": "20",
+      },
+      Object {
+        "label": "25",
+        "value": "25",
+      },
+    ]
   }
   value="test"
 />
@@ -181,16 +181,16 @@ exports[`dropDownComponents <SortOrder/> matches the snapshot 1`] = `
   label="Sort Order"
   onChange={[MockFunction]}
   options={
-    Object {
-      "ASC": Object {
+    Array [
+      Object {
         "label": "Ascending",
         "value": "ASC",
       },
-      "DESC": Object {
+      Object {
         "label": "Descending",
         "value": "DESC",
       },
-    }
+    ]
   }
   value="test"
 />
