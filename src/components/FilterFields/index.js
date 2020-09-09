@@ -10,7 +10,7 @@ import {
 
 export const CategoryDropDown = connect(
     createValueGetterForFilterKey('category'),
-    { onChange: ({ selected: { value } }) => updateCategory(value) }
+    { onChange: ({ selected }) => updateCategory(selected) }
 )(DropDowns.Category)
 
 export const DateRange = connect(mapDateRangeProps, {
@@ -58,8 +58,8 @@ export function createValueGetterForFilterKey(key) {
 }
 
 function createFilterUpdater(updaterFn, filterKey) {
-    return function({ selected: { value } }) {
-        return updaterFn(filterKey, value)
+    return function({ selected }) {
+        return updaterFn(filterKey, selected)
     }
 }
 
