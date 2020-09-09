@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import PropTypes from '@dhis2/prop-types'
 import { connect } from 'react-redux'
-import { CircularLoader } from '@dhis2/ui-core'
+import { CircularLoader } from '@dhis2/ui'
 import { Line } from 'react-chartjs-2'
 import parseChartData from './parseChartData'
 import { LOADING, ERROR } from '../../constants/statuses'

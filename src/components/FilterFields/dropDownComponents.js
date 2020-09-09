@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from '@dhis2/prop-types'
 import i18n from '@dhis2/d2-i18n'
-import { SingleSelectField, SingleSelectOption } from '@dhis2/ui-core'
+import { SingleSelectField, SingleSelectOption } from '@dhis2/ui'
 
 import CATEGORIES from '../../constants/categories'
 import INTERVALS from '../../constants/intervals'
