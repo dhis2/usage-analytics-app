@@ -1,5 +1,5 @@
 import React from 'react'
-import { mount } from 'enzyme'
+import { shallow, mount } from 'enzyme'
 import DateRange, {
     START_DATE,
     END_DATE,
@@ -23,6 +23,7 @@ describe('<DateRange/>', () => {
     }
     const NOT_A_DATE = 'This is not a date'
 
+    const shallowWrapper = shallow(<DateRange {...defaultProps} />)
     const wrapper = mount(<DateRange {...defaultProps} />)
 
     const startDateInput = wrapper.find('#startDate')
@@ -33,7 +34,7 @@ describe('<DateRange/>', () => {
     })
 
     it('matches the snapshot with default props', () => {
-        expect(wrapper).toMatchSnapshot()
+        expect(shallowWrapper).toMatchSnapshot()
     })
     it('renders a date input for startDate', () => {
         expect(startDateInput.prop('type')).toEqual('date')
