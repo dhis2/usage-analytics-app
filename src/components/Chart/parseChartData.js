@@ -12,7 +12,7 @@ export default function parseChartData(
 ) {
     const labels = []
     const datasets = []
-    const { label, subtitle } = CATEGORIES.find(c => c.value === category)
+    const selectedCategory = CATEGORIES.find(c => c.value === category)
     let max = MIN_SUGGESTED_MAX_VALUE
     let min = null
     const fields =
@@ -67,8 +67,8 @@ export default function parseChartData(
             datasets,
         },
         options: config.options,
-        title: label,
-        subtitle,
+        title: selectedCategory.label,
+        subtitle: selectedCategory.subtitle,
     }
 }
 
