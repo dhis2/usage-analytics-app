@@ -11,7 +11,7 @@
         "format:staged": "d2-style js apply --staged"
     },
     "dependencies": {
-        "@dhis2/prop-types": "^1.6.4",
+        "@dhis2/prop-types": "^2.0.0",
         "chart.js": "^2.9.1",
         "lodash.debounce": "^4.0.8",
         "react-app-polyfill": "^1.0.6",
