@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from '@dhis2/prop-types'
 import i18n from '@dhis2/d2-i18n'
-import { SingleSelectField, SingleSelectOption } from '@dhis2/ui-core'
+import { SingleSelectField, SingleSelectOption } from '@dhis2/ui'
 
 import CATEGORIES from '../../constants/categories'
 import INTERVALS from '../../constants/intervals'
@@ -12,19 +12,15 @@ import PAGE_SIZES from '../../constants/pageSizes'
 import SORT_ORDERS from '../../constants/sortOrders'
 
 export const DropDown = ({ options, value, ...rest }) => (
-    <SingleSelectField {...rest} selected={options[value]}>
-        {Object.keys(options).map(key => (
-            <SingleSelectOption
-                label={options[key].label}
-                key={options[key].value}
-                value={options[key].value}
-            />
+    <SingleSelectField {...rest} selected={value}>
+        {options.map(({ label, value }) => (
+            <SingleSelectOption label={label} key={value} value={value} />
         ))}
     </SingleSelectField>
 )
 
 DropDown.propTypes = {
-    options: PropTypes.object.isRequired,
+    options: PropTypes.array.isRequired,
     value: PropTypes.string.isRequired,
 }
 

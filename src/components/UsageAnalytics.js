@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from '@dhis2/prop-types'
 import { connect } from 'react-redux'
 import i18n from '@dhis2/d2-i18n'
-import { CircularLoader, ScreenCover } from '@dhis2/ui-core'
+import { Layer, CenteredContent, CircularLoader } from '@dhis2/ui'
 import { LOADING, ERROR } from '../constants/statuses'
 import { initApp } from '../actions'
 import Error from './Error'
@@ -20,9 +20,11 @@ export class UsageAnalytics extends Component {
 
         if (appStatus === LOADING) {
             return (
-                <ScreenCover>
-                    <CircularLoader large />
-                </ScreenCover>
+                <Layer translucent>
+                    <CenteredContent>
+                        <CircularLoader large />
+                    </CenteredContent>
+                </Layer>
             )
         }
 
