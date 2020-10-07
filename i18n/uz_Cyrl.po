@@ -181,7 +181,7 @@ msgid "Pivot Tables"
 msgstr "Таянч жадваллар"
 
 msgid "Event Reports"
-msgstr ""
+msgstr "Ҳодисалар ҳақида ҳисоботлар"
 
 msgid "Event Charts"
 msgstr ""
