@@ -16,55 +16,55 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 msgid "Values"
-msgstr ""
+msgstr "Қийматлар"
 
 msgid "Please use the format yyyy-mm-dd"
-msgstr ""
+msgstr "Илтимос, санани кк-ой-йййй шаклида киритинг"
 
 msgid "Please fill in both dates"
-msgstr ""
+msgstr "Илтимос, ҳар иккала санани тўлдиринг"
 
 msgid "End date is before start date"
-msgstr ""
+msgstr "Якунланиш санаси бошланиш санасидан олдинда"
 
 msgid "Start date is after end date"
-msgstr ""
+msgstr "Бошланиш санаси якунланиш санасидан кейинда"
 
 msgid "Start Date"
-msgstr ""
+msgstr "Бошланиш санаси"
 
 msgid "End Date"
-msgstr ""
+msgstr "Якунланиш Сана"
 
 msgid "Category"
 msgstr "Категория"
 
 msgid "Interval"
-msgstr ""
+msgstr "Интервал"
 
 msgid "Aggregation Level"
-msgstr ""
+msgstr "Аггрегация поғонаси"
 
 msgid "Chart Type"
-msgstr ""
+msgstr "Диаграмма тури"
 
 msgid "Event Type"
-msgstr ""
+msgstr "Тадбир тури"
 
 msgid "Page Size"
-msgstr ""
+msgstr "Саҳифа ҳажми"
 
 msgid "Sort Order"
-msgstr ""
+msgstr "Саралаш тартиби"
 
 msgid "Usage Analytics"
-msgstr ""
+msgstr "Фойдаланиш таҳлили"
 
 msgid "There was an error retrieving the usage analytics data"
-msgstr ""
+msgstr "Таҳлил маълумотларидан фойдаланишда хатолик юз берди"
 
 msgid "Error loading application."
-msgstr ""
+msgstr "Илова юкланишида хатолик юз берди"
 
 msgid "Sum"
 msgstr "Жамлаш"
@@ -73,31 +73,31 @@ msgid "Average"
 msgstr "Ўртача"
 
 msgid "Favorite views"
-msgstr ""
+msgstr "Танланган кўринишлар"
 
 msgid "Number of times users looked at analysis favorites"
-msgstr ""
+msgstr "Танланган таҳлилларни фойдаланувчилар томонидан кўрилган сони"
 
 msgid "Favorites saved"
-msgstr ""
+msgstr "Танланганлар сақланди"
 
 msgid "Number of analysis favorites created by users"
-msgstr ""
+msgstr "Фойдаланувчилар томонидан яратилган танланган таҳлиллар сони"
 
 msgid "Users"
 msgstr "Фойдаланувчилар"
 
 msgid "Number of users in the system"
-msgstr ""
+msgstr "Тизимда фойдаланувчилар сони"
 
 msgid "Top favorites"
-msgstr ""
+msgstr "Танланганларнинг сараси"
 
 msgid "Data values"
-msgstr ""
+msgstr "Маълумотларнинг қийматлари"
 
 msgid "Number of data values saved in the system"
-msgstr ""
+msgstr "Тизимда сақланган маълумотлар қийматларининг сони"
 
 msgid "All"
 msgstr "Барчаси"
@@ -112,64 +112,64 @@ msgid "Map"
 msgstr "Харита"
 
 msgid "Report table"
-msgstr ""
+msgstr "Ҳисобот жадвали"
 
 msgid "Event report"
-msgstr ""
+msgstr "Ҳодиса ҳисоботи"
 
 msgid "Event chart"
-msgstr ""
+msgstr "Ҳодиса диаграммаси"
 
 msgid "Dashboard"
-msgstr ""
+msgstr "Бошқарув панели"
 
 msgid "Data set report"
-msgstr ""
+msgstr "Маълумотлар тўплами ҳисоботи"
 
 msgid "Day"
-msgstr ""
+msgstr "Кун"
 
 msgid "Week"
-msgstr ""
+msgstr "Ҳафта"
 
 msgid "Month"
-msgstr ""
+msgstr "Ой"
 
 msgid "Year"
-msgstr ""
+msgstr "Йил"
 
 msgid "Date"
 msgstr "Сана"
 
 msgid "Pivot Table"
-msgstr ""
+msgstr "Таянч Жадвал"
 
 msgid "Event Report"
-msgstr ""
+msgstr "Ҳодиса Ҳисобот"
 
 msgid "Event Chart"
-msgstr ""
+msgstr "Ҳодиса Диаграмма"
 
 msgid "Data Set Report"
 msgstr "Маълумотлар тўплами ҳисоботи"
 
 msgid "Average Map"
-msgstr ""
+msgstr "Ўртача олинган харита"
 
 msgid "Average Chart"
-msgstr ""
+msgstr "Ўртача олинган Диаграмма"
 
 msgid "Average Pivot Table"
-msgstr ""
+msgstr "Ўртача олинган Таянч Жадвал"
 
 msgid "Average Event Report"
-msgstr ""
+msgstr "Ўртача олинган Ҳодиса Ҳисобот"
 
 msgid "Average Event Chart"
-msgstr ""
+msgstr "Ўртача олинган Ҳодиса Диаграмма"
 
 msgid "Average Dashboard"
-msgstr ""
+msgstr "Ўртача олинган Бошқарув панели"
 
 msgid "Maps"
 msgstr "Хариталар"
@@ -184,22 +184,22 @@ msgid "Event Reports"
 msgstr "Ҳодисалар ҳақида ҳисоботлар"
 
 msgid "Event Charts"
-msgstr ""
+msgstr "Ҳодиса Диаграмма"
 
 msgid "Dashboards"
-msgstr ""
+msgstr "Бошқарув Панели"
 
 msgid "Indicators"
 msgstr "Индикаторлар"
 
 msgid "Active Users"
-msgstr ""
+msgstr "Фаол Фойдаланувчилар"
 
 msgid "Total Users"
-msgstr ""
+msgstr "Жами Фойдаланувчилар"
 
 msgid "Position"
-msgstr ""
+msgstr "Лавозими"
 
 msgid "Name"
 msgstr "Исми"
@@ -214,10 +214,10 @@ msgid "Created"
 msgstr "Яратилди"
 
 msgid "Data Values"
-msgstr ""
+msgstr "Маълумотлар Қийматлар"
 
 msgid "Ascending"
-msgstr ""
+msgstr "Ошиш бўйича"
 
 msgid "Descending"
-msgstr ""
+msgstr "Камайиш бўйича"
