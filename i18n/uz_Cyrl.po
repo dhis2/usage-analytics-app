@@ -115,10 +115,10 @@ msgid "Report table"
 msgstr "Ҳисобот жадвали"
 
 msgid "Event report"
-msgstr "Ҳодиса ҳисоботи"
+msgstr "Ҳодиса/Тадбир ҳисоботи"
 
 msgid "Event chart"
-msgstr "Ҳодиса диаграммаси"
+msgstr "Ҳодиса/Тадбир диаграммаси"
 
 msgid "Dashboard"
 msgstr "Бошқарув панели"
