@@ -21,7 +21,6 @@ env:
     GIT_AUTHOR_EMAIL: 'apps@dhis2.org'
     GIT_COMMITTER_NAME: '@dhis2-bot'
     GIT_COMMITTER_EMAIL: 'apps@dhis2.org'
-    NPM_TOKEN: ${{secrets.DHIS2_BOT_NPM_TOKEN}}
     GH_TOKEN: ${{secrets.DHIS2_BOT_GITHUB_TOKEN}}
     CI: true
 
@@ -68,7 +67,9 @@ jobs:
             - uses: actions/upload-artifact@v2
               with:
                   name: app-build
-                  path: '**/build'
+                  path: |
+                      !**/node_modules
+                      **/build
                   retention-days: 1
 
     lint:
