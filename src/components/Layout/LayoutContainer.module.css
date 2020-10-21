@@ -1,0 +1,6 @@
+.container {
+    display: flex;
+    min-height: calc(100vh - 48px);
+    background-color: rgba(0, 0, 10, 0.05);
+    font-family: 'Roboto', sans-serif;
+}

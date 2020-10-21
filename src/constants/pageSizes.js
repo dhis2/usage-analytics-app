@@ -4,7 +4,7 @@ export const PS_15 = '15'
 export const PS_20 = '20'
 export const PS_25 = '25'
 
-const PAGE_SIZES = [
+const pageSizes = [
     { value: PS_5, label: '5' },
     { value: PS_10, label: '10' },
     { value: PS_15, label: '15' },
@@ -12,4 +12,4 @@ const PAGE_SIZES = [
     { value: PS_25, label: '25' },
 ]
 
-export default PAGE_SIZES
+export default pageSizes

@@ -6,7 +6,7 @@ export const USERS = 'USERS'
 export const TOP_FAVORITES = 'TOP_FAVORITES'
 export const DATA_VALUES = 'DATA_VALUES'
 
-const CATEGORIES = [
+const categories = [
     {
         value: FAVORITE_VIEWS,
         label: i18n.t('Favorite views'),
@@ -33,4 +33,4 @@ const CATEGORIES = [
     },
 ]
 
-export default CATEGORIES
+export default categories

@@ -5,10 +5,16 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"POT-Creation-Date: 2020-05-28T08:21:23.706Z\n"
-"PO-Revision-Date: 2020-05-28T08:21:23.706Z\n"
+"POT-Creation-Date: 2020-10-20T14:44:32.060Z\n"
+"PO-Revision-Date: 2020-10-20T14:44:32.060Z\n"
+
+msgid "Usage Analytics"
+msgstr ""
 
 msgid "Values"
+msgstr ""
+
+msgid "Category"
 msgstr ""
 
 msgid "Please use the format yyyy-mm-dd"
@@ -29,9 +35,6 @@ msgstr ""
 msgid "End Date"
 msgstr ""
 
-msgid "Category"
-msgstr ""
-
 msgid "Interval"
 msgstr ""
 
@@ -50,13 +53,7 @@ msgstr ""
 msgid "Sort Order"
 msgstr ""
 
-msgid "Usage Analytics"
-msgstr ""
-
 msgid "There was an error retrieving the usage analytics data"
-msgstr ""
-
-msgid "Error loading application."
 msgstr ""
 
 msgid "Sum"
