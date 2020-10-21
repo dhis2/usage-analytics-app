@@ -5,28 +5,19 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"POT-Creation-Date: 2020-10-20T14:44:32.060Z\n"
-"PO-Revision-Date: 2020-10-20T14:44:32.060Z\n"
+"POT-Creation-Date: 2020-10-21T08:15:15.342Z\n"
+"PO-Revision-Date: 2020-10-21T08:15:15.342Z\n"
 
 msgid "Usage Analytics"
 msgstr ""
 
-msgid "Values"
+msgid "Aggregation level"
 msgstr ""
 
 msgid "Category"
 msgstr ""
 
-msgid "Please use the format yyyy-mm-dd"
-msgstr ""
-
-msgid "Please fill in both dates"
-msgstr ""
-
-msgid "End date is before start date"
-msgstr ""
-
-msgid "Start date is after end date"
+msgid "Chart type"
 msgstr ""
 
 msgid "Start Date"
@@ -35,25 +26,16 @@ msgstr ""
 msgid "End Date"
 msgstr ""
 
+msgid "Event type"
+msgstr ""
+
 msgid "Interval"
 msgstr ""
 
-msgid "Aggregation Level"
+msgid "Page size"
 msgstr ""
 
-msgid "Chart Type"
-msgstr ""
-
-msgid "Event Type"
-msgstr ""
-
-msgid "Page Size"
-msgstr ""
-
-msgid "Sort Order"
-msgstr ""
-
-msgid "There was an error retrieving the usage analytics data"
+msgid "Sort order"
 msgstr ""
 
 msgid "Sum"
@@ -126,84 +108,6 @@ msgid "Month"
 msgstr ""
 
 msgid "Year"
-msgstr ""
-
-msgid "Date"
-msgstr ""
-
-msgid "Pivot Table"
-msgstr ""
-
-msgid "Event Report"
-msgstr ""
-
-msgid "Event Chart"
-msgstr ""
-
-msgid "Data Set Report"
-msgstr ""
-
-msgid "Average Map"
-msgstr ""
-
-msgid "Average Chart"
-msgstr ""
-
-msgid "Average Pivot Table"
-msgstr ""
-
-msgid "Average Event Report"
-msgstr ""
-
-msgid "Average Event Chart"
-msgstr ""
-
-msgid "Average Dashboard"
-msgstr ""
-
-msgid "Maps"
-msgstr ""
-
-msgid "Charts"
-msgstr ""
-
-msgid "Pivot Tables"
-msgstr ""
-
-msgid "Event Reports"
-msgstr ""
-
-msgid "Event Charts"
-msgstr ""
-
-msgid "Dashboards"
-msgstr ""
-
-msgid "Indicators"
-msgstr ""
-
-msgid "Active Users"
-msgstr ""
-
-msgid "Total Users"
-msgstr ""
-
-msgid "Position"
-msgstr ""
-
-msgid "Name"
-msgstr ""
-
-msgid "Views"
-msgstr ""
-
-msgid "ID"
-msgstr ""
-
-msgid "Created"
-msgstr ""
-
-msgid "Data Values"
 msgstr ""
 
 msgid "Ascending"

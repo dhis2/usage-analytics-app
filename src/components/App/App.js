@@ -9,8 +9,6 @@ import {
     PageSizeField,
     SortOrderField,
 } from '../Filters'
-// import Chart from '../Chart'
-// import Table from '../Table'
 import { FAVORITE_VIEWS, TOP_FAVORITES } from '../../constants/categories.js'
 import { WEEK } from '../../constants/intervals.js'
 import { SUM } from '../../constants/aggregations.js'
@@ -19,6 +17,8 @@ import { CHART_VIEW } from '../../constants/eventTypes.js'
 import { PS_25 } from '../../constants/pageSizes.js'
 import { ASC } from '../../constants/sortOrders.js'
 import { LayoutContainer, LayoutSidebar, LayoutContent } from '../Layout'
+import Chart from '../Chart'
+import Table from '../Table'
 import AppTitle from '../AppTitle'
 import './App.css'
 
@@ -86,10 +86,8 @@ const App = () => {
                 )}
             </LayoutSidebar>
             <LayoutContent>
-                {/* <section className={styles.child}> */}
-                {/*     <Chart /> */}
-                {/*     <Table /> */}
-                {/* </section> */}
+                <Chart />
+                <Table />
             </LayoutContent>
         </LayoutContainer>
     )
