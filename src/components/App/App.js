@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import moment from 'moment'
 import {
     CategoryField,
     DateRangeField,
@@ -24,9 +25,17 @@ import { TopFavoritesQuery, DataStatisticsQuery } from '../Query'
 import './App.css'
 
 const App = () => {
+    // Create initial start and end dates
+    const format = 'YYYY-MM-DD'
+    const initialStartDate = moment()
+        .subtract(4, 'months')
+        .format(format)
+    const initialEndDate = moment().format(format)
+
+    // State
     const [category, setCategory] = useState(FAVORITE_VIEWS)
-    const [startDate, setStartDate] = useState('2015-01-01')
-    const [endDate, setEndDate] = useState('2020-01-01')
+    const [startDate, setStartDate] = useState(initialStartDate)
+    const [endDate, setEndDate] = useState(initialEndDate)
     const [interval, setInterval] = useState(WEEK)
     const [aggregation, setAggregation] = useState(SUM)
     const [chartType, setChartType] = useState(ALL)
@@ -34,6 +43,7 @@ const App = () => {
     const [pageSize, setPageSize] = useState(PS_25)
     const [sortOrder, setSortOrder] = useState(ASC)
 
+    // Category checks
     const isTopFavorites = category === TOP_FAVORITES
     const isFavoriteViews = category === FAVORITE_VIEWS
 
