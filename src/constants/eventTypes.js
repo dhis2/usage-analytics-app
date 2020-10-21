@@ -8,7 +8,7 @@ export const EVENT_CHART_VIEW = 'EVENT_CHART_VIEW'
 export const DASHBOARD_VIEW = 'DASHBOARD_VIEW'
 export const DATA_SET_REPORT_VIEW = 'DATA_SET_REPORT_VIEW'
 
-const EVENT_TYPES = [
+const eventTypes = [
     { value: CHART_VIEW, label: i18n.t('Chart') },
     { value: MAP_VIEW, label: i18n.t('Map') },
     {
@@ -30,4 +30,4 @@ const EVENT_TYPES = [
     },
 ]
 
-export default EVENT_TYPES
+export default eventTypes

@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`get rejects with the expected error message if baseUrl is not specified 1`] = `[Error: A baseUrl must be passed]`;
-
-exports[`get rejects with the expected error message if fetch resolves but the response is not ok 1`] = `[Error: The response is not ok]`;
-
-exports[`get rejects with the expected error message if path is not specified 1`] = `[Error: A path must be passed]`;
-
-exports[`getJSON rejects with the expected error message if the json is not ok 1`] = `[Error: The JSON is not ok]`;
