@@ -8,7 +8,7 @@ import {
     EventTypeField,
     PageSizeField,
     SortOrderField,
-} from '../Filters'
+} from '../Filter'
 import { FAVORITE_VIEWS, TOP_FAVORITES } from '../../constants/categories.js'
 import { WEEK } from '../../constants/intervals.js'
 import { SUM } from '../../constants/aggregations.js'
@@ -20,12 +20,13 @@ import { LayoutContainer, LayoutSidebar, LayoutContent } from '../Layout'
 import Chart from '../Chart'
 import Table from '../Table'
 import AppTitle from '../AppTitle'
+import { TopFavoritesQuery, DataStatisticsQuery } from '../Query'
 import './App.css'
 
 const App = () => {
     const [category, setCategory] = useState(FAVORITE_VIEWS)
-    const [startDate, setStartDate] = useState('')
-    const [endDate, setEndDate] = useState('')
+    const [startDate, setStartDate] = useState('2015-01-01')
+    const [endDate, setEndDate] = useState('2020-01-01')
     const [interval, setInterval] = useState(WEEK)
     const [aggregation, setAggregation] = useState(SUM)
     const [chartType, setChartType] = useState(ALL)
@@ -33,16 +34,15 @@ const App = () => {
     const [pageSize, setPageSize] = useState(PS_25)
     const [sortOrder, setSortOrder] = useState(ASC)
 
-    const showDateFields = category !== TOP_FAVORITES
-    const showFavoriteViewsFields = category === FAVORITE_VIEWS
-    const showTopFavoritesFields = category === TOP_FAVORITES
+    const isTopFavorites = category === TOP_FAVORITES
+    const isFavoriteViews = category === FAVORITE_VIEWS
 
     return (
         <LayoutContainer>
             <LayoutSidebar>
                 <AppTitle />
                 <CategoryField category={category} setCategory={setCategory} />
-                {showDateFields && (
+                {!isTopFavorites && (
                     <React.Fragment>
                         <DateRangeField
                             startDate={startDate}
@@ -56,7 +56,7 @@ const App = () => {
                         />
                     </React.Fragment>
                 )}
-                {showFavoriteViewsFields && (
+                {isFavoriteViews && (
                     <React.Fragment>
                         <AggregationField
                             aggregation={aggregation}
@@ -68,7 +68,7 @@ const App = () => {
                         />
                     </React.Fragment>
                 )}
-                {showTopFavoritesFields && (
+                {isTopFavorites && (
                     <React.Fragment>
                         <EventTypeField
                             eventType={eventType}
@@ -86,6 +86,23 @@ const App = () => {
                 )}
             </LayoutSidebar>
             <LayoutContent>
+                {isTopFavorites ? (
+                    <TopFavoritesQuery
+                        eventType={eventType}
+                        pageSize={pageSize}
+                        sortOrder={sortOrder}
+                    >
+                        {data => <pre>{JSON.stringify(data, null, 2)}</pre>}
+                    </TopFavoritesQuery>
+                ) : (
+                    <DataStatisticsQuery
+                        startDate={startDate}
+                        endDate={endDate}
+                        interval={interval}
+                    >
+                        {data => <pre>{JSON.stringify(data, null, 2)}</pre>}
+                    </DataStatisticsQuery>
+                )}
                 <Chart />
                 <Table />
             </LayoutContent>
