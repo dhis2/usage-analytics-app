@@ -13,7 +13,15 @@ const query = {
     },
 }
 
-const DataStatisticsQuery = ({ startDate, endDate, interval, children }) => {
+const DataStatisticsQuery = ({
+    startDate,
+    endDate,
+    interval,
+    stale,
+    setStale,
+    children,
+}) => {
+    const onDone = () => setStale(false)
     const { loading, error, data, called, refetch } = useDataQuery(query, {
         lazy: true,
         variables: {
@@ -21,13 +29,15 @@ const DataStatisticsQuery = ({ startDate, endDate, interval, children }) => {
             endDate,
             interval,
         },
+        onComplete: onDone,
+        onError: onDone,
     })
 
     useEffect(() => {
         refetch({ startDate, endDate, interval })
     }, [startDate, endDate, interval])
 
-    if (!called || loading) {
+    if (!called || loading || stale) {
         return <div>Loading</div>
     }
 
@@ -42,6 +52,8 @@ DataStatisticsQuery.propTypes = {
     children: PropTypes.func.isRequired,
     endDate: PropTypes.string.isRequired,
     interval: PropTypes.string.isRequired,
+    setStale: PropTypes.func.isRequired,
+    stale: PropTypes.bool.isRequired,
     startDate: PropTypes.string.isRequired,
 }
 
