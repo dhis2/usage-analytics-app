@@ -1,15 +1,4 @@
 import React, { useState } from 'react'
-import moment from 'moment'
-import {
-    CategoryField,
-    DateRangeField,
-    IntervalField,
-    AggregationField,
-    ChartTypeField,
-    EventTypeField,
-    PageSizeField,
-    SortOrderField,
-} from '../Filter'
 import { FAVORITE_VIEWS, TOP_FAVORITES } from '../../constants/categories.js'
 import { WEEK } from '../../constants/intervals.js'
 import { SUM } from '../../constants/aggregations.js'
@@ -17,20 +6,17 @@ import { ALL } from '../../constants/chartTypes.js'
 import { CHART_VIEW } from '../../constants/eventTypes.js'
 import { PS_25 } from '../../constants/pageSizes.js'
 import { ASC } from '../../constants/sortOrders.js'
+import FilterFields from '../FilterFields'
 import { LayoutContainer, LayoutSidebar, LayoutContent } from '../Layout'
-import Chart from '../Chart'
-import Table from '../Table'
+import CategoryField from '../CategoryField'
 import AppTitle from '../AppTitle'
-import { TopFavoritesQuery, DataStatisticsQuery } from '../Query'
+import { LocaleStore } from '../Locale'
+import Visualization from '../Visualization'
 import './App.css'
+import createDefaultDates from './createDefaultDates.js'
 
 const App = () => {
-    // Create initial start and end dates
-    const format = 'YYYY-MM-DD'
-    const initialStartDate = moment()
-        .subtract(4, 'months')
-        .format(format)
-    const initialEndDate = moment().format(format)
+    const { initialStartDate, initialEndDate } = createDefaultDates()
 
     // State
     const [category, setCategory] = useState(FAVORITE_VIEWS)
@@ -43,78 +29,59 @@ const App = () => {
     const [pageSize, setPageSize] = useState(PS_25)
     const [sortOrder, setSortOrder] = useState(ASC)
 
-    // Category checks
+    /**
+     * The rendering of the different intervals in the DataValuesTable
+     * depends on the props and the data being in sync. To prevent stale
+     * props from being used we're marking the props as stale on changes.
+     */
+    const [stale, setStale] = useState(false)
+    const setStaleAndInterval = interval => {
+        setStale(true)
+        setInterval(interval)
+    }
+
     const isTopFavorites = category === TOP_FAVORITES
-    const isFavoriteViews = category === FAVORITE_VIEWS
 
     return (
         <LayoutContainer>
             <LayoutSidebar>
                 <AppTitle />
                 <CategoryField category={category} setCategory={setCategory} />
-                {!isTopFavorites && (
-                    <React.Fragment>
-                        <DateRangeField
-                            startDate={startDate}
-                            setStartDate={setStartDate}
-                            endDate={endDate}
-                            setEndDate={setEndDate}
-                        />
-                        <IntervalField
-                            interval={interval}
-                            setInterval={setInterval}
-                        />
-                    </React.Fragment>
-                )}
-                {isFavoriteViews && (
-                    <React.Fragment>
-                        <AggregationField
-                            aggregation={aggregation}
-                            setAggregation={setAggregation}
-                        />
-                        <ChartTypeField
-                            chartType={chartType}
-                            setChartType={setChartType}
-                        />
-                    </React.Fragment>
-                )}
-                {isTopFavorites && (
-                    <React.Fragment>
-                        <EventTypeField
-                            eventType={eventType}
-                            setEventType={setEventType}
-                        />
-                        <PageSizeField
-                            pageSize={pageSize}
-                            setPageSize={setPageSize}
-                        />
-                        <SortOrderField
-                            sortOrder={sortOrder}
-                            setSortOrder={setSortOrder}
-                        />
-                    </React.Fragment>
-                )}
+                <FilterFields
+                    category={category}
+                    startDate={startDate}
+                    setStartDate={setStartDate}
+                    endDate={endDate}
+                    setEndDate={setEndDate}
+                    interval={interval}
+                    setInterval={setStaleAndInterval}
+                    aggregation={aggregation}
+                    setAggregation={setAggregation}
+                    chartType={chartType}
+                    setChartType={setChartType}
+                    eventType={eventType}
+                    setEventType={setEventType}
+                    pageSize={pageSize}
+                    setPageSize={setPageSize}
+                    sortOrder={sortOrder}
+                    setSortOrder={setSortOrder}
+                />
             </LayoutSidebar>
             <LayoutContent>
-                {isTopFavorites ? (
-                    <TopFavoritesQuery
+                <LocaleStore>
+                    <Visualization
+                        isTopFavorites={isTopFavorites}
+                        category={category}
                         eventType={eventType}
                         pageSize={pageSize}
                         sortOrder={sortOrder}
-                    >
-                        {data => <pre>{JSON.stringify(data, null, 2)}</pre>}
-                    </TopFavoritesQuery>
-                ) : (
-                    <DataStatisticsQuery
                         startDate={startDate}
                         endDate={endDate}
                         interval={interval}
-                    >
-                        {data => <pre>{JSON.stringify(data, null, 2)}</pre>}
-                    </DataStatisticsQuery>
-                )}
-                <Chart />
-                <Table />
+                        stale={stale}
+                        setStale={setStale}
+                    />
+                </LocaleStore>
             </LayoutContent>
         </LayoutContainer>
     )

@@ -5,16 +5,16 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"POT-Creation-Date: 2020-10-21T08:15:15.342Z\n"
-"PO-Revision-Date: 2020-10-21T08:15:15.342Z\n"
+"POT-Creation-Date: 2020-11-05T09:21:49.887Z\n"
+"PO-Revision-Date: 2020-11-05T09:21:49.887Z\n"
 
 msgid "Usage Analytics"
 msgstr ""
 
-msgid "Aggregation level"
+msgid "Category"
 msgstr ""
 
-msgid "Category"
+msgid "Aggregation level"
 msgstr ""
 
 msgid "Chart type"
@@ -36,6 +36,9 @@ msgid "Page size"
 msgstr ""
 
 msgid "Sort order"
+msgstr ""
+
+msgid "Week"
 msgstr ""
 
 msgid "Sum"
@@ -99,9 +102,6 @@ msgid "Data set report"
 msgstr ""
 
 msgid "Day"
-msgstr ""
-
-msgid "Week"
 msgstr ""
 
 msgid "Month"
