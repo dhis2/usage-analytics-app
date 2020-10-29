@@ -1,3 +1,4 @@
+/* eslint-disable import/namespace,no-import-assign */
 import * as get from './get'
 import api from './index'
 import { TOP_FAVORITES } from '../constants/categories'
