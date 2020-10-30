@@ -14,7 +14,7 @@
         "@dhis2/prop-types": "^1.6.4",
         "chart.js": "^2.9.1",
         "lodash.debounce": "^4.0.8",
-        "react-app-polyfill": "^1.0.6",
+        "react-app-polyfill": "^2.0.0",
         "react-chartjs-2": "^2.9.0",
         "react-redux": "^7.2.0",
         "redux": "^4.0.5",
