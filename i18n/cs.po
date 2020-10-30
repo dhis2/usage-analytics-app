@@ -208,7 +208,7 @@ msgid "Views"
 msgstr ""
 
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 msgid "Created"
 msgstr ""
