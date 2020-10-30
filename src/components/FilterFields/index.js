@@ -49,7 +49,7 @@ export const SortOrderDropDown = connect(
 )(DropDowns.SortOrder)
 
 export function createValueGetterForFilterKey(key) {
-    return function(state) {
+    return function (state) {
         return {
             label: key,
             value: state.filter[key],
@@ -58,7 +58,7 @@ export function createValueGetterForFilterKey(key) {
 }
 
 function createFilterUpdater(updaterFn, filterKey) {
-    return function({ selected }) {
+    return function ({ selected }) {
         return updaterFn(filterKey, selected)
     }
 }
