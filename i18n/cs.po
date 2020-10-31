@@ -136,7 +136,7 @@ msgid "Month"
 msgstr ""
 
 msgid "Year"
-msgstr ""
+msgstr "Rok"
 
 msgid "Date"
 msgstr "datum"
@@ -190,7 +190,7 @@ msgid "Dashboards"
 msgstr ""
 
 msgid "Indicators"
-msgstr ""
+msgstr "Indikátory"
 
 msgid "Active Users"
 msgstr ""
