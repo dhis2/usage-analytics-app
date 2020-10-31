@@ -100,7 +100,7 @@ msgid "Number of data values saved in the system"
 msgstr ""
 
 msgid "All"
-msgstr ""
+msgstr "Vše"
 
 msgid "Total"
 msgstr ""
