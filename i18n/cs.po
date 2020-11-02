@@ -121,7 +121,7 @@ msgid "Event chart"
 msgstr ""
 
 msgid "Dashboard"
-msgstr ""
+msgstr "Ovládací panel"
 
 msgid "Data set report"
 msgstr ""
