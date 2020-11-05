@@ -10,7 +10,6 @@ import FilterFields from '../FilterFields'
 import { LayoutContainer, LayoutSidebar, LayoutContent } from '../Layout'
 import CategoryField from '../CategoryField'
 import AppTitle from '../AppTitle'
-import { LocaleStore } from '../Locale'
 import Visualization from '../Visualization'
 import './App.css'
 import createDefaultDates from './createDefaultDates.js'
@@ -68,20 +67,18 @@ const App = () => {
                 />
             </LayoutSidebar>
             <LayoutContent>
-                <LocaleStore>
-                    <Visualization
-                        isTopFavorites={isTopFavorites}
-                        category={category}
-                        eventType={eventType}
-                        pageSize={pageSize}
-                        sortOrder={sortOrder}
-                        startDate={startDate}
-                        endDate={endDate}
-                        interval={interval}
-                        stale={stale}
-                        setStale={setStale}
-                    />
-                </LocaleStore>
+                <Visualization
+                    isTopFavorites={isTopFavorites}
+                    category={category}
+                    eventType={eventType}
+                    pageSize={pageSize}
+                    sortOrder={sortOrder}
+                    startDate={startDate}
+                    endDate={endDate}
+                    interval={interval}
+                    stale={stale}
+                    setStale={setStale}
+                />
             </LayoutContent>
         </LayoutContainer>
     )
