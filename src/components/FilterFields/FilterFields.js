@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from '@dhis2/prop-types'
 import { FAVORITE_VIEWS, TOP_FAVORITES } from '../../constants/categories.js'
 import DateRangeField from './DateRangeField.js'
 import IntervalField from './IntervalField.js'
@@ -77,6 +78,26 @@ const FilterFields = ({
             )}
         </React.Fragment>
     )
+}
+
+FilterFields.propTypes = {
+    aggregation: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
+    chartType: PropTypes.string.isRequired,
+    endDate: PropTypes.string.isRequired,
+    eventType: PropTypes.string.isRequired,
+    interval: PropTypes.string.isRequired,
+    pageSize: PropTypes.string.isRequired,
+    setAggregation: PropTypes.func.isRequired,
+    setChartType: PropTypes.func.isRequired,
+    setEndDate: PropTypes.func.isRequired,
+    setEventType: PropTypes.func.isRequired,
+    setInterval: PropTypes.func.isRequired,
+    setPageSize: PropTypes.func.isRequired,
+    setSortOrder: PropTypes.func.isRequired,
+    setStartDate: PropTypes.func.isRequired,
+    sortOrder: PropTypes.string.isRequired,
+    startDate: PropTypes.string.isRequired,
 }
 
 export default FilterFields
