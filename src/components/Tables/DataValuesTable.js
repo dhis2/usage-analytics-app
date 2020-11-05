@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import PropTypes from '@dhis2/prop-types'
+import i18n from '@dhis2/d2-i18n'
 import {
     Table,
     TableHead,
@@ -9,7 +10,7 @@ import {
     TableCellHead,
     TableBody,
 } from '@dhis2/ui'
-import { getDisplayDateForInterval } from './selectors.js'
+import { getDisplayDateForInterval } from '../../utils/date.js'
 import { LocaleContext } from '../Locale'
 
 const DataValuesTable = ({ data, interval }) => {
@@ -19,8 +20,8 @@ const DataValuesTable = ({ data, interval }) => {
         <Table>
             <TableHead>
                 <TableRowHead>
-                    <TableCellHead>Date</TableCellHead>
-                    <TableCellHead>Data Values</TableCellHead>
+                    <TableCellHead>{i18n.t('Date')}</TableCellHead>
+                    <TableCellHead>{i18n.t('Data Values')}</TableCellHead>
                 </TableRowHead>
             </TableHead>
             <TableBody>
