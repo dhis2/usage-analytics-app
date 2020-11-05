@@ -47,37 +47,39 @@ const App = () => {
                 <AppTitle />
                 <CategoryField category={category} setCategory={setCategory} />
                 <FilterFields
-                    category={category}
-                    startDate={startDate}
-                    setStartDate={setStartDate}
-                    endDate={endDate}
-                    setEndDate={setEndDate}
-                    interval={interval}
-                    setInterval={setStaleAndInterval}
                     aggregation={aggregation}
-                    setAggregation={setAggregation}
+                    category={category}
                     chartType={chartType}
-                    setChartType={setChartType}
+                    endDate={endDate}
                     eventType={eventType}
-                    setEventType={setEventType}
+                    interval={interval}
                     pageSize={pageSize}
+                    setAggregation={setAggregation}
+                    setChartType={setChartType}
+                    setEndDate={setEndDate}
+                    setEventType={setEventType}
+                    setInterval={setStaleAndInterval}
                     setPageSize={setPageSize}
-                    sortOrder={sortOrder}
                     setSortOrder={setSortOrder}
+                    setStartDate={setStartDate}
+                    sortOrder={sortOrder}
+                    startDate={startDate}
                 />
             </LayoutSidebar>
             <LayoutContent>
                 <Visualization
-                    isTopFavorites={isTopFavorites}
+                    aggregation={aggregation}
                     category={category}
-                    eventType={eventType}
-                    pageSize={pageSize}
-                    sortOrder={sortOrder}
-                    startDate={startDate}
+                    chartType={chartType}
                     endDate={endDate}
+                    eventType={eventType}
                     interval={interval}
-                    stale={stale}
+                    isTopFavorites={isTopFavorites}
+                    pageSize={pageSize}
                     setStale={setStale}
+                    sortOrder={sortOrder}
+                    stale={stale}
+                    startDate={startDate}
                 />
             </LayoutContent>
         </LayoutContainer>
