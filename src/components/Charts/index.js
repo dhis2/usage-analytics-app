@@ -1,1 +1,3 @@
-export { default } from './Chart'
+import DataValuesChart from './DataValuesChart.js'
+
+export { DataValuesChart }
