@@ -1,7 +1,5 @@
 import i18n from '@dhis2/d2-i18n'
-import { YEAR, MONTH, WEEK, DAY } from '../../constants/intervals.js'
-
-const weekStr = i18n.t('Week')
+import { YEAR, MONTH, WEEK, DAY } from '../constants/intervals.js'
 
 export const getDisplayDateForInterval = (
     { year, month, week, day },
@@ -14,9 +12,8 @@ export const getDisplayDateForInterval = (
         case MONTH:
             return getDisplayDateFromYearMonthDay({ year, month }, locale)
         case WEEK:
-            return `${weekStr} ${week} / ${year}`
+            return `${i18n.t('Week')} ${week} / ${year}`
         case DAY:
-        default:
             return getDisplayDateFromYearMonthDay({ year, month, day }, locale)
     }
 }
