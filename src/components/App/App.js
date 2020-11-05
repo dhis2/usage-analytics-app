@@ -32,7 +32,7 @@ const App = () => {
     /**
      * The rendering of the different intervals in the DataValuesTable
      * depends on the props and the data being in sync. To prevent stale
-     * props from being used we're marking the props as stale on changes.
+     * props from being used we're tracking the stale status of interval.
      */
     const [stale, setStale] = useState(false)
     const setStaleAndInterval = interval => {
