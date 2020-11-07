@@ -67,10 +67,10 @@ msgid "Error loading application."
 msgstr ""
 
 msgid "Sum"
-msgstr ""
+msgstr "Součet"
 
 msgid "Average"
-msgstr ""
+msgstr "Průměr"
 
 msgid "Favorite views"
 msgstr ""
