@@ -211,7 +211,7 @@ msgid "ID"
 msgstr "ID"
 
 msgid "Created"
-msgstr ""
+msgstr "Vytvořeno"
 
 msgid "Data Values"
 msgstr ""
