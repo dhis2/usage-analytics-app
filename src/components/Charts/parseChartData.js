@@ -1,7 +1,16 @@
 import { CHART_FIELDS as FIELDS } from './fields.js'
 import { FAVORITE_VIEWS } from '../../constants/categories'
 import { formatIntervalDate } from '../../utils/date.js'
-import * as config from './config'
+
+const colors = [
+    '#7cb5ec',
+    '#CC6600',
+    '#CCCC00',
+    '#66CC00',
+    '#ff0066',
+    '#000000',
+    '#00CCCC',
+]
 
 export default function parseChartData({
     aggregation,
@@ -32,10 +41,9 @@ export default function parseChartData({
 
             if (dataPointIndex === 0) {
                 datasets.push({
-                    ...config.dataSet,
                     label: field.label,
                     data: [],
-                    borderColor: config.colors[fieldIndex],
+                    borderColor: colors[fieldIndex],
                 })
             }
 
@@ -46,10 +54,7 @@ export default function parseChartData({
     }
 
     return {
-        data: {
-            labels,
-            datasets,
-        },
-        options: config.options,
+        labels,
+        datasets,
     }
 }
