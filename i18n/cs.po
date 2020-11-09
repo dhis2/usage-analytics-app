@@ -103,10 +103,10 @@ msgid "All"
 msgstr "Vše"
 
 msgid "Total"
-msgstr ""
+msgstr "Celkem"
 
 msgid "Chart"
-msgstr ""
+msgstr "Schéma"
 
 msgid "Map"
 msgstr ""
@@ -151,7 +151,7 @@ msgid "Event Chart"
 msgstr ""
 
 msgid "Data Set Report"
-msgstr ""
+msgstr "Zpráva o souboru dat"
 
 msgid "Average Map"
 msgstr ""
@@ -172,7 +172,7 @@ msgid "Average Dashboard"
 msgstr ""
 
 msgid "Maps"
-msgstr ""
+msgstr "Mapy"
 
 msgid "Charts"
 msgstr ""
