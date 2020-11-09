@@ -11,31 +11,34 @@ import {
     TableBody,
 } from '@dhis2/ui'
 import { formatIntervalDate } from '../../utils/date.js'
+import TableWrapper from './TableWrapper.js'
 
 const DataValuesTable = ({ data, interval }) => (
-    <Table>
-        <TableHead>
-            <TableRowHead>
-                <TableCellHead>{i18n.t('Date')}</TableCellHead>
-                <TableCellHead>{i18n.t('Data Values')}</TableCellHead>
-            </TableRowHead>
-        </TableHead>
-        <TableBody>
-            {data.map(({ year, month, week, day, savedDataValues }) => {
-                const formatted = formatIntervalDate(
-                    { year, month, week, day },
-                    interval
-                )
+    <TableWrapper>
+        <Table>
+            <TableHead>
+                <TableRowHead>
+                    <TableCellHead>{i18n.t('Date')}</TableCellHead>
+                    <TableCellHead>{i18n.t('Data Values')}</TableCellHead>
+                </TableRowHead>
+            </TableHead>
+            <TableBody>
+                {data.map(({ year, month, week, day, savedDataValues }) => {
+                    const formatted = formatIntervalDate(
+                        { year, month, week, day },
+                        interval
+                    )
 
-                return (
-                    <TableRow key={formatted}>
-                        <TableCell>{formatted}</TableCell>
-                        <TableCell>{savedDataValues}</TableCell>
-                    </TableRow>
-                )
-            })}
-        </TableBody>
-    </Table>
+                    return (
+                        <TableRow key={formatted}>
+                            <TableCell>{formatted}</TableCell>
+                            <TableCell>{savedDataValues}</TableCell>
+                        </TableRow>
+                    )
+                })}
+            </TableBody>
+        </Table>
+    </TableWrapper>
 )
 
 DataValuesTable.propTypes = {
