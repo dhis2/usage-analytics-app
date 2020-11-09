@@ -24,15 +24,10 @@
 /**
  * chart.js canvas needs a dedicated wrapper to have a responsive size
  * https://www.chartjs.org/docs/latest/general/responsive.html#important-note
- *
- * The 99% width forces the width to be recalculated on horizontal viewport
- * resize and will make chart.js adapt to the new width. If left at 100% the
- * wrapper will never shrink.
  */
 
 .chartContainer {
     position: relative;
     flex: 1;
     overflow: hidden;
-    width: 99%;
 }
