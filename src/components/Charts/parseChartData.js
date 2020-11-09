@@ -1,5 +1,5 @@
 import { CHART_FIELDS as FIELDS } from './fields.js'
-import CATEGORIES, { FAVORITE_VIEWS } from '../../constants/categories'
+import { FAVORITE_VIEWS } from '../../constants/categories'
 import { formatIntervalDate } from '../../utils/date.js'
 import * as config from './config'
 
@@ -15,7 +15,6 @@ export default function parseChartData({
 }) {
     const labels = []
     const datasets = []
-    const selectedCategory = CATEGORIES.find(c => c.value === category)
     let max = MIN_SUGGESTED_MAX_VALUE
     let min = null
     const fields =
@@ -70,8 +69,6 @@ export default function parseChartData({
             datasets,
         },
         options: config.options,
-        title: selectedCategory.label,
-        subtitle: selectedCategory.subtitle,
     }
 }
 
