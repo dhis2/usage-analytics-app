@@ -3,6 +3,7 @@ import PropTypes from '@dhis2/prop-types'
 import parseChartData from './parseChartData.js'
 import { Line } from 'react-chartjs-2'
 import ChartWrapper from './ChartWrapper.js'
+import { getTitles } from './selectors.js'
 
 const DataValuesChart = ({
     data,
@@ -11,6 +12,7 @@ const DataValuesChart = ({
     chartType,
     interval,
 }) => {
+    const { title, subtitle } = getTitles(category)
     const parsed = parseChartData({
         aggregation,
         category,
@@ -18,7 +20,7 @@ const DataValuesChart = ({
         interval,
         data,
     })
-    const { options, data: lineData, title, subtitle } = parsed
+    const { options, data: lineData } = parsed
 
     return (
         <ChartWrapper title={title} subtitle={subtitle}>
