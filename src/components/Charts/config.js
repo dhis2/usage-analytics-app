@@ -10,6 +10,8 @@ export const colors = [
     '#00CCCC',
 ]
 
+// https://www.chartjs.org/docs/latest/configuration/
+
 export const options = {
     animation: {
         duration: 180,
@@ -17,34 +19,13 @@ export const options = {
     legend: {
         position: 'bottom',
     },
-    responsive: true,
     maintainAspectRatio: false,
-    tooltips: {
-        mode: 'nearest',
-    },
     scales: {
-        xAxes: [
-            {
-                display: true,
-                scaleLabel: {
-                    display: true,
-                },
-                ticks: {
-                    maxRotation: 45,
-                    minRotation: 45,
-                },
-            },
-        ],
         yAxes: [
             {
-                display: true,
                 scaleLabel: {
                     display: true,
                     labelString: i18n.t('Values'),
-                },
-                ticks: {
-                    suggestedMin: 0,
-                    precision: 0,
                 },
             },
         ],
