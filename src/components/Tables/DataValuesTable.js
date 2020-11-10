@@ -10,7 +10,7 @@ import {
     TableCellHead,
     TableBody,
 } from '@dhis2/ui'
-import { formatIntervalDate } from '../../utils/date.js'
+import { getIntervalDate } from '../../selectors/date.js'
 import TableWrapper from './TableWrapper.js'
 
 const DataValuesTable = ({ data, interval }) => (
@@ -24,14 +24,14 @@ const DataValuesTable = ({ data, interval }) => (
             </TableHead>
             <TableBody>
                 {data.map(({ year, month, week, day, savedDataValues }) => {
-                    const formatted = formatIntervalDate(
+                    const intervalDate = getIntervalDate(
                         { year, month, week, day },
                         interval
                     )
 
                     return (
-                        <TableRow key={formatted}>
-                            <TableCell>{formatted}</TableCell>
+                        <TableRow key={intervalDate}>
+                            <TableCell>{intervalDate}</TableCell>
                             <TableCell>{savedDataValues}</TableCell>
                         </TableRow>
                     )
