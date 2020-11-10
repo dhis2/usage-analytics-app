@@ -3,10 +3,10 @@ import moment from 'moment'
 import { YEAR, MONTH, WEEK, DAY } from '../constants/intervals.js'
 
 /**
- * This helpers receives 1-indexed months. But moment expects 0-indexed months,
+ * This selector receives 1-indexed months. But moment expects 0-indexed months,
  * so we subtract 1 whenever a month is provided to moment
  */
-export const formatIntervalDate = ({ year, month, week, day }, interval) => {
+export const getIntervalDate = ({ year, month, week, day }, interval) => {
     switch (interval) {
         case YEAR: {
             return moment({ year }).format('YYYY')
