@@ -20,7 +20,7 @@ const ChartWrapper = ({ children, title, subtitle }) => (
 )
 
 ChartWrapper.propTypes = {
-    children: PropTypes.string,
+    children: PropTypes.node,
     subtitle: PropTypes.string,
     title: PropTypes.string,
 }

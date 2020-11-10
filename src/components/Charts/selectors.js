@@ -1,4 +1,6 @@
+import i18n from '@dhis2/d2-i18n'
 import CATEGORIES from '../../constants/categories'
+import { formatIntervalDate } from '../../utils/date.js'
 
 export const getTitles = selected => {
     const selectedCategory = CATEGORIES.find(
@@ -10,3 +12,16 @@ export const getTitles = selected => {
         subtitle: selectedCategory.subtitle,
     }
 }
+
+export const getLabels = (data, interval) =>
+    data.map(({ year, month, week, day }) =>
+        formatIntervalDate({ year, month, week, day }, interval)
+    )
+
+export const getDataValuesDatasets = data => [
+    {
+        label: i18n.t('Data Values'),
+        data: data.map(d => d.savedDataValues),
+        borderColor: '#7cb5ec',
+    },
+]
