@@ -18,11 +18,11 @@ const DataStatisticsQuery = ({
     startDate,
     endDate,
     interval,
-    stale,
-    setStale,
+    isStale,
+    setIsStale,
     children,
 }) => {
-    const onDone = () => setStale(false)
+    const onDone = () => setIsStale(false)
     const { loading, error, data, called, refetch } = useDataQuery(query, {
         lazy: true,
         variables: {
@@ -38,7 +38,7 @@ const DataStatisticsQuery = ({
         refetch({ startDate, endDate, interval })
     }, [startDate, endDate, interval])
 
-    if (!called || loading || stale) {
+    if (!called || loading || isStale) {
         return (
             <ComponentCover>
                 <CenteredContent>
@@ -59,8 +59,8 @@ DataStatisticsQuery.propTypes = {
     children: PropTypes.func.isRequired,
     endDate: PropTypes.string.isRequired,
     interval: PropTypes.string.isRequired,
-    setStale: PropTypes.func.isRequired,
-    stale: PropTypes.bool.isRequired,
+    isStale: PropTypes.bool.isRequired,
+    setIsStale: PropTypes.func.isRequired,
     startDate: PropTypes.string.isRequired,
 }
 
