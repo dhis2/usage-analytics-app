@@ -16,55 +16,55 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
 
 msgid "Values"
-msgstr ""
+msgstr "Hodnoty"
 
 msgid "Please use the format yyyy-mm-dd"
-msgstr ""
+msgstr "Použijte formát rrrr-mm-dd"
 
 msgid "Please fill in both dates"
-msgstr ""
+msgstr "Vyplňte prosím obě data"
 
 msgid "End date is before start date"
-msgstr ""
+msgstr "Datum ukončení je před datem zahájení"
 
 msgid "Start date is after end date"
-msgstr ""
+msgstr "Datum zahájení je po datu ukončení"
 
 msgid "Start Date"
-msgstr ""
+msgstr "Datum začátku"
 
 msgid "End Date"
-msgstr ""
+msgstr "Datum ukončení"
 
 msgid "Category"
 msgstr "Kategorie"
 
 msgid "Interval"
-msgstr ""
+msgstr "Interval"
 
 msgid "Aggregation Level"
-msgstr ""
+msgstr "Úroveň agregace"
 
 msgid "Chart Type"
-msgstr ""
+msgstr "Typ grafu"
 
 msgid "Event Type"
-msgstr ""
+msgstr "Typ události"
 
 msgid "Page Size"
-msgstr ""
+msgstr "Velikost stránky"
 
 msgid "Sort Order"
-msgstr ""
+msgstr "Pořadí řazení"
 
 msgid "Usage Analytics"
-msgstr ""
+msgstr "Analýza využití"
 
 msgid "There was an error retrieving the usage analytics data"
-msgstr ""
+msgstr "Při načítání analytických dat o využití došlo k chybě"
 
 msgid "Error loading application."
-msgstr ""
+msgstr "Chyba načítání aplikace."
 
 msgid "Sum"
 msgstr "Součet"
@@ -73,31 +73,31 @@ msgid "Average"
 msgstr "Průměr"
 
 msgid "Favorite views"
-msgstr ""
+msgstr "Oblíbená zobrazení"
 
 msgid "Number of times users looked at analysis favorites"
-msgstr ""
+msgstr "Kolikrát se uživatelé podívali na oblíbené položky analýzy"
 
 msgid "Favorites saved"
-msgstr ""
+msgstr "Oblíbené položky byly uloženy"
 
 msgid "Number of analysis favorites created by users"
-msgstr ""
+msgstr "Počet oblíbených položek analýzy vytvořených uživateli"
 
 msgid "Users"
 msgstr "Uživatelé"
 
 msgid "Number of users in the system"
-msgstr ""
+msgstr "Počet uživatelů v systému"
 
 msgid "Top favorites"
-msgstr ""
+msgstr "Nejlepší oblíbené"
 
 msgid "Data values"
-msgstr ""
+msgstr "Hodnoty dat"
 
 msgid "Number of data values saved in the system"
-msgstr ""
+msgstr "Počet datových hodnot uložených v systému"
 
 msgid "All"
 msgstr "Vše"
@@ -109,31 +109,31 @@ msgid "Chart"
 msgstr "Schéma"
 
 msgid "Map"
-msgstr ""
+msgstr "Mapa"
 
 msgid "Report table"
-msgstr ""
+msgstr "Tabulka zpráv"
 
 msgid "Event report"
-msgstr ""
+msgstr "Zpráva o události"
 
 msgid "Event chart"
-msgstr ""
+msgstr "Tabulka událostí"
 
 msgid "Dashboard"
 msgstr "Ovládací panel"
 
 msgid "Data set report"
-msgstr ""
+msgstr "Zpráva o souboru dat"
 
 msgid "Day"
-msgstr ""
+msgstr "Den"
 
 msgid "Week"
-msgstr ""
+msgstr "Týden"
 
 msgid "Month"
-msgstr ""
+msgstr "Měsíc"
 
 msgid "Year"
 msgstr "Rok"
@@ -142,70 +142,70 @@ msgid "Date"
 msgstr "datum"
 
 msgid "Pivot Table"
-msgstr ""
+msgstr "Kontingenční tabulka"
 
 msgid "Event Report"
-msgstr ""
+msgstr "Zpráva o události"
 
 msgid "Event Chart"
-msgstr ""
+msgstr "Graf událostí"
 
 msgid "Data Set Report"
 msgstr "Zpráva o souboru dat"
 
 msgid "Average Map"
-msgstr ""
+msgstr "Průměrná mapa"
 
 msgid "Average Chart"
-msgstr ""
+msgstr "Průměrný graf"
 
 msgid "Average Pivot Table"
-msgstr ""
+msgstr "Průměrná kontingenční tabulka"
 
 msgid "Average Event Report"
-msgstr ""
+msgstr "Průměrná zpráva o události"
 
 msgid "Average Event Chart"
-msgstr ""
+msgstr "Průměrný graf událostí"
 
 msgid "Average Dashboard"
-msgstr ""
+msgstr "Průměrný ovládací panel"
 
 msgid "Maps"
 msgstr "Mapy"
 
 msgid "Charts"
-msgstr ""
+msgstr "Grafy"
 
 msgid "Pivot Tables"
-msgstr ""
+msgstr "Kontingenční tabulky"
 
 msgid "Event Reports"
-msgstr ""
+msgstr "Zprávy o událostech"
 
 msgid "Event Charts"
-msgstr ""
+msgstr "Grafy událostí"
 
 msgid "Dashboards"
-msgstr ""
+msgstr "Ovládací panely"
 
 msgid "Indicators"
 msgstr "Indikátory"
 
 msgid "Active Users"
-msgstr ""
+msgstr "Aktivní uživatelé"
 
 msgid "Total Users"
-msgstr ""
+msgstr "Celkem uživatelů"
 
 msgid "Position"
-msgstr ""
+msgstr "Pozice"
 
 msgid "Name"
 msgstr "Název"
 
 msgid "Views"
-msgstr ""
+msgstr "Zobrazení"
 
 msgid "ID"
 msgstr "ID"
@@ -214,10 +214,10 @@ msgid "Created"
 msgstr "Vytvořeno"
 
 msgid "Data Values"
-msgstr ""
+msgstr "Datové hodnoty"
 
 msgid "Ascending"
-msgstr ""
+msgstr "Vzestupně"
 
 msgid "Descending"
-msgstr ""
+msgstr "Klesající"
