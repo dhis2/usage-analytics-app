@@ -33,9 +33,9 @@ const App = () => {
      * depends on the props and the data being in sync. To prevent stale
      * props from being used we're tracking the stale status of interval.
      */
-    const [stale, setStale] = useState(false)
-    const setStaleAndInterval = interval => {
-        setStale(true)
+    const [isStale, setIsStale] = useState(false)
+    const setIsStaleAndInterval = interval => {
+        setIsStale(true)
         setInterval(interval)
     }
 
@@ -58,7 +58,7 @@ const App = () => {
                     setChartType={setChartType}
                     setEndDate={setEndDate}
                     setEventType={setEventType}
-                    setInterval={setStaleAndInterval}
+                    setInterval={setIsStaleAndInterval}
                     setPageSize={setPageSize}
                     setSortOrder={setSortOrder}
                     setStartDate={setStartDate}
@@ -76,9 +76,9 @@ const App = () => {
                     interval={interval}
                     isTopFavorites={isTopFavorites}
                     pageSize={pageSize}
-                    setStale={setStale}
+                    setIsStale={setIsStale}
                     sortOrder={sortOrder}
-                    stale={stale}
+                    isStale={isStale}
                     startDate={startDate}
                 />
             </LayoutContent>

@@ -14,9 +14,9 @@ const Visualization = ({
     interval,
     isTopFavorites,
     pageSize,
-    setStale,
+    setIsStale,
     sortOrder,
-    stale,
+    isStale,
     startDate,
 }) => {
     if (isTopFavorites) {
@@ -36,8 +36,8 @@ const Visualization = ({
             startDate={startDate}
             endDate={endDate}
             interval={interval}
-            setStale={setStale}
-            stale={stale}
+            setIsStale={setIsStale}
+            isStale={isStale}
         >
             {data => {
                 if (category === DATA_VALUES) {
@@ -62,9 +62,9 @@ const Visualization = ({
 }
 
 Visualization.propTypes = {
+    isStale: PropTypes.bool.isRequired,
     isTopFavorites: PropTypes.bool.isRequired,
-    setStale: PropTypes.func.isRequired,
-    stale: PropTypes.bool.isRequired,
+    setIsStale: PropTypes.func.isRequired,
     aggregation: PropTypes.string,
     category: PropTypes.string,
     chartType: PropTypes.string,
