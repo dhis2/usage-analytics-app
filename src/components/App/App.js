@@ -74,6 +74,7 @@ const App = () => {
             </LayoutSidebar>
             <LayoutContent>
                 <Visualization
+                    aggregation={aggregation}
                     category={category}
                     endDate={endDate}
                     eventType={eventType}
