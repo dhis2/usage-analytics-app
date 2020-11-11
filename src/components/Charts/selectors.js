@@ -25,3 +25,16 @@ export const getDataValuesDatasets = data => [
         borderColor: '#7cb5ec',
     },
 ]
+
+export const getUsersDatasets = data => [
+    {
+        label: i18n.t('Active Users'),
+        data: data.map(d => d.activeUsers),
+        borderColor: '#7cb5ec',
+    },
+    {
+        label: i18n.t('Total Users'),
+        data: data.map(d => d.users),
+        borderColor: '#cc6600',
+    },
+]

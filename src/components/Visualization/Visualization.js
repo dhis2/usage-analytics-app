@@ -1,10 +1,8 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import PropTypes from '@dhis2/prop-types'
 import { CircularLoader, ComponentCover, CenteredContent } from '@dhis2/ui'
-import { DATA_VALUES } from '../../constants/categories.js'
-import { DataValuesTable } from '../Tables'
-import { DataValuesChart } from '../Charts'
-import { TopFavoritesQuery, DataStatisticsQuery } from '../Queries'
+import TopFavoritesVisualization from './TopFavoritesVisualization.js'
+import DataStatisticsVisualization from './DataStatisticsVisualization.js'
 
 const Visualization = ({
     category,
@@ -31,41 +29,23 @@ const Visualization = ({
 
     if (isTopFavorites) {
         return (
-            <TopFavoritesQuery
+            <TopFavoritesVisualization
                 eventType={eventType}
                 pageSize={pageSize}
                 sortOrder={sortOrder}
-            >
-                {data => <pre>{JSON.stringify(data, null, 2)}</pre>}
-            </TopFavoritesQuery>
+            />
         )
     }
 
     return (
-        <DataStatisticsQuery
+        <DataStatisticsVisualization
+            category={category}
             startDate={startDate}
             endDate={endDate}
             interval={interval}
             setIsStale={setIsStale}
             isStale={isStale}
-        >
-            {data => {
-                if (category === DATA_VALUES) {
-                    return (
-                        <Fragment>
-                            <DataValuesChart
-                                data={data}
-                                interval={interval}
-                                category={category}
-                            />
-                            <DataValuesTable data={data} interval={interval} />
-                        </Fragment>
-                    )
-                }
-
-                return null
-            }}
-        </DataStatisticsQuery>
+        />
     )
 }
 

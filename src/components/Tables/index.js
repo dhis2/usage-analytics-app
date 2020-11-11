@@ -1,3 +1,4 @@
-import DataValuesTable from './DataValuesTable'
+import DataValuesTable from './DataValuesTable.js'
+import UsersTable from './UsersTable.js'
 
-export { DataValuesTable }
+export { DataValuesTable, UsersTable }
