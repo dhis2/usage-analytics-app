@@ -39,6 +39,11 @@ const App = () => {
         setInterval(interval)
     }
 
+    /**
+     * Used to block fetching and visualization rendering if validation has failed.
+     */
+    const [isValid, setIsValid] = useState(true)
+
     const isTopFavorites = category === TOP_FAVORITES
 
     return (
@@ -64,13 +69,12 @@ const App = () => {
                     setStartDate={setStartDate}
                     sortOrder={sortOrder}
                     startDate={startDate}
+                    setIsValid={setIsValid}
                 />
             </LayoutSidebar>
             <LayoutContent>
                 <Visualization
-                    aggregation={aggregation}
                     category={category}
-                    chartType={chartType}
                     endDate={endDate}
                     eventType={eventType}
                     interval={interval}
@@ -80,6 +84,7 @@ const App = () => {
                     sortOrder={sortOrder}
                     isStale={isStale}
                     startDate={startDate}
+                    isValid={isValid}
                 />
             </LayoutContent>
         </LayoutContainer>
