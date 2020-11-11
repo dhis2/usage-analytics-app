@@ -1,14 +1,13 @@
 import React, { Fragment } from 'react'
 import PropTypes from '@dhis2/prop-types'
+import { CircularLoader, ComponentCover, CenteredContent } from '@dhis2/ui'
 import { DATA_VALUES } from '../../constants/categories.js'
 import { DataValuesTable } from '../Tables'
 import { DataValuesChart } from '../Charts'
 import { TopFavoritesQuery, DataStatisticsQuery } from '../Queries'
 
 const Visualization = ({
-    aggregation,
     category,
-    chartType,
     endDate,
     eventType,
     interval,
@@ -18,7 +17,18 @@ const Visualization = ({
     sortOrder,
     isStale,
     startDate,
+    isValid,
 }) => {
+    if (!isValid) {
+        return (
+            <ComponentCover>
+                <CenteredContent>
+                    <CircularLoader />
+                </CenteredContent>
+            </ComponentCover>
+        )
+    }
+
     if (isTopFavorites) {
         return (
             <TopFavoritesQuery
@@ -46,9 +56,7 @@ const Visualization = ({
                             <DataValuesChart
                                 data={data}
                                 interval={interval}
-                                aggregation={aggregation}
                                 category={category}
-                                chartType={chartType}
                             />
                             <DataValuesTable data={data} interval={interval} />
                         </Fragment>
@@ -64,10 +72,9 @@ const Visualization = ({
 Visualization.propTypes = {
     isStale: PropTypes.bool.isRequired,
     isTopFavorites: PropTypes.bool.isRequired,
+    isValid: PropTypes.bool.isRequired,
     setIsStale: PropTypes.func.isRequired,
-    aggregation: PropTypes.string,
     category: PropTypes.string,
-    chartType: PropTypes.string,
     endDate: PropTypes.string,
     eventType: PropTypes.string,
     interval: PropTypes.string,
