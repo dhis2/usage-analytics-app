@@ -38,3 +38,41 @@ export const getUsersDatasets = data => [
         borderColor: '#cc6600',
     },
 ]
+
+export const getFavoritesSavedDatasets = data => [
+    {
+        label: i18n.t('Maps'),
+        data: data.map(d => d.savedMaps),
+        borderColor: '#7cb5ec',
+    },
+    {
+        label: i18n.t('Charts'),
+        data: data.map(d => d.savedCharts),
+        borderColor: '#cc6600',
+    },
+    {
+        label: i18n.t('Pivot Tables'),
+        data: data.map(d => d.savedPivotTables),
+        borderColor: '#cccc00',
+    },
+    {
+        label: i18n.t('Event Reports'),
+        data: data.map(d => d.savedEventReports),
+        borderColor: '#66cc00',
+    },
+    {
+        label: i18n.t('Event Charts'),
+        data: data.map(d => d.savedEventCharts),
+        borderColor: '#ff0066',
+    },
+    {
+        label: i18n.t('Dashboards'),
+        data: data.map(d => d.savedDashboards),
+        borderColor: '#000000',
+    },
+    {
+        label: i18n.t('Indicators'),
+        data: data.map(d => d.savedIndicators),
+        borderColor: '#00cccc',
+    },
+]

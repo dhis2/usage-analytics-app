@@ -1,8 +1,12 @@
 import React, { Fragment } from 'react'
 import PropTypes from '@dhis2/prop-types'
-import { DATA_VALUES, USERS } from '../../constants/categories.js'
-import { DataValuesTable, UsersTable } from '../Tables'
-import { DataValuesChart, UsersChart } from '../Charts'
+import {
+    DATA_VALUES,
+    USERS,
+    FAVORITES_SAVED,
+} from '../../constants/categories.js'
+import { DataValuesTable, UsersTable, FavoritesSavedTable } from '../Tables'
+import { DataValuesChart, UsersChart, FavoritesSavedChart } from '../Charts'
 import { DataStatisticsQuery } from '../Queries'
 
 const DataStatisticsVisualization = ({
@@ -42,6 +46,20 @@ const DataStatisticsVisualization = ({
                                 category={category}
                             />
                             <UsersTable data={data} interval={interval} />
+                        </Fragment>
+                    )
+                case FAVORITES_SAVED:
+                    return (
+                        <Fragment>
+                            <FavoritesSavedChart
+                                data={data}
+                                interval={interval}
+                                category={category}
+                            />
+                            <FavoritesSavedTable
+                                data={data}
+                                interval={interval}
+                            />
                         </Fragment>
                     )
                 default:
