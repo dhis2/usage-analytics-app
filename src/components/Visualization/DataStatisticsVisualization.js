@@ -1,15 +1,24 @@
 import React, { Fragment } from 'react'
 import PropTypes from '@dhis2/prop-types'
+import { SUM } from '../../constants/aggregations.js'
 import {
     DATA_VALUES,
     USERS,
     FAVORITES_SAVED,
+    FAVORITE_VIEWS,
 } from '../../constants/categories.js'
-import { DataValuesTable, UsersTable, FavoritesSavedTable } from '../Tables'
+import {
+    DataValuesTable,
+    UsersTable,
+    FavoritesSavedTable,
+    SumFavoriteViewsTable,
+    AverageFavoriteViewsTable,
+} from '../Tables'
 import { DataValuesChart, UsersChart, FavoritesSavedChart } from '../Charts'
 import { DataStatisticsQuery } from '../Queries'
 
 const DataStatisticsVisualization = ({
+    aggregation,
     category,
     endDate,
     interval,
@@ -62,6 +71,22 @@ const DataStatisticsVisualization = ({
                             />
                         </Fragment>
                     )
+                case FAVORITE_VIEWS:
+                    return (
+                        <Fragment>
+                            {aggregation === SUM ? (
+                                <SumFavoriteViewsTable
+                                    data={data}
+                                    interval={interval}
+                                />
+                            ) : (
+                                <AverageFavoriteViewsTable
+                                    data={data}
+                                    interval={interval}
+                                />
+                            )}
+                        </Fragment>
+                    )
                 default:
                     return null
             }
@@ -72,6 +97,7 @@ const DataStatisticsVisualization = ({
 DataStatisticsVisualization.propTypes = {
     isStale: PropTypes.bool.isRequired,
     setIsStale: PropTypes.func.isRequired,
+    aggregation: PropTypes.string,
     category: PropTypes.string,
     endDate: PropTypes.string,
     interval: PropTypes.string,

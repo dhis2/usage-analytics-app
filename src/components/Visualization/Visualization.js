@@ -5,6 +5,7 @@ import TopFavoritesVisualization from './TopFavoritesVisualization.js'
 import DataStatisticsVisualization from './DataStatisticsVisualization.js'
 
 const Visualization = ({
+    aggregation,
     category,
     endDate,
     eventType,
@@ -39,6 +40,7 @@ const Visualization = ({
 
     return (
         <DataStatisticsVisualization
+            aggregation={aggregation}
             category={category}
             startDate={startDate}
             endDate={endDate}
@@ -54,6 +56,7 @@ Visualization.propTypes = {
     isTopFavorites: PropTypes.bool.isRequired,
     isValid: PropTypes.bool.isRequired,
     setIsStale: PropTypes.func.isRequired,
+    aggregation: PropTypes.string,
     category: PropTypes.string,
     endDate: PropTypes.string,
     eventType: PropTypes.string,
