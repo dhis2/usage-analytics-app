@@ -22,14 +22,17 @@ const Visualization = ({
     eventType,
     interval,
     isIntervalStale,
-    isValid,
+    isDateValid,
     pageSize,
     setIsIntervalStale,
     sortOrder,
     startDate,
 }) => {
-    // Render a loading spinner if invalid, to not trigger any invalid fetches
-    if (!isValid) {
+    /**
+     * Render a loading spinner if the current date range is invalid, to not
+     * trigger any invalid fetches
+     */
+    if (!isDateValid) {
         return (
             <ComponentCover>
                 <CenteredContent>
@@ -100,18 +103,18 @@ const Visualization = ({
 }
 
 Visualization.propTypes = {
+    aggregation: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
+    chartType: PropTypes.string.isRequired,
+    endDate: PropTypes.string.isRequired,
+    eventType: PropTypes.string.isRequired,
+    interval: PropTypes.string.isRequired,
+    isDateValid: PropTypes.bool.isRequired,
     isIntervalStale: PropTypes.bool.isRequired,
-    isValid: PropTypes.bool.isRequired,
+    pageSize: PropTypes.string.isRequired,
     setIsIntervalStale: PropTypes.func.isRequired,
-    aggregation: PropTypes.string,
-    category: PropTypes.string,
-    chartType: PropTypes.string,
-    endDate: PropTypes.string,
-    eventType: PropTypes.string,
-    interval: PropTypes.string,
-    pageSize: PropTypes.string,
-    sortOrder: PropTypes.string,
-    startDate: PropTypes.string,
+    sortOrder: PropTypes.string.isRequired,
+    startDate: PropTypes.string.isRequired,
 }
 
 export default Visualization

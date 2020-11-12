@@ -71,7 +71,22 @@ const SumFavoriteViewsTable = ({ data, interval }) => (
 )
 
 SumFavoriteViewsTable.propTypes = {
-    data: PropTypes.array.isRequired,
+    data: PropTypes.arrayOf(
+        PropTypes.shape({
+            chartViews: PropTypes.number.isRequired,
+            dashboardViews: PropTypes.number.isRequired,
+            dataSetReportViews: PropTypes.number.isRequired,
+            eventChartViews: PropTypes.number.isRequired,
+            eventReportViews: PropTypes.number.isRequired,
+            mapViews: PropTypes.number.isRequired,
+            pivotTableViews: PropTypes.number.isRequired,
+            totalViews: PropTypes.number.isRequired,
+            day: PropTypes.number,
+            month: PropTypes.number,
+            week: PropTypes.number,
+            year: PropTypes.number,
+        })
+    ).isRequired,
     interval: PropTypes.string.isRequired,
 }
 

@@ -10,8 +10,8 @@ const ChartHeader = ({ title, subtitle }) => (
 )
 
 ChartHeader.propTypes = {
-    subtitle: PropTypes.string,
-    title: PropTypes.string,
+    subtitle: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
 }
 
 export default ChartHeader

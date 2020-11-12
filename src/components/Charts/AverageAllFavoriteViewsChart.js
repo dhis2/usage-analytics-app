@@ -22,9 +22,18 @@ const AverageAllFavoriteViewsChart = ({ data, category, interval }) => {
 }
 
 AverageAllFavoriteViewsChart.propTypes = {
-    category: PropTypes.string,
-    data: PropTypes.array,
-    interval: PropTypes.string,
+    category: PropTypes.string.isRequired,
+    data: PropTypes.arrayOf(
+        PropTypes.shape({
+            averageChartViews: PropTypes.number.isRequired,
+            averageDashboardViews: PropTypes.number.isRequired,
+            averageEventChartViews: PropTypes.number.isRequired,
+            averageEventReportViews: PropTypes.number.isRequired,
+            averageMapViews: PropTypes.number.isRequired,
+            averagePivotTableViews: PropTypes.number.isRequired,
+        })
+    ).isRequired,
+    interval: PropTypes.string.isRequired,
 }
 
 export default AverageAllFavoriteViewsChart

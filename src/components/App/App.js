@@ -29,8 +29,8 @@ const App = () => {
     const [startDate, setStartDate] = useState(initialStartDate)
 
     /**
-     * The rendering of the different intervals in the DataValuesTable
-     * depends on the props and the data being in sync. To prevent stale
+     * The rendering of the different date intervals in the charts and tables
+     * will crash if the props and the data aren't in sync. To prevent stale
      * props from being used we're tracking the stale status of interval.
      */
     const [isIntervalStale, setIsIntervalStale] = useState(false)
@@ -40,9 +40,10 @@ const App = () => {
     }
 
     /**
-     * Used to block fetching and visualization rendering if validation has failed.
+     * Used to block fetching if date validation has failed, as the fetch
+     * will throw an error for invalid dates.
      */
-    const [isValid, setIsValid] = useState(true)
+    const [isDateValid, setIsDateValid] = useState(true)
 
     return (
         <LayoutContainer>
@@ -62,7 +63,7 @@ const App = () => {
                     setEndDate={setEndDate}
                     setEventType={setEventType}
                     setInterval={setIsStaleAndInterval}
-                    setIsValid={setIsValid}
+                    setIsDateValid={setIsDateValid}
                     setPageSize={setPageSize}
                     setSortOrder={setSortOrder}
                     setStartDate={setStartDate}
@@ -79,7 +80,7 @@ const App = () => {
                     eventType={eventType}
                     interval={interval}
                     isIntervalStale={isIntervalStale}
-                    isValid={isValid}
+                    isDateValid={isDateValid}
                     pageSize={pageSize}
                     setIsIntervalStale={setIsIntervalStale}
                     sortOrder={sortOrder}

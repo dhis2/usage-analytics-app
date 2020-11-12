@@ -13,7 +13,7 @@ const DateRangeField = ({
     setStartDate,
     endDate,
     setEndDate,
-    setIsValid,
+    setIsDateValid,
 }) => {
     const [startDateError, setStartDateError] = useState('')
     const [endDateError, setEndDateError] = useState('')
@@ -25,7 +25,7 @@ const DateRangeField = ({
 
         if (errorMessage) {
             setStartDateError(errorMessage)
-            setIsValid(false)
+            setIsDateValid(false)
         } else {
             // Clear the error if it's been resolved
             setStartDateError('')
@@ -38,7 +38,7 @@ const DateRangeField = ({
         if (!errorMessage && !endDateErrorMessage) {
             // If both fields have become valid update the error and valid states
             setEndDateError('')
-            setIsValid(true)
+            setIsDateValid(true)
         }
 
         // Finally, update the state
@@ -52,7 +52,7 @@ const DateRangeField = ({
 
         if (errorMessage) {
             setEndDateError(errorMessage)
-            setIsValid(false)
+            setIsDateValid(false)
         } else {
             // Clear the error if it's been resolved
             setEndDateError('')
@@ -65,7 +65,7 @@ const DateRangeField = ({
         if (!errorMessage && !startDateErrorMessage) {
             // If both fields have become valid update the error and valid states
             setStartDateError('')
-            setIsValid(true)
+            setIsDateValid(true)
         }
 
         // Finally, update the state
@@ -97,7 +97,7 @@ const DateRangeField = ({
 DateRangeField.propTypes = {
     endDate: PropTypes.string.isRequired,
     setEndDate: PropTypes.func.isRequired,
-    setIsValid: PropTypes.func.isRequired,
+    setIsDateValid: PropTypes.func.isRequired,
     setStartDate: PropTypes.func.isRequired,
     startDate: PropTypes.string.isRequired,
 }

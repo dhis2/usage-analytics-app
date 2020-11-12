@@ -44,7 +44,16 @@ const UsersTable = ({ data, interval }) => (
 )
 
 UsersTable.propTypes = {
-    data: PropTypes.array.isRequired,
+    data: PropTypes.arrayOf(
+        PropTypes.shape({
+            activeUsers: PropTypes.number.isRequired,
+            users: PropTypes.number.isRequired,
+            day: PropTypes.number,
+            month: PropTypes.number,
+            week: PropTypes.number,
+            year: PropTypes.number,
+        })
+    ).isRequired,
     interval: PropTypes.string.isRequired,
 }
 

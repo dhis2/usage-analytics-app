@@ -18,9 +18,19 @@ const FavoritesSavedChart = ({ data, category, interval }) => {
 }
 
 FavoritesSavedChart.propTypes = {
-    category: PropTypes.string,
-    data: PropTypes.array,
-    interval: PropTypes.string,
+    category: PropTypes.string.isRequired,
+    data: PropTypes.arrayOf(
+        PropTypes.shape({
+            savedCharts: PropTypes.number.isRequired,
+            savedDashboards: PropTypes.number.isRequired,
+            savedEventCharts: PropTypes.number.isRequired,
+            savedEventReports: PropTypes.number.isRequired,
+            savedIndicators: PropTypes.number.isRequired,
+            savedMaps: PropTypes.number.isRequired,
+            savedPivotTables: PropTypes.number.isRequired,
+        })
+    ).isRequired,
+    interval: PropTypes.string.isRequired,
 }
 
 export default FavoritesSavedChart

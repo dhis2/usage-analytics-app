@@ -34,6 +34,7 @@ export const validateDate = date => {
         return i18n.t('Please fill in a date')
     }
 
+    // The 'true' flag ensures strict validation of the expected format
     const dateMoment = moment(date, expectedFormat, true)
 
     if (!dateMoment.isValid()) {

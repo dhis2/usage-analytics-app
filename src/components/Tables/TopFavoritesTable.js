@@ -45,7 +45,15 @@ const TopFavoritesTable = ({ data }) => (
 )
 
 TopFavoritesTable.propTypes = {
-    data: PropTypes.array.isRequired,
+    data: PropTypes.arrayOf(
+        PropTypes.shape({
+            created: PropTypes.string.isRequired,
+            id: PropTypes.string.isRequired,
+            name: PropTypes.string.isRequired,
+            position: PropTypes.number.isRequired,
+            views: PropTypes.number.isRequired,
+        })
+    ).isRequired,
 }
 
 export default TopFavoritesTable

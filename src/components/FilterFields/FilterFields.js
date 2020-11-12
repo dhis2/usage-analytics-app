@@ -22,7 +22,7 @@ const FilterFields = ({
     setEndDate,
     setEventType,
     setInterval,
-    setIsValid,
+    setIsDateValid,
     setPageSize,
     setSortOrder,
     setStartDate,
@@ -50,7 +50,7 @@ const FilterFields = ({
                     setStartDate={setStartDate}
                     endDate={endDate}
                     setEndDate={setEndDate}
-                    setIsValid={setIsValid}
+                    setIsDateValid={setIsDateValid}
                 />
             )}
             {showInterval && (
@@ -100,7 +100,7 @@ FilterFields.propTypes = {
     setEndDate: PropTypes.func.isRequired,
     setEventType: PropTypes.func.isRequired,
     setInterval: PropTypes.func.isRequired,
-    setIsValid: PropTypes.func.isRequired,
+    setIsDateValid: PropTypes.func.isRequired,
     setPageSize: PropTypes.func.isRequired,
     setSortOrder: PropTypes.func.isRequired,
     setStartDate: PropTypes.func.isRequired,

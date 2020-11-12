@@ -22,9 +22,13 @@ const AverageTotalFavoriteViewsChart = ({ data, category, interval }) => {
 }
 
 AverageTotalFavoriteViewsChart.propTypes = {
-    category: PropTypes.string,
-    data: PropTypes.array,
-    interval: PropTypes.string,
+    category: PropTypes.string.isRequired,
+    data: PropTypes.arrayOf(
+        PropTypes.shape({
+            averageViews: PropTypes.number.isRequired,
+        })
+    ).isRequired,
+    interval: PropTypes.string.isRequired,
 }
 
 export default AverageTotalFavoriteViewsChart

@@ -42,7 +42,15 @@ const DataValuesTable = ({ data, interval }) => (
 )
 
 DataValuesTable.propTypes = {
-    data: PropTypes.array.isRequired,
+    data: PropTypes.arrayOf(
+        PropTypes.shape({
+            savedDataValues: PropTypes.number.isRequired,
+            day: PropTypes.number,
+            month: PropTypes.number,
+            week: PropTypes.number,
+            year: PropTypes.number,
+        })
+    ).isRequired,
     interval: PropTypes.string.isRequired,
 }
 

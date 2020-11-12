@@ -18,9 +18,14 @@ const UsersChart = ({ data, category, interval }) => {
 }
 
 UsersChart.propTypes = {
-    category: PropTypes.string,
-    data: PropTypes.array,
-    interval: PropTypes.string,
+    category: PropTypes.string.isRequired,
+    data: PropTypes.arrayOf(
+        PropTypes.shape({
+            activeUsers: PropTypes.number.isRequired,
+            users: PropTypes.number.isRequired,
+        })
+    ).isRequired,
+    interval: PropTypes.string.isRequired,
 }
 
 export default UsersChart
