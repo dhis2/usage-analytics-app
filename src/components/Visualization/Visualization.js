@@ -17,16 +17,16 @@ import FavoriteViewsVisualization from './FavoriteViewsVisualization.js'
 const Visualization = ({
     aggregation,
     category,
+    chartType,
     endDate,
     eventType,
     interval,
-    pageSize,
-    setIsStale,
-    sortOrder,
-    isStale,
-    startDate,
+    isIntervalStale,
     isValid,
-    chartType,
+    pageSize,
+    setIsIntervalStale,
+    sortOrder,
+    startDate,
 }) => {
     // Render a loading spinner if invalid, to not trigger any invalid fetches
     if (!isValid) {
@@ -51,47 +51,47 @@ const Visualization = ({
         case DATA_VALUES:
             return (
                 <DataValuesVisualization
-                    startDate={startDate}
+                    category={category}
                     endDate={endDate}
                     interval={interval}
-                    setIsStale={setIsStale}
-                    isStale={isStale}
-                    category={category}
+                    isIntervalStale={isIntervalStale}
+                    setIsIntervalStale={setIsIntervalStale}
+                    startDate={startDate}
                 />
             )
         case USERS:
             return (
                 <UsersVisualization
-                    startDate={startDate}
+                    category={category}
                     endDate={endDate}
                     interval={interval}
-                    setIsStale={setIsStale}
-                    isStale={isStale}
-                    category={category}
+                    isIntervalStale={isIntervalStale}
+                    setIsIntervalStale={setIsIntervalStale}
+                    startDate={startDate}
                 />
             )
         case FAVORITES_SAVED:
             return (
                 <FavoritesSavedVisualization
-                    startDate={startDate}
+                    category={category}
                     endDate={endDate}
                     interval={interval}
-                    setIsStale={setIsStale}
-                    isStale={isStale}
-                    category={category}
+                    isIntervalStale={isIntervalStale}
+                    setIsIntervalStale={setIsIntervalStale}
+                    startDate={startDate}
                 />
             )
         case FAVORITE_VIEWS:
             return (
                 <FavoriteViewsVisualization
                     aggregation={aggregation}
+                    category={category}
+                    chartType={chartType}
                     endDate={endDate}
                     interval={interval}
-                    isStale={isStale}
-                    setIsStale={setIsStale}
+                    isIntervalStale={isIntervalStale}
+                    setIsIntervalStale={setIsIntervalStale}
                     startDate={startDate}
-                    chartType={chartType}
-                    category={category}
                 />
             )
         default:
@@ -100,9 +100,9 @@ const Visualization = ({
 }
 
 Visualization.propTypes = {
-    isStale: PropTypes.bool.isRequired,
+    isIntervalStale: PropTypes.bool.isRequired,
     isValid: PropTypes.bool.isRequired,
-    setIsStale: PropTypes.func.isRequired,
+    setIsIntervalStale: PropTypes.func.isRequired,
     aggregation: PropTypes.string,
     category: PropTypes.string,
     chartType: PropTypes.string,

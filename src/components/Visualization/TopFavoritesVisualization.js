@@ -8,9 +8,9 @@ const fields = ['position', 'name', 'views', 'id', 'created']
 const TopFavoritesVisualization = ({ eventType, pageSize, sortOrder }) => (
     <TopFavoritesQuery
         eventType={eventType}
+        fields={fields}
         pageSize={pageSize}
         sortOrder={sortOrder}
-        fields={fields}
     >
         {data => <TopFavoritesTable data={data} />}
     </TopFavoritesQuery>
