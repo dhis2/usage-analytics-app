@@ -10,7 +10,7 @@ const ChartTypeField = ({ chartType, setChartType }) => (
         onChange={({ selected }) => {
             setChartType(selected)
         }}
-        label={i18n.t('Chart type')}
+        label={i18n.t('Chart Type')}
     >
         {chartTypes.map(({ label, value }) => (
             <SingleSelectOption label={label} key={value} value={value} />

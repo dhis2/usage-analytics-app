@@ -26,6 +26,7 @@ const Visualization = ({
     isStale,
     startDate,
     isValid,
+    chartType,
 }) => {
     // Render a loading spinner if invalid, to not trigger any invalid fetches
     if (!isValid) {
@@ -89,6 +90,8 @@ const Visualization = ({
                     isStale={isStale}
                     setIsStale={setIsStale}
                     startDate={startDate}
+                    chartType={chartType}
+                    category={category}
                 />
             )
         default:
@@ -102,6 +105,7 @@ Visualization.propTypes = {
     setIsStale: PropTypes.func.isRequired,
     aggregation: PropTypes.string,
     category: PropTypes.string,
+    chartType: PropTypes.string,
     endDate: PropTypes.string,
     eventType: PropTypes.string,
     interval: PropTypes.string,

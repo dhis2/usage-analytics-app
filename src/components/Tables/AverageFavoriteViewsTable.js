@@ -47,14 +47,8 @@ const AverageFavoriteViewsTable = ({ data, interval }) => (
                         averageEventReportViews,
                         averageEventChartViews,
                         averageDashboardViews,
+                        averageViews,
                     }) => {
-                        const total =
-                            averageMapViews +
-                            averageChartViews +
-                            averagePivotTableViews +
-                            averageEventReportViews +
-                            averageEventChartViews +
-                            averageDashboardViews
                         const intervalDate = getIntervalDate(
                             { year, month, week, day },
                             interval
@@ -69,7 +63,7 @@ const AverageFavoriteViewsTable = ({ data, interval }) => (
                                 <TableCell>{averageEventReportViews}</TableCell>
                                 <TableCell>{averageEventChartViews}</TableCell>
                                 <TableCell>{averageDashboardViews}</TableCell>
-                                <TableCell>{total}</TableCell>
+                                <TableCell>{averageViews}</TableCell>
                             </TableRow>
                         )
                     }

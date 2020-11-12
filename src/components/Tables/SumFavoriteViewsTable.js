@@ -43,15 +43,8 @@ const SumFavoriteViewsTable = ({ data, interval }) => (
                         eventChartViews,
                         dashboardViews,
                         dataSetReportViews,
+                        totalViews,
                     }) => {
-                        const total =
-                            mapViews +
-                            chartViews +
-                            pivotTableViews +
-                            eventReportViews +
-                            eventChartViews +
-                            dashboardViews +
-                            dataSetReportViews
                         const intervalDate = getIntervalDate(
                             { year, month, week, day },
                             interval
@@ -67,7 +60,7 @@ const SumFavoriteViewsTable = ({ data, interval }) => (
                                 <TableCell>{eventChartViews}</TableCell>
                                 <TableCell>{dashboardViews}</TableCell>
                                 <TableCell>{dataSetReportViews}</TableCell>
-                                <TableCell>{total}</TableCell>
+                                <TableCell>{totalViews}</TableCell>
                             </TableRow>
                         )
                     }
