@@ -18,24 +18,24 @@ const App = () => {
     const { initialStartDate, initialEndDate } = createDefaultDates()
 
     // State
-    const [category, setCategory] = useState(FAVORITE_VIEWS)
-    const [startDate, setStartDate] = useState(initialStartDate)
-    const [endDate, setEndDate] = useState(initialEndDate)
-    const [interval, setInterval] = useState(WEEK)
     const [aggregation, setAggregation] = useState(SUM)
+    const [category, setCategory] = useState(FAVORITE_VIEWS)
     const [chartType, setChartType] = useState(ALL)
+    const [endDate, setEndDate] = useState(initialEndDate)
     const [eventType, setEventType] = useState(CHART_VIEW)
+    const [interval, setInterval] = useState(WEEK)
     const [pageSize, setPageSize] = useState(PS_25)
     const [sortOrder, setSortOrder] = useState(ASC)
+    const [startDate, setStartDate] = useState(initialStartDate)
 
     /**
      * The rendering of the different intervals in the DataValuesTable
      * depends on the props and the data being in sync. To prevent stale
      * props from being used we're tracking the stale status of interval.
      */
-    const [isStale, setIsStale] = useState(false)
+    const [isIntervalStale, setIsIntervalStale] = useState(false)
     const setIsStaleAndInterval = interval => {
-        setIsStale(true)
+        setIsIntervalStale(true)
         setInterval(interval)
     }
 
@@ -62,28 +62,28 @@ const App = () => {
                     setEndDate={setEndDate}
                     setEventType={setEventType}
                     setInterval={setIsStaleAndInterval}
+                    setIsValid={setIsValid}
                     setPageSize={setPageSize}
                     setSortOrder={setSortOrder}
                     setStartDate={setStartDate}
                     sortOrder={sortOrder}
                     startDate={startDate}
-                    setIsValid={setIsValid}
                 />
             </LayoutSidebar>
             <LayoutContent>
                 <Visualization
                     aggregation={aggregation}
-                    chartType={chartType}
                     category={category}
+                    chartType={chartType}
                     endDate={endDate}
                     eventType={eventType}
                     interval={interval}
-                    pageSize={pageSize}
-                    setIsStale={setIsStale}
-                    sortOrder={sortOrder}
-                    isStale={isStale}
-                    startDate={startDate}
+                    isIntervalStale={isIntervalStale}
                     isValid={isValid}
+                    pageSize={pageSize}
+                    setIsIntervalStale={setIsIntervalStale}
+                    sortOrder={sortOrder}
+                    startDate={startDate}
                 />
             </LayoutContent>
         </LayoutContainer>

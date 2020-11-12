@@ -39,12 +39,12 @@ const averageFields = [
 const FavoriteViewsVisualization = ({
     aggregation,
     category,
+    chartType,
     endDate,
     interval,
-    setIsStale,
-    isStale,
+    isIntervalStale,
+    setIsIntervalStale,
     startDate,
-    chartType,
 }) => {
     const isSum = aggregation === SUM
     const isAll = chartType === ALL
@@ -52,12 +52,12 @@ const FavoriteViewsVisualization = ({
     if (isSum) {
         return (
             <DataStatisticsQuery
-                startDate={startDate}
                 endDate={endDate}
-                interval={interval}
-                setIsStale={setIsStale}
-                isStale={isStale}
                 fields={sumFields}
+                interval={interval}
+                isIntervalStale={isIntervalStale}
+                setIsIntervalStale={setIsIntervalStale}
+                startDate={startDate}
             >
                 {data => (
                     <Fragment>
@@ -86,12 +86,12 @@ const FavoriteViewsVisualization = ({
 
     return (
         <DataStatisticsQuery
-            startDate={startDate}
             endDate={endDate}
-            interval={interval}
-            setIsStale={setIsStale}
-            isStale={isStale}
             fields={averageFields}
+            interval={interval}
+            isIntervalStale={isIntervalStale}
+            setIsIntervalStale={setIsIntervalStale}
+            startDate={startDate}
         >
             {data => (
                 <Fragment>
@@ -119,8 +119,8 @@ const FavoriteViewsVisualization = ({
 }
 
 FavoriteViewsVisualization.propTypes = {
-    isStale: PropTypes.bool.isRequired,
-    setIsStale: PropTypes.func.isRequired,
+    isIntervalStale: PropTypes.bool.isRequired,
+    setIsIntervalStale: PropTypes.func.isRequired,
     aggregation: PropTypes.string,
     category: PropTypes.string,
     chartType: PropTypes.string,

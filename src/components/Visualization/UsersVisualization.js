@@ -10,17 +10,17 @@ const UsersVisualization = ({
     category,
     endDate,
     interval,
-    setIsStale,
-    isStale,
+    isIntervalStale,
+    setIsIntervalStale,
     startDate,
 }) => (
     <DataStatisticsQuery
-        startDate={startDate}
         endDate={endDate}
-        interval={interval}
-        setIsStale={setIsStale}
         fields={fields}
-        isStale={isStale}
+        interval={interval}
+        isIntervalStale={isIntervalStale}
+        setIsIntervalStale={setIsIntervalStale}
+        startDate={startDate}
     >
         {data => (
             <Fragment>
@@ -36,8 +36,8 @@ const UsersVisualization = ({
 )
 
 UsersVisualization.propTypes = {
-    isStale: PropTypes.bool.isRequired,
-    setIsStale: PropTypes.func.isRequired,
+    isIntervalStale: PropTypes.bool.isRequired,
+    setIsIntervalStale: PropTypes.func.isRequired,
     category: PropTypes.string,
     endDate: PropTypes.string,
     interval: PropTypes.string,
