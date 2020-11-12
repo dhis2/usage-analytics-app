@@ -74,7 +74,21 @@ const AverageFavoriteViewsTable = ({ data, interval }) => (
 )
 
 AverageFavoriteViewsTable.propTypes = {
-    data: PropTypes.array.isRequired,
+    data: PropTypes.arrayOf(
+        PropTypes.shape({
+            averageChartViews: PropTypes.number.isRequired,
+            averageDashboardViews: PropTypes.number.isRequired,
+            averageEventChartViews: PropTypes.number.isRequired,
+            averageEventReportViews: PropTypes.number.isRequired,
+            averageMapViews: PropTypes.number.isRequired,
+            averagePivotTableViews: PropTypes.number.isRequired,
+            averageViews: PropTypes.number.isRequired,
+            day: PropTypes.number,
+            month: PropTypes.number,
+            week: PropTypes.number,
+            year: PropTypes.number,
+        })
+    ).isRequired,
     interval: PropTypes.string.isRequired,
 }
 

@@ -17,9 +17,9 @@ const TopFavoritesVisualization = ({ eventType, pageSize, sortOrder }) => (
 )
 
 TopFavoritesVisualization.propTypes = {
-    eventType: PropTypes.string,
-    pageSize: PropTypes.string,
-    sortOrder: PropTypes.string,
+    eventType: PropTypes.string.isRequired,
+    pageSize: PropTypes.string.isRequired,
+    sortOrder: PropTypes.string.isRequired,
 }
 
 export default TopFavoritesVisualization

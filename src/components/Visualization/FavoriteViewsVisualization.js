@@ -63,8 +63,8 @@ const FavoriteViewsVisualization = ({
                     <Fragment>
                         {isAll ? (
                             <SumAllFavoriteViewsChart
-                                data={data}
                                 category={category}
+                                data={data}
                                 interval={interval}
                             />
                         ) : (
@@ -97,14 +97,14 @@ const FavoriteViewsVisualization = ({
                 <Fragment>
                     {isAll ? (
                         <AverageAllFavoriteViewsChart
-                            data={data}
                             category={category}
+                            data={data}
                             interval={interval}
                         />
                     ) : (
                         <AverageTotalFavoriteViewsChart
-                            data={data}
                             category={category}
+                            data={data}
                             interval={interval}
                         />
                     )}
@@ -119,14 +119,14 @@ const FavoriteViewsVisualization = ({
 }
 
 FavoriteViewsVisualization.propTypes = {
+    aggregation: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
+    chartType: PropTypes.string.isRequired,
+    endDate: PropTypes.string.isRequired,
+    interval: PropTypes.string.isRequired,
     isIntervalStale: PropTypes.bool.isRequired,
     setIsIntervalStale: PropTypes.func.isRequired,
-    aggregation: PropTypes.string,
-    category: PropTypes.string,
-    chartType: PropTypes.string,
-    endDate: PropTypes.string,
-    interval: PropTypes.string,
-    startDate: PropTypes.string,
+    startDate: PropTypes.string.isRequired,
 }
 
 export default FavoriteViewsVisualization

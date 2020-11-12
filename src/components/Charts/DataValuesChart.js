@@ -18,9 +18,13 @@ const DataValuesChart = ({ data, category, interval }) => {
 }
 
 DataValuesChart.propTypes = {
-    category: PropTypes.string,
-    data: PropTypes.array,
-    interval: PropTypes.string,
+    category: PropTypes.string.isRequired,
+    interval: PropTypes.string.isRequired,
+    data: PropTypes.arrayOf(
+        PropTypes.shape({
+            savedDataValues: PropTypes.number.isRequired,
+        })
+    ),
 }
 
 export default DataValuesChart

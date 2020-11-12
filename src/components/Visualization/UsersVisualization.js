@@ -25,9 +25,9 @@ const UsersVisualization = ({
         {data => (
             <Fragment>
                 <UsersChart
+                    category={category}
                     data={data}
                     interval={interval}
-                    category={category}
                 />
                 <UsersTable data={data} interval={interval} />
             </Fragment>
@@ -36,12 +36,12 @@ const UsersVisualization = ({
 )
 
 UsersVisualization.propTypes = {
+    category: PropTypes.string.isRequired,
+    endDate: PropTypes.string.isRequired,
+    interval: PropTypes.string.isRequired,
     isIntervalStale: PropTypes.bool.isRequired,
     setIsIntervalStale: PropTypes.func.isRequired,
-    category: PropTypes.string,
-    endDate: PropTypes.string,
-    interval: PropTypes.string,
-    startDate: PropTypes.string,
+    startDate: PropTypes.string.isRequired,
 }
 
 export default UsersVisualization

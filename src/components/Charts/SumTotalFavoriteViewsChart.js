@@ -22,9 +22,13 @@ const SumTotalFavoriteViewsChart = ({ data, category, interval }) => {
 }
 
 SumTotalFavoriteViewsChart.propTypes = {
-    category: PropTypes.string,
-    data: PropTypes.array,
-    interval: PropTypes.string,
+    category: PropTypes.string.isRequired,
+    data: PropTypes.arrayOf(
+        PropTypes.shape({
+            totalViews: PropTypes.number.isRequired,
+        })
+    ).isRequired,
+    interval: PropTypes.string.isRequired,
 }
 
 export default SumTotalFavoriteViewsChart

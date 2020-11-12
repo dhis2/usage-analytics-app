@@ -68,7 +68,21 @@ const FavoritesSavedTable = ({ data, interval }) => (
 )
 
 FavoritesSavedTable.propTypes = {
-    data: PropTypes.array.isRequired,
+    data: PropTypes.arrayOf(
+        PropTypes.shape({
+            savedCharts: PropTypes.number.isRequired,
+            savedDashboards: PropTypes.number.isRequired,
+            savedEventCharts: PropTypes.number.isRequired,
+            savedEventReports: PropTypes.number.isRequired,
+            savedIndicators: PropTypes.number.isRequired,
+            savedMaps: PropTypes.number.isRequired,
+            savedPivotTables: PropTypes.number.isRequired,
+            day: PropTypes.number,
+            month: PropTypes.number,
+            week: PropTypes.number,
+            year: PropTypes.number,
+        })
+    ).isRequired,
     interval: PropTypes.string.isRequired,
 }
 

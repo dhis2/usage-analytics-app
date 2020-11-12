@@ -25,9 +25,9 @@ const DataValuesVisualization = ({
         {data => (
             <Fragment>
                 <DataValuesChart
+                    category={category}
                     data={data}
                     interval={interval}
-                    category={category}
                 />
                 <DataValuesTable data={data} interval={interval} />
             </Fragment>
@@ -36,12 +36,12 @@ const DataValuesVisualization = ({
 )
 
 DataValuesVisualization.propTypes = {
+    category: PropTypes.string.isRequired,
+    endDate: PropTypes.string.isRequired,
+    interval: PropTypes.string.isRequired,
     isIntervalStale: PropTypes.bool.isRequired,
     setIsIntervalStale: PropTypes.func.isRequired,
-    category: PropTypes.string,
-    endDate: PropTypes.string,
-    interval: PropTypes.string,
-    startDate: PropTypes.string,
+    startDate: PropTypes.string.isRequired,
 }
 
 export default DataValuesVisualization

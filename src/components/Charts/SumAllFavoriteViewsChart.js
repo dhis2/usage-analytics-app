@@ -22,9 +22,19 @@ const SumAllFavoriteViewsChart = ({ data, category, interval }) => {
 }
 
 SumAllFavoriteViewsChart.propTypes = {
-    category: PropTypes.string,
-    data: PropTypes.array,
-    interval: PropTypes.string,
+    category: PropTypes.string.isRequired,
+    data: PropTypes.arrayOf(
+        PropTypes.shape({
+            chartViews: PropTypes.number.isRequired,
+            dashboardViews: PropTypes.number.isRequired,
+            dataSetReportViews: PropTypes.number.isRequired,
+            eventChartViews: PropTypes.number.isRequired,
+            eventReportViews: PropTypes.number.isRequired,
+            mapViews: PropTypes.number.isRequired,
+            pivotTableViews: PropTypes.number.isRequired,
+        })
+    ).isRequired,
+    interval: PropTypes.string.isRequired,
 }
 
 export default SumAllFavoriteViewsChart

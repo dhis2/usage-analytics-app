@@ -1,12 +1,11 @@
 import i18n from '@dhis2/d2-i18n'
 
 /**
- * These are the options we want to apply to each Line graph.
+ * These are the options we apply to each Line graph.
  * For documentation on the options see:
  *
  * - https://github.com/reactchartjs/react-chartjs-2
  * - https://www.chartjs.org/docs/latest/
- *
  */
 
 const options = {
