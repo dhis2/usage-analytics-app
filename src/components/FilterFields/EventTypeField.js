@@ -10,7 +10,7 @@ const EventTypeField = ({ eventType, setEventType }) => (
         onChange={({ selected }) => {
             setEventType(selected)
         }}
-        label={i18n.t('Event type')}
+        label={i18n.t('Event Type')}
     >
         {eventTypes.map(({ label, value }) => (
             <SingleSelectOption label={label} key={value} value={value} />

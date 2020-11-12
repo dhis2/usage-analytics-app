@@ -1,14 +1,18 @@
 import React from 'react'
 import PropTypes from '@dhis2/prop-types'
+import { TopFavoritesTable } from '../Tables'
 import { TopFavoritesQuery } from '../Queries'
+
+const fields = ['position', 'name', 'views', 'id', 'created']
 
 const TopFavoritesVisualization = ({ eventType, pageSize, sortOrder }) => (
     <TopFavoritesQuery
         eventType={eventType}
         pageSize={pageSize}
         sortOrder={sortOrder}
+        fields={fields}
     >
-        {() => null}
+        {data => <TopFavoritesTable data={data} />}
     </TopFavoritesQuery>
 )
 

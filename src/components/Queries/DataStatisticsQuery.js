@@ -61,7 +61,7 @@ const DataStatisticsQuery = ({
 DataStatisticsQuery.propTypes = {
     children: PropTypes.func.isRequired,
     endDate: PropTypes.string.isRequired,
-    fields: PropTypes.string.isRequired,
+    fields: PropTypes.array.isRequired,
     interval: PropTypes.string.isRequired,
     isStale: PropTypes.bool.isRequired,
     setIsStale: PropTypes.func.isRequired,
