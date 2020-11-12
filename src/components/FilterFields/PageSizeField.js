@@ -10,7 +10,7 @@ const PageSizeField = ({ pageSize, setPageSize }) => (
         onChange={({ selected }) => {
             setPageSize(selected)
         }}
-        label={i18n.t('Page size')}
+        label={i18n.t('Page Size')}
     >
         {pageSizes.map(({ label, value }) => (
             <SingleSelectOption label={label} key={value} value={value} />

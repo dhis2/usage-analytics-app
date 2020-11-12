@@ -10,7 +10,7 @@ const SortOrderField = ({ sortOrder, setSortOrder }) => (
         onChange={({ selected }) => {
             setSortOrder(selected)
         }}
-        label={i18n.t('Sort order')}
+        label={i18n.t('Sort Order')}
     >
         {sortOrders.map(({ label, value }) => (
             <SingleSelectOption label={label} key={value} value={value} />

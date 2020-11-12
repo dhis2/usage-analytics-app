@@ -6,27 +6,35 @@ import { CircularLoader, ComponentCover, CenteredContent } from '@dhis2/ui'
 const query = {
     favorites: {
         resource: 'dataStatistics/favorites',
-        params: ({ eventType, pageSize, sortOrder }) => ({
+        params: ({ eventType, pageSize, sortOrder, fields }) => ({
             eventType,
             pageSize,
             sortOrder,
+            fields,
         }),
     },
 }
 
-const TopFavoritesQuery = ({ eventType, pageSize, sortOrder, children }) => {
+const TopFavoritesQuery = ({
+    eventType,
+    pageSize,
+    sortOrder,
+    fields,
+    children,
+}) => {
     const { loading, error, data, called, refetch } = useDataQuery(query, {
         lazy: true,
         variables: {
             eventType,
             pageSize,
             sortOrder,
+            fields,
         },
     })
 
     useEffect(() => {
-        refetch({ eventType, pageSize, sortOrder })
-    }, [eventType, pageSize, sortOrder])
+        refetch({ eventType, pageSize, sortOrder, fields })
+    }, [eventType, pageSize, sortOrder, fields])
 
     if (!called || loading) {
         return (
@@ -48,6 +56,7 @@ const TopFavoritesQuery = ({ eventType, pageSize, sortOrder, children }) => {
 TopFavoritesQuery.propTypes = {
     children: PropTypes.func.isRequired,
     eventType: PropTypes.string.isRequired,
+    fields: PropTypes.array.isRequired,
     pageSize: PropTypes.string.isRequired,
     sortOrder: PropTypes.string.isRequired,
 }
