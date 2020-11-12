@@ -6,10 +6,11 @@ import { CircularLoader, ComponentCover, CenteredContent } from '@dhis2/ui'
 const query = {
     dataStatistics: {
         resource: 'dataStatistics',
-        params: ({ startDate, endDate, interval }) => ({
+        params: ({ startDate, endDate, interval, fields }) => ({
             startDate,
             endDate,
             interval,
+            fields,
         }),
     },
 }
@@ -20,6 +21,7 @@ const DataStatisticsQuery = ({
     interval,
     isStale,
     setIsStale,
+    fields,
     children,
 }) => {
     const onDone = () => setIsStale(false)
@@ -29,14 +31,15 @@ const DataStatisticsQuery = ({
             startDate,
             endDate,
             interval,
+            fields,
         },
         onComplete: onDone,
         onError: onDone,
     })
 
     useEffect(() => {
-        refetch({ startDate, endDate, interval })
-    }, [startDate, endDate, interval])
+        refetch({ startDate, endDate, interval, fields })
+    }, [startDate, endDate, interval, fields])
 
     if (!called || loading || isStale) {
         return (
@@ -58,6 +61,7 @@ const DataStatisticsQuery = ({
 DataStatisticsQuery.propTypes = {
     children: PropTypes.func.isRequired,
     endDate: PropTypes.string.isRequired,
+    fields: PropTypes.string.isRequired,
     interval: PropTypes.string.isRequired,
     isStale: PropTypes.bool.isRequired,
     setIsStale: PropTypes.func.isRequired,

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { FAVORITE_VIEWS, TOP_FAVORITES } from '../../constants/categories.js'
+import { FAVORITE_VIEWS } from '../../constants/categories.js'
 import { WEEK } from '../../constants/intervals.js'
 import { SUM } from '../../constants/aggregations.js'
 import { ALL } from '../../constants/chartTypes.js'
@@ -44,8 +44,6 @@ const App = () => {
      */
     const [isValid, setIsValid] = useState(true)
 
-    const isTopFavorites = category === TOP_FAVORITES
-
     return (
         <LayoutContainer>
             <LayoutSidebar>
@@ -79,7 +77,6 @@ const App = () => {
                     endDate={endDate}
                     eventType={eventType}
                     interval={interval}
-                    isTopFavorites={isTopFavorites}
                     pageSize={pageSize}
                     setIsStale={setIsStale}
                     sortOrder={sortOrder}
