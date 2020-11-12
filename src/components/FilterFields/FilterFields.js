@@ -10,73 +10,78 @@ import PageSizeField from './PageSizeField.js'
 import SortOrderField from './SortOrderField.js'
 
 const FilterFields = ({
-    category,
-    startDate,
-    setStartDate,
-    endDate,
-    setEndDate,
-    interval,
-    setInterval,
     aggregation,
-    setAggregation,
+    category,
     chartType,
-    setChartType,
+    endDate,
     eventType,
-    setEventType,
+    interval,
     pageSize,
-    setPageSize,
-    sortOrder,
-    setSortOrder,
+    setAggregation,
+    setChartType,
+    setEndDate,
+    setEventType,
+    setInterval,
     setIsValid,
+    setPageSize,
+    setSortOrder,
+    setStartDate,
+    sortOrder,
+    startDate,
 }) => {
     // Category checks
     const isTopFavorites = category === TOP_FAVORITES
     const isFavoriteViews = category === FAVORITE_VIEWS
 
+    // Checks determining whether fields should be shown or not
+    const showDateRange = !isTopFavorites
+    const showInterval = !isTopFavorites
+    const showAggregation = isFavoriteViews
+    const showChartType = isFavoriteViews
+    const showEventType = isTopFavorites
+    const showPageSize = isTopFavorites
+    const showSortOrder = isTopFavorites
+
     return (
         <React.Fragment>
-            {!isTopFavorites && (
-                <React.Fragment>
-                    <DateRangeField
-                        startDate={startDate}
-                        setStartDate={setStartDate}
-                        endDate={endDate}
-                        setEndDate={setEndDate}
-                        setIsValid={setIsValid}
-                    />
-                    <IntervalField
-                        interval={interval}
-                        setInterval={setInterval}
-                    />
-                </React.Fragment>
+            {showDateRange && (
+                <DateRangeField
+                    startDate={startDate}
+                    setStartDate={setStartDate}
+                    endDate={endDate}
+                    setEndDate={setEndDate}
+                    setIsValid={setIsValid}
+                />
             )}
-            {isFavoriteViews && (
-                <React.Fragment>
-                    <AggregationField
-                        aggregation={aggregation}
-                        setAggregation={setAggregation}
-                    />
-                    <ChartTypeField
-                        chartType={chartType}
-                        setChartType={setChartType}
-                    />
-                </React.Fragment>
+            {showInterval && (
+                <IntervalField interval={interval} setInterval={setInterval} />
             )}
-            {isTopFavorites && (
-                <React.Fragment>
-                    <EventTypeField
-                        eventType={eventType}
-                        setEventType={setEventType}
-                    />
-                    <PageSizeField
-                        pageSize={pageSize}
-                        setPageSize={setPageSize}
-                    />
-                    <SortOrderField
-                        sortOrder={sortOrder}
-                        setSortOrder={setSortOrder}
-                    />
-                </React.Fragment>
+            {showAggregation && (
+                <AggregationField
+                    aggregation={aggregation}
+                    setAggregation={setAggregation}
+                />
+            )}
+            {showChartType && (
+                <ChartTypeField
+                    chartType={chartType}
+                    setChartType={setChartType}
+                />
+            )}
+            {showEventType && (
+                <EventTypeField
+                    eventType={eventType}
+                    setEventType={setEventType}
+                />
+            )}
+            {showPageSize && (
+                <PageSizeField pageSize={pageSize} setPageSize={setPageSize} />
+            )}
+            {showSortOrder && (
+                <SortOrderField
+                    sortOrder={sortOrder}
+                    setSortOrder={setSortOrder}
+                />
             )}
         </React.Fragment>
     )
