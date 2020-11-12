@@ -76,3 +76,90 @@ export const getFavoritesSavedDatasets = data => [
         borderColor: '#00cccc',
     },
 ]
+
+export const getSumAllFavoriteViewsDatasets = data => [
+    {
+        label: i18n.t('Map'),
+        data: data.map(d => d.mapViews),
+        borderColor: '#7cb5ec',
+    },
+    {
+        label: i18n.t('Chart'),
+        data: data.map(d => d.chartViews),
+        borderColor: '#cc6600',
+    },
+    {
+        label: i18n.t('Pivot Table'),
+        data: data.map(d => d.pivotTableViews),
+        borderColor: '#cccc00',
+    },
+    {
+        label: i18n.t('Event Report'),
+        data: data.map(d => d.eventReportViews),
+        borderColor: '#66cc00',
+    },
+    {
+        label: i18n.t('Event Chart'),
+        data: data.map(d => d.eventChartViews),
+        borderColor: '#ff0066',
+    },
+    {
+        label: i18n.t('Dashboard'),
+        data: data.map(d => d.dashboardViews),
+        borderColor: '#000000',
+    },
+    {
+        label: i18n.t('Data Set Report'),
+        data: data.map(d => d.dataSetReportViews),
+        borderColor: '#00cccc',
+    },
+]
+
+export const getSumTotalFavoriteViewsDatasets = data => [
+    {
+        label: i18n.t('Total'),
+        data: data.map(d => d.totalViews),
+        borderColor: '#7cb5ec',
+    },
+]
+
+export const getAverageAllFavoriteViewsDatasets = data => [
+    {
+        label: i18n.t('Average Map'),
+        data: data.map(d => d.averageMapViews),
+        borderColor: '#7cb5ec',
+    },
+    {
+        label: i18n.t('Average Chart'),
+        data: data.map(d => d.averageChartViews),
+        borderColor: '#cc6600',
+    },
+    {
+        label: i18n.t('Average Pivot Table'),
+        data: data.map(d => d.averagePivotTableViews),
+        borderColor: '#cccc00',
+    },
+    {
+        label: i18n.t('Average Event Report'),
+        data: data.map(d => d.averageEventReportViews),
+        borderColor: '#66cc00',
+    },
+    {
+        label: i18n.t('Average Event Chart'),
+        data: data.map(d => d.averageEventChartViews),
+        borderColor: '#ff0066',
+    },
+    {
+        label: i18n.t('Average Dashboard'),
+        data: data.map(d => d.averageDashboardViews),
+        borderColor: '#000000',
+    },
+]
+
+export const getAverageTotalFavoriteViewsDatasets = data => [
+    {
+        label: i18n.t('Average'),
+        data: data.map(d => d.averageViews),
+        borderColor: '#7cb5ec',
+    },
+]

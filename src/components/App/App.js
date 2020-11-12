@@ -73,6 +73,7 @@ const App = () => {
             <LayoutContent>
                 <Visualization
                     aggregation={aggregation}
+                    chartType={chartType}
                     category={category}
                     endDate={endDate}
                     eventType={eventType}

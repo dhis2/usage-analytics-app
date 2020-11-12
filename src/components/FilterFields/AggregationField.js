@@ -10,7 +10,7 @@ const AggregationField = ({ aggregation, setAggregation }) => (
         onChange={({ selected }) => {
             setAggregation(selected)
         }}
-        label={i18n.t('Aggregation level')}
+        label={i18n.t('Aggregation Level')}
     >
         {aggregations.map(({ label, value }) => (
             <SingleSelectOption label={label} key={value} value={value} />
