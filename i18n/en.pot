@@ -5,8 +5,8 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"POT-Creation-Date: 2020-11-12T09:00:52.400Z\n"
-"PO-Revision-Date: 2020-11-12T09:00:52.400Z\n"
+"POT-Creation-Date: 2020-11-12T16:17:34.542Z\n"
+"PO-Revision-Date: 2020-11-12T16:17:34.542Z\n"
 
 msgid "Usage Analytics"
 msgstr ""
@@ -47,43 +47,28 @@ msgstr ""
 msgid "Indicators"
 msgstr ""
 
-msgid "Aggregation level"
+msgid "Map"
 msgstr ""
 
-msgid "Chart type"
+msgid "Chart"
 msgstr ""
 
-msgid "Start Date"
+msgid "Pivot Table"
 msgstr ""
 
-msgid "End Date"
+msgid "Event Report"
 msgstr ""
 
-msgid "Event type"
+msgid "Event Chart"
 msgstr ""
 
-msgid "Interval"
+msgid "Dashboard"
 msgstr ""
 
-msgid "Page size"
+msgid "Data Set Report"
 msgstr ""
 
-msgid "Sort order"
-msgstr ""
-
-msgid "Start date should be before end date"
-msgstr ""
-
-msgid "End date should be after start date"
-msgstr ""
-
-msgid "Please fill in a date"
-msgstr ""
-
-msgid "Please use the format yyyy-mm-dd"
-msgstr ""
-
-msgid "Date"
+msgid "Total"
 msgstr ""
 
 msgid "Average Map"
@@ -107,28 +92,58 @@ msgstr ""
 msgid "Average"
 msgstr ""
 
-msgid "Map"
+msgid "Aggregation Level"
 msgstr ""
 
-msgid "Chart"
+msgid "Chart Type"
 msgstr ""
 
-msgid "Pivot Table"
+msgid "Start Date"
 msgstr ""
 
-msgid "Event Report"
+msgid "End Date"
 msgstr ""
 
-msgid "Event Chart"
+msgid "Event Type"
 msgstr ""
 
-msgid "Dashboard"
+msgid "Interval"
 msgstr ""
 
-msgid "Data Set Report"
+msgid "Page Size"
 msgstr ""
 
-msgid "Total"
+msgid "Sort Order"
+msgstr ""
+
+msgid "Start date should be before end date"
+msgstr ""
+
+msgid "End date should be after start date"
+msgstr ""
+
+msgid "Please fill in a date"
+msgstr ""
+
+msgid "Please use the format yyyy-mm-dd"
+msgstr ""
+
+msgid "Date"
+msgstr ""
+
+msgid "Position"
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "Views"
+msgstr ""
+
+msgid "ID"
+msgstr ""
+
+msgid "Created"
 msgstr ""
 
 msgid "Sum"
