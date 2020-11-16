@@ -156,22 +156,22 @@ msgid "Data Set Report"
 msgstr "تقرير حزمة البيانات"
 
 msgid "Average Map"
-msgstr ""
+msgstr "متوسط خريطة"
 
 msgid "Average Chart"
-msgstr ""
+msgstr "متوسط رسم بياني"
 
 msgid "Average Pivot Table"
-msgstr ""
+msgstr "متوسط جدول محوري"
 
 msgid "Average Event Report"
-msgstr ""
+msgstr "متوسط تقرير حدث"
 
 msgid "Average Event Chart"
-msgstr ""
+msgstr "متوسط رسم بيان حدث"
 
 msgid "Average Dashboard"
-msgstr ""
+msgstr "متوسط لوحة عرض"
 
 msgid "Maps"
 msgstr "الخرائط"
