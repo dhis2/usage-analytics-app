@@ -23,6 +23,10 @@ const categories = [
         subtitle: i18n.t('Number of users in the system'),
     },
     {
+        /**
+         * This doesn't need a subtitle because it doesn't render a graph (which
+         * is the component that needs the subtitle).
+         */
         value: TOP_FAVORITES,
         label: i18n.t('Top favorites'),
     },
