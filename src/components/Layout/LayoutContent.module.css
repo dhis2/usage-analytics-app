@@ -1,6 +1,6 @@
 .content {
     flex: 1;
-    margin: 16px;
+    margin: var(--spacers-dp16);
 
     /* Necessary to allow centering content within this container */
     position: relative;

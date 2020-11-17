@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { CssVariables, CssReset } from '@dhis2/ui'
 import { FAVORITE_VIEWS } from '../../constants/categories.js'
 import { WEEK } from '../../constants/intervals.js'
 import { SUM } from '../../constants/aggregations.js'
@@ -46,48 +47,55 @@ const App = () => {
     const [isDateValid, setIsDateValid] = useState(true)
 
     return (
-        <LayoutContainer>
-            <LayoutSidebar>
-                <AppTitle />
-                <CategoryField category={category} setCategory={setCategory} />
-                <FilterFields
-                    aggregation={aggregation}
-                    category={category}
-                    chartType={chartType}
-                    endDate={endDate}
-                    eventType={eventType}
-                    interval={interval}
-                    pageSize={pageSize}
-                    setAggregation={setAggregation}
-                    setChartType={setChartType}
-                    setEndDate={setEndDate}
-                    setEventType={setEventType}
-                    setInterval={setIsStaleAndInterval}
-                    setIsDateValid={setIsDateValid}
-                    setPageSize={setPageSize}
-                    setSortOrder={setSortOrder}
-                    setStartDate={setStartDate}
-                    sortOrder={sortOrder}
-                    startDate={startDate}
-                />
-            </LayoutSidebar>
-            <LayoutContent>
-                <Visualization
-                    aggregation={aggregation}
-                    category={category}
-                    chartType={chartType}
-                    endDate={endDate}
-                    eventType={eventType}
-                    interval={interval}
-                    isIntervalStale={isIntervalStale}
-                    isDateValid={isDateValid}
-                    pageSize={pageSize}
-                    setIsIntervalStale={setIsIntervalStale}
-                    sortOrder={sortOrder}
-                    startDate={startDate}
-                />
-            </LayoutContent>
-        </LayoutContainer>
+        <React.Fragment>
+            <CssVariables spacers />
+            <CssReset />
+            <LayoutContainer>
+                <LayoutSidebar>
+                    <AppTitle />
+                    <CategoryField
+                        category={category}
+                        setCategory={setCategory}
+                    />
+                    <FilterFields
+                        aggregation={aggregation}
+                        category={category}
+                        chartType={chartType}
+                        endDate={endDate}
+                        eventType={eventType}
+                        interval={interval}
+                        pageSize={pageSize}
+                        setAggregation={setAggregation}
+                        setChartType={setChartType}
+                        setEndDate={setEndDate}
+                        setEventType={setEventType}
+                        setInterval={setIsStaleAndInterval}
+                        setIsDateValid={setIsDateValid}
+                        setPageSize={setPageSize}
+                        setSortOrder={setSortOrder}
+                        setStartDate={setStartDate}
+                        sortOrder={sortOrder}
+                        startDate={startDate}
+                    />
+                </LayoutSidebar>
+                <LayoutContent>
+                    <Visualization
+                        aggregation={aggregation}
+                        category={category}
+                        chartType={chartType}
+                        endDate={endDate}
+                        eventType={eventType}
+                        interval={interval}
+                        isIntervalStale={isIntervalStale}
+                        isDateValid={isDateValid}
+                        pageSize={pageSize}
+                        setIsIntervalStale={setIsIntervalStale}
+                        sortOrder={sortOrder}
+                        startDate={startDate}
+                    />
+                </LayoutContent>
+            </LayoutContainer>
+        </React.Fragment>
     )
 }
 
