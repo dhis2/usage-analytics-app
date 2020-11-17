@@ -1,6 +1,12 @@
 import React from 'react'
 import PropTypes from '@dhis2/prop-types'
-import { CircularLoader, ComponentCover, CenteredContent } from '@dhis2/ui'
+import i18n from '@dhis2/d2-i18n'
+import {
+    CircularLoader,
+    ComponentCover,
+    CenteredContent,
+    NoticeBox,
+} from '@dhis2/ui'
 import {
     TOP_FAVORITES,
     DATA_VALUES,
@@ -98,7 +104,11 @@ const Visualization = ({
                 />
             )
         default:
-            throw new Error('Unrecognized category')
+            return (
+                <NoticeBox error title={i18n.t('Unrecognized category')}>
+                    {i18n.t('The chosen category was not recognized.')}
+                </NoticeBox>
+            )
     }
 }
 
