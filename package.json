@@ -13,34 +13,18 @@
     "dependencies": {
         "@dhis2/prop-types": "^1.6.4",
         "chart.js": "^2.9.1",
-        "lodash.debounce": "^4.0.8",
         "moment": "^2.29.1",
-        "react-app-polyfill": "^1.0.6",
-        "react-chartjs-2": "^2.9.0",
-        "react-redux": "^7.2.0",
-        "redux": "^4.0.5",
-        "redux-thunk": "^2.3.0"
+        "react-chartjs-2": "^2.9.0"
     },
     "devDependencies": {
         "@dhis2/cli-app-scripts": "^5.4.1",
         "@dhis2/cli-style": "^7.2.1",
         "enzyme": "^3.10.0",
-        "enzyme-adapter-react-16": "^1.15.1",
-        "jest-enzyme": "^7.1.2",
-        "redux-logger": "^3.0.6",
-        "redux-mock-store": "^1.5.4"
+        "enzyme-adapter-react-16": "^1.15.1"
     },
     "jest": {
         "setupFilesAfterEnv": [
             "<rootDir>/src/setupTests.js"
-        ],
-        "collectCoverageFrom": [
-            "src/**/*.{js,jsx,ts,tsx}",
-            "!src/**/*.d.ts",
-            "!src/serviceWorker.js",
-            "!src/index.js",
-            "!src/store.js",
-            "!src/__mockData__/**/*.js"
         ]
     }
 }
