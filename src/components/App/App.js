@@ -7,11 +7,15 @@ import { ALL } from '../../constants/chartTypes.js'
 import { CHART_VIEW } from '../../constants/eventTypes.js'
 import { PS_25 } from '../../constants/pageSizes.js'
 import { ASC } from '../../constants/sortOrders.js'
-import FilterFields from '../FilterFields'
-import { LayoutContainer, LayoutSidebar, LayoutContent } from '../Layout'
-import CategoryField from '../CategoryField'
-import AppTitle from '../AppTitle'
-import Visualization from '../Visualization'
+import FilterFields from '../FilterFields/index.js'
+import {
+    LayoutContainer,
+    LayoutSidebar,
+    LayoutContent,
+} from '../Layout/index.js'
+import CategoryField from '../CategoryField/index.js'
+import AppTitle from '../AppTitle/index.js'
+import Visualization from '../Visualization/index.js'
 import './App.css'
 import createDefaultDates from './createDefaultDates.js'
 

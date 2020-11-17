@@ -1,5 +1,5 @@
-import LayoutContainer from './LayoutContainer'
-import LayoutSidebar from './LayoutSidebar'
-import LayoutContent from './LayoutContent'
+import LayoutContainer from './LayoutContainer.js'
+import LayoutSidebar from './LayoutSidebar.js'
+import LayoutContent from './LayoutContent.js'
 
 export { LayoutContainer, LayoutSidebar, LayoutContent }

@@ -1,5 +1,5 @@
 import i18n from '@dhis2/d2-i18n'
-import CATEGORIES from '../../constants/categories'
+import CATEGORIES from '../../constants/categories.js'
 import { getIntervalDate } from '../../selectors/date.js'
 
 /**
