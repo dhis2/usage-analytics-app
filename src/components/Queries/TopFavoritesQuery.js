@@ -54,13 +54,10 @@ const TopFavoritesQuery = ({
 
     if (error) {
         const title = i18n.t('Error whilst fetching data')
-        const message = i18n.t(
-            'The error message was: "{{ ERROR_MESSAGE }}".',
-            {
-                ERROR_MESSAGE: error.message,
-                nsSeparator: '>',
-            }
-        )
+        const message = i18n.t('The error message was: "{{ MESSAGE }}".', {
+            MESSAGE: error.message,
+            nsSeparator: '>',
+        })
         const fallback = i18n.t(
             'There was no error message included with the error.'
         )
