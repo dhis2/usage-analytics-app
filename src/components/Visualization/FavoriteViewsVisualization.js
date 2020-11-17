@@ -7,9 +7,12 @@ import {
     SumTotalFavoriteViewsChart,
     AverageAllFavoriteViewsChart,
     AverageTotalFavoriteViewsChart,
-} from '../Charts'
-import { SumFavoriteViewsTable, AverageFavoriteViewsTable } from '../Tables'
-import { DataStatisticsQuery } from '../Queries'
+} from '../Charts/index.js'
+import {
+    SumFavoriteViewsTable,
+    AverageFavoriteViewsTable,
+} from '../Tables/index.js'
+import { DataStatisticsQuery } from '../Queries/index.js'
 
 const fields = ['year', 'month', 'week', 'day']
 

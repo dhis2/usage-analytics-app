@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react'
 import PropTypes from '@dhis2/prop-types'
-import { FavoritesSavedTable } from '../Tables'
-import { FavoritesSavedChart } from '../Charts'
-import { DataStatisticsQuery } from '../Queries'
+import { FavoritesSavedTable } from '../Tables/index.js'
+import { FavoritesSavedChart } from '../Charts/index.js'
+import { DataStatisticsQuery } from '../Queries/index.js'
 
 const fields = [
     'year',

@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react'
 import PropTypes from '@dhis2/prop-types'
-import { DataValuesTable } from '../Tables'
-import { DataValuesChart } from '../Charts'
-import { DataStatisticsQuery } from '../Queries'
+import { DataValuesTable } from '../Tables/index.js'
+import { DataValuesChart } from '../Charts/index.js'
+import { DataStatisticsQuery } from '../Queries/index.js'
 
 const fields = ['year', 'month', 'week', 'day', 'savedDataValues']
 
