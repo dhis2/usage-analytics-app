@@ -4,6 +4,6 @@ import TableWrapper from './TableWrapper.js'
 
 describe('<TableWrapper>', () => {
     it('renders without errors', () => {
-        shallow(<TableWrapper />)
+        shallow(<TableWrapper>Content</TableWrapper>)
     })
 })
