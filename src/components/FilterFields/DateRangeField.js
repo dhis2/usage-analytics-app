@@ -1,94 +1,41 @@
 import React, { useState } from 'react'
 import PropTypes from '@dhis2/prop-types'
-import i18n from '@dhis2/d2-i18n'
-import { InputField } from '@dhis2/ui'
-import {
-    validateStartDate,
-    validateEndDate,
-    validateDate,
-} from './validators.js'
+import { validateDateRange } from './validators.js'
+import StartDateField from './StartDateField.js'
+import EndDateField from './EndDateField.js'
 
-const DateRangeField = ({
-    startDate,
-    setStartDate,
-    endDate,
-    setEndDate,
-    setIsDateValid,
-}) => {
+const DateRangeField = ({ startDate, setStartDate, endDate, setEndDate }) => {
     const [startDateError, setStartDateError] = useState('')
     const [endDateError, setEndDateError] = useState('')
+    const [rangeError, setRangeError] = useState('')
 
-    const onStartDateChange = ({ value }) => {
-        // First generic validation, then the field specific validation
-        const errorMessage =
-            validateDate(value) || validateStartDate(value, endDate)
+    const onRangeChange = (startDate, endDate) => {
+        setRangeError(validateDateRange(startDate, endDate))
+    }
 
-        if (errorMessage) {
-            setStartDateError(errorMessage)
-            setIsDateValid(false)
-        } else {
-            // Clear the error if it's been resolved
-            setStartDateError('')
-        }
-
-        // Revalidate the end date
-        const endDateErrorMessage =
-            validateDate(endDate) || validateEndDate(value, endDate)
-
-        if (!errorMessage && !endDateErrorMessage) {
-            // If both fields have become valid update the error and valid states
-            setEndDateError('')
-            setIsDateValid(true)
-        }
-
-        // Finally, update the state
+    const onStartDateChange = value => {
+        onRangeChange(value, endDate)
         setStartDate(value)
     }
 
-    const onEndDateChange = ({ value }) => {
-        // First generic validation, then the field specific validation
-        const errorMessage =
-            validateDate(value) || validateEndDate(startDate, value)
-
-        if (errorMessage) {
-            setEndDateError(errorMessage)
-            setIsDateValid(false)
-        } else {
-            // Clear the error if it's been resolved
-            setEndDateError('')
-        }
-
-        // Revalidate the start date
-        const startDateErrorMessage =
-            validateDate(startDate) || validateStartDate(startDate, value)
-
-        if (!errorMessage && !startDateErrorMessage) {
-            // If both fields have become valid update the error and valid states
-            setStartDateError('')
-            setIsDateValid(true)
-        }
-
-        // Finally, update the state
+    const onEndDateChange = value => {
+        onRangeChange(startDate, value)
         setEndDate(value)
     }
 
     return (
         <div>
-            <InputField
-                label={i18n.t('Start Date')}
-                type="date"
-                value={startDate}
-                error={!!startDateError}
-                validationText={startDateError}
-                onChange={onStartDateChange}
+            <StartDateField
+                startDate={startDate}
+                setStartDate={onStartDateChange}
+                startDateError={startDateError || rangeError}
+                setStartDateError={setStartDateError}
             />
-            <InputField
-                label={i18n.t('End Date')}
-                type="date"
-                value={endDate}
-                error={!!endDateError}
-                validationText={endDateError}
-                onChange={onEndDateChange}
+            <EndDateField
+                endDate={endDate}
+                setEndDate={onEndDateChange}
+                endDateError={endDateError || rangeError}
+                setEndDateError={setEndDateError}
             />
         </div>
     )
@@ -97,7 +44,6 @@ const DateRangeField = ({
 DateRangeField.propTypes = {
     endDate: PropTypes.string.isRequired,
     setEndDate: PropTypes.func.isRequired,
-    setIsDateValid: PropTypes.func.isRequired,
     setStartDate: PropTypes.func.isRequired,
     startDate: PropTypes.string.isRequired,
 }
