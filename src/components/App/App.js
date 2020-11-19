@@ -44,12 +44,6 @@ const App = () => {
         setInterval(interval)
     }
 
-    /**
-     * Used to block fetching if date validation has failed, as the fetch
-     * will throw an error for invalid dates.
-     */
-    const [isDateValid, setIsDateValid] = useState(true)
-
     return (
         <React.Fragment>
             <CssVariables spacers />
@@ -74,7 +68,6 @@ const App = () => {
                         setEndDate={setEndDate}
                         setEventType={setEventType}
                         setInterval={setIsStaleAndInterval}
-                        setIsDateValid={setIsDateValid}
                         setPageSize={setPageSize}
                         setSortOrder={setSortOrder}
                         setStartDate={setStartDate}
@@ -91,7 +84,6 @@ const App = () => {
                         eventType={eventType}
                         interval={interval}
                         isIntervalStale={isIntervalStale}
-                        isDateValid={isDateValid}
                         pageSize={pageSize}
                         setIsIntervalStale={setIsIntervalStale}
                         sortOrder={sortOrder}

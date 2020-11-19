@@ -4,25 +4,13 @@ import i18n from '@dhis2/d2-i18n'
 // The expected date format
 const expectedFormat = 'YYYY-MM-DD'
 
-// Validates a start date, compared to an end date
-export const validateStartDate = (startDate, endDate) => {
+// Validates two dates compared to eachother
+export const validateDateRange = (startDate, endDate) => {
     const startMoment = moment(startDate, expectedFormat)
     const endMoment = moment(endDate, expectedFormat)
 
     if (startMoment.isAfter(endMoment)) {
         return i18n.t('Start date should be before end date')
-    }
-
-    return ''
-}
-
-// Validates an end date, compared to a start date
-export const validateEndDate = (startDate, endDate) => {
-    const startMoment = moment(startDate, expectedFormat)
-    const endMoment = moment(endDate, expectedFormat)
-
-    if (endMoment.isBefore(startMoment)) {
-        return i18n.t('End date should be after start date')
     }
 
     return ''

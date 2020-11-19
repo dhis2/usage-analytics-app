@@ -8,6 +8,7 @@ import {
     CenteredContent,
     NoticeBox,
 } from '@dhis2/ui'
+import { validateDates } from './validators.js'
 
 const query = {
     dataStatistics: {
@@ -44,7 +45,11 @@ const DataStatisticsQuery = ({
     })
 
     useEffect(() => {
-        refetch({ startDate, endDate, interval, fields })
+        const datesAreValid = validateDates(startDate, endDate)
+
+        if (datesAreValid) {
+            refetch({ startDate, endDate, interval, fields })
+        }
     }, [startDate, endDate, interval, fields])
 
     if (!called || loading || isIntervalStale) {

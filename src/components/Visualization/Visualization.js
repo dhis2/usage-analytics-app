@@ -1,12 +1,7 @@
 import React from 'react'
 import PropTypes from '@dhis2/prop-types'
 import i18n from '@dhis2/d2-i18n'
-import {
-    CircularLoader,
-    ComponentCover,
-    CenteredContent,
-    NoticeBox,
-} from '@dhis2/ui'
+import { NoticeBox } from '@dhis2/ui'
 import {
     TOP_FAVORITES,
     DATA_VALUES,
@@ -28,26 +23,11 @@ const Visualization = ({
     eventType,
     interval,
     isIntervalStale,
-    isDateValid,
     pageSize,
     setIsIntervalStale,
     sortOrder,
     startDate,
 }) => {
-    /**
-     * Render a loading spinner if the current date range is invalid, to not
-     * trigger any invalid fetches
-     */
-    if (!isDateValid) {
-        return (
-            <ComponentCover>
-                <CenteredContent>
-                    <CircularLoader />
-                </CenteredContent>
-            </ComponentCover>
-        )
-    }
-
     switch (category) {
         case TOP_FAVORITES:
             return (
@@ -119,7 +99,6 @@ Visualization.propTypes = {
     endDate: PropTypes.string.isRequired,
     eventType: PropTypes.string.isRequired,
     interval: PropTypes.string.isRequired,
-    isDateValid: PropTypes.bool.isRequired,
     isIntervalStale: PropTypes.bool.isRequired,
     pageSize: PropTypes.string.isRequired,
     setIsIntervalStale: PropTypes.func.isRequired,
