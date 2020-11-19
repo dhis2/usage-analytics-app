@@ -7,7 +7,7 @@ import { ALL } from '../../constants/chartTypes.js'
 import { CHART_VIEW } from '../../constants/eventTypes.js'
 import { PS_25 } from '../../constants/pageSizes.js'
 import { ASC } from '../../constants/sortOrders.js'
-import FilterFields from '../FilterFields/index.js'
+import Filters from '../Filters/index.js'
 import {
     LayoutContainer,
     LayoutSidebar,
@@ -55,7 +55,7 @@ const App = () => {
                         category={category}
                         setCategory={setCategory}
                     />
-                    <FilterFields
+                    <Filters
                         aggregation={aggregation}
                         category={category}
                         chartType={chartType}

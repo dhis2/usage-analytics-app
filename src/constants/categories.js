@@ -1,10 +1,10 @@
 import i18n from '@dhis2/d2-i18n'
 
-export const FAVORITE_VIEWS = 'FAVORITE_VIEWS'
-export const FAVORITES_SAVED = 'FAVORITES_SAVED'
-export const USERS = 'USERS'
-export const TOP_FAVORITES = 'TOP_FAVORITES'
 export const DATA_VALUES = 'DATA_VALUES'
+export const FAVORITES_SAVED = 'FAVORITES_SAVED'
+export const FAVORITE_VIEWS = 'FAVORITE_VIEWS'
+export const TOP_FAVORITES = 'TOP_FAVORITES'
+export const USERS = 'USERS'
 
 const categories = [
     {

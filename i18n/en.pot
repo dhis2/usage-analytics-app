@@ -5,8 +5,8 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"POT-Creation-Date: 2020-11-19T15:13:17.244Z\n"
-"PO-Revision-Date: 2020-11-19T15:13:17.244Z\n"
+"POT-Creation-Date: 2020-11-19T16:34:58.919Z\n"
+"PO-Revision-Date: 2020-11-19T16:34:58.919Z\n"
 
 msgid "Usage Analytics"
 msgstr ""
@@ -125,6 +125,12 @@ msgstr ""
 msgid "Please use the format yyyy-mm-dd"
 msgstr ""
 
+msgid "Unrecognized category"
+msgstr ""
+
+msgid "The chosen category was not recognized."
+msgstr ""
+
 msgid "Error whilst fetching data"
 msgstr ""
 
@@ -150,12 +156,6 @@ msgid "ID"
 msgstr ""
 
 msgid "Created"
-msgstr ""
-
-msgid "Unrecognized category"
-msgstr ""
-
-msgid "The chosen category was not recognized."
 msgstr ""
 
 msgid "Sum"
