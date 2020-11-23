@@ -14,9 +14,8 @@ describe('<FavoritesSavedChart>', () => {
             interval: YEAR,
         }
         const wrapper = shallow(<FavoritesSavedChart {...props} />)
-        const graph = wrapper.find(Line)
 
-        expect(graph).toHaveLength(1)
+        expect(wrapper.exists(Line)).toBe(true)
     })
 
     it('renders the expected titles', () => {

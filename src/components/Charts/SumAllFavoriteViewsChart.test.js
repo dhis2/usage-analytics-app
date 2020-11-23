@@ -14,9 +14,8 @@ describe('<SumAllFavoriteViewsChart>', () => {
             interval: YEAR,
         }
         const wrapper = shallow(<SumAllFavoriteViewsChart {...props} />)
-        const graph = wrapper.find(Line)
 
-        expect(graph).toHaveLength(1)
+        expect(wrapper.exists(Line)).toBe(true)
     })
 
     it('renders the expected titles', () => {

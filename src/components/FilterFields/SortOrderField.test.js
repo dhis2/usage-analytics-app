@@ -10,9 +10,10 @@ describe('<SortOrderField>', () => {
             setSortOrder: () => {},
         }
         const wrapper = mount(<SortOrderField {...props} />)
-        const label = wrapper.find('label')
+        const selector = 'label'
+        const label = wrapper.find(selector)
 
-        expect(label).toHaveLength(1)
+        expect(wrapper.exists(selector)).toBe(true)
         expect(label.text()).toBe('Sort Order')
     })
 
