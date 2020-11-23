@@ -31,6 +31,10 @@ AverageAllFavoriteViewsChart.propTypes = {
             averageEventReportViews: PropTypes.number.isRequired,
             averageMapViews: PropTypes.number.isRequired,
             averagePivotTableViews: PropTypes.number.isRequired,
+            day: PropTypes.number,
+            month: PropTypes.number,
+            week: PropTypes.number,
+            year: PropTypes.number,
         })
     ).isRequired,
     interval: PropTypes.string.isRequired,

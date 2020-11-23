@@ -1,0 +1,38 @@
+import React from 'react'
+import { shallow } from 'enzyme'
+import { Line } from 'react-chartjs-2'
+import { DATA_VALUES } from '../../constants/categories.js'
+import { YEAR } from '../../constants/intervals.js'
+import DataValuesChart from './DataValuesChart.js'
+import ChartWrapper from './ChartWrapper.js'
+
+describe('<DataValuesChart>', () => {
+    it('renders the line graph without errors', () => {
+        const props = {
+            data: [],
+            category: DATA_VALUES,
+            interval: YEAR,
+        }
+        const wrapper = shallow(<DataValuesChart {...props} />)
+        const graph = wrapper.find(Line)
+
+        expect(graph).toHaveLength(1)
+    })
+
+    it('renders the expected titles', () => {
+        const props = {
+            data: [],
+            category: DATA_VALUES,
+            interval: YEAR,
+        }
+        const wrapper = shallow(<DataValuesChart {...props} />)
+        const titleComponent = wrapper.find(ChartWrapper)
+
+        expect(titleComponent.prop('title')).toMatchInlineSnapshot(
+            `"Data values"`
+        )
+        expect(titleComponent.prop('subtitle')).toMatchInlineSnapshot(
+            `"Number of data values saved in the system"`
+        )
+    })
+})

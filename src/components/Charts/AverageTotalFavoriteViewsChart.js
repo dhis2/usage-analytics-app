@@ -26,6 +26,10 @@ AverageTotalFavoriteViewsChart.propTypes = {
     data: PropTypes.arrayOf(
         PropTypes.shape({
             averageViews: PropTypes.number.isRequired,
+            day: PropTypes.number,
+            month: PropTypes.number,
+            week: PropTypes.number,
+            year: PropTypes.number,
         })
     ).isRequired,
     interval: PropTypes.string.isRequired,
