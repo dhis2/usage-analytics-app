@@ -23,6 +23,10 @@ DataValuesChart.propTypes = {
     data: PropTypes.arrayOf(
         PropTypes.shape({
             savedDataValues: PropTypes.number.isRequired,
+            day: PropTypes.number,
+            month: PropTypes.number,
+            week: PropTypes.number,
+            year: PropTypes.number,
         })
     ),
 }

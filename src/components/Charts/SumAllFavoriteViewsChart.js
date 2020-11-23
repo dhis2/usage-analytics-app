@@ -32,6 +32,10 @@ SumAllFavoriteViewsChart.propTypes = {
             eventReportViews: PropTypes.number.isRequired,
             mapViews: PropTypes.number.isRequired,
             pivotTableViews: PropTypes.number.isRequired,
+            day: PropTypes.number,
+            month: PropTypes.number,
+            week: PropTypes.number,
+            year: PropTypes.number,
         })
     ).isRequired,
     interval: PropTypes.string.isRequired,

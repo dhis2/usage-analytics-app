@@ -28,6 +28,10 @@ FavoritesSavedChart.propTypes = {
             savedIndicators: PropTypes.number.isRequired,
             savedMaps: PropTypes.number.isRequired,
             savedPivotTables: PropTypes.number.isRequired,
+            day: PropTypes.number,
+            month: PropTypes.number,
+            week: PropTypes.number,
+            year: PropTypes.number,
         })
     ).isRequired,
     interval: PropTypes.string.isRequired,

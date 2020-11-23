@@ -23,6 +23,10 @@ UsersChart.propTypes = {
         PropTypes.shape({
             activeUsers: PropTypes.number.isRequired,
             users: PropTypes.number.isRequired,
+            day: PropTypes.number,
+            month: PropTypes.number,
+            week: PropTypes.number,
+            year: PropTypes.number,
         })
     ).isRequired,
     interval: PropTypes.string.isRequired,

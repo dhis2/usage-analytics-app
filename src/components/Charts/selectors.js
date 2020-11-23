@@ -1,5 +1,5 @@
 import i18n from '@dhis2/d2-i18n'
-import CATEGORIES from '../../constants/categories.js'
+import categories from '../../constants/categories.js'
 import { getIntervalDate } from '../../selectors/date.js'
 
 /**
@@ -7,16 +7,16 @@ import { getIntervalDate } from '../../selectors/date.js'
  * so eslint will warn us if we use a constant that doesn't exist.
  */
 
-const COLOR_1 = '#7cb5ec'
-const COLOR_2 = '#cc6600'
-const COLOR_3 = '#cccc00'
-const COLOR_4 = '#66cc00'
-const COLOR_5 = '#ff0066'
-const COLOR_6 = '#000000'
-const COLOR_7 = '#00cccc'
+export const COLOR_1 = '#7cb5ec'
+export const COLOR_2 = '#cc6600'
+export const COLOR_3 = '#cccc00'
+export const COLOR_4 = '#66cc00'
+export const COLOR_5 = '#ff0066'
+export const COLOR_6 = '#000000'
+export const COLOR_7 = '#00cccc'
 
 export const getTitles = selected => {
-    const selectedCategory = CATEGORIES.find(
+    const selectedCategory = categories.find(
         category => category.value === selected
     )
 
