@@ -20,7 +20,8 @@
         "@dhis2/cli-app-scripts": "^5.4.1",
         "@dhis2/cli-style": "^7.2.1",
         "enzyme": "^3.10.0",
-        "enzyme-adapter-react-16": "^1.15.1"
+        "enzyme-adapter-react-16": "^1.15.1",
+        "wait-for-expect": "^3.0.2"
     },
     "jest": {
         "setupFilesAfterEnv": [
