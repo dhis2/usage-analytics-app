@@ -10,9 +10,10 @@ describe('<PageSizeField>', () => {
             setPageSize: () => {},
         }
         const wrapper = mount(<PageSizeField {...props} />)
-        const label = wrapper.find('label')
+        const selector = 'label'
+        const label = wrapper.find(selector)
 
-        expect(label).toHaveLength(1)
+        expect(wrapper.exists(selector)).toBe(true)
         expect(label.text()).toBe('Page Size')
     })
 

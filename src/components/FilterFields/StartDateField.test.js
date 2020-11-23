@@ -11,9 +11,10 @@ describe('<StartDateField>', () => {
             setStartDateError: () => {},
         }
         const wrapper = mount(<StartDateField {...props} />)
-        const label = wrapper.find('label')
+        const selector = 'label'
+        const label = wrapper.find(selector)
 
-        expect(label).toHaveLength(1)
+        expect(wrapper.exists(selector)).toBe(true)
         expect(label.text()).toBe('Start Date')
     })
 
@@ -26,9 +27,10 @@ describe('<StartDateField>', () => {
             setStartDateError: () => {},
         }
         const wrapper = mount(<StartDateField {...props} />)
-        const input = wrapper.find('input')
+        const selector = 'input'
+        const input = wrapper.find(selector)
 
-        expect(input).toHaveLength(1)
+        expect(wrapper.exists(selector)).toBe(true)
         expect(input.prop('value')).toBe(expected)
     })
 
@@ -60,11 +62,12 @@ describe('<StartDateField>', () => {
             setStartDateError: () => {},
         }
         const wrapper = mount(<StartDateField {...props} />)
-        const error = wrapper.find({
+        const selector = {
             'data-test': 'dhis2-uiwidgets-inputfield-validation',
-        })
+        }
+        const error = wrapper.find(selector)
 
-        expect(error).toHaveLength(1)
+        expect(wrapper.exists(selector)).toBe(true)
         expect(error.text()).toBe(expected)
     })
 

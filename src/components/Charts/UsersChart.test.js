@@ -14,9 +14,8 @@ describe('<UsersChart>', () => {
             interval: YEAR,
         }
         const wrapper = shallow(<UsersChart {...props} />)
-        const graph = wrapper.find(Line)
 
-        expect(graph).toHaveLength(1)
+        expect(wrapper.exists(Line)).toBe(true)
     })
 
     it('renders the expected titles', () => {
