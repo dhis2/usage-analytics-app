@@ -19,7 +19,6 @@ const fields = [
 ]
 
 const FavoritesSavedVisualization = ({
-    category,
     endDate,
     interval,
     isIntervalStale,
@@ -36,11 +35,7 @@ const FavoritesSavedVisualization = ({
     >
         {data => (
             <Fragment>
-                <FavoritesSavedChart
-                    category={category}
-                    data={data}
-                    interval={interval}
-                />
+                <FavoritesSavedChart data={data} interval={interval} />
                 <FavoritesSavedTable data={data} interval={interval} />
             </Fragment>
         )}
@@ -48,7 +43,6 @@ const FavoritesSavedVisualization = ({
 )
 
 FavoritesSavedVisualization.propTypes = {
-    category: PropTypes.string.isRequired,
     endDate: PropTypes.string.isRequired,
     interval: PropTypes.string.isRequired,
     isIntervalStale: PropTypes.bool.isRequired,

@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from '@dhis2/prop-types'
 import { Line } from 'react-chartjs-2'
+import { FAVORITE_VIEWS } from '../../constants/categories.js'
 import ChartWrapper from './ChartWrapper.js'
 import {
     getTitles,
@@ -9,8 +10,8 @@ import {
 } from './selectors.js'
 import options from './options.js'
 
-const SumAllFavoriteViewsChart = ({ data, category, interval }) => {
-    const { title, subtitle } = getTitles(category)
+const SumAllFavoriteViewsChart = ({ data, interval }) => {
+    const { title, subtitle } = getTitles(FAVORITE_VIEWS)
     const labels = getLabels(data, interval)
     const datasets = getSumAllFavoriteViewsDatasets(data)
 
@@ -22,7 +23,6 @@ const SumAllFavoriteViewsChart = ({ data, category, interval }) => {
 }
 
 SumAllFavoriteViewsChart.propTypes = {
-    category: PropTypes.string.isRequired,
     data: PropTypes.arrayOf(
         PropTypes.shape({
             chartViews: PropTypes.number.isRequired,

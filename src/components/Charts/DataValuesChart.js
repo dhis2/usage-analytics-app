@@ -1,12 +1,13 @@
 import React from 'react'
 import PropTypes from '@dhis2/prop-types'
 import { Line } from 'react-chartjs-2'
+import { DATA_VALUES } from '../../constants/categories.js'
 import ChartWrapper from './ChartWrapper.js'
 import { getTitles, getLabels, getDataValuesDatasets } from './selectors.js'
 import options from './options.js'
 
-const DataValuesChart = ({ data, category, interval }) => {
-    const { title, subtitle } = getTitles(category)
+const DataValuesChart = ({ data, interval }) => {
+    const { title, subtitle } = getTitles(DATA_VALUES)
     const labels = getLabels(data, interval)
     const datasets = getDataValuesDatasets(data)
 
@@ -18,7 +19,6 @@ const DataValuesChart = ({ data, category, interval }) => {
 }
 
 DataValuesChart.propTypes = {
-    category: PropTypes.string.isRequired,
     interval: PropTypes.string.isRequired,
     data: PropTypes.arrayOf(
         PropTypes.shape({

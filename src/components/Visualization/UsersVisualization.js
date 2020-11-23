@@ -7,7 +7,6 @@ import { DataStatisticsQuery } from '../Queries/index.js'
 const fields = ['year', 'month', 'week', 'day', 'activeUsers', 'users']
 
 const UsersVisualization = ({
-    category,
     endDate,
     interval,
     isIntervalStale,
@@ -24,11 +23,7 @@ const UsersVisualization = ({
     >
         {data => (
             <Fragment>
-                <UsersChart
-                    category={category}
-                    data={data}
-                    interval={interval}
-                />
+                <UsersChart data={data} interval={interval} />
                 <UsersTable data={data} interval={interval} />
             </Fragment>
         )}
@@ -36,7 +31,6 @@ const UsersVisualization = ({
 )
 
 UsersVisualization.propTypes = {
-    category: PropTypes.string.isRequired,
     endDate: PropTypes.string.isRequired,
     interval: PropTypes.string.isRequired,
     isIntervalStale: PropTypes.bool.isRequired,
