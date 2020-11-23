@@ -1,12 +1,13 @@
 import React from 'react'
 import PropTypes from '@dhis2/prop-types'
 import { Line } from 'react-chartjs-2'
+import { FAVORITES_SAVED } from '../../constants/categories.js'
 import ChartWrapper from './ChartWrapper.js'
 import { getTitles, getLabels, getFavoritesSavedDatasets } from './selectors.js'
 import options from './options.js'
 
-const FavoritesSavedChart = ({ data, category, interval }) => {
-    const { title, subtitle } = getTitles(category)
+const FavoritesSavedChart = ({ data, interval }) => {
+    const { title, subtitle } = getTitles(FAVORITES_SAVED)
     const labels = getLabels(data, interval)
     const datasets = getFavoritesSavedDatasets(data)
 
@@ -18,7 +19,6 @@ const FavoritesSavedChart = ({ data, category, interval }) => {
 }
 
 FavoritesSavedChart.propTypes = {
-    category: PropTypes.string.isRequired,
     data: PropTypes.arrayOf(
         PropTypes.shape({
             savedCharts: PropTypes.number.isRequired,

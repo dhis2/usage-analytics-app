@@ -40,7 +40,6 @@ const Visualization = ({
         case DATA_VALUES:
             return (
                 <DataValuesVisualization
-                    category={category}
                     endDate={endDate}
                     interval={interval}
                     isIntervalStale={isIntervalStale}
@@ -51,7 +50,6 @@ const Visualization = ({
         case USERS:
             return (
                 <UsersVisualization
-                    category={category}
                     endDate={endDate}
                     interval={interval}
                     isIntervalStale={isIntervalStale}
@@ -62,7 +60,6 @@ const Visualization = ({
         case FAVORITES_SAVED:
             return (
                 <FavoritesSavedVisualization
-                    category={category}
                     endDate={endDate}
                     interval={interval}
                     isIntervalStale={isIntervalStale}
@@ -74,7 +71,6 @@ const Visualization = ({
             return (
                 <FavoriteViewsVisualization
                     aggregation={aggregation}
-                    category={category}
                     chartType={chartType}
                     endDate={endDate}
                     interval={interval}

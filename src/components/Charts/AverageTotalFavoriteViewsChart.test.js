@@ -1,7 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import { Line } from 'react-chartjs-2'
-import { FAVORITE_VIEWS } from '../../constants/categories.js'
 import { YEAR } from '../../constants/intervals.js'
 import AverageTotalFavoriteViewsChart from './AverageTotalFavoriteViewsChart.js'
 import ChartWrapper from './ChartWrapper.js'
@@ -10,7 +9,6 @@ describe('<AverageTotalFavoriteViewsChart>', () => {
     it('renders the line graph without errors', () => {
         const props = {
             data: [],
-            category: FAVORITE_VIEWS,
             interval: YEAR,
         }
         const wrapper = shallow(<AverageTotalFavoriteViewsChart {...props} />)
@@ -21,7 +19,6 @@ describe('<AverageTotalFavoriteViewsChart>', () => {
     it('renders the expected titles', () => {
         const props = {
             data: [],
-            category: FAVORITE_VIEWS,
             interval: YEAR,
         }
         const wrapper = shallow(<AverageTotalFavoriteViewsChart {...props} />)

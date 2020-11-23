@@ -41,7 +41,6 @@ const averageFields = [
 
 const FavoriteViewsVisualization = ({
     aggregation,
-    category,
     chartType,
     endDate,
     interval,
@@ -66,14 +65,12 @@ const FavoriteViewsVisualization = ({
                     <Fragment>
                         {isAll ? (
                             <SumAllFavoriteViewsChart
-                                category={category}
                                 data={data}
                                 interval={interval}
                             />
                         ) : (
                             <SumTotalFavoriteViewsChart
                                 data={data}
-                                category={category}
                                 interval={interval}
                             />
                         )}
@@ -100,13 +97,11 @@ const FavoriteViewsVisualization = ({
                 <Fragment>
                     {isAll ? (
                         <AverageAllFavoriteViewsChart
-                            category={category}
                             data={data}
                             interval={interval}
                         />
                     ) : (
                         <AverageTotalFavoriteViewsChart
-                            category={category}
                             data={data}
                             interval={interval}
                         />
@@ -123,7 +118,6 @@ const FavoriteViewsVisualization = ({
 
 FavoriteViewsVisualization.propTypes = {
     aggregation: PropTypes.string.isRequired,
-    category: PropTypes.string.isRequired,
     chartType: PropTypes.string.isRequired,
     endDate: PropTypes.string.isRequired,
     interval: PropTypes.string.isRequired,
