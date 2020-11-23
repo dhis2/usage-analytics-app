@@ -6,6 +6,6 @@ describe('<AppTitle>', () => {
     it('renders the expected app title', () => {
         const wrapper = shallow(<AppTitle />)
 
-        expect(wrapper.text()).toBe('Usage Analytics')
+        expect(wrapper.text()).toMatchInlineSnapshot(`"Usage Analytics"`)
     })
 })
