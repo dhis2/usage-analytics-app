@@ -46,8 +46,6 @@ describe('<Filters>', () => {
         }
         const wrapper = mount(<Filters {...props} />)
 
-        expect.assertions(expectedFields.length)
-
         expectedFields.forEach(field => {
             expect(wrapper.exists(field)).toBe(true)
         })
@@ -66,8 +64,6 @@ describe('<Filters>', () => {
         }
         const wrapper = mount(<Filters {...props} />)
 
-        expect.assertions(expectedFields.length)
-
         expectedFields.forEach(field => {
             expect(wrapper.exists(field)).toBe(true)
         })
@@ -80,8 +76,6 @@ describe('<Filters>', () => {
             category: DATA_VALUES,
         }
         const wrapper = mount(<Filters {...props} />)
-
-        expect.assertions(expectedFields.length)
 
         expectedFields.forEach(field => {
             expect(wrapper.exists(field)).toBe(true)
@@ -96,8 +90,6 @@ describe('<Filters>', () => {
         }
         const wrapper = mount(<Filters {...props} />)
 
-        expect.assertions(expectedFields.length)
-
         expectedFields.forEach(field => {
             expect(wrapper.exists(field)).toBe(true)
         })
@@ -110,8 +102,6 @@ describe('<Filters>', () => {
             category: FAVORITES_SAVED,
         }
         const wrapper = mount(<Filters {...props} />)
-
-        expect.assertions(expectedFields.length)
 
         expectedFields.forEach(field => {
             expect(wrapper.exists(field)).toBe(true)
