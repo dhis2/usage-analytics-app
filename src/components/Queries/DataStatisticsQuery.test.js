@@ -1,13 +1,30 @@
 import React from 'react'
 import { mount } from 'enzyme'
 import { CustomDataProvider } from '@dhis2/app-runtime'
+import { act } from 'react-dom/test-utils'
 import waitForExpect from 'wait-for-expect'
 import { YEAR } from '../../constants/intervals.js'
 import DataStatisticsQuery from './DataStatisticsQuery.js'
 
+/**
+ * This allows react to update the wrapper after the async app runtime logic has
+ * done its thing and updated state.
+ *
+ * - https://dev.to/dannypule/fix-the-not-wrapped-in-act-warning-simple-solution-3lj1
+ * - https://reactjs.org/docs/testing-recipes.html#act
+ */
+
+const update = wrapper => () =>
+    new Promise(resolve => {
+        setImmediate(() => {
+            wrapper.update()
+            resolve()
+        })
+    })
+
 describe('<DataStatisticsQuery>', () => {
     describe('rendering a spinner', () => {
-        it('renders a spinner if it has not fetched yet', () => {
+        it('renders a spinner initially', async () => {
             const spy = jest.fn()
             const data = { dataStatistics: spy }
             const props = {
@@ -26,37 +43,11 @@ describe('<DataStatisticsQuery>', () => {
                 </CustomDataProvider>
             )
 
-            expect(spy).not.toHaveBeenCalled()
-            expect(wrapper.exists({ role: 'progressbar' })).toBe(true)
-
-            wrapper.unmount()
-        })
-
-        it('renders a spinner if it is loading', async () => {
-            const spy = jest.fn()
-            const data = { dataStatistics: spy }
-            const props = {
-                children: () => {},
-                endDate: '2020-01-01',
-                fields: ['*'],
-                interval: YEAR,
-                isIntervalStale: false,
-                setIsIntervalStale: () => {},
-                startDate: '2010-01-01',
-            }
-
-            const wrapper = mount(
-                <CustomDataProvider data={data}>
-                    <DataStatisticsQuery {...props} />
-                </CustomDataProvider>
-            )
-
+            await act(update(wrapper))
             await waitForExpect(() => {
-                expect(spy).toHaveBeenCalled()
+                expect(spy).not.toHaveBeenCalled()
                 expect(wrapper.exists({ role: 'progressbar' })).toBe(true)
             })
-
-            wrapper.unmount()
         })
 
         it('renders a spinner if the interval is stale', async () => {
@@ -78,17 +69,16 @@ describe('<DataStatisticsQuery>', () => {
                 </CustomDataProvider>
             )
 
+            await act(update(wrapper))
             await waitForExpect(() => {
                 expect(spy).toHaveBeenCalled()
                 expect(wrapper.exists({ role: 'progressbar' })).toBe(true)
             })
-
-            wrapper.unmount()
         })
     })
 
     describe('conditional fetching', () => {
-        it('does not fetch if dates are invalid', () => {
+        it('does not fetch if dates are invalid', async () => {
             const spy = jest.fn()
             const data = { dataStatistics: spy }
             const props = {
@@ -107,9 +97,10 @@ describe('<DataStatisticsQuery>', () => {
                 </CustomDataProvider>
             )
 
-            expect(spy).not.toHaveBeenCalled()
-
-            wrapper.unmount()
+            await act(update(wrapper))
+            await waitForExpect(() => {
+                expect(spy).not.toHaveBeenCalled()
+            })
         })
     })
 
@@ -137,13 +128,10 @@ describe('<DataStatisticsQuery>', () => {
                 </CustomDataProvider>
             )
 
+            await act(update(wrapper))
             await waitForExpect(() => {
-                wrapper.update()
-
                 expect(spy).toHaveBeenCalledWith(false)
             })
-
-            wrapper.unmount()
         })
 
         it('displays errors it encounters', async () => {
@@ -174,17 +162,14 @@ describe('<DataStatisticsQuery>', () => {
                 </CustomDataProvider>
             )
 
+            await act(update(wrapper))
             await waitForExpect(() => {
-                wrapper.update()
-
                 const title = wrapper.find(titleSelector)
                 const message = wrapper.find(messageSelector)
 
                 expect(title.text()).toBe('Error whilst fetching data')
                 expect(message.text()).toBe('The error message was: "Error".')
             })
-
-            wrapper.unmount()
         })
 
         it('renders a fallback message for errors', async () => {
@@ -215,9 +200,8 @@ describe('<DataStatisticsQuery>', () => {
                 </CustomDataProvider>
             )
 
+            await act(update(wrapper))
             await waitForExpect(() => {
-                wrapper.update()
-
                 const title = wrapper.find(titleSelector)
                 const message = wrapper.find(messageSelector)
 
@@ -226,8 +210,6 @@ describe('<DataStatisticsQuery>', () => {
                     'There was no error message included with the error.'
                 )
             })
-
-            wrapper.unmount()
         })
     })
 
@@ -252,11 +234,10 @@ describe('<DataStatisticsQuery>', () => {
                 </CustomDataProvider>
             )
 
+            await act(update(wrapper))
             await waitForExpect(() => {
                 expect(spy).toHaveBeenCalledWith(expected)
             })
-
-            wrapper.unmount()
         })
 
         it('calls setIsIntervalStale with false when data has been received', async () => {
@@ -280,12 +261,11 @@ describe('<DataStatisticsQuery>', () => {
                 </CustomDataProvider>
             )
 
+            await act(update(wrapper))
             await waitForExpect(() => {
                 expect(children).toHaveBeenCalledWith(expected)
                 expect(setIsIntervalStale).toHaveBeenCalledWith(false)
             })
-
-            wrapper.unmount()
         })
     })
 })
