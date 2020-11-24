@@ -23,7 +23,7 @@ const update = wrapper => () =>
 
 describe('<TopFavoritesQuery>', () => {
     describe('rendering a spinner', () => {
-        it('renders a spinner initially', async () => {
+        it('renders a spinner when loading', async () => {
             const data = { 'dataStatistics/favorites': 'data' }
             const props = {
                 children: () => null,
@@ -34,10 +34,12 @@ describe('<TopFavoritesQuery>', () => {
             }
 
             const wrapper = mount(
-                <CustomDataProvider data={data}>
+                <CustomDataProvider data={data} options={{ loadForever: true }}>
                     <TopFavoritesQuery {...props} />
                 </CustomDataProvider>
             )
+
+            await act(update(wrapper))
 
             expect(wrapper.exists({ role: 'progressbar' })).toBe(true)
         })
