@@ -1,3 +1,35 @@
+# [25.2.0](https://github.com/dhis2/usage-analytics-app/compare/v25.1.12...v25.2.0) (2020-11-26)
+
+
+### Bug Fixes
+
+* **app:** remove duplicate cssreset ([6042c87](https://github.com/dhis2/usage-analytics-app/commit/6042c87259d64c8c7bc9c044418e8e817f37f471))
+* **app:** remove unnecessary styles ([b462278](https://github.com/dhis2/usage-analytics-app/commit/b462278f23fe63da90e8124470b2014c35f1b560))
+* **chart:** remove responsive width hack ([827ad4a](https://github.com/dhis2/usage-analytics-app/commit/827ad4aa49d002eff2d187b203b8f6824b856f46))
+* **chart:** set options globally per line chart ([87996a7](https://github.com/dhis2/usage-analytics-app/commit/87996a71332cedae63b7f624364c12cd45987603))
+* **error-handling:** show noticebox with error instead of throwing ([bf62069](https://github.com/dhis2/usage-analytics-app/commit/bf6206977a34648f74907b81ee8ccd632b99df38))
+* **prop-types:** update all prop-types ([f35f909](https://github.com/dhis2/usage-analytics-app/commit/f35f909c9f01f8e141b993c8f496cbc66ca10260))
+* **selectors:** use consistent naming for all selectors ([98e442c](https://github.com/dhis2/usage-analytics-app/commit/98e442c37867f532a2a759cf60fea74d352c9400))
+* **styles:** use ui theme values where possible ([976de59](https://github.com/dhis2/usage-analytics-app/commit/976de596a19fa96e3ff147612f225d2bfce8a46f))
+* **translations:** remove underscore from interpolation ([b710b87](https://github.com/dhis2/usage-analytics-app/commit/b710b878d9a1946af1bda91c05966d3e34f73ff0))
+* **translations:** update translations ([b69c80e](https://github.com/dhis2/usage-analytics-app/commit/b69c80e75288c194e653c69bd7c1c789b8d6cb87))
+
+
+### Features
+
+* **chart:** add initial data values chart ([47a1d40](https://github.com/dhis2/usage-analytics-app/commit/47a1d40d7ed98eda6697b23667d082f06ed8e6d7))
+* **datavalueschart:** finalize extracting data values chart logic ([af721b7](https://github.com/dhis2/usage-analytics-app/commit/af721b7e2a8a0549151622dd0cd144c830601ed2))
+* **daterange:** validate date range input ([0524e13](https://github.com/dhis2/usage-analytics-app/commit/0524e1347a2d379319a56ee386b4b00036fe1f2e))
+* **favoritessaved:** add favorites saved visualization ([cbdb44e](https://github.com/dhis2/usage-analytics-app/commit/cbdb44ef00eb20b8ba3ea21f745850cb722e3a28))
+* **favoriteviews:** add favorite views charts ([a5417cc](https://github.com/dhis2/usage-analytics-app/commit/a5417cc8751767a98b47a68c2a9dfe628ba4daa1))
+* **favoriteviews:** add favorite views tables ([f728957](https://github.com/dhis2/usage-analytics-app/commit/f728957b95806ba9dc733bb48bef9e20297c7f25))
+* **filterfields:** add prop-types ([7edbdb6](https://github.com/dhis2/usage-analytics-app/commit/7edbdb6ccd010d6ce1b36d04ec2150847197c91f))
+* **layout:** add margin ([957d854](https://github.com/dhis2/usage-analytics-app/commit/957d854643bcd3625f8a639d69d8392af8a076d1))
+* **queries:** center loading spinners ([25bab62](https://github.com/dhis2/usage-analytics-app/commit/25bab62aa1d39cd6df0f7473d67e90b9dbe505a8))
+* **table:** add card wrapper around table ([8d430c5](https://github.com/dhis2/usage-analytics-app/commit/8d430c59827ebe12c5f7154de0489dedd4510c8a))
+* **topfavorites:** add top favorites visualization ([4e4b071](https://github.com/dhis2/usage-analytics-app/commit/4e4b0713955eff0c8b71684aaa526700bed2955f))
+* **users:** add users visualization ([6badb43](https://github.com/dhis2/usage-analytics-app/commit/6badb43535daa30e85f1b80db8f0e038bafe46b3))
+
 ## [25.1.12](https://github.com/dhis2/usage-analytics-app/compare/v25.1.11...v25.1.12) (2020-11-17)
 
 
