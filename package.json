@@ -14,7 +14,7 @@
         "@dhis2/prop-types": "^1.6.4",
         "chart.js": "^2.9.1",
         "moment": "^2.29.1",
-        "react-chartjs-2": "^2.9.0"
+        "react-chartjs-2": "^2.11.1"
     },
     "devDependencies": {
         "@dhis2/cli-app-scripts": "^5.4.1",
