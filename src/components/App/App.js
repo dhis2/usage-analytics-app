@@ -16,7 +16,6 @@ import {
 import CategoryField from '../CategoryField/index.js'
 import AppTitle from '../AppTitle/index.js'
 import Visualization from '../Visualization/index.js'
-import './App.css'
 import createDefaultDates from './createDefaultDates.js'
 
 const App = () => {
