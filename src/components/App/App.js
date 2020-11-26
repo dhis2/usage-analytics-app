@@ -28,10 +28,12 @@ const App = () => {
     const [chartType, setChartType] = useState(ALL)
     const [endDate, setEndDate] = useState(initialEndDate)
     const [eventType, setEventType] = useState(CHART_VIEW)
-    const [interval, setInterval] = useState(WEEK)
     const [pageSize, setPageSize] = useState(PS_25)
     const [sortOrder, setSortOrder] = useState(ASC)
     const [startDate, setStartDate] = useState(initialStartDate)
+
+    // We're calling the setter setReportInterval so we don't shadow the global setInterval
+    const [interval, setReportInterval] = useState(WEEK)
 
     /**
      * The rendering of the different date intervals in the charts and tables
@@ -41,7 +43,7 @@ const App = () => {
     const [isIntervalStale, setIsIntervalStale] = useState(false)
     const setIsStaleAndInterval = interval => {
         setIsIntervalStale(true)
-        setInterval(interval)
+        setReportInterval(interval)
     }
 
     return (
@@ -67,7 +69,7 @@ const App = () => {
                         setChartType={setChartType}
                         setEndDate={setEndDate}
                         setEventType={setEventType}
-                        setInterval={setIsStaleAndInterval}
+                        setReportInterval={setIsStaleAndInterval}
                         setPageSize={setPageSize}
                         setSortOrder={setSortOrder}
                         setStartDate={setStartDate}

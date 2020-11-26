@@ -4,11 +4,11 @@ import i18n from '@dhis2/d2-i18n'
 import { SingleSelectField, SingleSelectOption } from '@dhis2/ui'
 import intervals from '../../constants/intervals.js'
 
-const IntervalField = ({ interval, setInterval }) => (
+const IntervalField = ({ interval, setReportInterval }) => (
     <SingleSelectField
         selected={interval}
         onChange={({ selected }) => {
-            setInterval(selected)
+            setReportInterval(selected)
         }}
         label={i18n.t('Interval')}
     >
@@ -20,7 +20,7 @@ const IntervalField = ({ interval, setInterval }) => (
 
 IntervalField.propTypes = {
     interval: PropTypes.string.isRequired,
-    setInterval: PropTypes.func.isRequired,
+    setReportInterval: PropTypes.func.isRequired,
 }
 
 export default IntervalField

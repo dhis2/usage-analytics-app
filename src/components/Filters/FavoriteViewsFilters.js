@@ -15,7 +15,7 @@ const FavoriteViewsFilters = ({
     setAggregation,
     setChartType,
     setEndDate,
-    setInterval,
+    setReportInterval,
     setStartDate,
     startDate,
 }) => (
@@ -26,7 +26,10 @@ const FavoriteViewsFilters = ({
             endDate={endDate}
             setEndDate={setEndDate}
         />
-        <IntervalField interval={interval} setInterval={setInterval} />
+        <IntervalField
+            interval={interval}
+            setReportInterval={setReportInterval}
+        />
         <AggregationField
             aggregation={aggregation}
             setAggregation={setAggregation}
@@ -43,7 +46,7 @@ FavoriteViewsFilters.propTypes = {
     setAggregation: PropTypes.func.isRequired,
     setChartType: PropTypes.func.isRequired,
     setEndDate: PropTypes.func.isRequired,
-    setInterval: PropTypes.func.isRequired,
+    setReportInterval: PropTypes.func.isRequired,
     setStartDate: PropTypes.func.isRequired,
     startDate: PropTypes.string.isRequired,
 }

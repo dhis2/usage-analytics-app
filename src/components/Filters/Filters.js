@@ -27,7 +27,7 @@ const Filters = ({
     setChartType,
     setEndDate,
     setEventType,
-    setInterval,
+    setReportInterval,
     setPageSize,
     setSortOrder,
     setStartDate,
@@ -54,7 +54,7 @@ const Filters = ({
                     endDate={endDate}
                     setEndDate={setEndDate}
                     interval={interval}
-                    setInterval={setInterval}
+                    setReportInterval={setReportInterval}
                     aggregation={aggregation}
                     setAggregation={setAggregation}
                     chartType={chartType}
@@ -69,7 +69,7 @@ const Filters = ({
                     endDate={endDate}
                     setEndDate={setEndDate}
                     interval={interval}
-                    setInterval={setInterval}
+                    setReportInterval={setReportInterval}
                 />
             )
         case USERS:
@@ -80,7 +80,7 @@ const Filters = ({
                     endDate={endDate}
                     setEndDate={setEndDate}
                     interval={interval}
-                    setInterval={setInterval}
+                    setReportInterval={setReportInterval}
                 />
             )
         case FAVORITES_SAVED:
@@ -91,7 +91,7 @@ const Filters = ({
                     endDate={endDate}
                     setEndDate={setEndDate}
                     interval={interval}
-                    setInterval={setInterval}
+                    setReportInterval={setReportInterval}
                 />
             )
         default:
@@ -115,8 +115,8 @@ Filters.propTypes = {
     setChartType: PropTypes.func.isRequired,
     setEndDate: PropTypes.func.isRequired,
     setEventType: PropTypes.func.isRequired,
-    setInterval: PropTypes.func.isRequired,
     setPageSize: PropTypes.func.isRequired,
+    setReportInterval: PropTypes.func.isRequired,
     setSortOrder: PropTypes.func.isRequired,
     setStartDate: PropTypes.func.isRequired,
     sortOrder: PropTypes.string.isRequired,

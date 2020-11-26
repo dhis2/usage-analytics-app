@@ -7,7 +7,7 @@ describe('<IntervalField>', () => {
     it('has the expected label', () => {
         const props = {
             interval: DAY,
-            setInterval: () => {},
+            setReportInterval: () => {},
         }
         const wrapper = mount(<IntervalField {...props} />)
         const selector = 'label'
@@ -20,7 +20,7 @@ describe('<IntervalField>', () => {
     it('shows the current selection', () => {
         const props = {
             interval: DAY,
-            setInterval: () => {},
+            setReportInterval: () => {},
         }
         const wrapper = mount(<IntervalField {...props} />)
         const singleselect = wrapper.find({
@@ -33,7 +33,7 @@ describe('<IntervalField>', () => {
     it('shows the expected options', () => {
         const props = {
             interval: DAY,
-            setInterval: () => {},
+            setReportInterval: () => {},
         }
         const wrapper = mount(<IntervalField {...props} />)
         const input = wrapper.find({ 'data-test': 'dhis2-uicore-select-input' })
@@ -55,11 +55,11 @@ describe('<IntervalField>', () => {
         wrapper.unmount()
     })
 
-    it('calls setInterval with the expected value on selection change', () => {
+    it('calls setReportInterval with the expected value on selection change', () => {
         const spy = jest.fn()
         const props = {
             interval: DAY,
-            setInterval: spy,
+            setReportInterval: spy,
         }
         const wrapper = mount(<IntervalField {...props} />)
         const input = wrapper.find({ 'data-test': 'dhis2-uicore-select-input' })
