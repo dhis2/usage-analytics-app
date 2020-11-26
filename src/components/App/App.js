@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { CssVariables, CssReset } from '@dhis2/ui'
+import { CssVariables } from '@dhis2/ui'
 import { FAVORITE_VIEWS } from '../../constants/categories.js'
 import { WEEK } from '../../constants/intervals.js'
 import { SUM } from '../../constants/aggregations.js'
@@ -48,7 +48,6 @@ const App = () => {
     return (
         <React.Fragment>
             <CssVariables spacers colors />
-            <CssReset />
             <LayoutContainer>
                 <LayoutSidebar>
                     <AppTitle />
