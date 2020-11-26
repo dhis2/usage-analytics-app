@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
-"POT-Creation-Date: 2020-05-28T08:21:23.706Z\n"
+"POT-Creation-Date: 2020-11-19T16:34:58.919Z\n"
 "PO-Revision-Date: 2019-09-02 16:22+0000\n"
 "Last-Translator: Ibatov <ibatovk@who.int>, 2020\n"
 "Language-Team: Uzbek (Cyrillic) (https://www.transifex.com/hisp-uio/teams/100509/uz@Cyrl/)\n"
@@ -15,32 +15,89 @@ msgstr ""
 "Language: uz@Cyrl\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-msgid "Values"
-msgstr "Қийматлар"
-
-msgid "Please use the format yyyy-mm-dd"
-msgstr "Илтимос, санани кк-ой-йййй шаклида киритинг"
-
-msgid "Please fill in both dates"
-msgstr "Илтимос, ҳар иккала санани тўлдиринг"
-
-msgid "End date is before start date"
-msgstr "Якунланиш санаси бошланиш санасидан олдинда"
-
-msgid "Start date is after end date"
-msgstr "Бошланиш санаси якунланиш санасидан кейинда"
-
-msgid "Start Date"
-msgstr "Бошланиш санаси"
-
-msgid "End Date"
-msgstr "Якунланиш Сана"
+msgid "Usage Analytics"
+msgstr "Фойдаланиш таҳлили"
 
 msgid "Category"
 msgstr "Категория"
 
-msgid "Interval"
-msgstr "Интервал"
+msgid "Values"
+msgstr "Қийматлар"
+
+msgid "Data Values"
+msgstr "Маълумотлар Қийматлар"
+
+msgid "Active Users"
+msgstr "Фаол Фойдаланувчилар"
+
+msgid "Total Users"
+msgstr "Жами Фойдаланувчилар"
+
+msgid "Maps"
+msgstr "Хариталар"
+
+msgid "Charts"
+msgstr "Диаграммалар"
+
+msgid "Pivot Tables"
+msgstr "Таянч жадваллар"
+
+msgid "Event Reports"
+msgstr "Ҳодисалар ҳақида ҳисоботлар"
+
+msgid "Event Charts"
+msgstr "Ҳодиса Диаграмма"
+
+msgid "Dashboards"
+msgstr "Бошқарув Панели"
+
+msgid "Indicators"
+msgstr "Индикаторлар"
+
+msgid "Map"
+msgstr "Харита"
+
+msgid "Chart"
+msgstr "Диаграмма"
+
+msgid "Pivot Table"
+msgstr "Таянч Жадвал"
+
+msgid "Event Report"
+msgstr "Ҳодиса Ҳисобот"
+
+msgid "Event Chart"
+msgstr "Ҳодиса Диаграмма"
+
+msgid "Dashboard"
+msgstr "Бошқарув панели"
+
+msgid "Data Set Report"
+msgstr "Маълумотлар тўплами ҳисоботи"
+
+msgid "Total"
+msgstr "Жами"
+
+msgid "Average Map"
+msgstr "Ўртача олинган харита"
+
+msgid "Average Chart"
+msgstr "Ўртача олинган Диаграмма"
+
+msgid "Average Pivot Table"
+msgstr "Ўртача олинган Таянч Жадвал"
+
+msgid "Average Event Report"
+msgstr "Ўртача олинган Ҳодиса Ҳисобот"
+
+msgid "Average Event Chart"
+msgstr "Ўртача олинган Ҳодиса Диаграмма"
+
+msgid "Average Dashboard"
+msgstr "Ўртача олинган Бошқарув панели"
+
+msgid "Average"
+msgstr "Ўртача"
 
 msgid "Aggregation Level"
 msgstr "Аггрегация поғонаси"
@@ -48,8 +105,14 @@ msgstr "Аггрегация поғонаси"
 msgid "Chart Type"
 msgstr "Диаграмма тури"
 
+msgid "End Date"
+msgstr "Якунланиш Сана"
+
 msgid "Event Type"
 msgstr "Тадбир тури"
+
+msgid "Interval"
+msgstr "Интервал"
 
 msgid "Page Size"
 msgstr "Саҳифа ҳажми"
@@ -57,20 +120,53 @@ msgstr "Саҳифа ҳажми"
 msgid "Sort Order"
 msgstr "Саралаш тартиби"
 
-msgid "Usage Analytics"
-msgstr "Фойдаланиш таҳлили"
+msgid "Start Date"
+msgstr "Бошланиш санаси"
 
-msgid "There was an error retrieving the usage analytics data"
-msgstr "Таҳлил маълумотларидан фойдаланишда хатолик юз берди"
+msgid "Start date should be before end date"
+msgstr ""
 
-msgid "Error loading application."
-msgstr "Илова юкланишида хатолик юз берди"
+msgid "Please fill in a date"
+msgstr ""
+
+msgid "Please use the format yyyy-mm-dd"
+msgstr "Илтимос, санани кк-ой-йййй шаклида киритинг"
+
+msgid "Unrecognized category"
+msgstr ""
+
+msgid "The chosen category was not recognized."
+msgstr ""
+
+msgid "Error whilst fetching data"
+msgstr ""
+
+msgid "The error message was: \"{{ MESSAGE }}\"."
+msgstr ""
+
+msgid "There was no error message included with the error."
+msgstr ""
+
+msgid "Date"
+msgstr "Сана"
+
+msgid "Position"
+msgstr "Лавозими"
+
+msgid "Name"
+msgstr "Исми"
+
+msgid "Views"
+msgstr "Кўришлар"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "Created"
+msgstr "Яратилди"
 
 msgid "Sum"
 msgstr "Жамлаш"
-
-msgid "Average"
-msgstr "Ўртача"
 
 msgid "Favorite views"
 msgstr "Танланган кўринишлар"
@@ -102,15 +198,6 @@ msgstr "Тизимда сақланган маълумотлар қийматл�
 msgid "All"
 msgstr "Барчаси"
 
-msgid "Total"
-msgstr "Жами"
-
-msgid "Chart"
-msgstr "Диаграмма"
-
-msgid "Map"
-msgstr "Харита"
-
 msgid "Report table"
 msgstr "Ҳисобот жадвали"
 
@@ -119,9 +206,6 @@ msgstr "Ҳодиса/Тадбир ҳисоботи"
 
 msgid "Event chart"
 msgstr "Ҳодиса/Тадбир диаграммаси"
-
-msgid "Dashboard"
-msgstr "Бошқарув панели"
 
 msgid "Data set report"
 msgstr "Маълумотлар тўплами ҳисоботи"
@@ -137,84 +221,6 @@ msgstr "Ой"
 
 msgid "Year"
 msgstr "Йил"
-
-msgid "Date"
-msgstr "Сана"
-
-msgid "Pivot Table"
-msgstr "Таянч Жадвал"
-
-msgid "Event Report"
-msgstr "Ҳодиса Ҳисобот"
-
-msgid "Event Chart"
-msgstr "Ҳодиса Диаграмма"
-
-msgid "Data Set Report"
-msgstr "Маълумотлар тўплами ҳисоботи"
-
-msgid "Average Map"
-msgstr "Ўртача олинган харита"
-
-msgid "Average Chart"
-msgstr "Ўртача олинган Диаграмма"
-
-msgid "Average Pivot Table"
-msgstr "Ўртача олинган Таянч Жадвал"
-
-msgid "Average Event Report"
-msgstr "Ўртача олинган Ҳодиса Ҳисобот"
-
-msgid "Average Event Chart"
-msgstr "Ўртача олинган Ҳодиса Диаграмма"
-
-msgid "Average Dashboard"
-msgstr "Ўртача олинган Бошқарув панели"
-
-msgid "Maps"
-msgstr "Хариталар"
-
-msgid "Charts"
-msgstr "Диаграммалар"
-
-msgid "Pivot Tables"
-msgstr "Таянч жадваллар"
-
-msgid "Event Reports"
-msgstr "Ҳодисалар ҳақида ҳисоботлар"
-
-msgid "Event Charts"
-msgstr "Ҳодиса Диаграмма"
-
-msgid "Dashboards"
-msgstr "Бошқарув Панели"
-
-msgid "Indicators"
-msgstr "Индикаторлар"
-
-msgid "Active Users"
-msgstr "Фаол Фойдаланувчилар"
-
-msgid "Total Users"
-msgstr "Жами Фойдаланувчилар"
-
-msgid "Position"
-msgstr "Лавозими"
-
-msgid "Name"
-msgstr "Исми"
-
-msgid "Views"
-msgstr "Кўришлар"
-
-msgid "ID"
-msgstr "ID"
-
-msgid "Created"
-msgstr "Яратилди"
-
-msgid "Data Values"
-msgstr "Маълумотлар Қийматлар"
 
 msgid "Ascending"
 msgstr "Ошиш бўйича"

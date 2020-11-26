@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
-"POT-Creation-Date: 2020-05-28T08:21:23.706Z\n"
+"POT-Creation-Date: 2020-11-19T16:34:58.919Z\n"
 "PO-Revision-Date: 2019-09-02 16:22+0000\n"
 "Last-Translator: Caroline Hesthagen Holen <caroline@devotta.no>, 2020\n"
 "Language-Team: Norwegian Bokmål (https://www.transifex.com/hisp-uio/teams/100509/nb/)\n"
@@ -16,32 +16,89 @@ msgstr ""
 "Language: nb\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Values"
-msgstr "Verdier"
-
-msgid "Please use the format yyyy-mm-dd"
-msgstr "Vennligst bruk formatet åååå-mm-dd"
-
-msgid "Please fill in both dates"
-msgstr "Vennligst fyll inn begge datoer"
-
-msgid "End date is before start date"
-msgstr "Sluttdatoen er før startdatoen"
-
-msgid "Start date is after end date"
-msgstr "Startdatoen er etter sluttdatoen"
-
-msgid "Start Date"
-msgstr "Startdato"
-
-msgid "End Date"
-msgstr "Sluttdato"
+msgid "Usage Analytics"
+msgstr "Bruksanalyse"
 
 msgid "Category"
 msgstr "Kategori"
 
-msgid "Interval"
-msgstr "Intervall"
+msgid "Values"
+msgstr "Verdier"
+
+msgid "Data Values"
+msgstr "Dataverdier"
+
+msgid "Active Users"
+msgstr "Aktive brukere"
+
+msgid "Total Users"
+msgstr "Totalt antall brukere"
+
+msgid "Maps"
+msgstr "Kart"
+
+msgid "Charts"
+msgstr "Diagrammer"
+
+msgid "Pivot Tables"
+msgstr "Pivottabeller"
+
+msgid "Event Reports"
+msgstr "Hendelsesrapporter"
+
+msgid "Event Charts"
+msgstr "Hendelsesdiagrammer"
+
+msgid "Dashboards"
+msgstr "Dashbord"
+
+msgid "Indicators"
+msgstr "Indikatorer"
+
+msgid "Map"
+msgstr "Kart"
+
+msgid "Chart"
+msgstr "Diagram"
+
+msgid "Pivot Table"
+msgstr "Pivottabell"
+
+msgid "Event Report"
+msgstr "Hendelsesrapport"
+
+msgid "Event Chart"
+msgstr "Hendelseskart"
+
+msgid "Dashboard"
+msgstr "Dashbord"
+
+msgid "Data Set Report"
+msgstr "Datasettrapport"
+
+msgid "Total"
+msgstr "Totalt"
+
+msgid "Average Map"
+msgstr "Gjennomsnittlig kart"
+
+msgid "Average Chart"
+msgstr "Gjennomsnittlig diagram"
+
+msgid "Average Pivot Table"
+msgstr "Gjennomsnittlig pivottabell"
+
+msgid "Average Event Report"
+msgstr "Gjennomsnittlig hendelsesrapport"
+
+msgid "Average Event Chart"
+msgstr "Gjennomsnittlig hendelsesdiagram"
+
+msgid "Average Dashboard"
+msgstr "Gjennomsnittlig dashbord"
+
+msgid "Average"
+msgstr "Gjennomsnitt"
 
 msgid "Aggregation Level"
 msgstr "Aggregasjonsnivå"
@@ -49,8 +106,14 @@ msgstr "Aggregasjonsnivå"
 msgid "Chart Type"
 msgstr "Diagramtype"
 
+msgid "End Date"
+msgstr "Sluttdato"
+
 msgid "Event Type"
 msgstr "Hendelsestype"
+
+msgid "Interval"
+msgstr "Intervall"
 
 msgid "Page Size"
 msgstr "Sidestørrelse"
@@ -58,20 +121,53 @@ msgstr "Sidestørrelse"
 msgid "Sort Order"
 msgstr "Sorteringsrekkefølge"
 
-msgid "Usage Analytics"
-msgstr "Bruksanalyse"
+msgid "Start Date"
+msgstr "Startdato"
 
-msgid "There was an error retrieving the usage analytics data"
-msgstr "Det oppsto en feil under henting av bruksanalysedataene"
+msgid "Start date should be before end date"
+msgstr ""
 
-msgid "Error loading application."
-msgstr "Feil ved lasting av applikasjon."
+msgid "Please fill in a date"
+msgstr ""
+
+msgid "Please use the format yyyy-mm-dd"
+msgstr "Vennligst bruk formatet åååå-mm-dd"
+
+msgid "Unrecognized category"
+msgstr ""
+
+msgid "The chosen category was not recognized."
+msgstr ""
+
+msgid "Error whilst fetching data"
+msgstr ""
+
+msgid "The error message was: \"{{ MESSAGE }}\"."
+msgstr ""
+
+msgid "There was no error message included with the error."
+msgstr ""
+
+msgid "Date"
+msgstr "Dato"
+
+msgid "Position"
+msgstr "Posisjon"
+
+msgid "Name"
+msgstr "Navn"
+
+msgid "Views"
+msgstr "Visninger"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "Created"
+msgstr "Opprettet"
 
 msgid "Sum"
 msgstr "Sum"
-
-msgid "Average"
-msgstr "Gjennomsnitt"
 
 msgid "Favorite views"
 msgstr "Favorittvisninger"
@@ -103,15 +199,6 @@ msgstr "Antall dataverdier som ble lagret i systemet"
 msgid "All"
 msgstr "Alt"
 
-msgid "Total"
-msgstr "Totalt"
-
-msgid "Chart"
-msgstr "Diagram"
-
-msgid "Map"
-msgstr "Kart"
-
 msgid "Report table"
 msgstr "Rapporttabell"
 
@@ -120,9 +207,6 @@ msgstr "Hendelsesrapport"
 
 msgid "Event chart"
 msgstr "Hendelsesdiagram"
-
-msgid "Dashboard"
-msgstr "Dashbord"
 
 msgid "Data set report"
 msgstr "Datasettrapport"
@@ -138,84 +222,6 @@ msgstr "Uke"
 
 msgid "Year"
 msgstr "År"
-
-msgid "Date"
-msgstr "Dato"
-
-msgid "Pivot Table"
-msgstr "Pivottabell"
-
-msgid "Event Report"
-msgstr "Hendelsesrapport"
-
-msgid "Event Chart"
-msgstr "Hendelseskart"
-
-msgid "Data Set Report"
-msgstr "Datasettrapport"
-
-msgid "Average Map"
-msgstr "Gjennomsnittlig kart"
-
-msgid "Average Chart"
-msgstr "Gjennomsnittlig diagram"
-
-msgid "Average Pivot Table"
-msgstr "Gjennomsnittlig pivottabell"
-
-msgid "Average Event Report"
-msgstr "Gjennomsnittlig hendelsesrapport"
-
-msgid "Average Event Chart"
-msgstr "Gjennomsnittlig hendelsesdiagram"
-
-msgid "Average Dashboard"
-msgstr "Gjennomsnittlig dashbord"
-
-msgid "Maps"
-msgstr "Kart"
-
-msgid "Charts"
-msgstr "Diagrammer"
-
-msgid "Pivot Tables"
-msgstr "Pivottabeller"
-
-msgid "Event Reports"
-msgstr "Hendelsesrapporter"
-
-msgid "Event Charts"
-msgstr "Hendelsesdiagrammer"
-
-msgid "Dashboards"
-msgstr "Dashbord"
-
-msgid "Indicators"
-msgstr "Indikatorer"
-
-msgid "Active Users"
-msgstr "Aktive brukere"
-
-msgid "Total Users"
-msgstr "Totalt antall brukere"
-
-msgid "Position"
-msgstr "Posisjon"
-
-msgid "Name"
-msgstr "Navn"
-
-msgid "Views"
-msgstr "Visninger"
-
-msgid "ID"
-msgstr "ID"
-
-msgid "Created"
-msgstr "Opprettet"
-
-msgid "Data Values"
-msgstr "Dataverdier"
 
 msgid "Ascending"
 msgstr "Stigende"

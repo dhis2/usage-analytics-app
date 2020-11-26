@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
-"POT-Creation-Date: 2020-05-28T08:21:23.706Z\n"
+"POT-Creation-Date: 2020-11-19T16:34:58.919Z\n"
 "PO-Revision-Date: 2019-09-02 16:22+0000\n"
 "Last-Translator: 晓东 林 <13981924470@126.com>, 2020\n"
 "Language-Team: Chinese (https://www.transifex.com/hisp-uio/teams/100509/zh/)\n"
@@ -18,32 +18,89 @@ msgstr ""
 "Language: zh\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-msgid "Values"
-msgstr "值"
-
-msgid "Please use the format yyyy-mm-dd"
-msgstr "请使用日期格式：yyyy-mm-dd"
-
-msgid "Please fill in both dates"
-msgstr "请两个都填日期"
-
-msgid "End date is before start date"
-msgstr "结束日期早于开始日期"
-
-msgid "Start date is after end date"
-msgstr "开始日期晚于结束日期"
-
-msgid "Start Date"
-msgstr "开始日期"
-
-msgid "End Date"
-msgstr "结束日期"
+msgid "Usage Analytics"
+msgstr "使用分析"
 
 msgid "Category"
 msgstr "分类"
 
-msgid "Interval"
-msgstr "间隔"
+msgid "Values"
+msgstr "值"
+
+msgid "Data Values"
+msgstr "数据值"
+
+msgid "Active Users"
+msgstr "活跃用户"
+
+msgid "Total Users"
+msgstr "用户总数"
+
+msgid "Maps"
+msgstr "地图"
+
+msgid "Charts"
+msgstr "图表"
+
+msgid "Pivot Tables"
+msgstr "透视表"
+
+msgid "Event Reports"
+msgstr "事件报表"
+
+msgid "Event Charts"
+msgstr "事件图表"
+
+msgid "Dashboards"
+msgstr "仪表盘"
+
+msgid "Indicators"
+msgstr "指标"
+
+msgid "Map"
+msgstr "地图"
+
+msgid "Chart"
+msgstr "图表"
+
+msgid "Pivot Table"
+msgstr "透视表"
+
+msgid "Event Report"
+msgstr "事件报表"
+
+msgid "Event Chart"
+msgstr "事件图表"
+
+msgid "Dashboard"
+msgstr "状态面板"
+
+msgid "Data Set Report"
+msgstr "数据集报表"
+
+msgid "Total"
+msgstr "总共"
+
+msgid "Average Map"
+msgstr "平均地图"
+
+msgid "Average Chart"
+msgstr "平均图表"
+
+msgid "Average Pivot Table"
+msgstr "平均透视表"
+
+msgid "Average Event Report"
+msgstr "平均事件报表"
+
+msgid "Average Event Chart"
+msgstr "平均事件图表"
+
+msgid "Average Dashboard"
+msgstr "平均仪表盘"
+
+msgid "Average"
+msgstr "平均"
 
 msgid "Aggregation Level"
 msgstr "汇总等级"
@@ -51,8 +108,14 @@ msgstr "汇总等级"
 msgid "Chart Type"
 msgstr "图表类型"
 
+msgid "End Date"
+msgstr "结束日期"
+
 msgid "Event Type"
 msgstr "事件类型"
+
+msgid "Interval"
+msgstr "间隔"
 
 msgid "Page Size"
 msgstr "页大小"
@@ -60,20 +123,53 @@ msgstr "页大小"
 msgid "Sort Order"
 msgstr "排序"
 
-msgid "Usage Analytics"
-msgstr "使用分析"
+msgid "Start Date"
+msgstr "开始日期"
 
-msgid "There was an error retrieving the usage analytics data"
-msgstr "提取使用分析数据存在错误"
+msgid "Start date should be before end date"
+msgstr ""
 
-msgid "Error loading application."
-msgstr "载入应用发生错误"
+msgid "Please fill in a date"
+msgstr ""
+
+msgid "Please use the format yyyy-mm-dd"
+msgstr "请使用日期格式：yyyy-mm-dd"
+
+msgid "Unrecognized category"
+msgstr ""
+
+msgid "The chosen category was not recognized."
+msgstr ""
+
+msgid "Error whilst fetching data"
+msgstr ""
+
+msgid "The error message was: \"{{ MESSAGE }}\"."
+msgstr ""
+
+msgid "There was no error message included with the error."
+msgstr ""
+
+msgid "Date"
+msgstr "日期"
+
+msgid "Position"
+msgstr "位置"
+
+msgid "Name"
+msgstr "名称"
+
+msgid "Views"
+msgstr "查看"
+
+msgid "ID"
+msgstr "Id"
+
+msgid "Created"
+msgstr "已创建"
 
 msgid "Sum"
 msgstr "求和"
-
-msgid "Average"
-msgstr "平均"
 
 msgid "Favorite views"
 msgstr "偏好视图"
@@ -105,15 +201,6 @@ msgstr "系统保存的值的数量"
 msgid "All"
 msgstr "全部"
 
-msgid "Total"
-msgstr "总共"
-
-msgid "Chart"
-msgstr "图表"
-
-msgid "Map"
-msgstr "地图"
-
 msgid "Report table"
 msgstr "报表表"
 
@@ -122,9 +209,6 @@ msgstr "事件报表"
 
 msgid "Event chart"
 msgstr "事件图表"
-
-msgid "Dashboard"
-msgstr "状态面板"
 
 msgid "Data set report"
 msgstr "数据集报表"
@@ -140,84 +224,6 @@ msgstr "月份"
 
 msgid "Year"
 msgstr "年"
-
-msgid "Date"
-msgstr "日期"
-
-msgid "Pivot Table"
-msgstr "透视表"
-
-msgid "Event Report"
-msgstr "事件报表"
-
-msgid "Event Chart"
-msgstr "事件图表"
-
-msgid "Data Set Report"
-msgstr "数据集报表"
-
-msgid "Average Map"
-msgstr "平均地图"
-
-msgid "Average Chart"
-msgstr "平均图表"
-
-msgid "Average Pivot Table"
-msgstr "平均透视表"
-
-msgid "Average Event Report"
-msgstr "平均事件报表"
-
-msgid "Average Event Chart"
-msgstr "平均事件图表"
-
-msgid "Average Dashboard"
-msgstr "平均仪表盘"
-
-msgid "Maps"
-msgstr "地图"
-
-msgid "Charts"
-msgstr "图表"
-
-msgid "Pivot Tables"
-msgstr "透视表"
-
-msgid "Event Reports"
-msgstr "事件报表"
-
-msgid "Event Charts"
-msgstr "事件图表"
-
-msgid "Dashboards"
-msgstr "仪表盘"
-
-msgid "Indicators"
-msgstr "指标"
-
-msgid "Active Users"
-msgstr "活跃用户"
-
-msgid "Total Users"
-msgstr "用户总数"
-
-msgid "Position"
-msgstr "位置"
-
-msgid "Name"
-msgstr "名称"
-
-msgid "Views"
-msgstr "查看"
-
-msgid "ID"
-msgstr "Id"
-
-msgid "Created"
-msgstr "已创建"
-
-msgid "Data Values"
-msgstr "数据值"
 
 msgid "Ascending"
 msgstr "升序"

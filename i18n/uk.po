@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
-"POT-Creation-Date: 2020-05-28T08:21:23.706Z\n"
+"POT-Creation-Date: 2020-11-19T16:34:58.919Z\n"
 "PO-Revision-Date: 2019-09-02 16:22+0000\n"
 "Last-Translator: phil_dhis2, 2019\n"
 "Language-Team: Ukrainian (https://www.transifex.com/hisp-uio/teams/100509/uk/)\n"
@@ -16,32 +16,89 @@ msgstr ""
 "Language: uk\n"
 "Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
-msgid "Values"
-msgstr ""
-
-msgid "Please use the format yyyy-mm-dd"
-msgstr ""
-
-msgid "Please fill in both dates"
-msgstr ""
-
-msgid "End date is before start date"
-msgstr ""
-
-msgid "Start date is after end date"
-msgstr ""
-
-msgid "Start Date"
-msgstr ""
-
-msgid "End Date"
-msgstr ""
+msgid "Usage Analytics"
+msgstr "Аналітика використання"
 
 msgid "Category"
 msgstr "Категорія"
 
-msgid "Interval"
+msgid "Values"
 msgstr ""
+
+msgid "Data Values"
+msgstr ""
+
+msgid "Active Users"
+msgstr ""
+
+msgid "Total Users"
+msgstr ""
+
+msgid "Maps"
+msgstr "Maps"
+
+msgid "Charts"
+msgstr "Діаграми"
+
+msgid "Pivot Tables"
+msgstr "Зведені таблиці"
+
+msgid "Event Reports"
+msgstr "Звіти про події"
+
+msgid "Event Charts"
+msgstr ""
+
+msgid "Dashboards"
+msgstr "Інформаційні панелі (дашборди)"
+
+msgid "Indicators"
+msgstr "Показники"
+
+msgid "Map"
+msgstr "Мапа"
+
+msgid "Chart"
+msgstr "Діаграма"
+
+msgid "Pivot Table"
+msgstr "Зведена таблиця"
+
+msgid "Event Report"
+msgstr ""
+
+msgid "Event Chart"
+msgstr ""
+
+msgid "Dashboard"
+msgstr "Інформаційна панель (дашборд)"
+
+msgid "Data Set Report"
+msgstr ""
+
+msgid "Total"
+msgstr "Підсумок"
+
+msgid "Average Map"
+msgstr ""
+
+msgid "Average Chart"
+msgstr ""
+
+msgid "Average Pivot Table"
+msgstr ""
+
+msgid "Average Event Report"
+msgstr ""
+
+msgid "Average Event Chart"
+msgstr ""
+
+msgid "Average Dashboard"
+msgstr ""
+
+msgid "Average"
+msgstr "Середнє"
 
 msgid "Aggregation Level"
 msgstr ""
@@ -49,7 +106,13 @@ msgstr ""
 msgid "Chart Type"
 msgstr ""
 
+msgid "End Date"
+msgstr ""
+
 msgid "Event Type"
+msgstr ""
+
+msgid "Interval"
 msgstr ""
 
 msgid "Page Size"
@@ -58,20 +121,53 @@ msgstr ""
 msgid "Sort Order"
 msgstr ""
 
-msgid "Usage Analytics"
-msgstr "Аналітика використання"
-
-msgid "There was an error retrieving the usage analytics data"
+msgid "Start Date"
 msgstr ""
 
-msgid "Error loading application."
+msgid "Start date should be before end date"
 msgstr ""
+
+msgid "Please fill in a date"
+msgstr ""
+
+msgid "Please use the format yyyy-mm-dd"
+msgstr ""
+
+msgid "Unrecognized category"
+msgstr ""
+
+msgid "The chosen category was not recognized."
+msgstr ""
+
+msgid "Error whilst fetching data"
+msgstr ""
+
+msgid "The error message was: \"{{ MESSAGE }}\"."
+msgstr ""
+
+msgid "There was no error message included with the error."
+msgstr ""
+
+msgid "Date"
+msgstr "Дата"
+
+msgid "Position"
+msgstr ""
+
+msgid "Name"
+msgstr "Ім'я"
+
+msgid "Views"
+msgstr "Перегляди"
+
+msgid "ID"
+msgstr "ID (ідентифікатор)"
+
+msgid "Created"
+msgstr "Створено"
 
 msgid "Sum"
 msgstr "Сума"
-
-msgid "Average"
-msgstr "Середнє"
 
 msgid "Favorite views"
 msgstr ""
@@ -103,15 +199,6 @@ msgstr ""
 msgid "All"
 msgstr "Всі"
 
-msgid "Total"
-msgstr "Підсумок"
-
-msgid "Chart"
-msgstr "Діаграма"
-
-msgid "Map"
-msgstr "Мапа"
-
 msgid "Report table"
 msgstr ""
 
@@ -120,9 +207,6 @@ msgstr ""
 
 msgid "Event chart"
 msgstr ""
-
-msgid "Dashboard"
-msgstr "Інформаційна панель (дашборд)"
 
 msgid "Data set report"
 msgstr ""
@@ -138,84 +222,6 @@ msgstr ""
 
 msgid "Year"
 msgstr "Рік"
-
-msgid "Date"
-msgstr "Дата"
-
-msgid "Pivot Table"
-msgstr "Зведена таблиця"
-
-msgid "Event Report"
-msgstr ""
-
-msgid "Event Chart"
-msgstr ""
-
-msgid "Data Set Report"
-msgstr ""
-
-msgid "Average Map"
-msgstr ""
-
-msgid "Average Chart"
-msgstr ""
-
-msgid "Average Pivot Table"
-msgstr ""
-
-msgid "Average Event Report"
-msgstr ""
-
-msgid "Average Event Chart"
-msgstr ""
-
-msgid "Average Dashboard"
-msgstr ""
-
-msgid "Maps"
-msgstr "Maps"
-
-msgid "Charts"
-msgstr "Діаграми"
-
-msgid "Pivot Tables"
-msgstr "Зведені таблиці"
-
-msgid "Event Reports"
-msgstr "Звіти про події"
-
-msgid "Event Charts"
-msgstr ""
-
-msgid "Dashboards"
-msgstr "Інформаційні панелі (дашборди)"
-
-msgid "Indicators"
-msgstr "Показники"
-
-msgid "Active Users"
-msgstr ""
-
-msgid "Total Users"
-msgstr ""
-
-msgid "Position"
-msgstr ""
-
-msgid "Name"
-msgstr "Ім'я"
-
-msgid "Views"
-msgstr "Перегляди"
-
-msgid "ID"
-msgstr "ID (ідентифікатор)"
-
-msgid "Created"
-msgstr "Створено"
-
-msgid "Data Values"
-msgstr ""
 
 msgid "Ascending"
 msgstr ""
