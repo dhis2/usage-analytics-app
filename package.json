@@ -11,7 +11,7 @@
         "format:staged": "d2-style js apply --staged"
     },
     "dependencies": {
-        "@dhis2/prop-types": "^1.6.4",
+        "@dhis2/prop-types": "^2.0.2",
         "chart.js": "^2.9.4",
         "moment": "^2.29.1",
         "react-chartjs-2": "^2.11.1"
