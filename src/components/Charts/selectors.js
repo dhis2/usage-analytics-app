@@ -1,19 +1,30 @@
 import i18n from '@dhis2/d2-i18n'
+import { colors } from '@dhis2/ui-constants'
 import categories from '../../constants/categories.js'
 import { getIntervalDate } from '../../selectors/date.js'
+
+const {
+    blue300,
+    yellow700,
+    yellow200,
+    green400,
+    red400,
+    grey900,
+    teal600,
+} = colors
 
 /**
  * The colors for the linegraphs. We're using individual constants
  * so eslint will warn us if we use a constant that doesn't exist.
  */
 
-export const COLOR_1 = '#7cb5ec'
-export const COLOR_2 = '#cc6600'
-export const COLOR_3 = '#cccc00'
-export const COLOR_4 = '#66cc00'
-export const COLOR_5 = '#ff0066'
-export const COLOR_6 = '#000000'
-export const COLOR_7 = '#00cccc'
+export const COLOR_1 = blue300
+export const COLOR_2 = yellow700
+export const COLOR_3 = yellow200
+export const COLOR_4 = green400
+export const COLOR_5 = red400
+export const COLOR_6 = grey900
+export const COLOR_7 = teal600
 
 export const getTitles = selected => {
     const selectedCategory = categories.find(

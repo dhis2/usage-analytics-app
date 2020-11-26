@@ -48,7 +48,7 @@ const App = () => {
 
     return (
         <React.Fragment>
-            <CssVariables spacers />
+            <CssVariables spacers colors />
             <CssReset />
             <LayoutContainer>
                 <LayoutSidebar>
