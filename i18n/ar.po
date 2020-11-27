@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
-"POT-Creation-Date: 2020-05-28T08:21:23.706Z\n"
+"POT-Creation-Date: 2020-11-19T16:34:58.919Z\n"
 "PO-Revision-Date: 2019-09-02 16:22+0000\n"
 "Last-Translator: Hamza Assada <7amza.it@gmail.com>, 2020\n"
 "Language-Team: Arabic (https://www.transifex.com/hisp-uio/teams/100509/ar/)\n"
@@ -17,32 +17,89 @@ msgstr ""
 "Language: ar\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-msgid "Values"
-msgstr "القيم"
-
-msgid "Please use the format yyyy-mm-dd"
-msgstr "يرجى استخدام التنسيق yyyy-mm-dd"
-
-msgid "Please fill in both dates"
-msgstr "يرجى ملء كلا التاريخين"
-
-msgid "End date is before start date"
-msgstr "تاريخ الإنتهاء قبل تاريخ البدء"
-
-msgid "Start date is after end date"
-msgstr "تاريخ البدء بعد تاريخ الإنتهاء"
-
-msgid "Start Date"
-msgstr "تاريخ البداية"
-
-msgid "End Date"
-msgstr "تاريخ النهاية"
+msgid "Usage Analytics"
+msgstr "تحليلات الاستخدام"
 
 msgid "Category"
 msgstr "الفئة"
 
-msgid "Interval"
-msgstr "الفترة"
+msgid "Values"
+msgstr "القيم"
+
+msgid "Data Values"
+msgstr "قيم البيانات"
+
+msgid "Active Users"
+msgstr "المستخدمين النشطين"
+
+msgid "Total Users"
+msgstr "إجمالي المستخدمين"
+
+msgid "Maps"
+msgstr "الخرائط"
+
+msgid "Charts"
+msgstr "المخططات البيانية"
+
+msgid "Pivot Tables"
+msgstr "الجداول المحورية"
+
+msgid "Event Reports"
+msgstr "تقارير الحدث"
+
+msgid "Event Charts"
+msgstr "المخططات البيانية للحدث"
+
+msgid "Dashboards"
+msgstr "لوحات المعلومات"
+
+msgid "Indicators"
+msgstr "المؤشرات"
+
+msgid "Map"
+msgstr "الخريطة"
+
+msgid "Chart"
+msgstr "المخطط البياني"
+
+msgid "Pivot Table"
+msgstr "الجدول المحوري"
+
+msgid "Event Report"
+msgstr "تقارير الحدث"
+
+msgid "Event Chart"
+msgstr "المخطط البياني للأحداث"
+
+msgid "Dashboard"
+msgstr "لوحة المعلومات"
+
+msgid "Data Set Report"
+msgstr "تقرير حزمة البيانات"
+
+msgid "Total"
+msgstr "الإجمالي"
+
+msgid "Average Map"
+msgstr "متوسط خريطة"
+
+msgid "Average Chart"
+msgstr "متوسط رسم بياني"
+
+msgid "Average Pivot Table"
+msgstr "متوسط جدول محوري"
+
+msgid "Average Event Report"
+msgstr "متوسط تقرير حدث"
+
+msgid "Average Event Chart"
+msgstr "متوسط رسم بيان حدث"
+
+msgid "Average Dashboard"
+msgstr "متوسط لوحة عرض"
+
+msgid "Average"
+msgstr "المتوسط"
 
 msgid "Aggregation Level"
 msgstr "مستوى التجميع"
@@ -50,8 +107,14 @@ msgstr "مستوى التجميع"
 msgid "Chart Type"
 msgstr "نوح المخطط البياني"
 
+msgid "End Date"
+msgstr "تاريخ النهاية"
+
 msgid "Event Type"
 msgstr "نوع الحدث"
+
+msgid "Interval"
+msgstr "الفترة"
 
 msgid "Page Size"
 msgstr "حجم الصفحة"
@@ -59,20 +122,53 @@ msgstr "حجم الصفحة"
 msgid "Sort Order"
 msgstr "ترتيب الفرز"
 
-msgid "Usage Analytics"
-msgstr "تحليلات الاستخدام"
+msgid "Start Date"
+msgstr "تاريخ البداية"
 
-msgid "There was an error retrieving the usage analytics data"
-msgstr "حدث خطأ في استرداد بيانات تحليلات الاستخدام"
+msgid "Start date should be before end date"
+msgstr ""
 
-msgid "Error loading application."
-msgstr "خطأ في تحميل التطبيق"
+msgid "Please fill in a date"
+msgstr ""
+
+msgid "Please use the format yyyy-mm-dd"
+msgstr "يرجى استخدام التنسيق yyyy-mm-dd"
+
+msgid "Unrecognized category"
+msgstr ""
+
+msgid "The chosen category was not recognized."
+msgstr ""
+
+msgid "Error whilst fetching data"
+msgstr ""
+
+msgid "The error message was: \"{{ MESSAGE }}\"."
+msgstr ""
+
+msgid "There was no error message included with the error."
+msgstr ""
+
+msgid "Date"
+msgstr "التاريخ"
+
+msgid "Position"
+msgstr "موضع"
+
+msgid "Name"
+msgstr "الاسم"
+
+msgid "Views"
+msgstr "المشاهدات"
+
+msgid "ID"
+msgstr "المعرف"
+
+msgid "Created"
+msgstr "تم الإنشاء"
 
 msgid "Sum"
 msgstr "المجموع"
-
-msgid "Average"
-msgstr "المتوسط"
 
 msgid "Favorite views"
 msgstr "العروض المفضلة"
@@ -104,15 +200,6 @@ msgstr "عدد القيم التي تم حفظها في النظام"
 msgid "All"
 msgstr "الجميع"
 
-msgid "Total"
-msgstr "الإجمالي"
-
-msgid "Chart"
-msgstr "المخطط البياني"
-
-msgid "Map"
-msgstr "الخريطة"
-
 msgid "Report table"
 msgstr "جدول التقرير"
 
@@ -121,9 +208,6 @@ msgstr "تقارير الحدث"
 
 msgid "Event chart"
 msgstr "المخطط البياني للأحداث"
-
-msgid "Dashboard"
-msgstr "لوحة المعلومات"
 
 msgid "Data set report"
 msgstr "تقرير حزمة البيانات"
@@ -139,84 +223,6 @@ msgstr "الشهر"
 
 msgid "Year"
 msgstr "السنة"
-
-msgid "Date"
-msgstr "التاريخ"
-
-msgid "Pivot Table"
-msgstr "الجدول المحوري"
-
-msgid "Event Report"
-msgstr "تقارير الحدث"
-
-msgid "Event Chart"
-msgstr "المخطط البياني للأحداث"
-
-msgid "Data Set Report"
-msgstr "تقرير حزمة البيانات"
-
-msgid "Average Map"
-msgstr "متوسط خريطة"
-
-msgid "Average Chart"
-msgstr "متوسط رسم بياني"
-
-msgid "Average Pivot Table"
-msgstr "متوسط جدول محوري"
-
-msgid "Average Event Report"
-msgstr "متوسط تقرير حدث"
-
-msgid "Average Event Chart"
-msgstr "متوسط رسم بيان حدث"
-
-msgid "Average Dashboard"
-msgstr "متوسط لوحة عرض"
-
-msgid "Maps"
-msgstr "الخرائط"
-
-msgid "Charts"
-msgstr "المخططات البيانية"
-
-msgid "Pivot Tables"
-msgstr "الجداول المحورية"
-
-msgid "Event Reports"
-msgstr "تقارير الحدث"
-
-msgid "Event Charts"
-msgstr "المخططات البيانية للحدث"
-
-msgid "Dashboards"
-msgstr "لوحات المعلومات"
-
-msgid "Indicators"
-msgstr "المؤشرات"
-
-msgid "Active Users"
-msgstr "المستخدمين النشطين"
-
-msgid "Total Users"
-msgstr "إجمالي المستخدمين"
-
-msgid "Position"
-msgstr "موضع"
-
-msgid "Name"
-msgstr "الاسم"
-
-msgid "Views"
-msgstr "المشاهدات"
-
-msgid "ID"
-msgstr "المعرف"
-
-msgid "Created"
-msgstr "تم الإنشاء"
-
-msgid "Data Values"
-msgstr "قيم البيانات"
 
 msgid "Ascending"
 msgstr "تصاعدي"

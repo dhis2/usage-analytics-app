@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
-"POT-Creation-Date: 2020-05-28T08:21:23.706Z\n"
+"POT-Creation-Date: 2020-11-19T16:34:58.919Z\n"
 "PO-Revision-Date: 2019-09-02 16:22+0000\n"
 "Last-Translator: trendspotter, 2020\n"
 "Language-Team: Czech (https://www.transifex.com/hisp-uio/teams/100509/cs/)\n"
@@ -15,32 +15,89 @@ msgstr ""
 "Language: cs\n"
 "Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
 
-msgid "Values"
-msgstr "Hodnoty"
-
-msgid "Please use the format yyyy-mm-dd"
-msgstr "Použijte formát rrrr-mm-dd"
-
-msgid "Please fill in both dates"
-msgstr "Vyplňte prosím obě data"
-
-msgid "End date is before start date"
-msgstr "Datum ukončení je před datem zahájení"
-
-msgid "Start date is after end date"
-msgstr "Datum zahájení je po datu ukončení"
-
-msgid "Start Date"
-msgstr "Datum začátku"
-
-msgid "End Date"
-msgstr "Datum ukončení"
+msgid "Usage Analytics"
+msgstr "Analýza využití"
 
 msgid "Category"
 msgstr "Kategorie"
 
-msgid "Interval"
-msgstr "Interval"
+msgid "Values"
+msgstr "Hodnoty"
+
+msgid "Data Values"
+msgstr "Datové hodnoty"
+
+msgid "Active Users"
+msgstr "Aktivní uživatelé"
+
+msgid "Total Users"
+msgstr "Celkem uživatelů"
+
+msgid "Maps"
+msgstr "Mapy"
+
+msgid "Charts"
+msgstr "Grafy"
+
+msgid "Pivot Tables"
+msgstr "Kontingenční tabulky"
+
+msgid "Event Reports"
+msgstr "Zprávy o událostech"
+
+msgid "Event Charts"
+msgstr "Grafy událostí"
+
+msgid "Dashboards"
+msgstr "Ovládací panely"
+
+msgid "Indicators"
+msgstr "Indikátory"
+
+msgid "Map"
+msgstr "Mapa"
+
+msgid "Chart"
+msgstr "Schéma"
+
+msgid "Pivot Table"
+msgstr "Kontingenční tabulka"
+
+msgid "Event Report"
+msgstr "Zpráva o události"
+
+msgid "Event Chart"
+msgstr "Graf událostí"
+
+msgid "Dashboard"
+msgstr "Ovládací panel"
+
+msgid "Data Set Report"
+msgstr "Zpráva o souboru dat"
+
+msgid "Total"
+msgstr "Celkem"
+
+msgid "Average Map"
+msgstr "Průměrná mapa"
+
+msgid "Average Chart"
+msgstr "Průměrný graf"
+
+msgid "Average Pivot Table"
+msgstr "Průměrná kontingenční tabulka"
+
+msgid "Average Event Report"
+msgstr "Průměrná zpráva o události"
+
+msgid "Average Event Chart"
+msgstr "Průměrný graf událostí"
+
+msgid "Average Dashboard"
+msgstr "Průměrný ovládací panel"
+
+msgid "Average"
+msgstr "Průměr"
 
 msgid "Aggregation Level"
 msgstr "Úroveň agregace"
@@ -48,8 +105,14 @@ msgstr "Úroveň agregace"
 msgid "Chart Type"
 msgstr "Typ grafu"
 
+msgid "End Date"
+msgstr "Datum ukončení"
+
 msgid "Event Type"
 msgstr "Typ události"
+
+msgid "Interval"
+msgstr "Interval"
 
 msgid "Page Size"
 msgstr "Velikost stránky"
@@ -57,20 +120,53 @@ msgstr "Velikost stránky"
 msgid "Sort Order"
 msgstr "Pořadí řazení"
 
-msgid "Usage Analytics"
-msgstr "Analýza využití"
+msgid "Start Date"
+msgstr "Datum začátku"
 
-msgid "There was an error retrieving the usage analytics data"
-msgstr "Při načítání analytických dat o využití došlo k chybě"
+msgid "Start date should be before end date"
+msgstr ""
 
-msgid "Error loading application."
-msgstr "Chyba načítání aplikace."
+msgid "Please fill in a date"
+msgstr ""
+
+msgid "Please use the format yyyy-mm-dd"
+msgstr "Použijte formát rrrr-mm-dd"
+
+msgid "Unrecognized category"
+msgstr ""
+
+msgid "The chosen category was not recognized."
+msgstr ""
+
+msgid "Error whilst fetching data"
+msgstr ""
+
+msgid "The error message was: \"{{ MESSAGE }}\"."
+msgstr ""
+
+msgid "There was no error message included with the error."
+msgstr ""
+
+msgid "Date"
+msgstr "datum"
+
+msgid "Position"
+msgstr "Pozice"
+
+msgid "Name"
+msgstr "Název"
+
+msgid "Views"
+msgstr "Zobrazení"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "Created"
+msgstr "Vytvořeno"
 
 msgid "Sum"
 msgstr "Součet"
-
-msgid "Average"
-msgstr "Průměr"
 
 msgid "Favorite views"
 msgstr "Oblíbená zobrazení"
@@ -102,15 +198,6 @@ msgstr "Počet datových hodnot uložených v systému"
 msgid "All"
 msgstr "Vše"
 
-msgid "Total"
-msgstr "Celkem"
-
-msgid "Chart"
-msgstr "Schéma"
-
-msgid "Map"
-msgstr "Mapa"
-
 msgid "Report table"
 msgstr "Tabulka zpráv"
 
@@ -119,9 +206,6 @@ msgstr "Zpráva o události"
 
 msgid "Event chart"
 msgstr "Tabulka událostí"
-
-msgid "Dashboard"
-msgstr "Ovládací panel"
 
 msgid "Data set report"
 msgstr "Zpráva o souboru dat"
@@ -137,84 +221,6 @@ msgstr "Měsíc"
 
 msgid "Year"
 msgstr "Rok"
-
-msgid "Date"
-msgstr "datum"
-
-msgid "Pivot Table"
-msgstr "Kontingenční tabulka"
-
-msgid "Event Report"
-msgstr "Zpráva o události"
-
-msgid "Event Chart"
-msgstr "Graf událostí"
-
-msgid "Data Set Report"
-msgstr "Zpráva o souboru dat"
-
-msgid "Average Map"
-msgstr "Průměrná mapa"
-
-msgid "Average Chart"
-msgstr "Průměrný graf"
-
-msgid "Average Pivot Table"
-msgstr "Průměrná kontingenční tabulka"
-
-msgid "Average Event Report"
-msgstr "Průměrná zpráva o události"
-
-msgid "Average Event Chart"
-msgstr "Průměrný graf událostí"
-
-msgid "Average Dashboard"
-msgstr "Průměrný ovládací panel"
-
-msgid "Maps"
-msgstr "Mapy"
-
-msgid "Charts"
-msgstr "Grafy"
-
-msgid "Pivot Tables"
-msgstr "Kontingenční tabulky"
-
-msgid "Event Reports"
-msgstr "Zprávy o událostech"
-
-msgid "Event Charts"
-msgstr "Grafy událostí"
-
-msgid "Dashboards"
-msgstr "Ovládací panely"
-
-msgid "Indicators"
-msgstr "Indikátory"
-
-msgid "Active Users"
-msgstr "Aktivní uživatelé"
-
-msgid "Total Users"
-msgstr "Celkem uživatelů"
-
-msgid "Position"
-msgstr "Pozice"
-
-msgid "Name"
-msgstr "Název"
-
-msgid "Views"
-msgstr "Zobrazení"
-
-msgid "ID"
-msgstr "ID"
-
-msgid "Created"
-msgstr "Vytvořeno"
-
-msgid "Data Values"
-msgstr "Datové hodnoty"
 
 msgid "Ascending"
 msgstr "Vzestupně"

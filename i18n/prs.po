@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
-"POT-Creation-Date: 2020-05-28T08:21:23.706Z\n"
+"POT-Creation-Date: 2020-11-19T16:34:58.919Z\n"
 "PO-Revision-Date: 2019-09-02 16:22+0000\n"
 "Last-Translator: phil_dhis2, 2019\n"
 "Language-Team: Persian (Afghanistan) (https://www.transifex.com/hisp-uio/teams/100509/fa_AF/)\n"
@@ -15,32 +15,89 @@ msgstr ""
 "Language: fa_AF\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-msgid "Values"
-msgstr ""
-
-msgid "Please use the format yyyy-mm-dd"
-msgstr ""
-
-msgid "Please fill in both dates"
-msgstr ""
-
-msgid "End date is before start date"
-msgstr ""
-
-msgid "Start date is after end date"
-msgstr ""
-
-msgid "Start Date"
-msgstr ""
-
-msgid "End Date"
-msgstr ""
+msgid "Usage Analytics"
+msgstr "استفاده انالتیکس"
 
 msgid "Category"
 msgstr "دسته بندی"
 
-msgid "Interval"
+msgid "Values"
 msgstr ""
+
+msgid "Data Values"
+msgstr ""
+
+msgid "Active Users"
+msgstr ""
+
+msgid "Total Users"
+msgstr ""
+
+msgid "Maps"
+msgstr "نقشه ها"
+
+msgid "Charts"
+msgstr "چارت ها"
+
+msgid "Pivot Tables"
+msgstr "محوري جدول"
+
+msgid "Event Reports"
+msgstr "گزارشات رویداد"
+
+msgid "Event Charts"
+msgstr ""
+
+msgid "Dashboards"
+msgstr "داشبورد ها"
+
+msgid "Indicators"
+msgstr "شاخص ها"
+
+msgid "Map"
+msgstr "نقشه"
+
+msgid "Chart"
+msgstr "چارت"
+
+msgid "Pivot Table"
+msgstr "جدول محوری"
+
+msgid "Event Report"
+msgstr ""
+
+msgid "Event Chart"
+msgstr ""
+
+msgid "Dashboard"
+msgstr "داشبورد"
+
+msgid "Data Set Report"
+msgstr "گزارش مجموعه اطلاعات"
+
+msgid "Total"
+msgstr "مجموع"
+
+msgid "Average Map"
+msgstr ""
+
+msgid "Average Chart"
+msgstr ""
+
+msgid "Average Pivot Table"
+msgstr ""
+
+msgid "Average Event Report"
+msgstr ""
+
+msgid "Average Event Chart"
+msgstr ""
+
+msgid "Average Dashboard"
+msgstr ""
+
+msgid "Average"
+msgstr "اوسط"
 
 msgid "Aggregation Level"
 msgstr ""
@@ -48,7 +105,13 @@ msgstr ""
 msgid "Chart Type"
 msgstr ""
 
+msgid "End Date"
+msgstr ""
+
 msgid "Event Type"
+msgstr ""
+
+msgid "Interval"
 msgstr ""
 
 msgid "Page Size"
@@ -57,20 +120,53 @@ msgstr ""
 msgid "Sort Order"
 msgstr ""
 
-msgid "Usage Analytics"
-msgstr "استفاده انالتیکس"
-
-msgid "There was an error retrieving the usage analytics data"
+msgid "Start Date"
 msgstr ""
 
-msgid "Error loading application."
+msgid "Start date should be before end date"
 msgstr ""
+
+msgid "Please fill in a date"
+msgstr ""
+
+msgid "Please use the format yyyy-mm-dd"
+msgstr ""
+
+msgid "Unrecognized category"
+msgstr ""
+
+msgid "The chosen category was not recognized."
+msgstr ""
+
+msgid "Error whilst fetching data"
+msgstr ""
+
+msgid "The error message was: \"{{ MESSAGE }}\"."
+msgstr ""
+
+msgid "There was no error message included with the error."
+msgstr ""
+
+msgid "Date"
+msgstr "تاریخ"
+
+msgid "Position"
+msgstr ""
+
+msgid "Name"
+msgstr "نام"
+
+msgid "Views"
+msgstr "نمایش ها"
+
+msgid "ID"
+msgstr "آی دی"
+
+msgid "Created"
+msgstr "ایجاد شده"
 
 msgid "Sum"
 msgstr "جمع"
-
-msgid "Average"
-msgstr "اوسط"
 
 msgid "Favorite views"
 msgstr ""
@@ -102,15 +198,6 @@ msgstr ""
 msgid "All"
 msgstr "همه"
 
-msgid "Total"
-msgstr "مجموع"
-
-msgid "Chart"
-msgstr "چارت"
-
-msgid "Map"
-msgstr "نقشه"
-
 msgid "Report table"
 msgstr ""
 
@@ -119,9 +206,6 @@ msgstr ""
 
 msgid "Event chart"
 msgstr ""
-
-msgid "Dashboard"
-msgstr "داشبورد"
 
 msgid "Data set report"
 msgstr ""
@@ -137,84 +221,6 @@ msgstr "ماه"
 
 msgid "Year"
 msgstr "سال"
-
-msgid "Date"
-msgstr "تاریخ"
-
-msgid "Pivot Table"
-msgstr "جدول محوری"
-
-msgid "Event Report"
-msgstr ""
-
-msgid "Event Chart"
-msgstr ""
-
-msgid "Data Set Report"
-msgstr "گزارش مجموعه اطلاعات"
-
-msgid "Average Map"
-msgstr ""
-
-msgid "Average Chart"
-msgstr ""
-
-msgid "Average Pivot Table"
-msgstr ""
-
-msgid "Average Event Report"
-msgstr ""
-
-msgid "Average Event Chart"
-msgstr ""
-
-msgid "Average Dashboard"
-msgstr ""
-
-msgid "Maps"
-msgstr "نقشه ها"
-
-msgid "Charts"
-msgstr "چارت ها"
-
-msgid "Pivot Tables"
-msgstr "محوري جدول"
-
-msgid "Event Reports"
-msgstr "گزارشات رویداد"
-
-msgid "Event Charts"
-msgstr ""
-
-msgid "Dashboards"
-msgstr "داشبورد ها"
-
-msgid "Indicators"
-msgstr "شاخص ها"
-
-msgid "Active Users"
-msgstr ""
-
-msgid "Total Users"
-msgstr ""
-
-msgid "Position"
-msgstr ""
-
-msgid "Name"
-msgstr "نام"
-
-msgid "Views"
-msgstr "نمایش ها"
-
-msgid "ID"
-msgstr "آی دی"
-
-msgid "Created"
-msgstr "ایجاد شده"
-
-msgid "Data Values"
-msgstr ""
 
 msgid "Ascending"
 msgstr ""

@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
-"POT-Creation-Date: 2020-05-28T08:21:23.706Z\n"
+"POT-Creation-Date: 2020-11-19T16:34:58.919Z\n"
 "PO-Revision-Date: 2019-09-02 16:22+0000\n"
 "Last-Translator: Gabriela Rodriguez <grodriguezcoronado@gmail.com>, 2020\n"
 "Language-Team: French (https://www.transifex.com/hisp-uio/teams/100509/fr/)\n"
@@ -19,32 +19,89 @@ msgstr ""
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-msgid "Values"
-msgstr "Valeurs"
-
-msgid "Please use the format yyyy-mm-dd"
-msgstr "Veuillez utiliser le format aaaa-mm-jj "
-
-msgid "Please fill in both dates"
-msgstr "Veuillez remplir les deux dates"
-
-msgid "End date is before start date"
-msgstr "La date de fin est antérieure à la date de début"
-
-msgid "Start date is after end date"
-msgstr "La date de début est postérieure à la date de fin"
-
-msgid "Start Date"
-msgstr "Date de Début"
-
-msgid "End Date"
-msgstr ""
+msgid "Usage Analytics"
+msgstr "Analyse d'utilisation"
 
 msgid "Category"
 msgstr "Catégorie"
 
-msgid "Interval"
-msgstr "Intervalle"
+msgid "Values"
+msgstr "Valeurs"
+
+msgid "Data Values"
+msgstr "Valeurs de Données"
+
+msgid "Active Users"
+msgstr "Utilisateurs Actifs"
+
+msgid "Total Users"
+msgstr "Nombre total d'utilisateurs"
+
+msgid "Maps"
+msgstr "Cartes"
+
+msgid "Charts"
+msgstr "Graphiques"
+
+msgid "Pivot Tables"
+msgstr "Les Tableaux Croisés Dynamiques"
+
+msgid "Event Reports"
+msgstr "Rapports d'évènements"
+
+msgid "Event Charts"
+msgstr "Graphiques des événements"
+
+msgid "Dashboards"
+msgstr "Tableaux de bord"
+
+msgid "Indicators"
+msgstr "Indicateurs"
+
+msgid "Map"
+msgstr "Carte"
+
+msgid "Chart"
+msgstr "Graphique"
+
+msgid "Pivot Table"
+msgstr "Tableau croisé dynamique"
+
+msgid "Event Report"
+msgstr "Rapport d'évènements"
+
+msgid "Event Chart"
+msgstr "Tableau d'événements"
+
+msgid "Dashboard"
+msgstr "Tableau de bord"
+
+msgid "Data Set Report"
+msgstr "Rapport basé sur le formulaire"
+
+msgid "Total"
+msgstr "Total"
+
+msgid "Average Map"
+msgstr "Carte Moyenne"
+
+msgid "Average Chart"
+msgstr "Graphique Moyen"
+
+msgid "Average Pivot Table"
+msgstr "Tableau Croisé Dynamique Moyen"
+
+msgid "Average Event Report"
+msgstr "Rapport d'événement Moyen"
+
+msgid "Average Event Chart"
+msgstr "Graphique d'événement Moyen"
+
+msgid "Average Dashboard"
+msgstr "Tableau de bord Moyen"
+
+msgid "Average"
+msgstr "Moyenne"
 
 msgid "Aggregation Level"
 msgstr "Niveau d'agrégation"
@@ -52,8 +109,14 @@ msgstr "Niveau d'agrégation"
 msgid "Chart Type"
 msgstr "Type de Graphique"
 
+msgid "End Date"
+msgstr ""
+
 msgid "Event Type"
 msgstr "Type d'événement"
+
+msgid "Interval"
+msgstr "Intervalle"
 
 msgid "Page Size"
 msgstr "Taille de la page"
@@ -61,22 +124,53 @@ msgstr "Taille de la page"
 msgid "Sort Order"
 msgstr "Ordre de tri"
 
-msgid "Usage Analytics"
-msgstr "Analyse d'utilisation"
+msgid "Start Date"
+msgstr "Date de Début"
 
-msgid "There was an error retrieving the usage analytics data"
+msgid "Start date should be before end date"
 msgstr ""
-"Une erreur s'est produite lors de la récupération des données d'analyse "
-"d'utilisation"
 
-msgid "Error loading application."
-msgstr "Erreur lors du chargement de l'application."
+msgid "Please fill in a date"
+msgstr ""
+
+msgid "Please use the format yyyy-mm-dd"
+msgstr "Veuillez utiliser le format aaaa-mm-jj "
+
+msgid "Unrecognized category"
+msgstr ""
+
+msgid "The chosen category was not recognized."
+msgstr ""
+
+msgid "Error whilst fetching data"
+msgstr ""
+
+msgid "The error message was: \"{{ MESSAGE }}\"."
+msgstr ""
+
+msgid "There was no error message included with the error."
+msgstr ""
+
+msgid "Date"
+msgstr "Date"
+
+msgid "Position"
+msgstr "Position"
+
+msgid "Name"
+msgstr "Nom"
+
+msgid "Views"
+msgstr "Vues"
+
+msgid "ID"
+msgstr "Id"
+
+msgid "Created"
+msgstr "Créé le"
 
 msgid "Sum"
 msgstr "Somme"
-
-msgid "Average"
-msgstr "Moyenne"
 
 msgid "Favorite views"
 msgstr "Vues favorites"
@@ -108,15 +202,6 @@ msgstr "Nombre de valeurs de données enregistrées dans le système"
 msgid "All"
 msgstr "Tout"
 
-msgid "Total"
-msgstr "Total"
-
-msgid "Chart"
-msgstr "Graphique"
-
-msgid "Map"
-msgstr "Carte"
-
 msgid "Report table"
 msgstr "Tableau de rapport"
 
@@ -125,9 +210,6 @@ msgstr "Rapport d'événement"
 
 msgid "Event chart"
 msgstr "Tableau des événements"
-
-msgid "Dashboard"
-msgstr "Tableau de bord"
 
 msgid "Data set report"
 msgstr "Rapport d'ensemble de données"
@@ -143,84 +225,6 @@ msgstr "Mois"
 
 msgid "Year"
 msgstr "Année"
-
-msgid "Date"
-msgstr "Date"
-
-msgid "Pivot Table"
-msgstr "Tableau croisé dynamique"
-
-msgid "Event Report"
-msgstr "Rapport d'évènements"
-
-msgid "Event Chart"
-msgstr "Tableau d'événements"
-
-msgid "Data Set Report"
-msgstr "Rapport basé sur le formulaire"
-
-msgid "Average Map"
-msgstr "Carte Moyenne"
-
-msgid "Average Chart"
-msgstr "Graphique Moyen"
-
-msgid "Average Pivot Table"
-msgstr "Tableau Croisé Dynamique Moyen"
-
-msgid "Average Event Report"
-msgstr "Rapport d'événement Moyen"
-
-msgid "Average Event Chart"
-msgstr "Graphique d'événement Moyen"
-
-msgid "Average Dashboard"
-msgstr "Tableau de bord Moyen"
-
-msgid "Maps"
-msgstr "Cartes"
-
-msgid "Charts"
-msgstr "Graphiques"
-
-msgid "Pivot Tables"
-msgstr "Les Tableaux Croisés Dynamiques"
-
-msgid "Event Reports"
-msgstr "Rapports d'évènements"
-
-msgid "Event Charts"
-msgstr "Graphiques des événements"
-
-msgid "Dashboards"
-msgstr "Tableaux de bord"
-
-msgid "Indicators"
-msgstr "Indicateurs"
-
-msgid "Active Users"
-msgstr "Utilisateurs Actifs"
-
-msgid "Total Users"
-msgstr "Nombre total d'utilisateurs"
-
-msgid "Position"
-msgstr "Position"
-
-msgid "Name"
-msgstr "Nom"
-
-msgid "Views"
-msgstr "Vues"
-
-msgid "ID"
-msgstr "Id"
-
-msgid "Created"
-msgstr "Créé le"
-
-msgid "Data Values"
-msgstr "Valeurs de Données"
 
 msgid "Ascending"
 msgstr "Ascendant"
