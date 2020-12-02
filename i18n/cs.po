@@ -124,28 +124,28 @@ msgid "Start Date"
 msgstr "Datum začátku"
 
 msgid "Start date should be before end date"
-msgstr ""
+msgstr "Datum zahájení by mělo být před datem ukončení"
 
 msgid "Please fill in a date"
-msgstr ""
+msgstr "Vyplňte prosím datum"
 
 msgid "Please use the format yyyy-mm-dd"
 msgstr "Použijte formát rrrr-mm-dd"
 
 msgid "Unrecognized category"
-msgstr ""
+msgstr "Nerozpoznaná kategorie"
 
 msgid "The chosen category was not recognized."
-msgstr ""
+msgstr "Vybraná kategorie nebyla rozpoznána."
 
 msgid "Error whilst fetching data"
-msgstr ""
+msgstr "Při načítání dat došlo k chybě"
 
 msgid "The error message was: \"{{ MESSAGE }}\"."
-msgstr ""
+msgstr "Chybová zpráva byla: \"{{ MESSAGE }}\"."
 
 msgid "There was no error message included with the error."
-msgstr ""
+msgstr "S chybou nebyla zahrnuta žádná chybová zpráva."
 
 msgid "Date"
 msgstr "datum"
