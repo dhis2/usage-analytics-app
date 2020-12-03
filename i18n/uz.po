@@ -124,28 +124,28 @@ msgid "Start Date"
 msgstr "Бошланиш санаси"
 
 msgid "Start date should be before end date"
-msgstr ""
+msgstr "Бошланиш санаси тугаш санасидан олдин бўлиши керак"
 
 msgid "Please fill in a date"
-msgstr ""
+msgstr "Илтимос, санани тўлдиринг"
 
 msgid "Please use the format yyyy-mm-dd"
 msgstr "Илтимос, санани кк-ой-йййй шаклида киритинг"
 
 msgid "Unrecognized category"
-msgstr ""
+msgstr "Тан олинмаган тоифа"
 
 msgid "The chosen category was not recognized."
-msgstr ""
+msgstr "Танланган тоифа тан олинмади."
 
 msgid "Error whilst fetching data"
-msgstr ""
+msgstr "Маълумотларни олишда хатолик юз берди"
 
 msgid "The error message was: \"{{ MESSAGE }}\"."
-msgstr ""
+msgstr "Хабарда хатолик: \"{{ХАБАР}}\""
 
 msgid "There was no error message included with the error."
-msgstr ""
+msgstr "Ичида хатолик сақлаган ҳеч қандай Хабарда хатолик бўлмаган."
 
 msgid "Date"
 msgstr "Сана"
