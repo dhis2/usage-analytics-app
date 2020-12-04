@@ -76,6 +76,9 @@ jobs:
                   path: '**/node_modules'
                   key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
 
+            - name: Generate translations
+              run: yarn localize
+
             - name: Test
               run: yarn test
 
