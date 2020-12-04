@@ -126,28 +126,28 @@ msgid "Start Date"
 msgstr "تاريخ البداية"
 
 msgid "Start date should be before end date"
-msgstr ""
+msgstr "يجب أن يكون تاريخ البدء قبل تاريخ الانتهاء"
 
 msgid "Please fill in a date"
-msgstr ""
+msgstr "يرجى ملء التاريخ"
 
 msgid "Please use the format yyyy-mm-dd"
 msgstr "يرجى استخدام التنسيق yyyy-mm-dd"
 
 msgid "Unrecognized category"
-msgstr ""
+msgstr "فئة غير معروفة"
 
 msgid "The chosen category was not recognized."
-msgstr ""
+msgstr "لم يتم التعرف على الفئة المختارة."
 
 msgid "Error whilst fetching data"
-msgstr ""
+msgstr "خطأ أثناء جلب البيانات"
 
 msgid "The error message was: \"{{ MESSAGE }}\"."
-msgstr ""
+msgstr "رسالة الخطأ: \"{{MESSAGE}}\"."
 
 msgid "There was no error message included with the error."
-msgstr ""
+msgstr "لم تكن هناك رسالة خطأ مضمنة مع الخطأ."
 
 msgid "Date"
 msgstr "التاريخ"
