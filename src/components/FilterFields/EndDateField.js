@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from '@dhis2/prop-types'
 import i18n from '@dhis2/d2-i18n'
 import { InputField } from '@dhis2/ui'
+import FieldSpacer from '../FieldSpacer/index.js'
 import { validateDate } from './validators.js'
 
 const EndDateField = ({
@@ -16,14 +17,16 @@ const EndDateField = ({
     }
 
     return (
-        <InputField
-            label={i18n.t('End Date')}
-            type="date"
-            value={endDate}
-            error={!!endDateError}
-            validationText={endDateError}
-            onChange={onChange}
-        />
+        <FieldSpacer>
+            <InputField
+                label={i18n.t('End Date')}
+                type="date"
+                value={endDate}
+                error={!!endDateError}
+                validationText={endDateError}
+                onChange={onChange}
+            />
+        </FieldSpacer>
     )
 }
 
