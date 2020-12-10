@@ -1,3 +1,10 @@
+## [25.2.5](https://github.com/dhis2/usage-analytics-app/compare/v25.2.4...v25.2.5) (2020-12-10)
+
+
+### Bug Fixes
+
+* **fields:** add spacing to sidebar fields ([591f2fa](https://github.com/dhis2/usage-analytics-app/commit/591f2faed48c29bf31eabd7c1d7a5ca6507a0e30))
+
 ## [25.2.4](https://github.com/dhis2/usage-analytics-app/compare/v25.2.3...v25.2.4) (2020-12-04)
 
 
