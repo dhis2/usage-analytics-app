@@ -5,13 +5,14 @@
 # Bram Piot <bram.piot@gmail.com>, 2019
 # Karoline Tufte Lien <karoline@dhis2.org>, 2020
 # Gabriela Rodriguez <grodriguezcoronado@gmail.com>, 2020
+# Yao Selom SAKA <saka.yao@yahoo.fr>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
 "POT-Creation-Date: 2020-11-19T16:34:58.919Z\n"
 "PO-Revision-Date: 2019-09-02 16:22+0000\n"
-"Last-Translator: Gabriela Rodriguez <grodriguezcoronado@gmail.com>, 2020\n"
+"Last-Translator: Yao Selom SAKA <saka.yao@yahoo.fr>, 2020\n"
 "Language-Team: French (https://www.transifex.com/hisp-uio/teams/100509/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -110,7 +111,7 @@ msgid "Chart Type"
 msgstr "Type de Graphique"
 
 msgid "End Date"
-msgstr ""
+msgstr "Date de fin"
 
 msgid "Event Type"
 msgstr "Type d'événement"
@@ -128,28 +129,28 @@ msgid "Start Date"
 msgstr "Date de Début"
 
 msgid "Start date should be before end date"
-msgstr ""
+msgstr "La date de début doit être antérieure à la date de fin"
 
 msgid "Please fill in a date"
-msgstr ""
+msgstr "Veuillez indiquer une date"
 
 msgid "Please use the format yyyy-mm-dd"
 msgstr "Veuillez utiliser le format aaaa-mm-jj "
 
 msgid "Unrecognized category"
-msgstr ""
+msgstr "Catégorie non reconnue"
 
 msgid "The chosen category was not recognized."
-msgstr ""
+msgstr "La catégorie choisie n'était pas reconnue."
 
 msgid "Error whilst fetching data"
-msgstr ""
+msgstr "Erreur lors de l'extraction de données"
 
 msgid "The error message was: \"{{ MESSAGE }}\"."
-msgstr ""
+msgstr "Le message d'erreur était : \"{{ MESSAGE }}\"."
 
 msgid "There was no error message included with the error."
-msgstr ""
+msgstr "Aucun message d'erreur ne figurait dans l'erreur."
 
 msgid "Date"
 msgstr "Date"
