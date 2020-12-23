@@ -66,10 +66,10 @@ msgid "Pivot Table"
 msgstr "Bảng xoay"
 
 msgid "Event Report"
-msgstr ""
+msgstr "Báo cáo sự kiện"
 
 msgid "Event Chart"
-msgstr ""
+msgstr "Biểu đồ sự kiện"
 
 msgid "Dashboard"
 msgstr "Bảng điều khiển"
@@ -153,7 +153,7 @@ msgid "Date"
 msgstr "Ngày"
 
 msgid "Position"
-msgstr ""
+msgstr "Vị trí"
 
 msgid "Name"
 msgstr "Tên"
