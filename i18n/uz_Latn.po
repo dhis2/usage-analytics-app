@@ -1,0 +1,229 @@
+# 
+# Translators:
+# Yury Rogachev <yury@dhis2.org>, 2021
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: i18next-conv\n"
+"POT-Creation-Date: 2020-11-19T16:34:58.919Z\n"
+"PO-Revision-Date: 2019-09-02 16:22+0000\n"
+"Last-Translator: Yury Rogachev <yury@dhis2.org>, 2021\n"
+"Language-Team: Uzbek (Latin) (https://www.transifex.com/hisp-uio/teams/100509/uz@Latn/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uz@Latn\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Usage Analytics"
+msgstr "Foydalanish tahlili"
+
+msgid "Category"
+msgstr "Kategoriya"
+
+msgid "Values"
+msgstr "Qiymatlar"
+
+msgid "Data Values"
+msgstr "Maʼlumotlar Qiymatlar"
+
+msgid "Active Users"
+msgstr "Faol Foydalanuvchilar"
+
+msgid "Total Users"
+msgstr "Jami Foydalanuvchilar"
+
+msgid "Maps"
+msgstr "Xaritalar"
+
+msgid "Charts"
+msgstr "Diagrammalar"
+
+msgid "Pivot Tables"
+msgstr "Solishtirma jadvallar"
+
+msgid "Event Reports"
+msgstr "Hodisalar haqida hisobotlar"
+
+msgid "Event Charts"
+msgstr "Hodisa Diagramma"
+
+msgid "Dashboards"
+msgstr "Boshqaruv Paneli"
+
+msgid "Indicators"
+msgstr "Koʼrsatgichlar"
+
+msgid "Map"
+msgstr "Харита"
+
+msgid "Chart"
+msgstr "Диаграмма"
+
+msgid "Pivot Table"
+msgstr ""
+
+msgid "Event Report"
+msgstr "Hodisa Hisobot"
+
+msgid "Event Chart"
+msgstr "Hodisa Diagramma"
+
+msgid "Dashboard"
+msgstr "Boshqaruv paneli"
+
+msgid "Data Set Report"
+msgstr "Maʼlumotlar toʼplami hisoboti"
+
+msgid "Total"
+msgstr "Jami"
+
+msgid "Average Map"
+msgstr "Oʼrtacha olingan xarita"
+
+msgid "Average Chart"
+msgstr "Oʼrtacha olingan Diagramma"
+
+msgid "Average Pivot Table"
+msgstr "Oʼrtacha olingan Solishtirma Jadval"
+
+msgid "Average Event Report"
+msgstr "Oʼrtacha olingan Hodisa Hisobot"
+
+msgid "Average Event Chart"
+msgstr "Oʼrtacha olingan Hodisa Diagramma"
+
+msgid "Average Dashboard"
+msgstr "Oʼrtacha olingan Boshqaruv paneli"
+
+msgid "Average"
+msgstr "Ўртача"
+
+msgid "Aggregation Level"
+msgstr "Аggregatsiya pogʼonasi"
+
+msgid "Chart Type"
+msgstr ""
+
+msgid "End Date"
+msgstr "Yakunlanish Sana"
+
+msgid "Event Type"
+msgstr "Tadbir turi"
+
+msgid "Interval"
+msgstr "Interval"
+
+msgid "Page Size"
+msgstr "Sahifa hajmi"
+
+msgid "Sort Order"
+msgstr ""
+
+msgid "Start Date"
+msgstr "Boshlanish sanasi"
+
+msgid "Start date should be before end date"
+msgstr "Boshlanish sanasi tugash sanasidan oldin boʼlishi kerak"
+
+msgid "Please fill in a date"
+msgstr "Iltimos, sanani toʼldiring"
+
+msgid "Please use the format yyyy-mm-dd"
+msgstr "Iltimos, sanani kk-oy-yyyy shaklida kiriting"
+
+msgid "Unrecognized category"
+msgstr "Tan olinmagan toifa"
+
+msgid "The chosen category was not recognized."
+msgstr "Tanlangan toifa tan olinmadi."
+
+msgid "Error whilst fetching data"
+msgstr "Maʼlumotlarni olishda xatolik yuz berdi"
+
+msgid "The error message was: \"{{ MESSAGE }}\"."
+msgstr "Xabarda xatolik: \"{{XАBАR}}\""
+
+msgid "There was no error message included with the error."
+msgstr "Ichida xatolik saqlagan hech qanday Xabarda xatolik boʼlmagan."
+
+msgid "Date"
+msgstr "Sana"
+
+msgid "Position"
+msgstr "Lavozimi"
+
+msgid "Name"
+msgstr "Исми"
+
+msgid "Views"
+msgstr "Koʼrishlar"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "Created"
+msgstr "Yaratilgan"
+
+msgid "Sum"
+msgstr "Жамлаш"
+
+msgid "Favorite views"
+msgstr "Tanlangan koʼrinishlar"
+
+msgid "Number of times users looked at analysis favorites"
+msgstr "Tanlangan tahlillarni foydalanuvchilar tomonidan koʼrilgan soni"
+
+msgid "Favorites saved"
+msgstr "Tanlanganlar saqlandi"
+
+msgid "Number of analysis favorites created by users"
+msgstr "Foydalanuvchilar tomonidan yaratilgan tanlangan tahlillar soni"
+
+msgid "Users"
+msgstr "Foydalanuvchilar"
+
+msgid "Number of users in the system"
+msgstr "Tizimda foydalanuvchilar soni"
+
+msgid "Top favorites"
+msgstr "Tanlanganlarning sarasi"
+
+msgid "Data values"
+msgstr "Maʼlumotlarning qiymatlari"
+
+msgid "Number of data values saved in the system"
+msgstr "Tizimda saqlangan maʼlumotlar qiymatlarining soni"
+
+msgid "All"
+msgstr "Barchasi"
+
+msgid "Report table"
+msgstr ""
+
+msgid "Event report"
+msgstr "Hodisa/Tadbir hisoboti"
+
+msgid "Event chart"
+msgstr "Hodisa/Tadbir diagrammasi"
+
+msgid "Data set report"
+msgstr ""
+
+msgid "Day"
+msgstr ""
+
+msgid "Week"
+msgstr "Hafta"
+
+msgid "Month"
+msgstr ""
+
+msgid "Year"
+msgstr "Yil"
+
+msgid "Ascending"
+msgstr "Oshish boʼyicha"
+
+msgid "Descending"
+msgstr "Kamayish boʼyicha"
