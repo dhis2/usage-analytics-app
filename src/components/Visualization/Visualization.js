@@ -19,6 +19,7 @@ const Visualization = ({
     aggregation,
     category,
     chartType,
+    countPassiveViews,
     endDate,
     eventType,
     interval,
@@ -32,6 +33,7 @@ const Visualization = ({
         case TOP_FAVORITES:
             return (
                 <TopFavoritesVisualization
+                    countPassiveViews={countPassiveViews}
                     eventType={eventType}
                     pageSize={pageSize}
                     sortOrder={sortOrder}
@@ -72,6 +74,7 @@ const Visualization = ({
                 <FavoriteViewsVisualization
                     aggregation={aggregation}
                     chartType={chartType}
+                    countPassiveViews={countPassiveViews}
                     endDate={endDate}
                     interval={interval}
                     isIntervalStale={isIntervalStale}
@@ -92,6 +95,7 @@ Visualization.propTypes = {
     aggregation: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
     chartType: PropTypes.string.isRequired,
+    countPassiveViews: PropTypes.bool.isRequired,
     endDate: PropTypes.string.isRequired,
     eventType: PropTypes.string.isRequired,
     interval: PropTypes.string.isRequired,

@@ -1,4 +1,5 @@
+import TopDashboardsQuery from './TopDashboardsQuery.js'
 import TopFavoritesQuery from './TopFavoritesQuery.js'
 import DataStatisticsQuery from './DataStatisticsQuery.js'
 
-export { TopFavoritesQuery, DataStatisticsQuery }
+export { TopDashboardsQuery, TopFavoritesQuery, DataStatisticsQuery }

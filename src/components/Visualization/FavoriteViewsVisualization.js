@@ -42,6 +42,7 @@ const averageFields = [
 const FavoriteViewsVisualization = ({
     aggregation,
     chartType,
+    countPassiveViews,
     endDate,
     interval,
     isIntervalStale,
@@ -54,6 +55,7 @@ const FavoriteViewsVisualization = ({
     if (isSum) {
         return (
             <DataStatisticsQuery
+                countPassiveViews={countPassiveViews}
                 endDate={endDate}
                 fields={sumFields}
                 interval={interval}
@@ -119,6 +121,7 @@ const FavoriteViewsVisualization = ({
 FavoriteViewsVisualization.propTypes = {
     aggregation: PropTypes.string.isRequired,
     chartType: PropTypes.string.isRequired,
+    countPassiveViews: PropTypes.bool.isRequired,
     endDate: PropTypes.string.isRequired,
     interval: PropTypes.string.isRequired,
     isIntervalStale: PropTypes.bool.isRequired,

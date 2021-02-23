@@ -43,6 +43,7 @@ describe('<FavoriteViewsVisualization>', () => {
             isIntervalStale: false,
             setIsIntervalStale: () => {},
             startDate: '',
+            countPassiveViews: false,
         }
         const wrapper = mount(<FavoriteViewsVisualization {...props} />)
 
@@ -62,6 +63,7 @@ describe('<FavoriteViewsVisualization>', () => {
             isIntervalStale: false,
             setIsIntervalStale: () => {},
             startDate: '',
+            countPassiveViews: false,
         }
         const wrapper = mount(<FavoriteViewsVisualization {...props} />)
 
@@ -81,6 +83,7 @@ describe('<FavoriteViewsVisualization>', () => {
             isIntervalStale: false,
             setIsIntervalStale: () => {},
             startDate: '',
+            countPassiveViews: false,
         }
         const wrapper = mount(<FavoriteViewsVisualization {...props} />)
 
@@ -100,6 +103,7 @@ describe('<FavoriteViewsVisualization>', () => {
             isIntervalStale: false,
             setIsIntervalStale: () => {},
             startDate: '',
+            countPassiveViews: false,
         }
         const wrapper = mount(<FavoriteViewsVisualization {...props} />)
 

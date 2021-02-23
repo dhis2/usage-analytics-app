@@ -35,6 +35,7 @@ describe('<DataStatisticsQuery>', () => {
                 isIntervalStale: false,
                 setIsIntervalStale: () => {},
                 startDate: '2030-01-01',
+                countPassiveViews: false,
             }
 
             const wrapper = mount(
@@ -61,6 +62,7 @@ describe('<DataStatisticsQuery>', () => {
                 isIntervalStale: true,
                 setIsIntervalStale: () => {},
                 startDate: '2010-01-01',
+                countPassiveViews: false,
             }
 
             const wrapper = mount(
@@ -89,6 +91,7 @@ describe('<DataStatisticsQuery>', () => {
                 isIntervalStale: false,
                 setIsIntervalStale: () => {},
                 startDate: '2030-01-01',
+                countPassiveViews: false,
             }
 
             const wrapper = mount(
@@ -120,6 +123,7 @@ describe('<DataStatisticsQuery>', () => {
                 isIntervalStale: false,
                 setIsIntervalStale: spy,
                 startDate: '2010-01-01',
+                countPassiveViews: false,
             }
 
             const wrapper = mount(
@@ -154,6 +158,7 @@ describe('<DataStatisticsQuery>', () => {
                 isIntervalStale: false,
                 setIsIntervalStale: () => {},
                 startDate: '2010-01-01',
+                countPassiveViews: false,
             }
 
             const wrapper = mount(
@@ -192,6 +197,7 @@ describe('<DataStatisticsQuery>', () => {
                 isIntervalStale: false,
                 setIsIntervalStale: () => {},
                 startDate: '2010-01-01',
+                countPassiveViews: false,
             }
 
             const wrapper = mount(
@@ -226,6 +232,7 @@ describe('<DataStatisticsQuery>', () => {
                 isIntervalStale: false,
                 setIsIntervalStale: () => {},
                 startDate: '2010-01-01',
+                countPassiveViews: false,
             }
 
             const wrapper = mount(
@@ -253,6 +260,7 @@ describe('<DataStatisticsQuery>', () => {
                 isIntervalStale: false,
                 setIsIntervalStale,
                 startDate: '2010-01-01',
+                countPassiveViews: false,
             }
 
             const wrapper = mount(

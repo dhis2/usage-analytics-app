@@ -24,6 +24,7 @@ const query = {
 
 const DataStatisticsQuery = ({
     children,
+    countPassiveViews,
     endDate,
     fields,
     interval,
@@ -79,11 +80,20 @@ const DataStatisticsQuery = ({
         )
     }
 
+    if (countPassiveViews) {
+        data.dataStatistics.forEach(item => {
+            item.dashboardViews += item.passiveDashboardViews
+            item.averageDashboardViews =
+                (item.dashboardViews + item.passiveDashboardViews) / item.users
+        })
+    }
+
     return children(data.dataStatistics)
 }
 
 DataStatisticsQuery.propTypes = {
     children: PropTypes.func.isRequired,
+    countPassiveViews: PropTypes.bool.isRequired,
     endDate: PropTypes.string.isRequired,
     fields: PropTypes.array.isRequired,
     interval: PropTypes.string.isRequired,

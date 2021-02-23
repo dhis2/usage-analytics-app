@@ -25,6 +25,7 @@ const baseProps = {
     setIsIntervalStale: () => {},
     sortOrder: '',
     startDate: '',
+    countPassiveViews: false,
 }
 
 describe('<Visualization>', () => {

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { CssVariables } from '@dhis2/ui'
+import { useDataQuery } from '@dhis2/app-runtime'
 import { FAVORITE_VIEWS } from '../../constants/categories.js'
 import { WEEK } from '../../constants/intervals.js'
 import { SUM } from '../../constants/aggregations.js'
@@ -17,9 +18,11 @@ import CategoryField from '../CategoryField/index.js'
 import AppTitle from '../AppTitle/index.js'
 import Visualization from '../Visualization/index.js'
 import createDefaultDates from './createDefaultDates.js'
+import systemSettingsQuery from './systemSettingsQuery.js'
 
 const App = () => {
     const { initialStartDate, initialEndDate } = createDefaultDates()
+    const { data } = useDataQuery(systemSettingsQuery)
 
     // State
     const [aggregation, setAggregation] = useState(SUM)
@@ -76,19 +79,25 @@ const App = () => {
                     />
                 </LayoutSidebar>
                 <LayoutContent>
-                    <Visualization
-                        aggregation={aggregation}
-                        category={category}
-                        chartType={chartType}
-                        endDate={endDate}
-                        eventType={eventType}
-                        interval={interval}
-                        isIntervalStale={isIntervalStale}
-                        pageSize={pageSize}
-                        setIsIntervalStale={setIsIntervalStale}
-                        sortOrder={sortOrder}
-                        startDate={startDate}
-                    />
+                    {data && (
+                        <Visualization
+                            aggregation={aggregation}
+                            category={category}
+                            chartType={chartType}
+                            countPassiveViews={
+                                data.systemSettings
+                                    .keyCountPassiveDashboardViewsInUsageAnalytics
+                            }
+                            endDate={endDate}
+                            eventType={eventType}
+                            interval={interval}
+                            isIntervalStale={isIntervalStale}
+                            pageSize={pageSize}
+                            setIsIntervalStale={setIsIntervalStale}
+                            sortOrder={sortOrder}
+                            startDate={startDate}
+                        />
+                    )}
                 </LayoutContent>
             </LayoutContainer>
         </React.Fragment>

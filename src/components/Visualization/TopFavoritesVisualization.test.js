@@ -18,6 +18,7 @@ describe('<TopFavoritesVisualization>', () => {
             eventType: '',
             pageSize: '',
             sortOrder: '',
+            countPassiveViews: false,
         }
         const wrapper = mount(<TopFavoritesVisualization {...props} />)
 
