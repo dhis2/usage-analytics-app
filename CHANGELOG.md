@@ -1,3 +1,10 @@
+## [25.2.12](https://github.com/dhis2/usage-analytics-app/compare/v25.2.11...v25.2.12) (2021-03-08)
+
+
+### Bug Fixes
+
+* **i18n:** import from `locales/index.js` in root to add translations ([#443](https://github.com/dhis2/usage-analytics-app/issues/443)) ([9062b2f](https://github.com/dhis2/usage-analytics-app/commit/9062b2f75112e53536b0cde17c01b1f010c10940))
+
 ## [25.2.11](https://github.com/dhis2/usage-analytics-app/compare/v25.2.10...v25.2.11) (2021-02-15)
 
 
