@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { CssVariables } from '@dhis2/ui'
+import '../../locales/index.js'
 import { FAVORITE_VIEWS } from '../../constants/categories.js'
 import { WEEK } from '../../constants/intervals.js'
 import { SUM } from '../../constants/aggregations.js'
