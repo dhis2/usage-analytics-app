@@ -1,3 +1,10 @@
+## [25.2.13](https://github.com/dhis2/usage-analytics-app/compare/v25.2.12...v25.2.13) (2021-03-11)
+
+
+### Bug Fixes
+
+* upgrade to @dhis2/cli-app-scripts@6 (DHIS2-9893) ([#445](https://github.com/dhis2/usage-analytics-app/issues/445)) ([a1d79d9](https://github.com/dhis2/usage-analytics-app/commit/a1d79d925ae035c2397f9c6b55bba1a216196211))
+
 ## [25.2.12](https://github.com/dhis2/usage-analytics-app/compare/v25.2.11...v25.2.12) (2021-03-08)
 
 
