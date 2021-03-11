@@ -1,12 +1,12 @@
 const config = {
-    title: 'Usage Analytics',
     type: 'app',
+    name: 'usage-analytics',
+    title: 'Usage Analytics',
+    coreApp: true,
 
     entryPoints: {
-        app: './src/components/App',
+        app: './src/components/App/App.js',
     },
-
-    coreApp: true,
 }
 
 module.exports = config
