@@ -8,6 +8,7 @@ import {
     CenteredContent,
     NoticeBox,
 } from '@dhis2/ui'
+import { DASHBOARD_VIEW } from '../../constants/eventTypes.js'
 
 const query = {
     favorites: {
@@ -18,6 +19,21 @@ const query = {
             sortOrder,
             fields,
         }),
+    },
+    passiveFavorites: {
+        resource: 'dataStatistics/favorites',
+        params: ({ pageSize, sortOrder, fields }) => ({
+            eventType: 'PASSIVE_DASHBOARD_VIEW',
+            pageSize,
+            sortOrder,
+            fields,
+        }),
+    },
+    systemSettings: {
+        resource: 'systemSettings',
+        params: {
+            key: 'keyCountPassiveDashboardViewsInUsageAnalytics',
+        },
     },
 }
 
@@ -67,6 +83,27 @@ const TopFavoritesQuery = ({
                 {error.message ? message : fallback}
             </NoticeBox>
         )
+    }
+
+    const {
+        keyCountPassiveDashboardViewsInUsageAnalytics: countPassiveViews,
+    } = data.systemSettings
+
+    // If passive views should be counted, add them to the view totals for dashboards
+    if (countPassiveViews && eventType === DASHBOARD_VIEW) {
+        const passiveViewsById = data.passiveFavorites.reduce(
+            (acc, passiveFavorite) => {
+                acc[passiveFavorite.id] = passiveFavorite.views
+                return acc
+            },
+            {}
+        )
+
+        data.favorites.forEach(favorite => {
+            if (favorite.id in passiveViewsById) {
+                favorite.views += passiveViewsById[favorite.id]
+            }
+        })
     }
 
     return children(data.favorites)
