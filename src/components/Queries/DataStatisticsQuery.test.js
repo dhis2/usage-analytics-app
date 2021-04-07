@@ -214,9 +214,59 @@ describe('<DataStatisticsQuery>', () => {
     })
 
     describe('receiving data', () => {
-        it('calls children with the received data', async () => {
+        it('calls children with the received data when count passive views is false', async () => {
             const expected = 'Expected data'
-            const data = { dataStatistics: expected }
+            const data = {
+                dataStatistics: expected,
+                systemSettings: {
+                    keyCountPassiveDashboardViewsInUsageAnalytics: false,
+                },
+            }
+            const spy = jest.fn(() => null)
+            const props = {
+                children: spy,
+                endDate: '2020-01-01',
+                fields: ['*'],
+                interval: YEAR,
+                isIntervalStale: false,
+                setIsIntervalStale: () => {},
+                startDate: '2010-01-01',
+            }
+
+            const wrapper = mount(
+                <CustomDataProvider data={data}>
+                    <DataStatisticsQuery {...props} />
+                </CustomDataProvider>
+            )
+
+            await act(update(wrapper))
+            await waitForExpect(() => {
+                expect(spy).toHaveBeenCalledWith(expected)
+            })
+        })
+
+        it('calls children with the received data when count passive views is true', async () => {
+            const expected = [
+                {
+                    dashboardViews: 1000,
+                    passiveDashboardViews: 900,
+                    averageDashboardViews: 100,
+                    users: 10,
+                },
+            ]
+            const data = {
+                dataStatistics: [
+                    {
+                        dashboardViews: 100,
+                        passiveDashboardViews: 900,
+                        averageDashboardViews: 10,
+                        users: 10,
+                    },
+                ],
+                systemSettings: {
+                    keyCountPassiveDashboardViewsInUsageAnalytics: true,
+                },
+            }
             const spy = jest.fn(() => null)
             const props = {
                 children: spy,
@@ -242,7 +292,12 @@ describe('<DataStatisticsQuery>', () => {
 
         it('calls setIsIntervalStale with false when data has been received', async () => {
             const expected = 'Expected data'
-            const data = { dataStatistics: expected }
+            const data = {
+                dataStatistics: expected,
+                systemSettings: {
+                    keyCountPassiveDashboardViewsInUsageAnalytics: false,
+                },
+            }
             const children = jest.fn(() => null)
             const setIsIntervalStale = jest.fn()
             const props = {
