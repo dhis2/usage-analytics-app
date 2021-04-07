@@ -1,3 +1,10 @@
+# [25.3.0](https://github.com/dhis2/usage-analytics-app/compare/v25.2.14...v25.3.0) (2021-04-07)
+
+
+### Features
+
+* include passive views when necessary ([#453](https://github.com/dhis2/usage-analytics-app/issues/453)) ([610bc14](https://github.com/dhis2/usage-analytics-app/commit/610bc1432da00d28c9f8a702fba3a8d8db919800))
+
 ## [25.2.14](https://github.com/dhis2/usage-analytics-app/compare/v25.2.13...v25.2.14) (2021-03-29)
 
 
