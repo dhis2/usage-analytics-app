@@ -86,12 +86,16 @@ const TopFavoritesQuery = ({
     }
 
     const {
-        keyCountPassiveDashboardViewsInUsageAnalytics: countPassiveViews,
-    } = data.systemSettings
+        systemSettings: {
+            keyCountPassiveDashboardViewsInUsageAnalytics: countPassiveViews,
+        },
+        passiveFavorites,
+        favorites,
+    } = data
 
-    // If passive views should be counted, add them to the view totals for dashboards
+    // If passive views should be counted, return statistics that include passive views in the totals
     if (countPassiveViews && eventType === DASHBOARD_VIEW) {
-        const passiveViewsById = data.passiveFavorites.reduce(
+        const passiveViewsById = passiveFavorites.reduce(
             (acc, passiveFavorite) => {
                 acc[passiveFavorite.id] = passiveFavorite.views
                 return acc
@@ -99,14 +103,21 @@ const TopFavoritesQuery = ({
             {}
         )
 
-        data.favorites.forEach(favorite => {
-            if (favorite.id in passiveViewsById) {
-                favorite.views += passiveViewsById[favorite.id]
+        const withPassiveViews = favorites.map(f => {
+            if (f.id in passiveViewsById) {
+                return {
+                    ...f,
+                    views: f.views + passiveViewsById[f.id],
+                }
             }
+
+            return f
         })
+
+        return children(withPassiveViews)
     }
 
-    return children(data.favorites)
+    return children(favorites)
 }
 
 TopFavoritesQuery.propTypes = {

@@ -86,19 +86,29 @@ const DataStatisticsQuery = ({
     }
 
     const {
-        keyCountPassiveDashboardViewsInUsageAnalytics: countPassiveViews,
-    } = data.systemSettings
+        systemSettings: {
+            keyCountPassiveDashboardViewsInUsageAnalytics: countPassiveViews,
+        },
+        dataStatistics,
+    } = data
 
-    // If passive views should be counted, mutate the data to include passive views in the totals
+    // If passive views should be counted, return statistics that include passive views in the totals
     if (countPassiveViews) {
-        data.dataStatistics.forEach(statistic => {
-            statistic.dashboardViews += statistic.passiveDashboardViews
-            statistic.averageDashboardViews =
-                statistic.dashboardViews / statistic.users
+        const withPassiveViews = dataStatistics.map(s => {
+            const dashboardViews = s.dashboardViews + s.passiveDashboardViews
+            const averageDashboardViews = dashboardViews / s.users
+
+            return {
+                ...s,
+                dashboardViews,
+                averageDashboardViews,
+            }
         })
+
+        return children(withPassiveViews)
     }
 
-    return children(data.dataStatistics)
+    return children(dataStatistics)
 }
 
 DataStatisticsQuery.propTypes = {

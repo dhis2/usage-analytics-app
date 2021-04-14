@@ -1,28 +1,29 @@
 import React from 'react'
 import { mount } from 'enzyme'
-import { useDataQuery } from '@dhis2/app-runtime'
+import { CustomDataProvider } from '@dhis2/app-runtime'
+import { act } from 'react-dom/test-utils'
+import waitForExpect from 'wait-for-expect'
 import TopFavoritesQuery from './TopFavoritesQuery.js'
-import { DASHBOARD_VIEW } from '../../constants/eventTypes.js'
 
 /**
- * We're mocking the app-runtime here instead of using the CustomDataProvider, since
- * the CustomDataProvider doesn't work for queries that call the same endpoint more
- * than once.
+ * This allows react to update the wrapper after the async app runtime logic has
+ * done its thing and updated state.
+ *
+ * - https://dev.to/dannypule/fix-the-not-wrapped-in-act-warning-simple-solution-3lj1
+ * - https://reactjs.org/docs/testing-recipes.html#act
  */
 
-jest.mock('@dhis2/app-runtime', () => ({
-    useDataQuery: jest.fn(),
-}))
+const update = wrapper => () =>
+    new Promise(resolve => {
+        setImmediate(() => {
+            wrapper.update()
+            resolve()
+        })
+    })
 
 describe('<TopFavoritesQuery>', () => {
     describe('rendering a spinner', () => {
         it('renders a spinner when loading', async () => {
-            useDataQuery.mockImplementation(() => ({
-                loading: true,
-                called: true,
-                refetch: () => {},
-            }))
-
             const props = {
                 children: () => null,
                 fields: ['*'],
@@ -31,7 +32,13 @@ describe('<TopFavoritesQuery>', () => {
                 sortOrder: '',
             }
 
-            const wrapper = mount(<TopFavoritesQuery {...props} />)
+            const wrapper = mount(
+                <CustomDataProvider options={{ loadForever: true }}>
+                    <TopFavoritesQuery {...props} />
+                </CustomDataProvider>
+            )
+
+            await act(update(wrapper))
 
             expect(wrapper.exists({ role: 'progressbar' })).toBe(true)
         })
@@ -39,18 +46,17 @@ describe('<TopFavoritesQuery>', () => {
 
     describe('errors', () => {
         it('displays errors it encounters', async () => {
-            useDataQuery.mockImplementation(() => ({
-                loading: false,
-                called: true,
-                error: new Error('Error'),
-                refetch: () => {},
-            }))
-
             const titleSelector = {
                 'data-test': 'dhis2-uicore-noticebox-title',
             }
             const messageSelector = {
                 'data-test': 'dhis2-uicore-noticebox-message',
+            }
+            const data = {
+                'dataStatistics/favorites': () => {
+                    throw new Error('Error')
+                },
+                systemSettings: () => {},
             }
             const props = {
                 children: () => {},
@@ -60,28 +66,34 @@ describe('<TopFavoritesQuery>', () => {
                 sortOrder: '',
             }
 
-            const wrapper = mount(<TopFavoritesQuery {...props} />)
+            const wrapper = mount(
+                <CustomDataProvider data={data}>
+                    <TopFavoritesQuery {...props} />
+                </CustomDataProvider>
+            )
 
-            const title = wrapper.find(titleSelector)
-            const message = wrapper.find(messageSelector)
+            await act(update(wrapper))
+            await waitForExpect(() => {
+                const title = wrapper.find(titleSelector)
+                const message = wrapper.find(messageSelector)
 
-            expect(title.text()).toBe('Error whilst fetching data')
-            expect(message.text()).toBe('The error message was: "Error".')
+                expect(title.text()).toBe('Error whilst fetching data')
+                expect(message.text()).toBe('The error message was: "Error".')
+            })
         })
 
         it('renders a fallback message for errors', async () => {
-            useDataQuery.mockImplementation(() => ({
-                loading: false,
-                called: true,
-                error: new Error(),
-                refetch: () => {},
-            }))
-
             const titleSelector = {
                 'data-test': 'dhis2-uicore-noticebox-title',
             }
             const messageSelector = {
                 'data-test': 'dhis2-uicore-noticebox-message',
+            }
+            const data = {
+                'dataStatistics/favorites': () => {
+                    throw new Error()
+                },
+                systemSettings: () => {},
             }
             const props = {
                 children: () => {},
@@ -91,36 +103,40 @@ describe('<TopFavoritesQuery>', () => {
                 sortOrder: '',
             }
 
-            const wrapper = mount(<TopFavoritesQuery {...props} />)
-
-            const title = wrapper.find(titleSelector)
-            const message = wrapper.find(messageSelector)
-
-            expect(title.text()).toBe('Error whilst fetching data')
-            expect(message.text()).toBe(
-                'There was no error message included with the error.'
+            const wrapper = mount(
+                <CustomDataProvider data={data}>
+                    <TopFavoritesQuery {...props} />
+                </CustomDataProvider>
             )
+
+            await act(update(wrapper))
+            await waitForExpect(() => {
+                const title = wrapper.find(titleSelector)
+                const message = wrapper.find(messageSelector)
+
+                expect(title.text()).toBe('Error whilst fetching data')
+                expect(message.text()).toBe(
+                    'There was no error message included with the error.'
+                )
+            })
         })
     })
 
     describe('receiving data', () => {
         it('calls children with the expected data when count passive views is false', async () => {
-            const expected = 'Expected data'
+            const expected = [{ id: 1, views: 10 }]
+            const data = {
+                'dataStatistics/favorites': (_, query) => {
+                    if (query.params.eventType === 'PASSIVE_DASHBOARD_VIEW') {
+                        return [{ id: 2, views: 0 }]
+                    }
 
-            useDataQuery.mockImplementation(() => ({
-                loading: false,
-                called: true,
-                error: undefined,
-                refetch: () => {},
-                data: {
-                    favorites: expected,
-                    passiveFavorites: [],
-                    systemSettings: {
-                        keyCountPassiveDashboardViewsInUsageAnalytics: false,
-                    },
+                    return expected
                 },
-            }))
-
+                systemSettings: () => ({
+                    keyCountPassiveDashboardViewsInUsageAnalytics: false,
+                }),
+            }
             const spy = jest.fn(() => null)
             const props = {
                 children: spy,
@@ -130,55 +146,66 @@ describe('<TopFavoritesQuery>', () => {
                 sortOrder: '',
             }
 
-            mount(<TopFavoritesQuery {...props} />)
+            const wrapper = mount(
+                <CustomDataProvider data={data}>
+                    <TopFavoritesQuery {...props} />
+                </CustomDataProvider>
+            )
 
-            expect(spy).toHaveBeenCalledWith(expected)
+            await act(update(wrapper))
+            await waitForExpect(() => {
+                expect(spy).toHaveBeenCalledWith(expected)
+            })
         })
 
         it('calls children with the expected data when count passive views is true and the event type is DASHBOARD_VIEW', async () => {
             const expected = [
                 {
                     id: 'id',
-                    views: 20,
+                    views: 25,
                 },
             ]
+            const data = {
+                'dataStatistics/favorites': (_, query) => {
+                    if (query.params.eventType === 'PASSIVE_DASHBOARD_VIEW') {
+                        return [
+                            {
+                                id: 'id',
+                                views: 15,
+                            },
+                        ]
+                    }
 
-            useDataQuery.mockImplementation(() => ({
-                loading: false,
-                called: true,
-                error: undefined,
-                refetch: () => {},
-                data: {
-                    favorites: [
+                    return [
                         {
                             id: 'id',
                             views: 10,
                         },
-                    ],
-                    passiveFavorites: [
-                        {
-                            id: 'id',
-                            views: 10,
-                        },
-                    ],
-                    systemSettings: {
-                        keyCountPassiveDashboardViewsInUsageAnalytics: true,
-                    },
+                    ]
                 },
-            }))
-
+                systemSettings: () => ({
+                    keyCountPassiveDashboardViewsInUsageAnalytics: true,
+                }),
+            }
             const spy = jest.fn(() => null)
             const props = {
                 children: spy,
                 fields: ['*'],
-                eventType: DASHBOARD_VIEW,
+                eventType: 'DASHBOARD_VIEW',
                 pageSize: '',
                 sortOrder: '',
             }
 
-            mount(<TopFavoritesQuery {...props} />)
+            const wrapper = mount(
+                <CustomDataProvider data={data}>
+                    <TopFavoritesQuery {...props} />
+                </CustomDataProvider>
+            )
 
-            expect(spy).toHaveBeenCalledWith(expected)
+            await act(update(wrapper))
+            await waitForExpect(() => {
+                expect(spy).toHaveBeenCalledWith(expected)
+            })
         })
     })
 })
