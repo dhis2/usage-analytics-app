@@ -1,3 +1,10 @@
+## [25.3.1](https://github.com/dhis2/usage-analytics-app/compare/v25.3.0...v25.3.1) (2021-04-14)
+
+
+### Bug Fixes
+
+* **query:** map instead of mutating data query data ([#454](https://github.com/dhis2/usage-analytics-app/issues/454)) ([07a1cf5](https://github.com/dhis2/usage-analytics-app/commit/07a1cf561e8c9e5746ad2f0218a7d416eb08e699))
+
 # [25.3.0](https://github.com/dhis2/usage-analytics-app/compare/v25.2.14...v25.3.0) (2021-04-07)
 
 
