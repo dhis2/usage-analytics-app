@@ -17,7 +17,7 @@
         "@dhis2/ui": "^6.5.5",
         "chart.js": "^2.9.4",
         "moment": "^2.29.1",
-        "react-chartjs-2": "^2.11.1"
+        "react-chartjs-2": "^3.0.3"
     },
     "devDependencies": {
         "@dhis2/cli-app-scripts": "^6.0.0",
