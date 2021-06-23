@@ -1,3 +1,16 @@
+# [100.0.0](https://github.com/dhis2/usage-analytics-app/compare/v99.9.9...v100.0.0) (2021-06-23)
+
+
+### chore
+
+* **release:** migrate to new app version scheme ([64a8ac7](https://github.com/dhis2/usage-analytics-app/commit/64a8ac71d8fc1ca3a62cbbcc135459d54aefd793))
+
+
+### BREAKING CHANGES
+
+* **release:** App version becomes decoupled from DHIS2 versions, see
+the d2.config.js or App Hub for DHIS2 version compatibility.
+
 ## [25.3.2](https://github.com/dhis2/usage-analytics-app/compare/v25.3.1...v25.3.2) (2021-04-20)
 
 
