@@ -1,3 +1,10 @@
+## [100.0.5](https://github.com/dhis2/usage-analytics-app/compare/v100.0.4...v100.0.5) (2021-06-28)
+
+
+### Bug Fixes
+
+* **noop:** test different strategy to build ([40fd5ac](https://github.com/dhis2/usage-analytics-app/commit/40fd5ac25acbcba6158ab8f2876e5609ec02a698))
+
 ## [100.0.4](https://github.com/dhis2/usage-analytics-app/compare/v100.0.3...v100.0.4) (2021-06-28)
 
 
