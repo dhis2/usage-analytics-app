@@ -5,6 +5,15 @@
 
 * **ci:** install and build after package.json updates ([8ebc2b1](https://github.com/dhis2/usage-analytics-app/commit/8ebc2b188c4ee9efe296c0a79758562ef398a275))
 * **noop:** publish new version ([8777ae1](https://github.com/dhis2/usage-analytics-app/commit/8777ae1c2175ba49a847259ad90d822e9aeb8e62))
+* **verify:** increase log level ([c495e57](https://github.com/dhis2/usage-analytics-app/commit/c495e57a46ad32e8531800ba577ab684357c9af3))
+
+## [100.0.4](https://github.com/dhis2/usage-analytics-app/compare/v100.0.3...v100.0.4) (2021-06-28)
+
+
+### Bug Fixes
+
+* **ci:** install and build after package.json updates ([8ebc2b1](https://github.com/dhis2/usage-analytics-app/commit/8ebc2b188c4ee9efe296c0a79758562ef398a275))
+* **noop:** publish new version ([8777ae1](https://github.com/dhis2/usage-analytics-app/commit/8777ae1c2175ba49a847259ad90d822e9aeb8e62))
 
 ## [100.0.3](https://github.com/dhis2/usage-analytics-app/compare/v100.0.2...v100.0.3) (2021-06-28)
 
