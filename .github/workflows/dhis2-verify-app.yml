@@ -118,9 +118,6 @@ jobs:
               with:
                   node-version: 12.x
 
-            - name: Install
-              run: yarn install --frozen-lockfile
-
             - name: Publish release
               run: npx @dhis2/cli-utils@alpha release --publish app-hub --debug
 
