@@ -1,3 +1,10 @@
+## [100.0.5](https://github.com/dhis2/usage-analytics-app/compare/v100.0.4...v100.0.5) (2021-06-28)
+
+
+### Bug Fixes
+
+* **noop:** test cli-utils release alpha ([5a3817a](https://github.com/dhis2/usage-analytics-app/commit/5a3817a8ba9875b90ef8e06b32c5967f27d77c52))
+
 ## [100.0.4](https://github.com/dhis2/usage-analytics-app/compare/v100.0.3...v100.0.4) (2021-06-28)
 
 
