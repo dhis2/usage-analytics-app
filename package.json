@@ -1,6 +1,6 @@
 {
     "name": "usage-analytics-app",
-    "version": "100.0.2",
+    "version": "100.0.3",
     "private": true,
     "scripts": {
         "start": "d2-app-scripts start",
