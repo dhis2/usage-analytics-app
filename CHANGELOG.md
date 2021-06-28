@@ -1,3 +1,10 @@
+## [100.0.4](https://github.com/dhis2/usage-analytics-app/compare/v100.0.3...v100.0.4) (2021-06-28)
+
+
+### Bug Fixes
+
+* **noop:** test semantic-release app-hub plugin ([e1a2241](https://github.com/dhis2/usage-analytics-app/commit/e1a2241d5b5806f82c6eb63c3731016a276a0b23))
+
 ## [100.0.3](https://github.com/dhis2/usage-analytics-app/compare/v100.0.2...v100.0.3) (2021-06-28)
 
 
