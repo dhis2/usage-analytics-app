@@ -1,3 +1,10 @@
+## [100.0.6](https://github.com/dhis2/usage-analytics-app/compare/v100.0.5...v100.0.6) (2021-06-28)
+
+
+### Bug Fixes
+
+* **noop:** download the build artifact before publish ([bba2939](https://github.com/dhis2/usage-analytics-app/commit/bba293999311bd59a23bf55d490a155f7a5c857e))
+
 ## [100.0.5](https://github.com/dhis2/usage-analytics-app/compare/v100.0.4...v100.0.5) (2021-06-28)
 
 
