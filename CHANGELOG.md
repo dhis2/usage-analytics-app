@@ -1,3 +1,10 @@
+## [100.0.8](https://github.com/dhis2/usage-analytics-app/compare/v100.0.7...v100.0.8) (2021-06-29)
+
+
+### Bug Fixes
+
+* **noop:** cut release ([e3eebb0](https://github.com/dhis2/usage-analytics-app/commit/e3eebb07d909febae7b0f5a65348ccf71d985758))
+
 ## [100.0.7](https://github.com/dhis2/usage-analytics-app/compare/v100.0.6...v100.0.7) (2021-06-29)
 
 
