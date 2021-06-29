@@ -1,102 +1,32 @@
 ## [100.0.8](https://github.com/dhis2/usage-analytics-app/compare/v100.0.7...v100.0.8) (2021-06-29)
 
-
-### Bug Fixes
-
-* **noop:** cut release ([e3eebb0](https://github.com/dhis2/usage-analytics-app/commit/e3eebb07d909febae7b0f5a65348ccf71d985758))
+> This is a no-op release that was made during development of the
+> semantic-release app-hub plugin.
 
 ## [100.0.7](https://github.com/dhis2/usage-analytics-app/compare/v100.0.6...v100.0.7) (2021-06-29)
 
-
-### Bug Fixes
-
-* **noop:** cut release ([0c8d63c](https://github.com/dhis2/usage-analytics-app/commit/0c8d63caf23e868b22e8023d9e0ae404dae7cb94))
+> This is a no-op release that was made during development of the
+> semantic-release app-hub plugin.
 
 ## [100.0.6](https://github.com/dhis2/usage-analytics-app/compare/v100.0.5...v100.0.6) (2021-06-29)
 
-
-### Bug Fixes
-
-* **noop:** cut release ([81ff676](https://github.com/dhis2/usage-analytics-app/commit/81ff6760ee934f247df895466ca3c2ed7402da04))
-
-## [100.0.5](https://github.com/dhis2/usage-analytics-app/compare/v100.0.4...v100.0.5) (2021-06-29)
-
-
-### Bug Fixes
-
-* **noop:** cut release ([5a5803a](https://github.com/dhis2/usage-analytics-app/commit/5a5803a5205ecbde92629e135a9dd07d9ecbe0e7))
-
-## [100.0.4](https://github.com/dhis2/usage-analytics-app/compare/v100.0.3...v100.0.4) (2021-06-29)
-
-
-### Bug Fixes
-
-* **ci:** install and build after package.json updates ([8ebc2b1](https://github.com/dhis2/usage-analytics-app/commit/8ebc2b188c4ee9efe296c0a79758562ef398a275))
-* **noop:** correct the version number ([3a9ae7a](https://github.com/dhis2/usage-analytics-app/commit/3a9ae7a5819eed0726ca5708f95ea7264fafa093))
-* **noop:** cut release ([945161a](https://github.com/dhis2/usage-analytics-app/commit/945161ae7b17b51685b5c45c20686d78c7562fae))
-* **noop:** publish new version ([8777ae1](https://github.com/dhis2/usage-analytics-app/commit/8777ae1c2175ba49a847259ad90d822e9aeb8e62))
-* **noop:** test different strategy to build ([26910e6](https://github.com/dhis2/usage-analytics-app/commit/26910e6faaeb1522db4c2d54f8558f697b031d13))
-* **noop:** test different strategy to build ([40fd5ac](https://github.com/dhis2/usage-analytics-app/commit/40fd5ac25acbcba6158ab8f2876e5609ec02a698))
-* **verify:** increase log level ([c495e57](https://github.com/dhis2/usage-analytics-app/commit/c495e57a46ad32e8531800ba577ab684357c9af3))
-
-## [100.0.4](https://github.com/dhis2/usage-analytics-app/compare/v100.0.3...v100.0.4) (2021-06-29)
-
-
-### Bug Fixes
-
-* **ci:** install and build after package.json updates ([8ebc2b1](https://github.com/dhis2/usage-analytics-app/commit/8ebc2b188c4ee9efe296c0a79758562ef398a275))
-* **noop:** correct the version number ([3a9ae7a](https://github.com/dhis2/usage-analytics-app/commit/3a9ae7a5819eed0726ca5708f95ea7264fafa093))
-* **noop:** publish new version ([8777ae1](https://github.com/dhis2/usage-analytics-app/commit/8777ae1c2175ba49a847259ad90d822e9aeb8e62))
-* **noop:** test different strategy to build ([26910e6](https://github.com/dhis2/usage-analytics-app/commit/26910e6faaeb1522db4c2d54f8558f697b031d13))
-* **noop:** test different strategy to build ([40fd5ac](https://github.com/dhis2/usage-analytics-app/commit/40fd5ac25acbcba6158ab8f2876e5609ec02a698))
-* **verify:** increase log level ([c495e57](https://github.com/dhis2/usage-analytics-app/commit/c495e57a46ad32e8531800ba577ab684357c9af3))
-
-## [100.0.4](https://github.com/dhis2/usage-analytics-app/compare/v100.0.3...v100.0.4) (2021-06-29)
-
-
-### Bug Fixes
-
-* **ci:** install and build after package.json updates ([8ebc2b1](https://github.com/dhis2/usage-analytics-app/commit/8ebc2b188c4ee9efe296c0a79758562ef398a275))
-* **noop:** publish new version ([8777ae1](https://github.com/dhis2/usage-analytics-app/commit/8777ae1c2175ba49a847259ad90d822e9aeb8e62))
-* **noop:** test different strategy to build ([26910e6](https://github.com/dhis2/usage-analytics-app/commit/26910e6faaeb1522db4c2d54f8558f697b031d13))
-* **noop:** test different strategy to build ([40fd5ac](https://github.com/dhis2/usage-analytics-app/commit/40fd5ac25acbcba6158ab8f2876e5609ec02a698))
-* **verify:** increase log level ([c495e57](https://github.com/dhis2/usage-analytics-app/commit/c495e57a46ad32e8531800ba577ab684357c9af3))
+> This is a no-op release that was made during development of the
+> semantic-release app-hub plugin.
 
 ## [100.0.5](https://github.com/dhis2/usage-analytics-app/compare/v100.0.4...v100.0.5) (2021-06-28)
 
-
-### Bug Fixes
-
-* **noop:** test different strategy to build ([40fd5ac](https://github.com/dhis2/usage-analytics-app/commit/40fd5ac25acbcba6158ab8f2876e5609ec02a698))
+> This is a no-op release that was made during development of the
+> semantic-release app-hub plugin.
 
 ## [100.0.4](https://github.com/dhis2/usage-analytics-app/compare/v100.0.3...v100.0.4) (2021-06-28)
 
-
-### Bug Fixes
-
-* **ci:** install and build after package.json updates ([8ebc2b1](https://github.com/dhis2/usage-analytics-app/commit/8ebc2b188c4ee9efe296c0a79758562ef398a275))
-* **noop:** publish new version ([8777ae1](https://github.com/dhis2/usage-analytics-app/commit/8777ae1c2175ba49a847259ad90d822e9aeb8e62))
-* **verify:** increase log level ([c495e57](https://github.com/dhis2/usage-analytics-app/commit/c495e57a46ad32e8531800ba577ab684357c9af3))
-
-## [100.0.4](https://github.com/dhis2/usage-analytics-app/compare/v100.0.3...v100.0.4) (2021-06-28)
-
-
-### Bug Fixes
-
-* **ci:** install and build after package.json updates ([8ebc2b1](https://github.com/dhis2/usage-analytics-app/commit/8ebc2b188c4ee9efe296c0a79758562ef398a275))
-* **noop:** publish new version ([8777ae1](https://github.com/dhis2/usage-analytics-app/commit/8777ae1c2175ba49a847259ad90d822e9aeb8e62))
+> This is a no-op release that was made during development of the
+> semantic-release app-hub plugin.
 
 ## [100.0.3](https://github.com/dhis2/usage-analytics-app/compare/v100.0.2...v100.0.3) (2021-06-28)
 
-
-### Bug Fixes
-
-* **noop:** download the build artifact before publish ([bba2939](https://github.com/dhis2/usage-analytics-app/commit/bba293999311bd59a23bf55d490a155f7a5c857e))
-* **noop:** publish new version ([0746410](https://github.com/dhis2/usage-analytics-app/commit/0746410ac71b4eb5dc4b12aa9ee8f599d7de83c0))
-* **noop:** publish new version ([580aee9](https://github.com/dhis2/usage-analytics-app/commit/580aee9a3f7d6a017720ec36263a06f28da800a3))
-* **noop:** test alpha release ([9ad0d66](https://github.com/dhis2/usage-analytics-app/commit/9ad0d66946c3d6ec956bf6421a68a52775d3f8c3))
-* **noop:** test cli-utils release alpha ([5a3817a](https://github.com/dhis2/usage-analytics-app/commit/5a3817a8ba9875b90ef8e06b32c5967f27d77c52))
-* **noop:** test semantic-release app-hub plugin ([e1a2241](https://github.com/dhis2/usage-analytics-app/commit/e1a2241d5b5806f82c6eb63c3731016a276a0b23))
+> This is a no-op release that was made during development of the
+> semantic-release app-hub plugin.
 
 ## [100.0.2](https://github.com/dhis2/usage-analytics-app/compare/v100.0.1...v100.0.2) (2021-06-25)
 
