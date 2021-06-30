@@ -1,3 +1,10 @@
+## [100.0.13](https://github.com/dhis2/usage-analytics-app/compare/v100.0.12...v100.0.13) (2021-06-30)
+
+
+### Bug Fixes
+
+* **noop:** trigger release to test ci process ([9669335](https://github.com/dhis2/usage-analytics-app/commit/9669335fcde34ba4b0a0e772c30a404bc1472ca2))
+
 ## [100.0.12](https://github.com/dhis2/usage-analytics-app/compare/v100.0.11...v100.0.12) (2021-06-30)
 
 
