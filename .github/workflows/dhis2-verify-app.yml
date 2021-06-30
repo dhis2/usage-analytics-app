@@ -118,18 +118,13 @@ jobs:
               with:
                   node-version: 12.x
 
-            # download the build step artifact here, so we have
-            # something to deploy to d2-ci in case when we don't want to
-            # create a release.
-            #
-            # maybe we don't want to deploy *everything* to d2-ci in the
-            # future, and only deploy the "releases".
             - uses: actions/download-artifact@v2
               with:
                   name: app-build
 
             - name: Publish release
-              run: npx @dhis2/cli-utils@alpha release --publish app-hub --debug
+              run: npx @dhis2/cli-utils@alpha release --publish app-hub
+              env: D2_DEBUG=true
 
             - uses: dhis2/deploy-build@master
               with:
