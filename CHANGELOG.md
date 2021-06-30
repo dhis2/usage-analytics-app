@@ -1,3 +1,11 @@
+## [100.0.9](https://github.com/dhis2/usage-analytics-app/compare/v100.0.8...v100.0.9) (2021-06-30)
+
+
+### Bug Fixes
+
+* **deps-dev:** update dependencies ([0b3cf3d](https://github.com/dhis2/usage-analytics-app/commit/0b3cf3d96bd32e5cefbcb77f633c496ffcb37e21))
+* **noop:** update the ci workflow to release to app hub ([3357d7a](https://github.com/dhis2/usage-analytics-app/commit/3357d7ab448400a1a0fb21ac76fcc9ac4cfa771f))
+
 ## [100.0.8](https://github.com/dhis2/usage-analytics-app/compare/v100.0.7...v100.0.8) (2021-06-29)
 
 > This is a no-op release that was made during development of the
