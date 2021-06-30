@@ -85,8 +85,11 @@ jobs:
               with:
                   node-version: 12.x
 
-            - name: Publish release to GitHub
-              run: npx @dhis2/cli-utils@alpha release --publish app-hub
+            - uses: actions/download-artifact@v2
+              with:
+                  name: app-build
+
+            - run: npx @dhis2/cli-utils@alpha release --publish app-hub
               env:
                   D2_DEBUG: true
 
