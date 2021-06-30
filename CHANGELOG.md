@@ -1,3 +1,10 @@
+## [100.0.10](https://github.com/dhis2/usage-analytics-app/compare/v100.0.9...v100.0.10) (2021-06-30)
+
+
+### Bug Fixes
+
+* **ci:** download artifact before publish ([2ddbdc9](https://github.com/dhis2/usage-analytics-app/commit/2ddbdc9b2180305c9af8773ade16995239b41efb))
+
 ## [100.0.9](https://github.com/dhis2/usage-analytics-app/compare/v100.0.8...v100.0.9) (2021-06-30)
 
 
