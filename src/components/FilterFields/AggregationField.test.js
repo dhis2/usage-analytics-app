@@ -1,5 +1,5 @@
-import React from 'react'
 import { mount } from 'enzyme'
+import React from 'react'
 import aggregations, { SUM, AVERAGE } from '../../constants/aggregations.js'
 import AggregationField from './AggregationField.js'
 

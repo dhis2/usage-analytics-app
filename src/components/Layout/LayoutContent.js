@@ -1,5 +1,5 @@
-import React from 'react'
 import PropTypes from '@dhis2/prop-types'
+import React from 'react'
 import styles from './LayoutContent.module.css'
 
 const LayoutContent = ({ children }) => (

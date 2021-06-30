@@ -1,5 +1,5 @@
-import React from 'react'
 import { mount } from 'enzyme'
+import React from 'react'
 import pageSizes, { PS_5, PS_10 } from '../../constants/pageSizes.js'
 import PageSizeField from './PageSizeField.js'
 

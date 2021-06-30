@@ -1,7 +1,7 @@
-import React from 'react'
 import PropTypes from '@dhis2/prop-types'
-import { TopFavoritesTable } from '../Tables/index.js'
+import React from 'react'
 import { TopFavoritesQuery } from '../Queries/index.js'
+import { TopFavoritesTable } from '../Tables/index.js'
 
 const fields = ['position', 'name', 'views', 'id', 'created']
 

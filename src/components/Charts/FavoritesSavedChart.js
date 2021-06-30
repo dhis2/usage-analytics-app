@@ -1,10 +1,10 @@
-import React from 'react'
 import PropTypes from '@dhis2/prop-types'
+import React from 'react'
 import { Line } from 'react-chartjs-2'
 import { FAVORITES_SAVED } from '../../constants/categories.js'
 import ChartWrapper from './ChartWrapper.js'
-import { getTitles, getLabels, getFavoritesSavedDatasets } from './selectors.js'
 import options from './options.js'
+import { getTitles, getLabels, getFavoritesSavedDatasets } from './selectors.js'
 
 const FavoritesSavedChart = ({ data, interval }) => {
     const { title, subtitle } = getTitles(FAVORITES_SAVED)

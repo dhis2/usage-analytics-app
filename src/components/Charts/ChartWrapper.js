@@ -1,6 +1,6 @@
-import React from 'react'
 import PropTypes from '@dhis2/prop-types'
 import { Card } from '@dhis2/ui'
+import React from 'react'
 import ChartHeader from './ChartHeader.js'
 import styles from './ChartWrapper.module.css'
 

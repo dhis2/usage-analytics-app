@@ -1,21 +1,21 @@
-import React, { useState } from 'react'
 import { CssVariables } from '@dhis2/ui'
+import React, { useState } from 'react'
 import '../../locales/index.js'
-import { FAVORITE_VIEWS } from '../../constants/categories.js'
-import { WEEK } from '../../constants/intervals.js'
 import { SUM } from '../../constants/aggregations.js'
+import { FAVORITE_VIEWS } from '../../constants/categories.js'
 import { ALL } from '../../constants/chartTypes.js'
 import { CHART_VIEW } from '../../constants/eventTypes.js'
+import { WEEK } from '../../constants/intervals.js'
 import { PS_25 } from '../../constants/pageSizes.js'
 import { ASC } from '../../constants/sortOrders.js'
+import AppTitle from '../AppTitle/index.js'
+import CategoryField from '../CategoryField/index.js'
 import Filters from '../Filters/index.js'
 import {
     LayoutContainer,
     LayoutSidebar,
     LayoutContent,
 } from '../Layout/index.js'
-import CategoryField from '../CategoryField/index.js'
-import AppTitle from '../AppTitle/index.js'
 import Visualization from '../Visualization/index.js'
 import createDefaultDates from './createDefaultDates.js'
 

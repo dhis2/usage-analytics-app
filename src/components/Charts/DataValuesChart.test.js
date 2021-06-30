@@ -1,9 +1,9 @@
-import React from 'react'
 import { shallow } from 'enzyme'
+import React from 'react'
 import { Line } from 'react-chartjs-2'
 import { YEAR } from '../../constants/intervals.js'
-import DataValuesChart from './DataValuesChart.js'
 import ChartWrapper from './ChartWrapper.js'
+import DataValuesChart from './DataValuesChart.js'
 
 describe('<DataValuesChart>', () => {
     it('renders the line graph without errors', () => {

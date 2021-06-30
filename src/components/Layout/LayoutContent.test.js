@@ -1,5 +1,5 @@
-import React from 'react'
 import { shallow } from 'enzyme'
+import React from 'react'
 import LayoutContent from './LayoutContent.js'
 
 describe('<LayoutContent>', () => {

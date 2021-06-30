@@ -1,5 +1,5 @@
-import React from 'react'
 import { shallow, mount } from 'enzyme'
+import React from 'react'
 import {
     TOP_FAVORITES,
     DATA_VALUES,
@@ -7,12 +7,12 @@ import {
     FAVORITES_SAVED,
     FAVORITE_VIEWS,
 } from '../../constants/categories.js'
-import Visualization from './Visualization.js'
 import DataValuesVisualization from './DataValuesVisualization.js'
 import FavoritesSavedVisualization from './FavoritesSavedVisualization.js'
 import FavoriteViewsVisualization from './FavoriteViewsVisualization.js'
 import TopFavoritesVisualization from './TopFavoritesVisualization.js'
 import UsersVisualization from './UsersVisualization.js'
+import Visualization from './Visualization.js'
 
 const baseProps = {
     aggregation: '',

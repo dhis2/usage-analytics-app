@@ -1,9 +1,9 @@
-import React from 'react'
 import { mount } from 'enzyme'
+import React from 'react'
 import { YEAR } from '../../constants/intervals.js'
-import { DataValuesTable } from '../Tables/index.js'
 import { DataValuesChart } from '../Charts/index.js'
 import { DataStatisticsQuery } from '../Queries/index.js'
+import { DataValuesTable } from '../Tables/index.js'
 import DataValuesVisualization from './DataValuesVisualization.js'
 
 // Bypassing the useDataQuery here for simplicity

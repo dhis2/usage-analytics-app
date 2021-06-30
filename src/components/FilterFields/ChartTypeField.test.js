@@ -1,5 +1,5 @@
-import React from 'react'
 import { mount } from 'enzyme'
+import React from 'react'
 import chartTypes, { ALL, TOTAL } from '../../constants/chartTypes.js'
 import ChartTypeField from './ChartTypeField.js'
 

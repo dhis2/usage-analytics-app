@@ -3,15 +3,8 @@ import { colors } from '@dhis2/ui-constants'
 import categories from '../../constants/categories.js'
 import { getIntervalDate } from '../../selectors/date.js'
 
-const {
-    blue300,
-    yellow700,
-    yellow200,
-    green400,
-    red400,
-    grey900,
-    teal600,
-} = colors
+const { blue300, yellow700, yellow200, green400, red400, grey900, teal600 } =
+    colors
 
 /**
  * The colors for the linegraphs. We're using individual constants

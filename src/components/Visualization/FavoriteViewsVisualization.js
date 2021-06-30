@@ -1,5 +1,5 @@
-import React, { Fragment } from 'react'
 import PropTypes from '@dhis2/prop-types'
+import React, { Fragment } from 'react'
 import { SUM } from '../../constants/aggregations.js'
 import { ALL } from '../../constants/chartTypes.js'
 import {
@@ -8,11 +8,11 @@ import {
     AverageAllFavoriteViewsChart,
     AverageTotalFavoriteViewsChart,
 } from '../Charts/index.js'
+import { DataStatisticsQuery } from '../Queries/index.js'
 import {
     SumFavoriteViewsTable,
     AverageFavoriteViewsTable,
 } from '../Tables/index.js'
-import { DataStatisticsQuery } from '../Queries/index.js'
 
 const fields = ['year', 'month', 'week', 'day']
 

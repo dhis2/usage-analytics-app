@@ -1,7 +1,5 @@
-import React from 'react'
-import PropTypes from '@dhis2/prop-types'
-import moment from 'moment'
 import i18n from '@dhis2/d2-i18n'
+import PropTypes from '@dhis2/prop-types'
 import {
     Table,
     TableHead,
@@ -11,6 +9,8 @@ import {
     TableCellHead,
     TableBody,
 } from '@dhis2/ui'
+import moment from 'moment'
+import React from 'react'
 import TableWrapper from './TableWrapper.js'
 
 const TopFavoritesTable = ({ data }) => (

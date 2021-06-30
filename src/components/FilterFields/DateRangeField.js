@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
 import PropTypes from '@dhis2/prop-types'
-import { validateDateRange } from './validators.js'
-import StartDateField from './StartDateField.js'
+import React, { useState } from 'react'
 import EndDateField from './EndDateField.js'
+import StartDateField from './StartDateField.js'
+import { validateDateRange } from './validators.js'
 
 const DateRangeField = ({ startDate, setStartDate, endDate, setEndDate }) => {
     const [startDateError, setStartDateError] = useState('')

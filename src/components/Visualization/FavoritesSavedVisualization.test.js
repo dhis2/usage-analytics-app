@@ -1,9 +1,9 @@
-import React from 'react'
 import { mount } from 'enzyme'
+import React from 'react'
 import { YEAR } from '../../constants/intervals.js'
-import { FavoritesSavedTable } from '../Tables/index.js'
 import { FavoritesSavedChart } from '../Charts/index.js'
 import { DataStatisticsQuery } from '../Queries/index.js'
+import { FavoritesSavedTable } from '../Tables/index.js'
 import FavoritesSavedVisualization from './FavoritesSavedVisualization.js'
 
 // Bypassing the useDataQuery here for simplicity

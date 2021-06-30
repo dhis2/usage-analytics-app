@@ -1,9 +1,9 @@
-import React from 'react'
-import PropTypes from '@dhis2/prop-types'
 import i18n from '@dhis2/d2-i18n'
+import PropTypes from '@dhis2/prop-types'
 import { SingleSelectField, SingleSelectOption } from '@dhis2/ui'
-import FieldSpacer from '../FieldSpacer/index.js'
+import React from 'react'
 import aggregations from '../../constants/aggregations.js'
+import FieldSpacer from '../FieldSpacer/index.js'
 
 const AggregationField = ({ aggregation, setAggregation }) => (
     <FieldSpacer>

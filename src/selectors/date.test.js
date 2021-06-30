@@ -1,5 +1,5 @@
-import { getIntervalDate } from './date.js'
 import { YEAR, MONTH, WEEK, DAY } from '../constants/intervals.js'
+import { getIntervalDate } from './date.js'
 
 describe('getIntervalDate', () => {
     it('returns the expected string for the YEAR interval', () => {

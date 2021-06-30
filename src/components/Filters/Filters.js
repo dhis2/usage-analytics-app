@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from '@dhis2/prop-types'
 import i18n from '@dhis2/d2-i18n'
+import PropTypes from '@dhis2/prop-types'
 import { NoticeBox } from '@dhis2/ui'
+import React from 'react'
 import {
     TOP_FAVORITES,
     DATA_VALUES,
@@ -9,11 +9,11 @@ import {
     FAVORITES_SAVED,
     FAVORITE_VIEWS,
 } from '../../constants/categories.js'
-import TopFavoritesFilters from './TopFavoritesFilters.js'
 import DataValuesFilters from './DataValuesFilters.js'
-import UsersFilters from './UsersFilters.js'
 import FavoritesSavedFilters from './FavoritesSavedFilters.js'
 import FavoriteViewsFilters from './FavoriteViewsFilters.js'
+import TopFavoritesFilters from './TopFavoritesFilters.js'
+import UsersFilters from './UsersFilters.js'
 
 const Filters = ({
     aggregation,

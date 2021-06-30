@@ -1,9 +1,9 @@
-import React from 'react'
 import { shallow } from 'enzyme'
+import React from 'react'
 import { Line } from 'react-chartjs-2'
 import { YEAR } from '../../constants/intervals.js'
-import FavoritesSavedChart from './FavoritesSavedChart.js'
 import ChartWrapper from './ChartWrapper.js'
+import FavoritesSavedChart from './FavoritesSavedChart.js'
 
 describe('<FavoritesSavedChart>', () => {
     it('renders the line graph without errors', () => {

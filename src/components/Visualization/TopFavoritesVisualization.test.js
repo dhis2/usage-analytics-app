@@ -1,7 +1,7 @@
-import React from 'react'
 import { mount } from 'enzyme'
-import { TopFavoritesTable } from '../Tables/index.js'
+import React from 'react'
 import { TopFavoritesQuery } from '../Queries/index.js'
+import { TopFavoritesTable } from '../Tables/index.js'
 import TopFavoritesVisualization from './TopFavoritesVisualization.js'
 
 // Bypassing the useDataQuery here for simplicity

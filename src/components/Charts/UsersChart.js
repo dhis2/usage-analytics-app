@@ -1,10 +1,10 @@
-import React from 'react'
 import PropTypes from '@dhis2/prop-types'
+import React from 'react'
 import { Line } from 'react-chartjs-2'
 import { USERS } from '../../constants/categories.js'
 import ChartWrapper from './ChartWrapper.js'
-import { getTitles, getLabels, getUsersDatasets } from './selectors.js'
 import options from './options.js'
+import { getTitles, getLabels, getUsersDatasets } from './selectors.js'
 
 const UsersChart = ({ data, interval }) => {
     const { title, subtitle } = getTitles(USERS)

@@ -1,5 +1,5 @@
-import React from 'react'
 import { shallow } from 'enzyme'
+import React from 'react'
 import { Line } from 'react-chartjs-2'
 import { YEAR } from '../../constants/intervals.js'
 import AverageAllFavoriteViewsChart from './AverageAllFavoriteViewsChart.js'

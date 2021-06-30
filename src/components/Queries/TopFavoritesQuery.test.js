@@ -1,6 +1,6 @@
-import React from 'react'
-import { mount } from 'enzyme'
 import { CustomDataProvider } from '@dhis2/app-runtime'
+import { mount } from 'enzyme'
+import React from 'react'
 import { act } from 'react-dom/test-utils'
 import waitForExpect from 'wait-for-expect'
 import TopFavoritesQuery from './TopFavoritesQuery.js'

@@ -1,19 +1,19 @@
-import React from 'react'
 import { mount } from 'enzyme'
-import { YEAR } from '../../constants/intervals.js'
+import React from 'react'
 import { SUM, AVERAGE } from '../../constants/aggregations.js'
 import { ALL, TOTAL } from '../../constants/chartTypes.js'
+import { YEAR } from '../../constants/intervals.js'
 import {
     SumAllFavoriteViewsChart,
     SumTotalFavoriteViewsChart,
     AverageAllFavoriteViewsChart,
     AverageTotalFavoriteViewsChart,
 } from '../Charts/index.js'
+import { DataStatisticsQuery } from '../Queries/index.js'
 import {
     SumFavoriteViewsTable,
     AverageFavoriteViewsTable,
 } from '../Tables/index.js'
-import { DataStatisticsQuery } from '../Queries/index.js'
 import FavoriteViewsVisualization from './FavoriteViewsVisualization.js'
 
 // Bypassing the useDataQuery here for simplicity

@@ -1,5 +1,5 @@
-import React from 'react'
 import { mount } from 'enzyme'
+import React from 'react'
 import sortOrders, { ASC, DESC } from '../../constants/sortOrders.js'
 import SortOrderField from './SortOrderField.js'
 

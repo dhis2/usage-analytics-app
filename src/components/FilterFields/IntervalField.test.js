@@ -1,5 +1,5 @@
-import React from 'react'
 import { mount } from 'enzyme'
+import React from 'react'
 import intervals, { DAY, WEEK } from '../../constants/intervals.js'
 import IntervalField from './IntervalField.js'
 

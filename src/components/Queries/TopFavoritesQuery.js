@@ -1,13 +1,13 @@
-import React, { useEffect } from 'react'
+import { useDataQuery } from '@dhis2/app-runtime'
 import i18n from '@dhis2/d2-i18n'
 import PropTypes from '@dhis2/prop-types'
-import { useDataQuery } from '@dhis2/app-runtime'
 import {
     CircularLoader,
     ComponentCover,
     CenteredContent,
     NoticeBox,
 } from '@dhis2/ui'
+import React, { useEffect } from 'react'
 import { DASHBOARD_VIEW } from '../../constants/eventTypes.js'
 
 const query = {

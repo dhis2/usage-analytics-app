@@ -1,5 +1,5 @@
-import React from 'react'
 import { mount } from 'enzyme'
+import React from 'react'
 import categories, {
     FAVORITE_VIEWS,
     FAVORITES_SAVED,

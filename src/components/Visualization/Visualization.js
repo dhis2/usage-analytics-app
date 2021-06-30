@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from '@dhis2/prop-types'
 import i18n from '@dhis2/d2-i18n'
+import PropTypes from '@dhis2/prop-types'
 import { NoticeBox } from '@dhis2/ui'
+import React from 'react'
 import {
     TOP_FAVORITES,
     DATA_VALUES,
@@ -9,11 +9,11 @@ import {
     FAVORITES_SAVED,
     FAVORITE_VIEWS,
 } from '../../constants/categories.js'
-import TopFavoritesVisualization from './TopFavoritesVisualization.js'
 import DataValuesVisualization from './DataValuesVisualization.js'
-import UsersVisualization from './UsersVisualization.js'
 import FavoritesSavedVisualization from './FavoritesSavedVisualization.js'
 import FavoriteViewsVisualization from './FavoriteViewsVisualization.js'
+import TopFavoritesVisualization from './TopFavoritesVisualization.js'
+import UsersVisualization from './UsersVisualization.js'
 
 const Visualization = ({
     aggregation,

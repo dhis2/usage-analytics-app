@@ -1,5 +1,5 @@
-import React from 'react'
 import { mount } from 'enzyme'
+import React from 'react'
 import eventTypes, { CHART_VIEW, MAP_VIEW } from '../../constants/eventTypes.js'
 import EventTypeField from './EventTypeField.js'
 
