@@ -89,7 +89,7 @@ jobs:
               with:
                   name: app-build
 
-            - run: npx @dhis2/cli-utils@alpha release --publish app-hub
+            - run: npx @dhis2/cli-utils release --publish app-hub
               env:
                   D2_DEBUG: true
 
