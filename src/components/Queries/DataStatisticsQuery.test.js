@@ -16,10 +16,10 @@ import DataStatisticsQuery from './DataStatisticsQuery.js'
 
 const update = wrapper => () =>
     new Promise(resolve => {
-        setImmediate(() => {
+        setTimeout(() => {
             wrapper.update()
             resolve()
-        })
+        }, 0)
     })
 
 describe('<DataStatisticsQuery>', () => {
