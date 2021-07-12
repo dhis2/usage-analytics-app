@@ -15,10 +15,10 @@ import TopFavoritesQuery from './TopFavoritesQuery.js'
 
 const update = wrapper => () =>
     new Promise(resolve => {
-        setImmediate(() => {
+        setTimeout(() => {
             wrapper.update()
             resolve()
-        })
+        }, 0)
     })
 
 describe('<TopFavoritesQuery>', () => {
