@@ -1,9 +1,7 @@
 ## [100.0.18](https://github.com/dhis2/usage-analytics-app/compare/v100.0.17...v100.0.18) (2021-08-05)
 
-
-### Bug Fixes
-
-* trigger release ([05aefab](https://github.com/dhis2/usage-analytics-app/commit/05aefabbd974c7610dd1179a2ad1e07b92bcbfac))
+> This is a no-op release that was made during development of the
+> semantic-release app-hub plugin.
 
 ## [100.0.17](https://github.com/dhis2/usage-analytics-app/compare/v100.0.16...v100.0.17) (2021-08-05)
 
@@ -21,40 +19,28 @@
 
 ## [100.0.15](https://github.com/dhis2/usage-analytics-app/compare/v100.0.14...v100.0.15) (2021-08-05)
 
-
-### Bug Fixes
-
-* trigger release ([49e3c98](https://github.com/dhis2/usage-analytics-app/commit/49e3c9893d07c9d61a5f19d23ef5a1710cf76fed))
+> This is a no-op release that was made during development of the
+> semantic-release app-hub plugin.
 
 ## [100.0.14](https://github.com/dhis2/usage-analytics-app/compare/v100.0.13...v100.0.14) (2021-08-05)
 
-
-### Bug Fixes
-
-* **ci:** release with semantic-release-action ([d777cdb](https://github.com/dhis2/usage-analytics-app/commit/d777cdb6eac9ee9d5a4e2f61ad16b901ef73f769))
+> This is a no-op release that was made during development of the
+> semantic-release app-hub plugin.
 
 ## [100.0.13](https://github.com/dhis2/usage-analytics-app/compare/v100.0.12...v100.0.13) (2021-06-30)
 
-
-### Bug Fixes
-
-* **noop:** trigger release to test ci process ([9669335](https://github.com/dhis2/usage-analytics-app/commit/9669335fcde34ba4b0a0e772c30a404bc1472ca2))
+> This is a no-op release that was made during development of the
+> semantic-release app-hub plugin.
 
 ## [100.0.12](https://github.com/dhis2/usage-analytics-app/compare/v100.0.11...v100.0.12) (2021-06-30)
 
-
-### Bug Fixes
-
-* **noop:** trigger release to test ci process ([532d2c2](https://github.com/dhis2/usage-analytics-app/commit/532d2c21e4e5f7a1e8a1601f0aad93be7fbb1eca))
-* **noop:** trigger release to test ci process ([d51c783](https://github.com/dhis2/usage-analytics-app/commit/d51c783050a3526d2855183a3a8ed55ceb634a58))
+> This is a no-op release that was made during development of the
+> semantic-release app-hub plugin.
 
 ## [100.0.11](https://github.com/dhis2/usage-analytics-app/compare/v100.0.10...v100.0.11) (2021-06-30)
 
-
-### Bug Fixes
-
-* **noop:** trigger release to test ci process ([0636ddb](https://github.com/dhis2/usage-analytics-app/commit/0636ddb7aa96277b426f61750d43b1ddaa6718e0))
-* **noop:** trigger release to test ci process ([f561633](https://github.com/dhis2/usage-analytics-app/commit/f56163364878bc8619b01131ed57d697ac2ea328))
+> This is a no-op release that was made during development of the
+> semantic-release app-hub plugin.
 
 ## [100.0.10](https://github.com/dhis2/usage-analytics-app/compare/v100.0.9...v100.0.10) (2021-06-30)
 
@@ -65,11 +51,8 @@
 
 ## [100.0.9](https://github.com/dhis2/usage-analytics-app/compare/v100.0.8...v100.0.9) (2021-06-30)
 
-
-### Bug Fixes
-
-* **deps-dev:** update dependencies ([0b3cf3d](https://github.com/dhis2/usage-analytics-app/commit/0b3cf3d96bd32e5cefbcb77f633c496ffcb37e21))
-* **noop:** update the ci workflow to release to app hub ([3357d7a](https://github.com/dhis2/usage-analytics-app/commit/3357d7ab448400a1a0fb21ac76fcc9ac4cfa771f))
+> This is a no-op release that was made during development of the
+> semantic-release app-hub plugin.
 
 ## [100.0.8](https://github.com/dhis2/usage-analytics-app/compare/v100.0.7...v100.0.8) (2021-06-29)
 
