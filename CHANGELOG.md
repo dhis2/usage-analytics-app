@@ -1,3 +1,10 @@
+## [100.0.16](https://github.com/dhis2/usage-analytics-app/compare/v100.0.15...v100.0.16) (2021-08-05)
+
+
+### Bug Fixes
+
+* **ci:** make sure that app-scripts is available and release ([0c950c3](https://github.com/dhis2/usage-analytics-app/commit/0c950c313f929a24fc9840909249cacaa7029c80))
+
 ## [100.0.15](https://github.com/dhis2/usage-analytics-app/compare/v100.0.14...v100.0.15) (2021-08-05)
 
 
