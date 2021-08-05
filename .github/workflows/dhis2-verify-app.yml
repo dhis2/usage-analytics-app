@@ -4,7 +4,6 @@ on: push
 
 concurrency:
     group: ${{ github.workflow}}-${{ github.ref }}
-    cancel-in-progress: true
 
 env:
     GIT_AUTHOR_NAME: '@dhis2-bot'
@@ -13,7 +12,6 @@ env:
     GIT_COMMITTER_EMAIL: 'apps@dhis2.org'
     GH_TOKEN: ${{secrets.DHIS2_BOT_GITHUB_TOKEN}}
     APP_HUB_TOKEN: ${{secrets.DHIS2_BOT_APP_HUB_TOKEN}}
-    CI: true
 
 jobs:
     build:
@@ -89,9 +87,12 @@ jobs:
               with:
                   name: app-build
 
-            - run: npx @dhis2/cli-utils release --publish app-hub
-              env:
-                  D2_DEBUG: true
+            - uses: dhis2/action-semantic-release@master
+              with:
+                  publish: app-hub
+                  github-token: ${{ env.GH_TOKEN }}
+                  app-hub-token: ${{ env.APP_HUB_TOKEN }}
+                  debug: true
 
             - uses: dhis2/deploy-build@master
               with:
