@@ -1,3 +1,10 @@
+## [100.0.17](https://github.com/dhis2/usage-analytics-app/compare/v100.0.16...v100.0.17) (2021-08-05)
+
+
+### Bug Fixes
+
+* **deps:** update d2-app-scripts to support new publish cmd ([0dac93f](https://github.com/dhis2/usage-analytics-app/commit/0dac93f6ddfdcdaa446d55eb1e5f3a96ff192714))
+
 ## [100.0.16](https://github.com/dhis2/usage-analytics-app/compare/v100.0.15...v100.0.16) (2021-08-05)
 
 
