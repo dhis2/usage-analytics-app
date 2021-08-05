@@ -1,3 +1,10 @@
+## [100.0.14](https://github.com/dhis2/usage-analytics-app/compare/v100.0.13...v100.0.14) (2021-08-05)
+
+
+### Bug Fixes
+
+* **ci:** release with semantic-release-action ([d777cdb](https://github.com/dhis2/usage-analytics-app/commit/d777cdb6eac9ee9d5a4e2f61ad16b901ef73f769))
+
 ## [100.0.13](https://github.com/dhis2/usage-analytics-app/compare/v100.0.12...v100.0.13) (2021-06-30)
 
 
