@@ -1,3 +1,10 @@
+## [100.0.19](https://github.com/dhis2/usage-analytics-app/compare/v100.0.18...v100.0.19) (2021-08-06)
+
+
+### Bug Fixes
+
+* trigger release ([25f31c3](https://github.com/dhis2/usage-analytics-app/commit/25f31c3c1b898d3c6716367ee5d5d51cd81fc033))
+
 ## [100.0.18](https://github.com/dhis2/usage-analytics-app/compare/v100.0.17...v100.0.18) (2021-08-05)
 
 > This is a no-op release that was made during development of the
