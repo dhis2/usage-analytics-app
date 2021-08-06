@@ -1,17 +1,12 @@
 ## [100.0.20](https://github.com/dhis2/usage-analytics-app/compare/v100.0.19...v100.0.20) (2021-08-06)
 
-
-### Bug Fixes
-
-* **ci:** enable publish to github and apphub ([7d77806](https://github.com/dhis2/usage-analytics-app/commit/7d77806b245e3ca9b0197bc2f2a1cc48ebfd46d0))
-* **ci:** use correct input name ([7c9b6b7](https://github.com/dhis2/usage-analytics-app/commit/7c9b6b70fe2d78c720f242cecd2c377413eed885))
+> This is a no-op release that was made during development of the
+> semantic-release app-hub plugin.
 
 ## [100.0.19](https://github.com/dhis2/usage-analytics-app/compare/v100.0.18...v100.0.19) (2021-08-06)
 
-
-### Bug Fixes
-
-* trigger release ([25f31c3](https://github.com/dhis2/usage-analytics-app/commit/25f31c3c1b898d3c6716367ee5d5d51cd81fc033))
+> This is a no-op release that was made during development of the
+> semantic-release app-hub plugin.
 
 ## [100.0.18](https://github.com/dhis2/usage-analytics-app/compare/v100.0.17...v100.0.18) (2021-08-05)
 
