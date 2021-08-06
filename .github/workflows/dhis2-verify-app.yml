@@ -93,7 +93,8 @@ jobs:
 
             - uses: dhis2/action-semantic-release@master
               with:
-                  publish: app-hub
+                  publish-apphub: true
+                  publish-github: true
                   github-token: ${{ env.GH_TOKEN }}
                   app-hub-token: ${{ env.APP_HUB_TOKEN }}
                   debug: true
