@@ -96,7 +96,7 @@ jobs:
                   publish-apphub: true
                   publish-github: true
                   github-token: ${{ env.GH_TOKEN }}
-                  app-hub-token: ${{ env.APP_HUB_TOKEN }}
+                  apphub-token: ${{ env.APP_HUB_TOKEN }}
                   debug: true
 
             - uses: dhis2/deploy-build@master
