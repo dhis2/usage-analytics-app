@@ -11,7 +11,7 @@ env:
     GIT_COMMITTER_NAME: '@dhis2-bot'
     GIT_COMMITTER_EMAIL: 'apps@dhis2.org'
     GH_TOKEN: ${{secrets.DHIS2_BOT_GITHUB_TOKEN}}
-    APP_HUB_TOKEN: ${{secrets.DHIS2_BOT_APP_HUB_TOKEN}}
+    APPHUB_TOKEN: ${{secrets.DHIS2_BOT_APPHUB_TOKEN}}
 
 jobs:
     build:
@@ -96,7 +96,7 @@ jobs:
                   publish-apphub: true
                   publish-github: true
                   github-token: ${{ env.GH_TOKEN }}
-                  apphub-token: ${{ env.APP_HUB_TOKEN }}
+                  apphub-token: ${{ env.APPHUB_TOKEN }}
                   debug: true
 
             - uses: dhis2/deploy-build@master
