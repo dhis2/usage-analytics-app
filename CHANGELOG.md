@@ -1,3 +1,10 @@
+## [100.0.23](https://github.com/dhis2/usage-analytics-app/compare/v100.0.22...v100.0.23) (2021-08-11)
+
+
+### Bug Fixes
+
+* **deps:** bump tar from 4.4.8 to 4.4.16 ([c4aa46b](https://github.com/dhis2/usage-analytics-app/commit/c4aa46b684dd450d4148e8878647b34180896dad))
+
 ## [100.0.22](https://github.com/dhis2/usage-analytics-app/compare/v100.0.21...v100.0.22) (2021-08-11)
 
 
