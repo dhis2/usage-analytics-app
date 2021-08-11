@@ -1,3 +1,10 @@
+## [100.0.22](https://github.com/dhis2/usage-analytics-app/compare/v100.0.21...v100.0.22) (2021-08-11)
+
+
+### Bug Fixes
+
+* **deps:** bump @dhis2/ui from 6.10.4 to 6.15.1 ([58328a9](https://github.com/dhis2/usage-analytics-app/commit/58328a928914ecbbeb20637bba2f059ae5738ad2))
+
 ## [100.0.21](https://github.com/dhis2/usage-analytics-app/compare/v100.0.20...v100.0.21) (2021-08-10)
 
 
