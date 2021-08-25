@@ -82,10 +82,10 @@ describe('selectors', () => {
                 {
                     savedMaps: 1,
                     savedVisualizations: 2,
-                    savedEventReports: 4,
-                    savedEventCharts: 5,
-                    savedDashboards: 6,
-                    savedIndicators: 7,
+                    savedEventReports: 3,
+                    savedEventCharts: 4,
+                    savedDashboards: 5,
+                    savedIndicators: 6,
                 },
             ]
             const expected = [
@@ -101,22 +101,22 @@ describe('selectors', () => {
                 },
                 {
                     borderColor: COLOR_4,
-                    data: [4],
+                    data: [3],
                     label: 'Event Reports',
                 },
                 {
                     borderColor: COLOR_5,
-                    data: [5],
+                    data: [4],
                     label: 'Event Charts',
                 },
                 {
                     borderColor: COLOR_6,
-                    data: [6],
+                    data: [5],
                     label: 'Dashboards',
                 },
                 {
                     borderColor: COLOR_7,
-                    data: [7],
+                    data: [6],
                     label: 'Indicators',
                 },
             ]
@@ -131,10 +131,10 @@ describe('selectors', () => {
                 {
                     mapViews: 1,
                     visualizationViews: 2,
-                    eventReportViews: 4,
-                    eventChartViews: 5,
-                    dashboardViews: 6,
-                    dataSetReportViews: 7,
+                    eventReportViews: 3,
+                    eventChartViews: 4,
+                    dashboardViews: 5,
+                    dataSetReportViews: 6,
                 },
             ]
             const expected = [
@@ -150,22 +150,22 @@ describe('selectors', () => {
                 },
                 {
                     borderColor: COLOR_4,
-                    data: [4],
+                    data: [3],
                     label: 'Event Report',
                 },
                 {
                     borderColor: COLOR_5,
-                    data: [5],
+                    data: [4],
                     label: 'Event Chart',
                 },
                 {
                     borderColor: COLOR_6,
-                    data: [6],
+                    data: [5],
                     label: 'Dashboard',
                 },
                 {
                     borderColor: COLOR_7,
-                    data: [7],
+                    data: [6],
                     label: 'Data Set Report',
                 },
             ]

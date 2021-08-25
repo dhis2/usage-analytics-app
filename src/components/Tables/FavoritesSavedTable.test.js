@@ -29,16 +29,16 @@ describe('<FavoritesSavedTable>', () => {
     })
 
     it('renders the expected table contents', () => {
-        const expectedContents = ['2020', '1', '2', '4', '5', '6', '7']
+        const expectedContents = ['2020', '1', '2', '3', '4', '5', '6']
         const props = {
             data: [
                 {
                     savedMaps: 1,
                     savedVisualizations: 2,
-                    savedEventReports: 4,
-                    savedEventCharts: 5,
-                    savedDashboards: 6,
-                    savedIndicators: 7,
+                    savedEventReports: 3,
+                    savedEventCharts: 4,
+                    savedDashboards: 5,
+                    savedIndicators: 6,
                     year: 2020,
                 },
             ],

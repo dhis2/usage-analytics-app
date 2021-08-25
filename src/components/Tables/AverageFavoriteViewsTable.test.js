@@ -29,16 +29,16 @@ describe('<AverageFavoriteViewsTable>', () => {
     })
 
     it('renders the expected table contents', () => {
-        const expectedContents = ['2020', '1', '2', '4', '5', '6', '7']
+        const expectedContents = ['2020', '1', '2', '3', '4', '5', '6']
         const props = {
             data: [
                 {
                     averageMapViews: 1,
                     averageVisualizationViews: 2,
-                    averageEventReportViews: 4,
-                    averageEventChartViews: 5,
-                    averageDashboardViews: 6,
-                    averageViews: 7,
+                    averageEventReportViews: 3,
+                    averageEventChartViews: 4,
+                    averageDashboardViews: 5,
+                    averageViews: 6,
                     year: 2020,
                 },
             ],

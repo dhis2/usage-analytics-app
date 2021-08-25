@@ -30,17 +30,17 @@ describe('<SumFavoriteViewsTable>', () => {
     })
 
     it('renders the expected table contents', () => {
-        const expectedContents = ['2020', '1', '2', '4', '5', '6', '7', '8']
+        const expectedContents = ['2020', '1', '2', '3', '4', '5', '6', '7']
         const props = {
             data: [
                 {
                     mapViews: 1,
                     visualizationViews: 2,
-                    eventReportViews: 4,
-                    eventChartViews: 5,
-                    dashboardViews: 6,
-                    dataSetReportViews: 7,
-                    totalViews: 8,
+                    eventReportViews: 3,
+                    eventChartViews: 4,
+                    dashboardViews: 5,
+                    dataSetReportViews: 6,
+                    totalViews: 7,
                     year: 2020,
                 },
             ],
