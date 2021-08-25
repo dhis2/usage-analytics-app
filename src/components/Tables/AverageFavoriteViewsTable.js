@@ -20,7 +20,9 @@ const AverageFavoriteViewsTable = ({ data, interval }) => (
                 <TableRowHead>
                     <TableCellHead>{i18n.t('Date')}</TableCellHead>
                     <TableCellHead>{i18n.t('Average Map')}</TableCellHead>
-                    <TableCellHead>{i18n.t('Average Visualization')}</TableCellHead>
+                    <TableCellHead>
+                        {i18n.t('Average Visualization')}
+                    </TableCellHead>
                     <TableCellHead>
                         {i18n.t('Average Event Report')}
                     </TableCellHead>
@@ -54,7 +56,9 @@ const AverageFavoriteViewsTable = ({ data, interval }) => (
                             <TableRow key={intervalDate}>
                                 <TableCell>{intervalDate}</TableCell>
                                 <TableCell>{averageMapViews}</TableCell>
-                                <TableCell>{averageVisualizationViews}</TableCell>
+                                <TableCell>
+                                    {averageVisualizationViews}
+                                </TableCell>
                                 <TableCell>{averageEventReportViews}</TableCell>
                                 <TableCell>{averageEventChartViews}</TableCell>
                                 <TableCell>{averageDashboardViews}</TableCell>
@@ -71,12 +75,12 @@ const AverageFavoriteViewsTable = ({ data, interval }) => (
 AverageFavoriteViewsTable.propTypes = {
     data: PropTypes.arrayOf(
         PropTypes.shape({
-            averageVisualizationViews: PropTypes.number.isRequired,
             averageDashboardViews: PropTypes.number.isRequired,
             averageEventChartViews: PropTypes.number.isRequired,
             averageEventReportViews: PropTypes.number.isRequired,
             averageMapViews: PropTypes.number.isRequired,
             averageViews: PropTypes.number.isRequired,
+            averageVisualizationViews: PropTypes.number.isRequired,
             day: PropTypes.number,
             month: PropTypes.number,
             week: PropTypes.number,

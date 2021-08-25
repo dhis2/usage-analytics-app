@@ -25,12 +25,12 @@ const SumAllFavoriteViewsChart = ({ data, interval }) => {
 SumAllFavoriteViewsChart.propTypes = {
     data: PropTypes.arrayOf(
         PropTypes.shape({
-            visualizationViews: PropTypes.number.isRequired,
             dashboardViews: PropTypes.number.isRequired,
             dataSetReportViews: PropTypes.number.isRequired,
             eventChartViews: PropTypes.number.isRequired,
             eventReportViews: PropTypes.number.isRequired,
             mapViews: PropTypes.number.isRequired,
+            visualizationViews: PropTypes.number.isRequired,
             day: PropTypes.number,
             month: PropTypes.number,
             week: PropTypes.number,
