@@ -19,8 +19,7 @@ const fields = ['year', 'month', 'week', 'day']
 const sumFields = [
     ...fields,
     'mapViews',
-    'chartViews',
-    'pivotTableViews',
+    'visualizationViews',
     'eventReportViews',
     'eventChartViews',
     'dashboardViews',
@@ -31,8 +30,7 @@ const sumFields = [
 const averageFields = [
     ...fields,
     'averageMapViews',
-    'averageChartViews',
-    'averagePivotTableViews',
+    'averageVisualizationViews',
     'averageEventReportViews',
     'averageEventChartViews',
     'averageDashboardViews',

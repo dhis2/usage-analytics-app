@@ -5,12 +5,11 @@
 ![](resources/images/usage_analytics_interface.png)
 
 The **Usage Analytics** app lets you visualize statistics on how users
-are working with the **Dashboard**, **Pivot Table**, **GIS**, **Event
+are working with the **Dashboard**, **GIS**, **Event
 Visualizer**, **Data Visualizer** and **Event Reports** apps within
 DHIS2. With this statistics you can answers questions such as:
 
--   How many times people have loaded charts, pivots tables and
-    dashboards?
+-   How many times people have loaded visualizations and dashboards?
 
 -   How many favorites have users created?
 
@@ -31,7 +30,7 @@ DHIS2. With this statistics you can answers questions such as:
     There are five analytics categories:
 
     -   **Favorite views**: Provides the number of times various types
-        of favorites have been viewed, such as charts, pivot tables and
+        of favorites have been viewed, such as visualizations and
         dashboards, over time. This analysis lets you switch between all
         types of favorites, the total across all types and the average
         number of views.

@@ -20,8 +20,7 @@ const FavoritesSavedTable = ({ data, interval }) => (
                 <TableRowHead>
                     <TableCellHead>{i18n.t('Date')}</TableCellHead>
                     <TableCellHead>{i18n.t('Maps')}</TableCellHead>
-                    <TableCellHead>{i18n.t('Charts')}</TableCellHead>
-                    <TableCellHead>{i18n.t('Pivot Tables')}</TableCellHead>
+                    <TableCellHead>{i18n.t('Visualizations')}</TableCellHead>
                     <TableCellHead>{i18n.t('Event Reports')}</TableCellHead>
                     <TableCellHead>{i18n.t('Event Charts')}</TableCellHead>
                     <TableCellHead>{i18n.t('Dashboards')}</TableCellHead>
@@ -36,8 +35,7 @@ const FavoritesSavedTable = ({ data, interval }) => (
                         week,
                         day,
                         savedMaps,
-                        savedCharts,
-                        savedPivotTables,
+                        savedVisualizations,
                         savedEventReports,
                         savedEventCharts,
                         savedDashboards,
@@ -52,8 +50,7 @@ const FavoritesSavedTable = ({ data, interval }) => (
                             <TableRow key={intervalDate}>
                                 <TableCell>{intervalDate}</TableCell>
                                 <TableCell>{savedMaps}</TableCell>
-                                <TableCell>{savedCharts}</TableCell>
-                                <TableCell>{savedPivotTables}</TableCell>
+                                <TableCell>{savedVisualizations}</TableCell>
                                 <TableCell>{savedEventReports}</TableCell>
                                 <TableCell>{savedEventCharts}</TableCell>
                                 <TableCell>{savedDashboards}</TableCell>
@@ -70,13 +67,12 @@ const FavoritesSavedTable = ({ data, interval }) => (
 FavoritesSavedTable.propTypes = {
     data: PropTypes.arrayOf(
         PropTypes.shape({
-            savedCharts: PropTypes.number.isRequired,
+            savedVisualizations: PropTypes.number.isRequired,
             savedDashboards: PropTypes.number.isRequired,
             savedEventCharts: PropTypes.number.isRequired,
             savedEventReports: PropTypes.number.isRequired,
             savedIndicators: PropTypes.number.isRequired,
             savedMaps: PropTypes.number.isRequired,
-            savedPivotTables: PropTypes.number.isRequired,
             day: PropTypes.number,
             month: PropTypes.number,
             week: PropTypes.number,

@@ -81,8 +81,7 @@ describe('selectors', () => {
             const data = [
                 {
                     savedMaps: 1,
-                    savedCharts: 2,
-                    savedPivotTables: 3,
+                    savedVisualizations: 2,
                     savedEventReports: 4,
                     savedEventCharts: 5,
                     savedDashboards: 6,
@@ -98,12 +97,7 @@ describe('selectors', () => {
                 {
                     borderColor: COLOR_2,
                     data: [2],
-                    label: 'Charts',
-                },
-                {
-                    borderColor: COLOR_3,
-                    data: [3],
-                    label: 'Pivot Tables',
+                    label: 'Visualizations',
                 },
                 {
                     borderColor: COLOR_4,
@@ -136,8 +130,7 @@ describe('selectors', () => {
             const data = [
                 {
                     mapViews: 1,
-                    chartViews: 2,
-                    pivotTableViews: 3,
+                    visualizationViews: 2,
                     eventReportViews: 4,
                     eventChartViews: 5,
                     dashboardViews: 6,
@@ -153,12 +146,7 @@ describe('selectors', () => {
                 {
                     borderColor: COLOR_2,
                     data: [2],
-                    label: 'Chart',
-                },
-                {
-                    borderColor: COLOR_3,
-                    data: [3],
-                    label: 'Pivot Table',
+                    label: 'Visualization',
                 },
                 {
                     borderColor: COLOR_4,
@@ -206,8 +194,7 @@ describe('selectors', () => {
             const data = [
                 {
                     averageMapViews: 1,
-                    averageChartViews: 2,
-                    averagePivotTableViews: 3,
+                    averageVisualizationViews: 2,
                     averageEventReportViews: 4,
                     averageEventChartViews: 5,
                     averageDashboardViews: 6,
@@ -222,12 +209,7 @@ describe('selectors', () => {
                 {
                     borderColor: COLOR_2,
                     data: [2],
-                    label: 'Average Chart',
-                },
-                {
-                    borderColor: COLOR_3,
-                    data: [3],
-                    label: 'Average Pivot Table',
+                    label: 'Average Visualization',
                 },
                 {
                     borderColor: COLOR_4,

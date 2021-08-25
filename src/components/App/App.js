@@ -4,7 +4,7 @@ import '../../locales/index.js'
 import { SUM } from '../../constants/aggregations.js'
 import { FAVORITE_VIEWS } from '../../constants/categories.js'
 import { ALL } from '../../constants/chartTypes.js'
-import { CHART_VIEW } from '../../constants/eventTypes.js'
+import { VISUALIZATION_VIEW } from '../../constants/eventTypes.js'
 import { WEEK } from '../../constants/intervals.js'
 import { PS_25 } from '../../constants/pageSizes.js'
 import { ASC } from '../../constants/sortOrders.js'
@@ -27,7 +27,7 @@ const App = () => {
     const [category, setCategory] = useState(FAVORITE_VIEWS)
     const [chartType, setChartType] = useState(ALL)
     const [endDate, setEndDate] = useState(initialEndDate)
-    const [eventType, setEventType] = useState(CHART_VIEW)
+    const [eventType, setEventType] = useState(VISUALIZATION_VIEW)
     const [pageSize, setPageSize] = useState(PS_25)
     const [sortOrder, setSortOrder] = useState(ASC)
     const [startDate, setStartDate] = useState(initialStartDate)

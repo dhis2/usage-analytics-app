@@ -20,8 +20,7 @@ const SumFavoriteViewsTable = ({ data, interval }) => (
                 <TableRowHead>
                     <TableCellHead>{i18n.t('Date')}</TableCellHead>
                     <TableCellHead>{i18n.t('Map')}</TableCellHead>
-                    <TableCellHead>{i18n.t('Chart')}</TableCellHead>
-                    <TableCellHead>{i18n.t('Pivot Table')}</TableCellHead>
+                    <TableCellHead>{i18n.t('Visualization')}</TableCellHead>
                     <TableCellHead>{i18n.t('Event Report')}</TableCellHead>
                     <TableCellHead>{i18n.t('Event Chart')}</TableCellHead>
                     <TableCellHead>{i18n.t('Dashboard')}</TableCellHead>
@@ -37,8 +36,7 @@ const SumFavoriteViewsTable = ({ data, interval }) => (
                         week,
                         day,
                         mapViews,
-                        chartViews,
-                        pivotTableViews,
+                        visualizationViews,
                         eventReportViews,
                         eventChartViews,
                         dashboardViews,
@@ -54,8 +52,7 @@ const SumFavoriteViewsTable = ({ data, interval }) => (
                             <TableRow key={intervalDate}>
                                 <TableCell>{intervalDate}</TableCell>
                                 <TableCell>{mapViews}</TableCell>
-                                <TableCell>{chartViews}</TableCell>
-                                <TableCell>{pivotTableViews}</TableCell>
+                                <TableCell>{visualizationViews}</TableCell>
                                 <TableCell>{eventReportViews}</TableCell>
                                 <TableCell>{eventChartViews}</TableCell>
                                 <TableCell>{dashboardViews}</TableCell>
@@ -73,13 +70,12 @@ const SumFavoriteViewsTable = ({ data, interval }) => (
 SumFavoriteViewsTable.propTypes = {
     data: PropTypes.arrayOf(
         PropTypes.shape({
-            chartViews: PropTypes.number.isRequired,
+            visualizationViews: PropTypes.number.isRequired,
             dashboardViews: PropTypes.number.isRequired,
             dataSetReportViews: PropTypes.number.isRequired,
             eventChartViews: PropTypes.number.isRequired,
             eventReportViews: PropTypes.number.isRequired,
             mapViews: PropTypes.number.isRequired,
-            pivotTableViews: PropTypes.number.isRequired,
             totalViews: PropTypes.number.isRequired,
             day: PropTypes.number,
             month: PropTypes.number,

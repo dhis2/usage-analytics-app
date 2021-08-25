@@ -1,12 +1,15 @@
 import { mount } from 'enzyme'
 import React from 'react'
-import eventTypes, { CHART_VIEW, MAP_VIEW } from '../../constants/eventTypes.js'
+import eventTypes, {
+    VISUALIZATION_VIEW,
+    MAP_VIEW,
+} from '../../constants/eventTypes.js'
 import EventTypeField from './EventTypeField.js'
 
 describe('<EventTypeField>', () => {
     it('has the expected label', () => {
         const props = {
-            eventType: CHART_VIEW,
+            eventType: VISUALIZATION_VIEW,
             setEventType: () => {},
         }
         const wrapper = mount(<EventTypeField {...props} />)
@@ -19,7 +22,7 @@ describe('<EventTypeField>', () => {
 
     it('shows the current selection', () => {
         const props = {
-            eventType: CHART_VIEW,
+            eventType: VISUALIZATION_VIEW,
             setEventType: () => {},
         }
         const wrapper = mount(<EventTypeField {...props} />)
@@ -27,12 +30,12 @@ describe('<EventTypeField>', () => {
             'data-test': 'dhis2-uicore-singleselect',
         })
 
-        expect(singleselect.text()).toBe('Chart')
+        expect(singleselect.text()).toBe('Visualization')
     })
 
     it('shows the expected options', () => {
         const props = {
-            eventType: CHART_VIEW,
+            eventType: VISUALIZATION_VIEW,
             setEventType: () => {},
         }
         const wrapper = mount(<EventTypeField {...props} />)
@@ -58,7 +61,7 @@ describe('<EventTypeField>', () => {
     it('calls setEventType with the expected value on selection change', () => {
         const spy = jest.fn()
         const props = {
-            eventType: CHART_VIEW,
+            eventType: VISUALIZATION_VIEW,
             setEventType: spy,
         }
         const wrapper = mount(<EventTypeField {...props} />)

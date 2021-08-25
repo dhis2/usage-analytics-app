@@ -7,8 +7,7 @@ describe('<SumFavoriteViewsTable>', () => {
         const expectedHeaders = [
             'Date',
             'Map',
-            'Chart',
-            'Pivot Table',
+            'Visualization',
             'Event Report',
             'Event Chart',
             'Dashboard',
@@ -23,7 +22,7 @@ describe('<SumFavoriteViewsTable>', () => {
         const wrapper = mount(<SumFavoriteViewsTable {...props} />)
         const headers = wrapper.find('TableCellHead')
 
-        expect.assertions(9)
+        expect.assertions(8)
 
         headers.forEach((header, i) => {
             expect(header.text()).toBe(expectedHeaders[i])
@@ -31,23 +30,12 @@ describe('<SumFavoriteViewsTable>', () => {
     })
 
     it('renders the expected table contents', () => {
-        const expectedContents = [
-            '2020',
-            '1',
-            '2',
-            '3',
-            '4',
-            '5',
-            '6',
-            '7',
-            '8',
-        ]
+        const expectedContents = ['2020', '1', '2', '4', '5', '6', '7', '8']
         const props = {
             data: [
                 {
                     mapViews: 1,
-                    chartViews: 2,
-                    pivotTableViews: 3,
+                    visualizationViews: 2,
                     eventReportViews: 4,
                     eventChartViews: 5,
                     dashboardViews: 6,
@@ -62,7 +50,7 @@ describe('<SumFavoriteViewsTable>', () => {
         const wrapper = mount(<SumFavoriteViewsTable {...props} />)
         const contents = wrapper.find('TableCell')
 
-        expect.assertions(9)
+        expect.assertions(8)
 
         contents.forEach((content, i) => {
             expect(content.text()).toBe(expectedContents[i])
