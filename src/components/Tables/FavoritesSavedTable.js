@@ -67,12 +67,12 @@ const FavoritesSavedTable = ({ data, interval }) => (
 FavoritesSavedTable.propTypes = {
     data: PropTypes.arrayOf(
         PropTypes.shape({
-            savedVisualizations: PropTypes.number.isRequired,
             savedDashboards: PropTypes.number.isRequired,
             savedEventCharts: PropTypes.number.isRequired,
             savedEventReports: PropTypes.number.isRequired,
             savedIndicators: PropTypes.number.isRequired,
             savedMaps: PropTypes.number.isRequired,
+            savedVisualizations: PropTypes.number.isRequired,
             day: PropTypes.number,
             month: PropTypes.number,
             week: PropTypes.number,

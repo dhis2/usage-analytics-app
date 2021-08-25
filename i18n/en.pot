@@ -5,8 +5,8 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"POT-Creation-Date: 2021-08-25T12:05:45.424Z\n"
-"PO-Revision-Date: 2021-08-25T12:05:45.424Z\n"
+"POT-Creation-Date: 2021-08-25T13:30:15.314Z\n"
+"PO-Revision-Date: 2021-08-25T13:30:15.314Z\n"
 
 msgid "Usage Analytics"
 msgstr "Usage Analytics"
@@ -181,9 +181,6 @@ msgstr "Number of data values saved in the system"
 
 msgid "All"
 msgstr "All"
-
-msgid "Chart"
-msgstr "Chart"
 
 msgid "Report table"
 msgstr "Report table"

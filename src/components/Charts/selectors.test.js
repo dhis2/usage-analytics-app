@@ -3,7 +3,6 @@ import { YEAR } from '../../constants/intervals.js'
 import {
     COLOR_1,
     COLOR_2,
-    COLOR_3,
     COLOR_4,
     COLOR_5,
     COLOR_6,
