@@ -3,7 +3,6 @@ import { YEAR } from '../../constants/intervals.js'
 import {
     COLOR_1,
     COLOR_2,
-    COLOR_3,
     COLOR_4,
     COLOR_5,
     COLOR_6,
@@ -81,12 +80,11 @@ describe('selectors', () => {
             const data = [
                 {
                     savedMaps: 1,
-                    savedCharts: 2,
-                    savedPivotTables: 3,
-                    savedEventReports: 4,
-                    savedEventCharts: 5,
-                    savedDashboards: 6,
-                    savedIndicators: 7,
+                    savedVisualizations: 2,
+                    savedEventReports: 3,
+                    savedEventCharts: 4,
+                    savedDashboards: 5,
+                    savedIndicators: 6,
                 },
             ]
             const expected = [
@@ -98,31 +96,26 @@ describe('selectors', () => {
                 {
                     borderColor: COLOR_2,
                     data: [2],
-                    label: 'Charts',
-                },
-                {
-                    borderColor: COLOR_3,
-                    data: [3],
-                    label: 'Pivot Tables',
+                    label: 'Visualizations',
                 },
                 {
                     borderColor: COLOR_4,
-                    data: [4],
+                    data: [3],
                     label: 'Event Reports',
                 },
                 {
                     borderColor: COLOR_5,
-                    data: [5],
+                    data: [4],
                     label: 'Event Charts',
                 },
                 {
                     borderColor: COLOR_6,
-                    data: [6],
+                    data: [5],
                     label: 'Dashboards',
                 },
                 {
                     borderColor: COLOR_7,
-                    data: [7],
+                    data: [6],
                     label: 'Indicators',
                 },
             ]
@@ -136,12 +129,11 @@ describe('selectors', () => {
             const data = [
                 {
                     mapViews: 1,
-                    chartViews: 2,
-                    pivotTableViews: 3,
-                    eventReportViews: 4,
-                    eventChartViews: 5,
-                    dashboardViews: 6,
-                    dataSetReportViews: 7,
+                    visualizationViews: 2,
+                    eventReportViews: 3,
+                    eventChartViews: 4,
+                    dashboardViews: 5,
+                    dataSetReportViews: 6,
                 },
             ]
             const expected = [
@@ -153,31 +145,26 @@ describe('selectors', () => {
                 {
                     borderColor: COLOR_2,
                     data: [2],
-                    label: 'Chart',
-                },
-                {
-                    borderColor: COLOR_3,
-                    data: [3],
-                    label: 'Pivot Table',
+                    label: 'Visualization',
                 },
                 {
                     borderColor: COLOR_4,
-                    data: [4],
+                    data: [3],
                     label: 'Event Report',
                 },
                 {
                     borderColor: COLOR_5,
-                    data: [5],
+                    data: [4],
                     label: 'Event Chart',
                 },
                 {
                     borderColor: COLOR_6,
-                    data: [6],
+                    data: [5],
                     label: 'Dashboard',
                 },
                 {
                     borderColor: COLOR_7,
-                    data: [7],
+                    data: [6],
                     label: 'Data Set Report',
                 },
             ]
@@ -206,8 +193,7 @@ describe('selectors', () => {
             const data = [
                 {
                     averageMapViews: 1,
-                    averageChartViews: 2,
-                    averagePivotTableViews: 3,
+                    averageVisualizationViews: 2,
                     averageEventReportViews: 4,
                     averageEventChartViews: 5,
                     averageDashboardViews: 6,
@@ -222,12 +208,7 @@ describe('selectors', () => {
                 {
                     borderColor: COLOR_2,
                     data: [2],
-                    label: 'Average Chart',
-                },
-                {
-                    borderColor: COLOR_3,
-                    data: [3],
-                    label: 'Average Pivot Table',
+                    label: 'Average Visualization',
                 },
                 {
                     borderColor: COLOR_4,

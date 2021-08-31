@@ -63,14 +63,9 @@ export const getFavoritesSavedDatasets = data => [
         borderColor: COLOR_1,
     },
     {
-        label: i18n.t('Charts'),
-        data: data.map(d => d.savedCharts),
+        label: i18n.t('Visualizations'),
+        data: data.map(d => d.savedVisualizations),
         borderColor: COLOR_2,
-    },
-    {
-        label: i18n.t('Pivot Tables'),
-        data: data.map(d => d.savedPivotTables),
-        borderColor: COLOR_3,
     },
     {
         label: i18n.t('Event Reports'),
@@ -101,14 +96,9 @@ export const getSumAllFavoriteViewsDatasets = data => [
         borderColor: COLOR_1,
     },
     {
-        label: i18n.t('Chart'),
-        data: data.map(d => d.chartViews),
+        label: i18n.t('Visualization'),
+        data: data.map(d => d.visualizationViews),
         borderColor: COLOR_2,
-    },
-    {
-        label: i18n.t('Pivot Table'),
-        data: data.map(d => d.pivotTableViews),
-        borderColor: COLOR_3,
     },
     {
         label: i18n.t('Event Report'),
@@ -147,14 +137,9 @@ export const getAverageAllFavoriteViewsDatasets = data => [
         borderColor: COLOR_1,
     },
     {
-        label: i18n.t('Average Chart'),
-        data: data.map(d => d.averageChartViews),
+        label: i18n.t('Average Visualization'),
+        data: data.map(d => d.averageVisualizationViews),
         borderColor: COLOR_2,
-    },
-    {
-        label: i18n.t('Average Pivot Table'),
-        data: data.map(d => d.averagePivotTableViews),
-        borderColor: COLOR_3,
     },
     {
         label: i18n.t('Average Event Report'),

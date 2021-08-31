@@ -5,218 +5,209 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"POT-Creation-Date: 2020-11-19T16:34:58.919Z\n"
-"PO-Revision-Date: 2020-11-19T16:34:58.919Z\n"
+"POT-Creation-Date: 2021-08-25T13:30:15.314Z\n"
+"PO-Revision-Date: 2021-08-25T13:30:15.314Z\n"
 
 msgid "Usage Analytics"
-msgstr ""
+msgstr "Usage Analytics"
 
 msgid "Category"
-msgstr ""
+msgstr "Category"
 
 msgid "Values"
-msgstr ""
+msgstr "Values"
 
 msgid "Data Values"
-msgstr ""
+msgstr "Data Values"
 
 msgid "Active Users"
-msgstr ""
+msgstr "Active Users"
 
 msgid "Total Users"
-msgstr ""
+msgstr "Total Users"
 
 msgid "Maps"
-msgstr ""
+msgstr "Maps"
 
-msgid "Charts"
-msgstr ""
-
-msgid "Pivot Tables"
-msgstr ""
+msgid "Visualizations"
+msgstr "Visualizations"
 
 msgid "Event Reports"
-msgstr ""
+msgstr "Event Reports"
 
 msgid "Event Charts"
-msgstr ""
+msgstr "Event Charts"
 
 msgid "Dashboards"
-msgstr ""
+msgstr "Dashboards"
 
 msgid "Indicators"
-msgstr ""
+msgstr "Indicators"
 
 msgid "Map"
-msgstr ""
+msgstr "Map"
 
-msgid "Chart"
-msgstr ""
-
-msgid "Pivot Table"
-msgstr ""
+msgid "Visualization"
+msgstr "Visualization"
 
 msgid "Event Report"
-msgstr ""
+msgstr "Event Report"
 
 msgid "Event Chart"
-msgstr ""
+msgstr "Event Chart"
 
 msgid "Dashboard"
-msgstr ""
+msgstr "Dashboard"
 
 msgid "Data Set Report"
-msgstr ""
+msgstr "Data Set Report"
 
 msgid "Total"
-msgstr ""
+msgstr "Total"
 
 msgid "Average Map"
-msgstr ""
+msgstr "Average Map"
 
-msgid "Average Chart"
-msgstr ""
-
-msgid "Average Pivot Table"
-msgstr ""
+msgid "Average Visualization"
+msgstr "Average Visualization"
 
 msgid "Average Event Report"
-msgstr ""
+msgstr "Average Event Report"
 
 msgid "Average Event Chart"
-msgstr ""
+msgstr "Average Event Chart"
 
 msgid "Average Dashboard"
-msgstr ""
+msgstr "Average Dashboard"
 
 msgid "Average"
-msgstr ""
+msgstr "Average"
 
 msgid "Aggregation Level"
-msgstr ""
+msgstr "Aggregation Level"
 
 msgid "Chart Type"
-msgstr ""
+msgstr "Chart Type"
 
 msgid "End Date"
-msgstr ""
+msgstr "End Date"
 
 msgid "Event Type"
-msgstr ""
+msgstr "Event Type"
 
 msgid "Interval"
-msgstr ""
+msgstr "Interval"
 
 msgid "Page Size"
-msgstr ""
+msgstr "Page Size"
 
 msgid "Sort Order"
-msgstr ""
+msgstr "Sort Order"
 
 msgid "Start Date"
-msgstr ""
+msgstr "Start Date"
 
 msgid "Start date should be before end date"
-msgstr ""
+msgstr "Start date should be before end date"
 
 msgid "Please fill in a date"
-msgstr ""
+msgstr "Please fill in a date"
 
 msgid "Please use the format yyyy-mm-dd"
-msgstr ""
+msgstr "Please use the format yyyy-mm-dd"
 
 msgid "Unrecognized category"
-msgstr ""
+msgstr "Unrecognized category"
 
 msgid "The chosen category was not recognized."
-msgstr ""
+msgstr "The chosen category was not recognized."
 
 msgid "Error whilst fetching data"
-msgstr ""
+msgstr "Error whilst fetching data"
 
 msgid "The error message was: \"{{ MESSAGE }}\"."
-msgstr ""
+msgstr "The error message was: \"{{ MESSAGE }}\"."
 
 msgid "There was no error message included with the error."
-msgstr ""
+msgstr "There was no error message included with the error."
 
 msgid "Date"
-msgstr ""
+msgstr "Date"
 
 msgid "Position"
-msgstr ""
+msgstr "Position"
 
 msgid "Name"
-msgstr ""
+msgstr "Name"
 
 msgid "Views"
-msgstr ""
+msgstr "Views"
 
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 msgid "Created"
-msgstr ""
+msgstr "Created"
 
 msgid "Sum"
-msgstr ""
+msgstr "Sum"
 
 msgid "Favorite views"
-msgstr ""
+msgstr "Favorite views"
 
 msgid "Number of times users looked at analysis favorites"
-msgstr ""
+msgstr "Number of times users looked at analysis favorites"
 
 msgid "Favorites saved"
-msgstr ""
+msgstr "Favorites saved"
 
 msgid "Number of analysis favorites created by users"
-msgstr ""
+msgstr "Number of analysis favorites created by users"
 
 msgid "Users"
-msgstr ""
+msgstr "Users"
 
 msgid "Number of users in the system"
-msgstr ""
+msgstr "Number of users in the system"
 
 msgid "Top favorites"
-msgstr ""
+msgstr "Top favorites"
 
 msgid "Data values"
-msgstr ""
+msgstr "Data values"
 
 msgid "Number of data values saved in the system"
-msgstr ""
+msgstr "Number of data values saved in the system"
 
 msgid "All"
-msgstr ""
+msgstr "All"
 
 msgid "Report table"
-msgstr ""
+msgstr "Report table"
 
 msgid "Event report"
-msgstr ""
+msgstr "Event report"
 
 msgid "Event chart"
-msgstr ""
+msgstr "Event chart"
 
 msgid "Data set report"
-msgstr ""
+msgstr "Data set report"
 
 msgid "Day"
-msgstr ""
+msgstr "Day"
 
 msgid "Week"
-msgstr ""
+msgstr "Week"
 
 msgid "Month"
-msgstr ""
+msgstr "Month"
 
 msgid "Year"
-msgstr ""
+msgstr "Year"
 
 msgid "Ascending"
-msgstr ""
+msgstr "Ascending"
 
 msgid "Descending"
-msgstr ""
+msgstr "Descending"

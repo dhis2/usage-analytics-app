@@ -7,8 +7,7 @@ describe('<FavoritesSavedTable>', () => {
         const expectedHeaders = [
             'Date',
             'Maps',
-            'Charts',
-            'Pivot Tables',
+            'Visualizations',
             'Event Reports',
             'Event Charts',
             'Dashboards',
@@ -22,7 +21,7 @@ describe('<FavoritesSavedTable>', () => {
         const wrapper = mount(<FavoritesSavedTable {...props} />)
         const headers = wrapper.find('TableCellHead')
 
-        expect.assertions(8)
+        expect.assertions(7)
 
         headers.forEach((header, i) => {
             expect(header.text()).toBe(expectedHeaders[i])
@@ -30,17 +29,16 @@ describe('<FavoritesSavedTable>', () => {
     })
 
     it('renders the expected table contents', () => {
-        const expectedContents = ['2020', '1', '2', '3', '4', '5', '6', '7']
+        const expectedContents = ['2020', '1', '2', '3', '4', '5', '6']
         const props = {
             data: [
                 {
                     savedMaps: 1,
-                    savedCharts: 2,
-                    savedPivotTables: 3,
-                    savedEventReports: 4,
-                    savedEventCharts: 5,
-                    savedDashboards: 6,
-                    savedIndicators: 7,
+                    savedVisualizations: 2,
+                    savedEventReports: 3,
+                    savedEventCharts: 4,
+                    savedDashboards: 5,
+                    savedIndicators: 6,
                     year: 2020,
                 },
             ],
@@ -50,7 +48,7 @@ describe('<FavoritesSavedTable>', () => {
         const wrapper = mount(<FavoritesSavedTable {...props} />)
         const contents = wrapper.find('TableCell')
 
-        expect.assertions(8)
+        expect.assertions(7)
 
         contents.forEach((content, i) => {
             expect(content.text()).toBe(expectedContents[i])

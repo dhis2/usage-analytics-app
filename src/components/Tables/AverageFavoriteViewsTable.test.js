@@ -7,8 +7,7 @@ describe('<AverageFavoriteViewsTable>', () => {
         const expectedHeaders = [
             'Date',
             'Average Map',
-            'Average Chart',
-            'Average Pivot Table',
+            'Average Visualization',
             'Average Event Report',
             'Average Event Chart',
             'Average Dashboard',
@@ -22,7 +21,7 @@ describe('<AverageFavoriteViewsTable>', () => {
         const wrapper = mount(<AverageFavoriteViewsTable {...props} />)
         const headers = wrapper.find('TableCellHead')
 
-        expect.assertions(8)
+        expect.assertions(7)
 
         headers.forEach((header, i) => {
             expect(header.text()).toBe(expectedHeaders[i])
@@ -30,17 +29,16 @@ describe('<AverageFavoriteViewsTable>', () => {
     })
 
     it('renders the expected table contents', () => {
-        const expectedContents = ['2020', '1', '2', '3', '4', '5', '6', '7']
+        const expectedContents = ['2020', '1', '2', '3', '4', '5', '6']
         const props = {
             data: [
                 {
                     averageMapViews: 1,
-                    averageChartViews: 2,
-                    averagePivotTableViews: 3,
-                    averageEventReportViews: 4,
-                    averageEventChartViews: 5,
-                    averageDashboardViews: 6,
-                    averageViews: 7,
+                    averageVisualizationViews: 2,
+                    averageEventReportViews: 3,
+                    averageEventChartViews: 4,
+                    averageDashboardViews: 5,
+                    averageViews: 6,
                     year: 2020,
                 },
             ],
@@ -50,7 +48,7 @@ describe('<AverageFavoriteViewsTable>', () => {
         const wrapper = mount(<AverageFavoriteViewsTable {...props} />)
         const contents = wrapper.find('TableCell')
 
-        expect.assertions(8)
+        expect.assertions(7)
 
         contents.forEach((content, i) => {
             expect(content.text()).toBe(expectedContents[i])
