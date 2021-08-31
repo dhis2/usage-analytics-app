@@ -1,3 +1,16 @@
+# [101.0.0](https://github.com/dhis2/usage-analytics-app/compare/v100.0.25...v101.0.0) (2021-08-31)
+
+
+### Features
+
+* bump min dhis2 version ([d1e186e](https://github.com/dhis2/usage-analytics-app/commit/d1e186e8c8c40caf18bb1a858ce91cf757c33ea9))
+* visualizations replace charts and pivot tables ([8b05d51](https://github.com/dhis2/usage-analytics-app/commit/8b05d51cd068ac3a0f054b47fc1f6eaaba4e0322))
+
+
+### BREAKING CHANGES
+
+* Replace now unsupported fields pivotTables and charts with visualizations
+
 ## [100.0.25](https://github.com/dhis2/usage-analytics-app/compare/v100.0.24...v100.0.25) (2021-08-31)
 
 
