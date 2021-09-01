@@ -1,4 +1,4 @@
-import PropTypes from '@dhis2/prop-types'
+import { PropTypes } from '@dhis2/prop-types'
 import React from 'react'
 import styles from './LayoutContent.module.css'
 

@@ -1,5 +1,5 @@
 import i18n from '@dhis2/d2-i18n'
-import PropTypes from '@dhis2/prop-types'
+import { PropTypes } from '@dhis2/prop-types'
 import { SingleSelectField, SingleSelectOption } from '@dhis2/ui'
 import React from 'react'
 import categories from '../../constants/categories.js'

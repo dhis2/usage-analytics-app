@@ -1,4 +1,4 @@
-import PropTypes from '@dhis2/prop-types'
+import { PropTypes } from '@dhis2/prop-types'
 import React, { Fragment } from 'react'
 import { DataValuesChart } from '../Charts/index.js'
 import { DataStatisticsQuery } from '../Queries/index.js'

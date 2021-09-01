@@ -1,4 +1,4 @@
-import PropTypes from '@dhis2/prop-types'
+import { PropTypes } from '@dhis2/prop-types'
 import React, { useState } from 'react'
 import EndDateField from './EndDateField.js'
 import StartDateField from './StartDateField.js'
