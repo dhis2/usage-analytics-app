@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
-"POT-Creation-Date: 2020-11-19T16:34:58.919Z\n"
+"POT-Creation-Date: 2021-08-25T13:30:15.314Z\n"
 "PO-Revision-Date: 2019-09-02 16:22+0000\n"
 "Last-Translator: Untoro Dwi Raharjo <untoro.dwi.raharjo@mail.ugm.ac.id>, 2021\n"
 "Language-Team: Indonesian (https://www.transifex.com/hisp-uio/teams/100509/id/)\n"
@@ -39,11 +39,8 @@ msgstr ""
 msgid "Maps"
 msgstr "Peta"
 
-msgid "Charts"
-msgstr "Grafik"
-
-msgid "Pivot Tables"
-msgstr "Tabel Pivot"
+msgid "Visualizations"
+msgstr ""
 
 msgid "Event Reports"
 msgstr "Laporan Kejadian"
@@ -60,10 +57,7 @@ msgstr "Indikator"
 msgid "Map"
 msgstr "peta"
 
-msgid "Chart"
-msgstr "Grafik"
-
-msgid "Pivot Table"
+msgid "Visualization"
 msgstr ""
 
 msgid "Event Report"
@@ -84,10 +78,7 @@ msgstr "Total"
 msgid "Average Map"
 msgstr ""
 
-msgid "Average Chart"
-msgstr ""
-
-msgid "Average Pivot Table"
+msgid "Average Visualization"
 msgstr ""
 
 msgid "Average Event Report"
