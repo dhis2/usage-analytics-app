@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
-"POT-Creation-Date: 2020-11-19T16:34:58.919Z\n"
+"POT-Creation-Date: 2021-08-25T13:30:15.314Z\n"
 "PO-Revision-Date: 2019-09-02 16:22+0000\n"
 "Last-Translator: Viktor Varland <viktor@dhis2.org>, 2019\n"
 "Language-Team: Pashto (https://www.transifex.com/hisp-uio/teams/100509/ps/)\n"
@@ -37,11 +37,8 @@ msgstr ""
 msgid "Maps"
 msgstr "نخشې"
 
-msgid "Charts"
-msgstr "چارټونه"
-
-msgid "Pivot Tables"
-msgstr "محوري جدول"
+msgid "Visualizations"
+msgstr ""
 
 msgid "Event Reports"
 msgstr "د پېښې اړوند راپورونه"
@@ -58,11 +55,8 @@ msgstr "شاخصونه"
 msgid "Map"
 msgstr "نقشه"
 
-msgid "Chart"
-msgstr "چارټ"
-
-msgid "Pivot Table"
-msgstr "محوري جدول"
+msgid "Visualization"
+msgstr ""
 
 msgid "Event Report"
 msgstr ""
@@ -82,10 +76,7 @@ msgstr "ټولټال"
 msgid "Average Map"
 msgstr ""
 
-msgid "Average Chart"
-msgstr ""
-
-msgid "Average Pivot Table"
+msgid "Average Visualization"
 msgstr ""
 
 msgid "Average Event Report"

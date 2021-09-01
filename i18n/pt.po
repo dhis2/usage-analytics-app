@@ -1,15 +1,14 @@
 # 
 # Translators:
-# Viktor Varland <viktor@dhis2.org>, 2019
 # phil_dhis2, 2019
-# Sheila André <sandre@saudigitus.org>, 2020
+# Viktor Varland <viktor@dhis2.org>, 2019
 # Gabriela Rodriguez <grodriguezcoronado@gmail.com>, 2020
 # Ge Joao <gsimango@saudigitus.org>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
-"POT-Creation-Date: 2020-11-19T16:34:58.919Z\n"
+"POT-Creation-Date: 2021-08-25T13:30:15.314Z\n"
 "PO-Revision-Date: 2019-09-02 16:22+0000\n"
 "Last-Translator: Ge Joao <gsimango@saudigitus.org>, 2020\n"
 "Language-Team: Portuguese (https://www.transifex.com/hisp-uio/teams/100509/pt/)\n"
@@ -40,11 +39,8 @@ msgstr "Total de Usuários"
 msgid "Maps"
 msgstr "Mapas"
 
-msgid "Charts"
-msgstr "Gráficos"
-
-msgid "Pivot Tables"
-msgstr "Tabelas dinâmicas"
+msgid "Visualizations"
+msgstr ""
 
 msgid "Event Reports"
 msgstr "Relatórios de Eventos"
@@ -61,11 +57,8 @@ msgstr "Indicadores"
 msgid "Map"
 msgstr "Mapa"
 
-msgid "Chart"
-msgstr "Gráfico"
-
-msgid "Pivot Table"
-msgstr "Tabela Pivot"
+msgid "Visualization"
+msgstr ""
 
 msgid "Event Report"
 msgstr "Relatório de Evento"
@@ -85,11 +78,8 @@ msgstr "Total"
 msgid "Average Map"
 msgstr "Mapa Médio"
 
-msgid "Average Chart"
-msgstr "Gráfico Médio"
-
-msgid "Average Pivot Table"
-msgstr "Tabela Dinâmica Média"
+msgid "Average Visualization"
+msgstr ""
 
 msgid "Average Event Report"
 msgstr "Relatório Médio de Eventos"

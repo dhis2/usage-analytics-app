@@ -4,15 +4,16 @@
 # phil_dhis2, 2019
 # Bram Piot <bram.piot@gmail.com>, 2019
 # Karoline Tufte Lien <karoline@dhis2.org>, 2020
-# Gabriela Rodriguez <grodriguezcoronado@gmail.com>, 2020
 # Yao Selom Saka <ysaka@hispwca.org>, 2020
+# Edem Kossi <ekossi@hispwca.org>, 2021
+# Gabriela Rodriguez <grodriguezcoronado@gmail.com>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
-"POT-Creation-Date: 2020-11-19T16:34:58.919Z\n"
+"POT-Creation-Date: 2021-08-25T13:30:15.314Z\n"
 "PO-Revision-Date: 2019-09-02 16:22+0000\n"
-"Last-Translator: Yao Selom Saka <ysaka@hispwca.org>, 2020\n"
+"Last-Translator: Gabriela Rodriguez <grodriguezcoronado@gmail.com>, 2021\n"
 "Language-Team: French (https://www.transifex.com/hisp-uio/teams/100509/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -41,11 +42,8 @@ msgstr "Nombre total d'utilisateurs"
 msgid "Maps"
 msgstr "Cartes"
 
-msgid "Charts"
-msgstr "Graphiques"
-
-msgid "Pivot Tables"
-msgstr "Les Tableaux Croisés Dynamiques"
+msgid "Visualizations"
+msgstr "Visualisations"
 
 msgid "Event Reports"
 msgstr "Rapports d'évènements"
@@ -62,11 +60,8 @@ msgstr "Indicateurs"
 msgid "Map"
 msgstr "Carte"
 
-msgid "Chart"
-msgstr "Graphique"
-
-msgid "Pivot Table"
-msgstr "Tableau croisé dynamique"
+msgid "Visualization"
+msgstr "Visualisation"
 
 msgid "Event Report"
 msgstr "Rapport d'évènements"
@@ -86,11 +81,8 @@ msgstr "Total"
 msgid "Average Map"
 msgstr "Carte Moyenne"
 
-msgid "Average Chart"
-msgstr "Graphique Moyen"
-
-msgid "Average Pivot Table"
-msgstr "Tableau Croisé Dynamique Moyen"
+msgid "Average Visualization"
+msgstr ""
 
 msgid "Average Event Report"
 msgstr "Rapport d'événement Moyen"

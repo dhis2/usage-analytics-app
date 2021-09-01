@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
-"POT-Creation-Date: 2020-11-19T16:34:58.919Z\n"
+"POT-Creation-Date: 2021-08-25T13:30:15.314Z\n"
 "PO-Revision-Date: 2019-09-02 16:22+0000\n"
 "Last-Translator: easylin <lin_xd@126.com>, 2020\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/hisp-uio/teams/100509/zh_CN/)\n"
@@ -37,11 +37,8 @@ msgstr "用户总数"
 msgid "Maps"
 msgstr "地图"
 
-msgid "Charts"
-msgstr "图表"
-
-msgid "Pivot Tables"
-msgstr "透视表"
+msgid "Visualizations"
+msgstr ""
 
 msgid "Event Reports"
 msgstr "事件报表"
@@ -58,11 +55,8 @@ msgstr "指标"
 msgid "Map"
 msgstr "地图"
 
-msgid "Chart"
-msgstr "图表"
-
-msgid "Pivot Table"
-msgstr "透视表"
+msgid "Visualization"
+msgstr ""
 
 msgid "Event Report"
 msgstr "事件报表"
@@ -82,11 +76,8 @@ msgstr "总共"
 msgid "Average Map"
 msgstr "平均地图"
 
-msgid "Average Chart"
-msgstr "平均图表"
-
-msgid "Average Pivot Table"
-msgstr "平均透视表"
+msgid "Average Visualization"
+msgstr ""
 
 msgid "Average Event Report"
 msgstr "平均事件报表"

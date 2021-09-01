@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
-"POT-Creation-Date: 2020-11-19T16:34:58.919Z\n"
+"POT-Creation-Date: 2021-08-25T13:30:15.314Z\n"
 "PO-Revision-Date: 2019-09-02 16:22+0000\n"
 "Last-Translator: trendspotter <jirka.p@volny.cz>, 2020\n"
 "Language-Team: Czech (https://www.transifex.com/hisp-uio/teams/100509/cs/)\n"
@@ -36,11 +36,8 @@ msgstr "Celkem uživatelů"
 msgid "Maps"
 msgstr "Mapy"
 
-msgid "Charts"
-msgstr "Grafy"
-
-msgid "Pivot Tables"
-msgstr "Kontingenční tabulky"
+msgid "Visualizations"
+msgstr ""
 
 msgid "Event Reports"
 msgstr "Zprávy o událostech"
@@ -57,11 +54,8 @@ msgstr "Indikátory"
 msgid "Map"
 msgstr "Mapa"
 
-msgid "Chart"
-msgstr "Schéma"
-
-msgid "Pivot Table"
-msgstr "Kontingenční tabulka"
+msgid "Visualization"
+msgstr ""
 
 msgid "Event Report"
 msgstr "Zpráva o události"
@@ -81,11 +75,8 @@ msgstr "Celkem"
 msgid "Average Map"
 msgstr "Průměrná mapa"
 
-msgid "Average Chart"
-msgstr "Průměrný graf"
-
-msgid "Average Pivot Table"
-msgstr "Průměrná kontingenční tabulka"
+msgid "Average Visualization"
+msgstr ""
 
 msgid "Average Event Report"
 msgstr "Průměrná zpráva o události"

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
-"POT-Creation-Date: 2020-11-19T16:34:58.919Z\n"
+"POT-Creation-Date: 2021-08-25T13:30:15.314Z\n"
 "PO-Revision-Date: 2019-09-02 16:22+0000\n"
 "Last-Translator: phil_dhis2, 2019\n"
 "Language-Team: Tetum (Tetun) (https://www.transifex.com/hisp-uio/teams/100509/tet/)\n"
@@ -37,10 +37,7 @@ msgstr ""
 msgid "Maps"
 msgstr ""
 
-msgid "Charts"
-msgstr ""
-
-msgid "Pivot Tables"
+msgid "Visualizations"
 msgstr ""
 
 msgid "Event Reports"
@@ -58,11 +55,8 @@ msgstr "Indikadores"
 msgid "Map"
 msgstr "Mapa"
 
-msgid "Chart"
-msgstr "Gráfiku"
-
-msgid "Pivot Table"
-msgstr "Tabela Dinámika"
+msgid "Visualization"
+msgstr ""
 
 msgid "Event Report"
 msgstr ""
@@ -82,10 +76,7 @@ msgstr ""
 msgid "Average Map"
 msgstr ""
 
-msgid "Average Chart"
-msgstr ""
-
-msgid "Average Pivot Table"
+msgid "Average Visualization"
 msgstr ""
 
 msgid "Average Event Report"

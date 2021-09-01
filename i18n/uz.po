@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
-"POT-Creation-Date: 2020-11-19T16:34:58.919Z\n"
+"POT-Creation-Date: 2021-08-25T13:30:15.314Z\n"
 "PO-Revision-Date: 2019-09-02 16:22+0000\n"
 "Last-Translator: Ibatov <ibatovk@who.int>, 2021\n"
 "Language-Team: Uzbek (Cyrillic) (https://www.transifex.com/hisp-uio/teams/100509/uz@Cyrl/)\n"
@@ -36,11 +36,8 @@ msgstr "Жами Фойдаланувчилар"
 msgid "Maps"
 msgstr "Хариталар"
 
-msgid "Charts"
-msgstr "Диаграммалар"
-
-msgid "Pivot Tables"
-msgstr "Солиштирма Жадваллар"
+msgid "Visualizations"
+msgstr "Визуализациялар"
 
 msgid "Event Reports"
 msgstr "Ҳодисалар ҳақида ҳисоботлар"
@@ -57,11 +54,8 @@ msgstr "Индикаторлар"
 msgid "Map"
 msgstr "Харита"
 
-msgid "Chart"
-msgstr "Диаграмма"
-
-msgid "Pivot Table"
-msgstr "Солиштирма Жадвал"
+msgid "Visualization"
+msgstr "Визуализация"
 
 msgid "Event Report"
 msgstr "Ҳодиса Ҳисобот"
@@ -81,11 +75,8 @@ msgstr "Жами"
 msgid "Average Map"
 msgstr "Ўртача олинган харита"
 
-msgid "Average Chart"
-msgstr "Ўртача олинган Диаграмма"
-
-msgid "Average Pivot Table"
-msgstr "Ўртача олинган Солиштирма Жадвал"
+msgid "Average Visualization"
+msgstr ""
 
 msgid "Average Event Report"
 msgstr "Ўртача олинган Ҳодиса Ҳисобот"
