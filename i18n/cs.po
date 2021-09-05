@@ -76,7 +76,7 @@ msgid "Average Map"
 msgstr "Průměrná mapa"
 
 msgid "Average Visualization"
-msgstr ""
+msgstr "Průměrná vizualizace"
 
 msgid "Average Event Report"
 msgstr "Průměrná zpráva o události"
