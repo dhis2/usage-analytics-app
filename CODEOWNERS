@@ -2,5 +2,5 @@
 *   @dhis2/team-platform
 
 # code owners for functionality
-src/    @dhis2/team-platform @dhis2/team-qa
-docs/   @dhis2/team-platform @dhis2/team-qa
+src/**    @dhis2/team-platform @dhis2/team-qa
+docs/**   @dhis2/team-platform @dhis2/team-qa
