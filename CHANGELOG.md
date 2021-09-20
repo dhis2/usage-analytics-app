@@ -1,3 +1,10 @@
+## [101.0.5](https://github.com/dhis2/usage-analytics-app/compare/v101.0.4...v101.0.5) (2021-09-20)
+
+
+### Bug Fixes
+
+* **top-favorites:** remove event type REPORT_TABLE_VIEW ([330bb83](https://github.com/dhis2/usage-analytics-app/commit/330bb83e934ee475fcffd71414b57fd4adb18d1c))
+
 ## [101.0.4](https://github.com/dhis2/usage-analytics-app/compare/v101.0.3...v101.0.4) (2021-09-05)
 
 
