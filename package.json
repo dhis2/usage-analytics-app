@@ -21,7 +21,7 @@
     },
     "devDependencies": {
         "@dhis2/cli-app-scripts": "7.6.3",
-        "@dhis2/cli-style": "^9.2.0",
+        "@dhis2/cli-style": "^9.2.2",
         "enzyme": "^3.10.0",
         "enzyme-adapter-react-16": "^1.15.6",
         "wait-for-expect": "^3.0.2"
