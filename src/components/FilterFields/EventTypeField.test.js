@@ -48,7 +48,7 @@ describe('<EventTypeField>', () => {
             'data-test': 'dhis2-uicore-singleselectoption',
         })
 
-        expect.assertions(7)
+        expect.assertions(6)
 
         options.forEach((option, i) => {
             expect(option.text()).toBe(eventTypes[i].label)
