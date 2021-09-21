@@ -1,6 +1,6 @@
 import i18n from '@dhis2/d2-i18n'
-import PropTypes from '@dhis2/prop-types'
 import { InputField } from '@dhis2/ui'
+import PropTypes from 'prop-types'
 import React from 'react'
 import FieldSpacer from '../FieldSpacer/index.js'
 import { validateDate } from './validators.js'

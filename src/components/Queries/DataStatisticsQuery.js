@@ -1,12 +1,12 @@
 import { useDataQuery } from '@dhis2/app-runtime'
 import i18n from '@dhis2/d2-i18n'
-import PropTypes from '@dhis2/prop-types'
 import {
     CircularLoader,
     ComponentCover,
     CenteredContent,
     NoticeBox,
 } from '@dhis2/ui'
+import PropTypes from 'prop-types'
 import React, { useEffect } from 'react'
 import { validateDates } from './validators.js'
 
