@@ -20,7 +20,7 @@
         "react-chartjs-2": "^2.11.1"
     },
     "devDependencies": {
-        "@dhis2/cli-app-scripts": "7.6.3",
+        "@dhis2/cli-app-scripts": "8.1.0",
         "@dhis2/cli-style": "^9.2.0",
         "enzyme": "^3.10.0",
         "enzyme-adapter-react-16": "^1.15.6",
