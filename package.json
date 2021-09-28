@@ -11,17 +11,17 @@
         "format:staged": "d2-style apply --staged"
     },
     "dependencies": {
-        "@dhis2/app-runtime": "^2.11.0",
+        "@dhis2/app-runtime": "^3.2.0",
         "@dhis2/d2-i18n": "^1.1.0",
         "@dhis2/prop-types": "^1.6.4",
-        "@dhis2/ui": "^6.20.0",
+        "@dhis2/ui": "^7.2.0",
         "chart.js": "^2.9.4",
         "moment": "^2.29.1",
         "react-chartjs-2": "^2.11.1"
     },
     "devDependencies": {
-        "@dhis2/cli-app-scripts": "7.6.3",
-        "@dhis2/cli-style": "^9.2.0",
+        "@dhis2/cli-app-scripts": "^8.0.1",
+        "@dhis2/cli-style": "^9.3.0",
         "enzyme": "^3.10.0",
         "enzyme-adapter-react-16": "^1.15.6",
         "wait-for-expect": "^3.0.2"
