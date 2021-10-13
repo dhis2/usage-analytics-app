@@ -1,4 +1,4 @@
-import PropTypes from '@dhis2/prop-types'
+import PropTypes from 'prop-types'
 import React, { Fragment } from 'react'
 import { SUM } from '../../constants/aggregations.js'
 import { ALL } from '../../constants/chartTypes.js'

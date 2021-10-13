@@ -1,5 +1,4 @@
 import i18n from '@dhis2/d2-i18n'
-import PropTypes from '@dhis2/prop-types'
 import {
     Table,
     TableHead,
@@ -9,6 +8,7 @@ import {
     TableCellHead,
     TableBody,
 } from '@dhis2/ui'
+import PropTypes from 'prop-types'
 import React from 'react'
 import { getIntervalDate } from '../../selectors/date.js'
 import TableWrapper from './TableWrapper.js'

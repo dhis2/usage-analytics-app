@@ -1,4 +1,4 @@
-import PropTypes from '@dhis2/prop-types'
+import PropTypes from 'prop-types'
 import React from 'react'
 import { Line } from 'react-chartjs-2'
 import { FAVORITE_VIEWS } from '../../constants/categories.js'
