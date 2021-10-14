@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
-"POT-Creation-Date: 2021-08-25T13:30:15.314Z\n"
+"POT-Creation-Date: 2021-10-13T07:38:51.933Z\n"
 "PO-Revision-Date: 2019-09-02 16:22+0000\n"
 "Last-Translator: 晓东 林 <13981924470@126.com>, 2021\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/hisp-uio/teams/100509/zh_CN/)\n"
@@ -189,9 +189,6 @@ msgstr "系统保存的值的数量"
 
 msgid "All"
 msgstr "全部"
-
-msgid "Report table"
-msgstr "报表表"
 
 msgid "Event report"
 msgstr "事件报表"
