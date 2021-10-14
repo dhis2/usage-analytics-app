@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
-"POT-Creation-Date: 2021-08-25T13:30:15.314Z\n"
+"POT-Creation-Date: 2021-10-13T07:38:51.933Z\n"
 "PO-Revision-Date: 2019-09-02 16:22+0000\n"
 "Last-Translator: Sheila André <sandre@saudigitus.org>, 2021\n"
 "Language-Team: Portuguese (https://www.transifex.com/hisp-uio/teams/100509/pt/)\n"
@@ -192,9 +192,6 @@ msgstr "Número de valores de dados salvos no sistema"
 
 msgid "All"
 msgstr "Tudo"
-
-msgid "Report table"
-msgstr "Tabela de Relatório"
 
 msgid "Event report"
 msgstr "Relatório de evento"

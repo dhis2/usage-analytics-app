@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
-"POT-Creation-Date: 2021-08-25T13:30:15.314Z\n"
+"POT-Creation-Date: 2021-10-13T07:38:51.933Z\n"
 "PO-Revision-Date: 2019-09-02 16:22+0000\n"
 "Last-Translator: KRG HIS <antonia.bezenchek@informa.pro>, 2020\n"
 "Language-Team: Central Kurdish (https://www.transifex.com/hisp-uio/teams/100509/ckb/)\n"
@@ -189,9 +189,6 @@ msgid "Number of data values saved in the system"
 msgstr ""
 
 msgid "All"
-msgstr ""
-
-msgid "Report table"
 msgstr ""
 
 msgid "Event report"
