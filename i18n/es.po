@@ -5,13 +5,14 @@
 # Marta Vila <marta@dhis2.org>, 2019
 # Sergio Valenzuela <sergio.valenzuela@ehas.org>, 2021
 # Gabriela Rodriguez <grodriguezcoronado@gmail.com>, 2021
+# Janeth Cruz, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
 "POT-Creation-Date: 2021-10-13T07:38:51.933Z\n"
 "PO-Revision-Date: 2019-09-02 16:22+0000\n"
-"Last-Translator: Gabriela Rodriguez <grodriguezcoronado@gmail.com>, 2021\n"
+"Last-Translator: Janeth Cruz, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/hisp-uio/teams/100509/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -80,7 +81,7 @@ msgid "Average Map"
 msgstr "Mapa Promedio"
 
 msgid "Average Visualization"
-msgstr ""
+msgstr "Visualización promedio"
 
 msgid "Average Event Report"
 msgstr "Informe de Evento Promedio"
@@ -101,7 +102,7 @@ msgid "Chart Type"
 msgstr "Tipo de Gráfico"
 
 msgid "End Date"
-msgstr ""
+msgstr "Fecha de finalización"
 
 msgid "Event Type"
 msgstr "Tipo de Evento"
@@ -119,28 +120,28 @@ msgid "Start Date"
 msgstr "Fecha de inicio"
 
 msgid "Start date should be before end date"
-msgstr ""
+msgstr "La fecha de inicio debe ser anterior a la fecha de finalización"
 
 msgid "Please fill in a date"
-msgstr ""
+msgstr "Por favor, indique una fecha"
 
 msgid "Please use the format yyyy-mm-dd"
 msgstr "Por favor use el formato aaaa-mm-dd"
 
 msgid "Unrecognized category"
-msgstr ""
+msgstr "Categoría no reconocida"
 
 msgid "The chosen category was not recognized."
-msgstr ""
+msgstr "La categoría elegida no fue reconocida."
 
 msgid "Error whilst fetching data"
-msgstr ""
+msgstr "Error al recuperar datos"
 
 msgid "The error message was: \"{{ MESSAGE }}\"."
-msgstr ""
+msgstr "El mensaje de error fue: \"{{ MESSAGE }}\"."
 
 msgid "There was no error message included with the error."
-msgstr ""
+msgstr "No se incluyó ningún mensaje de error con el error."
 
 msgid "Date"
 msgstr "Fecha"
