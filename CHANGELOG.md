@@ -1,3 +1,10 @@
+## [101.0.10](https://github.com/dhis2/usage-analytics-app/compare/v101.0.9...v101.0.10) (2022-02-02)
+
+
+### Bug Fixes
+
+* **noop:** trigger release ([fe67961](https://github.com/dhis2/usage-analytics-app/commit/fe67961b0fdbce388ed249453c27c5bc2648ef4b))
+
 ## [101.0.9](https://github.com/dhis2/usage-analytics-app/compare/v101.0.8...v101.0.9) (2022-02-02)
 
 
