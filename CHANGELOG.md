@@ -1,3 +1,10 @@
+## [101.0.13](https://github.com/dhis2/usage-analytics-app/compare/v101.0.12...v101.0.13) (2022-04-07)
+
+
+### Bug Fixes
+
+* **app:** ensure startDate and endDate params of dataStatistics endpoint are ASCII ([#642](https://github.com/dhis2/usage-analytics-app/issues/642)) ([24c7704](https://github.com/dhis2/usage-analytics-app/commit/24c7704491da9c27ff2ccabf4932e57552e14cec))
+
 ## [101.0.12](https://github.com/dhis2/usage-analytics-app/compare/v101.0.11...v101.0.12) (2022-03-07)
 
 
