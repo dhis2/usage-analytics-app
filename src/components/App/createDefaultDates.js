@@ -13,8 +13,12 @@ const createDefaultDates = () => {
     const now = Date.now()
     const format = 'YYYY-MM-DD'
 
-    const initialStartDate = moment(now).subtract(4, 'months').format(format)
-    const initialEndDate = moment(now).format(format)
+    // Set locale to English before formatting to ensure ASCII numbers are used
+    const initialStartDate = moment(now)
+        .locale('en')
+        .subtract(4, 'months')
+        .format(format)
+    const initialEndDate = moment(now).locale('en').format(format)
 
     return { initialStartDate, initialEndDate }
 }
