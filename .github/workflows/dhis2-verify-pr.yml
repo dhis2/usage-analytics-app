@@ -1,0 +1,15 @@
+name: 'dhis2: check pr title'
+
+on:
+    pull_request:
+        types: ['opened', 'edited', 'reopened', 'synchronize']
+
+jobs:
+    lint:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: c-hive/gha-yarn-cache@v1
+            - run: yarn install --frozen-lockfile
+            - run: yarn add @commitlint/config-conventional
+            - uses: JulienKode/pull-request-name-linter-action@v0.5.0
