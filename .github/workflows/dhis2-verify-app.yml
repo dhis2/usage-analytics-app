@@ -40,6 +40,8 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
+              with:
+                  fetch-depth: 0
             - uses: actions/setup-node@v1
               with:
                   node-version: 12.x
@@ -52,6 +54,9 @@ jobs:
 
             - name: Lint
               run: yarn lint
+            - uses: wagoid/commitlint-github-action@v4
+              with:
+                  configFile: commitlint.config.js
 
     test:
         runs-on: ubuntu-latest
