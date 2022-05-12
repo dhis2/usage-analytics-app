@@ -41,7 +41,7 @@ const App = () => {
      * props from being used we're tracking the stale status of interval.
      */
     const [isIntervalStale, setIsIntervalStale] = useState(false)
-    const setIsStaleAndInterval = interval => {
+    const setIsStaleAndInterval = (interval) => {
         setIsIntervalStale(true)
         setReportInterval(interval)
     }

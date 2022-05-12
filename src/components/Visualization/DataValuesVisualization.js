@@ -21,7 +21,7 @@ const DataValuesVisualization = ({
         setIsIntervalStale={setIsIntervalStale}
         startDate={startDate}
     >
-        {data => (
+        {(data) => (
             <Fragment>
                 <DataValuesChart data={data} interval={interval} />
                 <DataValuesTable data={data} interval={interval} />

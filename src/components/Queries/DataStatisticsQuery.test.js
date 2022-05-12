@@ -14,8 +14,8 @@ import DataStatisticsQuery from './DataStatisticsQuery.js'
  * - https://reactjs.org/docs/testing-recipes.html#act
  */
 
-const update = wrapper => () =>
-    new Promise(resolve => {
+const update = (wrapper) => () =>
+    new Promise((resolve) => {
         setTimeout(() => {
             wrapper.update()
             resolve()

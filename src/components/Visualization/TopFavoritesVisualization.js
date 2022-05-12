@@ -12,7 +12,7 @@ const TopFavoritesVisualization = ({ eventType, pageSize, sortOrder }) => (
         pageSize={pageSize}
         sortOrder={sortOrder}
     >
-        {data => <TopFavoritesTable data={data} />}
+        {(data) => <TopFavoritesTable data={data} />}
     </TopFavoritesQuery>
 )
 

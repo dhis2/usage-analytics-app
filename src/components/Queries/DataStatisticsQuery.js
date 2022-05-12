@@ -94,7 +94,7 @@ const DataStatisticsQuery = ({
 
     // If passive views should be counted, return statistics that include passive views in the totals
     if (countPassiveViews) {
-        const withPassiveViews = dataStatistics.map(s => {
+        const withPassiveViews = dataStatistics.map((s) => {
             const dashboardViews = s.dashboardViews + s.passiveDashboardViews
             const averageDashboardViews = dashboardViews / s.users
 

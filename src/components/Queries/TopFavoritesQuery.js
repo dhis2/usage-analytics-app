@@ -103,7 +103,7 @@ const TopFavoritesQuery = ({
             {}
         )
 
-        const withPassiveViews = favorites.map(f => {
+        const withPassiveViews = favorites.map((f) => {
             if (f.id in passiveViewsById) {
                 return {
                     ...f,

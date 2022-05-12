@@ -59,7 +59,7 @@ const FavoriteViewsVisualization = ({
                 setIsIntervalStale={setIsIntervalStale}
                 startDate={startDate}
             >
-                {data => (
+                {(data) => (
                     <Fragment>
                         {isAll ? (
                             <SumAllFavoriteViewsChart
@@ -91,7 +91,7 @@ const FavoriteViewsVisualization = ({
             setIsIntervalStale={setIsIntervalStale}
             startDate={startDate}
         >
-            {data => (
+            {(data) => (
                 <Fragment>
                     {isAll ? (
                         <AverageAllFavoriteViewsChart
