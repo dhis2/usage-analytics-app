@@ -20,7 +20,7 @@ msgid "Usage Analytics"
 msgstr ""
 
 msgid "Category"
-msgstr ""
+msgstr "Categorie"
 
 msgid "Values"
 msgstr ""
@@ -89,7 +89,7 @@ msgid "Average Dashboard"
 msgstr ""
 
 msgid "Average"
-msgstr ""
+msgstr "Gemiddelde"
 
 msgid "Aggregation Level"
 msgstr ""
@@ -152,13 +152,13 @@ msgid "Views"
 msgstr ""
 
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 msgid "Created"
 msgstr ""
 
 msgid "Sum"
-msgstr ""
+msgstr "Som"
 
 msgid "Favorite views"
 msgstr ""
@@ -188,7 +188,7 @@ msgid "Number of data values saved in the system"
 msgstr ""
 
 msgid "All"
-msgstr ""
+msgstr "Alle"
 
 msgid "Event report"
 msgstr ""
