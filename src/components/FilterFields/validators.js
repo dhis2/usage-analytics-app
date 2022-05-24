@@ -17,7 +17,7 @@ export const validateDateRange = (startDate, endDate) => {
 }
 
 // Validates a single date
-export const validateDate = date => {
+export const validateDate = (date) => {
     if (!date) {
         return i18n.t('Please fill in a date')
     }

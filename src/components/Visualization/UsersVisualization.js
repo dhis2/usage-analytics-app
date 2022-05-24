@@ -21,7 +21,7 @@ const UsersVisualization = ({
         setIsIntervalStale={setIsIntervalStale}
         startDate={startDate}
     >
-        {data => (
+        {(data) => (
             <Fragment>
                 <UsersChart data={data} interval={interval} />
                 <UsersTable data={data} interval={interval} />

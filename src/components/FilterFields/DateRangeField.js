@@ -13,12 +13,12 @@ const DateRangeField = ({ startDate, setStartDate, endDate, setEndDate }) => {
         setRangeError(validateDateRange(startDate, endDate))
     }
 
-    const onStartDateChange = value => {
+    const onStartDateChange = (value) => {
         onRangeChange(value, endDate)
         setStartDate(value)
     }
 
-    const onEndDateChange = value => {
+    const onEndDateChange = (value) => {
         onRangeChange(startDate, value)
         setEndDate(value)
     }

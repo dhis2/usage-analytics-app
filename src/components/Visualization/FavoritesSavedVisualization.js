@@ -32,7 +32,7 @@ const FavoritesSavedVisualization = ({
         setIsIntervalStale={setIsIntervalStale}
         startDate={startDate}
     >
-        {data => (
+        {(data) => (
             <Fragment>
                 <FavoritesSavedChart data={data} interval={interval} />
                 <FavoritesSavedTable data={data} interval={interval} />

@@ -46,7 +46,7 @@ describe('<Filters>', () => {
         }
         const wrapper = mount(<Filters {...props} />)
 
-        expectedFields.forEach(field => {
+        expectedFields.forEach((field) => {
             expect(wrapper.exists(field)).toBe(true)
         })
     })
@@ -64,7 +64,7 @@ describe('<Filters>', () => {
         }
         const wrapper = mount(<Filters {...props} />)
 
-        expectedFields.forEach(field => {
+        expectedFields.forEach((field) => {
             expect(wrapper.exists(field)).toBe(true)
         })
     })
@@ -77,7 +77,7 @@ describe('<Filters>', () => {
         }
         const wrapper = mount(<Filters {...props} />)
 
-        expectedFields.forEach(field => {
+        expectedFields.forEach((field) => {
             expect(wrapper.exists(field)).toBe(true)
         })
     })
@@ -90,7 +90,7 @@ describe('<Filters>', () => {
         }
         const wrapper = mount(<Filters {...props} />)
 
-        expectedFields.forEach(field => {
+        expectedFields.forEach((field) => {
             expect(wrapper.exists(field)).toBe(true)
         })
     })
@@ -103,7 +103,7 @@ describe('<Filters>', () => {
         }
         const wrapper = mount(<Filters {...props} />)
 
-        expectedFields.forEach(field => {
+        expectedFields.forEach((field) => {
             expect(wrapper.exists(field)).toBe(true)
         })
     })

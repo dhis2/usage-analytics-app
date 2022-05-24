@@ -19,9 +19,9 @@ export const COLOR_5 = red400
 export const COLOR_6 = grey900
 export const COLOR_7 = teal600
 
-export const getTitles = selected => {
+export const getTitles = (selected) => {
     const selectedCategory = categories.find(
-        category => category.value === selected
+        (category) => category.value === selected
     )
 
     return {
@@ -35,133 +35,133 @@ export const getLabels = (data, interval) =>
         getIntervalDate({ year, month, week, day }, interval)
     )
 
-export const getDataValuesDatasets = data => [
+export const getDataValuesDatasets = (data) => [
     {
         label: i18n.t('Data Values'),
-        data: data.map(d => d.savedDataValues),
+        data: data.map((d) => d.savedDataValues),
         borderColor: COLOR_1,
     },
 ]
 
-export const getUsersDatasets = data => [
+export const getUsersDatasets = (data) => [
     {
         label: i18n.t('Active Users'),
-        data: data.map(d => d.activeUsers),
+        data: data.map((d) => d.activeUsers),
         borderColor: COLOR_1,
     },
     {
         label: i18n.t('Total Users'),
-        data: data.map(d => d.users),
+        data: data.map((d) => d.users),
         borderColor: COLOR_2,
     },
 ]
 
-export const getFavoritesSavedDatasets = data => [
+export const getFavoritesSavedDatasets = (data) => [
     {
         label: i18n.t('Maps'),
-        data: data.map(d => d.savedMaps),
+        data: data.map((d) => d.savedMaps),
         borderColor: COLOR_1,
     },
     {
         label: i18n.t('Visualizations'),
-        data: data.map(d => d.savedVisualizations),
+        data: data.map((d) => d.savedVisualizations),
         borderColor: COLOR_2,
     },
     {
         label: i18n.t('Event Reports'),
-        data: data.map(d => d.savedEventReports),
+        data: data.map((d) => d.savedEventReports),
         borderColor: COLOR_4,
     },
     {
         label: i18n.t('Event Charts'),
-        data: data.map(d => d.savedEventCharts),
+        data: data.map((d) => d.savedEventCharts),
         borderColor: COLOR_5,
     },
     {
         label: i18n.t('Dashboards'),
-        data: data.map(d => d.savedDashboards),
+        data: data.map((d) => d.savedDashboards),
         borderColor: COLOR_6,
     },
     {
         label: i18n.t('Indicators'),
-        data: data.map(d => d.savedIndicators),
+        data: data.map((d) => d.savedIndicators),
         borderColor: COLOR_7,
     },
 ]
 
-export const getSumAllFavoriteViewsDatasets = data => [
+export const getSumAllFavoriteViewsDatasets = (data) => [
     {
         label: i18n.t('Map'),
-        data: data.map(d => d.mapViews),
+        data: data.map((d) => d.mapViews),
         borderColor: COLOR_1,
     },
     {
         label: i18n.t('Visualization'),
-        data: data.map(d => d.visualizationViews),
+        data: data.map((d) => d.visualizationViews),
         borderColor: COLOR_2,
     },
     {
         label: i18n.t('Event Report'),
-        data: data.map(d => d.eventReportViews),
+        data: data.map((d) => d.eventReportViews),
         borderColor: COLOR_4,
     },
     {
         label: i18n.t('Event Chart'),
-        data: data.map(d => d.eventChartViews),
+        data: data.map((d) => d.eventChartViews),
         borderColor: COLOR_5,
     },
     {
         label: i18n.t('Dashboard'),
-        data: data.map(d => d.dashboardViews),
+        data: data.map((d) => d.dashboardViews),
         borderColor: COLOR_6,
     },
     {
         label: i18n.t('Data Set Report'),
-        data: data.map(d => d.dataSetReportViews),
+        data: data.map((d) => d.dataSetReportViews),
         borderColor: COLOR_7,
     },
 ]
 
-export const getSumTotalFavoriteViewsDatasets = data => [
+export const getSumTotalFavoriteViewsDatasets = (data) => [
     {
         label: i18n.t('Total'),
-        data: data.map(d => d.totalViews),
+        data: data.map((d) => d.totalViews),
         borderColor: COLOR_1,
     },
 ]
 
-export const getAverageAllFavoriteViewsDatasets = data => [
+export const getAverageAllFavoriteViewsDatasets = (data) => [
     {
         label: i18n.t('Average Map'),
-        data: data.map(d => d.averageMapViews),
+        data: data.map((d) => d.averageMapViews),
         borderColor: COLOR_1,
     },
     {
         label: i18n.t('Average Visualization'),
-        data: data.map(d => d.averageVisualizationViews),
+        data: data.map((d) => d.averageVisualizationViews),
         borderColor: COLOR_2,
     },
     {
         label: i18n.t('Average Event Report'),
-        data: data.map(d => d.averageEventReportViews),
+        data: data.map((d) => d.averageEventReportViews),
         borderColor: COLOR_4,
     },
     {
         label: i18n.t('Average Event Chart'),
-        data: data.map(d => d.averageEventChartViews),
+        data: data.map((d) => d.averageEventChartViews),
         borderColor: COLOR_5,
     },
     {
         label: i18n.t('Average Dashboard'),
-        data: data.map(d => d.averageDashboardViews),
+        data: data.map((d) => d.averageDashboardViews),
         borderColor: COLOR_6,
     },
 ]
 
-export const getAverageTotalFavoriteViewsDatasets = data => [
+export const getAverageTotalFavoriteViewsDatasets = (data) => [
     {
         label: i18n.t('Average'),
-        data: data.map(d => d.averageViews),
+        data: data.map((d) => d.averageViews),
         borderColor: COLOR_1,
     },
 ]
