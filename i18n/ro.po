@@ -205,10 +205,10 @@ msgid "Week"
 msgstr ""
 
 msgid "Month"
-msgstr ""
+msgstr "Lună"
 
 msgid "Year"
-msgstr ""
+msgstr "An"
 
 msgid "Ascending"
 msgstr ""
