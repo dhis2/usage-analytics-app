@@ -139,7 +139,7 @@ msgid "There was no error message included with the error."
 msgstr ""
 
 msgid "Date"
-msgstr ""
+msgstr "Data"
 
 msgid "Position"
 msgstr ""
