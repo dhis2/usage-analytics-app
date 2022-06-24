@@ -41,7 +41,7 @@ msgid "Maps"
 msgstr "Peta"
 
 msgid "Visualizations"
-msgstr ""
+msgstr "Visualisasi"
 
 msgid "Event Reports"
 msgstr "Laporan Kejadian"
