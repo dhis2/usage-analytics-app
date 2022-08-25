@@ -2,13 +2,14 @@
 # Translators:
 # Viktor Varland <viktor@dhis2.org>, 2019
 # phil_dhis2, 2019
+# Éva Tamási, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
 "POT-Creation-Date: 2021-10-13T07:38:51.933Z\n"
 "PO-Revision-Date: 2019-09-02 16:22+0000\n"
-"Last-Translator: phil_dhis2, 2019\n"
+"Last-Translator: Éva Tamási, 2022\n"
 "Language-Team: Ukrainian (https://www.transifex.com/hisp-uio/teams/100509/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -38,7 +39,7 @@ msgid "Maps"
 msgstr "Maps"
 
 msgid "Visualizations"
-msgstr ""
+msgstr "Візуалізації"
 
 msgid "Event Reports"
 msgstr "Звіти про події"
@@ -143,7 +144,7 @@ msgid "Date"
 msgstr "Дата"
 
 msgid "Position"
-msgstr ""
+msgstr "Позиція"
 
 msgid "Name"
 msgstr "Ім'я"
