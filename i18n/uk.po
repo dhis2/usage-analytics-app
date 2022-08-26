@@ -57,13 +57,13 @@ msgid "Map"
 msgstr "Мапа"
 
 msgid "Visualization"
-msgstr ""
+msgstr "Візуалізація"
 
 msgid "Event Report"
-msgstr ""
+msgstr "Звіт про подію"
 
 msgid "Event Chart"
-msgstr ""
+msgstr "Діаграма подій"
 
 msgid "Dashboard"
 msgstr "Інформаційна панель (дашборд)"
