@@ -22,7 +22,7 @@ msgid "Category"
 msgstr ""
 
 msgid "Values"
-msgstr ""
+msgstr "අගයන්"
 
 msgid "Data Values"
 msgstr ""
@@ -187,7 +187,7 @@ msgid "Number of data values saved in the system"
 msgstr ""
 
 msgid "All"
-msgstr ""
+msgstr "සියල්ල"
 
 msgid "Event report"
 msgstr ""
