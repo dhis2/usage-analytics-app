@@ -19,13 +19,13 @@ msgid "Usage Analytics"
 msgstr ""
 
 msgid "Category"
-msgstr ""
+msgstr "කාණ්ඩය"
 
 msgid "Values"
 msgstr "අගයන්"
 
 msgid "Data Values"
-msgstr ""
+msgstr "දත්ත අගයන්"
 
 msgid "Active Users"
 msgstr ""
@@ -52,7 +52,7 @@ msgid "Indicators"
 msgstr ""
 
 msgid "Map"
-msgstr ""
+msgstr "සිතියම"
 
 msgid "Visualization"
 msgstr ""
@@ -70,7 +70,7 @@ msgid "Data Set Report"
 msgstr ""
 
 msgid "Total"
-msgstr ""
+msgstr "එකතුව"
 
 msgid "Average Map"
 msgstr ""
@@ -88,7 +88,7 @@ msgid "Average Dashboard"
 msgstr ""
 
 msgid "Average"
-msgstr ""
+msgstr "සාමාන්‍ය"
 
 msgid "Aggregation Level"
 msgstr ""
@@ -139,13 +139,13 @@ msgid "There was no error message included with the error."
 msgstr ""
 
 msgid "Date"
-msgstr ""
+msgstr "දිනය"
 
 msgid "Position"
 msgstr ""
 
 msgid "Name"
-msgstr ""
+msgstr "නම"
 
 msgid "Views"
 msgstr ""
@@ -157,7 +157,7 @@ msgid "Created"
 msgstr ""
 
 msgid "Sum"
-msgstr ""
+msgstr "එකතුව"
 
 msgid "Favorite views"
 msgstr ""
@@ -181,7 +181,7 @@ msgid "Top favorites"
 msgstr ""
 
 msgid "Data values"
-msgstr ""
+msgstr "දත්ත අගයන්"
 
 msgid "Number of data values saved in the system"
 msgstr ""
@@ -199,16 +199,16 @@ msgid "Data set report"
 msgstr ""
 
 msgid "Day"
-msgstr ""
+msgstr "දවස"
 
 msgid "Week"
-msgstr ""
+msgstr "සතිය"
 
 msgid "Month"
-msgstr ""
+msgstr "මාසය"
 
 msgid "Year"
-msgstr ""
+msgstr "වසර"
 
 msgid "Ascending"
 msgstr ""
