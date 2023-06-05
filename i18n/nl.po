@@ -2,14 +2,15 @@
 # Translators:
 # Cherise Beek <cherise.beek@gmail.com>, 2021
 # Rica Zamora Duchateau, 2022
+# Charel van den Elsen, 2023
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
 "POT-Creation-Date: 2021-10-13T07:38:51.933Z\n"
 "PO-Revision-Date: 2019-09-02 16:22+0000\n"
-"Last-Translator: Rica Zamora Duchateau, 2022\n"
-"Language-Team: Dutch (https://www.transifex.com/hisp-uio/teams/100509/nl/)\n"
+"Last-Translator: Charel van den Elsen, 2023\n"
+"Language-Team: Dutch (https://app.transifex.com/hisp-uio/teams/100509/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -38,7 +39,7 @@ msgid "Maps"
 msgstr "Kaarten"
 
 msgid "Visualizations"
-msgstr ""
+msgstr "visualisaties"
 
 msgid "Event Reports"
 msgstr ""
@@ -173,7 +174,7 @@ msgid "Number of analysis favorites created by users"
 msgstr ""
 
 msgid "Users"
-msgstr ""
+msgstr "Gebruikers"
 
 msgid "Number of users in the system"
 msgstr ""
