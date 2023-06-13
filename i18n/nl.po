@@ -66,13 +66,13 @@ msgid "Event Chart"
 msgstr ""
 
 msgid "Dashboard"
-msgstr ""
+msgstr "Dashboard"
 
 msgid "Data Set Report"
 msgstr ""
 
 msgid "Total"
-msgstr ""
+msgstr "Totaal"
 
 msgid "Average Map"
 msgstr ""
