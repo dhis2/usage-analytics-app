@@ -51,7 +51,7 @@ msgid "Dashboards"
 msgstr ""
 
 msgid "Indicators"
-msgstr ""
+msgstr "Indicatoren"
 
 msgid "Map"
 msgstr ""
