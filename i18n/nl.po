@@ -24,7 +24,7 @@ msgid "Category"
 msgstr "Categorie"
 
 msgid "Values"
-msgstr ""
+msgstr "Waarden"
 
 msgid "Data Values"
 msgstr ""
