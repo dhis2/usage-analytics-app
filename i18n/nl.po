@@ -183,7 +183,7 @@ msgid "Top favorites"
 msgstr ""
 
 msgid "Data values"
-msgstr ""
+msgstr "Gegevens waarden"
 
 msgid "Number of data values saved in the system"
 msgstr ""
