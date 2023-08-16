@@ -16,7 +16,7 @@
         "@dhis2/prop-types": "^1.6.4",
         "@dhis2/ui": "^7.2.0",
         "chart.js": "^2.9.4",
-        "moment": "^2.29.1",
+        "moment": "^2.29.4",
         "prop-types": "^15.7.2",
         "react-chartjs-2": "^2.11.1"
     },
