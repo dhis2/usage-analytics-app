@@ -1,16 +1,17 @@
 # 
 # Translators:
-# phil_dhis2, 2019
+# Philip Larsen Donnelly, 2019
 # Viktor Varland <viktor@dhis2.org>, 2020
 # Valeriu Plesca <vplesca@gmail.com>, 2021
+# Yury Rogachev <yury@dhis2.org>, 2024
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
 "POT-Creation-Date: 2021-10-13T07:38:51.933Z\n"
 "PO-Revision-Date: 2019-09-02 16:22+0000\n"
-"Last-Translator: Valeriu Plesca <vplesca@gmail.com>, 2021\n"
-"Language-Team: Russian (https://www.transifex.com/hisp-uio/teams/100509/ru/)\n"
+"Last-Translator: Yury Rogachev <yury@dhis2.org>, 2024\n"
+"Language-Team: Russian (https://app.transifex.com/hisp-uio/teams/100509/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -39,7 +40,7 @@ msgid "Maps"
 msgstr "Maps"
 
 msgid "Visualizations"
-msgstr ""
+msgstr "Визуализации"
 
 msgid "Event Reports"
 msgstr "Отчеты случаев"
