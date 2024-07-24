@@ -1,3 +1,10 @@
+## [101.0.45](https://github.com/dhis2/usage-analytics-app/compare/v101.0.44...v101.0.45) (2024-07-24)
+
+
+### Bug Fixes
+
+* **translations:** sync translations from transifex (master) ([37d28c3](https://github.com/dhis2/usage-analytics-app/commit/37d28c3305d747045e5caeb4f7fa3565e182d874))
+
 ## [101.0.44](https://github.com/dhis2/usage-analytics-app/compare/v101.0.43...v101.0.44) (2024-06-16)
 
 
