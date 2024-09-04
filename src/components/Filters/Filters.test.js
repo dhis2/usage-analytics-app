@@ -115,10 +115,10 @@ describe('<Filters>', () => {
         }
         const wrapper = mount(<Filters {...props} />)
         const title = wrapper.find({
-            'data-test': 'dhis2-uicore-noticebox-title',
+            'data-test': 'dhis2-uicore-noticebox-content-title',
         })
         const message = wrapper.find({
-            'data-test': 'dhis2-uicore-noticebox-message',
+            'data-test': 'dhis2-uicore-noticebox-content-message',
         })
 
         expect(title.text()).toMatchInlineSnapshot(`"Unrecognized category"`)
