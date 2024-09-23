@@ -136,10 +136,10 @@ describe('<DataStatisticsQuery>', () => {
 
         it('displays errors it encounters', async () => {
             const titleSelector = {
-                'data-test': 'dhis2-uicore-noticebox-title',
+                'data-test': 'dhis2-uicore-noticebox-content-title',
             }
             const messageSelector = {
-                'data-test': 'dhis2-uicore-noticebox-message',
+                'data-test': 'dhis2-uicore-noticebox-content-message',
             }
             const data = {
                 dataStatistics: () => {
@@ -174,10 +174,10 @@ describe('<DataStatisticsQuery>', () => {
 
         it('renders a fallback message for errors', async () => {
             const titleSelector = {
-                'data-test': 'dhis2-uicore-noticebox-title',
+                'data-test': 'dhis2-uicore-noticebox-content-title',
             }
             const messageSelector = {
-                'data-test': 'dhis2-uicore-noticebox-message',
+                'data-test': 'dhis2-uicore-noticebox-content-message',
             }
             const data = {
                 dataStatistics: () => {
