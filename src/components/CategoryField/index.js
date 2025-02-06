@@ -1,1 +1,1 @@
-export { default } from './CategoryField.js'
+export { default } from './CategoryField.jsx'

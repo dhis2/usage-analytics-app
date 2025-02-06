@@ -1,10 +1,10 @@
-import AverageAllFavoriteViewsChart from './AverageAllFavoriteViewsChart.js'
-import AverageTotalFavoriteViewsChart from './AverageTotalFavoriteViewsChart.js'
-import DataValuesChart from './DataValuesChart.js'
-import FavoritesSavedChart from './FavoritesSavedChart.js'
-import SumAllFavoriteViewsChart from './SumAllFavoriteViewsChart.js'
-import SumTotalFavoriteViewsChart from './SumTotalFavoriteViewsChart.js'
-import UsersChart from './UsersChart.js'
+import AverageAllFavoriteViewsChart from './AverageAllFavoriteViewsChart.jsx'
+import AverageTotalFavoriteViewsChart from './AverageTotalFavoriteViewsChart.jsx'
+import DataValuesChart from './DataValuesChart.jsx'
+import FavoritesSavedChart from './FavoritesSavedChart.jsx'
+import SumAllFavoriteViewsChart from './SumAllFavoriteViewsChart.jsx'
+import SumTotalFavoriteViewsChart from './SumTotalFavoriteViewsChart.jsx'
+import UsersChart from './UsersChart.jsx'
 
 export {
     DataValuesChart,
