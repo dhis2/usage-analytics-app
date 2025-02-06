@@ -1,1 +1,1 @@
-export { default } from './FieldSpacer.js'
+export { default } from './FieldSpacer.jsx'
