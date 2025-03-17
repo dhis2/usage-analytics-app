@@ -1,3 +1,10 @@
+# [101.1.0](https://github.com/dhis2/usage-analytics-app/compare/v101.0.47...v101.1.0) (2025-03-17)
+
+
+### Features
+
+* include app icon in app bundle ([8a139f6](https://github.com/dhis2/usage-analytics-app/commit/8a139f63de6e247f9532984807781402eb2d6c17))
+
 ## [101.0.47](https://github.com/dhis2/usage-analytics-app/compare/v101.0.46...v101.0.47) (2025-02-04)
 
 
