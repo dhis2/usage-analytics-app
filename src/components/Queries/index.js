@@ -1,4 +1,4 @@
-import DataStatisticsQuery from './DataStatisticsQuery.js'
-import TopFavoritesQuery from './TopFavoritesQuery.js'
+import DataStatisticsQuery from './DataStatisticsQuery.jsx'
+import TopFavoritesQuery from './TopFavoritesQuery.jsx'
 
 export { TopFavoritesQuery, DataStatisticsQuery }
