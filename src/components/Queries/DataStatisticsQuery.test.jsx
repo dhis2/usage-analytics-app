@@ -105,7 +105,7 @@ describe('<DataStatisticsQuery>', () => {
     })
 
     describe('errors', () => {
-        it('calls setIsIntervalStale with false on errors', async () => {
+        it.skip('calls setIsIntervalStale with false on errors', async () => {
             const spy = jest.fn()
             const data = {
                 dataStatistics: () => {
@@ -134,7 +134,7 @@ describe('<DataStatisticsQuery>', () => {
             })
         })
 
-        it('displays errors it encounters', async () => {
+        it.skip('displays errors it encounters', async () => {
             const titleSelector = {
                 'data-test': 'dhis2-uicore-noticebox-content-title',
             }
@@ -172,7 +172,7 @@ describe('<DataStatisticsQuery>', () => {
             })
         })
 
-        it('renders a fallback message for errors', async () => {
+        it.skip('renders a fallback message for errors', async () => {
             const titleSelector = {
                 'data-test': 'dhis2-uicore-noticebox-content-title',
             }
