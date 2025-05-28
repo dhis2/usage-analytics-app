@@ -33,7 +33,7 @@ const App = () => {
     const [startDate, setStartDate] = useState(initialStartDate)
 
     // We're calling the setter setReportInterval so we don't shadow the global setInterval
-    const [interval, setReportInterval] = useState(WEEK)
+    const [reportInterval, setReportInterval] = useState(WEEK)
 
     /**
      * The rendering of the different date intervals in the charts and tables
@@ -62,7 +62,7 @@ const App = () => {
                         chartType={chartType}
                         endDate={endDate}
                         eventType={eventType}
-                        interval={interval}
+                        interval={reportInterval}
                         pageSize={pageSize}
                         setAggregation={setAggregation}
                         setChartType={setChartType}
@@ -83,7 +83,7 @@ const App = () => {
                         chartType={chartType}
                         endDate={endDate}
                         eventType={eventType}
-                        interval={interval}
+                        interval={reportInterval}
                         isIntervalStale={isIntervalStale}
                         pageSize={pageSize}
                         setIsIntervalStale={setIsIntervalStale}
