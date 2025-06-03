@@ -1,3 +1,14 @@
+## [101.1.2](https://github.com/dhis2/usage-analytics-app/compare/v101.1.1...v101.1.2) (2025-06-03)
+
+
+### Bug Fixes
+
+* **tests:** enable error handling tests in DataStatisticsQuery ([359b679](https://github.com/dhis2/usage-analytics-app/commit/359b679f4ccc27cd6971ccafdce1160e61404f5b))
+* **tests:** skip error handling tests in DataStatisticsQuery and TopFavoritesQuery ([a369020](https://github.com/dhis2/usage-analytics-app/commit/a36902011663e79c93455556234006cf12f515d2))
+* correct variable name for reportInterval and improve setupTests.js formatting ([cf14d33](https://github.com/dhis2/usage-analytics-app/commit/cf14d33826545bc85fb22b6d08c509de441a6adb))
+* **app-platform:** upgrade platform tools to use vite and react 18 ([32e3f9d](https://github.com/dhis2/usage-analytics-app/commit/32e3f9d1f8cc3c48beca7746c95ab5fd72ba960b))
+* **tests:** enhance setup for Enzyme with global polyfills ([7ea0213](https://github.com/dhis2/usage-analytics-app/commit/7ea02136e8a77d64e6f439b58105dffa9c7ae38a))
+
 ## [101.1.1](https://github.com/dhis2/usage-analytics-app/compare/v101.1.0...v101.1.1) (2025-03-30)
 
 
