@@ -1,1 +1,1 @@
-export { default } from './Visualization.js'
+export { default } from './Visualization.jsx'

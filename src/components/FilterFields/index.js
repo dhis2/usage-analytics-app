@@ -1,10 +1,10 @@
-import AggregationField from './AggregationField.js'
-import ChartTypeField from './ChartTypeField.js'
-import DateRangeField from './DateRangeField.js'
-import EventTypeField from './EventTypeField.js'
-import IntervalField from './IntervalField.js'
-import PageSizeField from './PageSizeField.js'
-import SortOrderField from './SortOrderField.js'
+import AggregationField from './AggregationField.jsx'
+import ChartTypeField from './ChartTypeField.jsx'
+import DateRangeField from './DateRangeField.jsx'
+import EventTypeField from './EventTypeField.jsx'
+import IntervalField from './IntervalField.jsx'
+import PageSizeField from './PageSizeField.jsx'
+import SortOrderField from './SortOrderField.jsx'
 
 export {
     AggregationField,

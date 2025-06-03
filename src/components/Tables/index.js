@@ -1,9 +1,9 @@
-import AverageFavoriteViewsTable from './AverageFavoriteViewsTable.js'
-import DataValuesTable from './DataValuesTable.js'
-import FavoritesSavedTable from './FavoritesSavedTable.js'
-import SumFavoriteViewsTable from './SumFavoriteViewsTable.js'
-import TopFavoritesTable from './TopFavoritesTable.js'
-import UsersTable from './UsersTable.js'
+import AverageFavoriteViewsTable from './AverageFavoriteViewsTable.jsx'
+import DataValuesTable from './DataValuesTable.jsx'
+import FavoritesSavedTable from './FavoritesSavedTable.jsx'
+import SumFavoriteViewsTable from './SumFavoriteViewsTable.jsx'
+import TopFavoritesTable from './TopFavoritesTable.jsx'
+import UsersTable from './UsersTable.jsx'
 
 export {
     DataValuesTable,
