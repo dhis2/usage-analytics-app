@@ -23,7 +23,7 @@ msgid "Category"
 msgstr ""
 
 msgid "Values"
-msgstr ""
+msgstr "वैल्यू"
 
 msgid "Data Values"
 msgstr ""
@@ -50,7 +50,7 @@ msgid "Dashboards"
 msgstr ""
 
 msgid "Indicators"
-msgstr ""
+msgstr "इंडिकेटर्स"
 
 msgid "Map"
 msgstr ""
@@ -188,7 +188,7 @@ msgid "Number of data values saved in the system"
 msgstr ""
 
 msgid "All"
-msgstr ""
+msgstr "सभी"
 
 msgid "Event report"
 msgstr ""
