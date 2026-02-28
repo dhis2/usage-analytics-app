@@ -1,4 +1,3 @@
-# 
 # Translators:
 # Philip Larsen Donnelly, 2019
 # Viktor Varland <viktor@dhis2.org>, 2020
@@ -58,13 +57,13 @@ msgid "Map"
 msgstr "ແຜນທີ່"
 
 msgid "Visualization"
-msgstr ""
+msgstr "ການສະແດງຜົນ (Visualization)"
 
 msgid "Event Report"
-msgstr ""
+msgstr "ລາຍງານເຫດການ"
 
 msgid "Event Chart"
-msgstr ""
+msgstr "ແຜນພູມເຫດການ"
 
 msgid "Dashboard"
 msgstr "ຕາໜ່າງສັງລວມຂໍ້ມູນຂ່າວສານ"
