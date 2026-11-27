@@ -1,16 +1,16 @@
-# 
 # Translators:
 # Siddharth Agarwal, 2025
+# Rohit Wadhwani, 2026
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
 "POT-Creation-Date: 2021-10-13T07:38:51.933Z\n"
 "PO-Revision-Date: 2019-09-02 16:22+0000\n"
-"Last-Translator: Siddharth Agarwal, 2025\n"
+"Last-Translator: Rohit Wadhwani, 2026\n"
 "Language-Team: Hindi (India) (https://app.transifex.com/hisp-uio/teams/100509/hi_IN/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: hi_IN\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -22,7 +22,7 @@ msgid "Category"
 msgstr ""
 
 msgid "Values"
-msgstr ""
+msgstr "वैल्यू"
 
 msgid "Data Values"
 msgstr ""
@@ -49,7 +49,7 @@ msgid "Dashboards"
 msgstr ""
 
 msgid "Indicators"
-msgstr ""
+msgstr "इंडिकेटर्स"
 
 msgid "Map"
 msgstr ""
@@ -139,7 +139,7 @@ msgid "There was no error message included with the error."
 msgstr ""
 
 msgid "Date"
-msgstr ""
+msgstr "तारीख"
 
 msgid "Position"
 msgstr ""
@@ -154,7 +154,7 @@ msgid "ID"
 msgstr "आईडी"
 
 msgid "Created"
-msgstr ""
+msgstr "बनाया गया"
 
 msgid "Sum"
 msgstr ""
@@ -187,7 +187,7 @@ msgid "Number of data values saved in the system"
 msgstr ""
 
 msgid "All"
-msgstr ""
+msgstr "सभी"
 
 msgid "Event report"
 msgstr ""
